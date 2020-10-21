@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-    rmw_microxrcedds_ci:
+    micro_ros_arduino:
         runs-on: ubuntu-20.04
         container: ubuntu:20.04
     
@@ -16,19 +16,24 @@ jobs:
           with:
             path: checkout/
 
-        - name: Download dependencies
+        - name: Build OpenCR
           run: |
             apt update
-            apt install -y git curl
+            apt install -y git curl lib32z1 wget
             curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh 
-            mkdir -p /root/Arduino/libraries/micro_ros_arduino-0.0.1/
-            cp -R checkout/* /root/Arduino/libraries/micro_ros_arduino-0.0.1/
-
-        - name: Build sample OpenCR
-          run: | 
+            mkdir -p /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
+            cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
             echo '''board_manager:
               additional_urls:
                 - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
+            export PATH=$PATH:/github/workspace/bin
+            arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core update-index
-            arduino-cli core install OpenCR:OpenCR
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /root/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli lib update-index
+            # Remove when https://github.com/ROBOTIS-GIT/OpenCR/pull/253 merged
+            pushd /github/home/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.15
+            rm -rf platform.txt
+            wget https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/44bcd82f48a933a7db5fae1bd69e97cda4932832/arduino/opencr_arduino/opencr/platform.txt
+            popd
+            # Remove until here
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
