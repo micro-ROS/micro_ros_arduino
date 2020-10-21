@@ -1,0 +1,57 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <sys/time.h>
+
+extern volatile uint32_t systick_millis_count;
+
+int clock_gettime(clockid_t unused, struct timespec *tp)
+{
+  (void) unused;
+  uint64_t m = systick_millis_count * 1000;
+  tp->tv_sec = m / 1000000;
+  tp->tv_nsec = (m % 1000000) * 1000;
+  return 0;
+}
+
+bool arduino_serial_platform_open()
+{
+    // Place here your initialization platform code
+    // Return true if success
+    return true;
+}
+
+bool arduino_serial_platform_close()
+{
+    // Place here your closing platform code
+    // Return true if success
+    return true;
+
+}
+
+size_t arduino_serial_platform_write(uint8_t* buf, size_t len, uint8_t* errcode)
+{
+    // Place here your writing bytes platform code
+    // Return number of bytes written
+    (void) errcode;
+    usb_serial_write(buf, len);
+    usb_serial_flush_output();
+    return len;
+}
+
+size_t arduino_serial_platform_read(uint8_t* buf, size_t len, int timeout, uint8_t* errcode)
+{
+    // Place here your reading bytes platform code
+    // Return number of bytes read (max bytes: len)
+    (void) errcode;
+    uint32_t start_time = systick_millis_count;
+    size_t readed = 0;
+
+    while((systick_millis_count - start_time) < (uint32_t) timeout){
+      while(usb_serial_available()){
+        buf[readed++] = usb_serial_getchar();
+      }
+    }
+    
+    return readed;
+}
