@@ -26,7 +26,7 @@ jobs:
             echo '''board_manager:
               additional_urls:
                 - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
-            export PATH=$PATH:/github/workspace/bin
+            export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core update-index
             arduino-cli lib update-index
