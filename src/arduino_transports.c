@@ -13,15 +13,6 @@
 // TODO: This should be fixed
 #if defined(ARDUINO_TEENSY32)
 
-void usleep(uint32_t usec){
-    delay(usec/1000);
-}
-
-// Fake functions
-int mkdir(const char * abs_path, uint32_t mode){
-    return 0;
-}
-
 void _write(){
 }
 
