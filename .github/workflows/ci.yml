@@ -1,0 +1,37 @@
+name: CI micro_ros_arduino
+
+on:
+    pull_request:
+      branches: 
+        - '**'
+
+jobs:
+
+    rmw_microxrcedds_ci:
+        runs-on: ubuntu-20.04
+        container: ubuntu:20.04
+    
+        steps:
+        - uses: actions/checkout@v2
+          with:
+            path: src/rmw-microxrcedds
+
+        - name: Download dependencies
+          run: |
+            apt update
+            apt install git curl
+            curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh 
+            mkdir -p /root/Arduino/libraries/micro_ros_arduino-0.0.1/
+
+        - uses: actions/checkout@v2
+          with:
+            path: /root/Arduino/libraries/micro_ros_arduino-0.0.1/
+      
+        - name: Build sample OpenCR
+          run: | 
+            echo '''board_manager:
+              additional_urls:
+                - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
+            arduino-cli core update-index
+            arduino-cli core install OpenCR:OpenCR
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /root/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
