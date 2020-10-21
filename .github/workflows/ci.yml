@@ -19,7 +19,7 @@ jobs:
         - name: Download dependencies
           run: |
             apt update
-            apt install git curl
+            apt install -y git curl
             curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh 
             mkdir -p /root/Arduino/libraries/micro_ros_arduino-0.0.1/
 
