@@ -12,6 +12,8 @@ Supported boards are:
 | [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                   | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`        |
 | [Teensy 3.2](https://www.pjrc.com/store/teensy32.html)                   | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta` |
 
+You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
+
 ## How to use the precompiled library
 
 Go to [link to release section]() and download the last release of micro-ROS library for Arduino. 
@@ -48,4 +50,16 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro-ros.github.io/docs/tutorials/core/microxrcedds_rmw_configuration/).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanims. Only USB serial transports are provided.
-- Both OpenCR and Teensyduino support files have to be patched in order to use precompiled libraries. [PR to OpenCR patch](https://github.com/ROBOTIS-GIT/OpenCR/pull/253). TODO: Instructions for patching Teensyduino.
+- Both OpenCR and Teensyduino support files have to be patched in order to use precompiled libraries. 
+
+### Patch OpenCR
+
+```bash
+    cd ~/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.15
+    rm -rf platform.txt
+    wget https://github.com/ROBOTIS-GIT/OpenCR/blob/develop/arduino/opencr_arduino/opencr/platform.txt
+```
+
+### Patch Teensyduino
+
+TODO

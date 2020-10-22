@@ -34,7 +34,7 @@ jobs:
             export ORIGIN=$(pwd)
             cd /github/home/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.15
             rm -rf platform.txt
-            wget https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/44bcd82f48a933a7db5fae1bd69e97cda4932832/arduino/opencr_arduino/opencr/platform.txt
+            wget https://github.com/ROBOTIS-GIT/OpenCR/blob/develop/arduino/opencr_arduino/opencr/platform.txt
             cd $ORIGIN
             # Remove until here
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
