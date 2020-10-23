@@ -20,6 +20,15 @@ Go to [link to release section]() and download the last release of micro-ROS lib
 
 Include it in your proyect using `Sketch -> Include library -> Add .ZIP Library...`
 
+You can test micro-ROS examples located in this repo examples folder.
+
+Is possible to use a micro-ROS Agent just with this docker command:
+
+```bash
+# Serial micro-ROS Agent
+docker run -it --rm -d /dev:/dev --privileged --net=host microros/micro-ros-agent:foxy serial --dev [YOUR BOARD PORT] -v6
+```
+
 ## How to build the precompiled library
 
 ```bash
