@@ -16,7 +16,7 @@ jobs:
           with:
             path: checkout/
 
-        - name: Build OpenCR, Teensy 3.2/4.1
+        - name: Build OpenCR and Teensy 3.2/4.1
           run: |
             apt update
             apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync
