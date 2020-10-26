@@ -19,15 +19,25 @@ jobs:
         - name: Build OpenCR
           run: |
             apt update
-            apt install -y git curl lib32z1 wget
+            apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils
             curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh 
             mkdir -p /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
             cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
             echo '''board_manager:
               additional_urls:
                 - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
+            wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
+            tar -xf arduino-1.8.13-linux64.tar.xz
+            wget https://www.pjrc.com/teensy/td_153/TeensyduinoInstall.linux64
+            chmod 755 TeensyduinoInstall.linux64
+            ./TeensyduinoInstall.linux64 --dir=arduino-1.8.13
+            cp -R arduino-1.8.13/hardware/teensy/ .arduino15/packages/
+            rm -rf arduino-1.8.13
+            curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/library_generation/platform_teensy.txt > .arduino15/packages/hardware/teensy/avr/platform.txt
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core update-index
             arduino-cli lib update-index
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
