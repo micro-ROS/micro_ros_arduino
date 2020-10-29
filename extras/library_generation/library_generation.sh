@@ -7,6 +7,15 @@ cd /uros_ws
 cp /arduino_project/extras/library_generation/arduino_xrce_transports/serial_transport_external.c firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/serial/
 cp /arduino_project/extras/library_generation/arduino_xrce_transports/serial_transport_external.h firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/include/uxr/client/profile/transport/serial/
 
+######## Adding extra packages ########
+pushd firmware/mcu_ws > /dev/null
+
+git clone -b foxy https://github.com/ros2/geometry2
+cp -R geometry2/tf2_msgs ros2/tf2_msgs
+rm -rf geometry2
+
+popd > /dev/null
+
 ######## Clean and source ########
 find /arduino_project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.c.in -delete
 

@@ -210,3 +210,6 @@ example_interfaces/UInt8MultiArray.msg
 example_interfaces/Int16MultiArray.msg
 example_interfaces/UInt32MultiArray.msg
 example_interfaces/Float32MultiArray.msg
+tf2_msgs/FrameGraph.srv
+tf2_msgs/TFMessage.msg
+tf2_msgs/TF2Error.msg
