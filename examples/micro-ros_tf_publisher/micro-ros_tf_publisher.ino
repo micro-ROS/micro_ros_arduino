@@ -31,13 +31,13 @@ extern "C" int clock_gettime(clockid_t unused, struct timespec *tp);
 cIMU    IMU;
 
 const void euler_to_quat(float x, float y, float z, double* q) {
-    float c1 = cos(y/2);
-    float c2 = cos(z/2);
-    float c3 = cos(x/2);
+    float c1 = cos((y*3.14/180.0)/2);
+    float c2 = cos((z*3.14/180.0)/2);
+    float c3 = cos((x*3.14/180.0)/2);
 
-    float s1 = sin(y/2);
-    float s2 = sin(z/2);
-    float s3 = sin(x/2);
+    float s1 = sin((y*3.14/180.0)/2);
+    float s2 = sin((z*3.14/180.0)/2);
+    float s3 = sin((x*3.14/180.0)/2);
 
     q[0] = c1 * c2 * c3 - s1 * s2 * s3;
     q[1] = s1 * s2 * c3 + c1 * c2 * s3;
