@@ -49,7 +49,7 @@ typedef struct
   } while (0)
 #endif
 
-#define UNUSED(x) (void)x
+#define RCLC_UNUSED(x) (void)x
 
 #if __cplusplus
 }

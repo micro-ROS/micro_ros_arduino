@@ -1,6 +1,13 @@
 #!/bin/bash
 
+apt update 
+
 cd /uros_ws
+
+source /opt/ros/$ROS_DISTRO/setup.bash
+source install/local_setup.bash
+
+ros2 run micro_ros_setup create_firmware_ws.sh generate_lib
 
 ######## Copying Arduino placeholders XRCE transport ########
 
@@ -18,9 +25,6 @@ popd > /dev/null
 
 ######## Clean and source ########
 find /arduino_project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.c.in -delete
-
-source /opt/ros/$ROS_DISTRO/setup.bash
-source install/local_setup.bash
 
 ######## Build for OpenCR  ########
 rm -rf firmware/build
@@ -57,3 +61,7 @@ cp -R firmware/build/libmicroros.a /arduino_project/src/mk20dx256/libmicroros.a
 
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /arduino_project/available_ros2_types
+
+cd firmware
+echo "" > /arduino_project/built_packages
+for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /arduino_project/built_packages; popd > /dev/null; done;
