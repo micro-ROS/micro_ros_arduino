@@ -27,7 +27,7 @@ rcl_timer_t timer;
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
 #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
 
-extern "C" int clock_gettime(clockid_t unused, struct timespec *tp);
+extern "C" int clock_gettime(clockid_t RCLC_UNUSED, struct timespec *tp);
 cIMU    IMU;
 
 const void euler_to_quat(float x, float y, float z, double* q) {
@@ -54,8 +54,8 @@ void error_loop(){
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {  
-  UNUSED(last_call_time);
-  UNUSED(timer);
+  RCLC_UNUSED(last_call_time);
+  RCLC_UNUSED(timer);
 }
 
 void setup() {
