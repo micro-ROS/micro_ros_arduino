@@ -6,7 +6,6 @@
 #include <rclc/executor.h>
 #include <std_msgs/msg/int64.h>
 
-// ros:
 rcl_init_options_t options;
 rcl_node_options_t node_ops;
 rcl_node_t node;
@@ -14,7 +13,6 @@ rclc_support_t support;
 rcl_allocator_t allocator;
 rclc_executor_t executor;
 
-// service:
 rcl_service_options_t service_options;
 rcl_service_t serv;
 const rosidl_service_type_support_t * service_type_support;
@@ -58,14 +56,10 @@ void loop() {
 
  size_t index;
  rcl_wait_set_add_service(&wait_set, &serv, &index);
-
- custom_print("Looping");
  
  rcl_wait(&wait_set, RCL_MS_TO_NS(100));
  for (size_t i = 0; i < wait_set.size_of_services; i++) {
    if (wait_set.services[i]) {
-    custom_print("Service found");
-
      example_interfaces__srv__AddTwoInts_Request__init(&req);
 
      rcl_take_request(&serv, &req_id, &req);
@@ -73,9 +67,7 @@ void loop() {
      example_interfaces__srv__AddTwoInts_Response__init(&res);
 
      res.sum = req.a + req.b;
-      custom_print("Calling rcl_send_response");
      rcl_send_response(&serv, &req_id, &res);
-      
    }
  }
 }
