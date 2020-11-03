@@ -5,12 +5,11 @@ WORKDIR uros_ws
 RUN git clone https://github.com/micro-ROS/micro-ros-build.git src/micro-ros-build \
     &&  . /opt/ros/$ROS_DISTRO/setup.sh \
     &&  apt update \
-    &&  apt install -y python3-pip \
+    &&  apt install -y python3-pip wget\
     &&  rosdep update \
     &&  rosdep install --from-paths src --ignore-src -y \
     &&  colcon build \
     &&  . install/local_setup.sh \
-    &&  ros2 run micro_ros_setup create_firmware_ws.sh generate_lib \
     &&  rm -rf log/ build/ src/* \
     &&  rm -rf /var/lib/apt/lists/* \
     && wget https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q2-update/+download/gcc-arm-none-eabi-5_4-2016q2-20160622-linux.tar.bz2 \

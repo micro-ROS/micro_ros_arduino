@@ -178,6 +178,9 @@ test_interface_files/Arrays.msg
 test_interface_files/MultiNested.msg
 test_interface_files/UnboundedSequences.msg
 test_interface_files/BoundedSequences.msg
+tf2_msgs/FrameGraph.srv
+tf2_msgs/TFMessage.msg
+tf2_msgs/TF2Error.msg
 example_interfaces/SetBool.srv
 example_interfaces/AddTwoInts.srv
 example_interfaces/Trigger.srv
@@ -210,6 +213,3 @@ example_interfaces/UInt8MultiArray.msg
 example_interfaces/Int16MultiArray.msg
 example_interfaces/UInt32MultiArray.msg
 example_interfaces/Float32MultiArray.msg
-tf2_msgs/FrameGraph.srv
-tf2_msgs/TFMessage.msg
-tf2_msgs/TF2Error.msg
