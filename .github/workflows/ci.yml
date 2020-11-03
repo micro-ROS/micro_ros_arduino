@@ -1,4 +1,4 @@
-name: CI micro_ros_arduino
+name: CI
 
 on:
     pull_request:
