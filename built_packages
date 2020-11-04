@@ -15,7 +15,7 @@ https://github.com/ros2/rcpputils.git c9ca530f94e91a9bf6730fa404e894d57421749e
 https://github.com/ros2/rcl_logging.git 00fa3be7db0d0c92fe69c53be6b5d711f8fc999e
 https://github.com/ros2/common_interfaces.git ac4c0181041a00a45372064c7705e5124ea53b37
 https://github.com/ros2/rosidl.git 6b62aa413af01a1455d3e0e731165ac9f27b6904
-https://github.com/ros2/rcl.git 90906259824a385ed0532c06de6f074d1c0a8656
+https://github.com/ros2/rcl.git f911664ca5c5fb8064ceb0d5eeb80c7799d1f639
 https://github.com/ros2/example_interfaces.git 5e6f2e03a4dc6383383fe107fe0fa8f7019d23cb
 https://github.com/ros2/rcl_interfaces.git 8244fab1597ca8c5f72dc9024f019b878920699b
 https://github.com/ros2/unique_identifier_msgs.git ae98763a8f3367b36c71f58c88579447158058a7
