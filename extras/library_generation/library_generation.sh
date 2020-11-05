@@ -95,8 +95,8 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
 fi
 
 ######## Generate extra files ########
-find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /arduino_project/available_ros2_types
-find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /arduino_project/available_ros2_types
+find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /arduino_project/available_ros2_types
+find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /arduino_project/available_ros2_types
 
 cd firmware
 echo "" > /arduino_project/built_packages
