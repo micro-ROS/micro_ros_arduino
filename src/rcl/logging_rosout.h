@@ -98,7 +98,7 @@ rcl_logging_rosout_fini();
  * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
-RCL_LOCAL
+RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_logging_rosout_init_publisher_for_node(
@@ -124,7 +124,7 @@ rcl_logging_rosout_init_publisher_for_node(
  * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
-RCL_LOCAL
+RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_logging_rosout_fini_publisher_for_node(
