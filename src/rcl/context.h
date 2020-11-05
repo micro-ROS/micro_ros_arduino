@@ -158,8 +158,9 @@ rcl_get_zero_initialized_context(void);
 /**
  * The context to be finalized must have been previously initialized with
  * `rcl_init()`, and then later invalidated with `rcl_shutdown()`.
+ * A zero-initialized context that has not been initialized can be finalized.
  * If context is `NULL`, then `RCL_RET_INVALID_ARGUMENT` is returned.
- * If context is zero-initialized, then `RCL_RET_INVALID_ARGUMENT` is returned.
+ * If context is zero-initialized, then `RCL_RET_OK` is returned.
  * If context is initialized and valid (`rcl_shutdown()` was not called on it),
  * then `RCL_RET_INVALID_ARGUMENT` is returned.
  *

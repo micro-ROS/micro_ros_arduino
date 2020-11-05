@@ -48,7 +48,7 @@ typedef rcutils_logging_output_handler_t rcl_logging_output_handler_t;
  * \return `RCL_RET_OK` if successful, or
  * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
  * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERR` if a general error occurs
+ * \return `RCL_RET_ERROR` if a general error occurs
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -74,8 +74,9 @@ rcl_logging_configure(
  * \param allocator Used to allocate memory used by the logging system
  * \param output_handler Output handler to be installed
  * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
  * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_ERR` if a general error occurs
+ * \return `RCL_RET_ERROR` if a general error occurs
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -97,7 +98,7 @@ rcl_logging_configure_with_output_handler(
  * Lock-Free          | Yes
  *
  * \return `RCL_RET_OK` if successful.
- * \return `RCL_RET_ERR` if a general error occurs
+ * \return `RCL_RET_ERROR` if a general error occurs
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
