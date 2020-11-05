@@ -19,6 +19,6 @@ RUN git clone https://github.com/micro-ROS/micro-ros-build.git src/micro-ros-bui
     && tar -xvf gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 \
     && rm -rf gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 gcc-arm-none-eabi-5_4-2016q3/share/doc 
 
-COPY ./library_generation.sh /library_generation.sh
+COPY ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/library_generation.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

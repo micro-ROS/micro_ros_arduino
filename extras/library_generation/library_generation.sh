@@ -1,5 +1,24 @@
 #!/bin/bash
 
+PLATFORMS=()
+while getopts "p:" o; do 
+    case "$o" in
+        p)
+            PLATFORMS+=(${OPTARG})
+            ;;
+    esac
+done
+
+if [ $OPTIND -eq 1 ]; then 
+    PLATFORMS+=("opencr1")
+    PLATFORMS+=("teensy4")
+    PLATFORMS+=("teensy3")
+fi
+
+shift $((OPTIND-1))
+
+######## Init ########
+
 apt update 
 
 cd /uros_ws
@@ -17,9 +36,17 @@ cp /arduino_project/extras/library_generation/arduino_xrce_transports/serial_tra
 ######## Adding extra packages ########
 pushd firmware/mcu_ws > /dev/null
 
-git clone -b foxy https://github.com/ros2/geometry2
-cp -R geometry2/tf2_msgs ros2/tf2_msgs
-rm -rf geometry2
+    # Workaround: Copy just tf2_msgs
+    git clone -b foxy https://github.com/ros2/geometry2
+    cp -R geometry2/tf2_msgs ros2/tf2_msgs
+    rm -rf geometry2
+
+    # Import user defined packages
+    mkdir extra_packages
+    pushd extra_packages > /dev/null
+        cp -R /arduino_project/extras/library_generation/extra_packages/* .
+        vcs import --input extra_packages.repos
+    popd > /dev/null
 
 popd > /dev/null
 
@@ -27,40 +54,49 @@ popd > /dev/null
 find /arduino_project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.c.in -delete
 
 ######## Build for OpenCR  ########
-rm -rf firmware/build
+if [[ " ${PLATFORMS[@]} " =~ " opencr1 " ]]; then
+    rm -rf firmware/build
 
-export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q2/bin/arm-none-eabi-
-ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/opencr_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q2/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/opencr_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
 
-find firmware/build/include/ -name "*.c"  -delete
-cp -R firmware/build/include/* /arduino_project/src/ 
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
 
-mkdir -p /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp
-cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp/libmicroros.a
-
-######## Build for Teensy 4 ########
-rm -rf firmware/build
-
-export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
-
-ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy4_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
-
-mkdir -p /arduino_project/src/imxrt1062/fpv5-d16-hard
-cp -R firmware/build/libmicroros.a /arduino_project/src/imxrt1062/fpv5-d16-hard/libmicroros.a
-
+    mkdir -p /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp
+    cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp/libmicroros.a
+fi
 
 ######## Build for Teensy 3.2 ########
-rm -rf firmware/build
+if [[ " ${PLATFORMS[@]} " =~ " teensy3 " ]]; then
+    rm -rf firmware/build
 
-export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy32_toolchain.cmake /arduino_project/extras/library_generation/colcon_lowmem.meta
 
-ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy32_toolchain.cmake /arduino_project/extras/library_generation/colcon_lowmem.meta
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
 
-mkdir -p /arduino_project/src/mk20dx256
-cp -R firmware/build/libmicroros.a /arduino_project/src/mk20dx256/libmicroros.a
+    mkdir -p /arduino_project/src/mk20dx256
+    cp -R firmware/build/libmicroros.a /arduino_project/src/mk20dx256/libmicroros.a
+fi
+######## Build for Teensy 4 ########
+if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy4_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+
+    mkdir -p /arduino_project/src/imxrt1062/fpv5-d16-hard
+    cp -R firmware/build/libmicroros.a /arduino_project/src/imxrt1062/fpv5-d16-hard/libmicroros.a
+fi
 
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /arduino_project/available_ros2_types
+find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /arduino_project/available_ros2_types
 
 cd firmware
 echo "" > /arduino_project/built_packages

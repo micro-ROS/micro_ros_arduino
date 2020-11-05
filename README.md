@@ -31,13 +31,16 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 
 ## How to build the precompiled library
 
-```bash
+<!-- 
 pushd extras/library_generation
 docker build . -t micro_ros_arduino_builder
 popd
+ -->
 
-docker run -it --rm -v $(pwd):/arduino_project micro_ros_arduino_builder
+```bash
+docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder
 ```
+Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 
 ## Purpose of the Project
 
