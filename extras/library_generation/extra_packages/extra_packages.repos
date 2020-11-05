@@ -1,5 +1,5 @@
 repositories:
-#  myrepo:
-#    type: git
-#    url: https://github.com/my/repo
-#    version: master
+  control_msgs:
+    type: git
+    url: https://github.com/ros-controls/control_msgs
+    version: foxy-devel
