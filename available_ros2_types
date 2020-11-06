@@ -127,6 +127,7 @@ nav_msgs/SetMap.srv
 tf2_msgs/TFMessage.msg
 tf2_msgs/TF2Error.msg
 tf2_msgs/FrameGraph.srv
+tf2_msgs/LookupTransform.action
 example_interfaces/Float32MultiArray.msg
 example_interfaces/WString.msg
 example_interfaces/UInt8MultiArray.msg
@@ -159,6 +160,7 @@ example_interfaces/MultiArrayLayout.msg
 example_interfaces/Trigger.srv
 example_interfaces/AddTwoInts.srv
 example_interfaces/SetBool.srv
+example_interfaces/Fibonacci.action
 rosgraph_msgs/Clock.msg
 composition_interfaces/LoadNode.srv
 composition_interfaces/ListNodes.srv
@@ -191,6 +193,7 @@ rcl_interfaces/GetParameterTypes.srv
 builtin_interfaces/Time.msg
 builtin_interfaces/Duration.msg
 test_msgs/Builtins.msg
+test_msgs/NestedMessage.action
 action_msgs/GoalInfo.msg
 action_msgs/GoalStatusArray.msg
 action_msgs/GoalStatus.msg
@@ -213,3 +216,19 @@ test_interface_files/MultiNested.msg
 test_interface_files/Arrays.srv
 test_interface_files/Empty.srv
 test_interface_files/BasicTypes.srv
+test_interface_files/Fibonacci.action
+control_msgs/JointTrajectoryControllerState.msg
+control_msgs/InterfaceValue.msg
+control_msgs/GripperCommand.msg
+control_msgs/PidState.msg
+control_msgs/JointControllerState.msg
+control_msgs/JointTolerance.msg
+control_msgs/DynamicJointState.msg
+control_msgs/JointJog.msg
+control_msgs/QueryTrajectoryState.srv
+control_msgs/QueryCalibrationState.srv
+control_msgs/PointHead.action
+control_msgs/FollowJointTrajectory.action
+control_msgs/SingleJointPosition.action
+control_msgs/GripperCommand.action
+control_msgs/JointTrajectory.action
