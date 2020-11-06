@@ -237,6 +237,136 @@ rclc_executor_add_timer(
   rclc_executor_t * executor,
   rcl_timer_t * timer);
 
+
+/**
+ *  Adds a client to an executor.
+ * * An error is returned, if {@link rclc_executor_t.handles} array is full.
+ * * The total number_of_clients field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] client pointer to a allocated and initialized client
+ * \param [in] ros_request type-erased ptr to an allocated ROS request message
+ * \param [in] callback    function pointer to a callback
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_add_client(
+  rclc_executor_t * executor,
+  rcl_client_t * client,
+  void * ros_request,
+  rclc_client_callback_t callback);
+
+/**
+ *  Adds a service to an executor.
+ * * An error is returned, if {@link rclc_executor_t.handles} array is full.
+ * * The total number_of_services field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] service pointer to an allocated and initialized service
+ * \param [in] ros_request type-erased ptr to an allocated ROS request message
+ * \param [in] callback    function pointer to a callback
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_add_service(
+  rclc_executor_t * executor,
+  rcl_service_t * service,
+  void * ros_request,
+  rclc_service_callback_t callback);
+
+/**
+ *  Adds a action client to an executor.
+ * * An error is returned, if {@link rclc_executor_t.handles} array is full.
+ * * The total number_of_action_clients field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] action_client pointer to a allocated and initialized action client
+ * \param [in] ros_goal_response type-erased ptr to an allocated ROS goal response message
+ * \param [in] ros_feedback type-erased ptr to an allocated ROS feedback message
+ * \param [in] ros_result_response type-erased ptr to an allocated ROS result message
+ * \param [in] goal_callback    function pointer to a goal callback
+ * \param [in] feedback_callback    function pointer to a feedback callback
+ * \param [in] result_callback    function pointer to a result callback
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_add_action_client(
+  rclc_executor_t * executor,
+  rcl_action_client_t * action_client,
+  void * ros_goal_response,
+  void * ros_feedback,
+  void * ros_result_response,
+  rclc_action_client_goal_callback_t goal_callback,
+  rclc_action_client_feedback_callback_t feedback_callback,
+  rclc_action_client_result_callback_t result_callback);
+
+/**
+ *  Adds a action server to an executor.
+ * * An error is returned, if {@link rclc_executor_t.handles} array is full.
+ * * The total number_of_action_servers field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] action_server pointer to a allocated and initialized action server
+ * \param [in] ros_goal_request type-erased ptr to an allocated ROS goal request message
+ * \param [in] ros_result_request type-erased ptr to an allocated ROS result request message
+ * \param [in] goal_callback    function pointer to a goal request callback
+ * \param [in] result_callback    function pointer to a result request callback
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_add_action_server(
+  rclc_executor_t * executor,
+  rcl_action_server_t * action_server,
+  void * ros_goal_request,
+  void * ros_result_request,
+  rclc_action_server_goal_callback_t goal_callback,
+  rclc_action_server_result_callback_t result_callback);
+
+
 /**
  *  The spin-some function checks one-time for new data from the DDS-queue.
  * * the timeout is defined in {@link rclc_executor_t.timeout_ns} and can

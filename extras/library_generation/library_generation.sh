@@ -36,6 +36,10 @@ cp /arduino_project/extras/library_generation/arduino_xrce_transports/serial_tra
 ######## Adding extra packages ########
 pushd firmware/mcu_ws > /dev/null
 
+    pushd uros/rclc
+        git checkout feature/actions_support
+    popd
+
     # Workaround: Copy just tf2_msgs
     git clone -b foxy https://github.com/ros2/geometry2
     cp -R geometry2/tf2_msgs ros2/tf2_msgs

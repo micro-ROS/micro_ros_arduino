@@ -44,7 +44,17 @@ typedef struct
   do { \
     RCUTILS_LOG_ERROR_NAMED( \
       ROS_PACKAGE_NAME, \
-      "[" #rclc "] error in " #rcl ": %s\n", rcutils_get_error_string().str); \
+      "[" #rclc "] Error in " #rcl ": %s\n", rcutils_get_error_string().str); \
+    rcl_reset_error(); \
+  } while (0)
+#endif
+
+#ifndef PRINT_RCLC_WARN
+#define PRINT_RCLC_WARN(rclc, rcl) \
+  do { \
+    RCUTILS_LOG_WARN_NAMED( \
+      ROS_PACKAGE_NAME, \
+      "[" #rclc "] Warning in " #rcl ": %s\n", rcutils_get_error_string().str); \
     rcl_reset_error(); \
   } while (0)
 #endif
