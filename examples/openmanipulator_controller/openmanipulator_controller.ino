@@ -8,9 +8,14 @@
 #include <rcl/error_handling.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
+
 #include <rosidl_runtime_c/string_functions.h>
+#include <rosidl_runtime_c/primitives_sequence_functions.h>
+#include <rosidl_runtime_c/primitives_sequence_functions.h>
 
 #include <control_msgs/action/follow_joint_trajectory.h>
+#include <trajectory_msgs/msg/joint_trajectory_point.h>
+#include <control_msgs/msg/joint_tolerance.h>
 
 OpenManipulator open_manipulator;
 
@@ -24,28 +29,37 @@ rclc_executor_t executor;
 bool processing_goal = false;
 bool result_requested = false;
 
+control_msgs__action__FollowJointTrajectory_SendGoal_Request * goal_request;
+control_msgs__action__FollowJointTrajectory_GetResult_Request * result_request;
+control_msgs__action__FollowJointTrajectory_FeedbackMessage * feedback;
+control_msgs__action__FollowJointTrajectory_GetResult_Response * result_response;
+
+rcl_action_goal_info_t goal_info;
+rmw_request_id_t request_header;
+rcl_action_goal_handle_t * goal_handle;
+
 control_msgs__action__FollowJointTrajectory_FeedbackMessage * create_feedback_message(){
   control_msgs__action__FollowJointTrajectory_FeedbackMessage * msg = control_msgs__action__FollowJointTrajectory_FeedbackMessage__create();
 
   rosidl_runtime_c__String__assign(&msg->feedback.header.frame_id, "placeholderplaceholderplaceholder");
 
-  msg->joint_names = rosidl_runtime_c__String__Sequence__create(4);
+  rosidl_runtime_c__String__Sequence__init(&msg->feedback.joint_names, 4);
   for (size_t i = 0; i < i; i++){
-    rosidl_runtime_c__String__assign(&msg->feedback.joint_names->data[i], "my_text");
+    rosidl_runtime_c__String__assign(&msg->feedback.joint_names.data[i], "my_text");
   }
 
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.positions, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.velocities, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.accelerations, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.effort, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.positions, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.velocities, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.accelerations, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.effort, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.positions, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.velocities, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.accelerations, msg->joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.effort, msg->joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.positions, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.velocities, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.accelerations, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.effort, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.positions, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.velocities, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.accelerations, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.effort, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.positions, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.velocities, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.accelerations, msg->feedback.joint_names.capacity);
+  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.effort, msg->feedback.joint_names.capacity);
   
   return msg;
 }
@@ -54,39 +68,31 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Request *  create_goal_requ
   control_msgs__action__FollowJointTrajectory_SendGoal_Request * msg = control_msgs__action__FollowJointTrajectory_SendGoal_Request__create();
   rosidl_runtime_c__String__assign(&msg->goal.trajectory.header.frame_id, "placeholderplaceholderplaceholder"); // Frame id link 
 
-  msg->goal.trajectory.joint_names = rosidl_runtime_c__String__Sequence__create(5); // Number of join in arm
+  rosidl_runtime_c__String__Sequence__init(&msg->goal.trajectory.joint_names, 5); // Number of join in arm
   for (size_t i = 0; i < 5; i++){
-    rosidl_runtime_c__String__assign(&msg->goal.trajectory.joint_names->data[i], "placeholderplaceholderplaceholder"); //Join names
+    rosidl_runtime_c__String__assign(&msg->goal.trajectory.joint_names.data[i], "placeholderplaceholderplaceholder"); //Join names
   }
 
-  msg->goal.trajectory.points = trajectory_msgs__msg__JointTrajectoryPoint__Sequence__create(40); //Number of trajectory points available
+  trajectory_msgs__msg__JointTrajectoryPoint__Sequence__init(&msg->goal.trajectory.points, 40); //Number of trajectory points available
   for (size_t i = 0; i < 40; i++){
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points->data[i].positions, msg->goal.trajectory.joint_names->capacity);
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points->data[i].velocities, msg->goal.trajectory.joint_names->capacity);
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points->data[i].accelerations, msg->goal.trajectory.joint_names->capacity);
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points->data[i].effort, msg->goal.trajectory.joint_names->capacity);
+    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].positions, msg->goal.trajectory.joint_names.capacity);
+    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].velocities, msg->goal.trajectory.joint_names.capacity);
+    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].accelerations, msg->goal.trajectory.joint_names.capacity);
+    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].effort, msg->goal.trajectory.joint_names.capacity);
   }
 
-  msg->goal.path_tolerance = control_msgs__msg__JointTolerance__Sequence__create(40);
+  control_msgs__msg__JointTolerance__Sequence__init(&msg->goal.path_tolerance, 40);
   for (size_t i = 0; i < 40; i++){
-    rosidl_runtime_c__String__assign(&msg->goal.path_tolerance->data[i].name, "placeholderplaceholderplaceholder");
+    rosidl_runtime_c__String__assign(&msg->goal.path_tolerance.data[i].name, "placeholderplaceholderplaceholder");
   }
 
-  msg->goal.goal_tolerance = control_msgs__msg__JointTolerance__Sequence__create(40);
+  control_msgs__msg__JointTolerance__Sequence__init(&msg->goal.goal_tolerance, 40);
   for (size_t i = 0; i < 40; i++){
-    rosidl_runtime_c__String__assign(&msg->goal.goal_tolerance->data[i].name, "placeholderplaceholderplaceholder");
+    rosidl_runtime_c__String__assign(&msg->goal.goal_tolerance.data[i].name, "placeholderplaceholderplaceholder");
   }
 
   return msg;
 }
-
-control_msgs__action__FollowJointTrajectory_SendGoal_Request * goal_request;
-control_msgs__action__FollowJointTrajectory_GetResult_Request * result_request;
-control_msgs__action__FollowJointTrajectory_FeedbackMessage * feedback;
-control_msgs__action__FollowJointTrajectory_GetResult_Response * result_response;
-
-rcl_action_goal_info_t goal_info;
-rmw_request_id_t request_header;
 
 void goal_callback(const void * msg, rmw_request_id_t * request){
   control_msgs__action__FollowJointTrajectory_SendGoal_Request * ros_msg = (control_msgs__action__FollowJointTrajectory_SendGoal_Request * ) msg;
@@ -94,7 +100,7 @@ void goal_callback(const void * msg, rmw_request_id_t * request){
   control_msgs__action__FollowJointTrajectory_SendGoal_Response ros_goal_response;
   ros_goal_response.accepted = !open_manipulator.getMovingState();
 
-  RCSOFTCHECK(rcl_action_send_goal_response(&follow_joint_trajectory_server, request, &ros_goal_response))
+  rcl_action_send_goal_response(&follow_joint_trajectory_server, request, &ros_goal_response);
 
   if (ros_goal_response.accepted) {
 
@@ -122,9 +128,6 @@ void goal_callback(const void * msg, rmw_request_id_t * request){
     float duration;
     
     for(uint8_t i = 0; i < 4; i++){
-
-      ros_msg->goal.trajectory.points.data[0].positions.data[i]
-    
       //velocities.push_back(ros_msg->goal.trajectory.points.data[0].velocities.data[i]);
       //accelerations.push_back(ros_msg->goal.trajectory.points.data[0].accelerations.data[i]);
       //efforts.push_back(ros_msg->goal.trajectory.points.data[0].effort.data[i]);
@@ -155,34 +158,34 @@ void setup()
   allocator = rcl_get_default_allocator();
   
   // create init_options
-  RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
+  rclc_support_init(&support, 0, NULL, &allocator);
 
   // create node
   node = rcl_get_zero_initialized_node();
-  RCCHECK(rclc_node_init_default(&node, "open_manipulator_node", "", &support));
+  rclc_node_init_default(&node, "open_manipulator_node", "", &support);
 
   // create action server
-  RCCHECK(rclc_action_server_init_default(
+  rclc_action_server_init_default(
     &follow_joint_trajectory_server,
     &node,
     &support.clock,
     ROSIDL_GET_ACTION_TYPE_SUPPORT(control_msgs, FollowJointTrajectory),
-    "followjointrajectory"));
+    "followjointrajectory");
 
   // create executor
   executor = rclc_executor_get_zero_initialized_executor();
-  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+  rclc_executor_init(&executor, &support.context, 1, &allocator);
 
   unsigned int rcl_wait_timeout = 1000;   // in ms
-  RCCHECK(rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout)));
+  rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout));
 
-  RCCHECK(rclc_executor_add_action_server(
+  rclc_executor_add_action_server(
     &executor,
     &follow_joint_trajectory_server,
     goal_request,
     result_request,
     goal_callback,
-    result_callback));
+    result_callback);
 
   // Creating messages
   goal_request = create_goal_request();
@@ -198,21 +201,21 @@ void loop()
   open_manipulator.processOpenManipulator(millis()/1000.0);
 
   if (processing_goal && result_requested){
-    for (size_t i = 0; i < feedback->feedback.desired.positions->capacity; i++){
-      feedback->feedback.desired.positions->data[i] = 0.0;
-      feedback->feedback.desired.velocities->data[i] = 0.0;
-      feedback->feedback.desired.accelerations->data[i] = 0.0;
-      feedback->feedback.desired.effort->data[i] = 0.0;
+    for (size_t i = 0; i < feedback->feedback.desired.positions.capacity; i++){
+      feedback->feedback.desired.positions.data[i] = 0.0;
+      feedback->feedback.desired.velocities.data[i] = 0.0;
+      feedback->feedback.desired.accelerations.data[i] = 0.0;
+      feedback->feedback.desired.effort.data[i] = 0.0;
 
-      feedback->feedback.actual.positions->data[i] = 0.0;
-      feedback->feedback.actual.velocities->data[i] = 0.0;
-      feedback->feedback.actual.accelerations->data[i] = 0.0;
-      feedback->feedback.actual.effort->data[i] = 0.0;
+      feedback->feedback.actual.positions.data[i] = 0.0;
+      feedback->feedback.actual.velocities.data[i] = 0.0;
+      feedback->feedback.actual.accelerations.data[i] = 0.0;
+      feedback->feedback.actual.effort.data[i] = 0.0;
 
-      feedback->feedback.error.positions->data[i] = 0.0;
-      feedback->feedback.error.velocities->data[i] = 0.0;
-      feedback->feedback.error.accelerations->data[i] = 0.0;
-      feedback->feedback.error.effort->data[i] = 0.0;
+      feedback->feedback.error.positions.data[i] = 0.0;
+      feedback->feedback.error.velocities.data[i] = 0.0;
+      feedback->feedback.error.accelerations.data[i] = 0.0;
+      feedback->feedback.error.effort.data[i] = 0.0;
     }
     rcl_action_publish_feedback(&follow_joint_trajectory_server, feedback);
   }
