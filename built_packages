@@ -6,6 +6,7 @@ https://github.com/ament/ament_lint.git 3c48c41924c94579f473dd99e6b53969753fcb47
 https://github.com/ament/ament_package.git 4b2c182fb394e60161b7bddc62696485f7148ceb
 https://github.com/ament/ament_index.git ae8b7a3998fe9c1b6fa5b55cf5054562cd2a1eb7
 https://github.com/ros2/ament_cmake_ros.git bcf94994adf196d43ccb26fb1ac398b13f733908
+https://github.com/ros-controls/control_msgs 177be625befba458ce777a16c2b9f22f07fff6ca
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git c6b9faa117cc027062972bb5b9347576c82d4b76
 https://github.com/eProsima/micro-CDR.git 6c9a88f122565d4c6e768ceae802c32e4a2ee836
 https://github.com/ros2/rmw_implementation.git 395fdbc0ccaf566b39761a03f00c5ef79d018c98
