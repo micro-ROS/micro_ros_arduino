@@ -49,6 +49,33 @@ rclc_node_init_default(
   const char * namespace_,
   rclc_support_t * support);
 
+/**
+ *  Creates a RCL node with options.
+ *
+ *  * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes (in this function and in RCL)
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] name the name of the node
+ * \param[in] namespace the namespace of the node
+ * \param[in] support the rclc_support_t object
+ * \param[in] node_ops node options
+ * \return rcl_node_t if successful
+ * \return NULL if an error occurred
+ */
+rcl_ret_t
+rclc_node_init_with_options(
+  rcl_node_t * node,
+  const char * name,
+  const char * namespace_,
+  rclc_support_t * support,
+  rcl_node_options_t * node_ops);
+
+
 #if __cplusplus
 }
 #endif
