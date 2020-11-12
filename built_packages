@@ -25,7 +25,7 @@ https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca
 https://github.com/ros2/libyaml_vendor.git 50546eff5f0146c027d63d7e2e473c9956e2eabf
 https://github.com/ros2/test_interface_files.git c4d710e3394ad09a71a257f5490688653fb441b3
 https://github.com/micro-ROS/rosidl_typesupport.git 2b644340e327b486873c012fcbc075dbde6fe44c
-https://github.com/micro-ROS/rclc 343bd05a95e321d170e2826eef11086b0c960862
+https://github.com/micro-ROS/rclc 657547dac5922266848cb270ec6b2f05addba3fd
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6cb7eaf4b633e037d1efe9f89416549c44cba2e6
 https://github.com/micro-ROS/rcl 8068191ed4f5379b84ec8a8fb5879f38e3720c77
 https://github.com/micro-ROS/rmw-microxrcedds.git b969cca2fa1a7d5e18e87996b9b82bef59837801
