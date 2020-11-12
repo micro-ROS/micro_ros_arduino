@@ -9,13 +9,9 @@
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
 
-#include <rosidl_runtime_c/string_functions.h>
-#include <rosidl_runtime_c/primitives_sequence_functions.h>
-#include <rosidl_runtime_c/primitives_sequence_functions.h>
-
-#include <control_msgs/action/follow_joint_trajectory.h>
-#include <trajectory_msgs/msg/joint_trajectory_point.h>
-#include <control_msgs/msg/joint_tolerance.h>
+extern "C" {
+#include "message_init_utilities.h"
+}
 
 OpenManipulator open_manipulator;
 
@@ -25,6 +21,8 @@ rclc_support_t support;
 rcl_node_t node;
 rcl_action_server_t follow_joint_trajectory_server;
 rclc_executor_t executor;
+rcl_timer_t timer;
+rcl_publisher_t joint_state_publisher;
 
 bool processing_goal = false;
 bool result_requested = false;
@@ -38,61 +36,7 @@ rcl_action_goal_info_t goal_info;
 rmw_request_id_t request_header;
 rcl_action_goal_handle_t * goal_handle;
 
-control_msgs__action__FollowJointTrajectory_FeedbackMessage * create_feedback_message(){
-  control_msgs__action__FollowJointTrajectory_FeedbackMessage * msg = control_msgs__action__FollowJointTrajectory_FeedbackMessage__create();
-
-  rosidl_runtime_c__String__assign(&msg->feedback.header.frame_id, "placeholderplaceholderplaceholder");
-
-  rosidl_runtime_c__String__Sequence__init(&msg->feedback.joint_names, 4);
-  for (size_t i = 0; i < i; i++){
-    rosidl_runtime_c__String__assign(&msg->feedback.joint_names.data[i], "my_text");
-  }
-
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.positions, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.velocities, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.accelerations, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.desired.effort, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.positions, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.velocities, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.accelerations, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.actual.effort, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.positions, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.velocities, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.accelerations, msg->feedback.joint_names.capacity);
-  rosidl_runtime_c__float64__Sequence__init(&msg->feedback.error.effort, msg->feedback.joint_names.capacity);
-  
-  return msg;
-}
-
-control_msgs__action__FollowJointTrajectory_SendGoal_Request *  create_goal_request(){
-  control_msgs__action__FollowJointTrajectory_SendGoal_Request * msg = control_msgs__action__FollowJointTrajectory_SendGoal_Request__create();
-  rosidl_runtime_c__String__assign(&msg->goal.trajectory.header.frame_id, "placeholderplaceholderplaceholder"); // Frame id link 
-
-  rosidl_runtime_c__String__Sequence__init(&msg->goal.trajectory.joint_names, 5); // Number of join in arm
-  for (size_t i = 0; i < 5; i++){
-    rosidl_runtime_c__String__assign(&msg->goal.trajectory.joint_names.data[i], "placeholderplaceholderplaceholder"); //Join names
-  }
-
-  trajectory_msgs__msg__JointTrajectoryPoint__Sequence__init(&msg->goal.trajectory.points, 40); //Number of trajectory points available
-  for (size_t i = 0; i < 40; i++){
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].positions, msg->goal.trajectory.joint_names.capacity);
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].velocities, msg->goal.trajectory.joint_names.capacity);
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].accelerations, msg->goal.trajectory.joint_names.capacity);
-    rosidl_runtime_c__float64__Sequence__init(&msg->goal.trajectory.points.data[i].effort, msg->goal.trajectory.joint_names.capacity);
-  }
-
-  control_msgs__msg__JointTolerance__Sequence__init(&msg->goal.path_tolerance, 40);
-  for (size_t i = 0; i < 40; i++){
-    rosidl_runtime_c__String__assign(&msg->goal.path_tolerance.data[i].name, "placeholderplaceholderplaceholder");
-  }
-
-  control_msgs__msg__JointTolerance__Sequence__init(&msg->goal.goal_tolerance, 40);
-  for (size_t i = 0; i < 40; i++){
-    rosidl_runtime_c__String__assign(&msg->goal.goal_tolerance.data[i].name, "placeholderplaceholderplaceholder");
-  }
-
-  return msg;
-}
+sensor_msgs__msg__JointState * join_states_msg;
 
 void goal_callback(const void * msg, rmw_request_id_t * request){
   control_msgs__action__FollowJointTrajectory_SendGoal_Request * ros_msg = (control_msgs__action__FollowJointTrajectory_SendGoal_Request * ) msg;
@@ -149,9 +93,25 @@ void result_callback(const void * msg, rmw_request_id_t * request){
   }
 }
 
+void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
+{  
+  RCLC_UNUSED(last_call_time);
+  if (timer != NULL) {
+    for (size_t i = 0; i < 4; i++)
+    {
+      join_states_msg->position.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).position;
+      join_states_msg->velocity.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).velocity;
+      join_states_msg->effort.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).effort;
+    }
+    join_states_msg->position.size = 4;
+    join_states_msg->velocity.size = 4;
+    join_states_msg->effort.size = 4;
+    rcl_publish(&joint_state_publisher, join_states_msg, NULL);
+  }
+}
 
 void setup()
-{
+{  
   open_manipulator.initOpenManipulator(true);
   delay(2000);
 
@@ -170,15 +130,32 @@ void setup()
     &node,
     &support.clock,
     ROSIDL_GET_ACTION_TYPE_SUPPORT(control_msgs, FollowJointTrajectory),
-    "followjointrajectory");
+    "/followjointrajectory");
+
+  // create publisher
+  rclc_publisher_init_default(
+    &joint_state_publisher,
+    &node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, JointState),
+    "/join_states");
+
+  // create timer,
+  timer = rcl_get_zero_initialized_timer();
+  const unsigned int timer_timeout = 1000;
+  rclc_timer_init_default(
+    &timer,
+    &support,
+    RCL_MS_TO_NS(timer_timeout),
+    timer_callback);
 
   // create executor
   executor = rclc_executor_get_zero_initialized_executor();
-  rclc_executor_init(&executor, &support.context, 1, &allocator);
+  rclc_executor_init(&executor, &support.context, 2, &allocator);
 
   unsigned int rcl_wait_timeout = 1000;   // in ms
   rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout));
 
+  rclc_executor_add_timer(&executor, &timer);
   rclc_executor_add_action_server(
     &executor,
     &follow_joint_trajectory_server,
@@ -193,6 +170,8 @@ void setup()
   feedback = create_feedback_message();
   result_response = control_msgs__action__FollowJointTrajectory_GetResult_Response__create();
   rosidl_runtime_c__String__assign(&result_response->result.error_string, "");
+
+  join_states_msg = create_joint_states_message();
 }
 
 void loop()
