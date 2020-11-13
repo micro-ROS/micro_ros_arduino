@@ -46,15 +46,15 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {  
   RCLC_UNUSED(last_call_time);
   if (timer != NULL) {
-    for (size_t i = 0; i < 4; i++)
+    for (size_t i = 0; i < 5; i++)
     {
       join_states_msg->position.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).position;
       join_states_msg->velocity.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).velocity;
       join_states_msg->effort.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).effort;
     }
-    join_states_msg->position.size = 4;
-    join_states_msg->velocity.size = 4;
-    join_states_msg->effort.size = 4;
+    join_states_msg->position.size = 5;
+    join_states_msg->velocity.size = 5;
+    join_states_msg->effort.size = 5;
     rcl_publish(&joint_state_publisher, join_states_msg, NULL);
   }
 }
