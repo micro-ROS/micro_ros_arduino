@@ -30,16 +30,18 @@ rcl_subscription_t joint_trajectory_subscriber;
 sensor_msgs__msg__JointState * join_states_msg;
 trajectory_msgs__msg__JointTrajectory * joint_trajectory_msg;
 
+std::vector<double> positions(5, 0.0);
+
 void join_trajectory_callback(const void * msgin){
   trajectory_msgs__msg__JointTrajectory * ros_msg = (trajectory_msgs__msg__JointTrajectory *) msgin;
   
-  std::vector<double> positions;
   for (size_t i = 0; i < 4; i++)
   {
-    positions.push_back(ros_msg->points.data[0].positions.data[i]);
+    positions[i] = ros_msg->points.data[0].positions.data[i];
+    // positions.push_back(ros_msg->points.data[0].positions.data[i]);
   }
-  
-  open_manipulator.makeJointTrajectory(positions, 0.2);
+  // positions[1] = 0.0;
+  open_manipulator.makeJointTrajectory(positions, 0.1);
 }
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
@@ -48,7 +50,7 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
   if (timer != NULL) {
     for (size_t i = 0; i < 5; i++)
     {
-      join_states_msg->position.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).position;
+      join_states_msg->position.data[i] = positions[i];
       join_states_msg->velocity.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).velocity;
       join_states_msg->effort.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).effort;
     }
@@ -109,7 +111,6 @@ void setup()
   rclc_executor_add_timer(&executor, &timer);
 
   // Set initial position
-  std::vector<double> positions(4, 0.0);
   open_manipulator.processOpenManipulator(millis()/1000.0);
   open_manipulator.makeJointTrajectory(positions, 1);
 }
