@@ -13,6 +13,9 @@ extern "C" {
 #include "message_init_utilities.h"
 }
 
+#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){while(1){}}}
+#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
+
 OpenManipulator open_manipulator;
 
 // micro-ROS variables
@@ -59,60 +62,79 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
   }
 }
 
+extern "C" void printDebug(char str[]){
+      Serial1.println(str);
+
+}
+
+extern "C" void printDebugnl(char str[]){
+      Serial1.print(str);
+
+}
 
 void setup()
 {  
-  // open_manipulator.initOpenManipulator(true);
-  delay(1000);
+  open_manipulator.initOpenManipulator(true);
 
+  Serial1.begin(115200);
   allocator = rcl_get_default_allocator();
-  
   // create init_options
   rclc_support_init(&support, 0, NULL, &allocator);
 
   // create node
   node = rcl_get_zero_initialized_node();
-  rclc_node_init_default(&node, "open_manipulator_node", "", &support);
+  RCCHECK(rclc_node_init_default(&node, "open_manipulator_node", "", &support));
+  Serial1.println("NODE");
 
   // create publisher
-  rclc_publisher_init_default(
+  RCCHECK(rclc_publisher_init_default(
     &joint_state_publisher,
     &node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, JointState),
-    "/joint_states");
-  
+    "/joint_states"));
+    Serial1.println("PUB");
+
   // create subscriber
-  rclc_subscription_init_best_effort(
+  RCCHECK(rclc_subscription_init_best_effort(
     &joint_trajectory_subscriber,
     &node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(trajectory_msgs, msg, JointTrajectory),
-    "/open_manipulator/joint_trajectory");
+    "/open_manipulator/joint_trajectory"));
+  
+  Serial1.println("SUBS");
 
   // create timer,
   timer = rcl_get_zero_initialized_timer();
   const unsigned int timer_timeout = 10;
-  rclc_timer_init_default(
+  RCCHECK(rclc_timer_init_default(
     &timer,
     &support,
     RCL_MS_TO_NS(timer_timeout),
-    timer_callback);
+    timer_callback));
+  Serial1.println("TIMER");
 
   // Creating messages
-  // joint_trajectory_msg = create_joint_trajectory_msg();
+  joint_trajectory_msg = create_joint_trajectory_msg();
   join_states_msg = create_joint_states_message();
+  Serial1.println("MGSG");
 
   // create executor
   executor = rclc_executor_get_zero_initialized_executor();
   rclc_executor_init(&executor, &support.context, 3, &allocator);
+  Serial1.println("EXE");
 
   unsigned int rcl_wait_timeout = 10;   // in ms
   rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout));
 	rclc_executor_add_subscription(&executor, &joint_trajectory_subscriber, joint_trajectory_msg, &join_trajectory_callback, ON_NEW_DATA);
   rclc_executor_add_timer(&executor, &timer);
+   Serial1.println("SETUPDONE");
+
 }
 
 void loop()
 { 
-  rclc_executor_spin_some(&executor, RCL_MS_TO_NS(10));
-  // open_manipulator.processOpenManipulator(millis()/1000.0);
+  // Serial1.println("SPIN");
+
+  rclc_executor_spin_some(&executor, RCL_MS_TO_NS(20));
+  open_manipulator.processOpenManipulator(millis()/1000.0);
 }
