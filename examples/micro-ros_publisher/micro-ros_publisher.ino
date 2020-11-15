@@ -24,8 +24,9 @@ rcl_timer_t timer;
 
 void error_loop(){
   while(1){
-    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
-    delay(100);
+    // digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    delay(300);
+    SerialUSB.println("Error");
   }
 }
 
@@ -82,6 +83,5 @@ void setup() {
 }
 
 void loop() {
-  delay(100);
   RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 }

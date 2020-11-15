@@ -44,17 +44,7 @@ extern "C"
     // Place here your reading bytes platform code
     // Return number of bytes read (max bytes: len)
     (void)errcode;
-    uint32_t start_time = micros() * 1000;
-    size_t readed = 0;
-
-    while ((readed < len) && ((micros() * 1000) - start_time) < (uint32_t)timeout)
-    {
-      if (SerialUSB.available())
-      {
-        buf[readed++] = SerialUSB.read();
-      }
-    }
-
-    return readed;
+    SerialUSB.setTimeout(timeout);
+    return SerialUSB.readBytes((char *)buf, len);
   }
 }
