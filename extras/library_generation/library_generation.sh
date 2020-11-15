@@ -13,6 +13,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("opencr1")
     PLATFORMS+=("teensy4")
     PLATFORMS+=("teensy3")
+    PLATFORMS+=("cortex_m0")
 fi
 
 shift $((OPTIND-1))
@@ -92,6 +93,20 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
 
     mkdir -p /arduino_project/src/imxrt1062/fpv5-d16-hard
     cp -R firmware/build/libmicroros.a /arduino_project/src/imxrt1062/fpv5-d16-hard/libmicroros.a
+fi
+
+######## Build for SAMD (e.g. Arduino Zero) ########
+if [[ " ${PLATFORMS[@]} " =~ " cortex_m0 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/cortex_m0_toolchain.cmake /arduino_project/extras/library_generation/colcon_verylowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+
+    mkdir -p /arduino_project/src/cortex-m0plus
+    cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m0plus/libmicroros.a
 fi
 
 ######## Generate extra files ########
