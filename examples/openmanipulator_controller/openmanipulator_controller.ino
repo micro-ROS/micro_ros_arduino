@@ -37,10 +37,10 @@ void join_trajectory_callback(const void * msgin){
   
   for (size_t i = 0; i < 4; i++)
   {
-    positions[i] = ros_msg->points.data[0].positions.data[i];
-    // positions.push_back(ros_msg->points.data[0].positions.data[i]);
+    // if (fabs(ros_msg->points.data[0].velocities.data[i]) > 0){
+      positions[i] = positions[i] + 0.05*ros_msg->points.data[0].velocities.data[i];
+    // }
   }
-  // positions[1] = 0.0;
   open_manipulator.makeJointTrajectory(positions, 0.1);
 }
 
@@ -50,7 +50,7 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
   if (timer != NULL) {
     for (size_t i = 0; i < 5; i++)
     {
-      join_states_msg->position.data[i] = positions[i];
+      join_states_msg->position.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).position;
       join_states_msg->velocity.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).velocity;
       join_states_msg->effort.data[i] = open_manipulator.getJointValue(join_states_msg->name.data[i].data).effort;
     }
