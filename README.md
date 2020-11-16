@@ -42,6 +42,16 @@ docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builde
 ```
 Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 
+### Patch Teensyduino
+
+Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
+
+```bash
+export ARDUINO_PATH=[Your Arduino + Teensiduino path]
+cd $ARDUINO_PATH/hardware/teensy/avr/
+curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/library_generation/platform_teensy.txt > platform.txt
+```
+
 ## Purpose of the Project
 
 This software is not ready for production use. It has neither been developed nor
@@ -63,13 +73,3 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro-ros.github.io/docs/tutorials/core/microxrcedds_rmw_configuration/).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanims. Only USB serial transports are provided.
 - Teensyduino support files have to be patched in order to use precompiled libraries. 
-
-### Patch Teensyduino
-
-Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
-
-```bash
-export ARDUINO_PATH=[Your Arduino + Teensiduino path]
-cd $ARDUINO_PATH/hardware/teensy/avr/
-curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/library_generation/platform_teensy.txt > platform.txt
-```
