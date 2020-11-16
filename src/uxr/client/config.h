@@ -51,7 +51,7 @@
 #define UXR_CONFIG_TCP_TRANSPORT_MTU                  512
 #endif
 #ifdef UCLIENT_PROFILE_SERIAL
-#define UXR_CONFIG_SERIAL_TRANSPORT_MTU               512
+#define UXR_CONFIG_SERIAL_TRANSPORT_MTU               128
 #endif
 
 #endif // _UXR_CLIENT_CONFIG_H_

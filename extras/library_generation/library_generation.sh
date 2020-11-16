@@ -40,6 +40,15 @@ pushd firmware/mcu_ws > /dev/null
         git checkout feature/actions_support
     popd
 
+    pushd eProsima/Micro-XRCE-DDS-Client
+        git checkout fix/fragments_available
+    popd
+
+    pushd uros/rmw_microxrcedds
+        git checkout feature/separate_entities_creation
+    popd
+
+
     # Workaround: Copy just tf2_msgs
     git clone -b foxy https://github.com/ros2/geometry2
     cp -R geometry2/tf2_msgs ros2/tf2_msgs

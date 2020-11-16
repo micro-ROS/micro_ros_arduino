@@ -33,17 +33,19 @@
                 "-DUCLIENT_PROFILE_UDP=OFF",
                 "-DUCLIENT_PROFILE_DISCOVERY=OFF",
                 "-DUCLIENT_PROFILE_SERIAL=ON",
-                "-DUCLIENT_EXTERNAL_SERIAL=ON"
+                "-DUCLIENT_EXTERNAL_SERIAL=ON",
+                "-DUCLIENT_SERIAL_TRANSPORT_MTU=128" 
             ]
         },
         "rmw_microxrcedds": {
             "cmake-args": [
                 "-DRMW_UXRCE_MAX_NODES=1",
-                "-DRMW_UXRCE_MAX_PUBLISHERS=10",
-                "-DRMW_UXRCE_MAX_SUBSCRIPTIONS=5",
-                "-DRMW_UXRCE_MAX_SERVICES=4",
-                "-DRMW_UXRCE_MAX_CLIENTS=4",
-                "-DRMW_UXRCE_MAX_HISTORY=4",
+                "-DRMW_UXRCE_MAX_PUBLISHERS=21",
+                "-DRMW_UXRCE_MAX_SUBSCRIPTIONS=3",
+                "-DRMW_UXRCE_MAX_SERVICES=12",
+                "-DRMW_UXRCE_MAX_CLIENTS=3",
+                "-DRMW_UXRCE_MAX_HISTORY=1",
+                "-DRMW_UXRCE_STREAM_HISTORY=5",
                 "-DRMW_UXRCE_TRANSPORT=custom_serial"
             ]
         }
