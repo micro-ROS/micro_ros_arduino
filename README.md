@@ -42,7 +42,7 @@ docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builde
 ```
 Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 
-### Patch Teensyduino
+## Patch Teensyduino
 
 Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 
