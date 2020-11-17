@@ -19,14 +19,13 @@ rcl_timer_t timer;
 #define LED_PIN 13
 
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
-#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
+#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
 
 
 void error_loop(){
   while(1){
-    // digitalWrite(LED_PIN, !digitalRead(LED_PIN));
-    delay(300);
-    SerialUSB.println("Error");
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    delay(100);
   }
 }
 
@@ -83,5 +82,5 @@ void setup() {
 }
 
 void loop() {
-  RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
+  RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 }

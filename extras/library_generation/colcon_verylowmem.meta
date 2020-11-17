@@ -33,8 +33,7 @@
                 "-DUCLIENT_PROFILE_UDP=OFF",
                 "-DUCLIENT_PROFILE_DISCOVERY=OFF",
                 "-DUCLIENT_PROFILE_SERIAL=ON",
-                "-DUCLIENT_EXTERNAL_SERIAL=ON",
-                "-DUCLIENT_SERIAL_TRANSPORT_MTU=128" 
+                "-DUCLIENT_EXTERNAL_SERIAL=ON"
             ]
         },
         "rmw_microxrcedds": {
