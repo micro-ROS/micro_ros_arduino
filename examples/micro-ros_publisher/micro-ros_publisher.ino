@@ -18,37 +18,31 @@ rcl_timer_t timer;
 
 #define LED_PIN 13
 
-#define RCCHECK(fn)              \
-  {                              \
-    rcl_ret_t temp_rc = fn;      \
-    if ((temp_rc != RCL_RET_OK)) \
-    {                            \
-      error_loop();              \
-    }                            \
-  }
-#define RCSOFTCHECK(fn)          \
-  {                              \
-    rcl_ret_t temp_rc = fn;      \
-    if ((temp_rc != RCL_RET_OK)) \
-    {                            \
-      error_loop();              \
-    }                            \
-  }
+#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
+#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
 
-void error_loop()
-{
-  while (1)
-  {
+
+void error_loop(){
+  while(1){
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
     delay(100);
   }
 }
 
-void setup()
-{
-  pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH);
+void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
+{  
+  RCLC_UNUSED(last_call_time);
+  if (timer != NULL) {
+    RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
+    msg.data++;
+  }
+}
 
+void setup() {
+  
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, HIGH);  
+  
   delay(2000);
 
   allocator = rcl_get_default_allocator();
@@ -62,16 +56,32 @@ void setup()
 
   // create publisher
   RCCHECK(rclc_publisher_init_default(
-      &publisher,
-      &node,
-      ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-      "micro_ros_arduino_node_publisher"));
+    &publisher,
+    &node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+    "micro_ros_arduino_node_publisher"));
+
+  // create timer,
+  timer = rcl_get_zero_initialized_timer();
+  const unsigned int timer_timeout = 1000;
+  RCCHECK(rclc_timer_init_default(
+    &timer,
+    &support,
+    RCL_MS_TO_NS(timer_timeout),
+    timer_callback));
+
+  // create executor
+  executor = rclc_executor_get_zero_initialized_executor();
+  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+
+  unsigned int rcl_wait_timeout = 100;   // in ms
+  RCCHECK(rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout)));
+  RCCHECK(rclc_executor_add_timer(&executor, &timer));
+
   msg.data = 0;
 }
 
-void loop()
-{
+void loop() {
   delay(100);
-  RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
-  msg.data++;
+  RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 }
