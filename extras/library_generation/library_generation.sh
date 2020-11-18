@@ -14,6 +14,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("teensy4")
     PLATFORMS+=("teensy3")
     PLATFORMS+=("cortex_m0")
+    PLATFORMS+=("cortex_m3")
 fi
 
 shift $((OPTIND-1))
@@ -107,6 +108,20 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m0 " ]]; then
 
     mkdir -p /arduino_project/src/cortex-m0plus
     cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m0plus/libmicroros.a
+fi
+
+######## Build for SAM (e.g. Arduino Due) ########
+if [[ " ${PLATFORMS[@]} " =~ " cortex_m3 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/cortex_m3_toolchain.cmake /arduino_project/extras/library_generation/colcon_lowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+
+    mkdir -p /arduino_project/src/cortex-m3
+    cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m3/libmicroros.a
 fi
 
 ######## Generate extra files ########
