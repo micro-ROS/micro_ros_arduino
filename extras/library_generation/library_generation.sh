@@ -53,7 +53,7 @@ pushd firmware/mcu_ws > /dev/null
 popd > /dev/null
 
 ######## Clean and source ########
-find /arduino_project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.c.in -delete
+find /arduino_project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.cpp ! -name *.c.in -delete
 
 ######## Build for OpenCR  ########
 if [[ " ${PLATFORMS[@]} " =~ " opencr1 " ]]; then
@@ -67,33 +67,6 @@ if [[ " ${PLATFORMS[@]} " =~ " opencr1 " ]]; then
 
     mkdir -p /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp
     cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp/libmicroros.a
-fi
-
-######## Build for Teensy 3.2 ########
-if [[ " ${PLATFORMS[@]} " =~ " teensy3 " ]]; then
-    rm -rf firmware/build
-
-    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
-    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy32_toolchain.cmake /arduino_project/extras/library_generation/colcon_lowmem.meta
-
-    find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /arduino_project/src/ 
-
-    mkdir -p /arduino_project/src/mk20dx256
-    cp -R firmware/build/libmicroros.a /arduino_project/src/mk20dx256/libmicroros.a
-fi
-######## Build for Teensy 4 ########
-if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
-    rm -rf firmware/build
-
-    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
-    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy4_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
-
-    find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /arduino_project/src/ 
-
-    mkdir -p /arduino_project/src/imxrt1062/fpv5-d16-hard
-    cp -R firmware/build/libmicroros.a /arduino_project/src/imxrt1062/fpv5-d16-hard/libmicroros.a
 fi
 
 ######## Build for SAMD (e.g. Arduino Zero) ########
@@ -122,6 +95,33 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m3 " ]]; then
 
     mkdir -p /arduino_project/src/cortex-m3
     cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m3/libmicroros.a
+fi
+
+######## Build for Teensy 3.2 ########
+if [[ " ${PLATFORMS[@]} " =~ " teensy3 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy32_toolchain.cmake /arduino_project/extras/library_generation/colcon_lowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+
+    mkdir -p /arduino_project/src/mk20dx256
+    cp -R firmware/build/libmicroros.a /arduino_project/src/mk20dx256/libmicroros.a
+fi
+######## Build for Teensy 4 ########
+if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy4_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+
+    mkdir -p /arduino_project/src/imxrt1062/fpv5-d16-hard
+    cp -R firmware/build/libmicroros.a /arduino_project/src/imxrt1062/fpv5-d16-hard/libmicroros.a
 fi
 
 ######## Generate extra files ########
