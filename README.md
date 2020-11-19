@@ -14,10 +14,10 @@ Supported boards are:
 
 Community contributed boards are:
 
-| Board                                                 | Min version | Contributor  | Details | Prebuild meta            |
-| ----------------------------------------------------- | ----------- | ------------ | ------- | ------------------------ |
-| [Arduino Due](https://store.arduino.cc/arduino-due)   | -           | @lukicdarkoo |         | `colcon_verylowmem.meta` |
-| [Arduino Zero](https://store.arduino.cc/arduino-zero) | -           | @lukicdarkoo |         | `colcon_verylowmem.meta` |
+| Board                                                 | Min version | Contributor                                    | Details | Prebuild meta            |
+| ----------------------------------------------------- | ----------- | ---------------------------------------------- | ------- | ------------------------ |
+| [Arduino Due](https://store.arduino.cc/arduino-due)   | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
+| [Arduino Zero](https://store.arduino.cc/arduino-zero) | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
 
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
