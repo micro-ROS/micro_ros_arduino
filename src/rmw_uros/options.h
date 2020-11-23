@@ -80,6 +80,15 @@ rmw_ret_t rmw_uros_discover_agent(rmw_init_options_t * rmw_options);
  */
 rmw_ret_t rmw_uros_options_set_client_key(uint32_t client_key, rmw_init_options_t * rmw_options);
 
+/**
+ * \brief Check if micro-ROS Agent answers to micro-ROS client
+ *
+ * \param[in] timeout_ms timeout in ms.
+ * \return RMW_RET_OK If micro-ROS Agent is available.
+ * \return RMW_RET_ERROR If micro-ROS Agent is not available.
+ */
+rmw_ret_t rmw_uros_check_agent_status(int timeout_ms);
+
 #if defined(__cplusplus)
 }
 #endif
