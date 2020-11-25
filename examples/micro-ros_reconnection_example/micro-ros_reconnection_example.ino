@@ -58,7 +58,6 @@ bool init_micro_ros(){
   if (rc != RCL_RET_OK){ return false; }
   
   // create node
-  node = rcl_get_zero_initialized_node();
   rc = rclc_node_init_default(&node, "micro_ros_arduino_node", "", &support);
   if (rc != RCL_RET_OK){ return false; }
 
@@ -71,7 +70,6 @@ bool init_micro_ros(){
   if (rc != RCL_RET_OK){ return false; }
 
   // create timer,
-  timer = rcl_get_zero_initialized_timer();
   const unsigned int timer_timeout = 1000;
   rc = rclc_timer_init_default(
     &timer,
@@ -81,7 +79,6 @@ bool init_micro_ros(){
   if (rc != RCL_RET_OK){ return false; }
 
   // create executor
-  executor = rclc_executor_get_zero_initialized_executor();
   rc = rclc_executor_init(&executor, &support.context, 1, &allocator);
   if (rc != RCL_RET_OK){ return false; }
 
