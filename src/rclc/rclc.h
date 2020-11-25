@@ -1,4 +1,4 @@
-// Copyright (c) 2019 - for information on the respective copyright owner
+// Copyright (c) 2020 - for information on the respective copyright owner
 // see the NOTICE file and/or the repository https://github.com/ros2/rclc.
 // Copyright 2014 Open Source Robotics Foundation, Inc.
 //
@@ -30,6 +30,8 @@ extern "C"
 #include "rclc/publisher.h"
 #include "rclc/subscription.h"
 #include "rclc/timer.h"
+#include "rclc/client.h"
+#include "rclc/service.h"
 #include "rclc/types.h"
 
 #if __cplusplus
