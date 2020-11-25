@@ -99,10 +99,6 @@ void setup() {
 
   // create executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
-
-  unsigned int rcl_wait_timeout = 100;   // in ms
-  RCCHECK(rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout)));
-
   
   tf_message = tf2_msgs__msg__TFMessage__create();
   geometry_msgs__msg__TransformStamped__Sequence__init(&tf_message->transforms, 1);
