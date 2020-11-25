@@ -23,9 +23,6 @@ example_interfaces__srv__AddTwoInts_Request req;
 
 const char * service_name = "/add_two_ints";
 
-example_interfaces__srv__AddTwoInts_Request req;
-example_interfaces__srv__AddTwoInts_Response res;
-
 void service_callback(const void * req, rmw_request_id_t * req_id, void * res){
   example_interfaces__srv__AddTwoInts_Request * req_in = (example_interfaces__srv__AddTwoInts_Request *) req;
   example_interfaces__srv__AddTwoInts_Response * res_in = (example_interfaces__srv__AddTwoInts_Response *) res;
@@ -36,7 +33,7 @@ void service_callback(const void * req, rmw_request_id_t * req_id, void * res){
 }
 
 void setup() {
- delay(1000); 
+  delay(1000); 
 
   allocator = rcl_get_default_allocator();
 
@@ -56,11 +53,6 @@ void setup() {
   RCCHECK(rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout)));
 
   RCCHECK(rclc_executor_add_service(&executor, &service, &req, &res, service_callback));
-
-  rclc_executor_spin(&executor);
-
-  RCCHECK(rcl_service_fini(&service, &node));
-  RCCHECK(rcl_node_fini(&node));
 }
 
 
