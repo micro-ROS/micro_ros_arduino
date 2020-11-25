@@ -82,10 +82,6 @@ bool init_micro_ros(){
   rc = rclc_executor_init(&executor, &support.context, 1, &allocator);
   if (rc != RCL_RET_OK){ return false; }
 
-  unsigned int rcl_wait_timeout = 100;   // in ms
-  rc = rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout));
-  if (rc != RCL_RET_OK){ return false; }
-
   rc = rclc_executor_add_timer(&executor, &timer);
   if (rc != RCL_RET_OK){ return false; }
 
