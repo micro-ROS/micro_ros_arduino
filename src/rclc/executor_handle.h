@@ -1,4 +1,4 @@
-// Copyright (c) 2019 - for information on the respective copyright owner
+// Copyright (c) 2020 - for information on the respective copyright owner
 // see the NOTICE file and/or the repository https://github.com/ros2/rclc.
 // Copyright 2014 Open Source Robotics Foundation, Inc.
 //
@@ -30,10 +30,10 @@ extern "C"
 typedef enum
 {
   SUBSCRIPTION,
-  GUARD_CONDITION,  // not implemented yet
   TIMER,
-  CLIENT,  // not implemented yet
-  SERVICE,  // not implemented yet
+  CLIENT,
+  SERVICE,
+  GUARD_CONDITION,
   NONE
 } rclc_executor_handle_type_t;
 
@@ -45,29 +45,86 @@ typedef enum
   ALWAYS
 } rclc_executor_handle_invocation_t;
 
-/// Type defintion for callback function.
+typedef enum
+{
+  CB_UNDEFINED,
+  CB_WITHOUT_REQUEST_ID,
+  CB_WITH_REQUEST_ID
+} rclc_executor_handle_callback_type_t;
+
+
+/// Type definition for callback function.
 typedef void (* rclc_callback_t)(const void *);
+
+/// Type definition for client callback function
+/// - request message
+/// - response message
+typedef void (* rclc_service_callback_t)(const void *, void *);
+
+/// Type definition for client callback function
+/// - request message
+/// - request id
+/// - response message
+typedef void (* rclc_service_callback_with_request_id_t)(const void *, rmw_request_id_t *, void *);
+
+/// Type definition for client callback function
+/// - response message
+typedef void (* rclc_client_callback_t)(const void *);
+
+/// Type definition for client callback function
+/// - response message
+/// - request id
+typedef void (* rclc_client_callback_with_request_id_t)(const void *, rmw_request_id_t *);
+
+/// Type definition for guard condition callback function.
+typedef void (* rclc_gc_callback_t)();
+
 
 /// Container for a handle.
 typedef struct
 {
   /// Type of handle
   rclc_executor_handle_type_t type;
-  /// When to execute callback
+  /// Invocation type determines when to execute the callback
   rclc_executor_handle_invocation_t invocation;
+  /// Pointer to the handle
   union {
-    /// Storage of subscription pointer
     rcl_subscription_t * subscription;
-    /// Storage of timer pointer
     rcl_timer_t * timer;
-    // rcl_service_t
-    // rcl_client_t
-    // rcl_guard_condition_t
+    rcl_client_t * client;
+    rcl_service_t * service;
+    rcl_guard_condition_t * gc;
   };
   /// Storage of data, which holds the message of a subscription, service, etc.
+  /// subscription: ptr to message
+  /// service: ptr to request message
   void * data;
-  /// Storage for callback for subscription
-  rclc_callback_t callback;
+
+  /// request-id only for type service/client request/response
+  rmw_request_id_t req_id;
+
+  /// only for service - ptr to response message
+  void * data_response_msg;
+
+  // TODO(jst3si) new type to be stored as data for
+  //              service/client objects
+  //              look at memory allocation for this struct!
+  // struct {
+  //   void * request_msg
+  //   void * response_msg
+  //   rmw_request_id_t req_id;
+  //} rclc_service_data_type_t
+
+  /// Storage for callbacks
+  union {
+    rclc_callback_t callback;
+    rclc_service_callback_t service_callback;
+    rclc_service_callback_with_request_id_t service_callback_with_reqid;
+    rclc_client_callback_t client_callback;
+    rclc_client_callback_with_request_id_t client_callback_with_reqid;
+    rclc_gc_callback_t gc_callback;
+  };
+
   /// Internal variable.
   /**  Denotes the index of this handle in the correspoding wait_set entry.
   *    (wait_set_subscriptions[index], wait_set_timers[index], ...
@@ -80,6 +137,8 @@ typedef struct
   /// Interval variable. Flag, which is true, if new data is available from DDS queue
   /// (is set after calling rcl_take)
   bool data_available;
+  /// callback type for service/client
+  rclc_executor_handle_callback_type_t callback_type;
 } rclc_executor_handle_t;
 
 /// Information about total number of subscriptions, guard_conditions, timers, subscription etc.
@@ -87,14 +146,14 @@ typedef struct
 {
   /// Total number of subscriptions
   size_t number_of_subscriptions;
-  /// Total number of guard conditions
-  size_t number_of_guard_conditions;
   /// Total number of timers
   size_t number_of_timers;
   /// Total number of clients
   size_t number_of_clients;
   /// Total number of services
   size_t number_of_services;
+  /// Total number of guard conditions
+  size_t number_of_guard_conditions;
   /// Total number of events
   size_t number_of_events;
 } rclc_executor_handle_counters_t;
