@@ -25,11 +25,13 @@ jobs:
             cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
             echo '''board_manager:
               additional_urls:
-                - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
+                - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
+                - https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json ''' > arduino-cli.yaml
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
+            arduino-cli core install esp32:esp32 -v
             # 
             # INSTALLING TEENSY SUPPORT
             wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
@@ -58,4 +60,5 @@ jobs:
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_custom_transport -v
