@@ -80,7 +80,6 @@ void setup() {
   RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
 
   // create node
-  node = rcl_get_zero_initialized_node();
   RCCHECK(rclc_node_init_default(&node, "micro_ros_arduino_node", "", &support));
 
   // create publisher
@@ -91,7 +90,6 @@ void setup() {
     "/tf"));
 
   // create timer,
-  timer = rcl_get_zero_initialized_timer();
   const unsigned int timer_timeout = 1000;
   RCCHECK(rclc_timer_init_default(
     &timer,
@@ -100,12 +98,7 @@ void setup() {
     timer_callback));
 
   // create executor
-  executor = rclc_executor_get_zero_initialized_executor();
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
-
-  unsigned int rcl_wait_timeout = 100;   // in ms
-  RCCHECK(rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout)));
-
   
   tf_message = tf2_msgs__msg__TFMessage__create();
   geometry_msgs__msg__TransformStamped__Sequence__init(&tf_message->transforms, 1);

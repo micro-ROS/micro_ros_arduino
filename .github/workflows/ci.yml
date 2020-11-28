@@ -16,7 +16,7 @@ jobs:
           with:
             path: checkout/
 
-        - name: Build OpenCR and Teensy 3.2/4.1
+        - name: Build
           run: |
             apt update
             apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync
@@ -29,22 +29,40 @@ jobs:
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
+            arduino-cli core install arduino:sam -v
+            # 
+            # INSTALLING TEENSY SUPPORT
             wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
             tar -xf arduino-1.8.13-linux64.tar.xz
             wget https://www.pjrc.com/teensy/td_153/TeensyduinoInstall.linux64
             chmod 755 TeensyduinoInstall.linux64
             ./TeensyduinoInstall.linux64 --dir=arduino-1.8.13
-            # Faking loader
+            # Faking Teensy loader
             TRUE_PATH=$(which true)
             rm -rf arduino-1.8.13/hardware/tools/teensy_post_compile
             cp $TRUE_PATH arduino-1.8.13/hardware/tools/teensy_post_compile
             cp -R arduino-1.8.13/hardware/teensy/ /github/home/.arduino15/packages/
             rsync -a  arduino-1.8.13/hardware/tools/ /github/home/.arduino15/packages/tools/
-            rm -rf arduino-1.8.13
-            curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/library_generation/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
+            rm -rf arduino-1.8.13 arduino-1.8.13-linux64.tar.xz
+            # 
+            # PATCHING TEENSY AND SAM
+            cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
+            # remove when https://github.com/arduino/ArduinoCore-sam/pull/115 merged
+            cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /github/home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
+            #
+            # BUILDING EXAPLE FOR EACH PLATFORM
             arduino-cli core update-index
             arduino-cli lib update-index
+            # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_addtwoints_service -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_reconnection_example -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_subscriber -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_subscriber_twist -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_tf_publisher -v
+            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_custom_transport -v
+            # Build one demo for each platform
             arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v

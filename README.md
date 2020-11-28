@@ -12,6 +12,14 @@ Supported boards are:
 | [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                   | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`        |
 | [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)               | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta` |
 
+Community contributed boards are:
+
+| Board                                                 | Min version | Contributor                                    | Details | Prebuild meta            |
+| ----------------------------------------------------- | ----------- | ---------------------------------------------- | ------- | ------------------------ |
+| [Arduino Due](https://store.arduino.cc/arduino-due)   | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
+| [Arduino Zero](https://store.arduino.cc/arduino-zero) | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
+
+
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 
 ## How to use the precompiled library
@@ -42,14 +50,25 @@ docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builde
 ```
 Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 
-## Patch Teensyduino
+## Patch Arduino board for support precompiled libraries
+### Patch Teensyduino
 
 Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 
 ```bash
 export ARDUINO_PATH=[Your Arduino + Teensiduino path]
 cd $ARDUINO_PATH/hardware/teensy/avr/
-curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/library_generation/platform_teensy.txt > platform.txt
+curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/patching_boards/platform_teensy.txt > platform.txt
+```
+
+### Patch SAMD
+
+Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
+
+```bash
+export ARDUINO_PATH=[Your Arduino path]
+cd $ARDUINO_PATH/hardware/sam/1.6.12/
+curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/patching_boards/platform_arduinocore_sam.txt > platform.txt
 ```
 
 ## Purpose of the Project
