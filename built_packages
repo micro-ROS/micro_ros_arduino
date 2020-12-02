@@ -15,7 +15,7 @@ https://github.com/ros2/rosidl_dds.git e88b1d0e62a2dca0788142cf1fb266a3a3c3d7dc
 https://github.com/ros2/rcl.git 814d95898433373681572568617a00fcbdaeb1bd
 https://github.com/ros2/rmw_implementation.git fb4f55f1129e0e0f047bda6ab26e533a051808de
 https://github.com/ros2/rosidl_defaults.git fa15e8522b4c238b8ea8999fd5528b290794c77a
-https://github.com/ros2/rcl_logging.git 6983bf0758380919d2dcb3d955ab7bdc1ce67730
+https://github.com/ros2/rcl_logging.git 72fa46d1c46a96f12eb5f299b17f336cd1ebee2d
 https://github.com/ros2/rosidl.git 97486a11f7033146ee6775c704b953899726b7a2
 https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
 https://github.com/ros2/libyaml_vendor.git 50546eff5f0146c027d63d7e2e473c9956e2eabf
