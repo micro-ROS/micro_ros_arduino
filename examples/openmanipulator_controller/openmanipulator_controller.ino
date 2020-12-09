@@ -71,7 +71,6 @@ void setup()
   rclc_support_init(&support, 0, NULL, &allocator);
 
   // create node
-  node = rcl_get_zero_initialized_node();
   RCCHECK(rclc_node_init_default(&node, "open_manipulator_node", "", &support));
 
   // create publisher
@@ -89,12 +88,10 @@ void setup()
     "/open_manipulator/joint_trajectory"));
   
   // create timer,
-  timer = rcl_get_zero_initialized_timer();
-  const unsigned int timer_timeout = 10;
   RCCHECK(rclc_timer_init_default(
     &timer,
     &support,
-    RCL_MS_TO_NS(timer_timeout),
+    RCL_MS_TO_NS(10),
     timer_callback));
 
   // Creating messages
@@ -102,11 +99,8 @@ void setup()
   join_states_msg = create_joint_states_message();
 
   // create executor
-  executor = rclc_executor_get_zero_initialized_executor();
   rclc_executor_init(&executor, &support.context, 3, &allocator);
 
-  unsigned int rcl_wait_timeout = 10;   // in ms
-  rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout));
 	rclc_executor_add_subscription(&executor, &joint_trajectory_subscriber, joint_trajectory_msg, &join_trajectory_callback, ON_NEW_DATA);
   rclc_executor_add_timer(&executor, &timer);
 
