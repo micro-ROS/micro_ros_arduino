@@ -15,7 +15,7 @@ https://github.com/ros2/unique_identifier_msgs.git 7d6fbc452359eeef5de422c8d331b
 https://github.com/ros2/rosidl_dds.git e88b1d0e62a2dca0788142cf1fb266a3a3c3d7dc
 https://github.com/ros2/rcl_interfaces.git 4f5d695800ed2ed0cf3542d10bd36a8241bee1d6
 https://github.com/ros2/common_interfaces.git 3927af17998a4f59f77f67d8ced4ec94a4f1589f
-https://github.com/ros2/rcl.git 814d95898433373681572568617a00fcbdaeb1bd
+https://github.com/ros2/rcl.git 7ddea6c155fc4e6b4331f8c0de964f6e6f673cb1
 https://github.com/ros2/rosidl.git c6aa6b8210a89706ed9d796c3e43b5b2cacd16e1
 https://github.com/ros2/rosidl_defaults.git fa15e8522b4c238b8ea8999fd5528b290794c77a
 https://github.com/ros2/rmw_implementation.git fb4f55f1129e0e0f047bda6ab26e533a051808de
