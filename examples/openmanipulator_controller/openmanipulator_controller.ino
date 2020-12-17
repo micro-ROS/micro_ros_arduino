@@ -111,7 +111,6 @@ void setup()
 
 void loop()
 { 
-  // Serial1.println("SPIN");
   rclc_executor_spin_some(&executor, RCL_MS_TO_NS(20));
   open_manipulator.processOpenManipulator(millis()/1000.0);
 }
