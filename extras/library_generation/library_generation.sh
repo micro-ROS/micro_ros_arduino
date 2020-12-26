@@ -15,6 +15,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("teensy3")
     PLATFORMS+=("cortex_m0")
     PLATFORMS+=("cortex_m3")
+    PLATFORMS+=("envie_m7")
 fi
 
 shift $((OPTIND-1))
@@ -64,7 +65,6 @@ if [[ " ${PLATFORMS[@]} " =~ " opencr1 " ]]; then
 
     find firmware/build/include/ -name "*.c"  -delete
     cp -R firmware/build/include/* /arduino_project/src/ 
-
     mkdir -p /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp
     cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m7/fpv5-sp-d16-softfp/libmicroros.a
 fi
@@ -150,6 +150,19 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m3 " ]]; then
 
     mkdir -p /arduino_project/src/cortex-m3
     cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m3/libmicroros.a
+fi
+
+######## Build for Portenta H7 ########
+if [[ " ${PLATFORMS[@]} " =~ " envie_m7 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/envie_m7_toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+    mkdir -p /arduino_project/src/cortex-m7/fpv5-d16-softfp
+    cp -R firmware/build/libmicroros.a /arduino_project/src/cortex-m7/fpv5-d16-softfp/libmicroros.a
 fi
 
 ######## Generate extra files ########

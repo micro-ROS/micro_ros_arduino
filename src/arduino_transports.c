@@ -5,6 +5,10 @@
 #include "teensy_transports.c.in"
 #elif defined(ARDUINO_ARCH_OPENCR)
 #include "opencr_transports.c.in"
+#elif defined(ARDUINO_PORTENTA_H7_M7)
+int usleep(useconds_t usec) {
+    return delayMicroseconds(usec);
+}
 #endif
 
 // TODO: This should be fixed
