@@ -24,7 +24,7 @@ https://github.com/ros2/rmw.git 07ee21d1a4742b6c327cedfafd95adc9eea1b99b
 https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
 https://github.com/ros2/unique_identifier_msgs.git 7d6fbc452359eeef5de422c8d331b6967486222f
 https://github.com/ros2/rosidl_defaults.git fa15e8522b4c238b8ea8999fd5528b290794c77a
-https://github.com/ros2/rcl_logging.git 72fa46d1c46a96f12eb5f299b17f336cd1ebee2d
+https://github.com/ros2/rcl_logging.git 6ad3966c971833b56caa73ae1d5c279929a442fa
 https://github.com/ament/googletest.git 2ba0f63751cd94815a9aff30f85579fedc7f0e16
 https://github.com/ament/ament_index.git ae8b7a3998fe9c1b6fa5b55cf5054562cd2a1eb7
 https://github.com/ament/uncrustify_vendor.git 0291bc988c45846400aca50cb973bf04a4de3d56
