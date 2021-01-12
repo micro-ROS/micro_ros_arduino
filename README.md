@@ -11,6 +11,7 @@ Supported boards are:
 | [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                   | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`        |
 | [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                   | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`        |
 | [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)               | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta` |
+| [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                   | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta` |
 
 Community contributed boards are:
 

@@ -12,7 +12,8 @@ done
 if [ $OPTIND -eq 1 ]; then 
     PLATFORMS+=("opencr1")
     PLATFORMS+=("teensy4")
-    PLATFORMS+=("teensy3")
+    PLATFORMS+=("teensy32")
+    PLATFORMS+=("teensy35")
     PLATFORMS+=("cortex_m0")
     PLATFORMS+=("cortex_m3")
 fi
@@ -98,7 +99,7 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m3 " ]]; then
 fi
 
 ######## Build for Teensy 3.2 ########
-if [[ " ${PLATFORMS[@]} " =~ " teensy3 " ]]; then
+if [[ " ${PLATFORMS[@]} " =~ " teensy32 " ]]; then
     rm -rf firmware/build
 
     export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
@@ -110,6 +111,21 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy3 " ]]; then
     mkdir -p /arduino_project/src/mk20dx256
     cp -R firmware/build/libmicroros.a /arduino_project/src/mk20dx256/libmicroros.a
 fi
+
+######## Build for Teensy 3.5 ########
+if [[ " ${PLATFORMS[@]} " =~ " teensy35 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/teensy35_toolchain.cmake /arduino_project/extras/library_generation/colcon_lowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /arduino_project/src/ 
+
+    mkdir -p /arduino_project/src/mk64fx512/fpv4-sp-d16-hard
+    cp -R firmware/build/libmicroros.a /arduino_project/src/mk64fx512/fpv4-sp-d16-hard/libmicroros.a
+fi
+
 ######## Build for Teensy 4 ########
 if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
     rm -rf firmware/build
