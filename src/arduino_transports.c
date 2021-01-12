@@ -6,9 +6,7 @@
 #elif defined(ARDUINO_ARCH_OPENCR)
 #include "opencr_transports.c.in"
 #elif defined(ARDUINO_PORTENTA_H7_M7) || defined(ARDUINO_PORTENTA_H7_M4)
-#include "portenta_transports.c.in"
-#else
-#error micro-ROS Library not supported for this platform
+// #include "portenta_transports.c.in"
 #endif
 
 // TODO: This should be fixed
