@@ -7,6 +7,8 @@ https://github.com/ament/ament_package.git 952ae0f14639c9c8f683e3338c377dae5cd3a
 https://github.com/ament/googletest.git 2ba0f63751cd94815a9aff30f85579fedc7f0e16
 https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
 https://github.com/ros2/rosidl.git c6aa6b8210a89706ed9d796c3e43b5b2cacd16e1
+https://github.com/ros2/rmw_implementation.git fb4f55f1129e0e0f047bda6ab26e533a051808de
+https://github.com/ros2/unique_identifier_msgs.git 7d6fbc452359eeef5de422c8d331b6967486222f
 https://github.com/ros2/common_interfaces.git 3927af17998a4f59f77f67d8ced4ec94a4f1589f
 https://github.com/ros2/rosidl_defaults.git fa15e8522b4c238b8ea8999fd5528b290794c77a
 https://github.com/ros2/rmw.git 07ee21d1a4742b6c327cedfafd95adc9eea1b99b
