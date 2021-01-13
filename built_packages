@@ -6,7 +6,7 @@ https://github.com/micro-ROS/rmw-microxrcedds.git 7f6ca2995e4e6eea5b6398b3cf152d
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
 https://github.com/micro-ROS/rcl c53f5016b0ee335c1700146047c246d1f0882796
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6cb7eaf4b633e037d1efe9f89416549c44cba2e6
-https://github.com/micro-ROS/rcutils d9e4c2e1cb309ca9f0eea8b2809598636e3bb7e3
+https://github.com/micro-ROS/rcutils be432cd91db434b8ce4d071733e01022ba346109
 https://github.com/micro-ROS/micro_ros_msgs.git 642875e25c4c10cd6271c996ca1a51e9ef016b59
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git ecf03ef0579387e6df8f53cdfe494e7b849fc1f4
 https://github.com/eProsima/Micro-CDR.git c95c40f427e421bcdf259f52501414dfbc2b2b22
