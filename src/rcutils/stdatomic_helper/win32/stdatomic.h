@@ -63,7 +63,19 @@
 #ifndef RCUTILS__STDATOMIC_HELPER__WIN32__STDATOMIC_H_
 #define RCUTILS__STDATOMIC_HELPER__WIN32__STDATOMIC_H_
 
+// When building with MSVC 19.28.29333.0 on Windows 10 (as of 2020-11-11),
+// there appears to be a problem with winbase.h (which is included by
+// Windows.h).  In particular, warnings of the form:
+//
+// warning C5105: macro expansion producing 'defined' has undefined behavior
+//
+// See https://developercommunity.visualstudio.com/content/problem/695656/wdk-and-sdk-are-not-compatible-with-experimentalpr.html
+// for more information.  For now disable that warning when including windows.h
+
+#pragma warning(push)
+#pragma warning(disable : 5105)
 #include <Windows.h>
+#pragma warning(pop)
 
 #include <stddef.h>
 #include <stdint.h>
