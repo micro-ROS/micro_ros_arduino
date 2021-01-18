@@ -42,13 +42,13 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 
 <!-- 
 pushd extras/library_generation
-docker build . -t micro_ros_arduino_builder:foxy
+docker build . -t microros/micro_ros_arduino_builder:rolling
 popd
  -->
 
 ```bash
-docker pull microros/micro_ros_arduino_builder:foxy
-docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:foxy
+docker pull microros/micro_ros_arduino_builder:rolling
+docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:rolling
 ```
 Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 

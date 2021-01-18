@@ -1,8 +1,8 @@
-FROM ros:foxy 
+FROM ros:rolling
 
 RUN mkdir -p uros_ws
 WORKDIR uros_ws
-RUN git clone https://github.com/micro-ROS/micro-ros-build.git src/micro-ros-build \
+RUN git clone -b main https://github.com/micro-ROS/micro-ros-build.git src/micro-ros-build \
     &&  . /opt/ros/$ROS_DISTRO/setup.sh \
     &&  apt update \
     &&  apt install -y python3-pip wget\
