@@ -147,3 +147,6 @@ find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "
 cd firmware
 echo "" > /arduino_project/built_packages
 for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /arduino_project/built_packages; popd > /dev/null; done;
+
+######## Fix permissions ########
+sudo chmod -R 777 .
