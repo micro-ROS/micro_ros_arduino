@@ -77,15 +77,15 @@
  *   // Define the iterators. When doing so, you define the Field you would like to iterate upon and
  *   // the type of you would like returned: it is not necessary the type of the PointField as sometimes
  *   // you pack data in another type (e.g. 3 uchar + 1 uchar for RGB are packed in a float)
- *   sensor_msgs::msg::PointCloud2Iterator<float> iter_x(cloud_msg, "x");
- *   sensor_msgs::msg::PointCloud2Iterator<float> iter_y(cloud_msg, "y");
- *   sensor_msgs::msg::PointCloud2Iterator<float> iter_z(cloud_msg, "z");
+ *   sensor_msgs::PointCloud2Iterator<float> iter_x(cloud_msg, "x");
+ *   sensor_msgs::PointCloud2Iterator<float> iter_y(cloud_msg, "y");
+ *   sensor_msgs::PointCloud2Iterator<float> iter_z(cloud_msg, "z");
  *   // Even though the r,g,b,a fields do not exist (it's usually rgb, rgba), you can create iterators for
  *   // those: they will handle data packing for you (in little endian RGB is packed as *,R,G,B in a float
  *   // and RGBA as A,R,G,B)
- *   sensor_msgs::msg::PointCloud2Iterator<uint8_t> iter_r(cloud_msg, "r");
- *   sensor_msgs::msg::PointCloud2Iterator<uint8_t> iter_g(cloud_msg, "g");
- *   sensor_msgs::msg::PointCloud2Iterator<uint8_t> iter_b(cloud_msg, "b");
+ *   sensor_msgs::PointCloud2Iterator<uint8_t> iter_r(cloud_msg, "r");
+ *   sensor_msgs::PointCloud2Iterator<uint8_t> iter_g(cloud_msg, "g");
+ *   sensor_msgs::PointCloud2Iterator<uint8_t> iter_b(cloud_msg, "b");
  *   // Fill the PointCloud2
  *   for(size_t i=0; i<n_points; ++i, ++iter_x, ++iter_y, ++iter_z, ++iter_r, ++iter_g, ++iter_b) {
  *     *iter_x = point_data[3*i+0];

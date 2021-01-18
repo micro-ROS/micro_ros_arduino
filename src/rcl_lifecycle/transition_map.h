@@ -53,6 +53,7 @@ rcl_lifecycle_get_zero_initialized_transition_map();
  *
  * \param[in] transition_map pointer to the transition map struct to check
  * \return `RCL_RET_OK` if the transition map is initialized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
  * \return `RCL_RET_ERROR` if the transition map is not initialized.
  */
 RCL_LIFECYCLE_PUBLIC
@@ -78,6 +79,7 @@ rcl_lifecycle_transition_map_is_initialized(
  * \param[inout] transition_map struct to be deinitialized
  * \param[in] allocator a valid allocator used to deinitialized the state machine
  * \return `RCL_RET_OK` if the state was deinitialized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_LIFECYCLE_PUBLIC
@@ -99,18 +101,18 @@ rcl_lifecycle_transition_map_fini(
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \param[in] map to be modified
+ * \param[in] transition_map to be modified
  * \param[in] state the state to register
  * \param[in] allocator a valid allocator used to register the state machine
  * \return `RCL_RET_OK` if the state was registered successfully, or
  * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return `RCL_RET_LIFECYCLE_STATE_REGISTERED` if state is already registered.
  */
 RCL_LIFECYCLE_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_lifecycle_register_state(
-  rcl_lifecycle_transition_map_t * map,
+  rcl_lifecycle_transition_map_t * transition_map,
   rcl_lifecycle_state_t state,
   const rcl_allocator_t * allocator);
 
@@ -131,6 +133,8 @@ rcl_lifecycle_register_state(
  * \param[in] allocator a valid allocator used to register the state machine
  * \return `RCL_RET_OK` if the state was deinitialized successfully, or
  * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_LIFECYCLE_STATE_NOT_REGISTERED` if state is not registered, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_LIFECYCLE_PUBLIC

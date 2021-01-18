@@ -29,13 +29,14 @@ extern "C"
 #include "rmw/ret_types.h"
 #include "rmw/visibility_control.h"
 
-/// Define QoS policy events
+/// Define publisher/subscription events
 typedef enum rmw_event_type_t
 {
   // subscription events
   RMW_EVENT_LIVELINESS_CHANGED,
   RMW_EVENT_REQUESTED_DEADLINE_MISSED,
   RMW_EVENT_REQUESTED_QOS_INCOMPATIBLE,
+  RMW_EVENT_MESSAGE_LOST,
 
   // publisher events
   RMW_EVENT_LIVELINESS_LOST,

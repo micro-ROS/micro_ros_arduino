@@ -83,11 +83,12 @@ extern "C"
  * https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html
  *
  * For the following function:
+ * ```
  * int snprintf(char *str, size_t size, const char *format, ...);
  *              ^^^^^^^^^  ^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^  ^^^
  *              ARG 1      ARG 2        ARG 3               ARG 4
  *                                      format string       first optional argument
- *
+ * ```
  * format_string_index value would be 3, first_to_check_index value would be 4.
  *
  * IMPORTANT: the first argument has an index of ONE (not zero!).

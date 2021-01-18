@@ -32,7 +32,7 @@ typedef struct rcl_lifecycle_state_t
   /// String with state name: Unconfigured, Inactive, Active or Finalized
   const char * label;
   /// Identifier of the state
-  unsigned int id;
+  uint8_t id;
 
   /// Pointer to a struct with the valid transitions
   rcl_lifecycle_transition_t * valid_transitions;

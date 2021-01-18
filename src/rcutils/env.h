@@ -35,8 +35,7 @@ extern "C"
  * store.
  *
  * \par Thread Safety:
- * This function is not thread-safe, particularly when called concurrently with
- * ::rcutils_get_env. Take care not to modify the environment variables while
+ * This function is not thread-safe. Take care not to modify the environment variables while
  * another thread might be reading or writing environment variables.
  *
  * \par Platform Consistency:
