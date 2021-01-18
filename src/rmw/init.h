@@ -42,6 +42,8 @@ typedef struct RMW_PUBLIC_TYPE rmw_context_t
   const char * implementation_identifier;
   /// Options used to initialize the context.
   rmw_init_options_t options;
+  /// Domain id that is being used.
+  size_t actual_domain_id;
   /// Implementation defined context information.
   /** May be NULL if there is no implementation defined context information. */
   rmw_context_impl_t * impl;
@@ -65,6 +67,9 @@ rmw_get_zero_initialized_context(void);
  * \pre The given context must be zero initialized.
  *
  * \post If initialization fails, context will remain zero initialized.
+ * \post `context->actual_domain_id` will be set with the domain id the rmw implementation is using.
+ *  This matches `options->domain_id` if it is not RMW_DEFAULT_DOMAIN_ID.
+ *  In other case, the value is rmw implementation dependent.
  *
  * \remarks If options are zero-initialized, then `RMW_RET_INVALID_ARGUMENT` is returned.
  *   If options are initialized but no enclave is provided, then `RMW_RET_INVALID_ARGUMENT`

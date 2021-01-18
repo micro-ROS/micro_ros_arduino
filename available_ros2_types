@@ -64,6 +64,7 @@ diagnostic_msgs/DiagnosticArray.msg
 diagnostic_msgs/DiagnosticStatus.msg
 diagnostic_msgs/KeyValue.msg
 nav_msgs/SetMap.srv
+nav_msgs/LoadMap.srv
 nav_msgs/GetMap.srv
 nav_msgs/GetPlan.srv
 nav_msgs/GridCells.msg

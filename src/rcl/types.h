@@ -111,6 +111,12 @@ typedef rmw_ret_t rcl_ret_t;
 /// Failed to take an event from the event handle
 #define RCL_RET_EVENT_TAKE_FAILED 2001
 
+/// rcl_lifecycle state register ret codes in 30XX
+/// rcl_lifecycle state registered
+#define RCL_RET_LIFECYCLE_STATE_REGISTERED 3000
+/// rcl_lifecycle state not registered
+#define RCL_RET_LIFECYCLE_STATE_NOT_REGISTERED 3001
+
 /// typedef for rmw_serialized_message_t;
 typedef rmw_serialized_message_t rcl_serialized_message_t;
 

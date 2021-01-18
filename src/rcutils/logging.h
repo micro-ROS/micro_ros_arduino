@@ -516,17 +516,18 @@ void rcutils_logging_console_output_handler(
  * All logging macros ensure that this has been called once.
  */
 #define RCUTILS_LOGGING_AUTOINIT \
-  if (RCUTILS_UNLIKELY(!g_rcutils_logging_initialized)) { \
-    rcutils_ret_t ret = rcutils_logging_initialize(); \
-    if (ret != RCUTILS_RET_OK) { \
-      RCUTILS_SAFE_FWRITE_TO_STDERR( \
-        "[rcutils|" __FILE__ ":" RCUTILS_STRINGIFY(__LINE__) \
-        "] error initializing logging: "); \
-      RCUTILS_SAFE_FWRITE_TO_STDERR(rcutils_get_error_string().str); \
-      RCUTILS_SAFE_FWRITE_TO_STDERR("\n"); \
-      rcutils_reset_error(); \
+  do { \
+    if (RCUTILS_UNLIKELY(!g_rcutils_logging_initialized)) { \
+      if (rcutils_logging_initialize() != RCUTILS_RET_OK) { \
+        RCUTILS_SAFE_FWRITE_TO_STDERR( \
+          "[rcutils|" __FILE__ ":" RCUTILS_STRINGIFY(__LINE__) \
+          "] error initializing logging: "); \
+        RCUTILS_SAFE_FWRITE_TO_STDERR(rcutils_get_error_string().str); \
+        RCUTILS_SAFE_FWRITE_TO_STDERR("\n"); \
+        rcutils_reset_error(); \
+      } \
     } \
-  }
+  } while (0)
 
 #ifdef __cplusplus
 }

@@ -164,9 +164,7 @@ rmw_node_t *
 rmw_create_node(
   rmw_context_t * context,
   const char * name,
-  const char * namespace_,
-  size_t domain_id,
-  bool localhost_only);
+  const char * namespace_);
 
 /// Finalize a given node handle, reclaim the resources, and deallocate the node handle.
 /**

@@ -27,6 +27,7 @@ extern "C"
 // map rcutils specific log levels to rmw speicfic type
 #include <rcutils/logging.h>
 
+#include "rmw/events_statuses/events_statuses.h"
 #include "rmw/init.h"
 #include "rmw/init_options.h"
 #include "rmw/ret_types.h"
@@ -513,75 +514,6 @@ typedef enum RMW_PUBLIC_TYPE
   /// Fatal log severity, for reporting issue causing imminent shutdown
   RMW_LOG_SEVERITY_FATAL = RCUTILS_LOG_SEVERITY_FATAL
 } rmw_log_severity_t;
-
-/// QoS Liveliness Changed information provided by a subscription.
-typedef struct RMW_PUBLIC_TYPE rmw_liveliness_changed_status_t
-{
-  /**
-   * The total number of currently active Publishers which publish to the topic associated with
-   * the Subscription.
-   * This count increases when a newly matched Publisher asserts its liveliness for the first time
-   * or when a Publisher previously considered to be not alive reasserts its liveliness.
-   * The count decreases when a Publisher considered alive fails to assert its liveliness and
-   * becomes not alive, whether because it was deleted normally or for some other reason.
-   */
-  int32_t alive_count;
-  /**
-   * The total count of current Publishers which publish to the topic associated with the
-   * Subscription that are no longer asserting their liveliness.
-   * This count increases when a Publisher considered alive fails to assert its liveliness and
-   * becomes not alive for some reason other than the normal deletion of that Publisher.
-   * It decreases when a previously not alive Publisher either reasserts its liveliness or is
-   * deleted normally.
-   */
-  int32_t not_alive_count;
-  /// The change in the alive_count since the status was last read.
-  int32_t alive_count_change;
-  /// The change in the not_alive_count since the status was last read.
-  int32_t not_alive_count_change;
-} rmw_liveliness_changed_status_t;
-
-/// QoS Requested Deadline Missed information provided by a subscription.
-typedef struct RMW_PUBLIC_TYPE rmw_requested_deadline_missed_status_t
-{
-  /**
-   * Lifetime cumulative number of missed deadlines detected for any instance read by the
-   * subscription.
-   * Missed deadlines accumulate; that is, each deadline period the total_count will be incremented
-   * by one for each instance for which data was not received.
-   */
-  int32_t total_count;
-  /// The incremental number of deadlines detected since the status was read.
-  int32_t total_count_change;
-} rmw_requested_deadline_missed_status_t;
-
-/// QoS Liveliness Lost information provided by a publisher.
-typedef struct RMW_PUBLIC_TYPE rmw_liveliness_lost_status_t
-{
-  /**
-   * Lifetime cumulative number of times that a previously-alive Publisher became not alive due to
-   * a failure to actively signal its liveliness within its offered liveliness period.
-   * This count does not change when an already not alive Publisher simply remains not alive for
-   * another liveliness period.
-   */
-  int32_t total_count;
-  /// The change in total_count since the last time the status was last read.
-  int32_t total_count_change;
-} rmw_liveliness_lost_status_t;
-
-/// QoS Deadline Missed information provided by a publisher.
-typedef struct RMW_PUBLIC_TYPE rmw_offered_deadline_missed_status_t
-{
-  /**
-   * Lifetime cumulative number of offered deadline periods elapsed during which a Publisher failed
-   * to provide data.
-   * Missed deadlines accumulate; that is, each deadline period the total_count will be incremented
-   * by one.
-   */
-  int32_t total_count;
-  /// The change in total_count since the last time the status was last read.
-  int32_t total_count_change;
-} rmw_offered_deadline_missed_status_t;
 
 #ifdef __cplusplus
 }

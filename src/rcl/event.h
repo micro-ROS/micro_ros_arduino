@@ -39,6 +39,7 @@ typedef enum rcl_subscription_event_type_t
   RCL_SUBSCRIPTION_REQUESTED_DEADLINE_MISSED,
   RCL_SUBSCRIPTION_LIVELINESS_CHANGED,
   RCL_SUBSCRIPTION_REQUESTED_INCOMPATIBLE_QOS,
+  RCL_SUBSCRIPTION_MESSAGE_LOST,
 } rcl_subscription_event_type_t;
 
 /// rmw struct.
@@ -169,6 +170,28 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 rmw_event_t *
 rcl_event_get_rmw_handle(const rcl_event_t * event);
+
+/// Check that the event is valid.
+/**
+ * The bool returned is `false` if `event` is invalid.
+ * The bool returned is `true` otherwise.
+ * In the case where `false` is to be returned, an error message is set.
+ * This function cannot fail.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] event pointer to the rcl event
+ * \return `true` if `event` is valid, otherwise `false`
+ */
+RCL_PUBLIC
+bool
+rcl_event_is_valid(const rcl_event_t * event);
 
 #ifdef __cplusplus
 }

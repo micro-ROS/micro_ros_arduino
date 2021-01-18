@@ -29,7 +29,7 @@ typedef struct type_support_map_t
   // but should be set for the struct when it is being used
   // same for rosidl_message_type_support_t et al
 
-  /// Length of the `typesupport_identidentifier`, `symbol_name` and `data` arrays.
+  /// Length of the `typesupport_identifier`, `symbol_name` and `data` arrays.
   const size_t size;
 
   /// The ROS 2 package this is generated from.

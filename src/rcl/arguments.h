@@ -16,10 +16,15 @@
 #define RCL__ARGUMENTS_H_
 
 #include "rcl/allocator.h"
+#include "rcl/log_level.h"
 #include "rcl/macros.h"
 #include "rcl/types.h"
 #include "rcl/visibility_control.h"
+#ifdef RCL_COMMAND_LINE_ENABLED
 #include "rcl_yaml_param_parser/types.h"
+#else
+typedef bool rcl_params_t;
+#endif // RCL_COMMAND_LINE_ENABLED
 
 #ifdef __cplusplus
 extern "C"
@@ -77,9 +82,9 @@ rcl_get_zero_initialized_arguments(void);
  * Parameter override rule parsing is supported via `-p/--param` flags e.g. `--param name:=value`
  * or `-p name:=value`.
  *
- * The default log level will be parsed as `--log-level level`, where `level` is a name
- * representing one of the log levels in the `RCUTILS_LOG_SEVERITY` enum, e.g. `info`, `debug`,
- * `warn`, not case sensitive.
+ * The default log level will be parsed as `--log-level level` and logger levels will be parsed as
+ * multiple `--log-level name:=level`, where `level` is a name representing one of the log levels
+ * in the `RCUTILS_LOG_SEVERITY` enum, e.g. `info`, `debug`, `warn`, not case sensitive.
  * If multiple of these rules are found, the last one parsed will be used.
  *
  * If an argument does not appear to be a valid ROS argument e.g. a `-r/--remap` flag followed by
@@ -342,6 +347,32 @@ rcl_remove_ros_arguments(
   rcl_allocator_t allocator,
   int * nonros_argc,
   const char ** nonros_argv[]);
+
+/// Return log levels parsed from the command line.
+/**
+ * Log levels are parsed directly from command line arguments.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] arguments An arguments structure that has been parsed.
+ * \param[out] log_levels Log levels as parsed from command line arguments.
+ *   The output must be finished by the caller if the function successes.
+ * \return `RCL_RET_OK` if everything goes correctly, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_arguments_get_log_levels(
+  const rcl_arguments_t * arguments,
+  rcl_log_levels_t * log_levels);
 
 /// Copy one arguments structure into another.
 /**

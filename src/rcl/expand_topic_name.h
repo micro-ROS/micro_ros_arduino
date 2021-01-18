@@ -29,7 +29,7 @@ extern "C"
 /// Expand a given topic name into a fully-qualified topic name.
 /**
  * The input_topic_name, node_name, and node_namespace arguments must all be
- * vaid, null terminated c strings.
+ * valid, null terminated c strings.
  * The output_topic_name will not be assigned a value in the event of an error.
  *
  * The output_topic_name will be null terminated.
