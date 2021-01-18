@@ -24,11 +24,11 @@ https://github.com/ros2/rosidl_defaults.git fa15e8522b4c238b8ea8999fd5528b290794
 https://github.com/ros2/example_interfaces.git 5e6f2e03a4dc6383383fe107fe0fa8f7019d23cb
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
 https://github.com/micro-ROS/rclc bb5b14b1b6a6262be486a0b19ce17854ce832740
-https://github.com/micro-ROS/rosidl_typesupport.git ed4a067578742a2510e493a63d624a60488a1637
+https://github.com/micro-ROS/rosidl_typesupport.git 9c0b5fde7d7e148685bb9e1692dcc8600cdeb96a
 https://github.com/micro-ROS/micro_ros_msgs.git 642875e25c4c10cd6271c996ca1a51e9ef016b59
-https://github.com/micro-ROS/rcutils d25865e34c5f66328f572e6559cb9c252e3c9379
+https://github.com/micro-ROS/rcutils 6f0e5d7d3da4ab1c1744dfa8452fdd5e01e912d9
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6cb7eaf4b633e037d1efe9f89416549c44cba2e6
-https://github.com/micro-ROS/rcl bad2ed89a6e00fdf7ce065ecd593dfbe8b47dd76
-https://github.com/micro-ROS/rmw-microxrcedds.git 7f6ca2995e4e6eea5b6398b3cf152daefbbc00ea
+https://github.com/micro-ROS/rcl 8eddc13db38bdecdd3089b8c96d13f0df3f5b35d
+https://github.com/micro-ROS/rmw-microxrcedds.git f604270e89a3353eecfc78e7c592d163125ad3a4
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git ecf03ef0579387e6df8f53cdfe494e7b849fc1f4
 https://github.com/eProsima/Micro-CDR.git c95c40f427e421bcdf259f52501414dfbc2b2b22
