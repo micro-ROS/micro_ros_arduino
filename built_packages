@@ -1,6 +1,6 @@
 
 https://github.com/ros2/ament_cmake_ros.git 2a4eb8332422bb75b4f552b973068c35ef5be5b8
-https://github.com/ament/ament_lint.git 8bf194aa1ac282db5483dd0d3fefff8f325b0db8
+https://github.com/ament/ament_lint.git 34ef6d2b9cb3c11468d7f5181c4fa17269822188
 https://github.com/ament/ament_package.git 65e3322c5c668684dc973025bebbc70c6a77592f
 https://github.com/ament/uncrustify_vendor.git f0c78e9e47516589eb2945569031d001341abb90
 https://github.com/ament/ament_cmake.git 5730e2e6b64185ee91cca9f24ee2e2e0324e3324
@@ -26,9 +26,9 @@ https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44df
 https://github.com/micro-ROS/rclc bb5b14b1b6a6262be486a0b19ce17854ce832740
 https://github.com/micro-ROS/rosidl_typesupport.git c411b15c3405f4b871201f93225b0aeaf921df15
 https://github.com/micro-ROS/micro_ros_msgs.git 642875e25c4c10cd6271c996ca1a51e9ef016b59
-https://github.com/micro-ROS/rcutils d740b125094e881046f2ef6cee4d53a54dc67e3c
+https://github.com/micro-ROS/rcutils 93946d5a13b3fafc85ca29839f6c7485cfdae2b8
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6cb7eaf4b633e037d1efe9f89416549c44cba2e6
-https://github.com/micro-ROS/rcl e4aa44c90697e89a6aa5479a0692cca1c90f7d15
+https://github.com/micro-ROS/rcl 432b19701a8533ebfcd26cdecc084c6775b215b8
 https://github.com/micro-ROS/rmw-microxrcedds.git 1f1648a095680408bb9232b84eafe8ed9c5660a7
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git ecf03ef0579387e6df8f53cdfe494e7b849fc1f4
 https://github.com/eProsima/Micro-CDR.git c95c40f427e421bcdf259f52501414dfbc2b2b22
