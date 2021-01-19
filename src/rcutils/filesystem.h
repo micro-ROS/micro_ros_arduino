@@ -243,6 +243,54 @@ RCUTILS_PUBLIC
 size_t
 rcutils_get_file_size(const char * file_path);
 
+/// An iterator used for enumerating directory contents
+typedef struct rcutils_dir_iter_t
+{
+  /// The name of the enumerated file or directory
+  const char * entry_name;
+  /// The allocator used internally by iteration functions
+  rcutils_allocator_t allocator;
+  /// The platform-specific iteration state
+  void * state;
+} rcutils_dir_iter_t;
+
+/// Begin iterating over the contents of the specified directory.
+/*
+ * This function is used to list the files and directories that are contained in
+ * a specified directory. The structure returned by it must be deallocated using
+ * ::rcutils_dir_iter_end when the iteration is completed. The name of the
+ * enumerated entry is stored in the `entry_name` member of the returned object,
+ * and the first entry is already populated upon completion of this function. To
+ * populate the entry with the name of the next entry, use the
+ * ::rcutils_dir_iter_next function. Note that the "." and ".." entries are
+ * typically among the entries enumerated.
+ * \param[in] directory_path The directory path to iterate over the contents of.
+ * \param[in] allocator Allocator used to create the returned structure.
+ * \return An iterator object used to continue iterating directory contents
+ * \return NULL if an error occurred
+ */
+RCUTILS_PUBLIC
+rcutils_dir_iter_t *
+rcutils_dir_iter_start(const char * directory_path, const rcutils_allocator_t allocator);
+
+/// Continue iterating over the contents of a directory.
+/*
+ * \param[in] iter An iterator created by ::rcutils_dir_iter_start.
+ * \return `True` if another entry was found
+ * \return `False` if there are no more entries in the directory
+ */
+RCUTILS_PUBLIC
+bool
+rcutils_dir_iter_next(rcutils_dir_iter_t * iter);
+
+/// Finish iterating over the contents of a directory.
+/*
+ * \param[in] iter An iterator created by ::rcutils_dir_iter_start.
+ */
+RCUTILS_PUBLIC
+void
+rcutils_dir_iter_end(rcutils_dir_iter_t * iter);
+
 #ifdef __cplusplus
 }
 #endif
