@@ -1,7 +1,7 @@
 
 https://github.com/ros2/ament_cmake_ros.git 2a4eb8332422bb75b4f552b973068c35ef5be5b8
 https://github.com/ament/ament_lint.git 34ef6d2b9cb3c11468d7f5181c4fa17269822188
-https://github.com/ament/ament_package.git 65e3322c5c668684dc973025bebbc70c6a77592f
+https://github.com/ament/ament_package.git bf1c026d571fa5cfce80b3a57ba5ad819aa542bb
 https://github.com/ament/uncrustify_vendor.git f0c78e9e47516589eb2945569031d001341abb90
 https://github.com/ament/ament_cmake.git 5730e2e6b64185ee91cca9f24ee2e2e0324e3324
 https://github.com/ament/ament_index.git d9bdf844c907118165d850535ed383c2dbf0afd9
@@ -19,16 +19,15 @@ https://github.com/ros2/rosidl_dds.git 0539c0ac60e021e3ed4733fc85bda9a8c3bd28fc
 https://github.com/ros2/rmw_implementation.git c88501a5d5e9c9db359eeae28109a521e121b7f3
 https://github.com/ros2/rcl_logging.git 870bb2a3569a8db3efa9d4bef1d70ee888d0b22f
 https://github.com/ros2/rcl.git c83119c826c75fbaf6e741658927a953318832ad
-https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
 https://github.com/ros2/rosidl_defaults.git 320564d312ec9064bc5c2d0a697ad1297646a558
 https://github.com/ros2/example_interfaces.git 34f11b205aa2f5b79abe17d9c561ce53291128b3
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing 1a677782f27d417cb0aa4ece9550493d9de04ada
 https://github.com/micro-ROS/rclc bb5b14b1b6a6262be486a0b19ce17854ce832740
 https://github.com/micro-ROS/rosidl_typesupport.git c411b15c3405f4b871201f93225b0aeaf921df15
 https://github.com/micro-ROS/micro_ros_msgs.git 642875e25c4c10cd6271c996ca1a51e9ef016b59
 https://github.com/micro-ROS/rcutils 93946d5a13b3fafc85ca29839f6c7485cfdae2b8
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6cb7eaf4b633e037d1efe9f89416549c44cba2e6
 https://github.com/micro-ROS/rcl 432b19701a8533ebfcd26cdecc084c6775b215b8
-https://github.com/micro-ROS/rmw-microxrcedds.git 1f1648a095680408bb9232b84eafe8ed9c5660a7
+https://github.com/micro-ROS/rmw-microxrcedds.git f2ab1270954c1282498b010d9bd3b90a7575b826
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git ecf03ef0579387e6df8f53cdfe494e7b849fc1f4
 https://github.com/eProsima/Micro-CDR.git c95c40f427e421bcdf259f52501414dfbc2b2b22
