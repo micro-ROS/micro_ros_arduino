@@ -41,6 +41,7 @@ typedef struct control_msgs__srv__QueryTrajectoryState_Request__Sequence
 // Constants defined in the message
 
 // Include directives for member types
+// Member 'message'
 // Member 'name'
 #include "rosidl_runtime_c/string.h"
 // Member 'position'
@@ -51,6 +52,8 @@ typedef struct control_msgs__srv__QueryTrajectoryState_Request__Sequence
 // Struct defined in srv/QueryTrajectoryState in the package control_msgs.
 typedef struct control_msgs__srv__QueryTrajectoryState_Response
 {
+  bool success;
+  rosidl_runtime_c__String message;
   rosidl_runtime_c__String__Sequence name;
   rosidl_runtime_c__double__Sequence position;
   rosidl_runtime_c__double__Sequence velocity;
