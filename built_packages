@@ -16,7 +16,7 @@ https://github.com/ros2/rosidl.git 681e833cdb60f97c10a2891d05545c24eb7c1c4b
 https://github.com/ros2/common_interfaces.git bfe9d70569a945cec5b8b2ec60fd608042f093b3
 https://github.com/ros2/rosidl_dds.git 0539c0ac60e021e3ed4733fc85bda9a8c3bd28fc
 https://github.com/ros2/rcpputils.git 1c831254b14c2f27a73564fa85ba6e09c65d75d2
-https://github.com/ros2/rcl.git 2883ce4e282d97572b402d4810d10e26acef2064
+https://github.com/ros2/rcl.git 7a25a74cf911840224fb5b992d118c22c825f961
 https://github.com/ros2/libyaml_vendor.git 0b67cc039f8a6d398a3b559a852ff2276bb0fcda
 https://github.com/ros2/rmw_implementation.git 8dba704a6012db58fb0ef88fbd278514125c4c54
 https://github.com/ros2/example_interfaces.git 34f11b205aa2f5b79abe17d9c561ce53291128b3
