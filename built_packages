@@ -1,24 +1,13 @@
 
 https://github.com/ros-controls/control_msgs 653b646ba34d2166149cc02269bac0f48beb72b0
-https://github.com/micro-ROS/rclc 26f757c7e0c37d299d0aba731218442f317f5f34
-https://github.com/micro-ROS/rosidl_typesupport.git 5c97e97d781b5f5c2803f4c84d9d387debb2e5b8
-https://github.com/micro-ROS/rmw-microxrcedds.git 363c1d3a415e1b92efc18fad923d9e4fe40c1bcc
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing 3cdc46b66d4cf6a1da1792164917523072282d2b
-https://github.com/micro-ROS/rcl 345bca902b25f34c9697e16d6d0e25aeb5000c60
-https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f917106cd82ad17853e48ea2641b50563cd473dd
-https://github.com/micro-ROS/rcutils 99173d951ab3fa7158c7a2a90b879a10c4a943ce
-https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
-https://github.com/eProsima/Micro-XRCE-DDS-Client.git ecf03ef0579387e6df8f53cdfe494e7b849fc1f4
-https://github.com/eProsima/Micro-CDR.git c95c40f427e421bcdf259f52501414dfbc2b2b22
 https://github.com/ros2/test_interface_files.git 124823291a0a7d35e983b2e00abc8803ec4cdbb2
 https://github.com/ros2/rcl_interfaces.git 836c8653825f0cf6e6ee46d6a3837b370678004b
 https://github.com/ros2/rosidl.git 681e833cdb60f97c10a2891d05545c24eb7c1c4b
 https://github.com/ros2/common_interfaces.git bfe9d70569a945cec5b8b2ec60fd608042f093b3
 https://github.com/ros2/rosidl_dds.git 0539c0ac60e021e3ed4733fc85bda9a8c3bd28fc
 https://github.com/ros2/rcpputils.git 1c831254b14c2f27a73564fa85ba6e09c65d75d2
-https://github.com/ros2/rcl.git 2883ce4e282d97572b402d4810d10e26acef2064
+https://github.com/ros2/rcl.git 7a25a74cf911840224fb5b992d118c22c825f961
 https://github.com/ros2/libyaml_vendor.git 0b67cc039f8a6d398a3b559a852ff2276bb0fcda
-https://github.com/ros2/rmw_implementation.git 8dba704a6012db58fb0ef88fbd278514125c4c54
 https://github.com/ros2/example_interfaces.git 34f11b205aa2f5b79abe17d9c561ce53291128b3
 https://github.com/ros2/rmw.git 09c8fc3d07485ef8cc47caebd4be2561d82b7b08
 https://github.com/ros2/unique_identifier_msgs.git 80c21658a1b17f0c4e24002552f2426db236985f
