@@ -61,7 +61,6 @@ jobs:
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_subscriber -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_subscriber_twist -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_tf_publisher -v
-            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_custom_transport -v
             # Build one demo for each platform
             arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v

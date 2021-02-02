@@ -33,11 +33,6 @@ source install/local_setup.bash
 
 ros2 run micro_ros_setup create_firmware_ws.sh generate_lib
 
-######## Copying Arduino placeholders XRCE transport ########
-
-cp /arduino_project/extras/library_generation/arduino_xrce_transports/serial_transport_external.c firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/serial/
-cp /arduino_project/extras/library_generation/arduino_xrce_transports/serial_transport_external.h firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/include/uxr/client/profile/transport/serial/
-
 ######## Adding extra packages ########
 pushd firmware/mcu_ws > /dev/null
 

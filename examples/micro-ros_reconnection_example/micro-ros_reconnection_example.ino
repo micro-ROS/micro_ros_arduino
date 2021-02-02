@@ -98,7 +98,8 @@ void fini_micro_ros(){
   rcl_shutdown(&support.context);
 }
 
-void setup() { 
+void setup() {
+  set_microros_transports(); 
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, HIGH);  
 

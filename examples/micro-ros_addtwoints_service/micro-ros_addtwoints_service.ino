@@ -30,6 +30,7 @@ void service_callback(const void * req, void * res){
 }
 
 void setup() {
+  set_microros_transports();
   delay(1000); 
 
   allocator = rcl_get_default_allocator();
