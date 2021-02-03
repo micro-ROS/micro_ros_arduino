@@ -1,9 +1,9 @@
 
 https://github.com/ament/ament_cmake.git 0cf1d91c7031cc71caf0df85de4e67695740ff3a
-https://github.com/ament/ament_lint.git 717ea1264d425abd106062ed4663f20d6515c887
-https://github.com/ament/ament_index.git dd678ad846fdf3692df4177539c2a277d68b22b9
+https://github.com/ament/ament_lint.git b97a4a2f77361cb3d45bab673a22b9ec1b9a8185
+https://github.com/ament/ament_index.git 6134519573fe3bfbf5de41d811c36c374e5facd9
 https://github.com/ament/uncrustify_vendor.git 8e622cf0f996eb1e15b58b490cd7bed360a8ceac
-https://github.com/ament/ament_package.git f5cc3b4bc4ceb1937d8e15a85035f14270f5af71
+https://github.com/ament/ament_package.git 1765b0981e1dc7c111d3ed73abaa147c3932f945
 https://github.com/ament/googletest.git 3599039fa90651784e9c73f4a38c21c8b2600e44
 https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
 https://github.com/ros2/rosidl.git 681e833cdb60f97c10a2891d05545c24eb7c1c4b
@@ -13,7 +13,7 @@ https://github.com/ros2/rmw.git 09c8fc3d07485ef8cc47caebd4be2561d82b7b08
 https://github.com/ros2/rosidl_dds.git 0539c0ac60e021e3ed4733fc85bda9a8c3bd28fc
 https://github.com/ros2/rcl_interfaces.git 836c8653825f0cf6e6ee46d6a3837b370678004b
 https://github.com/ros2/rcl_logging.git dd7f8e7100670a94c1c52b88ec41d655789333bf
-https://github.com/ros2/rcpputils.git 1c831254b14c2f27a73564fa85ba6e09c65d75d2
+https://github.com/ros2/rcpputils.git 61cc839cad6034d47be89f7ad91d2f6b4a7d6f2e
 https://github.com/ros2/example_interfaces.git 34f11b205aa2f5b79abe17d9c561ce53291128b3
 https://github.com/ros2/rmw_implementation.git 55b893da0d844cf324cbcf9aee259bb2c41e1b44
 https://github.com/ros2/libyaml_vendor.git 0b67cc039f8a6d398a3b559a852ff2276bb0fcda
@@ -23,7 +23,7 @@ https://github.com/ros2/unique_identifier_msgs.git 80c21658a1b17f0c4e24002552f24
 https://github.com/micro-ROS/rosidl_typesupport.git 5c97e97d781b5f5c2803f4c84d9d387debb2e5b8
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing 3cdc46b66d4cf6a1da1792164917523072282d2b
-https://github.com/micro-ROS/rclc 26f757c7e0c37d299d0aba731218442f317f5f34
+https://github.com/micro-ROS/rclc 332b55c6334e173be50c4a1f1034949b7ee12634
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f917106cd82ad17853e48ea2641b50563cd473dd
 https://github.com/micro-ROS/rcutils a0b454e2d1b7fc8d1205824a2159e98f26735c35
 https://github.com/micro-ROS/rmw-microxrcedds.git 363c1d3a415e1b92efc18fad923d9e4fe40c1bcc
