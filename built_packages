@@ -24,7 +24,7 @@ https://github.com/ros2/unique_identifier_msgs.git 7d6fbc452359eeef5de422c8d331b
 https://github.com/micro-ROS/rosidl_typesupport.git 9c0b5fde7d7e148685bb9e1692dcc8600cdeb96a
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
-https://github.com/micro-ROS/rclc 26f757c7e0c37d299d0aba731218442f317f5f34
+https://github.com/micro-ROS/rclc 332b55c6334e173be50c4a1f1034949b7ee12634
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f917106cd82ad17853e48ea2641b50563cd473dd
 https://github.com/micro-ROS/rcutils 6f0e5d7d3da4ab1c1744dfa8452fdd5e01e912d9
 https://github.com/micro-ROS/rmw-microxrcedds.git abab232ceb3d16ef52bb0a25b614608703313937
