@@ -409,7 +409,7 @@ rclc_executor_add_guard_condition(
  *
  *
  * \param [inout] executor pointer to initialized executor
- * \param[in] timeout_ns  timeout in millisonds
+ * \param[in] timeout_ns  timeout in nanoseconds
  * \return `RCL_RET_OK` if spin_once operation was successful
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
  * \return `RCL_RET_TIMEOUT` if rcl_wait() returned timeout (aka no data is avaiable during until the timeout)
