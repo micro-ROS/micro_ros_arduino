@@ -603,7 +603,7 @@ typedef enum InfoMask
 
 typedef struct AGENT_ActivityInfo
 {
-    int16_t availibility;
+    int16_t availability;
     TransportLocatorSeq address_seq;
 
 } AGENT_ActivityInfo;
