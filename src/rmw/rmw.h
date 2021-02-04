@@ -1248,7 +1248,7 @@ rmw_take_with_info(
  * This function will only take what has been already received, and it will
  * succeed even if fewer (or zero) messages were received.
  * In this case, only currently available messages will be returned.
- * The `taken` flag indicates the number of ROS messages actually taken.
+ * The `taken` output variable indicates the number of ROS messages actually taken.
  *
  * \remarks Once taken, ROS messages in the sequence cannot be taken again.
  *   Callers do not have to deal with duplicates.
@@ -1315,7 +1315,7 @@ rmw_take_with_info(
  *   `message_info_sequence`, a valid message metadata sequence.
  *   Both will be left unchanged if this function fails early due to a logical error, such as
  *   an invalid argument, or in an unknown yet valid state if it fails due to a runtime error.
- *   Both will also be left unchanged if this function succeeds but `taken` is false.
+ *   Both will also be left unchanged if this function succeeds but `taken` is zero.
  *
  * \param[in] subscription Subscription to take ROS message from.
  * \param[in] count Number of messages to attempt to take.
