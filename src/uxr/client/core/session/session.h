@@ -71,9 +71,6 @@ typedef void (*uxrOnReplyFunc) (
         uint16_t length,
         void* args);
 
-typedef bool (*uxrOnBuffersFull) (
-        struct uxrSession* session);
-
 #ifdef PERFORMANCE_TESTING
 typedef void (*uxrOnPerformanceFunc) (struct uxrSession* session, struct ucdrBuffer* mb, void* args);
 #endif
