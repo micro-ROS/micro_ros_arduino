@@ -29,6 +29,7 @@ extern "C"
 
   bool arduino_serial_platform_close()
   {
+    Serial.end();
     return true;
   }
 
