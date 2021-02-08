@@ -17,7 +17,7 @@ https://github.com/ros2/rcpputils.git 61cc839cad6034d47be89f7ad91d2f6b4a7d6f2e
 https://github.com/ros2/example_interfaces.git 34f11b205aa2f5b79abe17d9c561ce53291128b3
 https://github.com/ros2/rmw_implementation.git 55b893da0d844cf324cbcf9aee259bb2c41e1b44
 https://github.com/ros2/libyaml_vendor.git 0b67cc039f8a6d398a3b559a852ff2276bb0fcda
-https://github.com/ros2/rcl.git 7a25a74cf911840224fb5b992d118c22c825f961
+https://github.com/ros2/rcl.git 4740c82864518a331ae98799f25b2ba085b22473
 https://github.com/ros2/test_interface_files.git 124823291a0a7d35e983b2e00abc8803ec4cdbb2
 https://github.com/ros2/unique_identifier_msgs.git 80c21658a1b17f0c4e24002552f2426db236985f
 https://github.com/micro-ROS/rosidl_typesupport.git 5c97e97d781b5f5c2803f4c84d9d387debb2e5b8
