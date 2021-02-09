@@ -36,6 +36,7 @@ void subscription_callback(const void *msgin) {
 }
 
 void setup() {
+  set_microros_transports();
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, HIGH);  
   

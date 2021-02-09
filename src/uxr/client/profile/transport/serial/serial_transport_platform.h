@@ -22,15 +22,15 @@ extern "C"
 
 #include <uxr/client/profile/transport/serial/serial_transport.h>
 
-bool uxr_init_serial_platform(struct uxrSerialPlatform* platform, const int fd, uint8_t remote_addr, uint8_t local_addr);
-bool uxr_close_serial_platform(struct uxrSerialPlatform* platform);
+bool uxr_init_serial_platform(void* args, const int fd, uint8_t remote_addr, uint8_t local_addr);
+bool uxr_close_serial_platform(void* args);
 
-size_t uxr_write_serial_data_platform(struct uxrSerialPlatform* platform,
-                                      uint8_t* buf,
+size_t uxr_write_serial_data_platform(void* args,
+                                      const uint8_t* buf,
                                       size_t len,
                                       uint8_t* errcode);
 
-size_t uxr_read_serial_data_platform(struct uxrSerialPlatform* platform,
+size_t uxr_read_serial_data_platform(void* args,
                                      uint8_t* buf,
                                      size_t len,
                                      int timeout,
