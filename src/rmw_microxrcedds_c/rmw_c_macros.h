@@ -16,11 +16,11 @@
 #define RMW_MICROXRCEDDS_C__RMW_C_MACROS_H_
 
 #define RMW_CHECK_TYPE_IDENTIFIERS_MATCH(ElementName, ElementTypeID, ExpectedTypeID, OnFailure) \
-  { \
-    if (strcmp(ElementTypeID, ExpectedTypeID) != 0) { \
-      RMW_SET_ERROR_MSG("Implementation identifiers does not match"); \
-      OnFailure; \
-    } \
-  }
+    {                                                                                           \
+        if (strcmp(ElementTypeID, ExpectedTypeID) != 0) {                                       \
+            RMW_SET_ERROR_MSG("Implementation identifiers does not match");                     \
+            OnFailure;                                                                          \
+        }                                                                                       \
+    }
 
 #endif  // RMW_MICROXRCEDDS_C__RMW_C_MACROS_H_

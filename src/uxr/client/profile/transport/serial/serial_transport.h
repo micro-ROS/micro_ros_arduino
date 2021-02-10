@@ -21,7 +21,7 @@ extern "C"
 #endif
 
 #include <uxr/client/core/communication/communication.h>
-#include <uxr/client/profile/transport/serial/serial_protocol.h>
+#include <uxr/client/profile/transport/stream_framing/stream_framing_protocol.h>
 #include <uxr/client/config.h>
 #include <uxr/client/visibility.h>
 #include <uxr/client/transport.h>
@@ -29,7 +29,7 @@ extern "C"
 typedef struct uxrSerialTransport
 {
     uint8_t buffer[UXR_CONFIG_SERIAL_TRANSPORT_MTU];
-    uxrSerialIO serial_io;
+    uxrFramingIO framing_io;
     uint8_t remote_addr;
     uxrCommunication comm;
     struct uxrSerialPlatform platform;
