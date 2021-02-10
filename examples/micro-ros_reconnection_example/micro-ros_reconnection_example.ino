@@ -26,7 +26,7 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {  
   RCLC_UNUSED(last_call_time);
   RCLC_UNUSED(timer);
-  rcl_ret_t rc = rmw_uros_check_agent_status(10);
+  rmw_ret_t rc = rmw_uros_ping_agent(10, 1);
   if ( rc == RMW_RET_OK) {
     rcl_publish(&publisher, &msg, NULL);
     msg.data++;
