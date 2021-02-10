@@ -52,4 +52,8 @@
 #include <uxr/client/profile/transport/serial/serial_transport.h>
 #endif //UCLIENT_PROFILE_SERIAL
 
+#ifdef UCLIENT_PROFILE_CUSTOM_TRANSPORT
+#include <uxr/client/profile/transport/custom/custom_transport.h>
+#endif //UCLIENT_PROFILE_CUSTOM_TRANSPORT
+
 #endif // UXR_CLIENT_TRANSPORT_H_
