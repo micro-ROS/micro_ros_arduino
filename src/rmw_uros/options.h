@@ -18,9 +18,13 @@
 #include <rmw/rmw.h>
 #include <rmw/ret_types.h>
 #include <rmw/init_options.h>
-#include <uxr/client/profile/transport/custom/custom_transport.h>
 #include <rmw_microxrcedds_c/config.h>
 #include <ucdr/microcdr.h>
+
+#ifdef RMW_UXRCE_TRANSPORT_CUSTOM
+#include <uxr/client/profile/transport/custom/custom_transport.h>
+#endif  // RMW_UROS__OPTIONS_H_
+
 
 #if defined(__cplusplus)
 extern "C"
