@@ -12,7 +12,7 @@ int clock_gettime(clockid_t unused, struct timespec *tp)
   return 0;
 }
 
-bool arduino_transport_open()
+bool arduino_transport_open(struct uxrCustomTransport * transport)
 {
     // Place here your initialization platform code
     // Return true if success
@@ -20,18 +20,18 @@ bool arduino_transport_open()
     return vcp_is_connected();
 }
 
-bool arduino_transport_close()
+bool arduino_transport_close(struct uxrCustomTransport * transport)
 {
     return true;
 }
 
-size_t arduino_transport_write(uint8_t* buf, size_t len, uint8_t* errcode)
+size_t arduino_transport_write(struct uxrCustomTransport * transport, uint8_t* buf, size_t len, uint8_t* errcode)
 {
     (void) errcode;
     return  vcp_write(buf, len);;
 }
 
-size_t arduino_transport_read(uint8_t* buf, size_t len, int timeout, uint8_t* errcode)
+size_t arduino_transport_read(struct uxrCustomTransport * transport, uint8_t* buf, size_t len, int timeout, uint8_t* errcode)
 {
     (void) errcode;
     uint32_t start_time = drv_micros() * 1000;
