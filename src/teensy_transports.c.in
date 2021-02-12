@@ -12,14 +12,14 @@ int clock_gettime(clockid_t unused, struct timespec *tp)
   return 0;
 }
 
-bool arduino_transport_open()
+bool arduino_transport_open(struct uxrCustomTransport * transport)
 {
     // Place here your initialization platform code
     // Return true if success
     return true;
 }
 
-bool arduino_transport_close()
+bool arduino_transport_close(struct uxrCustomTransport * transport)
 {
     // Place here your closing platform code
     // Return true if success
@@ -27,7 +27,7 @@ bool arduino_transport_close()
 
 }
 
-size_t arduino_transport_write(uint8_t* buf, size_t len, uint8_t* errcode)
+size_t arduino_transport_write(struct uxrCustomTransport * transport, uint8_t* buf, size_t len, uint8_t* errcode)
 {
     // Place here your writing bytes platform code
     // Return number of bytes written
@@ -36,7 +36,7 @@ size_t arduino_transport_write(uint8_t* buf, size_t len, uint8_t* errcode)
     return sent;
 }
 
-size_t arduino_transport_read(uint8_t* buf, size_t len, int timeout, uint8_t* errcode)
+size_t arduino_transport_read(struct uxrCustomTransport * transport, uint8_t* buf, size_t len, int timeout, uint8_t* errcode)
 {
     // Place here your reading bytes platform code
     // Return number of bytes read (max bytes: len)
