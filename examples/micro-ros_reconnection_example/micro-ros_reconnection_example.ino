@@ -9,93 +9,76 @@
 
 #include <std_msgs/msg/int32.h>
 
-rcl_publisher_t publisher;
-std_msgs__msg__Int32 msg;
-rclc_executor_t executor;
+#define LED_PIN 13
+#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){return false;}}
+
 rclc_support_t support;
-rcl_allocator_t allocator;
 rcl_node_t node;
 rcl_timer_t timer;
-
-#define LED_PIN 13
-
-bool micro_ros_should_fini = false;
-bool micro_ros_init_successful = false;
+rclc_executor_t executor;
+rcl_allocator_t allocator;
+rcl_publisher_t publisher;
+std_msgs__msg__Int32 msg;
+bool micro_ros_init_successful;
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
-{  
-  RCLC_UNUSED(last_call_time);
-  RCLC_UNUSED(timer);
-  rmw_ret_t rc = rmw_uros_ping_agent(10, 1);
-  if ( rc == RMW_RET_OK) {
-    rcl_publish(&publisher, &msg, NULL);
-    msg.data++;
-  }else{
-    micro_ros_should_fini = true;
-  }
+{
+	(void) last_call_time;
+	if (timer != NULL) {
+		rcl_publish(&publisher, &msg, NULL);
+		msg.data++;
+	}
 }
 
-// CAUTION: this function can take some seconds to return
-// This time can be configured in colcon.meta using:
-// "microxrcedds_client": {
-//     "cmake-args": [
-//         ...
-//         "-DUCLIENT_MAX_SESSION_CONNECTION_ATTEMPTS=1",
-//         "-DUCLIENT_MIN_SESSION_CONNECTION_INTERVAL=25",
-//         ...
-//     ]}
-bool init_micro_ros(){
-  if (micro_ros_should_fini){
-    fini_micro_ros();
-    micro_ros_should_fini = false;
-  }
-  
-  rcl_ret_t rc;
-  allocator = rcl_get_default_allocator();
+// Functions create_entities and destroy_entities can take several seconds.
+// In order to reduce this rebuild the library with 
+// - RMW_UXRCE_ENTITY_CREATION_DESTROY_TIMEOUT=0
+// - UCLIENT_MAX_SESSION_CONNECTION_ATTEMPTS=3
 
-  //create init_options
-  rc = rclc_support_init(&support, 0, NULL, &allocator);
-  if (rc != RCL_RET_OK){ return false; }
-  
-  // create node
-  rc = rclc_node_init_default(&node, "micro_ros_arduino_node", "", &support);
-  if (rc != RCL_RET_OK){ return false; }
+bool create_entities()
+{	
+	allocator = rcl_get_default_allocator();
 
-  // create publisher
-  rc = rclc_publisher_init_best_effort(
-    &publisher,
-    &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-    "micro_ros_arduino_node_publisher");
-  if (rc != RCL_RET_OK){ return false; }
+	// create init_options
+	RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
 
-  // create timer,
-  const unsigned int timer_timeout = 1000;
-  rc = rclc_timer_init_default(
-    &timer,
-    &support,
-    RCL_MS_TO_NS(timer_timeout),
-    timer_callback);
-  if (rc != RCL_RET_OK){ return false; }
+	// create node
+	node = rcl_get_zero_initialized_node();
+	RCCHECK(rclc_node_init_default(&node, "int32_publisher_rclc", "", &support));
 
-  // create executor
-  rc = rclc_executor_init(&executor, &support.context, 1, &allocator);
-  if (rc != RCL_RET_OK){ return false; }
+	// create publisher
+	RCCHECK(rclc_publisher_init_best_effort(
+		&publisher,
+		&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+		"std_msgs_msg_Int32"));
 
-  rc = rclc_executor_add_timer(&executor, &timer);
-  if (rc != RCL_RET_OK){ return false; }
+	// create timer,
+	timer = rcl_get_zero_initialized_timer();
+	const unsigned int timer_timeout = 1000;
+	RCCHECK(rclc_timer_init_default(
+		&timer,
+		&support,
+		RCL_MS_TO_NS(timer_timeout),
+		timer_callback));
 
-  return true;
+	// create executor
+	executor = rclc_executor_get_zero_initialized_executor();
+	RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+	RCCHECK(rclc_executor_add_timer(&executor, &timer));
+
+	micro_ros_init_successful = true;
 }
 
-// CAUTION: this function can take some seconds to return
-void fini_micro_ros(){
-  rcl_publisher_fini(&publisher, &node);
-  rcl_node_fini(&node);
-  rcl_timer_fini(&timer);
-  rclc_executor_fini(&executor);
-  rclc_support_fini(&support);
-  rcl_shutdown(&support.context);
+void destroy_entities()
+{
+	rcl_publisher_fini(&publisher, &node);
+	rcl_node_fini(&node);
+	rcl_timer_fini(&timer);
+	rclc_executor_fini(&executor);
+	rclc_support_fini(&support);
+
+	micro_ros_init_successful = false;
 }
 
 void setup() {
@@ -108,12 +91,21 @@ void setup() {
 }
 
 void loop() {
-  if(micro_ros_init_successful && !micro_ros_should_fini){
-    rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
-  } else {
-    micro_ros_init_successful = init_micro_ros();
+  uint32_t delay = 100000;
+  if (RMW_RET_OK == rmw_uros_ping_agent(50, 2))
+  {
+    delay = 500000;
+    if (!micro_ros_init_successful) {
+      create_entities();
+    } else {
+      rclc_executor_spin_some(&executor, RCL_MS_TO_NS(10));
+    }
   } 
-  
-  delayMicroseconds(500);
+  else if (micro_ros_init_successful)
+  {
+    destroy_entities();
+  }
+
   digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+  delayMicroseconds(delay); 
 }
