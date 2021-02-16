@@ -103,7 +103,8 @@ rclc_executor_get_zero_initialized_executor(void);
  *
  * \param[inout] e preallocated rclc_executor_t
  * \param[in] context RCL context
- * \param[in] number_of_handles size of the handle array
+ * \param[in] number_of_handles is the total number of subscriptions, timers, services,
+ *  clients and guard conditions. Do not include the number of nodes and publishers.
  * \param[in] allocator allocator for allocating memory
  * \return `RCL_RET_OK` if the executor was initialized successfully
  * \return `RCL_RET_INVALID_ARGUMENT` if any null pointer as argument
