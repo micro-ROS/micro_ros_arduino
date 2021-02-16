@@ -212,7 +212,7 @@ UXRDLLAPI bool uxr_create_session(uxrSession* session);
  * @param retries   Max attempts for creating the session
  * @return  true in case of successful session establishment, and false in other case.
  */
-UXRDLLAPI bool uxr_create_session_retries(uxrSession* session, int retries);
+UXRDLLAPI bool uxr_create_session_retries(uxrSession* session, size_t retries);
 
 /**
  * @brief Deletes a session previously created.
