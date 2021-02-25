@@ -34,7 +34,7 @@ typedef size_t (*read_custom_func)(struct uxrCustomTransport*, uint8_t*, size_t,
 
 typedef struct uxrCustomTransport
 {
-    uint8_t buffer[UCLIENT_CUSTOM_TRANSPORT_MTU];
+    uint8_t buffer[UXR_CONFIG_CUSTOM_TRANSPORT_MTU];
     bool framing;
     uxrFramingIO framing_io;
     open_custom_func open;

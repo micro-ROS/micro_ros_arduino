@@ -56,7 +56,7 @@
 #define UXR_CONFIG_SERIAL_TRANSPORT_MTU               512
 #endif
 #ifdef UCLIENT_PROFILE_CUSTOM_TRANSPORT
-#define UCLIENT_CUSTOM_TRANSPORT_MTU                  512
+#define UXR_CONFIG_CUSTOM_TRANSPORT_MTU                  512
 #endif
 
 #endif // _UXR_CLIENT_CONFIG_H_
