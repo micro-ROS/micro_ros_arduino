@@ -27,10 +27,24 @@ extern "C"
 
 struct uxrCustomTransport;
 
-typedef bool (*open_custom_func)(struct uxrCustomTransport*);
-typedef bool (*close_custom_func)(struct uxrCustomTransport*);
-typedef size_t (*write_custom_func)(struct uxrCustomTransport*, const uint8_t*, size_t, uint8_t*);
-typedef size_t (*read_custom_func)(struct uxrCustomTransport*, uint8_t*, size_t, int, uint8_t*);
+typedef bool (*open_custom_func) (
+        struct uxrCustomTransport* transport);
+
+typedef bool (*close_custom_func) (
+        struct uxrCustomTransport* transport);
+
+typedef size_t (*write_custom_func) (
+        struct uxrCustomTransport* transport,
+        const uint8_t* buffer,
+        size_t length,
+        uint8_t* error_code);
+
+typedef size_t (*read_custom_func) (
+        struct uxrCustomTransport* transport,
+        uint8_t* buffer,
+        size_t length,
+        int timeout,
+        uint8_t* error_code);
 
 typedef struct uxrCustomTransport
 {
