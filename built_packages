@@ -1,7 +1,7 @@
 
 https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
 https://github.com/ament/ament_lint.git d17140b716eb11f7cc8b3d686104ed2167ce9818
-https://github.com/ament/ament_cmake.git 5689eb543a07d20a67c24947d060867206d9c90d
+https://github.com/ament/ament_cmake.git 2f544cf75c2d7488bf9f64b1c1be7d482b2ce415
 https://github.com/ament/ament_package.git 1765b0981e1dc7c111d3ed73abaa147c3932f945
 https://github.com/ament/ament_index.git 6134519573fe3bfbf5de41d811c36c374e5facd9
 https://github.com/ament/uncrustify_vendor.git e08fdccdaef9bdbcc31cf95b63a8d1408618f338
