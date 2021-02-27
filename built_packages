@@ -13,8 +13,8 @@ https://github.com/ros2/rcl_logging.git 6ad3966c971833b56caa73ae1d5c279929a442fa
 https://github.com/ros2/example_interfaces.git 5e6f2e03a4dc6383383fe107fe0fa8f7019d23cb
 https://github.com/ros2/rcl_interfaces.git 4f5d695800ed2ed0cf3542d10bd36a8241bee1d6
 https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
-https://github.com/ros2/rosidl.git c6aa6b8210a89706ed9d796c3e43b5b2cacd16e1
-https://github.com/ros2/libyaml_vendor.git 5968cc30383de9d7a3a75582cb149624faf9a8ec
+https://github.com/ros2/rosidl.git 952e485dd44e64f81f4ebb28ddcbb553341d74b3
+https://github.com/ros2/libyaml_vendor.git 8c4e11f34339414f560e33ceaf3b1689a1108ded
 https://github.com/ros2/rcl.git 7ddea6c155fc4e6b4331f8c0de964f6e6f673cb1
 https://github.com/ros2/rosidl_dds.git e88b1d0e62a2dca0788142cf1fb266a3a3c3d7dc
 https://github.com/ros2/unique_identifier_msgs.git 7d6fbc452359eeef5de422c8d331b6967486222f
