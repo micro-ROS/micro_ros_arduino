@@ -43,7 +43,6 @@ bool create_entities()
 	RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
 
 	// create node
-	node = rcl_get_zero_initialized_node();
 	RCCHECK(rclc_node_init_default(&node, "int32_publisher_rclc", "", &support));
 
 	// create publisher
@@ -54,7 +53,6 @@ bool create_entities()
 		"std_msgs_msg_Int32"));
 
 	// create timer,
-	timer = rcl_get_zero_initialized_timer();
 	const unsigned int timer_timeout = 1000;
 	RCCHECK(rclc_timer_init_default(
 		&timer,
