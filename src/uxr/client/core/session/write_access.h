@@ -65,6 +65,25 @@ uint16_t uxr_buffer_reply(
 
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE WRITE_DATA submessage.
+ *        As a consequence, an XRCE request is generated associated to the WRITE_DATA submessage.
+ * 
+ * @param session       A uxrSession structure previously initialized.
+ * @param stream_id     The output stream identifier where the WRITE_DATA submessage will be buffered.
+ * @param datawriter_id The identifier of the XRCE Datawriter that will write the topic into the DDS GDS. 
+ * @param buffer        The pointer to the topic data. 
+ * @param len           The length of the topic data.
+ * @return A `request_id` that identifies the XRCE request made by the Publisher.
+ *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
+ */
+uint16_t uxr_buffer_topic(
+    uxrSession* session,
+    uxrStreamId stream_id,
+    uxrObjectId datawriter_id,
+    uint8_t* buffer,
+    size_t len);
+
+/**
+ * @brief Buffers into the stream identified by `stream_id` an XRCE WRITE_DATA submessage.
  *        The submessage will be sent when `uxr_flash_output_stream` or `uxr_run_session` function are called.
  *        As a result of the reception of this submessage, the Agent will write a topic into the DDS Global-Data-Space.
  * @param session           A uxrSession structure previously initialized.
@@ -72,12 +91,13 @@ uint16_t uxr_buffer_reply(
  * @param datawriter_id     The identifier of the XRCE DataWriter that will write the topic into the DDS GDS.
  * @param ub_topic          The ucdrBuffer structure used for serializing the topic.
  * @param topic_size        The size of the topic in bytes.
- * @return A `bool` that identifies the request made by the Client, if the message can be serialized
- */
-UXRDLLAPI bool uxr_prepare_output_stream(
+ * @return A `request_id` that identifies the XRCE request made by the Entity.
+ *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
+ *  */
+UXRDLLAPI uint16_t uxr_prepare_output_stream(
         uxrSession* session,
         uxrStreamId stream_id,
-        uxrObjectId datawriter_id,
+        uxrObjectId entity_id,
         struct ucdrBuffer* ub_topic,
         uint32_t topic_size);
 
@@ -93,10 +113,11 @@ UXRDLLAPI bool uxr_prepare_output_stream(
  * @param ub                The ucdrBuffer structure used for serializing the topic.
  * @param topic_size        The size of the topic in bytes.
  * @param flush_callback    Callback that is call by the library when user should flush output buffers.
- * @return A `bool` that identifies the request made by the Clientif the message can be serialized
- */
+ * @return A `request_id` that identifies the XRCE request made by the Entity.
+ *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
+ *  */
 
-UXRDLLAPI bool uxr_prepare_output_stream_fragmented(
+UXRDLLAPI uint16_t uxr_prepare_output_stream_fragmented(
     uxrSession* session, 
     uxrStreamId stream_id, 
     uxrObjectId datawriter_id,
