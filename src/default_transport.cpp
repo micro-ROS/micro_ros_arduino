@@ -57,7 +57,7 @@ extern "C"
   {
     (void)errcode;
     Serial.setTimeout(timeout);
-    size_t readed =  Serial.readBytes((char *)buf, len);
+    return Serial.readBytes((char *)buf, len);
     return readed;
   }
 }
