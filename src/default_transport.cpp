@@ -58,6 +58,5 @@ extern "C"
     (void)errcode;
     Serial.setTimeout(timeout);
     return Serial.readBytes((char *)buf, len);
-    return readed;
   }
 }
