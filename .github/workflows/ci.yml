@@ -21,8 +21,8 @@ jobs:
             apt update
             apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync
             curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh 
-            mkdir -p /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
-            cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/
+            mkdir -p /github/home/Arduino/libraries/micro_ros_arduino/
+            cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino/
             echo '''board_manager:
               additional_urls:
                 - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
@@ -55,17 +55,18 @@ jobs:
             arduino-cli core update-index
             arduino-cli lib update-index
             # Build all demos
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_addtwoints_service -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_reconnection_example -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_subscriber -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_subscriber_twist -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_tf_publisher -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_reconnection_example -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_tf_publisher -v
             # Build one demo for each platform
-            arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino-0.0.1/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
