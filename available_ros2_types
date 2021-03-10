@@ -76,6 +76,9 @@ tf2_msgs/TFMessage.msg
 tf2_msgs/TF2Error.msg
 tf2_msgs/FrameGraph.srv
 unique_identifier_msgs/UUID.msg
+data/Test.action
+data/Test.msg
+data/Test.srv
 visualization_msgs/InteractiveMarker.msg
 visualization_msgs/InteractiveMarkerInit.msg
 visualization_msgs/ImageMarker.msg
