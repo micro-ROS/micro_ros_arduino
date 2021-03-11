@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__STRDUP_H_
 #define RCUTILS__STRDUP_H_
 
@@ -36,7 +38,8 @@ extern "C"
  *
  * \param[in] str null terminated c string to be duplicated
  * \param[in] allocator the allocator to use for allocation
- * \returns duplicated string or null if there is an error
+ * \return duplicated string, or
+ * \return `NULL` if there is an error.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -60,7 +63,8 @@ rcutils_strdup(const char * str, rcutils_allocator_t allocator);
  * \param[in] str null terminated c string to be duplicated
  * \param[in] string_length length of the string to duplicate
  * \param[in] allocator the allocator to use for allocation
- * \returns duplicated string or null if there is an error
+ * \return duplicated string, or
+ * \return `NULL` if there is an error.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

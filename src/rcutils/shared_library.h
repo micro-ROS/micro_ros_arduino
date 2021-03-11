@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__SHARED_LIBRARY_H_
 #define RCUTILS__SHARED_LIBRARY_H_
 
@@ -39,7 +41,7 @@ typedef struct RCUTILS_PUBLIC_TYPE rcutils_shared_library_t
 } rcutils_shared_library_t;
 
 /// Return an empty shared library struct.
-/*
+/**
  * This function returns an empty and zero initialized shared library struct.
  *
  * Example:
@@ -75,10 +77,10 @@ rcutils_get_zero_initialized_shared_library(void);
  * \param[inout] lib struct with the shared library pointer and shared library path name
  * \param[in] library_path string with the path of the library
  * \param[in] allocator to be used to allocate and deallocate memory
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -92,7 +94,8 @@ rcutils_load_shared_library(
 /**
  * \param[in] lib struct with the shared library pointer and shared library path name
  * \param[in] symbol_name name of the symbol inside the shared library
- * \return shared library symbol pointer, if the symbol doesn't exist then returns NULL.
+ * \return shared library symbol pointer, or
+ * \return `NULL` if the symbol doesn't exist.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -103,7 +106,8 @@ rcutils_get_symbol(const rcutils_shared_library_t * lib, const char * symbol_nam
 /**
  * \param[in] lib struct with the shared library pointer and shared library path name
  * \param[in] symbol_name name of the symbol inside the shared library
- * \return if symbols exists returns true, otherwise returns false.
+ * \return `true` if the symbol exists, or
+ * \return `false` otherwise.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -113,9 +117,9 @@ rcutils_has_symbol(const rcutils_shared_library_t * lib, const char * symbol_nam
 /// Unload the shared library.
 /**
  * \param[in] lib rcutils_shared_library_t to be finalized
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -128,7 +132,8 @@ rcutils_unload_shared_library(rcutils_shared_library_t * lib);
  * It could very well be that a second shared library handle is still open and therefore the library
  * being loaded.
  * \param[in] lib rcutils_shared_library_t  to check
- * \return true if library is loaded, false otherwise
+ * \return `true` if library is loaded, or
+ * \return `false` otherwise.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -142,8 +147,8 @@ rcutils_is_shared_library_loaded(rcutils_shared_library_t * lib);
  * \param[in] buffer_size size of library_name_platform buffer
  * \param[in] debug if true the library will return a debug library name, otherwise
  * it returns a normal library path
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

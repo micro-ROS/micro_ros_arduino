@@ -17,7 +17,7 @@
 
 #define RMW_CHECK_TYPE_IDENTIFIERS_MATCH(ElementName, ElementTypeID, ExpectedTypeID, OnFailure) \
     {                                                                                           \
-        if (strcmp(ElementTypeID, ExpectedTypeID) != 0) {                                       \
+        if (strcmp(ElementTypeID, ExpectedTypeID) != 0){                                       \
             RMW_SET_ERROR_MSG("Implementation identifiers does not match");                     \
             OnFailure;                                                                          \
         }                                                                                       \

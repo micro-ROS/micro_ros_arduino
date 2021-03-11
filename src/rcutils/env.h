@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__ENV_H_
 #define RCUTILS__ENV_H_
 
@@ -47,9 +49,9 @@ extern "C"
  * \param[in] env_name Name of the environment variable to modify.
  * \param[in] env_value Value to set the environment variable to, or `NULL` to
  *   un-set.
- * \return `True` if success
- * \return `False` if env_name is invalid or NULL
- * \return `False` on failure
+ * \return `true` if success, or
+ * \return `false` if env_name is invalid or NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__LOG_LEVEL_H_
 #define RCL__LOG_LEVEL_H_
 
@@ -83,11 +85,11 @@ rcl_get_zero_initialized_log_levels();
  * \param[in] allocator Memory allocator to be used and assigned into log_levels.
  * \param[in] logger_count Number of logger settings to be allocated.
  *  This reserves memory for logger_settings, but doesn't initialize it.
- * \return `RCL_RET_OK` if the structure was initialized successfully, or
- * \return `RCL_RET_INVALID_ARGUMENT` if log_levels is NULL, or
- *  log_levels contains initialized memory, or
- *  allocator is invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed.
+ * \return #RCL_RET_OK if the structure was initialized successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels is NULL, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels contains initialized memory, or
+ * \return #RCL_RET_INVALID_ARGUMENT if allocator is invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -108,12 +110,12 @@ rcl_log_levels_init(
  * \param[in] src The structure to be copied.
  *  Its allocator is used to copy memory into the new structure.
  * \param[out] dst A log levels structure to be copied into.
- * \return `RCL_RET_OK` if the structure was copied successfully, or
- * \return `RCL_RET_INVALID_ARGUMENT` if src is NULL, or
- *  if src allocator is invalid, or
- *  if dst is NULL, or
- *  if dst contains already allocated memory, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed.
+ * \return #RCL_RET_OK if the structure was copied successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if src is NULL, or
+ * \return #RCL_RET_INVALID_ARGUMENT if src allocator is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if dst is NULL, or
+ * \return #RCL_RET_INVALID_ARGUMENT if dst contains already allocated memory, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -131,9 +133,9 @@ rcl_log_levels_copy(const rcl_log_levels_t * src, rcl_log_levels_t * dst);
  * Lock-Free          | Yes
  *
  * \param[in] log_levels The structure which its resources have to be deallocated.
- * \return `RCL_RET_OK` if the memory was successfully freed, or
- * \return `RCL_RET_INVALID_ARGUMENT` if log_levels is NULL, or
- *  if ist allocator is invalid and the structure contains initialized memory.
+ * \return #RCL_RET_OK if the memory was successfully freed, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels is NULL, or
+ * \return #RCL_RET_INVALID_ARGUMENT if the log_levels allocator is invalid and the structure contains initialized memory.
  */
 RCL_PUBLIC
 rcl_ret_t
@@ -150,9 +152,9 @@ rcl_log_levels_fini(rcl_log_levels_t * log_levels);
  * Lock-Free          | Yes
  *
  * \param[in] log_levels The structure to be shrunk.
- * \return `RCL_RET_OK` if the memory was successfully shrunk, or
- * \return `RCL_RET_INVALID_ARGUMENT` if log_levels is NULL or if its allocator is invalid, or
- * \return `RCL_RET_BAD_ALLOC` if reallocating memory failed.
+ * \return #RCL_RET_OK if the memory was successfully shrunk, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels is NULL or if its allocator is invalid, or
+ * \return #RCL_RET_BAD_ALLOC if reallocating memory failed.
  */
 RCL_PUBLIC
 rcl_ret_t
@@ -171,13 +173,13 @@ rcl_log_levels_shrink_to_size(rcl_log_levels_t * log_levels);
  * \param[in] log_levels The structure where to set the logger log level.
  * \param[in] logger_name Name for the logger, a copy of it will be stored in the structure.
  * \param[in] log_level Minimum log level severity to be set for logger_name.
- * \return `RCL_RET_OK` if add logger setting successfully, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_INVALID_ARGUMENT` if log_levels is NULL, or
- *   if log_levels was not initialized, or
- *   if log_levels allocator is invalid, or
- *   if logger_name is NULL, or
- * \return `RCL_RET_ERROR` if the log_levels structure is already full.
+ * \return #RCL_RET_OK if add logger setting successfully, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels is NULL, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels was not initialized, or
+ * \return #RCL_RET_INVALID_ARGUMENT if log_levels allocator is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if logger_name is NULL, or
+ * \return #RCL_RET_ERROR if the log_levels structure is already full.
  */
 RCL_PUBLIC
 rcl_ret_t

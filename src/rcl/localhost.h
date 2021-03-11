@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__LOCALHOST_H_
 #define RCL__LOCALHOST_H_
 
@@ -31,9 +33,9 @@ extern const char * const RCL_LOCALHOST_ENV_VAR;
  * Checks if localhost should be used for network communication based on environment.
  *
  * \param[out] localhost_only Must not be NULL.
- * \returns RCL_RET_INVALID_ARGUMENT if an argument is invalid, or
- * \returns RCL_RET_ERROR if an unexpected error happened, or
- * \returns RCL_RET_OK.
+ * \return #RCL_RET_INVALID_ARGUMENT if an argument is invalid, or
+ * \return #RCL_RET_ERROR if an unexpected error happened, or
+ * \return #RCL_RET_OK.
  */
 RCL_PUBLIC
 rcl_ret_t

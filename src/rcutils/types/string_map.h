@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__TYPES__STRING_MAP_H_
 #define RCUTILS__TYPES__STRING_MAP_H_
 
@@ -29,13 +31,15 @@ extern "C"
 
 struct rcutils_string_map_impl_t;
 
+/// The structure holding the metadata for a string map.
 typedef struct RCUTILS_PUBLIC_TYPE rcutils_string_map_t
 {
+  /// A pointer to the PIMPL implementation type.
   struct rcutils_string_map_impl_t * impl;
 } rcutils_string_map_t;
 
 /// Return an empty string map struct.
-/*
+/**
  * This function returns an empty and zero initialized string map struct.
  *
  * Example:
@@ -84,11 +88,11 @@ rcutils_get_zero_initialized_string_map();
  * \param[inout] string_map rcutils_string_map_t to be initialized
  * \param[in] initial_capacity the amount of initial capacity for the string map
  * \param[in] allocator the allocator to use through out the lifetime of the map
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_STRING_MAP_ALREADY_INIT` if already initialized, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_STRING_MAP_ALREADY_INIT if already initialized, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -104,9 +108,9 @@ rcutils_string_map_init(
  * or when calling rcutils_string_map_set().
  *
  * \param[inout] string_map rcutils_string_map_t to be finalized
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -124,10 +128,10 @@ rcutils_string_map_fini(rcutils_string_map_t * string_map);
  *
  * \param[in] string_map rcutils_string_map_t to be queried
  * \param[out] capacity capacity of the string map
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -143,10 +147,10 @@ rcutils_string_map_get_capacity(const rcutils_string_map_t * string_map, size_t 
  *
  * \param[in] string_map rcutils_string_map_t to be queried
  * \param[out] size size of the string map
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -170,11 +174,11 @@ rcutils_string_map_get_size(const rcutils_string_map_t * string_map, size_t * si
  *
  * \param[inout] string_map rcutils_string_map_t to have space reserved in
  * \param[in] capacity requested size to reserve in the map
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -188,10 +192,10 @@ rcutils_string_map_reserve(rcutils_string_map_t * string_map, size_t capacity);
  * rcutils_string_map_fini() should still be called after this.
  *
  * \param[inout] string_map rcutils_string_map_t to be cleared
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -208,11 +212,11 @@ rcutils_string_map_clear(rcutils_string_map_t * string_map);
  * \param[inout] string_map rcutils_string_map_t to be updated
  * \param[in] key map key, must be null terminated c string
  * \param[in] value value for given map key, must be null terminated c string
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -240,12 +244,12 @@ rcutils_string_map_set(rcutils_string_map_t * string_map, const char * key, cons
  * \param[inout] string_map rcutils_string_map_t to be updated
  * \param[in] key map key, must be null terminated c string
  * \param[in] value value for given map key, must be null terminated c string
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_NOT_ENOUGH_SPACE` if map is full, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_NOT_ENOUGH_SPACE if map is full, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -262,11 +266,11 @@ rcutils_string_map_set_no_resize(
  *
  * \param[inout] string_map rcutils_string_map_t to be updated
  * \param[in] key map key, must be null terminated c string
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_STRING_KEY_NOT_FOUND` if key not found, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_STRING_KEY_NOT_FOUND if key not found, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -286,7 +290,7 @@ rcutils_string_map_unset(rcutils_string_map_t * string_map, const char * key);
  * \return `true` if key is in the map, or
  * \return `false` if key is not in the map, or
  * \return `false` for invalid arguments, or
- * \return `false` if the string map is invalid
+ * \return `false` if the string map is invalid.
  */
 RCUTILS_PUBLIC
 bool
@@ -303,7 +307,7 @@ rcutils_string_map_key_exists(const rcutils_string_map_t * string_map, const cha
  * \return `true` if key is in the map, or
  * \return `false` if key is not in the map, or
  * \return `false` for invalid arguments, or
- * \return `false` if the string map is invalid
+ * \return `false` if the string map is invalid.
  */
 RCUTILS_PUBLIC
 bool
@@ -333,7 +337,7 @@ rcutils_string_map_key_existsn(
  * \return `NULL` for invalid arguments, or
  * \return `NULL` if the string map is invalid, or
  * \return `NULL` if key not found, or
- * \return `NULL` if an unknown error occurs
+ * \return `NULL` if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 const char *
@@ -351,7 +355,7 @@ rcutils_string_map_get(const rcutils_string_map_t * string_map, const char * key
  * \return `NULL` for invalid arguments, or
  * \return `NULL` if the string map is invalid, or
  * \return `NULL` if key not found, or
- * \return `NULL` if an unknown error occurs
+ * \return `NULL` if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 const char *
@@ -399,7 +403,7 @@ rcutils_string_map_getn(
  * \return `NULL` if the string map is invalid, or
  * \return `NULL` if key not found, or
  * \return `NULL` if there are no more keys in the map, or
- * \return `NULL` if an unknown error occurs
+ * \return `NULL` if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 const char *
@@ -419,11 +423,11 @@ rcutils_string_map_get_next_key(
  *
  * \param[in] src_string_map rcutils_string_map_t to be copied from
  * \param[inout] dst_string_map rcutils_string_map_t to be copied to
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_STRING_MAP_INVALID` if the string map is invalid, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_STRING_MAP_INVALID if the string map is invalid, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

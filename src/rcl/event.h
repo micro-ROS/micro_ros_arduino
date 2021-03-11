@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__EVENT_H_
 #define RCL__EVENT_H_
 
@@ -27,6 +29,7 @@ extern "C"
 #include "rcl/subscription.h"
 #include "rcl/visibility_control.h"
 
+/// Enumeration of all of the publisher events that may fire.
 typedef enum rcl_publisher_event_type_t
 {
   RCL_PUBLISHER_OFFERED_DEADLINE_MISSED,
@@ -34,6 +37,7 @@ typedef enum rcl_publisher_event_type_t
   RCL_PUBLISHER_OFFERED_INCOMPATIBLE_QOS,
 } rcl_publisher_event_type_t;
 
+/// Enumeration of all of the subscription events that may fire.
 typedef enum rcl_subscription_event_type_t
 {
   RCL_SUBSCRIPTION_REQUESTED_DEADLINE_MISSED,
@@ -59,6 +63,8 @@ typedef struct rcl_event_t
 /**
  * Should be called to get a null rcl_event_t before passing to
  * rcl_event_init().
+ *
+ * \return Zero initialized rcl_event_t.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -72,11 +78,11 @@ rcl_get_zero_initialized_event(void);
  * \param[in,out] event pointer to fill
  * \param[in] publisher to get events from
  * \param[in] event_type to listen for
- * \return `RCL_RET_OK` if the rcl_event_t is filled, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory fails, or
- * \return `RCL_RET_UNSUPPORTED` if event_type is not supported, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the rcl_event_t is filled, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory fails, or
+ * \return #RCL_RET_UNSUPPORTED if event_type is not supported, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -93,11 +99,11 @@ rcl_publisher_event_init(
  * \param[in,out] event pointer to fill
  * \param[in] subscription to get events from
  * \param[in] event_type to listen for
- * \return `RCL_RET_OK` if the rcl_event_t is filled, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory fails, or
- * \return `RCL_RET_UNSUPPORTED` if event_type is not supported, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the rcl_event_t is filled, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory fails, or
+ * \return #RCL_RET_UNSUPPORTED if event_type is not supported, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -113,11 +119,11 @@ rcl_subscription_event_init(
  *
  * \param[in] event event object to take from
  * \param[in, out] event_info event info object to write taken data into
- * \return `RCL_RET_OK` if successful, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCL_RET_EVENT_TAKE_FAILED` if the take event failed, or
- * \return `RCL_RET_ERROR` if an unexpected error occurs.
+ * \return #RCL_RET_OK if successful, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCL_RET_EVENT_TAKE_FAILED if the take event failed, or
+ * \return #RCL_RET_ERROR if an unexpected error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -131,9 +137,9 @@ rcl_take_event(
  * Finalize an event.
  *
  * \param[in] event to finalize
- * \return `RCL_RET_OK` if successful, or
- * \return `RCL_RET_EVENT_INVALID` if event is null, or
- * \return `RCL_RET_ERROR` if an unexpected error occurs.
+ * \return #RCL_RET_OK if successful, or
+ * \return #RCL_RET_EVENT_INVALID if event is null, or
+ * \return #RCL_RET_ERROR if an unexpected error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

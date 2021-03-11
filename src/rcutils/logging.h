@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__LOGGING_H_
 #define RCUTILS__LOGGING_H_
 
@@ -90,13 +92,13 @@ extern bool g_rcutils_logging_initialized;
  * Lock-Free          | Yes
  *
  * \param[in] allocator rcutils_allocator_t to be used.
- * \return `RCUTILS_RET_OK` if successful.
- * \return `RCUTILS_RET_INVALID_ARGUMENT` if the allocator is invalid, in which
- *   case initialization will fail.
- * \return `RCUTILS_RET_INVALID_ARGUMENT` if an error occurs reading the output
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if the allocator is invalid, in which
+ *   case initialization will fail, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if an error occurs reading the output
  *   format from the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable, in
- *   which case the default format will be used.
- * \return `RCUTILS_RET_LOGGING_SEVERITY_MAP_INVALID` if the internal logger
+ *   which case the default format will be used, or
+ * \return #RCUTILS_RET_LOGGING_SEVERITY_MAP_INVALID if the internal logger
  *   severity level map cannot be initialized, in which case logger severity
  *   levels will not be configurable.
  */
@@ -117,11 +119,11 @@ rcutils_ret_t rcutils_logging_initialize_with_allocator(rcutils_allocator_t allo
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \return `RCUTILS_RET_OK` if successful.
- * \return `RCUTILS_RET_INVALID_ARGUMENT` if an error occurs reading the output
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if an error occurs reading the output
  *   format from the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable, in
- *   which case the default format will be used.
- * \return `RCUTILS_RET_LOGGING_SEVERITY_MAP_INVALID` if the internal logger
+ *   which case the default format will be used, or
+ * \return #RCUTILS_RET_LOGGING_SEVERITY_MAP_INVALID if the internal logger
  *   severity level map cannot be initialized, in which case logger levels
  *   will not be configurable.
  */
@@ -142,8 +144,8 @@ rcutils_ret_t rcutils_logging_initialize(void);
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \return `RCUTILS_RET_OK` if successful.
- * \return `RCUTILS_RET_LOGGING_SEVERITY_MAP_INVALID` if the internal logger
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_LOGGING_SEVERITY_MAP_INVALID if the internal logger
  *   severity level map cannot be finalized.
  */
 RCUTILS_PUBLIC
@@ -187,11 +189,11 @@ extern const char * const g_rcutils_log_severity_names[RCUTILS_LOG_SEVERITY_FATA
  * \param[in] allocator rcutils_allocator_t to be used
  * \param[in,out] severity The severity level as a represented by the
  *   `RCUTILS_LOG_SEVERITY` enum
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` on invalid arguments, or
- * \return `RCUTILS_RET_LOGGING_SEVERITY_STRING_INVALID` if unable to match
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT on invalid arguments, or
+ * \return #RCUTILS_RET_LOGGING_SEVERITY_STRING_INVALID if unable to match
  *   string, or
- * \return `RCUTILS_RET_ERROR` if an unspecified error occured
+ * \return #RCUTILS_RET_ERROR if an unspecified error occured.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -265,14 +267,14 @@ void rcutils_logging_set_output_handler(rcutils_logging_output_handler_t functio
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \return `RCUTILS_RET_OK` if successful.
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation error occured
  * \param[in] location The location information about where the log came from
  * \param[in] severity The severity of the log message expressed as an integer
  * \param[in] name The name of the logger that this message came from
  * \param[in] timestamp The time at which the log message was generated
  * \param[in] msg The message being logged
  * \param[out] logging_output An output buffer for the formatted message
+ * \return #RCUTILS_RET_OK if successful.
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation error occured
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -413,7 +415,8 @@ rcutils_ret_t rcutils_logging_set_logger_level(const char * name, int level);
  * \param[in] name The name of the logger, must be null terminated c string or NULL.
  * \param[in] severity The severity level.
  *
- * \return true if the logger is enabled for the level; false otherwise.
+ * \return `true` if the logger is enabled for the level, or
+ * \return `false` otherwise.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -475,7 +478,10 @@ void rcutils_log(
   const char * name,
   const char * format,
   ...)
-RCUTILS_ATTRIBUTE_PRINTF_FORMAT(4, 5);
+/// @cond Doxygen_Suppress
+RCUTILS_ATTRIBUTE_PRINTF_FORMAT(4, 5)
+/// @endcond
+;
 
 /// The default output handler outputs log messages to the standard streams.
 /**

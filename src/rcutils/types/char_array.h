@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__TYPES__CHAR_ARRAY_H_
 #define RCUTILS__TYPES__CHAR_ARRAY_H_
 
@@ -26,8 +28,10 @@ extern "C"
 #include "rcutils/types/rcutils_ret.h"
 #include "rcutils/visibility_control.h"
 
+/// The structure holding the metadata for a char array.
 typedef struct RCUTILS_PUBLIC_TYPE rcutils_char_array_t
 {
+  /// A pointer to the allocated memory for this char array.
   char * buffer;
 
   /**
@@ -37,8 +41,13 @@ typedef struct RCUTILS_PUBLIC_TYPE rcutils_char_array_t
    */
   bool owns_buffer;
 
+  /// The length of the data stored in the buffer pointer.
   size_t buffer_length;
+
+  /// The maximum capacity of the buffer pointer.
   size_t buffer_capacity;
+
+  /// The allocator used to allocate and free the data in the pointer.
   rcutils_allocator_t allocator;
 } rcutils_char_array_t;
 
@@ -61,10 +70,10 @@ rcutils_get_zero_initialized_char_array(void);
  * \param[in] char_array a pointer to the to be initialized char array struct
  * \param[in] buffer_capacity the size of the memory to allocate for the byte stream
  * \param[in] allocator the allocator to use for the memory allocation
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENTS` if any arguments are invalid, or
- * \return 'RCUTILS_RET_BAD_ALLOC` if no memory could be allocated correctly
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCUTILS_RET_BAD_ALLOC if no memory could be allocated correctly
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -85,9 +94,9 @@ rcutils_char_array_init(
  * behavior.
  *
  * \param[in] char_array pointer to the rcutils_char_array_t to be cleaned up
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENTS` if the char_array argument is invalid
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if the char_array argument is invalid
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -109,10 +118,10 @@ rcutils_char_array_fini(rcutils_char_array_t * char_array);
  *
  * \param[in] char_array pointer to the instance of rcutils_char_array_t which is being resized
  * \param[in] new_size the new size of the internal buffer
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` if new_size is set to zero
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if new_size is set to zero
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -128,9 +137,9 @@ rcutils_char_array_resize(rcutils_char_array_t * char_array, size_t new_size);
  *
  * \param[inout] char_array pointer to the instance of rcutils_char_array_t which is being resized
  * \param[in] new_size the new size of the internal buffer
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -149,9 +158,9 @@ rcutils_char_array_expand_as_needed(rcutils_char_array_t * char_array, size_t ne
  * written to
  * \param[in] format the format string used by the underlying `vsnprintf`
  * \param[in] args the `va_list` used by the underlying `vsnprintf`
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -168,9 +177,9 @@ rcutils_char_array_vsprintf(rcutils_char_array_t * char_array, const char * form
  * \param[inout] char_array pointer to the instance of rcutils_char_array_t which is being appended to
  * \param[in] src the string to be appended to the end of the string in buffer
  * \param[in] n it uses at most n bytes from the src string
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -187,9 +196,9 @@ rcutils_char_array_strncat(rcutils_char_array_t * char_array, const char * src, 
  * \param[inout] char_array pointer to the instance of rcutils_char_array_t which is being
  * appended to
  * \param[in] src the string to be appended to the end of the string in buffer
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -204,9 +213,9 @@ rcutils_char_array_strcat(rcutils_char_array_t * char_array, const char * src);
  * \param[inout] char_array pointer to the instance of rcutils_char_array_t which is being resized
  * \param[in] src the memory to be copied from
  * \param[in] n a total of n bytes will be copied
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -221,9 +230,9 @@ rcutils_char_array_memcpy(rcutils_char_array_t * char_array, const char * src, s
  * \param[inout] char_array pointer to the instance of rcutils_char_array_t which is being
  * copied to
  * \param[in] src the string to be copied from
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
- * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
+ * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

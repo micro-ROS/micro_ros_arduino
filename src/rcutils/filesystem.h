@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__FILESYSTEM_H_
 #define RCUTILS__FILESYSTEM_H_
 
@@ -32,9 +34,9 @@ extern "C"
 /**
  * \param[in] buffer Allocated string to store current directory path to
  * \param[in] max_length maximum length to be stored in buffer
- * \return `True` if success
- * \return `False` if buffer is NULL
- * \return `False` on failure
+ * \return `true` if success, or
+ * \return `false` if buffer is NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -44,9 +46,9 @@ rcutils_get_cwd(char * buffer, size_t max_length);
 /// Check if the provided path points to a directory.
 /**
  * \param[in] abs_path Absolute path to check.
- * \return `True` if directory
- * \return `False` if abs_path is NULL
- * \return `False` on failure
+ * \return `true` if provided path is a directory, or
+ * \return `false` if abs_path is NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 bool
@@ -55,9 +57,9 @@ rcutils_is_directory(const char * abs_path);
 /// Check if the provided path points to a file.
 /**
  * \param[in] abs_path Absolute path to check.
- * \return `True` if file
- * \return `False` if abs_path is NULL
- * \return `False` on failure
+ * \return `true` if provided path is a file, or
+ * \return `false` if abs_path is NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 bool
@@ -66,9 +68,9 @@ rcutils_is_file(const char * abs_path);
 /// Check if the provided path points to an existing file/folder.
 /**
  * \param[in] abs_path Absolute path to check.
- * \return `True` if the path exists
- * \return `False` if abs_path is NULL
- * \return `False` on failure
+ * \return `true` if the path exists, or
+ * \return `false` if abs_path is NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 bool
@@ -77,9 +79,9 @@ rcutils_exists(const char * abs_path);
 /// Check if the provided path points to a file/folder readable by current user.
 /**
  * \param[in] abs_path Absolute path to check.
- * \return `True` if the file is readable
- * \return `False` if abs_path is NULL
- * \return `False` on failure
+ * \return `true` if the file is readable, or
+ * \return `false` if abs_path is NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 bool
@@ -88,9 +90,9 @@ rcutils_is_readable(const char * abs_path);
 /// Check if the provided path points to a file/folder writable by current user.
 /**
  * \param[in] abs_path Absolute path to check.
- * \return `True` if the file is writable
- * \return `False` if abs_path is NULL
- * \return `False` on failure
+ * \return `true` if the file is writable, or
+ * \return `false` if abs_path is NULL, or
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 bool
@@ -99,9 +101,9 @@ rcutils_is_writable(const char * abs_path);
 /// Check if the provided path points to a file/folder both readable and writable by current user.
 /**
  * \param[in] abs_path Absolute path to check.
- * \return `True` if the file is redable and writable False otherwise
- * \return `False` if abs_path is NULL
- * \return `False` on failure
+ * \return `true` if the file is readable and writable, or
+ * \return `false` if abs_path is NULL
+ * \return `false` on failure.
  */
 RCUTILS_PUBLIC
 bool
@@ -169,17 +171,17 @@ rcutils_expand_user(const char * path, rcutils_allocator_t allocator);
  * If any of the intermediate directories do not exist, this function will
  * return False.
  * If the abs_path already exists, and is a directory, this function will
- * return True.
+ * return true.
  *
  * This function is not thread-safe due to mkdir races as described in the
  * openat(2) documentation.
  *
  * \param[in] abs_path
- * \return `True` if making the directory was successful, False otherwise
- * \return `False` if path is NULL
- * \return `False` if path is empty
- * \return `False` if path is not absolute
- * \return `False` if any intermediate directories don't exist
+ * \return `true` if making the directory was successful, or
+ * \return `false` if path is NULL, or
+ * \return `false` if path is empty, or
+ * \return `false` if path is not absolute, or
+ * \return `false` if any intermediate directories don't exist.
  */
 RCUTILS_PUBLIC
 bool
@@ -192,10 +194,10 @@ rcutils_mkdir(const char * abs_path);
  * \param[in] directory_path The directory path to calculate the size of.
  * \param[out] size The size of the directory in bytes on success.
  * \param[in] allocator Allocator being used for internal file path composition.
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails
- * \return `RCUTILS_RET_ERROR` if other error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails
+ * \return #RCUTILS_RET_ERROR if other error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t
@@ -221,10 +223,10 @@ rcutils_calculate_directory_size(
  * \param[in] max_depth The maximum depth of subdirectory. 0 means no limitation.
  * \param[out] size The size of the directory in bytes on success.
  * \param[in] allocator Allocator being used for internal file path composition.
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails
- * \return `RCUTILS_RET_ERROR` if other error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails
+ * \return #RCUTILS_RET_ERROR if other error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t
@@ -255,7 +257,7 @@ typedef struct rcutils_dir_iter_t
 } rcutils_dir_iter_t;
 
 /// Begin iterating over the contents of the specified directory.
-/*
+/**
  * This function is used to list the files and directories that are contained in
  * a specified directory. The structure returned by it must be deallocated using
  * ::rcutils_dir_iter_end when the iteration is completed. The name of the
@@ -274,17 +276,17 @@ rcutils_dir_iter_t *
 rcutils_dir_iter_start(const char * directory_path, const rcutils_allocator_t allocator);
 
 /// Continue iterating over the contents of a directory.
-/*
+/**
  * \param[in] iter An iterator created by ::rcutils_dir_iter_start.
- * \return `True` if another entry was found
- * \return `False` if there are no more entries in the directory
+ * \return `true` if another entry was found, or
+ * \return `false` if there are no more entries in the directory.
  */
 RCUTILS_PUBLIC
 bool
 rcutils_dir_iter_next(rcutils_dir_iter_t * iter);
 
 /// Finish iterating over the contents of a directory.
-/*
+/**
  * \param[in] iter An iterator created by ::rcutils_dir_iter_start.
  */
 RCUTILS_PUBLIC
