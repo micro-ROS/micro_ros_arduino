@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__SPLIT_H_
 #define RCUTILS__SPLIT_H_
 
@@ -30,10 +32,10 @@ extern "C"
  * \param[in] delimiter on where to split
  * \param[in] allocator for allocating new memory for the output array
  * \param[out] string_array with the split tokens
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t
@@ -49,7 +51,8 @@ rcutils_split(
  * \param[in] delimiter on where to split
  * \param[in] allocator for allocating new memory for the output array
  * \param[out] string_array with the split tokens
- * \returns array with split token, NULL in case of error
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t

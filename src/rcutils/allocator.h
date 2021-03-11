@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__ALLOCATOR_H_
 #define RCUTILS__ALLOCATOR_H_
 
@@ -123,20 +125,21 @@ rcutils_get_default_allocator(void);
 
 /// Return true if the given allocator has non-null function pointers.
 /**
- * Will also return false if the allocator pointer is null.
- *
  * \param[in] allocator to be checked by the function
+ * \return `true` if the allocator is valid, `false` otherwise.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
 bool
 rcutils_allocator_is_valid(const rcutils_allocator_t * allocator);
 
+/// Check the given allocator and run fail_statement if it is not valid.
 #define RCUTILS_CHECK_ALLOCATOR(allocator, fail_statement) \
   if (!rcutils_allocator_is_valid(allocator)) { \
     fail_statement; \
   }
 
+/// Check the given allocator, and set the message in msg and run fail_statement if it is not valid.
 #define RCUTILS_CHECK_ALLOCATOR_WITH_MSG(allocator, msg, fail_statement) \
   if (!rcutils_allocator_is_valid(allocator)) { \
     RCUTILS_SET_ERROR_MSG(msg); \

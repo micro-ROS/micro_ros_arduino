@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__EXPAND_TOPIC_NAME_H_
 #define RCL__EXPAND_TOPIC_NAME_H_
 
@@ -102,14 +104,14 @@ extern "C"
  * \param[in] substitutions string map with possible substitutions
  * \param[in] allocator the allocator to be used when creating the output topic
  * \param[out] output_topic_name output char * pointer
- * \return `RCL_RET_OK` if the topic name was expanded successfully, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_TOPIC_NAME_INVALID` if the given topic name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the namespace_ is invalid, or
- * \return `RCL_RET_UNKNOWN_SUBSTITUTION` for unknown substitutions in name, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the topic name was expanded successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_TOPIC_NAME_INVALID if the given topic name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the namespace_ is invalid, or
+ * \return #RCL_RET_UNKNOWN_SUBSTITUTION for unknown substitutions in name, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -127,10 +129,10 @@ rcl_expand_topic_name(
  * If the string map is not initialized RCL_RET_INVALID_ARGUMENT is returned.
  *
  * \param[inout] string_map rcutils_string_map_t map to be filled with pairs
- * \return `RCL_RET_OK` if successfully, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

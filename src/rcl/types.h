@@ -12,12 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__TYPES_H_
 #define RCL__TYPES_H_
 
 #include <rmw/types.h>
 
+/// The type that holds an rcl return code.
 typedef rmw_ret_t rcl_ret_t;
+
 /// Success return code.
 #define RCL_RET_OK RMW_RET_OK
 /// Unspecified error return code.
@@ -50,7 +54,9 @@ typedef rmw_ret_t rcl_ret_t;
 // rcl node specific ret codes in 2XX
 /// Invalid rcl_node_t given return code.
 #define RCL_RET_NODE_INVALID 200
+/// Invalid node name return code.
 #define RCL_RET_NODE_INVALID_NAME 201
+/// Invalid node namespace return code.
 #define RCL_RET_NODE_INVALID_NAMESPACE 202
 /// Failed to find node name
 #define RCL_RET_NODE_NAME_NON_EXISTENT 203

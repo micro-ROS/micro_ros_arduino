@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__REMAP_H_
 #define RCL__REMAP_H_
 
@@ -53,12 +55,12 @@ rcl_get_zero_initialized_remap(void);
  * If both `local_arguments` and global_arguments are NULL or zero intialized then the function will
  * return RCL_RET_INVALID_ARGUMENT.
  *
- * `global_arguments` is usually the arguments passed to `rcl_init()`.
+ * `global_arguments` is usually the arguments passed to rcl_init().
  * \sa rcl_init()
  * \sa rcl_get_global_arguments()
  *
  * Remap rules are checked in the order they were given.
- * For rules passed to `rcl_init` this usually is the order they were passed on the command line.
+ * For rules passed to rcl_init() this usually is the order they were passed on the command line.
  * \sa rcl_parse_arguments()
  *
  * Only the first remap rule that matches is used to remap a name.
@@ -98,11 +100,11 @@ rcl_get_zero_initialized_remap(void);
  * \param[in] allocator A valid allocator to use.
  * \param[out] output_name Either an allocated string with the remapped name, or
  *   `NULL` if no remap rules matched the name.
- * \return `RCL_RET_OK` if the topic name was remapped or no rules matched, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_TOPIC_NAME_INVALID` if the given topic name is invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the topic name was remapped or no rules matched, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_TOPIC_NAME_INVALID if the given topic name is invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -143,11 +145,11 @@ rcl_remap_topic_name(
  * \param[in] allocator A valid allocator to use.
  * \param[out] output_name Either an allocated string with the remapped name, or
  *   `NULL` if no remap rules matched the name.
- * \return `RCL_RET_OK` if the name was remapped or no rules matched, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_SERVICE_NAME_INVALID` if the given name is invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the name was remapped or no rules matched, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_SERVICE_NAME_INVALID if the given name is invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -190,11 +192,11 @@ rcl_remap_service_name(
  * \param[in] allocator A valid allocator to use.
  * \param[out] output_name Either an allocated string with the remapped name, or
  *   `NULL` if no remap rules matched the name.
- * \return `RCL_RET_OK` If the name was remapped or no rules matched, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the name is invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK If the name was remapped or no rules matched, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the name is invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -231,11 +233,11 @@ rcl_remap_node_name(
  * \param[in] allocator A valid allocator to be used.
  * \param[out] output_namespace Either an allocated string with the remapped namespace, or
  *   `NULL` if no remap rules matched the name.
- * \return `RCL_RET_OK` if the node name was remapped or no rules matched, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the remapped namespace is invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the node name was remapped or no rules matched, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the remapped namespace is invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -260,10 +262,10 @@ rcl_remap_node_namespace(
  * \param[in] rule The structure to be copied.
  *  Its allocator is used to copy memory into the new structure.
  * \param[out] rule_out A zero-initialized rcl_remap_t structure to be copied into.
- * \return `RCL_RET_OK` if the structure was copied successfully, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the structure was copied successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -283,9 +285,9 @@ rcl_remap_copy(
  * Lock-Free          | Yes
  *
  * \param[in] remap The structure to be deallocated.
- * \return `RCL_RET_OK` if the memory was successfully freed, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the memory was successfully freed, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

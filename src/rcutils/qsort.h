@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__QSORT_H_
 #define RCUTILS__QSORT_H_
 
@@ -35,9 +37,9 @@ extern "C"
  * \param[in] count number of elements present in the object.
  * \param[in] size size of each element, in bytes.
  * \param[in] comp function used to compare two elements.
- * \return `RCUTILS_RET_OK` if successful, or
- * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
- * \return `RCUTILS_RET_ERROR` if an unknown error occurs.
+ * \return #RCUTILS_RET_OK if successful, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
+ * \return #RCUTILS_RET_ERROR if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCUTILS__STRCASECMP_H_
 #define RCUTILS__STRCASECMP_H_
 
@@ -35,7 +37,8 @@ extern "C"
  *   An integer less than, equal to, or greater than zero if s1 is, after
  *   ignoring case, found to be less than, to match, or be greater than s2,
  *   respectively.
- * \return 0 if method succeeded , -1 if failed.
+ * \return 0 if method succeeded, or
+ * \return -1 if failed.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -58,7 +61,8 @@ rcutils_strcasecmp(
  *   An integer less than, equal to, or greater than zero if s1 is, after
  *   ignoring case, found to be less than, to match, or be greater than s2,
  *   respectively.
- * \return 0 if method succeeded , -1 if failed.
+ * \return 0 if method succeeded, or
+ * \return -1 if failed.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

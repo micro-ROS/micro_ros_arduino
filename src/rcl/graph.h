@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__GRAPH_H_
 #define RCL__GRAPH_H_
 
@@ -33,13 +35,25 @@ extern "C"
 #include "rcl/node.h"
 #include "rcl/visibility_control.h"
 
+/// A structure that contains topic names and types.
 typedef rmw_names_and_types_t rcl_names_and_types_t;
+
+/// A structure that encapsulates the node name, node namespace,
+/// topic type, gid, and qos_profile or publishers and subscriptions
+/// for a topic.
 typedef rmw_topic_endpoint_info_t rcl_topic_endpoint_info_t;
+
+/// An array of topic endpoint information.
 typedef rmw_topic_endpoint_info_array_t rcl_topic_endpoint_info_array_t;
 
+/// Return a zero-initialized rcl_names_and_types_t structure.
 #define rcl_get_zero_initialized_names_and_types rmw_get_zero_initialized_names_and_types
+
+/// Return a zero-initialized rcl_topic_endpoint_info_t structure.
 #define rcl_get_zero_initialized_topic_endpoint_info_array \
   rmw_get_zero_initialized_topic_endpoint_info_array
+
+/// Finalize a topic_endpoint_info_array_t structure.
 #define rcl_topic_endpoint_info_array_fini rmw_topic_endpoint_info_array_fini
 
 /// Return a list of topic names and types for publishers associated with a node.
@@ -78,13 +92,13 @@ typedef rmw_topic_endpoint_info_array_t rcl_topic_endpoint_info_array_t;
  * \param[in] node_name the node name of the topics to return
  * \param[in] node_namespace the node namespace of the topics to return
  * \param[out] topic_names_and_types list of topic names and their types
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the node name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the node namespace is invalid, or
- * \return `RCL_RET_NODE_NAME_NON_EXISTENT` if the node name wasn't found, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the node name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the node namespace is invalid, or
+ * \return #RCL_RET_NODE_NAME_NON_EXISTENT if the node name wasn't found, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -128,13 +142,13 @@ rcl_get_publisher_names_and_types_by_node(
  * \param[in] node_name the node name of the topics to return
  * \param[in] node_namespace the node namespace of the topics to return
  * \param[out] topic_names_and_types list of topic names and their types
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the node name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the node namespace is invalid, or
- * \return `RCL_RET_NODE_NAME_NON_EXISTENT` if the node name wasn't found, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the node name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the node namespace is invalid, or
+ * \return #RCL_RET_NODE_NAME_NON_EXISTENT if the node name wasn't found, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -177,13 +191,13 @@ rcl_get_subscriber_names_and_types_by_node(
  * \param[in] node_name the node name of the services to return
  * \param[in] node_namespace the node namespace of the services to return
  * \param[out] service_names_and_types list of service names and their types
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the node name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the node namespace is invalid, or
- * \return `RCL_RET_NODE_NAME_NON_EXISTENT` if the node name wasn't found, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the node name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the node namespace is invalid, or
+ * \return #RCL_RET_NODE_NAME_NON_EXISTENT if the node name wasn't found, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -225,13 +239,13 @@ rcl_get_service_names_and_types_by_node(
  * \param[in] node_name the node name of the services to return
  * \param[in] node_namespace the node namespace of the services to return
  * \param[out] service_names_and_types list of service client names and their types
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the node name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the node namespace is invalid, or
- * \return `RCL_RET_NODE_NAME_NON_EXISTENT` if the node name wasn't found, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the node name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the node namespace is invalid, or
+ * \return #RCL_RET_NODE_NAME_NON_EXISTENT if the node name wasn't found, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -272,12 +286,12 @@ rcl_get_client_names_and_types_by_node(
  * \param[in] allocator allocator to be used when allocating space for strings
  * \param[in] no_demangle if true, list all topics without any demangling
  * \param[out] topic_names_and_types list of topic names and their types
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_NODE_INVALID_NAME` if the node name is invalid, or
- * \return `RCL_RET_NODE_INVALID_NAMESPACE` if the node namespace is invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAME if the node name is invalid, or
+ * \return #RCL_RET_NODE_INVALID_NAMESPACE if the node namespace is invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -314,10 +328,10 @@ rcl_get_topic_names_and_types(
  * \param[in] node the handle to the node being used to query the ROS graph
  * \param[in] allocator allocator to be used when allocating space for strings
  * \param[out] service_names_and_types list of service names and their types
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -345,10 +359,10 @@ rcl_get_service_names_and_types(
  * \param[inout] names_and_types object to be initialized
  * \param[in] size the number of names and sets of types to be stored
  * \param[in] allocator to be used to allocate and deallocate memory
- * \returns `RCL_RET_OK` on success, or
- * \returns `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \returns `RCL_BAD_ALLOC` if memory allocation fails, or
- * \returns `RCL_RET_ERROR` when an unspecified error occurs.
+ * \return #RCL_RET_OK on success, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCL_RET_ERROR when an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -377,9 +391,9 @@ rcl_names_and_types_init(
  * Lock-Free          | Yes
  *
  * \param[inout] names_and_types struct to be finalized
- * \return `RCL_RET_OK` if successful, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if successful, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -428,10 +442,10 @@ rcl_names_and_types_fini(rcl_names_and_types_t * names_and_types);
  * \param[in] allocator used to control allocation and deallocation of names
  * \param[out] node_names struct storing discovered node names
  * \param[out] node_namespaces struct storing discovered node namespaces
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_BAD_ALLOC` if an error occurred while allocating memory, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_BAD_ALLOC if an error occurred while allocating memory, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -444,7 +458,7 @@ rcl_get_node_names(
 
 /// Return a list of available nodes in the ROS graph, including their enclave names.
 /**
- * An \ref rcl_get_node_names equivalent, but including in its output the enclave
+ * An rcl_get_node_names() equivalent, but including in its output the enclave
  * name the node is using.
  *
  * <hr>
@@ -461,10 +475,10 @@ rcl_get_node_names(
  * \param[out] node_names struct storing discovered node names
  * \param[out] node_namespaces struct storing discovered node namespaces
  * \param[out] enclaves struct storing discovered node enclaves
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_BAD_ALLOC` if an error occurred while allocating memory, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_BAD_ALLOC if an error occurred while allocating memory, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -508,10 +522,10 @@ rcl_get_node_names_with_enclaves(
  * \param[in] node the handle to the node being used to query the ROS graph
  * \param[in] topic_name the name of the topic in question
  * \param[out] count number of publishers on the given topic
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -553,10 +567,10 @@ rcl_count_publishers(
  * \param[in] node the handle to the node being used to query the ROS graph
  * \param[in] topic_name the name of the topic in question
  * \param[out] count number of subscriptions on the given topic
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -611,11 +625,11 @@ rcl_count_subscribers(
  * \param[in] no_mangle if `true`, `topic_name` needs to be a valid middleware topic name,
  *            otherwise it should be a valid ROS topic name
  * \param[out] publishers_info a struct representing a list of publisher information
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -672,11 +686,11 @@ rcl_get_publishers_info_by_topic(
  * \param[in] no_mangle if `true`, `topic_name` needs to be a valid middleware topic name,
  *            otherwise it should be a valid ROS topic name
  * \param[out] subscriptions_info a struct representing a list of subscriptions information
- * \return `RCL_RET_OK` if the query was successful, or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if memory allocation fails, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the query was successful, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if memory allocation fails, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -718,10 +732,10 @@ rcl_get_subscriptions_info_by_topic(
  * \param[in] node the handle to the node being used to query the ROS graph
  * \param[in] client the handle to the service client being queried
  * \param[out] is_available set to true if there is a service server available, else false
- * \return `RCL_RET_OK` if the check was made successfully (regardless of the service readiness), or
- * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the check was made successfully (regardless of the service readiness), or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
