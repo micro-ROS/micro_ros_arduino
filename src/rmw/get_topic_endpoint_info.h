@@ -72,6 +72,8 @@ extern "C"
  *   left unchanged on failure.
  *   If populated, it is up to the caller to finalize this array later on,
  *   using rmw_topic_endpoint_info_array_fini().
+ *   QoS Profiles in the info array will use RMW_DURATION_INFINITE for infinite durations,
+ *   avoiding exposing any implementation-specific values.
  * \return `RMW_RET_OK` if the query was successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `node` is NULL, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `allocator` is not valid,
@@ -142,6 +144,8 @@ rmw_get_publishers_info_by_topic(
  *   left unchanged on failure.
  *   If populated, it is up to the caller to finalize this array later on,
  *   using rmw_topic_endpoint_info_array_fini().
+ *   QoS Profiles in the info array will use RMW_DURATION_INFINITE for infinite durations,
+ *   avoiding exposing any implementation-specific values.
  * \return `RMW_RET_OK` if the query was successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `node` is NULL, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `allocator` is not valid,
