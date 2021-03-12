@@ -105,7 +105,7 @@ rcl_logging_configure_with_output_handler(
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
-rcl_ret_t rcl_logging_fini();
+rcl_ret_t rcl_logging_fini(void);
 
 /// See if logging rosout is enabled.
 /**
@@ -124,7 +124,7 @@ rcl_ret_t rcl_logging_fini();
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
-bool rcl_logging_rosout_enabled();
+bool rcl_logging_rosout_enabled(void);
 
 /// Default output handler used by rcl.
 /**
