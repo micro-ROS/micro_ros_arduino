@@ -28,7 +28,7 @@ https://github.com/ros2/test_interface_files.git c4d710e3394ad09a71a257f54906886
 https://github.com/ament/ament_lint.git 418a69c7e0f922adc889ac1bc2a7dcf721bf7060
 https://github.com/ament/uncrustify_vendor.git 0291bc988c45846400aca50cb973bf04a4de3d56
 https://github.com/ament/ament_cmake.git a56c3beb042ffd63db53ffaf6a6bb41157df79c6
-https://github.com/ament/ament_package.git 952ae0f14639c9c8f683e3338c377dae5cd3a54e
+https://github.com/ament/ament_package.git 4e69bf16021eff87cc2e30c8ff77c0a987bb3112
 https://github.com/ament/ament_index.git dd678ad846fdf3692df4177539c2a277d68b22b9
 https://github.com/ament/googletest.git 69ff0aa660dd25ecdc8a1fe91505c3c58e0032c2
 https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
