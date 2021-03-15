@@ -33,7 +33,7 @@ extern "C"
 {
 #endif
 
-#define RCUTILS_LOGGING_SEPARATOR_CHAR '.'
+/// The separator used when logging node names.
 #define RCUTILS_LOGGING_SEPARATOR_STRING "."
 
 /**
