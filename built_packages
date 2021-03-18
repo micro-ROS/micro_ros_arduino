@@ -24,7 +24,7 @@ https://github.com/ros2/common_interfaces.git bfe9d70569a945cec5b8b2ec60fd608042
 https://github.com/ros2/rosidl_dds.git 43cea4065cf1897ad6ba8be68f349e22e4f3a2ff
 https://github.com/ros2/libyaml_vendor.git cc0d4fde23f93b480d587f084b203ee3ed598e81
 https://github.com/ros2/test_interface_files.git 124823291a0a7d35e983b2e00abc8803ec4cdbb2
-https://github.com/ament/ament_lint.git caf7cab8d834b3ea7692c1203293a221e1694d98
+https://github.com/ament/ament_lint.git 7fbeae27f4ed2a0e03ec931ed68a8f5d008e1691
 https://github.com/ament/uncrustify_vendor.git e08fdccdaef9bdbcc31cf95b63a8d1408618f338
 https://github.com/ament/ament_cmake.git 84719051ef2b26070de484e60b8f060ae7a70b06
 https://github.com/ament/ament_package.git b9a50edae6707bd648da23f6cc80f077dd1fc52b
