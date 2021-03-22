@@ -22,6 +22,9 @@ extern "C"
 
 #include <uxr/client/visibility.h>
 #include <uxr/client/transport.h>
+#include <uxr/client/core/communication/communication.h>
+
+#include <stdbool.h>
 
 #define UXR_PING_BUF 16 // 4 (HEADER SIZE) + 4 (SUBHEADER_SIZE) + 8 (GET_Info payload)
 

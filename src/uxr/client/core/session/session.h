@@ -78,6 +78,12 @@ typedef bool (*uxrOnBuffersFull) (
 typedef void (*uxrOnPerformanceFunc) (struct uxrSession* session, struct ucdrBuffer* mb, void* args);
 #endif
 
+typedef struct uxrContinuousArgs {
+    uxrOnBuffersFull flush_callback;
+    uxrStreamId stream_id;
+    size_t data_size;
+} uxrContinuousArgs;
+
 typedef struct uxrSession
 {
     uxrSessionInfo info;
@@ -106,6 +112,7 @@ typedef struct uxrSession
     void* on_reply_args;
 
     bool on_data_flag;
+    uxrContinuousArgs continuous_args;
 
 #ifdef PERFORMANCE_TESTING
     uxrOnPerformanceFunc on_performance;
@@ -235,7 +242,7 @@ UXRDLLAPI bool uxr_delete_session_retries(uxrSession* session, size_t retries);
 
 /**
  * @brief Creates and initializes an output best-effort stream.
- *        The maximum number of output best-effort streams is set by the `CONFIG_MAX_OUTPUT_BEST_EFFORT_STREAMS`.
+ *        The maximum number of output best-effort streams is set by the `UCLIENT_MAX_OUTPUT_BEST_EFFORT_STREAMS`.
  * @param session   A uxrSession structure previously initialized.
  * @param buffer    The memory block where the messages will be written.
  * @param size      The buffer size.
@@ -248,7 +255,7 @@ UXRDLLAPI uxrStreamId uxr_create_output_best_effort_stream(
 
 /**
  * @brief Creates and initializes an output reliable stream.
- *        The maximum number of output reliable streams is set by the `CONFIG_MAX_OUTPUT_RELIABLE_STREAMS`.
+ *        The maximum number of output reliable streams is set by the `UCLIENT_MAX_OUTPUT_RELIABLE_STREAMS`.
  * @param session   A uxrSession structure previously initialized.
  * @param buffer    The memory block where the messages will be written.
  * @param size      The buffer size.
@@ -265,7 +272,7 @@ UXRDLLAPI uxrStreamId uxr_create_output_reliable_stream(
 
 /**
  * @brief Creates and initializes an input best-effort stream.
- *        The maximum number of input best-effort streams is set by the `CONFIG_MAX_INPUT_BEST_EFFORT_STREAMS`.
+ *        The maximum number of input best-effort streams is set by the `UCLIENT_MAX_INPUT_BEST_EFFORT_STREAMS`.
  * @param session   A uxrSession structure previously initialized.
  * @return  A uxrStreamId which could by used for managing the stream.
  */
@@ -273,7 +280,7 @@ UXRDLLAPI uxrStreamId uxr_create_input_best_effort_stream(uxrSession* session);
 
 /**
  * @brief Creates and initializes an input reliable stream.
- *        The maximum number of input reliable streams is set by the `CONFIG_MAX_INPUT_RELIABLE_STREAMS`.
+ *        The maximum number of input reliable streams is set by the `UCLIENT_MAX_INPUT_RELIABLE_STREAMS`.
  * @param session   A uxrSession structure previously initialized.
  * @param buffer    The memory block where the messages will be written.
  * @param size      The buffer size.
