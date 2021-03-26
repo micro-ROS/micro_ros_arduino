@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/session.h>
 
@@ -39,6 +39,6 @@ UXRDLLAPI uint16_t uxr_buffer_delete_entity(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_CORE_SESSION_COMMON_CREATE_ENTITIES_H_

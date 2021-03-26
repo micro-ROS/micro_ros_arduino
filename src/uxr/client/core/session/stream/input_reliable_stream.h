@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/stream/reliable_stream.h>
 #include <uxr/client/core/session/stream/seq_num.h>
@@ -35,7 +35,8 @@ typedef enum FragmentationInfo
 
 } FragmentationInfo;
 
-typedef FragmentationInfo (*OnGetFragmentationInfo)(uint8_t* buffer);
+typedef FragmentationInfo (* OnGetFragmentationInfo)(
+        uint8_t* buffer);
 
 typedef struct uxrInputReliableStream
 {
@@ -52,6 +53,6 @@ typedef struct uxrInputReliableStream
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR__CLIENT__CORE__SESSION__STREAM__INPUT_RELIABLE_STREAM_H_

@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/stream/seq_num.h>
 #include <uxr/client/core/session/object_id.h>
@@ -40,7 +40,7 @@ extern "C"
 #define UXR_REPLACE          0x01 << 2
 #ifdef PERFORMANCE_TESTING
 #define UXR_ECHO             0x01 << 7
-#endif
+#endif // ifdef PERFORMANCE_TESTING
 
 #define UXR_INVALID_REQUEST_ID 0
 
@@ -59,6 +59,6 @@ typedef struct uxrSessionInfo
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // _UXR_CLIENT_CORE_SESSION_SESSION_INFO_H

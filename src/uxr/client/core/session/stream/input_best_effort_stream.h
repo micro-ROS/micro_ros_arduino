@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/stream/seq_num.h>
 
@@ -33,6 +33,6 @@ typedef struct uxrInputBestEffortStream
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // _UXR_CLIENT_CORE_SESSION_STREAM_INPUT_BEST_EFFORT_STREAM_H_

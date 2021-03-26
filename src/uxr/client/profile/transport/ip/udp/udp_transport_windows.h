@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <winsock2.h>
 
@@ -30,6 +30,6 @@ typedef struct uxrUDPPlatform
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_UDP_TRANSPORT_WINDOWS_H_

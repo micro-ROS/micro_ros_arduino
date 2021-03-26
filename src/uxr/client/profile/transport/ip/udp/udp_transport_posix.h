@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -32,6 +32,6 @@ typedef struct uxrUDPPlatform
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_PROFILE_TRANSPORT_IP_UDP_UDPTRANSPORTPOSIX_H_

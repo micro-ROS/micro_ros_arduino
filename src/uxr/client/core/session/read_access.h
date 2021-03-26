@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/session.h>
 
@@ -68,7 +68,7 @@ UXRDLLAPI uint16_t uxr_buffer_request_data(
         uxrStreamId stream_id,
         uxrObjectId datareader_id,
         uxrStreamId data_stream_id,
-        const uxrDeliveryControl * const delivery_control);
+        const uxrDeliveryControl* const delivery_control);
 
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE READ_DATA submessage.
@@ -87,6 +87,6 @@ UXRDLLAPI uint16_t uxr_buffer_cancel_data(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_CORE_SESSION_READ_ACCESS_H_

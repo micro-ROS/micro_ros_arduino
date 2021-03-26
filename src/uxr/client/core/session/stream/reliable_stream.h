@@ -18,14 +18,14 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <stdint.h>
 #include <stddef.h>
 
 typedef struct uxrReliableStream
 {
-    uint8_t * buffer;
+    uint8_t* buffer;
     size_t size;
     uint16_t history;
 
@@ -33,6 +33,6 @@ typedef struct uxrReliableStream
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR__CLIENT__CORE__SESSION__STREAM__RELIABLE_STREAM_H_

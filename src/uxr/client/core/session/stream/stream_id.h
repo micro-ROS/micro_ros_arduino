@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/visibility.h>
 #include <stdint.h>
@@ -100,6 +100,6 @@ UXRDLLAPI uxrStreamId uxr_stream_id_from_raw(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_CORE_SESSION_STREAM_STREAM_ID_H
