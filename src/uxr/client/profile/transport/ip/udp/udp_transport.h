@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/profile/transport/ip/ip.h>
 #include <uxr/client/core/communication/communication.h>
@@ -60,6 +60,6 @@ UXRDLLAPI bool uxr_close_udp_transport(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_UDP_TRANSPORT_H_

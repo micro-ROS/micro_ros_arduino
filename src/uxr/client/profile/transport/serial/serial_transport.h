@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/communication/communication.h>
 #include <uxr/client/profile/transport/stream_framing/stream_framing_protocol.h>
@@ -60,10 +60,11 @@ UXRDLLAPI bool uxr_init_serial_transport(
  * @param transport The transport structure.
  * @return `true` in case of successful closing. `false` in other case.
  */
-UXRDLLAPI bool uxr_close_serial_transport(uxrSerialTransport* transport);
+UXRDLLAPI bool uxr_close_serial_transport(
+        uxrSerialTransport* transport);
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_SERIAL_TRANSPORT_H_
