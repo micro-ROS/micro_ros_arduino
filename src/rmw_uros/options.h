@@ -58,6 +58,17 @@ typedef struct rmw_uxrce_transport_params_t
 } rmw_uxrce_transport_params_t;
 
 /**
+ * \brief Synchronizes the session time using the NTP protocol.
+ * \param[in, out] result Variable to update with micro-ROS Agent POSIX timestamp in nanoseconds.
+ * \param[in] timeout_ms The waiting time in milliseconds.
+ * \return RMW_RET_OK when success.
+ * \return RMW_RET_INVALID_ARGUMENT If no session is running or the synchronization fails.
+ */
+rmw_ret_t rmw_uros_sync_session(
+        int64_t* result,
+        const int timeout_ms);
+
+/**
  * \brief Parses command line args and fills rmw implementation-specific options.
  * `rmw_init_options allocator` is used to allocate the specific rmw options.
  *

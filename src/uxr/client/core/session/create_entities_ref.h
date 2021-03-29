@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/common_create_entities.h>
 
@@ -123,7 +123,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datareader_ref(
  *        The submessage will be sent when `uxr_flag_output_streams` or `uxr_run_session` functions are called.
  *        As a result of the reception of this submessage, the Agent will create an XRCE Requester according to
  *        the reference provided in the CREATE submessage.
- * 
+ *
  * @param session               A uxrSession structure previously initialized.
  * @param stream_id             The output stream identifier where the CREATE submessage will be buffered.
  * @param object_id             The identifier of the XRCE Requester.
@@ -148,7 +148,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_requester_ref(
  *        The submessage will be sent when `uxr_flag_output_streams` or `uxr_run_session` functions are called.
  *        As a result of the reception of this submessage, the Agent will create an XRCE Replier according to
  *        the reference provided in the CREATE submessage.
- * 
+ *
  * @param session               A uxrSession structure previously initialized.
  * @param stream_id             The output stream identifier where the CREATE submessage will be buffered.
  * @param object_id             The identifier of the XRCE Requester.
@@ -170,6 +170,6 @@ UXRDLLAPI uint16_t uxr_buffer_create_replier_ref(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_CORE_SESSION_CREATE_ENTITIES_REF_H_

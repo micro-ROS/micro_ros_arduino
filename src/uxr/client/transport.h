@@ -28,7 +28,7 @@
 #include <uxr/client/profile/transport/ip/udp/udp_transport_windows.h>
 #elif defined(UCLIENT_PLATFORM_FREERTOS_PLUS_TCP)
 #include <uxr/client/profile/transport/ip/udp/udp_transport_freertos_plus_tcp.h>
-#endif
+#endif // if defined(UCLIENT_EXTERNAL_UDP)
 #include <uxr/client/profile/transport/ip/udp/udp_transport.h>
 #endif //UCLIENT_PROFILE_UDP
 
@@ -39,7 +39,7 @@
 #include <uxr/client/profile/transport/ip/tcp/tcp_transport_posix.h>
 #elif defined(UCLIENT_PLATFORM_WINDOWS)
 #include <uxr/client/profile/transport/ip/tcp/tcp_transport_windows.h>
-#endif
+#endif // if defined(UCLIENT_EXTERNAL_TCP)
 #include <uxr/client/profile/transport/ip/tcp/tcp_transport.h>
 #endif //UCLIENT_PROFILE_TCP
 
@@ -48,7 +48,7 @@
 #include <uxr/client/profile/transport/serial/serial_transport_external.h>
 #elif defined(UCLIENT_PLATFORM_POSIX)
 #include <uxr/client/profile/transport/serial/serial_transport_posix.h>
-#endif
+#endif // if defined(UCLIENT_EXTERNAL_SERIAL)
 #include <uxr/client/profile/transport/serial/serial_transport.h>
 #endif //UCLIENT_PROFILE_SERIAL
 

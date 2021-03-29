@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/stream/output_best_effort_stream.h>
 #include <uxr/client/core/session/stream/output_reliable_stream.h>
@@ -42,6 +42,6 @@ typedef struct uxrStreamStorage
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // _UXR_CLIENT_CORE_SESSION_STREAM_STREAM_STORAGE_H

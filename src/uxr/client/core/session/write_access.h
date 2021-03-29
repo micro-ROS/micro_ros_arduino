@@ -18,14 +18,14 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/session.h>
 
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE WRITE_DATA submessage.
  *        As a consequence, an XRCE request is generated associated to the WRITE_DATA submessage.
- * 
+ *
  * @param session       A uxrSession structure previously initialized.
  * @param stream_id     The output stream identifier where the WRITE_DATA submessage will be buffered.
  * @param requester_id  The identifier of the XRCE Requester that will write the request into the DDS GDS.
@@ -44,13 +44,13 @@ uint16_t uxr_buffer_request(
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE WRITE_DATA submessage.
  *        As a consequence, an XRCE request is generated associated to the WRITE_DATA submessage.
- * 
+ *
  * @param session       A uxrSession structure previously initialized.
  * @param stream_id     The output stream identifier where the WRITE_DATA submessage will be buffered.
- * @param replier_id    The identifier of the XRCE Replier that will write the reply into the DDS GDS. 
+ * @param replier_id    The identifier of the XRCE Replier that will write the reply into the DDS GDS.
  * @param sample_id     The `SampleIdentity` that identifies the request.
  *                      It will be read by the Requester to filter and identify the reply.
- * @param buffer        The pointer to the reply data. 
+ * @param buffer        The pointer to the reply data.
  * @param len           The length of the reply data.
  * @return A `request_id` that identifies the XRCE request made by the Client.
  *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
@@ -66,21 +66,21 @@ uint16_t uxr_buffer_reply(
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE WRITE_DATA submessage.
  *        As a consequence, an XRCE request is generated associated to the WRITE_DATA submessage.
- * 
+ *
  * @param session       A uxrSession structure previously initialized.
  * @param stream_id     The output stream identifier where the WRITE_DATA submessage will be buffered.
- * @param datawriter_id The identifier of the XRCE Datawriter that will write the topic into the DDS GDS. 
- * @param buffer        The pointer to the topic data. 
+ * @param datawriter_id The identifier of the XRCE Datawriter that will write the topic into the DDS GDS.
+ * @param buffer        The pointer to the topic data.
  * @param len           The length of the topic data.
  * @return A `request_id` that identifies the XRCE request made by the Publisher.
  *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
  */
 uint16_t uxr_buffer_topic(
-    uxrSession* session,
-    uxrStreamId stream_id,
-    uxrObjectId datawriter_id,
-    uint8_t* buffer,
-    size_t len);
+        uxrSession* session,
+        uxrStreamId stream_id,
+        uxrObjectId datawriter_id,
+        uint8_t* buffer,
+        size_t len);
 
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE WRITE_DATA submessage.
@@ -118,15 +118,15 @@ UXRDLLAPI uint16_t uxr_prepare_output_stream(
  *  */
 
 UXRDLLAPI uint16_t uxr_prepare_output_stream_fragmented(
-    uxrSession* session, 
-    uxrStreamId stream_id, 
-    uxrObjectId datawriter_id,
-    ucdrBuffer* ub, 
-    size_t topic_size,
-    uxrOnBuffersFull flush_callback);
+        uxrSession* session,
+        uxrStreamId stream_id,
+        uxrObjectId datawriter_id,
+        ucdrBuffer* ub,
+        size_t topic_size,
+        uxrOnBuffersFull flush_callback);
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_CORE_SESSION_WRITE_ACCESS_H_

@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/visibility.h>
 #include <stdint.h>
@@ -41,13 +41,18 @@ typedef struct uxrObjectId
 
 } uxrObjectId;
 
-UXRDLLAPI uxrObjectId uxr_object_id(uint16_t id, uint8_t type);
+UXRDLLAPI uxrObjectId uxr_object_id(
+        uint16_t id,
+        uint8_t type);
 
-UXRDLLAPI uxrObjectId uxr_object_id_from_raw(const uint8_t* raw);
-UXRDLLAPI void uxr_object_id_to_raw(uxrObjectId object_id, uint8_t* raw);
+UXRDLLAPI uxrObjectId uxr_object_id_from_raw(
+        const uint8_t* raw);
+UXRDLLAPI void uxr_object_id_to_raw(
+        uxrObjectId object_id,
+        uint8_t* raw);
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif //_UXR_CLIENT_CORE_SESSION_OBJECT_ID_H_
