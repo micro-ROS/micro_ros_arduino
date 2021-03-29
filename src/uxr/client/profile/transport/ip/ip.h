@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/type/xrce_types.h>
 #include <uxr/client/visibility.h>
@@ -43,10 +43,10 @@ typedef enum uxrIpProtocol
  * @return false        In other case.
  */
 UXRDLLAPI bool uxr_ip_to_locator(
-        char const * ip,
+        char const* ip,
         uint16_t port,
         uxrIpProtocol ip_protocol,
-        TransportLocator * locator);
+        TransportLocator* locator);
 
 /**
  * @brief Converts a TrasnportLocator to an IPv4/IPv6 address + port.
@@ -61,14 +61,14 @@ UXRDLLAPI bool uxr_ip_to_locator(
  * @return false        In other case.
  */
 UXRDLLAPI bool uxr_locator_to_ip(
-        TransportLocator const * locator,
-        char * ip,
+        TransportLocator const* locator,
+        char* ip,
         size_t size,
-        uint16_t * port,
-        uxrIpProtocol * ip_protocol);
+        uint16_t* port,
+        uxrIpProtocol* ip_protocol);
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_PROFILE_TRANSPORT_IP_IP_H_

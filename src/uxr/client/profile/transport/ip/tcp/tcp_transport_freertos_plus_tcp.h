@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include "FreeRTOS.h"
 #include "list.h"
@@ -35,6 +35,6 @@ typedef struct uxrTCPPlatform
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif //_UXR_CLIENT_TCP_TRANSPORT_FREERTOS_H_

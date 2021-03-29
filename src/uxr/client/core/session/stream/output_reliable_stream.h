@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/stream/reliable_stream.h>
 #include <uxr/client/core/session/stream/seq_num.h>
@@ -28,7 +28,9 @@ extern "C"
 struct ucdrBuffer;
 struct uxrOutputReliableStream;
 
-typedef void (*OnNewFragment)(struct ucdrBuffer* ub, struct uxrOutputReliableStream* stream);
+typedef void (* OnNewFragment)(
+        struct ucdrBuffer* ub,
+        struct uxrOutputReliableStream* stream);
 
 typedef struct uxrOutputReliableStream
 {
@@ -47,6 +49,6 @@ typedef struct uxrOutputReliableStream
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR__CLIENT__CORE__SESSION__STREAM__OUTPUT_RELIABLE_STREAM_H_

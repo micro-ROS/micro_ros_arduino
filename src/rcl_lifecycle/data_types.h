@@ -86,6 +86,17 @@ typedef struct rcl_lifecycle_com_interface_t
   rcl_service_t srv_get_transition_graph;
 } rcl_lifecycle_com_interface_t;
 
+/// It contains various options to configure the rcl_lifecycle_state_machine_t instance
+typedef struct rcl_lifecycle_state_machine_options_t
+{
+  /// Flag indicating whether the state machine shall be initialized with default states
+  bool initialize_default_states;
+  /// Flag indicating whether the com interface shall be used or not
+  bool enable_com_interface;
+  /// Allocator used for allocating states and transitions
+  rcl_allocator_t allocator;
+} rcl_lifecycle_state_machine_options_t;
+
 /// It contains the state machine data
 typedef struct rcl_lifecycle_state_machine_t
 {
@@ -95,6 +106,8 @@ typedef struct rcl_lifecycle_state_machine_t
   rcl_lifecycle_transition_map_t transition_map;
   /// Communication interface into a ROS world
   rcl_lifecycle_com_interface_t com_interface;
+  /// Options struct with which the state machine was initialized
+  rcl_lifecycle_state_machine_options_t options;
 } rcl_lifecycle_state_machine_t;
 
 #ifdef __cplusplus

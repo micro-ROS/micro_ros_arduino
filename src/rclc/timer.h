@@ -23,6 +23,7 @@ extern "C"
 
 #include <rcl/timer.h>
 #include <rclc/types.h>
+#include "rclc/visibility_control.h"
 
 /**
  *  Creates an rcl timer.
@@ -42,6 +43,7 @@ extern "C"
  * \return `RCL_RET_OK` if successful
  * \return `RCL_ERROR` (or other error code) if an error occurred
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_timer_init_default(
   rcl_timer_t * timer,

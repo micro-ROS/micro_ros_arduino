@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/config.h>
 #include <uxr/client/visibility.h>
@@ -28,7 +28,9 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 
-typedef bool (*uxrOnAgentFound) (const TransportLocator* locator, void* args);
+typedef bool (* uxrOnAgentFound) (
+        const TransportLocator* locator,
+        void* args);
 
 /**
  * @brief Discovers Agents within the network using UDP/IP multicast with address "239.255.0.2" and port 7400.
@@ -62,6 +64,6 @@ UXRDLLAPI void uxr_discovery_agents(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_PROFILE_DISCOVERY_DISCOVERY_H_

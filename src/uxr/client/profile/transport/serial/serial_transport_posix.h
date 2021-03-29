@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <poll.h>
 
@@ -30,6 +30,6 @@ typedef struct uxrSerialPlatform
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_PROFILE_TRANSPORT_SERIAL_SERIALTRANSPORTPOSIX_H_

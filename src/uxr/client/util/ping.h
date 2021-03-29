@@ -18,7 +18,7 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/visibility.h>
 #include <uxr/client/transport.h>
@@ -66,6 +66,6 @@ UXRDLLAPI bool uxr_ping_agent_attempts(
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_UTIL_PING_H_

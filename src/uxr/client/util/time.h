@@ -18,17 +18,19 @@
 #ifdef __cplusplus
 extern "C"
 {
-#endif
+#endif // ifdef __cplusplus
 
 #include <uxr/client/visibility.h>
 #include <stdint.h>
 
-UXRDLLAPI int64_t uxr_millis(void);
+UXRDLLAPI int64_t uxr_millis(
+        void);
 
-UXRDLLAPI int64_t uxr_nanos(void);
+UXRDLLAPI int64_t uxr_nanos(
+        void);
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif // UXR_CLIENT_UTIL_TIME_H_

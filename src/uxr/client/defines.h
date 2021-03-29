@@ -19,6 +19,6 @@
 #define COMPOUND_LITERAL(x)  x
 #else
 #define COMPOUND_LITERAL(x) (x)
-#endif
+#endif // ifdef __cplusplus
 
 #endif // _UXR_CLIENT_DEFINES_H_

@@ -33,7 +33,7 @@ extern "C"
 #include "rclc/client.h"
 #include "rclc/service.h"
 #include "rclc/types.h"
-
+#include "rclc/visibility_control.h"
 #if __cplusplus
 }
 #endif
