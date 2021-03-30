@@ -23,7 +23,7 @@ https://github.com/ros2/rmw.git 07ee21d1a4742b6c327cedfafd95adc9eea1b99b
 https://github.com/ros2/libyaml_vendor.git 8c4e11f34339414f560e33ceaf3b1689a1108ded
 https://github.com/ros2/common_interfaces.git c86cc19ba2ec255891e756da618b8d46d6030b44
 https://github.com/ros-controls/control_msgs 653b646ba34d2166149cc02269bac0f48beb72b0
-https://github.com/eProsima/Micro-XRCE-DDS-Client.git 5124991014d701626069f0f4a2b312a3233fcb94
+https://github.com/eProsima/Micro-XRCE-DDS-Client.git fee203496d520ffa26c7eeae9d2ffb89be3c6204
 https://github.com/eProsima/Micro-CDR.git 2f1a688a9f7ca8379e64a8941bf5ce27bd7b1f94
 https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
 https://github.com/ament/googletest.git 69ff0aa660dd25ecdc8a1fe91505c3c58e0032c2
