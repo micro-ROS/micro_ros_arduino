@@ -106,6 +106,34 @@ DECLARE_TRACEPOINT(
   const char * topic_name,
   const size_t queue_depth)
 
+/// `rcl_publish`
+/**
+ * Message publication.
+ * Links a `rcl_publisher_t` handle to a pointer to
+ * a message being published at the `rcl` level.
+ *
+ * \param[in] publisher_handle pointer to the publisher's `rcl_publisher_t` handle
+ * \param[in] message pointer to the message being published
+ */
+DECLARE_TRACEPOINT(
+  rcl_publish,
+  const void * publisher_handle,
+  const void * message)
+
+/// `rclcpp_publish`
+/**
+ * Message publication.
+ * Links a `rcl_publisher_t` handle to a pointer to
+ * a message being published at the `rclcpp` level.
+ *
+ * \param[in] publisher_handle pointer to the publisher's `rcl_publisher_t` handle
+ * \param[in] message pointer to the message being published
+ */
+DECLARE_TRACEPOINT(
+  rclcpp_publish,
+  const void * publisher_handle,
+  const void * message)
+
 /// `rcl_subscription_init`
 /**
  * Subscription initialisation.
