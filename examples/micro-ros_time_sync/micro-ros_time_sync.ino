@@ -60,7 +60,7 @@ void loop() {
   else
   {
     HWSERIAL.print("Session sync failed, error code: ");
-    HWSERIAL.println(time_ms);  
+    HWSERIAL.println((int) time_ms);  
   }
   
   delay(1001);
