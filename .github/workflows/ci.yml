@@ -62,7 +62,7 @@ jobs:
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_tf_publisher -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_time_sync -v
+            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_time_sync -v
             # Build one demo for each platform
             arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
