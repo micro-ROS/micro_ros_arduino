@@ -49,11 +49,6 @@ void setup() {
 void loop() {
   time_ms = rmw_uros_epoch_millis(); 
       RCCHECK(rmw_uros_sync_session(timeout_ms));
-  if (time_ms <= 0)
-  {
-      // Error on time sync, retrying.
-      RCCHECK(rmw_uros_sync_session(timeout_ms));
-  }
   else
   {
       time_seconds = time_ms/1000;
