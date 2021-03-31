@@ -19,21 +19,36 @@
 #include <functional>
 
 #include "tracetools/config.h"
-#include "tracetools/visibility_control.hpp"
 
 /// Default symbol, used when address resolution fails.
-#define SYMBOL_UNKNOWN "UNKNOWN"
+#define TRACETOOLS_SYMBOL_UNKNOWN "UNKNOWN"
 
 #ifndef TRACETOOLS_DISABLED
 
-TRACETOOLS_PUBLIC const char * _demangle_symbol(const char * mangled);
+namespace tracetools
+{
 
-TRACETOOLS_PUBLIC const char * _get_symbol_funcptr(void * funcptr);
+namespace detail
+{
+
+/// Demangle symbol string.
+/**
+ * Internal function.
+ */
+const char * demangle_symbol(const char * mangled);
+
+/// Get symbol string from function pointer.
+/**
+ * Internal function.
+ */
+const char * get_symbol_funcptr(void * funcptr);
+
+}  // namespace detail
 
 /// Get symbol from an std::function object.
 /**
  * If function address resolution or symbol demangling fails,
- * this will return a string that starts with \ref SYMBOL_UNKNOWN.
+ * this will return a string that starts with \ref TRACETOOLS_SYMBOL_UNKNOWN.
  *
  * \param[in] f the std::function object
  * \return the symbol, or a placeholder
@@ -46,10 +61,10 @@ const char * get_symbol(std::function<T(U...)> f)
   // If we get an actual address
   if (fnPointer != nullptr) {
     void * funcptr = reinterpret_cast<void *>(*fnPointer);
-    return _get_symbol_funcptr(funcptr);
+    return detail::get_symbol_funcptr(funcptr);
   }
   // Otherwise we have to go through target_type()
-  return _demangle_symbol(f.target_type().name());
+  return detail::demangle_symbol(f.target_type().name());
 }
 
 /// Get symbol from a function-related object.
@@ -62,7 +77,35 @@ const char * get_symbol(std::function<T(U...)> f)
 template<typename L>
 const char * get_symbol(L && l)
 {
-  return _demangle_symbol(typeid(l).name());
+  return detail::demangle_symbol(typeid(l).name());
+}
+
+}  // namespace tracetools
+
+[[deprecated("use tracetools::detail::demangle_symbol")]]
+inline const char * _demangle_symbol(const char * mangled)
+{
+  return tracetools::detail::demangle_symbol(mangled);
+}
+
+[[deprecated("use tracetools::detail::get_symbol_funcptr")]]
+inline const char * _get_symbol_funcptr(void * funcptr)
+{
+  return tracetools::detail::get_symbol_funcptr(funcptr);
+}
+
+template<typename T, typename ... U>
+[[deprecated("use tracetools::get_symbol")]]
+const char * get_symbol(std::function<T(U...)> f)
+{
+  return tracetools::get_symbol<T, U...>(f);
+}
+
+template<typename L>
+[[deprecated("use tracetools::get_symbol")]]
+const char * get_symbol(L && l)
+{
+  return tracetools::get_symbol<L>(l);
 }
 
 #endif  // TRACETOOLS_DISABLED
