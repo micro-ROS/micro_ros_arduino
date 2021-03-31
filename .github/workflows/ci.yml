@@ -54,6 +54,7 @@ jobs:
             # BUILDING EXAPLE FOR EACH PLATFORM
             arduino-cli core update-index
             arduino-cli lib update-index
+            arduino-cli lib install Time
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
