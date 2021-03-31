@@ -57,15 +57,30 @@ typedef struct rmw_uxrce_transport_params_t
     uint32_t client_key;
 } rmw_uxrce_transport_params_t;
 
+
+/**
+ * \brief Returns the epoch time in milliseconds taking into account the offset computed during the time synchronization.
+ * \return epoch time in milliseconds.
+ * \return 0 if session is not initialized.
+ * \return -1 if session time is not synchronized.
+ */
+int64_t rmw_uros_epoch_millis();
+
+/**
+ * \brief Returns the epoch time in nanoseconds taking into account the offset computed during the time synchronization.
+ * \return epoch time in nanoseconds.
+ * \return 0 if session is not initialized.
+ * \return -1 if session time is not synchronized.
+ */
+int64_t rmw_uros_epoch_nanos();
+
 /**
  * \brief Synchronizes the session time using the NTP protocol.
- * \param[in, out] result Variable to update with micro-ROS Agent POSIX timestamp in nanoseconds.
  * \param[in] timeout_ms The waiting time in milliseconds.
  * \return RMW_RET_OK when success.
- * \return RMW_RET_INVALID_ARGUMENT If no session is running or the synchronization fails.
+ * \return RMW_RET_ERROR If no session is running or the synchronization fails.
  */
 rmw_ret_t rmw_uros_sync_session(
-        int64_t* result,
         const int timeout_ms);
 
 /**
