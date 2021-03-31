@@ -41,22 +41,26 @@ void setup() {
 
   //create init_options
   RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
-
-  // Synchronize time
-  RCCHECK(rmw_uros_sync_session(timeout_ms));
 }
 
 void loop() {
+  // Synchronize time
+  RCCHECK(rmw_uros_sync_session(timeout_ms));
   time_ms = rmw_uros_epoch_millis(); 
-      RCCHECK(rmw_uros_sync_session(timeout_ms));
+  
+  if (time_ms > 0)
+  {
+    time_seconds = time_ms/1000;
+    setTime(time_seconds); 
+    sprintf(time_str, "%02d.%02d.%04d %02d:%02d:%02d.%03d", day(), month(), year(), hour(), minute(), second(), (uint) time_ms % 1000);
+
+    HWSERIAL.print("Agent date: ");
+    HWSERIAL.println(time_str);  
+  }
   else
   {
-      time_seconds = time_ms/1000;
-      setTime(time_seconds); 
-      sprintf(time_str, "%02d.%02d.%04d %02d:%02d:%02d.%03d", day(), month(), year(), hour(), minute(), second(), (uint) time_ms % 1000);
-
-      HWSERIAL.print("Agent date: ");
-      HWSERIAL.println(time_str);  
+    HWSERIAL.print("Session sync failed, error code: ");
+    HWSERIAL.println(time_ms);  
   }
   
   delay(1001);
