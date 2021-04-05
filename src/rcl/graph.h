@@ -26,6 +26,7 @@ extern "C"
 #include <rmw/get_topic_names_and_types.h>
 #include <rmw/topic_endpoint_info_array.h>
 
+#include "rcutils/time.h"
 #include "rcutils/types.h"
 
 #include "rosidl_runtime_c/service_type_support_struct.h"
@@ -580,6 +581,98 @@ rcl_count_subscribers(
   const rcl_node_t * node,
   const char * topic_name,
   size_t * count);
+
+/// Wait for there to be a specified number of publishers on a given topic.
+/**
+ * The `node` parameter must point to a valid node.
+ * The nodes graph guard condition is used by this function, and therefore the caller should
+ * take care not to use the guard condition concurrently in any other wait sets.
+ *
+ * The `allocator` parameter must point to a valid allocator.
+ *
+ * The `topic_name` parameter must not be `NULL`, and must not be an empty string.
+ * It should also follow the topic name rules.
+ *
+ * This function blocks and will return when the number of publishers for `topic_name`
+ * is greater than or equal to the `count` parameter, or the specified `timeout` is reached.
+ *
+ * The `timeout` parameter is in nanoseconds.
+ * The timeout is based on system time elapsed.
+ * A negative value disables the timeout (i.e. this function blocks until the number of
+ * publishers is greater than or equals to `count`).
+ *
+ * The `success` parameter must point to a valid bool.
+ * The `success` parameter is the output for this function and will be set.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Maybe [1]
+ * <i>[1] implementation may need to protect the data structure with a lock</i>
+ *
+ * \param[in] node the handle to the node being used to query the ROS graph
+ * \param[in] allocator to allocate space for the rcl_wait_set_t used to wait for graph events
+ * \param[in] topic_name the name of the topic in question
+ * \param[in] count number of publishers to wait for
+ * \param[in] timeout maximum duration to wait for publishers
+ * \param[out] success `true` if the number of publishers is equal to or greater than count, or
+ *   `false` if a timeout occurred waiting for publishers.
+ * \return #RCL_RET_OK if there was no errors, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_TIMEOUT if a timeout occurs before the number of publishers is detected, or
+ * \return #RCL_RET_ERROR if an unspecified error occurred.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_wait_for_publishers(
+  const rcl_node_t * node,
+  rcl_allocator_t * allocator,
+  const char * topic_name,
+  const size_t count,
+  rcutils_duration_value_t timeout,
+  bool * success);
+
+/// Wait for there to be a specified number of subscribers on a given topic.
+/**
+ * \see rcl_wait_for_publishers
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Maybe [1]
+ * <i>[1] implementation may need to protect the data structure with a lock</i>
+ *
+ * \param[in] node the handle to the node being used to query the ROS graph
+ * \param[in] allocator to allocate space for the rcl_wait_set_t used to wait for graph events
+ * \param[in] topic_name the name of the topic in question
+ * \param[in] count number of subscribers to wait for
+ * \param[in] timeout maximum duration to wait for subscribers
+ * \param[out] success `true` if the number of subscribers is equal to or greater than count, or
+ *   `false` if a timeout occurred waiting for subscribers.
+ * \return #RCL_RET_OK if there was no errors, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_TIMEOUT if a timeout occurs before the number of subscribers is detected, or
+ * \return #RCL_RET_ERROR if an unspecified error occurred.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_wait_for_subscribers(
+  const rcl_node_t * node,
+  rcl_allocator_t * allocator,
+  const char * topic_name,
+  const size_t count,
+  rcutils_duration_value_t timeout,
+  bool * success);
 
 /// Return a list of all publishers to a topic.
 /**
