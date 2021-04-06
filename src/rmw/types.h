@@ -72,6 +72,24 @@ typedef enum RMW_PUBLIC_TYPE rmw_endpoint_type_t
   RMW_ENDPOINT_SUBSCRIPTION
 } rmw_endpoint_type_t;
 
+/// Unique network flow endpoints requirement enumeration
+typedef enum RMW_PUBLIC_TYPE rmw_unique_network_flow_endpoints_requirement_t
+{
+  /// Unique network flow endpoints not required
+  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_NOT_REQUIRED = 0,
+
+  /// Unique network flow endpoins strictly required.
+  /// Error if not provided by RMW implementation.
+  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_STRICTLY_REQUIRED,
+
+  /// Unique network flow endpoints optionally required.
+  /// No error if not provided RMW implementation.
+  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_OPTIONALLY_REQUIRED,
+
+  /// Unique network flow endpoints requirement decided by system.
+  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_SYSTEM_DEFAULT
+} rmw_unique_network_flow_endpoints_requirement_t;
+
 /// Options that can be used to configure the creation of a publisher in rmw.
 typedef struct RMW_PUBLIC_TYPE rmw_publisher_options_t
 {
@@ -86,6 +104,15 @@ typedef struct RMW_PUBLIC_TYPE rmw_publisher_options_t
    * structure and may use this payload throughout their lifetime.
    */
   void * rmw_specific_publisher_payload;
+
+  /// Require middleware to generate unique network flow endpoints.
+  /**
+   * Unique network flow endpoints are required to differentiate the QoS provided by
+   * networks for flows between publishers and subscribers in communicating
+   * nodes.
+   * Default value is RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_NOT_REQUIRED.
+   */
+  rmw_unique_network_flow_endpoints_requirement_t require_unique_network_flow_endpoints;
 } rmw_publisher_options_t;
 
 /// Structure which encapsulates an rmw publisher
@@ -141,6 +168,15 @@ typedef struct RMW_PUBLIC_TYPE rmw_subscription_options_t
    * may become more complicated when/if participants map to a context instead.
    */
   bool ignore_local_publications;
+
+  /// Require middleware to generate unique network flow endpoints.
+  /**
+   * Unique network flow endpoints are required to differentiate the QoS provided by
+   * networks for flows between publishers and subscribers in communicating
+   * nodes.
+   * Default value is RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_NOT_REQUIRED.
+   */
+  rmw_unique_network_flow_endpoints_requirement_t require_unique_network_flow_endpoints;
 } rmw_subscription_options_t;
 
 typedef struct RMW_PUBLIC_TYPE rmw_subscription_t
