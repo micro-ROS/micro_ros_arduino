@@ -59,10 +59,15 @@ typedef struct rmw_uxrce_transport_params_t
 
 
 /**
+ * \brief Returns the time synchronization state of the epoch time.
+ * \return true if last time synchronization succeded and false otherwise
+ */
+bool rmw_uros_epoch_synchronized();
+
+/**
  * \brief Returns the epoch time in milliseconds taking into account the offset computed during the time synchronization.
  * \return epoch time in milliseconds.
  * \return 0 if session is not initialized.
- * \return -1 if session time is not synchronized.
  */
 int64_t rmw_uros_epoch_millis();
 
@@ -70,7 +75,6 @@ int64_t rmw_uros_epoch_millis();
  * \brief Returns the epoch time in nanoseconds taking into account the offset computed during the time synchronization.
  * \return epoch time in nanoseconds.
  * \return 0 if session is not initialized.
- * \return -1 if session time is not synchronized.
  */
 int64_t rmw_uros_epoch_nanos();
 
