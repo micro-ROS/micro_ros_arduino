@@ -15,7 +15,7 @@ https://github.com/ros2/libyaml_vendor.git c014ed16899e476b7583950a96928656f9926
 https://github.com/ros2/common_interfaces.git 7597e72797e33859b365d90be7a20d9e66813b95
 https://github.com/ros2/rcl.git f4c3aab4b3b287b71bb2c43b291d1530640ca1ce
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 2b5cc410ac5226dc83fd7ebcd36a7643b7c8fbe3
-https://github.com/micro-ROS/rmw-microxrcedds.git 8e4173206c16c61a01baa1f3d80a534de0f8b55c
+https://github.com/micro-ROS/rmw-microxrcedds.git c9733a674b2d0eda7482d167fe78ae6ce758f652
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
 https://github.com/micro-ROS/rcutils 23501ffe6f45a9525f84cddf2a4563f1feb51a5c
 https://github.com/ros2/rclc 5e7e383c704bdc153fb5e559da11d992fe4d3b40
