@@ -27,7 +27,7 @@ jobs:
         run: echo "::set-output name=date::$(date +'%d-%m-%Y %H:%M')"
       - name: Update libraries
         run: |
-          docker run --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:${{ matrix.distro }}
+          docker run --rm -v $(pwd):/project microros/micro_ros_static_library_builder:${{ matrix.distro }}
           sudo chown -R $(whoami) .
           sudo chmod -R 777 .
       - name: Create Pull Request
