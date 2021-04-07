@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__LEXER_LOOKAHEAD_H_
 #define RCL__LEXER_LOOKAHEAD_H_
 
@@ -77,10 +75,10 @@ rcl_get_zero_initialized_lexer_lookahead2();
  * \sa rcl_get_zero_initialized_lexer_lookahead2()
  * \param[in] text The string to analyze.
  * \param[in] allocator An allocator to use if an error occurs.
- * \return #RCL_RET_OK if the buffer is successfully initialized, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_ERROR if an unspecified error occurrs.
+ * \return `RCL_RET_OK` if the buffer is successfully initialized, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurrs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -104,9 +102,9 @@ rcl_lexer_lookahead2_init(
  * <i>[1] Only allocates if an argument is invalid.</i>
  *
  * \param[in] buffer The structure to be deallocated.
- * \return #RCL_RET_OK if the structure was successfully finalized, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the structure was successfully finalized, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -131,9 +129,9 @@ rcl_lexer_lookahead2_fini(
  *
  * \param[in] buffer the lookahead2 buffer being used to analyze a string.
  * \param[out] next_type an output variable for the next lexeme in the string.
- * \return #RCL_RET_OK if peeking was successfull, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if peeking was successfull, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -160,9 +158,9 @@ rcl_lexer_lookahead2_peek(
  * \param[in] buffer the lookahead2 buffer being used to analyze a string.
  * \param[out] next_type1 an output variable for the next lexeme in the string.
  * \param[out] next_type2 an output variable for the lexeme after the next lexeme in the string.
- * \return #RCL_RET_OK if peeking was successfull, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if peeking was successfull, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -190,9 +188,9 @@ rcl_lexer_lookahead2_peek2(
  * \param[in] buffer the lookahead2 buffer being used to analyze a string.
  * \param[out] lexeme_text pointer to where lexeme begins in string.
  * \param[out] lexeme_text_length length of lexeme_text.
- * \return #RCL_RET_OK if peeking was successfull, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if peeking was successfull, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -222,10 +220,10 @@ rcl_lexer_lookahead2_accept(
  * \param[in] type the type the next lexeme must be.
  * \param[out] lexeme_text pointer to where lexeme begins in string.
  * \param[out] lexeme_text_length length of lexeme_text.
- * \return #RCL_RET_OK if the next lexeme was the expected one, or
- * \return #RCL_RET_WRONG_LEXEME if the next lexeme was not the expected one, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the next lexeme was the expected one, or
+ * \return `RCL_RET_WRONG_LEXEME` if the next lexeme was not the expected one, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

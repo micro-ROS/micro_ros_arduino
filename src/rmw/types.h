@@ -27,13 +27,11 @@ extern "C"
 // map rcutils specific log levels to rmw speicfic type
 #include <rcutils/logging.h>
 
-#include "rmw/events_statuses/events_statuses.h"
 #include "rmw/init.h"
 #include "rmw/init_options.h"
 #include "rmw/ret_types.h"
 #include "rmw/security_options.h"
 #include "rmw/serialized_message.h"
-#include "rmw/time.h"
 #include "rmw/visibility_control.h"
 
 // 24 bytes is the most memory needed to represent the GID by any current
@@ -72,24 +70,6 @@ typedef enum RMW_PUBLIC_TYPE rmw_endpoint_type_t
   RMW_ENDPOINT_SUBSCRIPTION
 } rmw_endpoint_type_t;
 
-/// Unique network flow endpoints requirement enumeration
-typedef enum RMW_PUBLIC_TYPE rmw_unique_network_flow_endpoints_requirement_t
-{
-  /// Unique network flow endpoints not required
-  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_NOT_REQUIRED = 0,
-
-  /// Unique network flow endpoins strictly required.
-  /// Error if not provided by RMW implementation.
-  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_STRICTLY_REQUIRED,
-
-  /// Unique network flow endpoints optionally required.
-  /// No error if not provided RMW implementation.
-  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_OPTIONALLY_REQUIRED,
-
-  /// Unique network flow endpoints requirement decided by system.
-  RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_SYSTEM_DEFAULT
-} rmw_unique_network_flow_endpoints_requirement_t;
-
 /// Options that can be used to configure the creation of a publisher in rmw.
 typedef struct RMW_PUBLIC_TYPE rmw_publisher_options_t
 {
@@ -104,15 +84,6 @@ typedef struct RMW_PUBLIC_TYPE rmw_publisher_options_t
    * structure and may use this payload throughout their lifetime.
    */
   void * rmw_specific_publisher_payload;
-
-  /// Require middleware to generate unique network flow endpoints.
-  /**
-   * Unique network flow endpoints are required to differentiate the QoS provided by
-   * networks for flows between publishers and subscribers in communicating
-   * nodes.
-   * Default value is RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_NOT_REQUIRED.
-   */
-  rmw_unique_network_flow_endpoints_requirement_t require_unique_network_flow_endpoints;
 } rmw_publisher_options_t;
 
 /// Structure which encapsulates an rmw publisher
@@ -168,15 +139,6 @@ typedef struct RMW_PUBLIC_TYPE rmw_subscription_options_t
    * may become more complicated when/if participants map to a context instead.
    */
   bool ignore_local_publications;
-
-  /// Require middleware to generate unique network flow endpoints.
-  /**
-   * Unique network flow endpoints are required to differentiate the QoS provided by
-   * networks for flows between publishers and subscribers in communicating
-   * nodes.
-   * Default value is RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_NOT_REQUIRED.
-   */
-  rmw_unique_network_flow_endpoints_requirement_t require_unique_network_flow_endpoints;
 } rmw_subscription_options_t;
 
 typedef struct RMW_PUBLIC_TYPE rmw_subscription_t
@@ -355,6 +317,18 @@ typedef struct RMW_PUBLIC_TYPE rmw_request_id_t
   int64_t sequence_number;
 } rmw_request_id_t;
 
+/// Struct representing a time point for rmw
+typedef struct RMW_PUBLIC_TYPE rmw_time_t
+{
+  /// Seconds since the epoch
+  uint64_t sec;
+
+  /// Nanoseconds component of this time point
+  uint64_t nsec;
+} rmw_time_t;
+
+typedef rcutils_time_point_value_t rmw_time_point_value_t;
+
 /// Meta-data for a service-related take.
 typedef struct RMW_PUBLIC_TYPE rmw_service_info_t
 {
@@ -449,14 +423,14 @@ enum RMW_PUBLIC_TYPE rmw_qos_liveliness_policy_t
   RMW_QOS_POLICY_LIVELINESS_UNKNOWN = 4
 };
 
-/// QoS Deadline default.
-#define RMW_QOS_DEADLINE_DEFAULT RMW_DURATION_UNSPECIFIED
+/// QoS Deadline default, 0s indicates deadline policies are not tracked or enforced
+#define RMW_QOS_DEADLINE_DEFAULT {0, 0}
 
-/// QoS Lifespan default.
-#define RMW_QOS_LIFESPAN_DEFAULT RMW_DURATION_UNSPECIFIED
+/// QoS Lifespan default, 0s indicate lifespan policies are not tracked or enforced
+#define RMW_QOS_LIFESPAN_DEFAULT {0, 0}
 
-/// QoS Liveliness lease duration default.
-#define RMW_QOS_LIVELINESS_LEASE_DURATION_DEFAULT RMW_DURATION_UNSPECIFIED
+/// QoS Liveliness lease duration default, 0s indicate lease durations are not tracked or enforced
+#define RMW_QOS_LIVELINESS_LEASE_DURATION_DEFAULT {0, 0}
 
 /// ROS MiddleWare quality of service profile.
 typedef struct RMW_PUBLIC_TYPE rmw_qos_profile_t
@@ -469,27 +443,12 @@ typedef struct RMW_PUBLIC_TYPE rmw_qos_profile_t
   /// Durability QoS policy setting
   enum rmw_qos_durability_policy_t durability;
   /// The period at which messages are expected to be sent/received
-  /**
-    * RMW_DURATION_UNSPEFICIED will use the RMW implementation's default value,
-    *   which may or may not be infinite.
-    * RMW_DURATION_INFINITE explicitly states that messages never miss a deadline expectation.
-    */
   struct rmw_time_t deadline;
   /// The age at which messages are considered expired and no longer valid
-  /**
-    * RMW_DURATION_UNSPEFICIED will use the RMW implementation's default value,
-    *   which may or may not be infinite.
-    * RMW_DURATION_INFINITE explicitly states that messages do not expire.
-    */
   struct rmw_time_t lifespan;
   /// Liveliness QoS policy setting
   enum rmw_qos_liveliness_policy_t liveliness;
   /// The time within which the RMW node or publisher must show that it is alive
-  /**
-    * RMW_DURATION_UNSPEFICIED will use the RMW implementation's default value,
-    *   which may or may not be infinite.
-    * RMW_DURATION_INFINITE explicitly states that liveliness is not enforced.
-    */
   struct rmw_time_t liveliness_lease_duration;
 
   /// If true, any ROS specific namespacing conventions will be circumvented.
@@ -554,6 +513,75 @@ typedef enum RMW_PUBLIC_TYPE
   /// Fatal log severity, for reporting issue causing imminent shutdown
   RMW_LOG_SEVERITY_FATAL = RCUTILS_LOG_SEVERITY_FATAL
 } rmw_log_severity_t;
+
+/// QoS Liveliness Changed information provided by a subscription.
+typedef struct RMW_PUBLIC_TYPE rmw_liveliness_changed_status_t
+{
+  /**
+   * The total number of currently active Publishers which publish to the topic associated with
+   * the Subscription.
+   * This count increases when a newly matched Publisher asserts its liveliness for the first time
+   * or when a Publisher previously considered to be not alive reasserts its liveliness.
+   * The count decreases when a Publisher considered alive fails to assert its liveliness and
+   * becomes not alive, whether because it was deleted normally or for some other reason.
+   */
+  int32_t alive_count;
+  /**
+   * The total count of current Publishers which publish to the topic associated with the
+   * Subscription that are no longer asserting their liveliness.
+   * This count increases when a Publisher considered alive fails to assert its liveliness and
+   * becomes not alive for some reason other than the normal deletion of that Publisher.
+   * It decreases when a previously not alive Publisher either reasserts its liveliness or is
+   * deleted normally.
+   */
+  int32_t not_alive_count;
+  /// The change in the alive_count since the status was last read.
+  int32_t alive_count_change;
+  /// The change in the not_alive_count since the status was last read.
+  int32_t not_alive_count_change;
+} rmw_liveliness_changed_status_t;
+
+/// QoS Requested Deadline Missed information provided by a subscription.
+typedef struct RMW_PUBLIC_TYPE rmw_requested_deadline_missed_status_t
+{
+  /**
+   * Lifetime cumulative number of missed deadlines detected for any instance read by the
+   * subscription.
+   * Missed deadlines accumulate; that is, each deadline period the total_count will be incremented
+   * by one for each instance for which data was not received.
+   */
+  int32_t total_count;
+  /// The incremental number of deadlines detected since the status was read.
+  int32_t total_count_change;
+} rmw_requested_deadline_missed_status_t;
+
+/// QoS Liveliness Lost information provided by a publisher.
+typedef struct RMW_PUBLIC_TYPE rmw_liveliness_lost_status_t
+{
+  /**
+   * Lifetime cumulative number of times that a previously-alive Publisher became not alive due to
+   * a failure to actively signal its liveliness within its offered liveliness period.
+   * This count does not change when an already not alive Publisher simply remains not alive for
+   * another liveliness period.
+   */
+  int32_t total_count;
+  /// The change in total_count since the last time the status was last read.
+  int32_t total_count_change;
+} rmw_liveliness_lost_status_t;
+
+/// QoS Deadline Missed information provided by a publisher.
+typedef struct RMW_PUBLIC_TYPE rmw_offered_deadline_missed_status_t
+{
+  /**
+   * Lifetime cumulative number of offered deadline periods elapsed during which a Publisher failed
+   * to provide data.
+   * Missed deadlines accumulate; that is, each deadline period the total_count will be incremented
+   * by one.
+   */
+  int32_t total_count;
+  /// The change in total_count since the last time the status was last read.
+  int32_t total_count_change;
+} rmw_offered_deadline_missed_status_t;
 
 #ifdef __cplusplus
 }

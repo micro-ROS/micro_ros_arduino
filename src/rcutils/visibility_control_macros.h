@@ -15,34 +15,34 @@
 #ifndef RCUTILS__VISIBILITY_CONTROL_MACROS_H_
 #define RCUTILS__VISIBILITY_CONTROL_MACROS_H_
 
-// Defines macros to express whether a symbol is localed, imported, or exported
-//
-// Those macros are compatible with GCC, clang, and Microsoft Visual C++. They
-// can be used to enforce which symbols of a library are publicly accessible.
-//
-// RCUTILS_IMPORT, RCUTILS_EXPORT, and RCUTILS_LOCAL are respectively declaring
-// an imported, exported, or local symbol.
-// RCUTILS_LOCAL can be used directly. However, RCUTILS_IMPORT, and
-// RCUTILS_EXPORT may not be used directly. Every project need to provide
-// an additional header called `visibility_macros.h` containing:
-//
-// #ifdef <project>_BUILDING_DLL
-// # define <project>_PUBLIC RCUTILS_EXPORT
-// #else
-// # define <project>_PUBLIC RCUTILS_IMPORT
-// #endif // !<project>_BUILDING_DLL
-// #define <project>_LOCAL RCUTILS_LOCAL
-//
-// ...where "<project>" has been replaced by the project name, such as
-// "MY_PROJECT".
-// Your project CMakeLists.txt should also contain the following statement:
-//
-// target_compile_definitions(<your library> PRIVATE "<project>_BUILDING_DLL")
-//
-// A public (exported) class should then be tagged as <project>_PUBLIC, whereas
-// a non-public class should be tagged with <project>_LOCAL.
-//
-// See GCC documentation: https://gcc.gnu.org/wiki/Visibility
+/// Defines macros to express whether a symbol is localed, imported, or exported
+///
+/// Those macros are compatible with GCC, clang, and Microsoft Visual C++. They
+/// can be used to enforce which symbols of a library are publicly accessible.
+///
+/// RCUTILS_IMPORT, RCUTILS_EXPORT, and RCUTILS_LOCAL are respectively declaring
+/// an imported, exported, or local symbol.
+/// RCUTILS_LOCAL can be used directly. However, RCUTILS_IMPORT, and
+/// RCUTILS_EXPORT may not be used directly. Every project need to provide
+/// an additional header called `visibility_macros.h` containing:
+///
+/// #ifdef <project>_BUILDING_DLL
+/// # define <project>_PUBLIC RCUTILS_EXPORT
+/// #else
+/// # define <project>_PUBLIC RCUTILS_IMPORT
+/// #endif // !<project>_BUILDING_DLL
+/// #define <project>_LOCAL RCUTILS_LOCAL
+///
+/// ...where "<project>" has been replaced by the project name, such as
+/// "MY_PROJECT".
+/// Your project CMakeLists.txt should also contain the following statement:
+///
+/// target_compile_definitions(<your library> PRIVATE "<project>_BUILDING_DLL")
+///
+/// A public (exported) class should then be tagged as <project>_PUBLIC, whereas
+/// a non-public class should be tagged with <project>_LOCAL.
+///
+/// See GCC documentation: https://gcc.gnu.org/wiki/Visibility
 
 #if defined(_MSC_VER) || defined(__CYGWIN__)
 // Use the Windows syntax when compiling with Microsoft Visual C++.

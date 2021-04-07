@@ -1,5 +1,4 @@
 // Copyright 2019 Robert Bosch GmbH
-// Copyright 2020 Christophe Bedard
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -105,34 +104,6 @@ DECLARE_TRACEPOINT(
   const void * rmw_publisher_handle,
   const char * topic_name,
   const size_t queue_depth)
-
-/// `rcl_publish`
-/**
- * Message publication.
- * Links a `rcl_publisher_t` handle to a pointer to
- * a message being published at the `rcl` level.
- *
- * \param[in] publisher_handle pointer to the publisher's `rcl_publisher_t` handle
- * \param[in] message pointer to the message being published
- */
-DECLARE_TRACEPOINT(
-  rcl_publish,
-  const void * publisher_handle,
-  const void * message)
-
-/// `rclcpp_publish`
-/**
- * Message publication.
- * Links a `rcl_publisher_t` handle to a pointer to
- * a message being published at the `rclcpp` level.
- *
- * \param[in] publisher_handle pointer to the publisher's `rcl_publisher_t` handle
- * \param[in] message pointer to the message being published
- */
-DECLARE_TRACEPOINT(
-  rclcpp_publish,
-  const void * publisher_handle,
-  const void * message)
 
 /// `rcl_subscription_init`
 /**
@@ -258,18 +229,6 @@ DECLARE_TRACEPOINT(
   const void * timer_handle,
   const void * callback)
 
-/// `rclcpp_timer_link_node`
-/**
- * Link a timer to a node.
- *
- * \param[in] timer_handle pointer to the timer's `rcl_timer_t` handle
- * \param[in] node_handle pointer to the `rcl_node_t` handle of the node the timer belongs to
- */
-DECLARE_TRACEPOINT(
-  rclcpp_timer_link_node,
-  const void * timer_handle,
-  const void * node_handle)
-
 /// `rclcpp_callback_register`
 /**
  * Register a demangled function symbol with a callback.
@@ -310,33 +269,6 @@ DECLARE_TRACEPOINT(
 DECLARE_TRACEPOINT(
   callback_end,
   const void * callback)
-
-/// `rcl_lifecycle_state_machine_init`
-/**
- * Lifecycle state machine initialisation.
- * Links a `rcl_lifecycle_state_machine_t` handle to a `rcl_node_t` handle.
- *
- * \param[in] node_handle pointer to the node handle
- * \param[in] state_machine pointer to the state machine
- */
-DECLARE_TRACEPOINT(
-  rcl_lifecycle_state_machine_init,
-  const void * node_handle,
-  const void * state_machine)
-
-/// `rcl_lifecycle_transition`
-/**
- * Lifecycle transition between two states.
- *
- * \param[in] state_machine pointer to the state machine for the transition
- * \param[in] start_label start state label
- * \param[in] goal_label goal state label
- */
-DECLARE_TRACEPOINT(
-  rcl_lifecycle_transition,
-  const void * state_machine,
-  const char * start_label,
-  const char * goal_label)
 
 #ifdef __cplusplus
 }

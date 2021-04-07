@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__CLIENT_H_
 #define RCL__CLIENT_H_
 
@@ -144,13 +142,13 @@ rcl_get_zero_initialized_client(void);
  * \param[in] type_support type support object for the service's type
  * \param[in] service_name the name of the service to request
  * \param[in] options client options, including quality of service settings
- * \return #RCL_RET_OK if the client was initialized successfully, or
- * \return #RCL_RET_NODE_INVALID if the node is invalid, or
- * \return #RCL_RET_ALREADY_INIT if the client is already initialized, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory fails, or
- * \return #RCL_RET_SERVICE_NAME_INVALID if the given service name is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the client was initialized successfully, or
+ * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
+ * \return `RCL_RET_ALREADY_INIT` if the client is already initialized, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory fails, or
+ * \return `RCL_RET_SERVICE_NAME_INVALID` if the given service name is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -178,10 +176,10 @@ rcl_client_init(
  *
  * \param[inout] client handle to the client to be finalized
  * \param[in] node a valid (not finalized) handle to the node used to create the client
- * \return #RCL_RET_OK if client was finalized successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_NODE_INVALID if the node is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if client was finalized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -239,10 +237,10 @@ rcl_client_get_default_options(void);
  * \param[in] client handle to the client which will make the response
  * \param[in] ros_request type-erased pointer to the ROS request message
  * \param[out] sequence_number the sequence number
- * \return #RCL_RET_OK if the request was sent successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_CLIENT_INVALID if the client is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the request was sent successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_CLIENT_INVALID` if the client is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -278,12 +276,12 @@ rcl_send_request(const rcl_client_t * client, const void * ros_request, int64_t 
  * \param[in] client handle to the client which will take the response
  * \param[inout] request_header pointer to the request header
  * \param[inout] ros_response type-erased pointer to the ROS response message
- * \return #RCL_RET_OK if the response was taken successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_CLIENT_INVALID if the client is invalid, or
- * \return #RCL_RET_CLIENT_TAKE_FAILED if take failed but no error occurred
+ * \return `RCL_RET_OK` if the response was taken successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_CLIENT_INVALID` if the client is invalid, or
+ * \return `RCL_RET_CLIENT_TAKE_FAILED` if take failed but no error occurred
  *         in the middleware, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

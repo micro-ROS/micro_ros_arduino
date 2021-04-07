@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__FIND_H_
 #define RCUTILS__FIND_H_
 
@@ -31,9 +29,8 @@ extern "C"
  *
  * \param[in] str null terminated c string to search
  * \param[in] delimiter the character to search for
- * \return the index of the first occurence of the delimiter if found, or
- * \return `SIZE_MAX` for invalid arguments, or
- * \return `SIZE_MAX` if the delimiter is not found.
+ * \returns the index of the first occurence of the delimiter if found, or
+ * \returns `SIZE_MAX` for invalid arguments or if the delimiter is not found
  */
 RCUTILS_PUBLIC
 size_t
@@ -47,9 +44,8 @@ rcutils_find(const char * str, char delimiter);
  * \param[in] str string to search
  * \param[in] delimiter the character to search for
  * \param[in] string_length length of the string to search
- * \return the index of the first occurence of the delimiter if found, or
- * \return `SIZE_MAX` for invalid arguments, or
- * \return `SIZE_MAX` if the delimiter is not found.
+ * \returns the index of the first occurence of the delimiter if found, or
+ * \returns `SIZE_MAX` for invalid arguments or if the delimiter is not found
  */
 RCUTILS_PUBLIC
 size_t
@@ -61,9 +57,8 @@ rcutils_findn(const char * str, char delimiter, size_t string_length);
  *
  * \param[in] str null terminated c string to search
  * \param[in] delimiter the character to search for
- * \return the index of the last occurence of the delimiter if found, or
- * \return `SIZE_MAX` for invalid arguments, or
- * \return `SIZE_MAX` if the delimiter is not found.
+ * \returns the index of the last occurence of the delimiter if found, or
+ * \returns `SIZE_MAX` for invalid arguments or if the delimiter is not found
  */
 RCUTILS_PUBLIC
 size_t
@@ -77,9 +72,8 @@ rcutils_find_last(const char * str, char delimiter);
  * \param[in] str string to search
  * \param[in] delimiter the character to search for
  * \param[in] string_length length of the string to search
- * \return the index of the last occurence of the delimiter if found, or
- * \return `SIZE_MAX` for invalid arguments, or
- * \return `SIZE_MAX` if the delimiter is not found.
+ * \returns the index of the last occurence of the delimiter if found, or
+ * \returns `SIZE_MAX` for invalid arguments or if the delimiter is not found
  */
 RCUTILS_PUBLIC
 size_t

@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__GUARD_CONDITION_H_
 #define RCL__GUARD_CONDITION_H_
 
@@ -86,12 +84,12 @@ rcl_get_zero_initialized_guard_condition(void);
  * \param[in] context the context instance with which the guard condition
  *   should be associated
  * \param[in] options the guard_condition's options
- * \return #RCL_RET_OK if guard_condition was initialized successfully, or
- * \return #RCL_RET_ALREADY_INIT if the guard condition is already initialized, or
- * \return #RCL_RET_NOT_INIT if the given context is invalid, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if guard_condition was initialized successfully, or
+ * \return `RCL_RET_ALREADY_INIT` if the guard condition is already initialized, or
+ * \return `RCL_RET_NOT_INIT` if the given context is invalid, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -129,11 +127,11 @@ rcl_guard_condition_init(
  *   was initialized with, i.e. the rmw context inside rcl context needs to
  *   match rmw context in rmw guard condition
  * \param[in] options the guard_condition's options
- * \return #RCL_RET_OK if guard_condition was initialized successfully, or
- * \return #RCL_RET_ALREADY_INIT if the guard condition is already initialized, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if guard_condition was initialized successfully, or
+ * \return `RCL_RET_ALREADY_INIT` if the guard condition is already initialized, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 rcl_ret_t
 rcl_guard_condition_init_from_rmw(
@@ -157,9 +155,9 @@ rcl_guard_condition_init_from_rmw(
  * <i>[1] specifically not thread-safe with rcl_trigger_guard_condition()</i>
  *
  * \param[inout] guard_condition handle to the guard_condition to be finalized
- * \return #RCL_RET_OK if guard_condition was finalized successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if guard_condition was finalized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -171,8 +169,6 @@ rcl_guard_condition_fini(rcl_guard_condition_t * guard_condition);
  * The defaults are:
  *
  * - allocator = rcl_get_default_allocator()
- *
- * \return the default options in an rcl_guard_condition_options_t struct.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -197,9 +193,9 @@ rcl_guard_condition_get_default_options(void);
  * <i>[1] it can be called concurrently with itself, even on the same guard condition</i>
  *
  * \param[in] guard_condition handle to the guard_condition to be triggered
- * \return #RCL_RET_OK if the guard condition was triggered, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the guard condition was triggered, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

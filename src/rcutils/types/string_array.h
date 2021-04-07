@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__TYPES__STRING_ARRAY_H_
 #define RCUTILS__TYPES__STRING_ARRAY_H_
 
@@ -31,16 +29,10 @@ extern "C"
 #include "rcutils/types/rcutils_ret.h"
 #include "rcutils/visibility_control.h"
 
-/// The structure holding the metadata for a string array.
 typedef struct RCUTILS_PUBLIC_TYPE rcutils_string_array_t
 {
-  /// The number of strings that can be stored in the string array.
   size_t size;
-
-  /// The allocated memory for the string array.
   char ** data;
-
-  /// The allocator used to allocate and free memory for the string array.
   rcutils_allocator_t allocator;
 } rcutils_string_array_t;
 
@@ -85,15 +77,15 @@ rcutils_get_zero_initialized_string_array(void);
  * string_array.data[0] = rcutils_strdup("Hello", &allocator);
  * string_array.data[1] = rcutils_strdup("World", &allocator);
  * ret = rcutils_string_array_fini(&string_array);
- * ```
  *
  * \param[inout] string_array object to be initialized
  * \param[in] size the size the array should be
  * \param[in] allocator to be used to allocate and deallocate memory
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
+ * ```
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -112,9 +104,9 @@ rcutils_string_array_init(
  * string in the array and the array of strings itself.
  *
  * \param[inout] string_array object to be finalized
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -129,11 +121,11 @@ rcutils_string_array_fini(rcutils_string_array_t * string_array);
  * \param[in] rhs The second string array.
  * \param[out] res Negative value if `lhs` appears before `rhs` in lexicographical order.
  *   Zero if `lhs` and `rhs` are equal.
- *   Positive value if `lhs` appears after `rhs` in lexographical order.
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if any argument is `NULL, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if `lhs->data` or `rhs->data` is `NULL, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ *   Positive value if `lhs` appears after `rhs in lexographical order.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` if any argument is `NULL`, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` if `lhs->data` or `rhs->data` is `NULL`, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -160,10 +152,10 @@ rcutils_string_array_cmp(
  *
  * \param[inout] string_array object to be resized.
  * \param[in] new_size the size the array should be changed to.
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -195,9 +187,9 @@ rcutils_string_array_sort_compare(const void * lhs, const void * rhs);
  * Empty entries are placed at the end of the array.
  *
  * \param[inout] string_array object whose elements should be sorted.
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs.
  */
 inline
 RCUTILS_WARN_UNUSED

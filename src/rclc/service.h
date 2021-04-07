@@ -24,7 +24,6 @@ extern "C"
 #include <rcl/service.h>
 #include <rcl/allocator.h>
 #include <rclc/types.h>
-#include "rclc/visibility_control.h"
 
 /**
  *  Creates an rcl service.
@@ -44,7 +43,6 @@ extern "C"
  * \return `RCL_RET_OK` if successful
  * \return `RCL_ERROR` (or other error code) if an error has occurred
  */
-RCLC_PUBLIC
 rcl_ret_t
 rclc_service_init_default(
   rcl_service_t * service,
@@ -70,7 +68,6 @@ rclc_service_init_default(
  * \return `RCL_RET_OK` if successful
  * \return `RCL_ERROR` (or other error code) if an error has occurred
  */
-RCLC_PUBLIC
 rcl_ret_t
 rclc_service_init_best_effort(
   rcl_service_t * service,

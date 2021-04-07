@@ -1,6 +1,3 @@
-data/Test.action
-data/Test.srv
-data/Test.msg
 tf2_msgs/LookupTransform.action
 tf2_msgs/FrameGraph.srv
 tf2_msgs/TFMessage.msg
@@ -94,7 +91,6 @@ example_interfaces/Float64MultiArray.msg
 example_interfaces/UInt32MultiArray.msg
 example_interfaces/Float32.msg
 example_interfaces/String.msg
-nav_msgs/LoadMap.srv
 nav_msgs/SetMap.srv
 nav_msgs/GetMap.srv
 nav_msgs/GetPlan.srv

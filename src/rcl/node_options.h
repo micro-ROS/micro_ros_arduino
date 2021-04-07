@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__NODE_OPTIONS_H_
 #define RCL__NODE_OPTIONS_H_
 
@@ -43,6 +41,19 @@ typedef struct rcl_node_options_t
   /// If true, no parameter infrastructure will be setup.
   // bool no_parameters;
 
+  /// If set, then this value overrides the ROS_DOMAIN_ID environment variable.
+  /**
+   * It defaults to RCL_NODE_OPTIONS_DEFAULT_DOMAIN_ID, which will cause the
+   * node to use the ROS domain ID set in the ROS_DOMAIN_ID environment
+   * variable, or on some systems 0 if the environment variable is not set.
+   *
+   * \todo TODO(wjwwood):
+   *   Should we put a limit on the ROS_DOMAIN_ID value, that way we can have
+   *   a safe value for the default RCL_NODE_OPTIONS_DEFAULT_DOMAIN_ID?
+   *   (currently max size_t)
+   */
+  size_t domain_id;
+
   /// Custom allocator used for internal allocations.
   rcl_allocator_t allocator;
 
@@ -56,22 +67,17 @@ typedef struct rcl_node_options_t
 
   /// Flag to enable rosout for this node
   bool enable_rosout;
-
-  /// Middleware quality of service settings for /rosout.
-  rmw_qos_profile_t rosout_qos;
 } rcl_node_options_t;
 
 /// Return the default node options in a rcl_node_options_t.
 /**
  * The default values are:
  *
+ * - domain_id = RCL_NODE_OPTIONS_DEFAULT_DOMAIN_ID
  * - allocator = rcl_get_default_allocator()
  * - use_global_arguments = true
  * - enable_rosout = true
  * - arguments = rcl_get_zero_initialized_arguments()
- * - rosout_qos = rcl_qos_profile_rosout_default
- *
- * \return A structure with the default node options.
  */
 RCL_PUBLIC
 rcl_node_options_t
@@ -90,10 +96,10 @@ rcl_node_get_default_options(void);
  * \param[in] options The structure to be copied.
  *   Its allocator is used to copy memory into the new structure.
  * \param[out] options_out An options structure containing default values.
- * \return #RCL_RET_OK if the structure was copied successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any function arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the structure was copied successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any function arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -105,7 +111,7 @@ rcl_node_options_copy(
 /// Finalize the given node_options.
 /**
  * The given node_options must be non-`NULL` and valid, i.e. had
- * rcl_node_get_default_options() called on it but not this function yet.
+ * `rcl_node_get_default_options()` called on it but not this function yet.
  *
  * <hr>
  * Attribute          | Adherence
@@ -116,9 +122,9 @@ rcl_node_options_copy(
  * Lock-Free          | Yes
  *
  * \param[inout] options object to be finalized
- * \return #RCL_RET_OK if setup is successful, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if setup is successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

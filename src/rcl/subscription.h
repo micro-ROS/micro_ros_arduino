@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__SUBSCRIPTION_H_
 #define RCL__SUBSCRIPTION_H_
 
@@ -143,13 +141,13 @@ rcl_get_zero_initialized_subscription(void);
  * \param[in] type_support type support object for the topic's type
  * \param[in] topic_name the name of the topic
  * \param[in] options subscription options, including quality of service settings
- * \return #RCL_RET_OK if subscription was initialized successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ALREADY_INIT if the subcription is already initialized, or
- * \return #RCL_RET_NODE_INVALID if the node is invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_TOPIC_NAME_INVALID if the given topic name is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if subscription was initialized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_ALREADY_INIT` if the subcription is already initialized, or
+ * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_TOPIC_NAME_INVALID` if the given topic name is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -182,11 +180,11 @@ rcl_subscription_init(
  *
  * \param[inout] subscription handle to the subscription to be deinitialized
  * \param[in] node a valid (not finalized) handle to the node used to create the subscription
- * \return #RCL_RET_OK if subscription was deinitialized successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_NODE_INVALID if the node is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if subscription was deinitialized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -200,8 +198,6 @@ rcl_subscription_fini(rcl_subscription_t * subscription, rcl_node_t * node);
  * - qos = rmw_qos_profile_default
  * - allocator = rcl_get_default_allocator()
  * - rmw_subscription_options = rmw_get_default_subscription_options();
- *
- * \return A structure containing the default options for a subscription.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -256,13 +252,13 @@ rcl_subscription_get_default_options(void);
  * \param[inout] ros_message type-erased ptr to a allocated ROS message
  * \param[out] message_info rmw struct which contains meta-data for the message
  * \param[in] allocation structure pointer used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if the message was taken, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_SUBSCRIPTION_TAKE_FAILED if take failed but no error
+ * \return `RCL_RET_OK` if the message was taken, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_SUBSCRIPTION_TAKE_FAILED` if take failed but no error
  *         occurred in the middleware, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -276,7 +272,7 @@ rcl_take(
 
 /// Take a sequence of messages from a topic using a rcl subscription.
 /**
- * In contrast to rcl_take(), this function can take multiple messages at
+ * In contrast to `rcl_take`, this function can take multiple messages at
  * the same time.
  * It is the job of the caller to ensure that the type of the message_sequence
  * argument and the type associated with the subscription, via the type
@@ -307,13 +303,13 @@ rcl_take(
  * \param[inout] message_sequence pointer to a (pre-allocated) message sequence.
  * \param[inout] message_info_sequence pointer to a (pre-allocated) message info sequence.
  * \param[in] allocation structure pointer used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if one or more messages was taken, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_SUBSCRIPTION_TAKE_FAILED if take failed but no error
+ * \return `RCL_RET_OK` if one or more messages was taken, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_SUBSCRIPTION_TAKE_FAILED` if take failed but no error
  *         occurred in the middleware, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -328,7 +324,7 @@ rcl_take_sequence(
 
 /// Take a serialized raw message from a topic using a rcl subscription.
 /**
- * In contrast to rcl_take(), this function stores the taken message in
+ * In contrast to `rcl_take`, this function stores the taken message in
  * its raw binary representation.
  * It is the job of the caller to ensure that the type associate with the subscription
  * matches, and can optionally be deserialized into its ROS message via, the correct
@@ -339,7 +335,7 @@ rcl_take_sequence(
  * Passing a different type to rcl_take produces undefined behavior and cannot
  * be checked by this function and therefore no deliberate error will occur.
  *
- * Apart from the differences above, this function behaves like rcl_take().
+ * Apart from the differences above, this function behaves like `rcl_take`.
  *
  * <hr>
  * Attribute          | Adherence
@@ -354,13 +350,13 @@ rcl_take_sequence(
  * \param[inout] serialized_message pointer to a (pre-allocated) serialized message.
  * \param[out] message_info rmw struct which contains meta-data for the message
  * \param[in] allocation structure pointer used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if the message was published, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_SUBSCRIPTION_TAKE_FAILED if take failed but no error
+ * \return `RCL_RET_OK` if the message was published, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_SUBSCRIPTION_TAKE_FAILED` if take failed but no error
  *         occurred in the middleware, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -391,14 +387,14 @@ rcl_take_serialized_message(
  * \param[inout] loaned_message a pointer to the loaned messages.
  * \param[out] message_info rmw struct which contains meta-data for the message.
  * \param[in] allocation structure pointer used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if the loaned message sequence was taken, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_SUBSCRIPTION_TAKE_FAILED if take failed but no error
+ * \return `RCL_RET_OK` if the loaned message sequence was taken, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_SUBSCRIPTION_TAKE_FAILED` if take failed but no error
  *         occurred in the middleware, or
- * \return #RCL_RET_UNSUPPORTED if the middleware does not support that feature, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_UNIMPLEMENTED` if the middleware does not support that feature, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -426,11 +422,11 @@ rcl_take_loaned_message(
  *
  * \param[in] subscription the handle to the subscription from which to take
  * \param[in] loaned_message a pointer to the loaned messages.
- * \return #RCL_RET_OK if the message was published, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_UNSUPPORTED if the middleware does not support that feature, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the message was published, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_UNIMPLEMENTED` if the middleware does not support that feature, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -561,10 +557,10 @@ rcl_subscription_is_valid(const rcl_subscription_t * subscription);
  *
  * \param[in] subscription pointer to the rcl subscription
  * \param[out] publisher_count number of matched publishers
- * \return #RCL_RET_OK if the count was retrieved, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_SUBSCRIPTION_INVALID if the subscription is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the count was retrieved, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_SUBSCRIPTION_INVALID` if the subscription is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -603,9 +599,6 @@ rcl_subscription_get_actual_qos(const rcl_subscription_t * subscription);
 /**
  * Depending on the middleware and the message type, this will return true if the middleware
  * can allocate a ROS message instance.
- *
- * \param[in] subscription The subscription instance to check for the ability to loan messages
- * \return `true` if the subscription instance can loan messages, `false` otherwise.
  */
 RCL_PUBLIC
 bool

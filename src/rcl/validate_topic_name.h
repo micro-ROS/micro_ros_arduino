@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__VALIDATE_TOPIC_NAME_H_
 #define RCL__VALIDATE_TOPIC_NAME_H_
 
@@ -26,34 +24,15 @@ extern "C"
 #include "rcl/types.h"
 #include "rcl/visibility_control.h"
 
-/// The topic name is valid.
 #define RCL_TOPIC_NAME_VALID 0
-
-/// The topic name is invalid because it is an empty string.
 #define RCL_TOPIC_NAME_INVALID_IS_EMPTY_STRING 1
-
-/// The topic name is invalid because it ends with a forward slash.
 #define RCL_TOPIC_NAME_INVALID_ENDS_WITH_FORWARD_SLASH 2
-
-/// The topic name is invalid because it has characters that are not allowed.
 #define RCL_TOPIC_NAME_INVALID_CONTAINS_UNALLOWED_CHARACTERS 3
-
-/// The topic name is invalid because one of the tokens starts with a number.
 #define RCL_TOPIC_NAME_INVALID_NAME_TOKEN_STARTS_WITH_NUMBER 4
-
-/// The topic name is invalid because it has an unmatched curly brace.
 #define RCL_TOPIC_NAME_INVALID_UNMATCHED_CURLY_BRACE 5
-
-/// The topic name is invalid because it has a misplaced tilde in it.
 #define RCL_TOPIC_NAME_INVALID_MISPLACED_TILDE 6
-
-/// The topic name is invalid because a tilde is not directly followed by a forward slash.
 #define RCL_TOPIC_NAME_INVALID_TILDE_NOT_FOLLOWED_BY_FORWARD_SLASH 7
-
-/// The topic name is invalid because one of the substitutions has characters that are not allowed.
 #define RCL_TOPIC_NAME_INVALID_SUBSTITUTION_CONTAINS_UNALLOWED_CHARACTERS 8
-
-/// The topic name is invalid because one of the substitutions starts with a number.
 #define RCL_TOPIC_NAME_INVALID_SUBSTITUTION_STARTS_WITH_NUMBER 9
 
 /// Validate a given topic name.
@@ -103,9 +82,9 @@ extern "C"
  * \param[in] topic_name the topic name to be validated, must be null terminated
  * \param[out] validation_result the reason for validation failure, if any
  * \param[out] invalid_index index of violation if the input topic is invalid
- * \return #RCL_RET_OK if the topic name was expanded successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the topic name was expanded successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -122,11 +101,8 @@ rcl_validate_topic_name(
  * \param[in] topic_name_length The number of characters in topic_name.
  * \param[out] validation_result the reason for validation failure, if any
  * \param[out] invalid_index index of violation if the input topic is invalid
- * \return #RCL_RET_OK if the topic name was expanded successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
  *
- * \sa rcl_validate_topic_name()
+ * \sa rcl_validate_topic_name(const char *, int *, size_t *)
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -138,11 +114,6 @@ rcl_validate_topic_name_with_size(
   size_t * invalid_index);
 
 /// Return a validation result description, or NULL if unknown or RCL_TOPIC_NAME_VALID.
-/**
- * \param[in] validation_result The validation result to get the string for
- * \return A string description of the validation result if successful, or
- * \return NULL if the validation result is invalid.
- */
 RCL_PUBLIC
 RCL_WARN_UNUSED
 const char *

@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__TYPES__RCUTILS_RET_H_
 #define RCUTILS__TYPES__RCUTILS_RET_H_
 
@@ -22,14 +20,9 @@ extern "C"
 {
 #endif
 
-/// The type that holds a return value for an rcutils operation.
 typedef int rcutils_ret_t;
-
-/// Successful operation.
 #define RCUTILS_RET_OK 0
-/// Operation produced a warning.
 #define RCUTILS_RET_WARN 1
-/// Generic failure in operation.
 #define RCUTILS_RET_ERROR 2
 
 /// Failed to allocate memory return code.

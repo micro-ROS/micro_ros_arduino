@@ -60,8 +60,7 @@ extern "C"
  * \param[in] allocator the allocator to use for allocation
  * \param[in] limit maximum length of the output string
  * \param[in] format_string format of the output, must be null terminated
- * \return The newly allocated and format output string, or
- * \return `NULL` if there was an error.
+ * \returns output string or null if there was an error
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -71,10 +70,7 @@ rcutils_format_string_limit(
   size_t limit,
   const char * format_string,
   ...)
-/// @cond Doxygen_Suppress
-RCUTILS_ATTRIBUTE_PRINTF_FORMAT(3, 4)
-/// @endcond
-;
+RCUTILS_ATTRIBUTE_PRINTF_FORMAT(3, 4);
 
 #ifdef __cplusplus
 }

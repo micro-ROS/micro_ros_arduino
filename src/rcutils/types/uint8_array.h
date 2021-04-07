@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__TYPES__UINT8_ARRAY_H_
 #define RCUTILS__TYPES__UINT8_ARRAY_H_
 
@@ -28,19 +26,11 @@ extern "C"
 #include "rcutils/types/rcutils_ret.h"
 #include "rcutils/visibility_control.h"
 
-/// The structure holding the metadata for a uint8 array.
 typedef struct RCUTILS_PUBLIC_TYPE rcutils_uint8_array_t
 {
-  /// The allocated memory for the uint8 array.
   uint8_t * buffer;
-
-  /// The number of valid elements in the uint8 array.
   size_t buffer_length;
-
-  /// The maximum capacity of the uint8 array.
   size_t buffer_capacity;
-
-  /// The allocator used to allocate and free memory for the uint8 array.
   rcutils_allocator_t allocator;
 } rcutils_uint8_array_t;
 
@@ -62,10 +52,10 @@ rcutils_get_zero_initialized_uint8_array(void);
  * \param[inout] uint8_array a pointer to the to be initialized uint8 array struct
  * \param[in] buffer_capacity the size of the memory to allocate for the byte stream
  * \param[in] allocator the allocator to use for the memory allocation
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENTS` if any arguments are invalid, or
  * \return 'RCUTILS_RET_BAD_ALLOC` if no memory could be allocated correctly
- * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
+ * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -84,9 +74,9 @@ rcutils_uint8_array_init(
  * behavior.
  *
  * \param[in] uint8_array pointer to the rcutils_uint8_array_t to be cleaned up
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if the uint8_array argument is invalid
- * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENTS` if the uint8_array argument is invalid
+ * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -104,10 +94,10 @@ rcutils_uint8_array_fini(rcutils_uint8_array_t * uint8_array);
  * \param[inout] uint8_array pointer to the instance of rcutils_uint8_array_t which is
  * being resized
  * \param[in] new_size the new size of the internal buffer
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if new_size is set to zero
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation failed, or
- * \return #RCUTILS_RET_ERROR if an unexpected error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` if new_size is set to zero
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation failed, or
+ * \return `RCUTILS_RET_ERROR` if an unexpected error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

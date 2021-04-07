@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
+// Note: migrated from rmw/error_handling.h in 2017-04
 
 #ifndef RCUTILS__ERROR_HANDLING_H_
 #define RCUTILS__ERROR_HANDLING_H_
@@ -42,11 +42,8 @@ extern "C"
 #include "rcutils/configuration_flags.h"
 
 #if defined(__STDC_LIB_EXT1__) && !defined(RCUTILS_NO_FILESYSTEM)
-/// Write the given msg out to stderr, limiting the buffer size in the `fwrite`.
-/**
- * This ensures that there is an upper bound to a buffer overrun if `msg` is
- * non-null terminated.
- */
+// Limit the buffer size in the `fwrite` call to give an upper bound to buffer overrun in the case
+// of non-null terminated `msg`.
 #define RCUTILS_SAFE_FWRITE_TO_STDERR(msg) \
   do {fwrite(msg, sizeof(char), strnlen_s(msg, 4096), stderr);} while (0)
 #elif !defined(RCUTILS_NO_FILESYSTEM)
@@ -56,46 +53,18 @@ extern "C"
   #define RCUTILS_SAFE_FWRITE_TO_STDERR(msg)
 #endif
 
-/// Set the error message to stderr using a format string and format arguments.
-/**
- * This function sets the error message to stderr using the given format string.
- * The resulting formatted string is silently truncated at
- * RCUTILS_ERROR_MESSAGE_MAX_LENGTH.
- *
- * \param[in] format_string The string to be used as the format of the error message.
- * \param[in] ... Arguments for the format string.
- */
-#define RCUTILS_SAFE_FWRITE_TO_STDERR_WITH_FORMAT_STRING(format_string, ...) \
-  do { \
-    char output_msg[RCUTILS_ERROR_MESSAGE_MAX_LENGTH]; \
-    int ret = rcutils_snprintf(output_msg, sizeof(output_msg), format_string, __VA_ARGS__); \
-    if (ret < 0) { \
-      RCUTILS_SAFE_FWRITE_TO_STDERR("Failed to call snprintf for error message formatting\n"); \
-    } else { \
-      RCUTILS_SAFE_FWRITE_TO_STDERR(output_msg); \
-    } \
-  } while (0)
-
-/// The maximum length a formatted number is allowed to have.
+// fixed constraints
 #define RCUTILS_ERROR_STATE_LINE_NUMBER_STR_MAX_LENGTH 20  // "18446744073709551615"
-
-/// The maximum number of formatting characters allowed.
 #define RCUTILS_ERROR_FORMATTING_CHARACTERS 6  // ', at ' + ':'
 
-/// The maximum formatted string length.
+// max formatted string length
 #define RCUTILS_ERROR_MESSAGE_MAX_LENGTH 1024
 
-/// The maximum length for user defined error message
-/**
- * Remember that "chained" errors will include previously specified file paths
- * e.g. "some error, at /path/to/a.c:42, at /path/to/b.c:42"
- */
+// adjustable max length for user defined error message
+// remember "chained" errors will include previously specified file paths
+// e.g. "some error, at /path/to/a.c:42, at /path/to/b.c:42"
 #define RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH 768
-
-/// The calculated maximum length for the filename.
-/**
- * With RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH = 768, RCUTILS_ERROR_STATE_FILE_MAX_LENGTH == 229
- */
+// with RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH = 768, RCUTILS_ERROR_STATE_FILE_MAX_LENGTH == 229
 #define RCUTILS_ERROR_STATE_FILE_MAX_LENGTH ( \
     RCUTILS_ERROR_MESSAGE_MAX_LENGTH - \
     RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH - \
@@ -106,7 +75,6 @@ extern "C"
 /// Struct wrapping a fixed-size c string used for returning the formatted error string.
 typedef struct rcutils_error_string_t
 {
-  /// The fixed-size C string used for returning the formatted error string.
   char str[RCUTILS_ERROR_MESSAGE_MAX_LENGTH];
 } rcutils_error_string_t;
 
@@ -167,10 +135,10 @@ static_assert(
  * match the allocator used originally to initialize the thread-local storage.
  *
  * \param[in] allocator to be used to allocate and deallocate memory
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if the allocator is invalid, or
- * \return #RCUTILS_RET_BAD_ALLOC if allocating memory fails, or
- * \return #RCUTILS_RET_ERROR if an unspecified error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` if the allocator is invalid, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if allocating memory fails, or
+ * \return `RCUTILS_RET_ERROR` if an unspecified error occurs.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

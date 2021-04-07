@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__CMDLINE_PARSER_H_
 #define RCUTILS__CMDLINE_PARSER_H_
 
@@ -28,11 +26,10 @@ extern "C"
 
 /// Return `true` if the option is defined in the command line arguments or `false` otherwise.
 /**
- * \param[in] begin first element to check in the array
- * \param[in] end last element to check in the array
- * \param[in] option string to find in the array of arguments
- * \return `true` if the option exists, or
- * \return `false` otherwise.
+* \param[in] begin first element to check in the array
+* \param[in] end last element to check in the array
+* \param[in] option string to find in the array of arguments
+* \return if the option exists returns true, otherwise returns false.
  */
 RCUTILS_PUBLIC
 bool
@@ -40,11 +37,11 @@ rcutils_cli_option_exist(char ** begin, char ** end, const char * option);
 
 /// Return the value for a specific option of the command line arguments.
 /**
- * \param[in] begin first element to check in the array
- * \param[in] end last element to check in the array
- * \param[in] option string to find in the array of arguments
- * \return the value for a specific option of the command line arguments, or
- * \return `NULL` if the option doesn't exist.
+* \param[in] begin first element to check in the array
+* \param[in] end last element to check in the array
+* \param[in] option string to find in the array of arguments
+* \return the value for a specific option of the command line arguments or `NULL` if the option
+* doesn't exist
  */
 RCUTILS_PUBLIC
 char *

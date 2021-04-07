@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__TYPES__ARRAY_LIST_H_
 #define RCUTILS__TYPES__ARRAY_LIST_H_
 
@@ -31,10 +29,8 @@ extern "C"
 
 struct rcutils_array_list_impl_t;
 
-/// The structure holding the metadata for an array list.
 typedef struct RCUTILS_PUBLIC_TYPE rcutils_array_list_t
 {
-  /// A pointer to the PIMPL implementation type.
   struct rcutils_array_list_impl_t * impl;
 } rcutils_array_list_t;
 
@@ -116,10 +112,10 @@ rcutils_get_zero_initialized_array_list(void);
  * \param[in] initial_capacity the initial capacity to allocate in the list
  * \param[in] data_size the size (in bytes) of the data object being stored in the list
  * \param[in] allocator to be used to allocate and deallocate memory
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t
@@ -145,9 +141,9 @@ rcutils_array_list_init(
  * Lock-Free          | Yes
  *
  * \param[inout] array_list object to be finalized
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -170,10 +166,10 @@ rcutils_array_list_fini(rcutils_array_list_t * array_list);
  *
  * \param[in] array_list to add the data to
  * \param[in] data a pointer to the data to add to the list
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -197,10 +193,10 @@ rcutils_array_list_add(rcutils_array_list_t * array_list, const void * data);
  * \param[in] array_list to add the data to
  * \param[in] index the position in the list to set the data
  * \param[in] data a pointer to the data that will be set in the list
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if index out of bounds, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` if index out of bounds, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -222,10 +218,10 @@ rcutils_array_list_set(rcutils_array_list_t * array_list, size_t index, const vo
  *
  * \param[in] array_list to add the data to
  * \param[in] index the index of the item to remove from the list
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT if index out of bounds, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` if index out of bounds, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -248,9 +244,9 @@ rcutils_array_list_remove(rcutils_array_list_t * array_list, size_t index);
  * \param[in] array_list to add the data to
  * \param[in] index the index at which to get the data
  * \param[out] data a copy of the data stored in the list
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -272,9 +268,9 @@ rcutils_array_list_get(const rcutils_array_list_t * array_list, size_t index, vo
  *
  * \param[in] array_list list to get the size of
  * \param[out] size The number of items currently stored in the list
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

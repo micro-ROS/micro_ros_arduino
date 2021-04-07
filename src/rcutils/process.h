@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__PROCESS_H_
 #define RCUTILS__PROCESS_H_
 
@@ -47,8 +45,7 @@ int rcutils_get_pid(void);
  * This function is thread-safe.
  *
  * \param[in] allocator the allocator to use
- * \return The program name on success, or
- * \return NULL on failure.
+ * \return The program name on success, NULL on failure.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

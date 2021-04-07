@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__PUBLISHER_H_
 #define RCL__PUBLISHER_H_
 
@@ -139,13 +137,13 @@ rcl_get_zero_initialized_publisher(void);
  * \param[in] type_support type support object for the topic's type
  * \param[in] topic_name the name of the topic to publish on
  * \param[in] options publisher options, including quality of service settings
- * \return #RCL_RET_OK if the publisher was initialized successfully, or
- * \return #RCL_RET_NODE_INVALID if the node is invalid, or
- * \return #RCL_RET_ALREADY_INIT if the publisher is already initialized, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory fails, or
- * \return #RCL_RET_TOPIC_NAME_INVALID if the given topic name is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the publisher was initialized successfully, or
+ * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
+ * \return `RCL_RET_ALREADY_INIT` if the publisher is already initialized, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory fails, or
+ * \return `RCL_RET_TOPIC_NAME_INVALID` if the given topic name is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -175,11 +173,11 @@ rcl_publisher_init(
  *
  * \param[inout] publisher handle to the publisher to be finalized
  * \param[in] node a valid (not finalized) handle to the node used to create the publisher
- * \return #RCL_RET_OK if publisher was finalized successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_NODE_INVALID if the node is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if publisher was finalized successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_NODE_INVALID` if the node is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -193,8 +191,6 @@ rcl_publisher_fini(rcl_publisher_t * publisher, rcl_node_t * node);
  * - qos = rmw_qos_profile_default
  * - allocator = rcl_get_default_allocator()
  * - rmw_publisher_options = rmw_get_default_publisher_options()
- *
- * \return A structure with the default publisher options.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -219,12 +215,11 @@ rcl_publisher_get_default_options(void);
  * \param[in] publisher Publisher to which the allocated message is associated.
  * \param[in] type_support Typesupport to which the internal ros message is allocated.
  * \param[out] ros_message The pointer to be filled to a valid ros message by the middleware.
- * \return #RCL_RET_OK if the ros message was correctly initialized, or
- * \return #RCL_RET_PUBLISHER_INVALID if the passed publisher is invalid, or
- * \return #RCL_RET_INVALID_ARGUMENT if an argument other than the ros message is null, or
- * \return #RCL_RET_BAD_ALLOC if the ros message could not be correctly created, or
- * \return #RCL_RET_UNSUPPORTED if the middleware does not support that feature, or
- * \return #RCL_RET_ERROR if an unexpected error occured.
+ * \return `RCL_RET_OK` if the ros message was correctly initialized, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if an argument other than the ros message is null, or
+ * \return `RCL_RET_BAD_ALLOC` if the ros message could not be correctly created, or
+ * \return `RCL_RET_UNIMPLEMENTED` if the middleware does not support that feature, or
+ * \return `RCL_RET_ERROR` if an unexpected error occured.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -250,11 +245,11 @@ rcl_borrow_loaned_message(
  *
  * \param[in] publisher Publisher to which the loaned message is associated.
  * \param[in] loaned_message Loaned message to be deallocated and destroyed.
- * \return #RCL_RET_OK if successful, or
- * \return #RCL_RET_INVALID_ARGUMENT if an argument is null, or
- * \return #RCL_RET_UNSUPPORTED if the middleware does not support that feature, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_ERROR if an unexpected error occurs and no message can be initialized.
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if an argument is null, or
+ * \return `RCL_RET_UNIMPLEMENTED` if the middleware does not support that feature, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_ERROR` if an unexpected error occurs and no message can be initialized.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -315,10 +310,10 @@ rcl_return_loaned_message_from_publisher(
  * \param[in] publisher handle to the publisher which will do the publishing
  * \param[in] ros_message type-erased pointer to the ROS message
  * \param[in] allocation structure pointer, used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if the message was published successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the message was published successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -339,7 +334,7 @@ rcl_publish(
  * The publish call might be able to send any abitrary serialized message, it is however
  * not garantueed that the subscriber side successfully deserializes this byte stream.
  *
- * Apart from this, the `publish_serialized` function has the same behavior as rcl_publish()
+ * Apart from this, the `publish_serialized` function has the same behavior as `rcl_publish`
  * expect that no serialization step is done.
  *
  * <hr>
@@ -354,11 +349,11 @@ rcl_publish(
  * \param[in] publisher handle to the publisher which will do the publishing
  * \param[in] serialized_message  pointer to the already serialized message in raw form
  * \param[in] allocation structure pointer, used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if the message was published successfully, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the message was published successfully, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -370,15 +365,15 @@ rcl_publish_serialized_message(
 
 /// Publish a loaned message on a topic using a publisher.
 /**
- * A previously borrowed loaned message can be sent via this call to rcl_publish_loaned_message().
+ * A previously borrowed loaned message can be sent via this call to `rcl_publish_loaned_message`.
  * By calling this function, the ownership of the loaned message is getting transferred back
  * to the middleware.
  * The pointer to the `ros_message` is not guaranteed to be valid after as the middleware
  * migth deallocate the memory for this message internally.
  * It is thus recommended to call this function only in combination with
- * \sa rcl_borrow_loaned_message().
+ * \sa `rcl_borrow_loaned_message`.
  *
- * Apart from this, the `publish_loaned_message` function has the same behavior as rcl_publish()
+ * Apart from this, the `publish_loaned_message` function has the same behavior as `rcl_publish`
  * except that no serialization step is done.
  *
  * <hr>
@@ -395,11 +390,11 @@ rcl_publish_serialized_message(
  * \param[in] publisher handle to the publisher which will do the publishing
  * \param[in] ros_message  pointer to the previously borrow loaned message
  * \param[in] allocation structure pointer, used for memory preallocation (may be NULL)
- * \return #RCL_RET_OK if the message was published successfully, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_UNSUPPORTED if the middleware does not support that feature, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the message was published successfully, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_UNIMPLEMENTED` if the middleware does not support that feature, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -425,9 +420,9 @@ rcl_publish_loaned_message(
  * Lock-Free          | Yes
  *
  * \param[in] publisher handle to the publisher that needs liveliness to be asserted
- * \return #RCL_RET_OK if the liveliness assertion was completed successfully, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the liveliness assertion was completed successfully, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -597,10 +592,10 @@ rcl_publisher_is_valid_except_context(const rcl_publisher_t * publisher);
  *
  * \param[in] publisher pointer to the rcl publisher
  * \param[out] subscription_count number of matched subscriptions
- * \return #RCL_RET_OK if the count was retrieved, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_PUBLISHER_INVALID if the publisher is invalid, or
- * \return #RCL_RET_ERROR if an unspecified error occurs.
+ * \return `RCL_RET_OK` if the count was retrieved, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_PUBLISHER_INVALID` if the publisher is invalid, or
+ * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED

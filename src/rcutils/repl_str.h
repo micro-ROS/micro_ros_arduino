@@ -23,8 +23,6 @@
 // It has been modified to take a custom allocator and to fit some of our
 // style standards.
 
-/// @file
-
 #ifndef RCUTILS__REPL_STR_H_
 #define RCUTILS__REPL_STR_H_
 
@@ -122,7 +120,7 @@ extern "C"
  * \param[in] from string to match for replacement
  * \param[in] to string to replace matched strings with
  * \param[in] allocator structure defining functions to be used for allocation
- * \return duplicated `str` with all matches of `from` replaced with `to`.
+ * \return duplicated `str` with all matches of `from` replaced with `to`
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

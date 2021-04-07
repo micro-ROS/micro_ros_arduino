@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCL__LOGGING_H_
 #define RCL__LOGGING_H_
 
@@ -30,7 +28,6 @@ extern "C"
 {
 #endif
 
-/// The function signature to log messages.
 typedef rcutils_logging_output_handler_t rcl_logging_output_handler_t;
 
 /// Configure the logging system.
@@ -46,12 +43,12 @@ typedef rcutils_logging_output_handler_t rcl_logging_output_handler_t;
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \param[in] global_args The global arguments for the system
- * \param[in] allocator Used to allocate memory used by the logging system
- * \return #RCL_RET_OK if successful, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_ERROR if a general error occurs
+ * \param global_args The global arguments for the system
+ * \param allocator Used to allocate memory used by the logging system
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_ERROR` if a general error occurs
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -73,13 +70,13 @@ rcl_logging_configure(
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \param[in] global_args The global arguments for the system
- * \param[in] allocator Used to allocate memory used by the logging system
- * \param[in] output_handler Output handler to be installed
- * \return #RCL_RET_OK if successful, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
- * \return #RCL_RET_ERROR if a general error occurs
+ * \param global_args The global arguments for the system
+ * \param allocator Used to allocate memory used by the logging system
+ * \param output_handler Output handler to be installed
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
+ * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
+ * \return `RCL_RET_ERROR` if a general error occurs
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -100,12 +97,12 @@ rcl_logging_configure_with_output_handler(
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \return #RCL_RET_OK if successful.
- * \return #RCL_RET_ERROR if a general error occurs
+ * \return `RCL_RET_OK` if successful.
+ * \return `RCL_RET_ERROR` if a general error occurs
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
-rcl_ret_t rcl_logging_fini(void);
+rcl_ret_t rcl_logging_fini();
 
 /// See if logging rosout is enabled.
 /**
@@ -124,14 +121,14 @@ rcl_ret_t rcl_logging_fini(void);
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
-bool rcl_logging_rosout_enabled(void);
+bool rcl_logging_rosout_enabled();
 
 /// Default output handler used by rcl.
 /**
  * This function can be wrapped in a language specific client library,
  * adding the necessary mutual exclusion protection there, and then use
- * rcl_logging_configure_with_output_handler() instead of
- * rcl_logging_configure().
+ * `rcl_logging_configure_with_output_handler` instead of
+ * `rcl_logging_configure`.
  *
  * <hr>
  * Attribute          | Adherence
@@ -140,13 +137,6 @@ bool rcl_logging_rosout_enabled(void);
  * Thread-Safe        | Yes
  * Uses Atomics       | No
  * Lock-Free          | Yes
- *
- * \param[in] location The pointer to the location struct or NULL
- * \param[in] severity The severity level
- * \param[in] name The name of the logger, must be null terminated c string
- * \param[in] timestamp The timestamp for when the log message was made
- * \param[in] format The list of arguments to insert into the formatted log message
- * \param[in] args argument for the string format
  */
 RCL_PUBLIC
 void

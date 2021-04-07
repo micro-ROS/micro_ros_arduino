@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__GET_ENV_H_
 #define RCUTILS__GET_ENV_H_
 
@@ -26,7 +24,7 @@ extern "C"
 #include "rcutils/visibility_control.h"
 
 /// Retrieve the value of the given environment variable if it exists, or "".
-/** The c-string which is returned in the env_value output parameter is only
+/* The c-string which is returned in the env_value output parameter is only
  * valid until the next time this function is called, because it is a direct
  * pointer to the static storage.
  * The variable env_value populated by this function should never have free()
@@ -49,13 +47,14 @@ extern "C"
  * printf("Valued of 'SOME_ENV_VAR': %s\n", env_value);
  * ```
  *
- * This function cannot be concurrently called together with rcutils_set_env (or any platform specific equivalent)
- * on different threads, but multiple concurrent calls to this function are thread safe.
+ * Environment variables will be truncated at 2048 characters on Windows.
+ *
+ * This function is not thread-safe.
  *
  * \param[in] env_name the name of the environment variable
  * \param[out] env_value pointer to the value cstring, or "" if unset
- * \return NULL on success (success can be returning an empty string), or
- * \return an error string on failure.
+ * \return NULL on success (success can be returning an empty string)
+ *         error string on failure
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -75,11 +74,11 @@ rcutils_get_env(const char * env_name, const char ** env_value);
  * If neither exists, NULL will be returned.
  * The above algorithm is portable across both Unix and Windows.
  *
- * This function cannot be thread-safely called together with rcutils_set_env
- * (or any platform specific equivalent), but multiple calls to this function are thread safe.
+ * The home directory will be truncated at 2048 characters on Windows.
  *
- * \return The home directory on success, or
- * \return `NULL` on failure.
+ * This function is not thread-safe.
+ *
+ * \return The home directory on success, NULL on failure.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

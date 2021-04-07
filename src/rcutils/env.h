@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__ENV_H_
 #define RCUTILS__ENV_H_
 
@@ -37,7 +35,8 @@ extern "C"
  * store.
  *
  * \par Thread Safety:
- * This function is not thread-safe. Take care not to modify the environment variables while
+ * This function is not thread-safe, particularly when called concurrently with
+ * ::rcutils_get_env. Take care not to modify the environment variables while
  * another thread might be reading or writing environment variables.
  *
  * \par Platform Consistency:
@@ -49,9 +48,9 @@ extern "C"
  * \param[in] env_name Name of the environment variable to modify.
  * \param[in] env_value Value to set the environment variable to, or `NULL` to
  *   un-set.
- * \return `true` if success, or
- * \return `false` if env_name is invalid or NULL, or
- * \return `false` on failure.
+ * \return `True` if success
+ * \return `False` if env_name is invalid or NULL
+ * \return `False` on failure
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED

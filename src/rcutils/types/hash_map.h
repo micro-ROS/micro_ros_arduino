@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__TYPES__HASH_MAP_H_
 #define RCUTILS__TYPES__HASH_MAP_H_
 
@@ -31,10 +29,8 @@ extern "C"
 
 struct rcutils_hash_map_impl_t;
 
-/// The structure holding the metadata for a hash map.
 typedef struct RCUTILS_PUBLIC_TYPE rcutils_hash_map_t
 {
-  /// A pointer to the PIMPL implementation type.
   struct rcutils_hash_map_impl_t * impl;
 } rcutils_hash_map_t;
 
@@ -53,7 +49,7 @@ typedef size_t (* rcutils_hash_map_key_hasher_t)(
  * \param[in] val2 The second value to compare
  * \return A negative number if val1 < val2, or
  * \return A positve number if val1 > val2, or
- * \return Zero if val1 == val2.
+ * \return Zero if val1 == val2
  */
 typedef int (* rcutils_hash_map_key_cmp_t)(
   const void *,  // val1
@@ -63,8 +59,8 @@ typedef int (* rcutils_hash_map_key_cmp_t)(
 /**
  * Validates that an rcutils_hash_map_t* points to a valid hash map.
  * \param[in] map A pointer to an rcutils_hash_map_t
- * \return #RCUTILS_RET_INVALID_ARGUMENT if map is null
- * \return #RCUTILS_RET_NOT_INITIALIZED if map is not initialized.
+ * \return RCUTILS_RET_INVALID_ARGUMENT if map is null
+ * \return RCUTILS_RET_NOT_INITIALIZED if map is not initialized
  */
 #define HASH_MAP_VALIDATE_HASH_MAP(map) \
   RCUTILS_CHECK_ARGUMENT_FOR_NULL(map, RCUTILS_RET_INVALID_ARGUMENT); \
@@ -92,7 +88,7 @@ int
 rcutils_hash_map_string_cmp_func(const void * val1, const void * val2);
 
 /// Return an empty hash_map struct.
-/**
+/*
  * This function returns an empty and zero initialized hash_map struct.
  * All hash maps should be initialized with this or manually initialized
  * before being used.
@@ -162,11 +158,11 @@ rcutils_get_zero_initialized_hash_map();
  * \param[in] key_hashing_func a function that returns a hashed value for a key
  * \param[in] key_cmp_func a function used to compare keys
  * \param[in] allocator the allocator to use through out the lifetime of the hash_map
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
- * \return #RCUTILS_RET_STRING_MAP_ALREADY_INIT if alread initialized, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RCUTILS_RET_STRING_MAP_ALREADY_INIT` if already initialized, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -194,9 +190,9 @@ rcutils_hash_map_init(
  * Lock-Free          | Yes
  *
  * \param[inout] hash_map rcutils_hash_map_t to be finalized
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -222,10 +218,10 @@ rcutils_hash_map_fini(rcutils_hash_map_t * hash_map);
  *
  * \param[in] hash_map rcutils_hash_map_t to be queried
  * \param[out] capacity capacity of the hash_map
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_NOT_INITIALIZED if the hash_map is invalid, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_NOT_INITIALIZED` if the hash_map is invalid, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -248,10 +244,10 @@ rcutils_hash_map_get_capacity(const rcutils_hash_map_t * hash_map, size_t * capa
  *
  * \param[in] hash_map rcutils_hash_map_t to be queried
  * \param[out] size size of the hash_map
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_NOT_INITIALIZED if the hash_map is invalid, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_NOT_INITIALIZED` if the hash_map is invalid, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -275,11 +271,11 @@ rcutils_hash_map_get_size(const rcutils_hash_map_t * hash_map, size_t * size);
  * \param[inout] hash_map rcutils_hash_map_t to be updated
  * \param[in] key hash_map key
  * \param[in] value value for given hash_map key
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_BAD_ALLOC if memory allocation fails, or
- * \return #RCUTILS_RET_NOT_INITIALIZED if the hash_map is invalid, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RCUTILS_RET_NOT_INITIALIZED` if the hash_map is invalid, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -302,11 +298,11 @@ rcutils_hash_map_set(rcutils_hash_map_t * hash_map, const void * key, const void
  *
  * \param[inout] hash_map rcutils_hash_map_t to be updated
  * \param[in] key hash_map key, must be null terminated c string
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_NOT_INITIALIZED if the hash_map is invalid, or
- * \return #RCUTILS_RET_STRING_KEY_NOT_FOUND if the key is not found in the map, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_NOT_INITIALIZED` if the hash_map is invalid, or
+ * \return `RCUTILS_RET_STRING_KEY_NOT_FOUND` if the key is not found in the map, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
@@ -332,7 +328,7 @@ rcutils_hash_map_unset(rcutils_hash_map_t * hash_map, const void * key);
  * \return `true` if key is in the hash_map, or
  * \return `false` if key is not in the hash_map, or
  * \return `false` for invalid arguments, or
- * \return `false` if the hash_map is invalid.
+ * \return `false` if the hash_map is invalid
  */
 RCUTILS_PUBLIC
 bool
@@ -355,11 +351,11 @@ rcutils_hash_map_key_exists(const rcutils_hash_map_t * hash_map, const void * ke
  * \param[in] hash_map rcutils_hash_map_t to be searched
  * \param[in] key hash_map key to look up the data for
  * \param[out] data A copy of the data stored in the map
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_NOT_INITIALIZED if the hash_map is invalid, or
- * \return #RCUTILS_RET_NOT_FOUND if the key doesn't exist in the map, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_NOT_INITIALIZED` if the hash_map is invalid, or
+ * \return `RCUTILS_RET_NOT_FOUND` if the key doesn't exist in the map, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t
@@ -403,12 +399,12 @@ rcutils_hash_map_get(const rcutils_hash_map_t * hash_map, const void * key, void
  * \param[in] previous_key NULL to get the first key or the previous key to get the next for
  * \param[out] key A copy of the next key in the sequence
  * \param[out] data A copy of the next data in the sequence
- * \return #RCUTILS_RET_OK if successful, or
- * \return #RCUTILS_RET_INVALID_ARGUMENT for invalid arguments, or
- * \return #RCUTILS_RET_NOT_INITIALIZED if the hash_map is invalid, or
- * \return #RCUTILS_RET_NOT_FOUND if the previous_key doesn't exist in the map, or
- * \return #RCUTILS_RET_HASH_MAP_NO_MORE_ENTRIES if there is no more data beyound the previous_key, or
- * \return #RCUTILS_RET_ERROR if an unknown error occurs.
+ * \return `RCUTILS_RET_OK` if successful, or
+ * \return `RCUTILS_RET_INVALID_ARGUMENT` for invalid arguments, or
+ * \return `RCUTILS_RET_NOT_INITIALIZED` if the hash_map is invalid, or
+ * \return `RCUTILS_RET_NOT_FOUND` if the previous_key doesn't exist in the map, or
+ * \return `RCUTILS_RET_HASH_MAP_NO_MORE_ENTRIES` if there is no more data beyound the previous_key, or
+ * \return `RCUTILS_RET_ERROR` if an unknown error occurs
  */
 RCUTILS_PUBLIC
 rcutils_ret_t

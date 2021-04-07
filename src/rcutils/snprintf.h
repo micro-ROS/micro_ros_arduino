@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__SNPRINTF_H_
 #define RCUTILS__SNPRINTF_H_
 
@@ -49,18 +47,15 @@ extern "C"
  *
  * \see snprintf()
  * \see _snprintf_s()
- * \return the number of bytes that would have been written given enough space, or
- * \return a negative number if there is an error, but unlike _snprintf_s(),
+ * \returns the number of bytes that would have been written given enough space,
+ *   or a negative number if there is an error, but unlike _snprintf_s(),
  *   -1 is not returned if there is truncation.
  */
 RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
 int
 rcutils_snprintf(char * buffer, size_t buffer_size, const char * format, ...)
-/// @cond Doxygen_Suppress
-RCUTILS_ATTRIBUTE_PRINTF_FORMAT(3, 4)
-/// @endcond
-;
+RCUTILS_ATTRIBUTE_PRINTF_FORMAT(3, 4);
 
 /// Format a string with va_list for arguments, see rcutils_snprintf().
 RCUTILS_PUBLIC

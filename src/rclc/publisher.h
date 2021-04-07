@@ -26,7 +26,6 @@ extern "C"
 // #include<rcl/node.h>
 #include <rcl/allocator.h>
 #include <rclc/types.h>
-#include "rclc/visibility_control.h"
 
 /**
  *  Creates an rcl publisher.
@@ -46,7 +45,6 @@ extern "C"
  * \return `RCL_RET_OK` if successful
  * \return `RCL_ERROR` (or other error code) if an error has occurred
  */
-RCLC_PUBLIC
 rcl_ret_t
 rclc_publisher_init_default(
   rcl_publisher_t * publisher,
@@ -72,7 +70,6 @@ rclc_publisher_init_default(
  * \return `RCL_RET_OK` if successful
  * \return `RCL_ERROR` (or other error code) if an error has occurred
  */
-RCLC_PUBLIC
 rcl_ret_t
 rclc_publisher_init_best_effort(
   rcl_publisher_t * publisher,

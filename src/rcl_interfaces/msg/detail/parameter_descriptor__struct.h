@@ -47,7 +47,6 @@ typedef struct rcl_interfaces__msg__ParameterDescriptor
   rosidl_runtime_c__String description;
   rosidl_runtime_c__String additional_constraints;
   bool read_only;
-  bool dynamic_typing;
   rcl_interfaces__msg__FloatingPointRange__Sequence floating_point_range;
   rcl_interfaces__msg__IntegerRange__Sequence integer_range;
 } rcl_interfaces__msg__ParameterDescriptor;

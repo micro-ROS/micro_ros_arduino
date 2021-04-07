@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__STRERROR_H_
 #define RCUTILS__STRERROR_H_
 

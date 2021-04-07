@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
-
 #ifndef RCUTILS__ISALNUM_NO_LOCALE_H_
 #define RCUTILS__ISALNUM_NO_LOCALE_H_
 
