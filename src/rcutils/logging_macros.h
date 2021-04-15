@@ -44,7 +44,7 @@ extern "C"
  * Use RCUTILS_LOG_MIN_SEVERITY_NONE to compile out all macros.
  */
 #ifndef RCUTILS_LOG_MIN_SEVERITY
-#define RCUTILS_LOG_MIN_SEVERITY RCUTILS_LOG_MIN_SEVERITY_DEBUG
+#define RCUTILS_LOG_MIN_SEVERITY RCUTILS_LOG_MIN_SEVERITY_NONE
 #endif
 
 // TODO(dhood): optimise severity check via notifyLoggerLevelsChanged concept or similar.
