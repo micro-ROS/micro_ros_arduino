@@ -26,7 +26,7 @@ https://github.com/eProsima/Micro-CDR.git 2f1a688a9f7ca8379e64a8941bf5ce27bd7b1f
 https://github.com/ros-controls/control_msgs 653b646ba34d2166149cc02269bac0f48beb72b0
 https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
 https://github.com/ament/googletest.git 3eb44df70e4ab3bf842f15c37ba0f680db95db09
-https://github.com/ament/ament_package.git 0506b737d2d202fde4f29b2ff12033d7c568b72c
+https://github.com/ament/ament_package.git d695ec8f2a0e8adefc1e1212bfa6c09ca54b333d
 https://github.com/ament/ament_lint.git 1648972d977943316fcb30ebde8f4a1122d9faad
 https://github.com/ament/ament_cmake.git 84719051ef2b26070de484e60b8f060ae7a70b06
 https://github.com/ament/ament_index.git a5631044a837ed3a1844a0a22378139a8430a965
