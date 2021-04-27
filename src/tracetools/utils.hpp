@@ -82,32 +82,6 @@ const char * get_symbol(L && l)
 
 }  // namespace tracetools
 
-[[deprecated("use tracetools::detail::demangle_symbol")]]
-inline const char * _demangle_symbol(const char * mangled)
-{
-  return tracetools::detail::demangle_symbol(mangled);
-}
-
-[[deprecated("use tracetools::detail::get_symbol_funcptr")]]
-inline const char * _get_symbol_funcptr(void * funcptr)
-{
-  return tracetools::detail::get_symbol_funcptr(funcptr);
-}
-
-template<typename T, typename ... U>
-[[deprecated("use tracetools::get_symbol")]]
-const char * get_symbol(std::function<T(U...)> f)
-{
-  return tracetools::get_symbol<T, U...>(f);
-}
-
-template<typename L>
-[[deprecated("use tracetools::get_symbol")]]
-const char * get_symbol(L && l)
-{
-  return tracetools::get_symbol<L>(l);
-}
-
 #endif  // TRACETOOLS_DISABLED
 
 #endif  // TRACETOOLS__UTILS_HPP_
