@@ -5,7 +5,7 @@ https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487
 https://github.com/micro-ROS/rcl 12da7d8fead1667a36f1217b8a177d59d8f83c68
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 2b5cc410ac5226dc83fd7ebcd36a7643b7c8fbe3
-https://github.com/ros2/rclc 5e7e383c704bdc153fb5e559da11d992fe4d3b40
+https://github.com/ros2/rclc 8a72f63d2a518c97d9d69d30977189bcffe47724
 https://github.com/micro-ROS/rcutils 1fdfd3cd2b645ce683fe3e150feeac7c4a1bf073
 https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48b87dc6645
 https://github.com/ros2/rcpputils.git 13b04da7864c3f0afe8a6834ad84c22ca389a4f8
