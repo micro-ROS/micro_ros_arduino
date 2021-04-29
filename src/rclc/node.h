@@ -25,6 +25,7 @@ extern "C"
 #include <rclc/types.h>
 
 #include <rclc/init.h>
+#include "rclc/visibility_control.h"
 /**
  *  Creates a default RCL node.
  *
@@ -42,6 +43,7 @@ extern "C"
  * \return rcl_node_t if successful
  * \return NULL if an error occurred
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_node_init_default(
   rcl_node_t * node,
@@ -67,6 +69,7 @@ rclc_node_init_default(
  * \return rcl_node_t if successful
  * \return NULL if an error occurred
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_node_init_with_options(
   rcl_node_t * node,

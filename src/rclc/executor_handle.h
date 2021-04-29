@@ -22,6 +22,7 @@ extern "C"
 #endif
 
 #include <rcl/rcl.h>
+#include <rclc/visibility_control.h>
 
 /// TODO (jst3si) Where is this defined? - in my build environment this variable is not set.
 // #define ROS_PACKAGE_NAME "rclc"
@@ -183,6 +184,7 @@ typedef struct
  * \param[inout] handle_counters preallocated rclc_executor_handle_counters_t
  * \return `RCL_RET_INVALID_ARGUMENT` if `handle_counters` is a null pointer
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_handle_counters_zero_init(rclc_executor_handle_counters_t * handle_counters);
 
@@ -206,6 +208,7 @@ rclc_executor_handle_counters_zero_init(rclc_executor_handle_counters_t * handle
  * \return `RCL_RET_OK` if the \p handle was initialized successfully
  * \return `RCL_RET_INVALID_ARGUMENT` if \p h is a null pointer
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_handle_init(
   rclc_executor_handle_t * handle,
@@ -229,6 +232,7 @@ rclc_executor_handle_init(
  * \return `RCL_RET_OK` if \p h was cleared successfully
  * \return `RCL_RET_INVALID_ARGUMENT` if \p h is a null pointer
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_handle_clear(
   rclc_executor_handle_t * handle,
@@ -249,6 +253,7 @@ rclc_executor_handle_clear(
  * \return `RCL_RET_OK` if the handle was printed successfully
  * \return `RCL_RET_INVALID_ARGUMENT` if \p h is a null pointer
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_handle_print(rclc_executor_handle_t * handle);
 
@@ -270,6 +275,7 @@ rclc_executor_handle_print(rclc_executor_handle_t * handle);
  * \return pointer to the rcl-handle (rcl_subscription_t or rcl_timer_t)
  * \return NULL, if handle is a NULL pointer.
  */
+RCLC_PUBLIC
 void *
 rclc_executor_handle_get_ptr(rclc_executor_handle_t * handle);
 

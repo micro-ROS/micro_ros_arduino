@@ -24,6 +24,7 @@
 #include <rcl_lifecycle/rcl_lifecycle.h>
 
 #include "rclc/node.h"
+#include "rclc_lifecycle/visibility_control.h"
 
 typedef struct rclc_lifecycle_callback_map_t
 {
@@ -39,6 +40,7 @@ typedef struct rclc_lifecycle_node_t
   rclc_lifecycle_callback_map_t callbacks;
 } rclc_lifecycle_node_t;
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_make_node_a_lifecycle_node(
   rclc_lifecycle_node_t * lifecycle_node,
@@ -46,43 +48,51 @@ rclc_make_node_a_lifecycle_node(
   rcl_lifecycle_state_machine_t * state_machine,
   rcl_allocator_t * allocator);
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_change_state(
   rclc_lifecycle_node_t * lifecycle_node,
   unsigned int transition_id,
   bool publish_update);
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_register_callback(
   rclc_lifecycle_node_t * lifecycle_node,
   unsigned int goal_state,
   int (* cb)(void));
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_register_on_configure(
   rclc_lifecycle_node_t * node,
   int (* cb)(void));
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_register_on_activate(
   rclc_lifecycle_node_t * node,
   int (* cb)(void));
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_register_on_deactivate(
   rclc_lifecycle_node_t * node,
   int (* cb)(void));
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_register_on_cleanup(
   rclc_lifecycle_node_t * node,
   int (* cb)(void));
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rclc_lifecycle_execute_callback(
   rclc_lifecycle_node_t * lifecycle_node,
   unsigned int transition_id);
 
+RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
 rcl_lifecycle_node_fini(
   rclc_lifecycle_node_t * node,
