@@ -33,7 +33,8 @@ extern "C"
 #define UXR_STRING_SIZE_MAX                512
 #define UXR_SAMPLE_DATA_SIZE_MAX           512
 #define UXR_STRING_SEQUENCE_MAX            8
-#define UXR_BINARY_SEQUENCE_MAX            8
+#define UXR_BINARY_SEQUENCE_MAX            512
+#define UXR_BINARY_SEQUENCE_SMALL_MAX      8
 #define UXR_SAMPLE_SEQUENCE_MAX            8
 #define UXR_SAMPLE_DATA_SEQUENCE_MAX       8
 #define UXR_SAMPLE_DELTA_SEQUENCE_MAX      8
@@ -54,6 +55,13 @@ typedef struct BinarySequence_t
     uint8_t data[UXR_BINARY_SEQUENCE_MAX];
 
 } BinarySequence_t;
+
+typedef struct BinarySequenceSmall_t
+{
+    uint32_t size;
+    uint8_t data[UXR_BINARY_SEQUENCE_SMALL_MAX];
+
+} BinarySequenceSmall_t;
 
 typedef struct StringSequence_t
 {
@@ -471,7 +479,7 @@ typedef struct OBJK_Subscriber_Binary
 
 typedef enum EndpointQosFlags
 {
-    is_reliabel = 0x01 << 0,
+    is_reliable = 0x01 << 0,
     is_history_keep_last = 0x01 << 1,
     is_ownership_exclusive = 0x01 << 2,
     is_durability_transient_local = 0x01 << 3,
@@ -491,7 +499,7 @@ typedef struct OBJK_Endpoint_QosBinary
     bool optional_lifespan_msec;
     uint32_t lifespan_msec;
     bool optional_user_data;
-    BinarySequence_t user_data;
+    BinarySequenceSmall_t user_data;
 
 } OBJK_Endpoint_QosBinary;
 
@@ -518,7 +526,7 @@ typedef struct OBJK_DataReader_Binary_Qos
 
 typedef struct OBJK_DataReader_Binary
 {
-    char* topic_name;
+    ObjectId topic_id;
     bool optional_qos;
     OBJK_DataReader_Binary_Qos qos;
 
@@ -527,12 +535,35 @@ typedef struct OBJK_DataReader_Binary
 
 typedef struct OBJK_DataWriter_Binary
 {
-    char* topic_name;
+    ObjectId topic_id;
     bool optional_qos;
     OBJK_DataWriter_Binary_Qos qos;
 
 } OBJK_DataWriter_Binary;
 
+typedef struct OBJK_Requester_Binary
+{
+    char* service_name;
+    char* request_type;
+    char* reply_type;
+    bool optional_request_topic_name;
+    char* request_topic_name;
+    bool optional_reply_topic_name;
+    char* reply_topic_name;
+
+} OBJK_Requester_Binary;
+
+typedef struct OBJK_Replier_Binary
+{
+    char* service_name;
+    char* request_type;
+    char* reply_type;
+    bool optional_request_topic_name;
+    char* request_topic_name;
+    bool optional_reply_topic_name;
+    char* reply_topic_name;
+
+} OBJK_Replier_Binary;
 
 typedef union ObjectVariantU
 {
@@ -1389,6 +1420,20 @@ bool uxr_serialize_OBJK_DataWriter_Binary(
 bool uxr_deserialize_OBJK_DataWriter_Binary(
         ucdrBuffer* buffer,
         OBJK_DataWriter_Binary* output);
+
+bool uxr_serialize_OBJK_Requester_Binary(
+        ucdrBuffer* buffer,
+        const OBJK_Requester_Binary* input);
+bool uxr_deserialize_OBJK_Requester_Binary(
+        ucdrBuffer* buffer,
+        OBJK_Requester_Binary* output);
+
+bool uxr_serialize_OBJK_Replier_Binary(
+        ucdrBuffer* buffer,
+        const OBJK_Replier_Binary* input);
+bool uxr_deserialize_OBJK_Replier_Binary(
+        ucdrBuffer* buffer,
+        OBJK_Replier_Binary* output);
 
 bool uxr_serialize_ObjectVariant(
         ucdrBuffer* buffer,
