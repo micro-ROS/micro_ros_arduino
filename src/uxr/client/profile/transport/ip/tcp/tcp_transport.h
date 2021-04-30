@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef UXR_CLIENT_TCP_TRANSPORT_H_
 #define UXR_CLIENT_TCP_TRANSPORT_H_
 
@@ -52,11 +56,15 @@ typedef struct uxrTCPTransport
 
 } uxrTCPTransport;
 
+/** \addtogroup transport Transport
+ *  These functions are platform-dependent. The declaration of these functions can be found in the uxr/client/profile/transport/ folder. The common init transport functions follow the nomenclature below.
+ *  @{
+ */
+
 /**
  * @brief Initializes a TCP transport.
  * @param transport     The uninitialized transport structure used for managing the transport.
  *                      This structure must be accesible during the connection.
- * @param platform      A structure that contains the platform dependencies.
  * @param ip_protocol   The IP protocol, it could be UXR_IPv4 or UXR_IPv6.
  * @param ip            The IP address of the Agent.
  * @param port          The port of the Agent.
@@ -75,6 +83,8 @@ UXRDLLAPI bool uxr_init_tcp_transport(
  */
 UXRDLLAPI bool uxr_close_tcp_transport(
         uxrTCPTransport* transport);
+
+/** @}*/
 
 #ifdef __cplusplus
 }

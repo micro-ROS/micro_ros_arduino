@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef UXR_CLIENT_CORE_SESSION_COMMON_CREATE_ENTITIES_H_
 #define UXR_CLIENT_CORE_SESSION_COMMON_CREATE_ENTITIES_H_
 
@@ -21,6 +25,11 @@ extern "C"
 #endif // ifdef __cplusplus
 
 #include <uxr/client/core/session/session.h>
+
+/** \addtogroup create_common Create entities common profile
+ *  These functions are enabled when either PROFILE_CREATE_ENTITIES_XML or PROFILE_CREATE_ENTITIES_REF are activated as CMake arguments. The declaration of these functions can be found in uxr/client/profile/session/common_create_entities.h.
+ *  @{
+ */
 
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE DELETE submessage.
@@ -36,6 +45,8 @@ UXRDLLAPI uint16_t uxr_buffer_delete_entity(
         uxrSession* session,
         uxrStreamId stream_id,
         uxrObjectId object_id);
+
+/** @}*/
 
 #ifdef __cplusplus
 }
