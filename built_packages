@@ -1,15 +1,15 @@
 
 https://github.com/micro-ROS/rosidl_typesupport.git bab6756eae8978ed15bc5355efdc6027c71d9d38
-https://github.com/micro-ROS/rmw-microxrcedds.git bf3c0e1a8e9d71f99901ed663ce4b7ec0ce521dd
+https://github.com/micro-ROS/rmw-microxrcedds.git ca1b97941791fea15124d13c5464a96d17b0e749
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
-https://github.com/micro-ROS/rcl 1dfa0da25d9a31a173da5fa55275a4a2d6607773
+https://github.com/micro-ROS/rcl ca1f650c1ec4decbc4e13adbb7f9c677d1c1894b
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing 158b08f77ec120b37599f1de86a049867ffa478a
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 2b5cc410ac5226dc83fd7ebcd36a7643b7c8fbe3
 https://github.com/ros2/rclc 64ee9e1ad02d5b3d87310cc143b69ce8440859b7
 https://github.com/micro-ROS/rcutils 0467b4b2595a09e688cae5f0043cf2d01cb5474f
 https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48b87dc6645
 https://github.com/ros2/rcpputils.git 9cad93ee6ee700007ed19036aeb1cc5ac54bba00
-https://github.com/ros2/rcl.git 250a071a8276d2781570c4a21fb573580b110c27
+https://github.com/ros2/rcl.git cafee72ff75fb7d63710f0c18b475a8aa4a778c4
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
 https://github.com/ros2/rmw.git f9f4ef46f8dd3ef938526a1140a3c57c155a259f
 https://github.com/ros2/rcl_logging.git cea8e915b2a20c383fd8f05dd954e691c20ad123
