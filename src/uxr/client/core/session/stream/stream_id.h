@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef UXR_CLIENT_CORE_SESSION_STREAM_STREAM_ID_H_
 #define UXR_CLIENT_CORE_SESSION_STREAM_STREAM_ID_H_
 
@@ -22,6 +26,11 @@ extern "C"
 
 #include <uxr/client/visibility.h>
 #include <stdint.h>
+
+/** \addtogroup general_utils General utilities
+ *  Utility functions. The declaration of these functions can be found in uxr/client/core/session/stream_id.h and uxr/client/core/session/object_id.h.
+ *  @{
+ */
 
 /**
  * The enum that identifies the kind of stream.
@@ -44,7 +53,9 @@ typedef enum uxrStreamType
     /** Identifies a best-effort stream. */
     UXR_BEST_EFFORT_STREAM,
     /** Identifies a reliable stream. */
-    UXR_RELIABLE_STREAM
+    UXR_RELIABLE_STREAM,
+    /** Identifies a shared memory stream. */
+    UXR_SHARED_MEMORY_STREAM
 
 } uxrStreamType;
 
@@ -61,6 +72,9 @@ typedef enum uxrStreamDirection
 
 } uxrStreamDirection;
 
+/**
+ * @nosubgrouping
+ */
 typedef struct uxrStreamId
 {
     uint8_t raw;
@@ -97,6 +111,8 @@ UXRDLLAPI uxrStreamId uxr_stream_id(
 UXRDLLAPI uxrStreamId uxr_stream_id_from_raw(
         uint8_t stream_id_raw,
         uxrStreamDirection direction);
+
+/** @}*/
 
 #ifdef __cplusplus
 }

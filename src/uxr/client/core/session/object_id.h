@@ -15,6 +15,10 @@
 #ifndef _UXR_CLIENT_CORE_SESSION_OBJECT_ID_H_
 #define _UXR_CLIENT_CORE_SESSION_OBJECT_ID_H_
 
+/**
+ * @file
+ */
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -41,12 +45,20 @@ typedef struct uxrObjectId
 
 } uxrObjectId;
 
+/**
+ * @brief This function creates an identifier to reference an entity.
+ * @ingroup     general_utils
+ * @param id	Identifier of the object, different for each type. There can be several objects with the same ID, provided they have different types.
+ * @param type	The type of the entity. It can be: UXR_PARTICIPANT_ID, UXR_TOPIC_ID, UXR_PUBLISHER_ID, UXR_SUBSCRIBER_ID, UXR_DATAWRITER_ID, UXR_DATAREADER_ID, UXR_REQUESTER_ID, or UXR_REPLIER_ID.
+ * @return	Generated entity identifier.
+ */
 UXRDLLAPI uxrObjectId uxr_object_id(
         uint16_t id,
         uint8_t type);
 
 UXRDLLAPI uxrObjectId uxr_object_id_from_raw(
         const uint8_t* raw);
+
 UXRDLLAPI void uxr_object_id_to_raw(
         uxrObjectId object_id,
         uint8_t* raw);

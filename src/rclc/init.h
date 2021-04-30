@@ -24,6 +24,7 @@ extern "C"
 
 #include <rcl/allocator.h>
 #include "rclc/types.h"
+#include "rclc/visibility_control.h"
 
 /**
  *  Initializes rcl and creates some support data structures.
@@ -44,6 +45,7 @@ extern "C"
  * \return `RCL_RET_INVALID_ARGUMENT` if any null pointer as argument
  * \return `RCL_RET_ERROR` in case of failure
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_support_init(
   rclc_support_t * support,
@@ -71,6 +73,7 @@ rclc_support_init(
  * \return `RCL_RET_INVALID_ARGUMENT` if any null pointer as argument
  * \return `RCL_RET_ERROR` in case of failure
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_support_init_with_options(
   rclc_support_t * support,
@@ -96,6 +99,7 @@ rclc_support_init_with_options(
  * \return `RCL_RET_INVALID_ARGUMENT` if any null pointer as argument
  * \return `RCL_RET_ERROR` in case of failure
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_support_fini(
   rclc_support_t * support);

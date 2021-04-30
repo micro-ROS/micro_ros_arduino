@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef UXR_CLIENT_SERIAL_TRANSPORT_H_
 #define UXR_CLIENT_SERIAL_TRANSPORT_H_
 
@@ -36,12 +40,15 @@ typedef struct uxrSerialTransport
 
 } uxrSerialTransport;
 
+/** \addtogroup transport Transport
+ *  These functions are platform-dependent. The declaration of these functions can be found in the uxr/client/profile/transport/ folder. The common init transport functions follow the nomenclature below.
+ *  @{
+ */
 
 /**
  * @brief Initializes a UDP transport.
  * @param transport     The uninitialized transport structure used for managing the transport.
  *                      This structure must be accesible during the connection.
- * @param platform      A structure that contains the platform dependencies.
  * @param fd            The file descriptor of the serial connection.
  *                      The fd usually comes from the `open` OS function.
  * @param remote_addr   The addresss of the Agent in the serial connection.
@@ -62,6 +69,8 @@ UXRDLLAPI bool uxr_init_serial_transport(
  */
 UXRDLLAPI bool uxr_close_serial_transport(
         uxrSerialTransport* transport);
+
+/** @}*/
 
 #ifdef __cplusplus
 }
