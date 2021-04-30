@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef UXR_CLIENT_PROFILE_TRANSPORT_IP_IP_H_
 #define UXR_CLIENT_PROFILE_TRANSPORT_IP_IP_H_
 
@@ -29,6 +33,11 @@ typedef enum uxrIpProtocol
     UXR_IPv6
 
 } uxrIpProtocol;
+
+/** \addtogroup transport Transport
+ *  These functions are platform-dependent. The declaration of these functions can be found in the uxr/client/profile/transport/ folder. The common init transport functions follow the nomenclature below.
+ *  @{
+ */
 
 /**
  * @brief Converts IPv4/IPv6 address + port to a TransportLocator.
@@ -66,6 +75,8 @@ UXRDLLAPI bool uxr_locator_to_ip(
         size_t size,
         uint16_t* port,
         uxrIpProtocol* ip_protocol);
+
+/** @}*/
 
 #ifdef __cplusplus
 }

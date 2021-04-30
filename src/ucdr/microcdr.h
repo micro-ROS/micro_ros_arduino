@@ -17,7 +17,7 @@
 
 #ifdef __cplusplus
 extern "C" {
-#endif
+#endif // ifdef __cplusplus
 
 #include <ucdr/visibility.h>
 #include <ucdr/config.h>
@@ -31,9 +31,12 @@ extern "C" {
 // ------------------------------------------------
 
 struct ucdrBuffer;
-typedef bool (*OnFullBuffer)(struct ucdrBuffer* buffer, void* args);
+typedef bool (* OnFullBuffer)(
+        struct ucdrBuffer* buffer,
+        void* args);
 
-typedef enum ucdrEndianness {
+typedef enum ucdrEndianness
+{
     UCDR_BIG_ENDIANNESS = 0,
     UCDR_LITTLE_ENDIANNESS = 1
 
@@ -41,9 +44,9 @@ typedef enum ucdrEndianness {
 
 typedef struct ucdrBuffer
 {
-    uint8_t *init;
-    uint8_t *final;
-    uint8_t *iterator;
+    uint8_t* init;
+    uint8_t* final;
+    uint8_t* iterator;
 
     size_t origin;
     size_t offset;
@@ -62,53 +65,109 @@ typedef struct ucdrBuffer
 //                 Main functions
 // ------------------------------------------------
 
-UCDRDLLAPI void ucdr_init_buffer                        (ucdrBuffer* ub, uint8_t* data, size_t size);
-UCDRDLLAPI void ucdr_init_buffer_origin                 (ucdrBuffer* ub, uint8_t* data, size_t size, size_t origin);
-UCDRDLLAPI void ucdr_init_buffer_origin_offset          (ucdrBuffer* ub, uint8_t* data, size_t size, size_t origin, size_t offset);
-UCDRDLLAPI void ucdr_init_buffer_origin_offset_endian   (ucdrBuffer* ub, uint8_t* data, size_t size, size_t origin, size_t offset, ucdrEndianness endianness);
-UCDRDLLAPI void ucdr_copy_buffer                        (ucdrBuffer* ub_dest, const ucdrBuffer* ub_source);
-UCDRDLLAPI void ucdr_set_on_full_buffer_callback        (ucdrBuffer* ub, OnFullBuffer on_full_buffer, void* args);
+UCDRDLLAPI void ucdr_init_buffer                        (
+        ucdrBuffer* ub,
+        uint8_t* data,
+        size_t size);
+UCDRDLLAPI void ucdr_init_buffer_origin                 (
+        ucdrBuffer* ub,
+        uint8_t* data,
+        size_t size,
+        size_t origin);
+UCDRDLLAPI void ucdr_init_buffer_origin_offset          (
+        ucdrBuffer* ub,
+        uint8_t* data,
+        size_t size,
+        size_t origin,
+        size_t offset);
+UCDRDLLAPI void ucdr_init_buffer_origin_offset_endian   (
+        ucdrBuffer* ub,
+        uint8_t* data,
+        size_t size,
+        size_t origin,
+        size_t offset,
+        ucdrEndianness endianness);
+UCDRDLLAPI void ucdr_copy_buffer                        (
+        ucdrBuffer* ub_dest,
+        const ucdrBuffer* ub_source);
+UCDRDLLAPI void ucdr_set_on_full_buffer_callback        (
+        ucdrBuffer* ub,
+        OnFullBuffer on_full_buffer,
+        void* args);
 
-UCDRDLLAPI void ucdr_reset_buffer        (ucdrBuffer* ub);
-UCDRDLLAPI void ucdr_reset_buffer_offset (ucdrBuffer* ub, size_t offset);
+UCDRDLLAPI void ucdr_reset_buffer        (
+        ucdrBuffer* ub);
+UCDRDLLAPI void ucdr_reset_buffer_offset (
+        ucdrBuffer* ub,
+        size_t offset);
 
-UCDRDLLAPI void   ucdr_align_to         (ucdrBuffer* ub, size_t alignment);
-UCDRDLLAPI size_t ucdr_alignment        (size_t buffer_position, size_t data_size);
-UCDRDLLAPI size_t ucdr_buffer_alignment (const ucdrBuffer* ub, size_t data_size);
-UCDRDLLAPI void   ucdr_advance_buffer   (ucdrBuffer* ub, size_t size);
+UCDRDLLAPI void   ucdr_align_to         (
+        ucdrBuffer* ub,
+        size_t alignment);
+UCDRDLLAPI size_t ucdr_alignment        (
+        size_t buffer_position,
+        size_t data_size);
+UCDRDLLAPI size_t ucdr_buffer_alignment (
+        const ucdrBuffer* ub,
+        size_t data_size);
+UCDRDLLAPI void   ucdr_advance_buffer   (
+        ucdrBuffer* ub,
+        size_t size);
 
-UCDRDLLAPI size_t         ucdr_buffer_size       (const ucdrBuffer* ub);
-UCDRDLLAPI size_t         ucdr_buffer_length     (const ucdrBuffer* ub);
-UCDRDLLAPI size_t         ucdr_buffer_remaining  (const ucdrBuffer* ub);
-UCDRDLLAPI ucdrEndianness ucdr_buffer_endianness (const ucdrBuffer* ub);
-UCDRDLLAPI bool           ucdr_buffer_has_error  (const ucdrBuffer* ub);
+UCDRDLLAPI size_t         ucdr_buffer_size       (
+        const ucdrBuffer* ub);
+UCDRDLLAPI size_t         ucdr_buffer_length     (
+        const ucdrBuffer* ub);
+UCDRDLLAPI size_t         ucdr_buffer_remaining  (
+        const ucdrBuffer* ub);
+UCDRDLLAPI ucdrEndianness ucdr_buffer_endianness (
+        const ucdrBuffer* ub);
+UCDRDLLAPI bool           ucdr_buffer_has_error  (
+        const ucdrBuffer* ub);
 
 // -------------------------------------------------------------------
 //              PUBLIC DE-SERIALIZATION DECLARATIONS
 // -------------------------------------------------------------------
 
 #define UCDR_BASIC_TYPE_DECLARATIONS(SUFFIX, TYPE) \
-    UCDRDLLAPI bool ucdr_serialize ## SUFFIX(ucdrBuffer* ub, TYPE value); \
-    UCDRDLLAPI bool ucdr_serialize_endian ## SUFFIX(ucdrBuffer* ub, ucdrEndianness endianness, TYPE value); \
-    UCDRDLLAPI bool ucdr_deserialize ## SUFFIX(ucdrBuffer* ub, TYPE* value); \
-    UCDRDLLAPI bool ucdr_deserialize_endian ## SUFFIX(ucdrBuffer* ub, ucdrEndianness endianness, TYPE* value); \
+    UCDRDLLAPI bool ucdr_serialize ## SUFFIX(ucdrBuffer * ub, TYPE value); \
+    UCDRDLLAPI bool ucdr_serialize_endian ## SUFFIX(ucdrBuffer * ub, ucdrEndianness endianness, TYPE value); \
+    UCDRDLLAPI bool ucdr_deserialize ## SUFFIX(ucdrBuffer * ub, TYPE * value); \
+    UCDRDLLAPI bool ucdr_deserialize_endian ## SUFFIX(ucdrBuffer * ub, ucdrEndianness endianness, TYPE * value); \
 
 #define UCDR_ARRAY_DECLARATIONS(SUFFIX, TYPE) \
-    UCDRDLLAPI bool ucdr_serialize_array ## SUFFIX(ucdrBuffer* ub, const TYPE* array, size_t size); \
-    UCDRDLLAPI bool ucdr_serialize_endian_array ## SUFFIX(ucdrBuffer* ub, ucdrEndianness endianness, const TYPE* array, size_t size); \
-    UCDRDLLAPI bool ucdr_deserialize_array ## SUFFIX(ucdrBuffer* ub, TYPE* array, size_t size); \
-    UCDRDLLAPI bool ucdr_deserialize_endian_array ## SUFFIX(ucdrBuffer* ub, ucdrEndianness endianness, TYPE* array, size_t size); \
+    UCDRDLLAPI bool ucdr_serialize_array ## SUFFIX(ucdrBuffer * ub, const TYPE * array, size_t size); \
+    UCDRDLLAPI bool ucdr_serialize_endian_array ## SUFFIX(ucdrBuffer * ub, ucdrEndianness endianness, \
+            const TYPE * array, size_t size); \
+    UCDRDLLAPI bool ucdr_deserialize_array ## SUFFIX(ucdrBuffer * ub, TYPE * array, size_t size); \
+    UCDRDLLAPI bool ucdr_deserialize_endian_array ## SUFFIX(ucdrBuffer * ub, ucdrEndianness endianness, TYPE * array, \
+            size_t size); \
 
 #define UCDR_SEQUENCE_DECLARATIONS(SUFFIX, TYPE) \
-    UCDRDLLAPI bool ucdr_serialize_sequence ## SUFFIX(ucdrBuffer* ub, const TYPE* array, uint32_t length); \
-    UCDRDLLAPI bool ucdr_serialize_endian_sequence ## SUFFIX(ucdrBuffer* ub, ucdrEndianness endianness, const TYPE* array, uint32_t length); \
-    UCDRDLLAPI bool ucdr_deserialize_sequence ## SUFFIX(ucdrBuffer* ub, TYPE* array, size_t array_capacity, uint32_t* length); \
-    UCDRDLLAPI bool ucdr_deserialize_endian_sequence ## SUFFIX(ucdrBuffer* ub, ucdrEndianness endianness, TYPE* array, size_t array_capacity, uint32_t* length); \
+    UCDRDLLAPI bool ucdr_serialize_sequence ## SUFFIX(ucdrBuffer * ub, const TYPE * array, uint32_t length); \
+    UCDRDLLAPI bool ucdr_serialize_endian_sequence ## SUFFIX(ucdrBuffer * ub, ucdrEndianness endianness, \
+            const TYPE * array, uint32_t length); \
+    UCDRDLLAPI bool ucdr_deserialize_sequence ## SUFFIX(ucdrBuffer * ub, TYPE * array, size_t array_capacity, \
+            uint32_t * length); \
+    UCDRDLLAPI bool ucdr_deserialize_endian_sequence ## SUFFIX(ucdrBuffer * ub, ucdrEndianness endianness, TYPE * array, \
+            size_t array_capacity, uint32_t * length); \
 
-UCDRDLLAPI bool ucdr_serialize_string(ucdrBuffer* ub, const char* string);
-UCDRDLLAPI bool ucdr_serialize_endian_string(ucdrBuffer* ub, ucdrEndianness endianness, const char* string);
-UCDRDLLAPI bool ucdr_deserialize_string(ucdrBuffer* ub, char* string, size_t string_capacity);
-UCDRDLLAPI bool ucdr_deserialize_endian_string(ucdrBuffer* ub, ucdrEndianness endianness, char* string, size_t string_capacity);
+UCDRDLLAPI bool ucdr_serialize_string(
+        ucdrBuffer* ub,
+        const char* string);
+UCDRDLLAPI bool ucdr_serialize_endian_string(
+        ucdrBuffer* ub,
+        ucdrEndianness endianness,
+        const char* string);
+UCDRDLLAPI bool ucdr_deserialize_string(
+        ucdrBuffer* ub,
+        char* string,
+        size_t string_capacity);
+UCDRDLLAPI bool ucdr_deserialize_endian_string(
+        ucdrBuffer* ub,
+        ucdrEndianness endianness,
+        char* string,
+        size_t string_capacity);
 
 // -------------------------------------------------------------------
 //               VALID TYPES DECLARATIONS
@@ -155,6 +214,6 @@ UCDR_SEQUENCE_DECLARATIONS(_double, double)
 
 #ifdef __cplusplus
 }
-#endif
+#endif // ifdef __cplusplus
 
 #endif //_MICROCDR_MICRO_CDR_H_

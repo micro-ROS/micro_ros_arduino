@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef UXR_CLIENT_PROFILE_DISCOVERY_DISCOVERY_H_
 #define UXR_CLIENT_PROFILE_DISCOVERY_DISCOVERY_H_
 
@@ -28,6 +32,18 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 
+/** \addtogroup discovery Discovery profile
+ *  The discovery profile allows discovering Agents in the network by UDP. The reachable Agents respond to the discovery call by sending information about themselves, as their IP and port. There are two modes: unicast and multicast. The discovery phase precedes the call to the uxr_create_session function, as it serves to determine the Agent to connect with. These functions are enabled when PROFILE_DISCOVERY is activated as a CMake argument. The declaration of these functions can be found in uxr/client/profile/discovery/discovery.h.
+ *  @{
+ */
+
+
+/**
+ * @brief Function signature used for on_status_func callbacks.
+ * @param locator	Transport locator of a discovered agent
+ * @param args		User pointer data.
+ * @return	true means that the discovery routine has finished. A false implies that the discovery routine must continue searching Agents.
+ */
 typedef bool (* uxrOnAgentFound) (
         const TransportLocator* locator,
         void* args);
@@ -61,6 +77,8 @@ UXRDLLAPI void uxr_discovery_agents(
         void* args,
         const TransportLocator* agent_list,
         size_t agent_list_size);
+
+/** @}*/
 
 #ifdef __cplusplus
 }

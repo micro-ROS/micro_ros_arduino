@@ -20,7 +20,12 @@ extern "C"
 {
 #endif // ifdef __cplusplus
 
+#include <uxr/client/config.h>
 #include <uxr/client/core/session/stream/seq_num.h>
+
+#ifdef UCLIENT_PROFILE_MULTITHREAD
+#include <uxr/client/profile/multithread/multithread.h>
+#endif // ifdef UCLIENT_PROFILE_MULTITHREAD
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -28,6 +33,10 @@ extern "C"
 typedef struct uxrInputBestEffortStream
 {
     uxrSeqNum last_handled;
+
+#ifdef UCLIENT_PROFILE_MULTITHREAD
+    uxrMutex mutex;
+#endif // ifdef UCLIENT_PROFILE_MULTITHREAD
 
 } uxrInputBestEffortStream;
 
