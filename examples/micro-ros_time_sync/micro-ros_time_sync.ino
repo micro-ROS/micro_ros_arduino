@@ -5,7 +5,7 @@
 #include <rcl/rcl.h>
 #include <rcl/error_handling.h>
 #include <rclc/rclc.h>
-#include <rmw_uros/options.h>
+#include <rmw_microros/rmw_microros.h>
 
 rclc_support_t support;
 rcl_allocator_t allocator;
