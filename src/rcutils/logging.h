@@ -40,7 +40,7 @@ extern "C"
  * \def RCUTILS_DEFAULT_LOGGER_DEFAULT_LEVEL
  * \brief The default severity level of the default logger.
  */
-#define RCUTILS_DEFAULT_LOGGER_DEFAULT_LEVEL RCUTILS_LOG_SEVERITY_INFO
+#define RCUTILS_DEFAULT_LOGGER_DEFAULT_LEVEL RCUTILS_LOG_SEVERITY_UNSET
 
 /// The flag if the logging system has been initialized.
 RCUTILS_PUBLIC
