@@ -14,7 +14,7 @@
 // ----------------------
 
 #include <uxr/client/transport.h>
-#include <rmw_uros/options.h>
+#include <rmw_microros/rmw_microros.h>
 
 extern "C" bool arduino_transport_open(struct uxrCustomTransport * transport);
 extern "C" bool arduino_transport_close(struct uxrCustomTransport * transport);
