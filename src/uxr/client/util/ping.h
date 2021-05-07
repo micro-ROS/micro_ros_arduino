@@ -47,7 +47,7 @@ extern "C"
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
 UXRDLLAPI bool uxr_ping_agent(
-        const uxrCommunication* comm,
+        uxrCommunication* comm,
         const int timeout);
 
 /**
@@ -65,7 +65,7 @@ UXRDLLAPI bool uxr_ping_agent(
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
 UXRDLLAPI bool uxr_ping_agent_attempts(
-        const uxrCommunication* comm,
+        uxrCommunication* comm,
         const int timeout,
         const uint8_t attempts);
 
