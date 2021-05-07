@@ -20,9 +20,15 @@ extern "C"
 {
 #endif // ifdef __cplusplus
 
+#include <uxr/client/config.h>
+
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+
+#ifdef UCLIENT_PROFILE_MULTITHREAD
+#include <uxr/client/profile/multithread/multithread.h>
+#endif // ifdef UCLIENT_PROFILE_MULTITHREAD
 
 typedef bool (* send_msg_func)(
         void* instance,
@@ -43,6 +49,10 @@ typedef struct uxrCommunication
     recv_msg_func recv_msg;
     comm_error_func comm_error;
     uint16_t mtu;
+
+#ifdef UCLIENT_PROFILE_MULTITHREAD
+    uxrMutex mutex;
+#endif // ifdef UCLIENT_PROFILE_MULTITHREAD
 
 } uxrCommunication;
 
