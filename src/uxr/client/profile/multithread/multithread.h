@@ -91,6 +91,9 @@ UXRDLLAPI void uxr_unlock(
 #define UXR_LOCK_SESSION(session) uxr_lock(&session->mutex)
 #define UXR_UNLOCK_SESSION(session) uxr_unlock(&session->mutex)
 
+#define UXR_LOCK_TRANSPORT(comm) uxr_lock(&comm->mutex)
+#define UXR_UNLOCK_TRANSPORT(comm) uxr_unlock(&comm->mutex)
+
 #define UXR_LOCK_STREAM_ID(session, stream_id) uxr_lock(uxr_get_stream_mutex_from_id(session, stream_id))
 #define UXR_UNLOCK_STREAM_ID(session, stream_id) uxr_unlock(uxr_get_stream_mutex_from_id(session, stream_id))
 
@@ -119,6 +122,9 @@ UXRDLLAPI void uxr_unlock(
 #define UXR_INIT_LOCK_SESSION
 #define UXR_LOCK_SESSION(session)
 #define UXR_UNLOCK_SESSION(session)
+
+#define UXR_LOCK_TRANSPORT(comm)
+#define UXR_UNLOCK_TRANSPORT(comm)
 
 #define UXR_LOCK_STREAM_ID(session, stream_id)
 #define UXR_UNLOCK_STREAM_ID(session, stream_id)
