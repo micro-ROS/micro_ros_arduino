@@ -5,9 +5,9 @@ https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
 https://github.com/ros2/rcl_interfaces.git c5d0a20150533a6cb93d5dcbd6e27cea9300aa6e
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
-https://github.com/ros2/rosidl_dds.git 9831bdd56052aeb0ddf1454e0e7100c64905f556
-https://github.com/ros2/rosidl.git 608761cd1bcf6f01e4d25f8fcc9745f1ea41d0b0
-https://github.com/ros2/example_interfaces.git b78a0c6ebf1cd80c408c46382c2cfbba25cb89bb
+https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
+https://github.com/ros2/rosidl.git 2868145f27c26afb65902887d72108c4eda5f40a
+https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb0cf5355
 https://github.com/ros2/rmw.git f9f4ef46f8dd3ef938526a1140a3c57c155a259f
 https://github.com/ros2/rmw_implementation.git 6454f915cd1dc2fd9c744dadc9c38f84aef51b9b
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
@@ -21,10 +21,10 @@ https://github.com/micro-ROS/rcutils a2850890572ecbff872bc48bab0b6dcbb22575a7
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing 158b08f77ec120b37599f1de86a049867ffa478a
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
 https://github.com/micro-ROS/rosidl_typesupport.git c57b6e986f71b8b3302d1cbb21db1ec3967176d3
-https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 5f1eb83dc6f998a12c853a6601c2683b0940e693
-https://github.com/micro-ROS/rmw-microxrcedds.git d19d31dcca3d9515f677b00c82456f0dd9cfdbd0
+https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git def62d87c20ee709d20196c04688c68afcce259e
+https://github.com/micro-ROS/rmw-microxrcedds.git bf918334e5554f70631abc9c9a0dbad9a7f6b254
 https://github.com/ros2/rclc 64ee9e1ad02d5b3d87310cc143b69ce8440859b7
-https://github.com/ros2/ament_cmake_ros.git edfb3adf52694fddd4e47970bc7e600cf6176081
+https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
 https://github.com/ament/ament_package.git d695ec8f2a0e8adefc1e1212bfa6c09ca54b333d
 https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
 https://github.com/ament/googletest.git 3eb44df70e4ab3bf842f15c37ba0f680db95db09
