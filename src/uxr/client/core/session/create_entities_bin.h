@@ -116,6 +116,18 @@ UXRDLLAPI uint16_t uxr_buffer_create_subscriber_bin(
         uint8_t mode);
 
 /**
+ * The enum that identifies the durability of the QoS of the DDS entity.
+ */
+
+typedef enum uxrQoSDurability
+{
+    UXR_DURABILITY_VOLATILE = 0,
+    UXR_DURABILITY_TRANSIENT_LOCAL,
+    UXR_DURABILITY_TRANSIENT,
+    UXR_DURABILITY_PERSISTENT
+} uxrQoSDurability;
+
+/**
  * @brief Buffers into the stream identified by `stream_id` an XRCE CREATE submessage with an XRCE DataWriter payload.
  *        The submessage will be sent when `uxr_flash_output_streams` or `uxr_run_session` function are called.
  *        As a result of the reception of this submessage, the Agent will create an XRCE DataWriter according to
@@ -142,7 +154,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datawriter_bin(
         uxrObjectId topic_id,
         bool reliable,
         bool keep_last,
-        bool transient_local,
+        uxrQoSDurability durability,
         uint8_t mode);
 
 /**
@@ -172,7 +184,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datareader_bin(
         uxrObjectId topic_id,
         bool reliable,
         bool keep_last,
-        bool transient_local,
+        uxrQoSDurability durability,
         uint8_t mode);
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE CREATE submessage with an XRCE Requester payload.
