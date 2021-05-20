@@ -52,32 +52,16 @@ typedef struct uxrMutex
 #endif // ifdef WIN32
 } uxrMutex;
 
-/**
- * @brief
- * TODO
- */
 UXRDLLAPI uxrMutex* uxr_get_stream_mutex_from_id(
         struct uxrSession* session,
         uxrStreamId stream_id);
 
-/**
- * @brief
- * TODO
- */
 UXRDLLAPI void uxr_init_lock(
         uxrMutex* mutex);
 
-/**
- * @brief
- * TODO
- */
 UXRDLLAPI void uxr_lock(
         uxrMutex* mutex);
 
-/**
- * @brief
- * TODO
- */
 UXRDLLAPI void uxr_unlock(
         uxrMutex* mutex);
 
@@ -98,18 +82,18 @@ UXRDLLAPI void uxr_unlock(
 #define UXR_UNLOCK_STREAM_ID(session, stream_id) uxr_unlock(uxr_get_stream_mutex_from_id(session, stream_id))
 
 #define UXR_LOCK_ALL_INPUT_STREAMS(session) \
-    for (uint8_t i = 0; i < session->streams.input_best_effort_size; \
-            ++i){ uxr_lock(&session->streams.input_best_effort[i].mutex); } \
-    for (uint8_t i = 0; i < session->streams.input_reliable_size; ++i){ uxr_lock( \
-                                                                            &session->streams.input_reliable[i].mutex); \
+    for (uint8_t i = 0; i < session->streams.input_best_effort_size; ++i){ \
+        uxr_lock(&session->streams.input_best_effort[i].mutex); } \
+    for (uint8_t i = 0; i < session->streams.input_reliable_size; ++i){ \
+        uxr_lock(&session->streams.input_reliable[i].mutex); \
     }
 
 #define UXR_UNLOCK_ALL_INPUT_STREAMS(session) \
-    for (uint8_t i = 0; i < session->streams.input_best_effort_size; ++i){ uxr_unlock( \
-                                                                               &session->streams.input_best_effort[i].mutex); \
+    for (uint8_t i = 0; i < session->streams.input_best_effort_size; ++i){ \
+        uxr_unlock( &session->streams.input_best_effort[i].mutex); \
     } \
-    for (uint8_t i = 0; i < session->streams.input_reliable_size; ++i){ uxr_unlock( \
-                                                                            &session->streams.input_reliable[i].mutex); \
+    for (uint8_t i = 0; i < session->streams.input_reliable_size; ++i){  \
+        uxr_unlock( &session->streams.input_reliable[i].mutex); \
     }
 
 

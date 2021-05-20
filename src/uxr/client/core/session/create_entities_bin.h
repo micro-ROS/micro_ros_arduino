@@ -32,13 +32,14 @@ extern "C"
  *        The submessage will be sent when `uxr_flash_output_streams` or `uxr_run_session` function are called.
  *        As a result of the reception of this submessage, the Agent will create an XRCE Participant according to
  *        the binary provided in the CREATE submessage.
- * @param session       A uxrSession structure previously initialized.
- * @param stream_id     The output stream identifier where the CREATE submessage will be buffered.
- * @param object_id     The identifier of the XRCE Participant.
- * @param domain_id     The identifier of the Domain to which the XRCE Participant belongs.
- * @param mode          The set of flags that determines the entity creation mode.
- *                      The Creation Mode Table describes the entities creation behaviour according to the
- *                      `UXR_REUSE` and `UXR_REPLACE` flags.
+ * @param session               A uxrSession structure previously initialized.
+ * @param stream_id             The output stream identifier where the CREATE submessage will be buffered.
+ * @param object_id             The identifier of the XRCE Participant.
+ * @param domain_id             The identifier of the Domain to which the XRCE Participant belongs.
+ * @param participant_name      The XRCE Participant name. Can be NULL.
+ * @param mode                  The set of flags that determines the entity creation mode.
+ *                              The Creation Mode Table describes the entities creation behaviour according to the
+ *                              `UXR_REUSE` and `UXR_REPLACE` flags.
  * @return A `request_id` that identifies the request made by the Client.
  *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
  */
@@ -47,6 +48,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_participant_bin(
         uxrStreamId stream_id,
         uxrObjectId object_id,
         uint16_t domain_id,
+        const char* participant_name,
         uint8_t mode);
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE CREATE submessage with an XRCE Topic payload.
