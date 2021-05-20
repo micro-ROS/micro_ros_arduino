@@ -1,5 +1,5 @@
-name: Library generator 
-on: 
+name: Library generator
+on:
   workflow_dispatch:
     inputs:
       name:
@@ -18,6 +18,8 @@ jobs:
             branch: foxy
           - distro: rolling
             branch: main
+          - distro: galactic
+            branch: galactic
     steps:
       - uses: actions/checkout@v2
         with:
@@ -39,5 +41,5 @@ jobs:
           branch: autoupdate_micro_ros_arduino_${{ matrix.branch }}
           delete-branch: true
           reviewers: pablogs9
-          base: ${{ matrix.branch }}  
+          base: ${{ matrix.branch }}
 
