@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PLATFORMS=()
-while getopts "p:" o; do 
+while getopts "p:" o; do
     case "$o" in
         p)
             PLATFORMS+=(${OPTARG})
@@ -9,7 +9,7 @@ while getopts "p:" o; do
     esac
 done
 
-if [ $OPTIND -eq 1 ]; then 
+if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("opencr1")
     PLATFORMS+=("teensy4")
     PLATFORMS+=("teensy32")
@@ -24,7 +24,7 @@ shift $((OPTIND-1))
 
 ######## Init ########
 
-apt update 
+apt update
 
 cd /uros_ws
 
@@ -37,7 +37,7 @@ ros2 run micro_ros_setup create_firmware_ws.sh generate_lib
 pushd firmware/mcu_ws > /dev/null
 
     # Workaround: Copy just tf2_msgs
-    git clone -b foxy https://github.com/ros2/geometry2
+    git clone -b galactic https://github.com/ros2/geometry2
     cp -R geometry2/tf2_msgs ros2/tf2_msgs
     rm -rf geometry2
 
@@ -61,7 +61,7 @@ if [[ " ${PLATFORMS[@]} " =~ " opencr1 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/opencr_toolchain.cmake /project/extras/library_generation/colcon.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/cortex-m7/fpv5-sp-d16-softfp
     cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv5-sp-d16-softfp/libmicroros.a
@@ -75,7 +75,7 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m0 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/cortex_m0_toolchain.cmake /project/extras/library_generation/colcon_verylowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/cortex-m0plus
     cp -R firmware/build/libmicroros.a /project/src/cortex-m0plus/libmicroros.a
@@ -89,7 +89,7 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m3 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/cortex_m3_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/cortex-m3
     cp -R firmware/build/libmicroros.a /project/src/cortex-m3/libmicroros.a
@@ -103,7 +103,7 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy32 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy32_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/mk20dx256
     cp -R firmware/build/libmicroros.a /project/src/mk20dx256/libmicroros.a
@@ -117,7 +117,7 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy35 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy35_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/mk64fx512/fpv4-sp-d16-hard
     cp -R firmware/build/libmicroros.a /project/src/mk64fx512/fpv4-sp-d16-hard/libmicroros.a
@@ -131,7 +131,7 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy4_toolchain.cmake /project/extras/library_generation/colcon.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/imxrt1062/fpv5-d16-hard
     cp -R firmware/build/libmicroros.a /project/src/imxrt1062/fpv5-d16-hard/libmicroros.a
@@ -145,7 +145,7 @@ fi
 #     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/portenta-m4_toolchain.cmake /project/extras/library_generation/colcon.meta
 
 #     find firmware/build/include/ -name "*.c"  -delete
-#     cp -R firmware/build/include/* /project/src/ 
+#     cp -R firmware/build/include/* /project/src/
 
 #     mkdir -p /project/src/cortex-m4/fpv4-sp-d16-softfp
 #     cp -R firmware/build/libmicroros.a /project/src/cortex-m4/fpv4-sp-d16-softfp/libmicroros.a
@@ -159,7 +159,7 @@ if [[ " ${PLATFORMS[@]} " =~ " portenta-m7 " ]]; then
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/portenta-m7_toolchain.cmake /project/extras/library_generation/colcon.meta
 
     find firmware/build/include/ -name "*.c"  -delete
-    cp -R firmware/build/include/* /project/src/ 
+    cp -R firmware/build/include/* /project/src/
 
     mkdir -p /project/src/cortex-m7/fpv5-d16-softfp
     cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv5-d16-softfp/libmicroros.a

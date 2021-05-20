@@ -2,4 +2,4 @@ repositories:
   control_msgs:
     type: git
     url: https://github.com/ros-controls/control_msgs
-    version: foxy-devel
+    version: galactic-devel

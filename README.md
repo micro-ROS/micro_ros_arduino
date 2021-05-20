@@ -26,7 +26,7 @@ You can find the available precompiled ROS 2 types for messages and services in 
 
 ## How to use the precompiled library
 
-Go to [link to release section](https://github.com/micro-ROS/micro_ros_arduino/releases) and download the last release of micro-ROS library for Arduino. 
+Go to [link to release section](https://github.com/micro-ROS/micro_ros_arduino/releases) and download the last release of micro-ROS library for Arduino.
 
 Include it in your proyect using `Sketch -> Include library -> Add .ZIP Library...`
 
@@ -36,7 +36,7 @@ Is possible to use a micro-ROS Agent just with this docker command:
 
 ```bash
 # Serial micro-ROS Agent
-docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:foxy serial --dev [YOUR BOARD PORT] -v6
+docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:rolling serial --dev [YOUR BOARD PORT] -v6
 ```
 
 ## How to build the precompiled library
@@ -55,7 +55,7 @@ Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 ```bash
 export ARDUINO_PATH=[Your Arduino + Teensiduino path]
 cd $ARDUINO_PATH/hardware/teensy/avr/
-curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/patching_boards/platform_teensy.txt > platform.txt
+curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/main/extras/patching_boards/platform_teensy.txt > platform.txt
 ```
 
 ### Patch SAMD
@@ -65,7 +65,7 @@ Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 ```bash
 export ARDUINO_PATH=[Your Arduino path]
 cd $ARDUINO_PATH/hardware/sam/1.6.12/
-curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/patching_boards/platform_arduinocore_sam.txt > platform.txt
+curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/main/extras/patching_boards/platform_arduinocore_sam.txt > platform.txt
 ```
 
 ## Purpose of the Project
@@ -88,4 +88,4 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro-ros.github.io/docs/tutorials/core/microxrcedds_rmw_configuration/).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanims. Only USB serial transports are provided.
-- Teensyduino support files have to be patched in order to use precompiled libraries. 
+- Teensyduino support files have to be patched in order to use precompiled libraries.
