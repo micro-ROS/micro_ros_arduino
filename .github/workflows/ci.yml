@@ -2,7 +2,7 @@ name: CI
 
 on:
     pull_request:
-      branches: 
+      branches:
         - '**'
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     micro_ros_arduino:
         runs-on: ubuntu-20.04
         container: ubuntu:20.04
-    
+
         steps:
         - uses: actions/checkout@v2
           with:
@@ -20,7 +20,7 @@ jobs:
           run: |
             apt update
             apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync
-            curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh 
+            curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
             mkdir -p /github/home/Arduino/libraries/micro_ros_arduino/
             cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino/
             echo '''board_manager:
@@ -31,7 +31,7 @@ jobs:
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
             arduino-cli core install arduino:mbed -v
-            # 
+            #
             # INSTALLING TEENSY SUPPORT
             wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
             tar -xf arduino-1.8.13-linux64.tar.xz
@@ -45,7 +45,7 @@ jobs:
             cp -R arduino-1.8.13/hardware/teensy/ /github/home/.arduino15/packages/
             rsync -a  arduino-1.8.13/hardware/tools/ /github/home/.arduino15/packages/tools/
             rm -rf arduino-1.8.13 arduino-1.8.13-linux64.tar.xz
-            # 
+            #
             # PATCHING TEENSY AND SAM
             cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
             # remove when https://github.com/arduino/ArduinoCore-sam/pull/115 merged
@@ -56,7 +56,8 @@ jobs:
             arduino-cli lib update-index
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
+            # Workaround. Remove when https://github.com/ros2/rosidl/pull/596 is merged
+            # arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_reconnection_example -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
