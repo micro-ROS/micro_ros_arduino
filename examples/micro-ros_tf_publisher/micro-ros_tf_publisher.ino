@@ -14,6 +14,9 @@
 #include <geometry_msgs/msg/transform_stamped.h>
 #include <tf2_msgs/msg/tf_message.h>
 
+#include <micro_ros_utilities/type_utilities.h>
+#include <micro_ros_utilities/string_utilities.h>
+
 rcl_publisher_t publisher;
 tf2_msgs__msg__TFMessage * tf_message;
 rclc_executor_t executor;
@@ -53,14 +56,14 @@ void error_loop(){
 }
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
-{  
+{
   RCLC_UNUSED(last_call_time);
   RCLC_UNUSED(timer);
 }
 
 void setup() {
   set_microros_transports();
-  
+
   IMU.begin();
 
   IMU.SEN.acc_cali_start();
@@ -71,8 +74,8 @@ void setup() {
 
 
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH);  
-  
+  digitalWrite(LED_PIN, HIGH);
+
   delay(2000);
 
   allocator = rcl_get_default_allocator();
@@ -100,21 +103,23 @@ void setup() {
 
   // create executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
-  
-  tf_message = tf2_msgs__msg__TFMessage__create();
-  geometry_msgs__msg__TransformStamped__Sequence__init(&tf_message->transforms, 1);
 
-  tf_message->transforms.data[0].header.frame_id.data = (char*)malloc(100*sizeof(char));
-  char string1[] = "/panda_link0";
-  memcpy(tf_message->transforms.data[0].header.frame_id.data, string1, strlen(string1) + 1);
-  tf_message->transforms.data[0].header.frame_id.size = strlen(tf_message->transforms.data[0].header.frame_id.data);
-  tf_message->transforms.data[0].header.frame_id.capacity = 100;
+  if(!micro_ros_utilities_create_message_memory(
+      ROSIDL_GET_MSG_TYPE_SUPPORT(tf2_msgs, msg, TFMessage),
+      &tf_message,
+      (micro_ros_utilities_memory_conf_t) {})
+    )
+  {
+    error_loop();
+  }
 
-  char string2[] = "/inertial_unit";
-  tf_message->transforms.data[0].child_frame_id.data =  (char*)malloc(100*sizeof(char));
-  memcpy(tf_message->transforms.data[0].child_frame_id.data, string2, strlen(string2) + 1);
-  tf_message->transforms.data[0].child_frame_id.size = strlen(tf_message->transforms.data[0].child_frame_id.data);
-  tf_message->transforms.data[0].child_frame_id.capacity = 100;
+  tf_message->transforms.size = 2;
+
+  tf_message->transforms.data[0].header.frame_id =
+    micro_ros_string_utilities_set(tf_message->transforms.data[0].header.frame_id, "/panda_link0");
+
+  tf_message->transforms.data[1].header.frame_id =
+    micro_ros_string_utilities_set(tf_message->transforms.data[1].header.frame_id, "/inertial_unit");
 }
 
 void loop() {
@@ -128,7 +133,7 @@ void loop() {
 
   tf_message->transforms.data[0].transform.rotation.x = (double) q[1];
 	tf_message->transforms.data[0].transform.rotation.y = (double) q[2];
-	tf_message->transforms.data[0].transform.rotation.z = (double) q[3]; 
+	tf_message->transforms.data[0].transform.rotation.z = (double) q[3];
 	tf_message->transforms.data[0].transform.rotation.w = (double) q[0];
   tf_message->transforms.data[0].header.stamp.nanosec = tv.tv_nsec;
 	tf_message->transforms.data[0].header.stamp.sec = tv.tv_sec;
