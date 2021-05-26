@@ -104,8 +104,6 @@ void setup() {
   // create executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
 
-  bool success = ;
-
   if(!micro_ros_utilities_create_message_memory(
       ROSIDL_GET_MSG_TYPE_SUPPORT(tf2_msgs, msg, TFMessage),
       &tf_message,
