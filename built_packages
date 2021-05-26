@@ -23,6 +23,7 @@ https://github.com/micro-ROS/rmw-microxrcedds.git a95aba17bba5c1c3a980b3ecd7e5ac
 https://github.com/micro-ROS/rosidl_typesupport.git 0e03d18809cb08215877ff856a916ec35a066561
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 66e4e3e8686d05c3a4601fc295df7c141f757156
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
+https://github.com/micro-ROS/micro_ros_utilities 1245d3bc677634968ba2198f905a44705728e2a7
 https://github.com/micro-ROS/rcl c71a35f0c5f7b4c42dc76d3f5da9d8bae5bd0824
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
 https://github.com/ament/ament_cmake.git 6a24f75ca92a5494cf29356f5160c571b0838e48
