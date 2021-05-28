@@ -20,9 +20,14 @@ extern "C"
 // Include directives for member types
 // Member 'trajectory'
 #include "trajectory_msgs/msg/detail/joint_trajectory__struct.h"
+// Member 'multi_dof_trajectory'
+#include "trajectory_msgs/msg/detail/multi_dof_joint_trajectory__struct.h"
 // Member 'path_tolerance'
 // Member 'goal_tolerance'
 #include "control_msgs/msg/detail/joint_tolerance__struct.h"
+// Member 'component_path_tolerance'
+// Member 'component_goal_tolerance'
+#include "control_msgs/msg/detail/joint_component_tolerance__struct.h"
 // Member 'goal_time_tolerance'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
@@ -30,8 +35,11 @@ extern "C"
 typedef struct control_msgs__action__FollowJointTrajectory_Goal
 {
   trajectory_msgs__msg__JointTrajectory trajectory;
+  trajectory_msgs__msg__MultiDOFJointTrajectory multi_dof_trajectory;
   control_msgs__msg__JointTolerance__Sequence path_tolerance;
+  control_msgs__msg__JointComponentTolerance__Sequence component_path_tolerance;
   control_msgs__msg__JointTolerance__Sequence goal_tolerance;
+  control_msgs__msg__JointComponentTolerance__Sequence component_goal_tolerance;
   builtin_interfaces__msg__Duration goal_time_tolerance;
 } control_msgs__action__FollowJointTrajectory_Goal;
 
@@ -112,12 +120,17 @@ typedef struct control_msgs__action__FollowJointTrajectory_Result__Sequence
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 // Member 'joint_names'
+// Member 'multi_dof_joint_names'
 // already included above
 // #include "rosidl_runtime_c/string.h"
 // Member 'desired'
 // Member 'actual'
 // Member 'error'
 #include "trajectory_msgs/msg/detail/joint_trajectory_point__struct.h"
+// Member 'multi_dof_desired'
+// Member 'multi_dof_actual'
+// Member 'multi_dof_error'
+#include "trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__struct.h"
 
 // Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_Feedback
@@ -127,6 +140,10 @@ typedef struct control_msgs__action__FollowJointTrajectory_Feedback
   trajectory_msgs__msg__JointTrajectoryPoint desired;
   trajectory_msgs__msg__JointTrajectoryPoint actual;
   trajectory_msgs__msg__JointTrajectoryPoint error;
+  rosidl_runtime_c__String__Sequence multi_dof_joint_names;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_desired;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_actual;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_error;
 } control_msgs__action__FollowJointTrajectory_Feedback;
 
 // Struct for a sequence of control_msgs__action__FollowJointTrajectory_Feedback.

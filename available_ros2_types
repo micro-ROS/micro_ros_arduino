@@ -234,5 +234,6 @@ control_msgs/PidState.msg
 control_msgs/GripperCommand.msg
 control_msgs/JointJog.msg
 control_msgs/DynamicJointState.msg
+control_msgs/JointComponentTolerance.msg
 control_msgs/JointTolerance.msg
 control_msgs/InterfaceValue.msg
