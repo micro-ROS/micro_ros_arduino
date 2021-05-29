@@ -78,8 +78,19 @@ UXRDLLAPI void uxr_unlock(
 #define UXR_LOCK_TRANSPORT(comm) uxr_lock(&comm->mutex)
 #define UXR_UNLOCK_TRANSPORT(comm) uxr_unlock(&comm->mutex)
 
-#define UXR_LOCK_STREAM_ID(session, stream_id) uxr_lock(uxr_get_stream_mutex_from_id(session, stream_id))
-#define UXR_UNLOCK_STREAM_ID(session, stream_id) uxr_unlock(uxr_get_stream_mutex_from_id(session, stream_id))
+#define UXR_LOCK_STREAM_ID(session, stream_id) { \
+        uxrMutex* stream_mutex = uxr_get_stream_mutex_from_id(session, stream_id); \
+        if (stream_mutex != NULL){ \
+            uxr_lock(stream_mutex); \
+        } \
+}
+
+#define UXR_UNLOCK_STREAM_ID(session, stream_id){ \
+        uxrMutex* stream_mutex = uxr_get_stream_mutex_from_id(session, stream_id); \
+        if (stream_mutex != NULL){ \
+            uxr_unlock(stream_mutex); \
+        } \
+}
 
 #define UXR_LOCK_ALL_INPUT_STREAMS(session) \
     for (uint8_t i = 0; i < session->streams.input_best_effort_size; ++i){ \

@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef MICRO_ROS_UTILITIES__TYPE_UTILITIES_H_
 #define MICRO_ROS_UTILITIES__TYPE_UTILITIES_H_
 
@@ -24,6 +28,10 @@ extern "C"
 #include <rosidl_runtime_c/string.h>
 #include <rcutils/allocator.h>
 #include <micro_ros_utilities/visibility_control.h>
+
+/** \addtogroup typeutils micro-ROS Types Utilities
+ *  @{
+ */
 
 // Memory rule
 typedef struct micro_ros_utilities_memory_rule_t
@@ -177,6 +185,8 @@ micro_ros_utilities_destroy_message_memory(
   const rosidl_message_type_support_t * type_support,
   void * ros_msg,
   const micro_ros_utilities_memory_conf_t conf);
+
+/** @}*/
 
 #if __cplusplus
 }
