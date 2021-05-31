@@ -28,7 +28,7 @@
 #if defined(__cplusplus)
 extern "C"
 {
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 /** \addtogroup rmw micro-ROS RMW API
  *  @{
@@ -61,13 +61,13 @@ int64_t rmw_uros_epoch_nanos();
  * \return RMW_RET_ERROR If no session is running or the synchronization fails.
  */
 rmw_ret_t rmw_uros_sync_session(
-        const int timeout_ms);
+  const int timeout_ms);
 
 
 /** @}*/
 
 #if defined(__cplusplus)
 }
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 #endif  // RMW_MICROROS__TIME_SYNC_H_
