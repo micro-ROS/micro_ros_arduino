@@ -16,8 +16,8 @@
  * @file
  */
 
-#ifndef RMW_MICROROS__CUSTOM_TRANSPORTS_H_
-#define RMW_MICROROS__CUSTOM_TRANSPORTS_H_
+#ifndef RMW_MICROROS__CUSTOM_TRANSPORT_H_
+#define RMW_MICROROS__CUSTOM_TRANSPORT_H_
 
 #include <rmw/rmw.h>
 #include <rmw/ret_types.h>
@@ -30,7 +30,7 @@
 #if defined(__cplusplus)
 extern "C"
 {
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 /** \addtogroup rmw micro-ROS RMW API
  *  @{
@@ -49,17 +49,17 @@ extern "C"
  * \return RMW_RET_ERROR If invalid.
  */
 rmw_ret_t rmw_uros_set_custom_transport(
-        bool framing,
-        void* args,
-        open_custom_func open_cb,
-        close_custom_func close_cb,
-        write_custom_func write_cb,
-        read_custom_func read_cb);
+  bool framing,
+  void * args,
+  open_custom_func open_cb,
+  close_custom_func close_cb,
+  write_custom_func write_cb,
+  read_custom_func read_cb);
 
 /** @}*/
 
 #if defined(__cplusplus)
 }
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
-#endif  // RMW_MICROROS__CUSTOM_TRANSPORTS_H_
+#endif  // RMW_MICROROS__CUSTOM_TRANSPORT_H_
