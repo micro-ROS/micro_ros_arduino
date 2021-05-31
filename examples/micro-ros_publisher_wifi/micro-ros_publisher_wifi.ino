@@ -8,8 +8,8 @@
 
 #include <std_msgs/msg/int32.h>
 
-#ifndef TARGET_PORTENTA_H7_M7
-#error This example is only avaible for Arduino Portenta
+#if !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_NANO_RP2040_CONNECT)
+#error This example is only avaible for Arduino Portenta and Arduino Nano RP2040 Connect
 #endif
 
 rcl_publisher_t publisher;
@@ -32,7 +32,7 @@ void error_loop(){
 }
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
-{  
+{
   RCLC_UNUSED(last_call_time);
   if (timer != NULL) {
     RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
@@ -42,10 +42,10 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 
 void setup() {
   set_microros_wifi_transports("WIFI SSID", "WIFI PASS", "192.168.1.57", 8888);
-  
+
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH);  
-  
+  digitalWrite(LED_PIN, HIGH);
+
   delay(2000);
 
   allocator = rcl_get_default_allocator();
