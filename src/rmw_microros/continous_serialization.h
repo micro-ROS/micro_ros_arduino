@@ -28,12 +28,12 @@
 #if defined(__cplusplus)
 extern "C"
 {
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 typedef void (* rmw_uros_continous_serialization_size)(
-        uint32_t* topic_length);
+  uint32_t * topic_length);
 typedef void (* rmw_uros_continous_serialization)(
-        ucdrBuffer* ucdr);
+  ucdrBuffer * ucdr);
 
 /** \addtogroup rmw micro-ROS RMW API
  *  @{
@@ -47,14 +47,14 @@ typedef void (* rmw_uros_continous_serialization)(
  * \param[in] serialization_cb callback that should serialize the user part of the message
  */
 void rmw_uros_set_continous_serialization_callbacks(
-        rmw_publisher_t* publisher,
-        rmw_uros_continous_serialization_size size_cb,
-        rmw_uros_continous_serialization serialization_cb);
+  rmw_publisher_t * publisher,
+  rmw_uros_continous_serialization_size size_cb,
+  rmw_uros_continous_serialization serialization_cb);
 
 /** @}*/
 
 #if defined(__cplusplus)
 }
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 #endif  // RMW_MICROROS__CONTINOUS_SERIALIZATION_H_
