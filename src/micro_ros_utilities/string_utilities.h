@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file
+ */
+
 #ifndef MICRO_ROS_UTILITIES__STRING_UTILITIES_H_
 #define MICRO_ROS_UTILITIES__STRING_UTILITIES_H_
 
@@ -22,6 +26,10 @@ extern "C"
 
 #include <rosidl_runtime_c/string.h>
 #include <micro_ros_utilities/visibility_control.h>
+
+/** \addtogroup stringutils micro-ROS String Utilities
+ *  @{
+ */
 
 /**
  *  Create a rosidl_runtime_c__String from a char pointer
@@ -52,6 +60,7 @@ micro_ros_string_utilities_init(const char * data);
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
+ * \param[in] str  rosidl_runtime_c__String to set
  * \param[in] data char pointer
  * \return `rosidl_runtime_c__String` string containing data
  */
@@ -133,6 +142,8 @@ micro_ros_string_utilities_remove_tail_chars(
 MICRO_ROS_UTILITIES_PUBLIC
 void
 micro_ros_string_utilities_destroy(rosidl_runtime_c__String * str);
+
+/** @}*/
 
 #if __cplusplus
 }
