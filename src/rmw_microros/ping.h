@@ -33,7 +33,7 @@
 #if defined(__cplusplus)
 extern "C"
 {
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 /** \addtogroup rmw micro-ROS RMW API
  *  @{
@@ -49,13 +49,13 @@ extern "C"
  * \return RMW_RET_ERROR If micro-ROS Agent is not available.
  */
 rmw_ret_t rmw_uros_ping_agent(
-        const int timeout_ms,
-        const uint8_t attempts);
+  const int timeout_ms,
+  const uint8_t attempts);
 
 /** @}*/
 
 #if defined(__cplusplus)
 }
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 #endif  // RMW_MICROROS__PING_H_

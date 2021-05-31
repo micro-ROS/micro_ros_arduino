@@ -28,7 +28,7 @@
 #if defined(__cplusplus)
 extern "C"
 {
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 /** \addtogroup rmw micro-ROS RMW API
  *  @{
@@ -43,12 +43,12 @@ extern "C"
  * \return RMW_RET_INVALID_ARGUMENT If rmw_init_options is not valid or unexpected arguments.
  */
 rmw_ret_t rmw_uros_discover_agent(
-        rmw_init_options_t* rmw_options);
+  rmw_init_options_t * rmw_options);
 
 /** @}*/
 
 #if defined(__cplusplus)
 }
-#endif // if defined(__cplusplus)
+#endif  // if defined(__cplusplus)
 
 #endif  // RMW_MICROROS__DISCOVERY_H_
