@@ -1,8 +1,15 @@
-#ifdef TARGET_PORTENTA_H7_M7
+#if defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
 
 #include <Arduino.h>
+
+
+#if defined(TARGET_PORTENTA_H7_M7)
 #include <WiFi.h>
 #include <WiFiUdp.h>
+#else defined(ARDUINO_NANO_RP2040_CONNECT)
+#include <SPI.h>
+#include <WiFiNINA.h>
+#endif
 
 #include <micro_ros_arduino.h>
 
@@ -48,10 +55,10 @@ extern "C"
     }
 
     size_t readed  = udp_client.read(buf, len);
-    
+
     return (readed < 0) ? 0 : readed;
   }
 }
 
-#endif // TARGET_PORTENTA_H7_M7
+#endif
 

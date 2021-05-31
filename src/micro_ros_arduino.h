@@ -32,10 +32,15 @@ static inline void set_microros_transports(){
 	);
 }
 
-#ifdef TARGET_PORTENTA_H7_M7
+#if defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
 
+#if defined(TARGET_PORTENTA_H7_M7)
 #include <WiFi.h>
 #include <WiFiUdp.h>
+#else defined(ARDUINO_NANO_RP2040_CONNECT)
+#include <SPI.h>
+#include <WiFiNINA.h>
+#endif
 
 extern "C" bool arduino_wifi_transport_open(struct uxrCustomTransport * transport);
 extern "C" bool arduino_wifi_transport_close(struct uxrCustomTransport * transport);
@@ -67,6 +72,6 @@ static inline void set_microros_wifi_transports(char * ssid, char * pass, char *
 	);
 }
 
-#endif // TARGET_PORTENTA_H7_M7
+#endif
 
 #endif  // MICRO_ROS_ARDUINO
