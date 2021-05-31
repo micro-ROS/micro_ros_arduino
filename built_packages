@@ -22,7 +22,7 @@ https://github.com/micro-ROS/rcutils 0fd0c442dfa343dcfd0cb3674012039bed0c9389
 https://github.com/ros2/rclc aec6e900cdb12765db71bd4cc990c7de37e2cab2
 https://github.com/micro-ROS/rmw-microxrcedds.git ff4c4c4dc14412e87086b8c3479c6ec3041e457b
 https://github.com/micro-ROS/rosidl_typesupport.git 5d974dbee4cd6988ce33923246eb404db327fad8
-https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git def62d87c20ee709d20196c04688c68afcce259e
+https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git acb2fb6f7b5bde21b47fd7e8c03d84f20b302887
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
 https://github.com/micro-ROS/rcl fc14a9a73f5e0579ec0c902a1a4375c9a013cabf
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
