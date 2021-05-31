@@ -5,14 +5,15 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
 
 Supported boards are:
 
-| Board                                                                    | Min version | State      | Details                                                                                             | Prebuild meta        |
-| ------------------------------------------------------------------------ | ----------- | ---------- | --------------------------------------------------------------------------------------------------- | -------------------- |
-| [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)      | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon.meta`        |
-| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/) | v1.4.16     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide) | `colcon.meta`        |
-| [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                   | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`        |
-| [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                   | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`        |
-| [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)               | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta` |
-| [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                   | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta` |
+| Board                                                                               | Min version | State      | Details                                                                                             | Prebuild meta            |
+| ----------------------------------------------------------------------------------- | ----------- | ---------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
+| [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                 | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon.meta`            |
+| [Arduino Nano RP2040 Connect](https://docs.arduino.cc/hardware/nano-rp2040-connect) | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon_verylowmem.meta` |
+| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/)            | v1.4.16     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide) | `colcon.meta`            |
+| [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`            |
+| [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`            |
+| [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)                          | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta`     |
+| [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta`     |
 
 Community contributed boards are:
 
