@@ -10,7 +10,7 @@ https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebc
 https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb0cf5355
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
 https://github.com/ros2/rcl_interfaces.git c5d0a20150533a6cb93d5dcbd6e27cea9300aa6e
-https://github.com/ros2/rmw.git f9f4ef46f8dd3ef938526a1140a3c57c155a259f
+https://github.com/ros2/rmw.git a50f3bb1e24ac5338677990d74ab096a9d1776d7
 https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48b87dc6645
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
 https://github.com/ros2/rcpputils.git bf2de5e3edd17bbbe5c1aaafdbe29cb53e1c970c
