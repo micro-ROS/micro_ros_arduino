@@ -19,7 +19,7 @@ https://github.com/ros2/common_interfaces.git 42fb5cced5edc6b2fde8a0d9237e1528f9
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 9145bfc948f109210f8e76ed56a7d54593519e6f
 https://github.com/micro-ROS/rcutils a2850890572ecbff872bc48bab0b6dcbb22575a7
 https://github.com/ros2/rclc b3590e7d22f458ccaf401f87e9572cf018aa9f2d
-https://github.com/micro-ROS/rmw-microxrcedds.git 57f5caaaf4287f4c0e1b684aa1cab9f80cb804c8
+https://github.com/micro-ROS/rmw-microxrcedds.git 2672a1deee72cb62055269943e72cf7dbd4d00ee
 https://github.com/micro-ROS/rosidl_typesupport.git 8e18df6938d212a918eb09a8fffb50c43e51678e
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f646261d5b8f8f48fbe075e8ff4730bf27e1ce6b
 https://github.com/micro-ROS/micro_ros_msgs.git 9a3968d4694f516ded8bdbfe23e2a487477bb8b4
