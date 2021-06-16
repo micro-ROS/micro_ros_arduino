@@ -58,8 +58,7 @@ jobs:
             arduino-cli lib install "STM32duino X-NUCLEO-IKS01A3"
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            # Workaround. Remove when https://github.com/ros2/rosidl/pull/596 is merged
-            # arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_reconnection_example -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
