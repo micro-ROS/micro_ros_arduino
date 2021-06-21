@@ -19,7 +19,7 @@ https://github.com/ros2/rcl_logging.git 77b5b2a6c948a6db1986501edc83f12ceadedba3
 https://github.com/micro-ROS/rosidl_typesupport.git 6dae4befd3b92224a728681ace206b9a0f26c90a
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 9145bfc948f109210f8e76ed56a7d54593519e6f
 https://github.com/micro-ROS/rcl c71a35f0c5f7b4c42dc76d3f5da9d8bae5bd0824
-https://github.com/ros2/rclc b3590e7d22f458ccaf401f87e9572cf018aa9f2d
+https://github.com/ros2/rclc d31ee650372dd6a3ba2000351b9186941c803095
 https://github.com/micro-ROS/rcutils a2850890572ecbff872bc48bab0b6dcbb22575a7
 https://github.com/micro-ROS/rmw-microxrcedds.git beca13302d1b1f3ce7b550f78f8bcf8dee661a82
 https://github.com/micro-ROS/micro_ros_utilities 0b57803e520ecc73273ec1daf099420fa9ab1259
@@ -28,7 +28,7 @@ https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f646261d5b8f8f4
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
 https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
 https://github.com/ament/ament_cmake.git 0edbcff991a8bfffd8c2eb381e43e9a6fe53e0c4
-https://github.com/ament/ament_lint.git 100683ca73de2ccf377937e64955d5b79c43721e
+https://github.com/ament/ament_lint.git bfe815fbfb3f0c9b90ff70b95ea4b4b602f39398
 https://github.com/ament/ament_package.git d695ec8f2a0e8adefc1e1212bfa6c09ca54b333d
-https://github.com/ament/ament_index.git e04af7b42c1f49a9e1f00913459dc8cd11e8d85e
+https://github.com/ament/ament_index.git f21496417ba2318d7ff74840dbae637c36a9b286
 https://github.com/ament/googletest.git 32b0a101649314e0729d2f71737c375d3810f63b
