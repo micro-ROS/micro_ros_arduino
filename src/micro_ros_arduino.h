@@ -74,4 +74,69 @@ static inline void set_microros_wifi_transports(char * ssid, char * pass, char *
 
 #endif
 
+#ifdef ARDUINO_TEENSY41
+
+#include <SPI.h>
+#include <NativeEthernet.h>
+
+extern "C" bool arduino_native_ethernet_udp_transport_open(struct uxrCustomTransport * transport);
+extern "C" bool arduino_native_ethernet_udp_transport_close(struct uxrCustomTransport * transport);
+extern "C" size_t arduino_native_ethernet_udp_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
+extern "C" size_t arduino_native_ethernet_udp_transport_read(struct uxrCustomTransport* transport, uint8_t* buf, size_t len, int timeout, uint8_t* err);
+
+struct micro_ros_agent_locator {
+	IPAddress address;
+	int port;
+};
+
+/**
+  * Base Native Ethernet implementation which could be handy if TCP becomes supported by micro-Ros in the future
+  * as this code would be general to both TCP and UDP implementations
+  */
+static micro_ros_agent_locator set_microros_native_ethernet_transports(byte mac[],IPAddress fallback_client_ip, IPAddress agent_ip , uint agent_port ) {
+    int eStatus = Ethernet.begin(mac);
+
+	if ( eStatus == 0) {
+    	// Check for Ethernet hardware present
+    	if (Ethernet.hardwareStatus() == EthernetNoHardware) {
+      		while (true) {
+        		delay(1); // do nothing, no point running without Ethernet hardware
+      		}
+    	}
+    	if (Ethernet.linkStatus() == LinkOFF) {
+            // No ethernet link detected
+   		}
+
+    	// try to congifure using IP address instead of DHCP:
+   		Ethernet.begin(mac, fallback_client_ip);
+  	} else {
+		// DHCP assigned IP could be found with: Ethernet.localIP();
+  	}
+
+	delay(1000);
+
+	static struct micro_ros_agent_locator locator;
+	locator.address = agent_ip;
+	locator.port = agent_port;
+
+	return locator;
+}
+
+static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAddress fallback_client_ip, IPAddress agent_ip, uint agent_port){
+
+	static struct micro_ros_agent_locator locator;
+	locator = set_microros_native_ethernet_transports(mac, fallback_client_ip, agent_ip, agent_port );
+
+	rmw_uros_set_custom_transport(
+		false,
+		(void *) &locator,
+		arduino_native_ethernet_udp_transport_open,
+		arduino_native_ethernet_udp_transport_close,
+		arduino_native_ethernet_udp_transport_write,
+		arduino_native_ethernet_udp_transport_read
+	);
+}
+
+#endif // ARDUINO_TEENSY41
+
 #endif  // MICRO_ROS_ARDUINO
