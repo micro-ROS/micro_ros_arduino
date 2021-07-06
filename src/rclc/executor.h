@@ -434,6 +434,141 @@ rclc_executor_add_guard_condition(
   rcl_guard_condition_t * gc,
   rclc_gc_callback_t callback);
 
+
+/**
+ *  Removes a subscription from an executor.
+ * * An error is returned if {@link rclc_executor_t.handles} array is empty.
+ * * An error is returned if subscription is not found in {@link rclc_executor_t.handles}.
+ * * The total number_of_subscriptions field of {@link rclc_executor_t.info}
+ *   is decremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] subscription pointer to an allocated and initialized subscription previously added to executor
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_remove_subscription(
+  rclc_executor_t * executor,
+  const rcl_subscription_t * subscription);
+
+
+/**
+ *  Removes a timer from an executor.
+ * * An error is returned if {@link rclc_executor_t.handles} array is empty.
+ * * An error is returned if timer is not found in {@link rclc_executor_t.handles}.
+ * * The total number_of_timers field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] timer pointer to an allocated and initialized timer previously added to executor
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_remove_timer(
+  rclc_executor_t * executor,
+  const rcl_timer_t * timer);
+
+
+/**
+ *  Removes a client from an executor.
+ * * An error is returned if {@link rclc_executor_t.handles} array is empty.
+ * * An error is returned if client is not found in {@link rclc_executor_t.handles}.
+ * * The total number_of_clients field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] client pointer to an allocated and initialized client previously added to executor
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_remove_client(
+  rclc_executor_t * executor,
+  const rcl_client_t * client);
+
+
+/**
+ *  Removes a service from an executor.
+ * * An error is returned if {@link rclc_executor_t.handles} array is empty.
+ * * An error is returned if service is not found in {@link rclc_executor_t.handles}.
+ * * The total number_of_services field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] service pointer to an allocated and initialized service previously added to executor
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_remove_service(
+  rclc_executor_t * executor,
+  const rcl_service_t * service);
+
+/**
+ *  Removes a guard_condition from an executor.
+ * * An error is returned if {@link rclc_executor_t.handles} array is empty.
+ * * An error is returned if guard_condition is not found in {@link rclc_executor_t.handles}.
+ * * The total number_of_guard_conditions field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] guard_condition pointer to an allocated and initialized guard_condition previously added to executor
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_remove_guard_condition(
+  rclc_executor_t * executor,
+  const rcl_guard_condition_t * guard_condition);
+
+
 /**
  *  The spin-some function checks one-time for new data from the DDS-queue.
  * * the timeout is defined in {@link rclc_executor_t.timeout_ns} and can
