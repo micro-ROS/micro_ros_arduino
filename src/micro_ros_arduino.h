@@ -11,6 +11,14 @@
 // beacuse of https://github.com/arduino/ArduinoCore-samd/blob/0b60a79c4b194ed2e76fead95caf1bbce8960049/cores/arduino/sync.h#L28
 #define synchronized synchronized
 #endif
+
+// TODO: This should be fixed
+#if defined(ARDUINO_TEENSY32) || defined(ARDUINO_TEENSY35)
+
+void _write(){
+}
+
+#endif
 // ----------------------
 
 #include <uxr/client/transport.h>
