@@ -12,13 +12,6 @@
 #define synchronized synchronized
 #endif
 
-// TODO: This should be fixed
-#if defined(ARDUINO_TEENSY32) || defined(ARDUINO_TEENSY35)
-
-void _write(){
-}
-
-#endif
 // ----------------------
 
 #include <uxr/client/transport.h>
