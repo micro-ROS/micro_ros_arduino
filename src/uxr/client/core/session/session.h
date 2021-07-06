@@ -400,22 +400,22 @@ UXRDLLAPI void uxr_flash_output_streams(
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic and status).
  *        The aforementioned actions will be performed in a loop until the waiting time for a new message
- *        exceeds the `time`.
+ *        exceeds the `timeout`.
  * @param session   A uxrSession structure previously initialized.
- * @param time      The waiting time in milliseconds.
+ * @param timeout   The waiting time in milliseconds.
  * @return  `true` in case of the Agent confirms the reception of all the output messages. `false` in other case.
  */
 UXRDLLAPI bool uxr_run_session_time(
         uxrSession* session,
-        int time);
+        int timeout);
 
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic and status).
  *        The aforementioned actions will be performed in a loop until the `timeout` is exceeded.
  * @param session   A uxrSession structure previously initialized.
@@ -429,7 +429,7 @@ UXRDLLAPI bool uxr_run_session_timeout(
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic, status, request and replies).
  *        The aforementioned actions will be performed in a loop until a data message is received
  *        or the `timeout` is exceeded.
@@ -444,7 +444,7 @@ UXRDLLAPI bool uxr_run_session_until_data(
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic and status).
  *        The aforementioned actions will be performed in a loop until a message is received
  *        or the `timeout` is exceeded.
@@ -459,7 +459,7 @@ UXRDLLAPI bool uxr_run_session_until_timeout(
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic and status).
  *        The aforementioned actions will be performed in a loop until a the `timeout` is exceeded
  *        or the output reliable streams confirm the delivery of all their messages.
@@ -474,7 +474,7 @@ UXRDLLAPI bool uxr_run_session_until_confirm_delivery(
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic and status).
  *        The aforementioned actions will be performed in a loop until a the `timeout` is exceeded
  *        or all the requested status are received.
@@ -496,7 +496,7 @@ UXRDLLAPI bool uxr_run_session_until_all_status(
 /**
  * @brief  Keeps communication between the Client and the Agent.
  *         This function involves the following actions:
- *          1. flashing all the output streams sending the data through the transport,
+ *          1. flushing all the output streams sending the data through the transport,
  *          2. listening messages from the Agent calling the associated callback (topic and status).
  *        The aforementioned actions will be performed in a loop until a the `timeout` is exceeded
  *        or one of the requested status is received.
