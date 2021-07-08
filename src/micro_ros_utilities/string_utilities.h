@@ -50,6 +50,24 @@ rosidl_runtime_c__String
 micro_ros_string_utilities_init(const char * data);
 
 /**
+ *  Create a rosidl_runtime_c__String from a size
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] size size of the required string
+ * \return `rosidl_runtime_c__String` string of size size
+ */
+MICRO_ROS_UTILITIES_PUBLIC
+rosidl_runtime_c__String
+micro_ros_string_utilities_init_with_size(const size_t size);
+
+/**
  *  Create a rosidl_runtime_c__String from a char pointer
  *
  * <hr>
