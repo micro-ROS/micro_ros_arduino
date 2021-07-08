@@ -60,3 +60,14 @@ extern "C"
     return Serial.readBytes((char *)buf, len);
   }
 }
+
+// ---- Build fixes -----
+
+// TODO: This should be fixed
+#if defined(ARDUINO_TEENSY32) || defined(ARDUINO_TEENSY35)
+
+extern "C" void _write(){
+}
+
+#endif
+// ----------------------
