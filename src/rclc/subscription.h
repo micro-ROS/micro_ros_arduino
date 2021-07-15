@@ -78,6 +78,35 @@ rclc_subscription_init_best_effort(
   const rosidl_message_type_support_t * type_support,
   const char * topic_name);
 
+
+/**
+ *  Creates an rcl subscription with defined QoS
+ *
+ *  * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes (in RCL)
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[inout] subscription -  a zero-initialized rcl_subscription_t
+ * \param[in] node the rcl node
+ * \param[in] type_support the message data type
+ * \param[in] topic_name the name of subscribed topic
+ * \param[in] qos_profile the qos of the topic
+ * \return `RCL_RET_OK` if successful
+ * \return `RCL_ERROR` (or other error code) if an error occurred
+ */
+RCLC_PUBLIC
+rcl_ret_t
+rclc_subscription_init(
+  rcl_subscription_t * subscription,
+  rcl_node_t * node,
+  const rosidl_message_type_support_t * type_support,
+  const char * topic_name,
+  const rmw_qos_profile_t * qos_profile);
+
 #if __cplusplus
 }
 #endif
