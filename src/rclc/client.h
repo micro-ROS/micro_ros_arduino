@@ -78,6 +78,34 @@ rclc_client_init_best_effort(
   const rosidl_service_type_support_t * type_support,
   const char * service_name);
 
+/**
+ *  Creates an rcl client with defined QoS
+ *
+ *  * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes (in RCL)
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[inout] client pointer to zero_initialized rcl_client_t
+ * \param[in] node pointer to an initialized rcl node
+ * \param[in] type_support the message data type
+ * \param[in] service_name the name of service topic
+ * \param[in] qos_profile the qos of the topic
+ * \return `RCL_RET_OK` if successful
+ * \return `RCL_ERROR` (or other error code) if an error has occurred
+ */
+RCLC_PUBLIC
+rcl_ret_t
+rclc_client_init(
+  rcl_client_t * client,
+  const rcl_node_t * node,
+  const rosidl_service_type_support_t * type_support,
+  const char * service_name,
+  const rmw_qos_profile_t * qos_profile);
+
 #if __cplusplus
 }
 #endif
