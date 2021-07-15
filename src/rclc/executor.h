@@ -568,6 +568,30 @@ rclc_executor_remove_guard_condition(
   rclc_executor_t * executor,
   const rcl_guard_condition_t * guard_condition);
 
+/**
+ *  The executor prepare function prepare the waitset of the executor if
+ *  it is invalid. Does nothing if a valid waitset is already prepared.
+ *
+ * Memory is dynamically allocated within rcl-layer, when DDS queue is accessed with rcl_wait_set_init()
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \return `RCL_RET_OK` if executor prepare operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+RCLC_PUBLIC
+rcl_ret_t
+rclc_executor_prepare(
+  rclc_executor_t * executor);
 
 /**
  *  The spin-some function checks one-time for new data from the DDS-queue.
