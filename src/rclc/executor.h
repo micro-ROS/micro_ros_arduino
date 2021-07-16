@@ -222,6 +222,39 @@ rclc_executor_add_subscription(
   rclc_executor_handle_invocation_t invocation);
 
 /**
+ *  Adds a subscription to an executor.
+ * * An error is returned, if {@link rclc_executor_t.handles} array is full.
+ * * The total number_of_subscriptions field of {@link rclc_executor_t.info}
+ *   is incremented by one.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param [inout] executor pointer to initialized executor
+ * \param [in] subscription pointer to an allocated subscription
+ * \param [in] msg pointer to an allocated message
+ * \param [in] callback    function pointer to a callback
+ * \param [in] context     type-erased ptr to additional callback context
+ * \param [in] invocation  invocation type for the callback (ALWAYS or only ON_NEW_DATA)
+ * \return `RCL_RET_OK` if add-operation was successful
+ * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer (NULL context is ignored)
+ * \return `RCL_RET_ERROR` if any other error occured
+ */
+rcl_ret_t
+rclc_executor_add_subscription_with_context(
+  rclc_executor_t * executor,
+  rcl_subscription_t * subscription,
+  void * msg,
+  rclc_subscription_callback_with_context_t callback,
+  void * context,
+  rclc_executor_handle_invocation_t invocation);
+
+/**
  *  Adds a timer to an executor.
  * * An error is returned, if {@link rclc_executor_t.handles} array is full.
  * * The total number_of_timers field of {@link rclc_executor_t.info} is
