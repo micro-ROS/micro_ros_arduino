@@ -2738,7 +2738,7 @@ rmw_count_subscribers(
  *   However, access to the gid is not synchronized.
  *   It is not safe to read or write `gid` while rmw_get_gid_for_publisher() uses it.
  *
- * \pre Given `publisher` must be a valid subscription, as returned by rmw_create_publisher().
+ * \pre Given `publisher` must be a valid publisher, as returned by rmw_create_publisher().
  *
  * \param[in] publisher Publisher to get a gid from.
  * \param[out] gid Publisher's unique identifier, populated on success
