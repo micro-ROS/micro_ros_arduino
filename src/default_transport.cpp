@@ -64,7 +64,7 @@ extern "C"
 // ---- Build fixes -----
 
 // TODO: This should be fixed
-#if defined(ARDUINO_TEENSY32) || defined(ARDUINO_TEENSY35)
+#if defined(ARDUINO_TEENSY32) || defined(ARDUINO_TEENSY35) || defined(ARDUINO_TEENSY36)
 
 extern "C" void _write(){
 }
