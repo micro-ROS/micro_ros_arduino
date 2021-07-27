@@ -6,7 +6,7 @@ https://github.com/ament/googletest.git 059029afcd06de344ad0ef72dc4554ada268060c
 https://github.com/ament/ament_cmake.git 589cf00e21b100f2844b127bb53743b7bf29ee7b
 https://github.com/ament/ament_lint.git 418a69c7e0f922adc889ac1bc2a7dcf721bf7060
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
-https://github.com/micro-ROS/rmw-microxrcedds.git 7c345cf306caf342f7da023332fa161b49839d67
+https://github.com/micro-ROS/rmw-microxrcedds.git e483ca62ff3d0843748b4aa8008bdc6de61abba7
 https://github.com/micro-ROS/rcl fc14a9a73f5e0579ec0c902a1a4375c9a013cabf
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git acb2fb6f7b5bde21b47fd7e8c03d84f20b302887
 https://github.com/micro-ROS/rosidl_typesupport.git 5d974dbee4cd6988ce33923246eb404db327fad8
