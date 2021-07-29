@@ -233,7 +233,7 @@ rclc_executor_add_subscription(
   rclc_executor_t * executor,
   rcl_subscription_t * subscription,
   void * msg,
-  rclc_callback_t callback,
+  rclc_subscription_callback_t callback,
   rclc_executor_handle_invocation_t invocation);
 
 /**
