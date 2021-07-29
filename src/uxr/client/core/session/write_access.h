@@ -116,12 +116,13 @@ UXRDLLAPI uint16_t uxr_prepare_output_stream(
  *        The submessage will be sent when `uxr_flash_output_stream` or `uxr_run_session` function are called.
  *        This function handles the buffer flush by means of  `uxrOnBuffersFull` callback.
  *        As a result of the reception of this submessage, the Agent will write a topic into the DDS Global-Data-Space.
- * @param session           A uxrSession structure previously initialized.
- * @param stream_id         The output stream identifier where the WRITE_DATA submessage will be buffered.
- * @param datawriter_id     The identifier of the XRCE DataWriter that will write the topic into the DDS GDS.
- * @param ub                The ucdrBuffer structure used for serializing the topic.
- * @param data_size         The size of the topic in bytes.
- * @param flush_callback    Callback that is call by the library when user should flush output buffers.
+ * @param session              A uxrSession structure previously initialized.
+ * @param stream_id            The output stream identifier where the WRITE_DATA submessage will be buffered.
+ * @param datawriter_id        The identifier of the XRCE DataWriter that will write the topic into the DDS GDS.
+ * @param ub                   The ucdrBuffer structure used for serializing the topic.
+ * @param data_size            The size of the topic in bytes.
+ * @param flush_callback       Callback that is call by the library when user should flush output buffers.
+ * @param flush_callback_args  Arguments passed to flush callback.
  * @return A `request_id` that identifies the XRCE request made by the Entity.
  *         This could be used in the `uxr_run_session_until_one_status` or `uxr_run_session_until_all_status` functions.
  *  */
@@ -132,7 +133,8 @@ UXRDLLAPI uint16_t uxr_prepare_output_stream_fragmented(
         uxrObjectId datawriter_id,
         ucdrBuffer* ub,
         size_t data_size,
-        uxrOnBuffersFull flush_callback);
+        uxrOnBuffersFull flush_callback,
+        void* flush_callback_args);
 
 /** @}*/
 
