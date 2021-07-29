@@ -31,10 +31,17 @@ extern "C"
 typedef enum
 {
   SUBSCRIPTION,
+  SUBSCRIPTION_WITH_CONTEXT,
   TIMER,
+  // TIMER_WITH_CONTEXT,  // TODO
   CLIENT,
+  CLIENT_WITH_REQUEST_ID,
+  // CLIENT_WITH_CONTEXT,  // TODO
   SERVICE,
+  SERVICE_WITH_REQUEST_ID,
+  SERVICE_WITH_CONTEXT,
   GUARD_CONDITION,
+  // GUARD_CONDITION_WITH_CONTEXT,  //TODO
   NONE
 } rclc_executor_handle_type_t;
 
@@ -46,21 +53,13 @@ typedef enum
   ALWAYS
 } rclc_executor_handle_invocation_t;
 
-typedef enum
-{
-  CB_UNDEFINED,
-  CB_WITHOUT_REQUEST_ID,
-  CB_WITH_REQUEST_ID,
-  CB_WITH_CONTEXT,
-} rclc_executor_handle_callback_type_t;
-
-
-/// Type definition for callback function.
-typedef void (* rclc_callback_t)(const void *);
-
 /// Type definition for subscription callback function
 /// - incoming message
-// typedef void (* rclc_subscription_callback_t)(const void *);
+typedef void (* rclc_subscription_callback_t)(const void *);
+
+/// Type definition (duplicate) for subscription callback function (alias for foxy and galactic).
+/// - incoming message
+typedef rclc_subscription_callback_t rclc_callback_t;
 
 /// Type definition for subscription callback function
 /// - incoming message
@@ -137,7 +136,7 @@ typedef struct
 
   /// Storage for callbacks
   union {
-    rclc_callback_t callback;
+    rclc_subscription_callback_t subscription_callback;
     rclc_subscription_callback_with_context_t subscription_callback_with_context;
     rclc_service_callback_t service_callback;
     rclc_service_callback_with_request_id_t service_callback_with_reqid;
@@ -159,8 +158,6 @@ typedef struct
   /// Interval variable. Flag, which is true, if new data is available from DDS queue
   /// (is set after calling rcl_take)
   bool data_available;
-  /// callback type for service/client
-  rclc_executor_handle_callback_type_t callback_type;
 } rclc_executor_handle_t;
 
 /// Information about total number of subscriptions, guard_conditions, timers, subscription etc.
