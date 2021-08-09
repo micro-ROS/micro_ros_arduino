@@ -29,13 +29,13 @@ extern "C"
 #include "rcutils/macros.h"
 #include "rcutils/visibility_control.h"
 
-struct rcutils_string_map_impl_t;
+struct rcutils_string_map_impl_s;
 
 /// The structure holding the metadata for a string map.
-typedef struct RCUTILS_PUBLIC_TYPE rcutils_string_map_t
+typedef struct RCUTILS_PUBLIC_TYPE rcutils_string_map_s
 {
   /// A pointer to the PIMPL implementation type.
-  struct rcutils_string_map_impl_t * impl;
+  struct rcutils_string_map_impl_s * impl;
 } rcutils_string_map_t;
 
 /// Return an empty string map struct.

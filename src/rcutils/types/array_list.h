@@ -29,13 +29,13 @@ extern "C"
 #include "rcutils/types/rcutils_ret.h"
 #include "rcutils/visibility_control.h"
 
-struct rcutils_array_list_impl_t;
+struct rcutils_array_list_impl_s;
 
 /// The structure holding the metadata for an array list.
-typedef struct RCUTILS_PUBLIC_TYPE rcutils_array_list_t
+typedef struct RCUTILS_PUBLIC_TYPE rcutils_array_list_s
 {
   /// A pointer to the PIMPL implementation type.
-  struct rcutils_array_list_impl_t * impl;
+  struct rcutils_array_list_impl_s * impl;
 } rcutils_array_list_t;
 
 /**

@@ -153,7 +153,7 @@ RCUTILS_WARN_UNUSED
 rcutils_ret_t rcutils_logging_shutdown(void);
 
 /// The structure identifying the caller location in the source code.
-typedef struct rcutils_log_location_t
+typedef struct rcutils_log_location_s
 {
   /// The name of the function containing the log call.
   const char * function_name;

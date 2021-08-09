@@ -29,7 +29,7 @@ extern "C"
 #include "rcutils/visibility_control.h"
 
 /// The structure holding the metadata for a char array.
-typedef struct RCUTILS_PUBLIC_TYPE rcutils_char_array_t
+typedef struct RCUTILS_PUBLIC_TYPE rcutils_char_array_s
 {
   /// A pointer to the allocated memory for this char array.
   char * buffer;
