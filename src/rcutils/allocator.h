@@ -44,7 +44,7 @@ extern "C"
  * Developers should note that, while the fields of a const-qualified allocator
  * struct cannot be modified, the state of the allocator can be modified.
  */
-typedef struct rcutils_allocator_t
+typedef struct rcutils_allocator_s
 {
   /// Allocate memory, given a size and the `state` pointer.
   /** An error should be indicated by returning `NULL`. */

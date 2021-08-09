@@ -32,7 +32,7 @@ extern "C"
 #include "rcutils/visibility_control.h"
 
 /// The structure holding the metadata for a string array.
-typedef struct RCUTILS_PUBLIC_TYPE rcutils_string_array_t
+typedef struct RCUTILS_PUBLIC_TYPE rcutils_string_array_s
 {
   /// The number of strings that can be stored in the string array.
   size_t size;

@@ -87,7 +87,7 @@ rcl_get_zero_initialized_subscription(void);
  * For C++ a template function is used:
  *
  * ```cpp
- * #include <rosidl_runtime_cpp/message_type_support.hpp>
+ * #include <rosidl_typesupport_cpp/message_type_support.hpp>
  * #include <std_msgs/msgs/string.hpp>
  * using rosidl_typesupport_cpp::get_message_type_support_handle;
  * const rosidl_message_type_support_t * string_ts =

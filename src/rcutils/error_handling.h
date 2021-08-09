@@ -104,14 +104,14 @@ extern "C"
     1)
 
 /// Struct wrapping a fixed-size c string used for returning the formatted error string.
-typedef struct rcutils_error_string_t
+typedef struct rcutils_error_string_s
 {
   /// The fixed-size C string used for returning the formatted error string.
   char str[RCUTILS_ERROR_MESSAGE_MAX_LENGTH];
 } rcutils_error_string_t;
 
 /// Struct which encapsulates the error state set by RCUTILS_SET_ERROR_MSG().
-typedef struct rcutils_error_state_t
+typedef struct rcutils_error_state_s
 {
   /// User message storage, limited to RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH characters.
   char message[RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH];
