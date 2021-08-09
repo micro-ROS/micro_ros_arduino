@@ -24,6 +24,7 @@
 
 #include "test_msgs/msg/arrays.hpp"
 #include "test_msgs/msg/basic_types.hpp"
+#include "test_msgs/msg/bounded_plain_sequences.hpp"
 #include "test_msgs/msg/bounded_sequences.hpp"
 #include "test_msgs/msg/builtins.hpp"
 #include "test_msgs/msg/constants.hpp"
@@ -334,6 +335,53 @@ get_messages_unbounded_sequences()
   }
   {
     auto msg = std::make_shared<test_msgs::msg::UnboundedSequences>();
+    // check default sequences
+    msg->alignment_check = 4;
+    messages.push_back(msg);
+  }
+  return messages;
+}
+
+std::vector<test_msgs::msg::BoundedPlainSequences::SharedPtr>
+get_messages_bounded_plain_sequences()
+{
+  auto basic_types_msgs = get_messages_basic_types();
+  auto msg = std::make_shared<test_msgs::msg::UnboundedSequences>();
+  std::vector<test_msgs::msg::BoundedPlainSequences::SharedPtr> messages;
+  {
+    auto msg = std::make_shared<test_msgs::msg::BoundedPlainSequences>();
+    msg->bool_values = {{false, true, false}};
+    msg->byte_values = {{0, 1, 0xff}};
+    msg->char_values = {{0, 1, 255}};
+    msg->float32_values = {{0.0f, 1.125f, -2.125f}};
+    msg->float64_values = {{0, 1.125, -2.125}};
+    msg->int8_values = {{
+      0, (std::numeric_limits<int8_t>::max)(), (std::numeric_limits<int8_t>::min)()}};
+    msg->uint8_values = {{0, 1, (std::numeric_limits<uint8_t>::max)()}};
+    msg->int16_values = {{
+      0, (std::numeric_limits<int16_t>::max)(), (std::numeric_limits<int16_t>::min)()}};
+    msg->uint16_values = {{0, 1, (std::numeric_limits<uint16_t>::max)()}};
+    // The narrowing static cast is required to avoid build errors on Windows.
+    msg->int32_values = {{
+      static_cast<int32_t>(0),
+      (std::numeric_limits<int32_t>::max)(),
+      (std::numeric_limits<int32_t>::min)()
+    }};
+    msg->uint32_values = {{0, 1, (std::numeric_limits<uint32_t>::max)()}};
+    msg->int64_values.resize(3);
+    msg->int64_values[0] = 0;
+    msg->int64_values[1] = (std::numeric_limits<int64_t>::max)();
+    msg->int64_values[2] = (std::numeric_limits<int64_t>::min)();
+    msg->uint64_values = {{0, 1, (std::numeric_limits<uint64_t>::max)()}};
+    msg->basic_types_values.resize(3);
+    msg->basic_types_values[0] = *basic_types_msgs[0];
+    msg->basic_types_values[1] = *basic_types_msgs[1];
+    msg->basic_types_values[2] = *basic_types_msgs[2];
+    msg->alignment_check = 2;
+    messages.push_back(msg);
+  }
+  {
+    auto msg = std::make_shared<test_msgs::msg::BoundedPlainSequences>();
     // check default sequences
     msg->alignment_check = 4;
     messages.push_back(msg);
