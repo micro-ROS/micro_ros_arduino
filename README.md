@@ -44,8 +44,8 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 ## How to build the precompiled library
 
 ```bash
-docker pull microros/micro_ros_static_library_builder:rolling
-docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:rolling
+docker pull microros/micro_ros_static_library_builder:galactic
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:galactic
 ```
 Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 
