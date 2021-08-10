@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
+/// \file
 
 #ifndef RCUTILS__CMDLINE_PARSER_H_
 #define RCUTILS__CMDLINE_PARSER_H_

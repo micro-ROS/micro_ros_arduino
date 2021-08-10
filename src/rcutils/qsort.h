@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// @file
+/// \file
 
 #ifndef RCUTILS__QSORT_H_
 #define RCUTILS__QSORT_H_
