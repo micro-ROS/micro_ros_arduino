@@ -23,7 +23,7 @@
 // It has been modified to take a custom allocator and to fit some of our
 // style standards.
 
-/// @file
+/// \file
 
 #ifndef RCUTILS__REPL_STR_H_
 #define RCUTILS__REPL_STR_H_

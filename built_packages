@@ -3,9 +3,9 @@ https://github.com/ros-controls/control_msgs 11fdcdf76434d8ca9047787d17add4e18f5
 https://github.com/eProsima/Micro-CDR.git 21c99e0d8d140c50b45f13c8ed3716cb9fa0fb27
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 4ccec07f4089ec1ec49e72c4ed0484ae6515cd75
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f646261d5b8f8f48fbe075e8ff4730bf27e1ce6b
-https://github.com/micro-ROS/rcutils d5cfc57db97a86494ccc7169489074ba8cdf1a1d
+https://github.com/micro-ROS/rcutils 831aef91fe39c64b052af1139d6047814d5bd52b
 https://github.com/ros2/rclc 59632f29b6fe93240694d736c474a3584410cd2a
-https://github.com/micro-ROS/rosidl_typesupport.git 341e5a52fa0538920556ef6dbefa3dfb544e2e5e
+https://github.com/micro-ROS/rosidl_typesupport.git fd4d39ad49c9c762612f40b72b6e6a91488b6e88
 https://github.com/micro-ROS/rmw-microxrcedds.git d6b00855680cb2b02d83bdbcaa34e1acf34b70b9
 https://github.com/micro-ROS/rcl f0e99668df8df381e7e2ec541b309b50006fc930
 https://github.com/micro-ROS/micro_ros_utilities c829971bd33ac1f14a94aa722476110b4b59eaf9
@@ -16,10 +16,10 @@ https://github.com/ros2/rcpputils.git cd4ce08ca61a9b641c0a6d6e02a9302de804b0b0
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/rcl_logging.git 77b5b2a6c948a6db1986501edc83f12ceadedba3
 https://github.com/ros2/rcl_interfaces.git 9a44202bbaf76e19fde21da0e90d8afbe89bd263
-https://github.com/ros2/rosidl.git b3e3e90580e2d300e2889b71a81715368b8a913d
+https://github.com/ros2/rosidl.git 049870446a4eb1b1e3d501c7a8ee692cf111bfb7
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
 https://github.com/ros2/rcl.git da4f1b92d2395e4f50c9c9c413da2f5c259dc162
-https://github.com/ros2/rmw_implementation.git c502d16a6280e82ed24dd1b6ce6649c528297dde
+https://github.com/ros2/rmw_implementation.git f6277473b7c0099a20201d58b0d1d1f3770fa683
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
