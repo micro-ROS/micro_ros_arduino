@@ -16,10 +16,10 @@ https://github.com/ros2/rcpputils.git cd4ce08ca61a9b641c0a6d6e02a9302de804b0b0
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/rcl_logging.git 77b5b2a6c948a6db1986501edc83f12ceadedba3
 https://github.com/ros2/rcl_interfaces.git 9a44202bbaf76e19fde21da0e90d8afbe89bd263
-https://github.com/ros2/rosidl.git 049870446a4eb1b1e3d501c7a8ee692cf111bfb7
+https://github.com/ros2/rosidl.git f24e385e519c0ffa1500b5305ec5d8c5c3b2e011
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
 https://github.com/ros2/rcl.git da4f1b92d2395e4f50c9c9c413da2f5c259dc162
-https://github.com/ros2/rmw_implementation.git f6277473b7c0099a20201d58b0d1d1f3770fa683
+https://github.com/ros2/rmw_implementation.git 0fcac11eef35dbfd393695c8550c7af9945ebd82
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
