@@ -260,6 +260,7 @@ rclc_executor_add_subscription(
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer (NULL context is ignored)
  * \return `RCL_RET_ERROR` if any other error occured
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_add_subscription_with_context(
   rclc_executor_t * executor,
@@ -504,6 +505,7 @@ rclc_executor_add_guard_condition(
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
  * \return `RCL_RET_ERROR` if any other error occured
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_remove_subscription(
   rclc_executor_t * executor,
@@ -531,6 +533,7 @@ rclc_executor_remove_subscription(
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
  * \return `RCL_RET_ERROR` if any other error occured
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_remove_timer(
   rclc_executor_t * executor,
@@ -558,6 +561,7 @@ rclc_executor_remove_timer(
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
  * \return `RCL_RET_ERROR` if any other error occured
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_remove_client(
   rclc_executor_t * executor,
@@ -585,6 +589,7 @@ rclc_executor_remove_client(
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
  * \return `RCL_RET_ERROR` if any other error occured
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_remove_service(
   rclc_executor_t * executor,
@@ -611,6 +616,7 @@ rclc_executor_remove_service(
  * \return `RCL_RET_INVALID_ARGUMENT` if any parameter is a null pointer
  * \return `RCL_RET_ERROR` if any other error occured
  */
+RCLC_PUBLIC
 rcl_ret_t
 rclc_executor_remove_guard_condition(
   rclc_executor_t * executor,
