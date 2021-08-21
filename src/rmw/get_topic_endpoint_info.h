@@ -151,7 +151,7 @@ rmw_get_publishers_info_by_topic(
  * \param[in] topic_name Name of the topic for subscription lookup, often a fully qualified
  *   topic name but not necessarily (see rmw_create_subscription()).
  * \param[in] no_mangle Whether to mangle the topic name before subscription lookup or not.
- * \param[out] publishers_info Array of subscription information, populated on success,
+ * \param[out] subscriptions_info Array of subscription information, populated on success,
  *   left unchanged on failure.
  *   If populated, it is up to the caller to finalize this array later on,
  *   using rmw_topic_endpoint_info_array_fini().

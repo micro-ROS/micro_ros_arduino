@@ -66,9 +66,9 @@ rmw_get_zero_initialized_event(void);
 
 /// Initialize a rmw publisher event.
 /**
- * \param[in|out] rmw_event to initialize
+ * \param[inout] rmw_event to initialize
  * \param[in] publisher to initialize with
- * \param[in|out] event_type for the event to initialize
+ * \param[inout] event_type for the event to initialize
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if invalid argument, or
  * \return `RMW_RET_UNSUPPORTED` if event_type is not supported, or
@@ -84,9 +84,9 @@ rmw_publisher_event_init(
 
 /// Initialize a rmw subscription event.
 /**
- * \param[in|out] rmw_event to initialize
+ * \param[inout] rmw_event to initialize
  * \param[in] subscription to initialize with
- * \param[in|out] event_type for the event to handle
+ * \param[inout] event_type for the event to handle
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if invalid argument, or
  * \return `RMW_RET_UNSUPPORTED` if event_type is not supported, or
@@ -103,7 +103,7 @@ rmw_subscription_event_init(
 /// Take an event from the event handle.
 /**
  * \param[in] event_handle event object to take from
- * \param[in|out] event_info event info object to write taken data into
+ * \param[inout] event_info event info object to write taken data into
  * \param[out] taken boolean flag indicating if an event was taken or not
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_BAD_ALLOC` if memory allocation failed, or

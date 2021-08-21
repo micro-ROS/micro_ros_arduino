@@ -23,7 +23,12 @@
 #include <rcl/error_handling.h>
 #include <rcl_lifecycle/rcl_lifecycle.h>
 
-#include "rclc/node.h"
+#include <lifecycle_msgs/srv/change_state.h>
+#include <lifecycle_msgs/srv/get_state.h>
+#include <lifecycle_msgs/srv/get_available_states.h>
+
+#include <rclc/node.h>
+#include <rclc/executor.h>
 #include "rclc_lifecycle/visibility_control.h"
 
 typedef struct rclc_lifecycle_callback_map_t
@@ -38,7 +43,60 @@ typedef struct rclc_lifecycle_node_t
   rcl_node_t * node;
   rcl_lifecycle_state_machine_t * state_machine;
   rclc_lifecycle_callback_map_t callbacks;
+  bool publish_transitions;
+
+  lifecycle_msgs__srv__ChangeState_Request cs_req;
+  lifecycle_msgs__srv__ChangeState_Response cs_res;
+  lifecycle_msgs__srv__GetState_Request gs_req;
+  lifecycle_msgs__srv__GetState_Response gs_res;
+  lifecycle_msgs__srv__GetAvailableStates_Request gas_req;
+  lifecycle_msgs__srv__GetAvailableStates_Response gas_res;
 } rclc_lifecycle_node_t;
+
+/// Structure which encapsulates a ROS Lifecycle Node.
+typedef struct rclc_lifecycle_service_context_t
+{
+  rclc_lifecycle_node_t * lifecycle_node;
+} rclc_lifecycle_service_context_t;
+
+RCLC_LIFECYCLE_PUBLIC
+rcl_ret_t
+rclc_lifecycle_init_get_state_server(
+  rclc_lifecycle_node_t * lifecycle_node,
+  rclc_executor_t * executor);
+
+RCLC_LIFECYCLE_PUBLIC
+rcl_ret_t
+rclc_lifecycle_init_get_available_states_server(
+  rclc_lifecycle_node_t * lifecycle_node,
+  rclc_executor_t * executor);
+
+RCLC_LIFECYCLE_PUBLIC
+rcl_ret_t
+rclc_lifecycle_init_change_state_server(
+  rclc_lifecycle_node_t * lifecycle_node,
+  rclc_executor_t * executor);
+
+RCLC_LIFECYCLE_PUBLIC
+void
+rclc_lifecycle_get_state_callback(
+  const void * req,
+  void * res,
+  void * context);
+
+RCLC_LIFECYCLE_PUBLIC
+void
+rclc_lifecycle_get_available_states_callback(
+  const void * req,
+  void * res,
+  void * context);
+
+RCLC_LIFECYCLE_PUBLIC
+void
+rclc_lifecycle_change_state_callback(
+  const void * req,
+  void * res,
+  void * context);
 
 RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
@@ -95,7 +153,7 @@ rclc_lifecycle_execute_callback(
 
 RCLC_LIFECYCLE_PUBLIC
 rcl_ret_t
-rcl_lifecycle_node_fini(
+rclc_lifecycle_node_fini(
   rclc_lifecycle_node_t * node,
   rcl_allocator_t * allocator);
 

@@ -100,11 +100,17 @@ rmw_validate_namespace(
 /// Deterimine if a given namespace is valid.
 /**
  * This is an overload with an extra parameter for the length of namespace_.
- * If a non RMW_RET_OK return value is returned, the RMW error message will be set
- *
- * \param[in] namespace_length The number of characters in namespace_.
+ * If a non RMW_RET_OK return value is returned, the RMW error message will be set.
  *
  * \sa rmw_validate_namespace(const char *, int *, size_t *)
+ *
+ * \param[in] namespace_ namespace to be validated
+ * \param[in] namespace_length The number of characters in namespace_.
+ * \param[out] validation_result int in which the result of the check is stored
+ * \param[out] invalid_index index of the input string where an error occurred
+ * \returns `RMW_RET_OK` on successfully running the check, or
+ * \returns `RMW_RET_INVALID_ARGUMENT` on invalid parameters, or
+ * \returns `RMW_RET_ERROR` when an unspecified error occurs.
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
@@ -115,7 +121,12 @@ rmw_validate_namespace_with_size(
   int * validation_result,
   size_t * invalid_index);
 
-/// Return a validation result description, or NULL if unknown or RMW_NAMESPACE_VALID.
+/// Return a validation result description, or NULL if RMW_NAMESPACE_VALID.
+/**
+ * \param[in] validation_result the result of validation
+ * \returns `NULL` if the validation result is `RMW_NAMESPACE_VALID`, or
+ * \returns a string representing the validation result.
+ */
 RMW_PUBLIC
 RMW_WARN_UNUSED
 const char *

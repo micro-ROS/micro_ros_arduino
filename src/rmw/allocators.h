@@ -34,7 +34,7 @@ rmw_allocate(size_t size);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] pointer pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -50,7 +50,7 @@ rmw_node_allocate(void);
 
 /// Free memory allocated to this node pointer using rcutils default allocator's deallocate()
 /**
- * \param[in] pointer to allocated memory
+ * \param[in] node pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -66,7 +66,7 @@ rmw_publisher_allocate(void);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] publisher pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -82,7 +82,7 @@ rmw_subscription_allocate(void);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] subscription pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -98,7 +98,7 @@ rmw_guard_condition_allocate(void);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] guard_condition pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -114,7 +114,7 @@ rmw_client_allocate(void);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] client pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -130,7 +130,7 @@ rmw_service_allocate(void);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] service pointer to allocated memory
  */
 RMW_PUBLIC
 void
@@ -146,7 +146,7 @@ rmw_wait_set_allocate(void);
 
 /// Free memory using rcutils default allocator's deallocate()
 /**
- * \param[in] size pointer to allocated memory
+ * \param[in] wait_set pointer to allocated memory
  */
 RMW_PUBLIC
 void
