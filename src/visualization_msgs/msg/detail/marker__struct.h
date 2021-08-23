@@ -117,6 +117,7 @@ enum
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 // Member 'ns'
+// Member 'texture_resource'
 // Member 'text'
 // Member 'mesh_resource'
 #include "rosidl_runtime_c/string.h"
@@ -131,6 +132,12 @@ enum
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 // Member 'points'
 #include "geometry_msgs/msg/detail/point__struct.h"
+// Member 'texture'
+#include "sensor_msgs/msg/detail/compressed_image__struct.h"
+// Member 'uv_coordinates'
+#include "visualization_msgs/msg/detail/uv_coordinate__struct.h"
+// Member 'mesh_file'
+#include "visualization_msgs/msg/detail/mesh_file__struct.h"
 
 // Struct defined in msg/Marker in the package visualization_msgs.
 typedef struct visualization_msgs__msg__Marker
@@ -147,8 +154,12 @@ typedef struct visualization_msgs__msg__Marker
   bool frame_locked;
   geometry_msgs__msg__Point__Sequence points;
   std_msgs__msg__ColorRGBA__Sequence colors;
+  rosidl_runtime_c__String texture_resource;
+  sensor_msgs__msg__CompressedImage texture;
+  visualization_msgs__msg__UVCoordinate__Sequence uv_coordinates;
   rosidl_runtime_c__String text;
   rosidl_runtime_c__String mesh_resource;
+  visualization_msgs__msg__MeshFile mesh_file;
   bool mesh_use_embedded_materials;
 } visualization_msgs__msg__Marker;
 

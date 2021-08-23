@@ -70,7 +70,7 @@ rmw_security_options_copy(
  *
  * \param[in] security_root_path path to be set.
  * \param[in] allocator allocator used to allocate the new path.
- * \param[in|out] security_options security options to be set.
+ * \param[inout] security_options security options to be set.
  * \returns RMW_RET_BAD_ALLOC, or
  * \returns RMW_RET_OK
  */

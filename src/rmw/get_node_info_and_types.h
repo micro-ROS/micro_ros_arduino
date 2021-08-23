@@ -138,7 +138,7 @@ rmw_get_subscriber_names_and_types_by_node(
  * \pre Given `topic_names_and_types` must be a zero-initialized array of names and types,
  *   as returned by rmw_get_zero_initialized_names_and_types().
  *
- * \param[in] Local node to query the ROS graph.
+ * \param[in] node Local node to query the ROS graph.
  * \param[in] allocator Allocator to be used when populating the `topic_names_and_types` array.
  * \param[in] node_name Name of the remote node to get information for.
  * \param[in] node_namespace Namespace of the remote node to get information for.
@@ -210,9 +210,9 @@ rmw_get_publisher_names_and_types_by_node(
  *     Check your allocator documentation for further reference.
  *
  * \param[in] node Local node to query the ROS graph.
+ * \param[in] allocator Allocator to be used when populating the `service_names_and_types` array.
  * \param[in] node_name Name of the remote node to get information for.
  * \param[in] node_namespace Namespace of the remote node to get information for.
- * \param[in] no_demangle Whether to demangle all topic names following ROS conventions or not.
  * \param[out] service_names_and_types Array of service names and types the remote node has
  *   created a service server for, populated on success but left unchanged on failure.
  *   If populated, it is up to the caller to finalize this array later on
@@ -279,9 +279,9 @@ rmw_get_service_names_and_types_by_node(
  *     Check your allocator documentation for further reference.
  *
  * \param[in] node Local node to query the ROS graph.
+ * \param[in] allocator Allocator to be used when populating the `service_names_and_types` array.
  * \param[in] node_name Name of the remote node to get information for.
  * \param[in] node_namespace Namespace of the remote node to get information for.
- * \param[in] no_demangle Whether to demangle all topic names following ROS conventions or not.
  * \param[out] service_names_and_types Array of service names and types the remote node has
  *   created a service client for, populated on success but left unchanged on failure.
  *   If populated, it is up to the caller to finalize this array later on

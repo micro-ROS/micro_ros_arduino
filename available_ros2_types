@@ -134,10 +134,12 @@ geometry_msgs/AccelWithCovarianceStamped.msg
 visualization_msgs/ImageMarker.msg
 visualization_msgs/MarkerArray.msg
 visualization_msgs/InteractiveMarkerInit.msg
+visualization_msgs/UVCoordinate.msg
 visualization_msgs/InteractiveMarker.msg
 visualization_msgs/MenuEntry.msg
 visualization_msgs/InteractiveMarkerPose.msg
 visualization_msgs/InteractiveMarkerFeedback.msg
+visualization_msgs/MeshFile.msg
 visualization_msgs/InteractiveMarkerUpdate.msg
 visualization_msgs/Marker.msg
 visualization_msgs/InteractiveMarkerControl.msg

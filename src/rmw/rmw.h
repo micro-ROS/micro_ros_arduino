@@ -745,7 +745,7 @@ rmw_publisher_get_actual_qos(
  *   one registered with `publisher` on creation.
  *
  * \param[in] publisher Publisher to be used to send message.
- * \param[in] ros_message Serialized ROS message to be sent.
+ * \param[in] serialized_message Serialized ROS message to be sent.
  * \param[in] allocation Pre-allocated memory to be used. May be NULL.
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `publisher` is NULL, or
@@ -767,7 +767,7 @@ rmw_publish_serialized_message(
  * Given a message definition and bounds, compute the serialized size.
  *
  * \param[in] type_support The type support of the message to compute.
- * \param[in] bounds Artifical bounds to use on unbounded fields.
+ * \param[in] message_bounds Artifical bounds to use on unbounded fields.
  * \param[out] size The computed size of the serialized message.
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if either argument is null, or
@@ -1001,7 +1001,7 @@ rmw_fini_subscription_allocation(
  * \param[in] topic_name Name of the topic to subscribe to, often a fully qualified
  *   topic name unless `qos_profile` is configured to avoid ROS namespace conventions
  *   i.e. to create a native topic subscription
- * \param[in] qos_profile QoS policies for this subscription
+ * \param[in] qos_policies QoS policies for this subscription
  * \param[in] subscription_options Options for configuring this subscription
  * \return rmw subscription handle, or `NULL` if there was an error
  */
@@ -1858,7 +1858,7 @@ rmw_return_loaned_message_from_subscription(
  * \param[in] service_name Name of the service to be used, often a fully qualified
  *   service name unless `qos_profile` is configured to avoid ROS namespace conventions
  *   i.e. to create a native service client.
- * \param[in] qos_profile QoS policies for this service client's connections.
+ * \param[in] qos_policies QoS policies for this service client's connections.
  * \return rmw service client handle, or `NULL` if there was an error.
  */
 RMW_PUBLIC
@@ -2041,8 +2041,8 @@ rmw_send_request(
  *   It will also be left unchanged if this function succeeds but `taken` is false.
  *
  * \param[in] client Service client to take response from.
- * \param[out] response_header Service response header to write to.
- * \param[out] ros_request Type erased ROS service response to write to.
+ * \param[out] request_header Service response header to write to.
+ * \param[out] ros_response Type erased ROS service response to write to.
  * \param[out] taken Boolean flag indicating if a ROS service response was taken or not.
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_BAD_ALLOC` if memory allocation fails, or
@@ -2272,7 +2272,7 @@ rmw_take_request(
  * \pre Given `ros_response` must be a valid service response, whose type matches the
  *   service type support registered with the `service` on creation.
  *
- * \param[in] client Service server to send a response with.
+ * \param[in] service Service server to send a response with.
  * \param[in] request_header Service response header, same as the one taken
  *   with the corresponding ROS service request.
  * \param[in] ros_response ROS service response to be sent.
@@ -2776,7 +2776,7 @@ rmw_get_gid_for_publisher(const rmw_publisher_t * publisher, rmw_gid_t * gid);
  *
  * \param[in] gid1 First unique identifier to compare.
  * \param[in] gid2 Second unique identifier to compare.
- * \param[out] bool true if both gids are equal, false otherwise.
+ * \param[out] result true if both gids are equal, false otherwise.
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `gid1` or `gid2` is NULL, or
  * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the implementation

@@ -28,9 +28,9 @@ extern "C"
  * \brief Serialized message as a string of bytes.
  *
  * It includes (but it is not limited to) the following members:
- *   \i \c buffer the reference to internal storage, as a pointer
- *   \i \c buffer_length the size of stored contents, as an unsigned integer
- *   \i \c buffer_capacity the capacity of internal storage, as an unsigned integer
+ *   \e \c buffer the reference to internal storage, as a pointer
+ *   \e \c buffer_length the size of stored contents, as an unsigned integer
+ *   \e \c buffer_capacity the capacity of internal storage, as an unsigned integer
  */
 
 /* For now this is a simple aliasing from a serialized message to a uint8 array.
@@ -44,7 +44,7 @@ typedef rcutils_uint8_array_t rmw_serialized_message_t;
 
 /// Initialize a serialized message, zero initializing its contents.
 /**
- * \pre Given serialized message must have been zero initialized.
+ * Given serialized message must have been zero initialized.
  *
  * \param[inout] serialized_message a pointer to the serialized message to initialize
  * \param[in] message_capacity the size of the memory to allocate
@@ -59,7 +59,7 @@ typedef rcutils_uint8_array_t rmw_serialized_message_t;
 
 /// Finalize a serialized message.
 /**
- * \pre Given serialized message must have been initialized with `rmw_serialized_message_init()`.
+ * Given serialized message must have been initialized with `rmw_serialized_message_init()`.
  *
  * \remarks If serialized message is zero initialized, then `RMW_RET_INVALID_ARGUMENT` is returned.
  *
