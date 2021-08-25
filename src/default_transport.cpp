@@ -18,9 +18,9 @@ extern "C"
   {
     (void)unused;
     static uint32_t rollover = 0;
-    static uint64_t last_measure = 0;
+    static uint32_t last_measure = 0;
 
-    uint64_t m = micros();
+    uint32_t m = micros();
     tp->tv_sec = m / 1000000;
     tp->tv_nsec = (m % 1000000) * 1000;
 
