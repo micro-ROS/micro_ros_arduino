@@ -18,11 +18,11 @@ Supported boards are:
 
 Community contributed boards are:
 
-| Board                                                 | Min version | Contributor                                    | Details | Prebuild meta            |
-| ----------------------------------------------------- | ----------- | ---------------------------------------------- | ------- | ------------------------ |
-| [Arduino Due](https://store.arduino.cc/arduino-due)   | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
-| [Arduino Zero](https://store.arduino.cc/arduino-zero) | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
-
+| Board                                                           | Min version | Contributor                                    | Details | Prebuild meta            |
+| --------------------------------------------------------------  | ----------- | ---------------------------------------------- | ------- | ------------------------ |
+| [Arduino Due](https://store.arduino.cc/arduino-due)             | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
+| [Arduino Zero](https://store.arduino.cc/arduino-zero)           | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
+| [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/) | -           | [@amfern](https://github.com/amfern)           |         | `colcon.meta`            |
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 

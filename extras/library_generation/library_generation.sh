@@ -18,6 +18,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("cortex_m3")
     # PLATFORMS+=("portenta-m4")
     PLATFORMS+=("portenta-m7")
+    PLATFORMS+=("kakutef7-m7")
 fi
 
 shift $((OPTIND-1))
@@ -168,6 +169,20 @@ if [[ " ${PLATFORMS[@]} " =~ " portenta-m7 " ]]; then
 
     mkdir -p /project/src/cortex-m7/fpv5-d16-softfp
     cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv5-d16-softfp/libmicroros.a
+fi
+
+######## Build for Kakute F7 M7 core  ########
+if [[ " ${PLATFORMS[@]} " =~ " kakutef7-m7 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/kakutef7-m7_toolchain.cmake /project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/cortex-m7/fpv5-sp-d16-hardfp
+    cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv5-sp-d16-hardfp/libmicroros.a
 fi
 
 ######## Generate extra files ########
