@@ -8,10 +8,10 @@ https://github.com/ros2/rclc 0f37874c44cf529d11f6c8f37a37693dd0ec8a1a
 https://github.com/micro-ROS/rosidl_typesupport.git 5d974dbee4cd6988ce33923246eb404db327fad8
 https://github.com/micro-ROS/rmw-microxrcedds.git 8594729864049188151136e74cb859b5bba01ecc
 https://github.com/micro-ROS/rcl fc14a9a73f5e0579ec0c902a1a4375c9a013cabf
-https://github.com/micro-ROS/micro_ros_msgs.git d9ab835dbdf28a0791ba2b263181f7d05c674511
+https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
 https://github.com/ros2/example_interfaces.git e3caaaf66bf664afc6c59d88a127f9c15597107e
-https://github.com/ros2/rcpputils.git 13b04da7864c3f0afe8a6834ad84c22ca389a4f8
+https://github.com/ros2/rcpputils.git f4ce24de0b9b6b2c0c3807d6ce43418d4e1db331
 https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
 https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48b87dc6645
 https://github.com/ros2/rcl_logging.git d22a6630f039bee97c6667394def926a5426a673
@@ -19,7 +19,7 @@ https://github.com/ros2/rcl_interfaces.git ee04e046132be9d9fdcdaeff8dd54a5d0d9aa
 https://github.com/ros2/rosidl.git 75964cbdb3ba13854e749dcd2dd8274b73a5360c
 https://github.com/ros2/rosidl_defaults.git cbc7ffd38d98c5b15823fc62b0891d2264ae4472
 https://github.com/ros2/rcl.git f96196512edd48f89eefdb6d590a7ef879053971
-https://github.com/ros2/rmw_implementation.git 2a0bea24979ea46b9224b9cc80ea223a750fa80c
+https://github.com/ros2/rmw_implementation.git abdb5837e36f606ebce2e8313e6ca7d2c28a237a
 https://github.com/ros2/rosidl_dds.git e88b1d0e62a2dca0788142cf1fb266a3a3c3d7dc
 https://github.com/ros2/libyaml_vendor.git 4d360d783b3018dfaed6d9ab9c736b720c109702
 https://github.com/ros2/unique_identifier_msgs.git 099923f53d58aa8eba2e1590523457f9d7f20eed
@@ -27,8 +27,8 @@ https://github.com/ros2/common_interfaces.git 0377ea7b95d98457284d0fbfc01bc53f16
 https://github.com/ros2/rmw.git 6d23f9fc6bfe4616e1efeeefee7a927635a83afe
 https://github.com/ament/ament_package.git 3397bb0ae1cc93d93e1e27da31c0bcb0f4fe0f46
 https://github.com/ament/ament_lint.git 418a69c7e0f922adc889ac1bc2a7dcf721bf7060
-https://github.com/ament/googletest.git 059029afcd06de344ad0ef72dc4554ada268060c
-https://github.com/ament/ament_cmake.git 589cf00e21b100f2844b127bb53743b7bf29ee7b
+https://github.com/ament/googletest.git 7c20e2597a2d1503cf9afa159206ab8e9b233830
+https://github.com/ament/ament_cmake.git c47c4a9b925a3f73858f57fa6ad08f4f4ac7e393
 https://github.com/ament/uncrustify_vendor.git 0291bc988c45846400aca50cb973bf04a4de3d56
 https://github.com/ament/ament_index.git 07492c3ada0f835464ef55178080f3df93c22292
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
