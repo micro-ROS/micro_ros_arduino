@@ -17,7 +17,7 @@ https://github.com/ros2/rmw_implementation.git 0fcac11eef35dbfd393695c8550c7af99
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
 https://github.com/ros-controls/control_msgs 11fdcdf76434d8ca9047787d17add4e18f56e9d6
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 7efaceec0a8156f0f6c16a988b5670781892e923
-https://github.com/micro-ROS/rcl ae81e2a36ecb539363196d6ca8245b7d367b4355
+https://github.com/micro-ROS/rcl 330543f8a2a4fd4a3512fbfe39e1f853af3e5f6d
 https://github.com/micro-ROS/micro_ros_utilities c829971bd33ac1f14a94aa722476110b4b59eaf9
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 7cf01f86e03aebf7d7ad6ed258eb50503e61e34b
 https://github.com/micro-ROS/rosidl_typesupport.git ef1eb4d22610355428d8576216ca9a75789567aa
