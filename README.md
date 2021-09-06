@@ -1,6 +1,7 @@
 # micro-ROS for Arduino
 
-This is a **experimental** micro-ROS library for baremetal projects based on Arduino IDE or Arduino CLI.
+This is a micro-ROS library for baremetal projects based on Arduino IDE or Arduino CLI.
+
 As the build process for ROS 2 and micro-ROS is based on custom meta-build system tools and CMake, this library is provided as a precompiled library. Anyways, users can rebuild its own precompiled libraries in order to modify micro-ROS parameters, for example customizing prebuild meta file.
 
 Supported boards are:
