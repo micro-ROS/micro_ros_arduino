@@ -37,7 +37,7 @@ extern "C"
  */
 
 /**
- * \brief Check if micro-ROS Agent answers to micro-ROS client
+ * \brief Sets micro-ROS default custom transport.
  *
  * \param[in] framing Enable XRCE framing.
  * \param[in] args Arguments for open function.
@@ -55,6 +55,28 @@ rmw_ret_t rmw_uros_set_custom_transport(
   close_custom_func close_cb,
   write_custom_func write_cb,
   read_custom_func read_cb);
+
+/**
+ * \brief  Fills rmw implementation-specific options with the given custom transport.
+ *
+ * \param[in] framing Enable XRCE framing.
+ * \param[in] args Arguments for open function.
+ * \param[in] open_cb Open transport callback.
+ * \param[in] close_cb Close transport callback.
+ * \param[in] write_cb Write transport callback.
+ * \param[in] read_cb Read transport callback.
+ * \param[in,out] rmw_options Updated options with updated transport.
+ * \return RMW_RET_OK If arguments were valid and set in rmw_init_options.
+ * \return RMW_RET_INVALID_ARGUMENT If rmw_init_options is not valid or unexpected arguments.
+ */
+rmw_ret_t rmw_uros_options_set_custom_transport(
+  bool framing,
+  void * args,
+  open_custom_func open_cb,
+  close_custom_func close_cb,
+  write_custom_func write_cb,
+  read_custom_func read_cb,
+  rmw_init_options_t * rmw_options);
 
 /** @}*/
 
