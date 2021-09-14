@@ -26,7 +26,7 @@
 #include <rmw_microros/time_sync.h>
 #include <rmw_microros/ping.h>
 
-#ifdef RMW_UXRCE_TRANSPORT_UDP
+#if defined(RMW_UXRCE_TRANSPORT_UDP) || defined(RMW_UXRCE_TRANSPORT_TCP)
 #include <rmw_microros/discovery.h>
 #endif  // RMW_UXRCE_TRANSPORT_UDP
 
@@ -51,7 +51,7 @@ typedef struct rmw_uxrce_transport_params_t
 {
 #if defined(RMW_UXRCE_TRANSPORT_SERIAL)
   char serial_device[MAX_SERIAL_DEVICE];
-#elif defined(RMW_UXRCE_TRANSPORT_UDP)
+#elif defined(RMW_UXRCE_TRANSPORT_UDP) || defined(RMW_UXRCE_TRANSPORT_TCP)
   char agent_address[MAX_IP_LEN];
   char agent_port[MAX_PORT_LEN];
 #elif defined(RMW_UXRCE_TRANSPORT_CUSTOM)
