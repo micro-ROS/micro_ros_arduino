@@ -33,13 +33,13 @@ extern "C"
 {
 #endif
 
-struct rcl_arguments_impl_t;
+typedef struct rcl_arguments_impl_s rcl_arguments_impl_t;
 
 /// Hold output of parsing command line arguments.
-typedef struct rcl_arguments_t
+typedef struct rcl_arguments_s
 {
   /// Private implementation pointer.
-  struct rcl_arguments_impl_t * impl;
+  rcl_arguments_impl_t * impl;
 } rcl_arguments_t;
 
 /// The command-line flag that delineates the start of ROS arguments.
@@ -155,7 +155,7 @@ RCL_WARN_UNUSED
 rcl_ret_t
 rcl_parse_arguments(
   int argc,
-  const char * const argv[],
+  const char * const * argv,
   rcl_allocator_t allocator,
   rcl_arguments_t * args_output);
 
@@ -373,11 +373,11 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_remove_ros_arguments(
-  char const * const argv[],
+  const char * const * argv,
   const rcl_arguments_t * args,
   rcl_allocator_t allocator,
   int * nonros_argc,
-  const char ** nonros_argv[]);
+  const char *** nonros_argv);
 
 /// Return log levels parsed from the command line.
 /**

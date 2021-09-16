@@ -31,10 +31,10 @@ extern "C"
 /**
  * This should be defined by the rmw implementation.
  */
-typedef struct rmw_context_impl_t rmw_context_impl_t;
+typedef struct rmw_context_impl_s rmw_context_impl_t;
 
 /// Initialization context structure which is used to store init specific information.
-typedef struct RMW_PUBLIC_TYPE rmw_context_t
+typedef struct RMW_PUBLIC_TYPE rmw_context_s
 {
   /// Locally (process local) unique ID that represents this init/shutdown cycle.
   uint64_t instance_id;

@@ -27,7 +27,7 @@ extern "C"
 #endif
 
 /// Structure to hold a sequence of ROS messages.
-typedef struct RMW_PUBLIC_TYPE rmw_message_sequence_t
+typedef struct RMW_PUBLIC_TYPE rmw_message_sequence_s
 {
   /// Array of pointers to ROS messages.
   void ** data;
@@ -40,7 +40,7 @@ typedef struct RMW_PUBLIC_TYPE rmw_message_sequence_t
 } rmw_message_sequence_t;
 
 /// Structure to hold a sequence of message infos.
-typedef struct RMW_PUBLIC_TYPE rmw_message_info_sequence_t
+typedef struct RMW_PUBLIC_TYPE rmw_message_info_sequence_s
 {
   /// Array of message info.
   rmw_message_info_t * data;

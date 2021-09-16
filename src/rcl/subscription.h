@@ -31,17 +31,17 @@ extern "C"
 #include "rmw/message_sequence.h"
 
 /// Internal rcl implementation struct.
-struct rcl_subscription_impl_t;
+typedef struct rcl_subscription_impl_s rcl_subscription_impl_t;
 
 /// Structure which encapsulates a ROS Subscription.
-typedef struct rcl_subscription_t
+typedef struct rcl_subscription_s
 {
   /// Pointer to the subscription implementation
-  struct rcl_subscription_impl_t * impl;
+  rcl_subscription_impl_t * impl;
 } rcl_subscription_t;
 
 /// Options available for a rcl subscription.
-typedef struct rcl_subscription_options_t
+typedef struct rcl_subscription_options_s
 {
   /// Middleware quality of service settings for the subscription.
   rmw_qos_profile_t qos;

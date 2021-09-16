@@ -25,7 +25,7 @@ extern "C"
 #include "rmw/visibility_control.h"
 
 /// Array of topic endpoint information
-typedef struct RMW_PUBLIC_TYPE rmw_topic_endpoint_info_array_t
+typedef struct RMW_PUBLIC_TYPE rmw_topic_endpoint_info_array_s
 {
   /// Size of the array.
   size_t size;

@@ -22,6 +22,8 @@ extern "C"
 {
 #endif
 
+#include <rmw/event.h>
+
 #include "rcl/client.h"
 #include "rcl/macros.h"
 #include "rcl/publisher.h"
@@ -30,7 +32,7 @@ extern "C"
 #include "rcl/visibility_control.h"
 
 /// Enumeration of all of the publisher events that may fire.
-typedef enum rcl_publisher_event_type_t
+typedef enum rcl_publisher_event_type_e
 {
   RCL_PUBLISHER_OFFERED_DEADLINE_MISSED,
   RCL_PUBLISHER_LIVELINESS_LOST,
@@ -38,7 +40,7 @@ typedef enum rcl_publisher_event_type_t
 } rcl_publisher_event_type_t;
 
 /// Enumeration of all of the subscription events that may fire.
-typedef enum rcl_subscription_event_type_t
+typedef enum rcl_subscription_event_type_e
 {
   RCL_SUBSCRIPTION_REQUESTED_DEADLINE_MISSED,
   RCL_SUBSCRIPTION_LIVELINESS_CHANGED,
@@ -46,17 +48,14 @@ typedef enum rcl_subscription_event_type_t
   RCL_SUBSCRIPTION_MESSAGE_LOST,
 } rcl_subscription_event_type_t;
 
-/// rmw struct.
-typedef struct rmw_event_t rmw_event_t;
-
 /// Internal rcl implementation struct.
-struct rcl_event_impl_t;
+typedef struct rcl_event_impl_s rcl_event_impl_t;
 
 /// Structure which encapsulates a ROS QoS event handle.
-typedef struct rcl_event_t
+typedef struct rcl_event_s
 {
   /// Pointer to the event implementation
-  struct rcl_event_impl_t * impl;
+  rcl_event_impl_t * impl;
 } rcl_event_t;
 
 /// Return a rcl_event_t struct with members set to `NULL`.

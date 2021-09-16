@@ -113,7 +113,7 @@ static const rmw_qos_profile_t rmw_qos_profile_unknown =
   false
 };
 
-typedef enum RMW_PUBLIC_TYPE rmw_qos_compatibility_type_t
+typedef enum RMW_PUBLIC_TYPE rmw_qos_compatibility_type_e
 {
   /// QoS policies are compatible
   RMW_QOS_COMPATIBILITY_OK = 0,

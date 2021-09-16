@@ -45,7 +45,7 @@ extern "C"
 /// A unique ID per context instance.
 typedef uint64_t rcl_context_instance_id_t;
 
-struct rcl_context_impl_t;
+typedef struct rcl_context_impl_s rcl_context_impl_t;
 
 /// Encapsulates the non-global state of an init/shutdown cycle.
 /**
@@ -112,7 +112,7 @@ struct rcl_context_impl_t;
  * it directly (e.g. nodes and guard conditions) or indirectly (e.g.
  * subscriptions and topics).
  */
-typedef struct rcl_context_t
+typedef struct rcl_context_s
 {
 #ifdef RCL_COMMAND_LINE_ENABLED
   /// Global arguments for all nodes which share this context.
@@ -121,7 +121,7 @@ typedef struct rcl_context_t
 #endif // RCL_COMMAND_LINE_ENABLED
 
   /// Implementation specific pointer.
-  struct rcl_context_impl_t * impl;
+  rcl_context_impl_t * impl;
 
   // The assumption that this is big enough for an atomic_uint_least64_t is
   // ensured with a static_assert in the context.c file.

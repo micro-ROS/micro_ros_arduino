@@ -27,7 +27,7 @@ extern "C"
 #include "rmw/visibility_control.h"
 
 /// Structure to hold an arrary of network_flow_endpoint_t
-typedef struct RMW_PUBLIC_TYPE rmw_network_flow_endpoint_array_t
+typedef struct RMW_PUBLIC_TYPE rmw_network_flow_endpoint_array_s
 {
   /// Size of the array
   size_t size;

@@ -28,7 +28,7 @@ extern "C"
 #include "rmw/visibility_control.h"
 
 /// A struct representing a duration or relative time in RMW - does not encode an origin.
-typedef struct RMW_PUBLIC_TYPE rmw_time_t
+typedef struct RMW_PUBLIC_TYPE rmw_time_s
 {
   /// Seconds component
   uint64_t sec;

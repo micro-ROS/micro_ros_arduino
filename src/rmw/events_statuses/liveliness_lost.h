@@ -25,7 +25,7 @@ extern "C"
 #endif
 
 /// QoS Liveliness Lost information provided by a publisher.
-typedef struct RMW_PUBLIC_TYPE rmw_liveliness_lost_status_t
+typedef struct RMW_PUBLIC_TYPE rmw_liveliness_lost_status_s
 {
   /**
    * Lifetime cumulative number of times that a previously-alive Publisher became not alive due to

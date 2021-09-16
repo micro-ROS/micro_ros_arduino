@@ -29,17 +29,17 @@ extern "C"
 #include "rcl/visibility_control.h"
 
 /// Internal rcl client implementation struct.
-struct rcl_client_impl_t;
+typedef struct rcl_client_impl_s rcl_client_impl_t;
 
 /// Structure which encapsulates a ROS Client.
-typedef struct rcl_client_t
+typedef struct rcl_client_s
 {
   /// Pointer to the client implementation
-  struct rcl_client_impl_t * impl;
+  rcl_client_impl_t * impl;
 } rcl_client_t;
 
 /// Options available for a rcl_client_t.
-typedef struct rcl_client_options_t
+typedef struct rcl_client_options_s
 {
   /// Middleware quality of service settings for the client.
   rmw_qos_profile_t qos;
