@@ -24,7 +24,7 @@ extern "C"
 #endif
 
 /// QoS Policy Kinds
-typedef enum RMW_PUBLIC_TYPE rmw_qos_policy_kind_t
+typedef enum RMW_PUBLIC_TYPE rmw_qos_policy_kind_e
 {
   RMW_QOS_POLICY_INVALID = 1 << 0,
   RMW_QOS_POLICY_DURABILITY = 1 << 1,

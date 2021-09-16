@@ -27,15 +27,15 @@ extern "C"
 #include "rmw/ret_types.h"
 #include "rmw/visibility_control.h"
 
-typedef enum RMW_PUBLIC_TYPE rmw_security_enforcement_policy_t
+typedef enum RMW_PUBLIC_TYPE rmw_security_enforcement_policy_e
 {
   RMW_SECURITY_ENFORCEMENT_PERMISSIVE,
   RMW_SECURITY_ENFORCEMENT_ENFORCE,
 } rmw_security_enforcement_policy_t;
 
-typedef struct RMW_PUBLIC_TYPE rmw_security_options_t
+typedef struct RMW_PUBLIC_TYPE rmw_security_options_s
 {
-  enum rmw_security_enforcement_policy_t enforce_security;
+  rmw_security_enforcement_policy_t enforce_security;
   char * security_root_path;
 } rmw_security_options_t;
 

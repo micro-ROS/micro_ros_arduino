@@ -58,7 +58,7 @@ typedef rcutils_duration_value_t rcl_duration_value_t;
  *
  * RCL_STEADY_TIME reports a value from a monotonically increasing clock.
  */
-typedef enum rcl_clock_type_t
+typedef enum rcl_clock_type_e
 {
   /// Clock uninitialized
   RCL_CLOCK_UNINITIALIZED = 0,
@@ -71,14 +71,14 @@ typedef enum rcl_clock_type_t
 } rcl_clock_type_t;
 
 /// A duration of time, measured in nanoseconds and its source.
-typedef struct rcl_duration_t
+typedef struct rcl_duration_s
 {
   /// Duration in nanoseconds and its source.
   rcl_duration_value_t nanoseconds;
 } rcl_duration_t;
 
 /// Enumeration to describe the type of time jump.
-typedef enum rcl_clock_change_t
+typedef enum rcl_clock_change_e
 {
   /// The source before and after the jump is ROS_TIME.
   RCL_ROS_TIME_NO_CHANGE = 1,
@@ -91,7 +91,7 @@ typedef enum rcl_clock_change_t
 } rcl_clock_change_t;
 
 /// Struct to describe a jump in time.
-typedef struct rcl_time_jump_t
+typedef struct rcl_time_jump_s
 {
   /// Indicate whether or not the source of time changed.
   rcl_clock_change_t clock_change;
@@ -105,12 +105,12 @@ typedef struct rcl_time_jump_t
 /// once after. This is true the first call and false the second.
 /// \param[in] user_data A pointer given at callback registration which is passed to the callback.
 typedef void (* rcl_jump_callback_t)(
-  const struct rcl_time_jump_t * time_jump,
+  const rcl_time_jump_t * time_jump,
   bool before_jump,
   void * user_data);
 
 /// Describe the prerequisites for calling a time jump callback.
-typedef struct rcl_jump_threshold_t
+typedef struct rcl_jump_threshold_s
 {
   /// True to call callback when the clock type changes.
   bool on_clock_change;
@@ -123,7 +123,7 @@ typedef struct rcl_jump_threshold_t
 } rcl_jump_threshold_t;
 
 /// Struct to describe an added callback.
-typedef struct rcl_jump_callback_info_t
+typedef struct rcl_jump_callback_info_s
 {
   /// Callback to fucntion.
   rcl_jump_callback_t callback;
@@ -134,10 +134,10 @@ typedef struct rcl_jump_callback_info_t
 } rcl_jump_callback_info_t;
 
 /// Encapsulation of a time source.
-typedef struct rcl_clock_t
+typedef struct rcl_clock_s
 {
   /// Clock type
-  enum rcl_clock_type_t type;
+  rcl_clock_type_t type;
   /// An array of added jump callbacks.
   rcl_jump_callback_info_t * jump_callbacks;
   /// Number of callbacks in jump_callbacks.
@@ -152,7 +152,7 @@ typedef struct rcl_clock_t
 } rcl_clock_t;
 
 /// A single point in time, measured in nanoseconds, the reference point is based on the source.
-typedef struct rcl_time_point_t
+typedef struct rcl_time_point_s
 {
   /// Nanoseconds of the point in time
   rcl_time_point_value_t nanoseconds;
@@ -218,7 +218,7 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_clock_init(
-  enum rcl_clock_type_t clock_type, rcl_clock_t * clock,
+  rcl_clock_type_t clock_type, rcl_clock_t * clock,
   rcl_allocator_t * allocator);
 
 /// Finalize a clock.

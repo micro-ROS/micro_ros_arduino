@@ -29,7 +29,7 @@ extern "C"
 #include "rmw/visibility_control.h"
 
 /// Associative array of topic or service names and types.
-typedef struct RMW_PUBLIC_TYPE rmw_names_and_types_t
+typedef struct RMW_PUBLIC_TYPE rmw_names_and_types_s
 {
   /// Array of names
   rcutils_string_array_t names;

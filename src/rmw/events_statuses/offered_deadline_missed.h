@@ -25,7 +25,7 @@ extern "C"
 #endif
 
 /// QoS Deadline Missed information provided by a publisher.
-typedef struct RMW_PUBLIC_TYPE rmw_offered_deadline_missed_status_t
+typedef struct RMW_PUBLIC_TYPE rmw_offered_deadline_missed_status_s
 {
   /**
    * Lifetime cumulative number of offered deadline periods elapsed during which a Publisher failed

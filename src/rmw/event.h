@@ -30,7 +30,7 @@ extern "C"
 #include "rmw/visibility_control.h"
 
 /// Define publisher/subscription events
-typedef enum rmw_event_type_t
+typedef enum rmw_event_type_e
 {
   // subscription events
   RMW_EVENT_LIVELINESS_CHANGED,
@@ -48,7 +48,7 @@ typedef enum rmw_event_type_t
 } rmw_event_type_t;
 
 /// Encapsulate the RMW event implementation, data, and type.
-typedef struct RMW_PUBLIC_TYPE rmw_event_t
+typedef struct RMW_PUBLIC_TYPE rmw_event_s
 {
   /// Implementation identifier, used to ensure two different implementations are not being mixed.
   const char * implementation_identifier;

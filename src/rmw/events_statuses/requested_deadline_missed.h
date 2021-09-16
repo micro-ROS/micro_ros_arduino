@@ -25,7 +25,7 @@ extern "C"
 #endif
 
 /// QoS Requested Deadline Missed information provided by a subscription.
-typedef struct RMW_PUBLIC_TYPE rmw_requested_deadline_missed_status_t
+typedef struct RMW_PUBLIC_TYPE rmw_requested_deadline_missed_status_s
 {
   /**
    * Lifetime cumulative number of missed deadlines detected for any instance read by the

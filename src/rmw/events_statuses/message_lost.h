@@ -24,7 +24,7 @@ extern "C"
 {
 #endif
 
-typedef struct RMW_PUBLIC_TYPE rmw_message_lost_status_t
+typedef struct RMW_PUBLIC_TYPE rmw_message_lost_status_s
 {
   /// Total number of messages lost.
   size_t total_count;

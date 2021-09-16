@@ -30,17 +30,17 @@ extern "C"
 #include "rcl/time.h"
 
 /// Internal rcl publisher implementation struct.
-struct rcl_publisher_impl_t;
+typedef struct rcl_publisher_impl_s rcl_publisher_impl_t;
 
 /// Structure which encapsulates a ROS Publisher.
-typedef struct rcl_publisher_t
+typedef struct rcl_publisher_s
 {
   /// Pointer to the publisher implementation
-  struct rcl_publisher_impl_t * impl;
+  rcl_publisher_impl_t * impl;
 } rcl_publisher_t;
 
 /// Options available for a rcl publisher.
-typedef struct rcl_publisher_options_t
+typedef struct rcl_publisher_options_s
 {
   /// Middleware quality of service settings for the publisher.
   rmw_qos_profile_t qos;

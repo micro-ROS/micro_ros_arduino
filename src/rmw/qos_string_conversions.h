@@ -73,7 +73,7 @@ rmw_qos_policy_kind_to_str(rmw_qos_policy_kind_t kind);
  */
 RMW_PUBLIC
 const char *
-rmw_qos_durability_policy_to_str(enum rmw_qos_durability_policy_t value);
+rmw_qos_durability_policy_to_str(rmw_qos_durability_policy_t value);
 
 /// Return a string representing the policy value.
 /**
@@ -81,7 +81,7 @@ rmw_qos_durability_policy_to_str(enum rmw_qos_durability_policy_t value);
  */
 RMW_PUBLIC
 const char *
-rmw_qos_history_policy_to_str(enum rmw_qos_history_policy_t value);
+rmw_qos_history_policy_to_str(rmw_qos_history_policy_t value);
 
 /// Return a string representing the policy value.
 /**
@@ -89,7 +89,7 @@ rmw_qos_history_policy_to_str(enum rmw_qos_history_policy_t value);
  */
 RMW_PUBLIC
 const char *
-rmw_qos_liveliness_policy_to_str(enum rmw_qos_liveliness_policy_t value);
+rmw_qos_liveliness_policy_to_str(rmw_qos_liveliness_policy_t value);
 
 /// Return a string representing the policy value.
 /**
@@ -97,7 +97,7 @@ rmw_qos_liveliness_policy_to_str(enum rmw_qos_liveliness_policy_t value);
  */
 RMW_PUBLIC
 const char *
-rmw_qos_reliability_policy_to_str(enum rmw_qos_reliability_policy_t value);
+rmw_qos_reliability_policy_to_str(rmw_qos_reliability_policy_t value);
 
 /// Return a policy kind based on the provided string.
 /**
@@ -142,7 +142,7 @@ rmw_qos_policy_kind_from_str(const char * str);
  * \return `RMW_QOS_POLICY_*_UNKNOWN` if the string doesn't represent any value.
  */
 RMW_PUBLIC
-enum rmw_qos_durability_policy_t
+rmw_qos_durability_policy_t
 rmw_qos_durability_policy_from_str(const char * str);
 
 /// Return a enum value based on the provided string.
@@ -150,7 +150,7 @@ rmw_qos_durability_policy_from_str(const char * str);
  * See \ref rmw_qos_durability_policy_from_str() for more details.
  */
 RMW_PUBLIC
-enum rmw_qos_history_policy_t
+rmw_qos_history_policy_t
 rmw_qos_history_policy_from_str(const char * str);
 
 /// Return a enum value based on the provided string.
@@ -158,7 +158,7 @@ rmw_qos_history_policy_from_str(const char * str);
  * See \ref rmw_qos_durability_policy_from_str() for more details.
  */
 RMW_PUBLIC
-enum rmw_qos_liveliness_policy_t
+rmw_qos_liveliness_policy_t
 rmw_qos_liveliness_policy_from_str(const char * str);
 
 
@@ -167,7 +167,7 @@ rmw_qos_liveliness_policy_from_str(const char * str);
  * See \ref rmw_qos_durability_policy_from_str() for more details.
  */
 RMW_PUBLIC
-enum rmw_qos_reliability_policy_t
+rmw_qos_reliability_policy_t
 rmw_qos_reliability_policy_from_str(const char * str);
 
 #ifdef __cplusplus

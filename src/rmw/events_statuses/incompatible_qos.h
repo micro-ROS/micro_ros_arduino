@@ -25,7 +25,7 @@ extern "C"
 {
 #endif
 
-struct RMW_PUBLIC_TYPE rmw_qos_incompatible_event_status_t
+typedef struct RMW_PUBLIC_TYPE rmw_qos_incompatible_event_status_s
 {
   /**
    * Total cumulative number of times the concerned subscription discovered a
@@ -42,13 +42,13 @@ struct RMW_PUBLIC_TYPE rmw_qos_incompatible_event_status_t
    * incompatible the last time an incompatibility was detected.
    */
   rmw_qos_policy_kind_t last_policy_kind;
-};
+} rmw_qos_incompatible_event_status_t;
 
 /// Event state for a subscription's 'RMW_EVENT_REQUESTED_QOS_INCOMPATIBLE' events.
-typedef struct rmw_qos_incompatible_event_status_t rmw_requested_qos_incompatible_event_status_t;
+typedef rmw_qos_incompatible_event_status_t rmw_requested_qos_incompatible_event_status_t;
 
 /// Event state for a publisher's 'RMW_EVENT_OFFERED_QOS_INCOMPATIBLE' events.
-typedef struct rmw_qos_incompatible_event_status_t rmw_offered_qos_incompatible_event_status_t;
+typedef rmw_qos_incompatible_event_status_t rmw_offered_qos_incompatible_event_status_t;
 
 #ifdef __cplusplus
 }

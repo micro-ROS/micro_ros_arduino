@@ -27,7 +27,7 @@ extern "C"
 /// A data structure that encapsulates the node name, node namespace,
 /// topic_type, gid, and qos_profile of publishers and subscriptions
 /// for a topic.
-typedef struct RMW_PUBLIC_TYPE rmw_topic_endpoint_info_t
+typedef struct RMW_PUBLIC_TYPE rmw_topic_endpoint_info_s
 {
   /// Name of the node
   const char * node_name;
@@ -288,7 +288,7 @@ RMW_WARN_UNUSED
 rmw_ret_t
 rmw_topic_endpoint_info_set_gid(
   rmw_topic_endpoint_info_t * topic_endpoint_info,
-  const uint8_t gid[],
+  const uint8_t * gid,
   size_t size);
 
 /// Set the endpoint QoS profile in the given topic endpoint info data structure.

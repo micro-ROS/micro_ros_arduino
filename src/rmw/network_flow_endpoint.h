@@ -24,7 +24,7 @@ extern "C"
 #include "rmw/visibility_control.h"
 
 /// Transport protocol types
-typedef enum rmw_transport_protocol_t
+typedef enum rmw_transport_protocol_e
 {
   RMW_TRANSPORT_PROTOCOL_UNKNOWN = 0,
   RMW_TRANSPORT_PROTOCOL_UDP,
@@ -33,7 +33,7 @@ typedef enum rmw_transport_protocol_t
 } rmw_transport_protocol_t;
 
 /// Internet protocol types
-typedef enum rmw_internet_protocol_t
+typedef enum rmw_internet_protocol_e
 {
   RMW_INTERNET_PROTOCOL_UNKNOWN = 0,
   RMW_INTERNET_PROTOCOL_IPV4,
@@ -46,7 +46,7 @@ typedef enum rmw_internet_protocol_t
 #define RMW_INET_ADDRSTRLEN 48
 
 /// Structure that describes network flow endpoint of a publisher or subscription
-typedef struct RMW_PUBLIC_TYPE rmw_network_flow_endpoint_t
+typedef struct RMW_PUBLIC_TYPE rmw_network_flow_endpoint_s
 {
   // Transport protocol
   rmw_transport_protocol_t transport_protocol;

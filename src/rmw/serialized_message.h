@@ -23,8 +23,6 @@ extern "C"
 #include "rcutils/types/uint8_array.h"
 
 /**
- * \struct rmw_serialized_message_t
- *
  * \brief Serialized message as a string of bytes.
  *
  * It includes (but it is not limited to) the following members:
@@ -32,7 +30,6 @@ extern "C"
  *   \e \c buffer_length the size of stored contents, as an unsigned integer
  *   \e \c buffer_capacity the capacity of internal storage, as an unsigned integer
  */
-
 /* For now this is a simple aliasing from a serialized message to a uint8 array.
  * However, in future developments this serialized message can become something
  * more complex and is therefore aliased.

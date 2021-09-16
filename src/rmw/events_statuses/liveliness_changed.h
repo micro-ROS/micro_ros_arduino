@@ -25,7 +25,7 @@ extern "C"
 #endif
 
 /// QoS Liveliness Changed information provided by a subscription.
-typedef struct RMW_PUBLIC_TYPE rmw_liveliness_changed_status_t
+typedef struct RMW_PUBLIC_TYPE rmw_liveliness_changed_status_s
 {
   /**
    * The total number of currently active Publishers which publish to the topic associated with

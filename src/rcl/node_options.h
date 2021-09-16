@@ -34,7 +34,7 @@ extern "C"
 #define RCL_NODE_OPTIONS_DEFAULT_DOMAIN_ID RCL_DEFAULT_DOMAIN_ID
 
 /// Structure which encapsulates the options for creating a rcl_node_t.
-typedef struct rcl_node_options_t
+typedef struct rcl_node_options_s
 {
   // bool anonymous_name;
 

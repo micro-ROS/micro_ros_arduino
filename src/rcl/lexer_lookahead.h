@@ -31,13 +31,13 @@ extern "C"
 #endif
 
 // Forward declaration
-struct rcl_lexer_lookahead2_impl_t;
+typedef struct rcl_lexer_lookahead2_impl_s rcl_lexer_lookahead2_impl_t;
 
 /// Track lexical analysis and allow looking ahead 2 lexemes.
-typedef struct rcl_lexer_lookahead2_t
+typedef struct rcl_lexer_lookahead2_s
 {
   /// Pointer to the lexer look ahead2 implementation
-  struct rcl_lexer_lookahead2_impl_t * impl;
+  rcl_lexer_lookahead2_impl_t * impl;
 } rcl_lexer_lookahead2_t;
 
 /// Get a zero initialized rcl_lexer_lookahead2_t instance.

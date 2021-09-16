@@ -31,7 +31,7 @@ extern "C"
 typedef enum RCUTILS_LOG_SEVERITY rcl_log_severity_t;
 
 /// A logger item to specify a name and a log level.
-typedef struct rcl_logger_setting_t
+typedef struct rcl_logger_setting_s
 {
   /// Name for the logger.
   const char * name;
@@ -40,12 +40,12 @@ typedef struct rcl_logger_setting_t
 } rcl_logger_setting_t;
 
 /// Hold default logger level and other logger setting.
-typedef struct rcl_log_levels_t
+typedef struct rcl_log_levels_s
 {
   /// Minimum default logger level severity.
   rcl_log_severity_t default_logger_level;
   /// Array of logger setting.
-  struct rcl_logger_setting_t * logger_settings;
+  rcl_logger_setting_t * logger_settings;
   /// Number of logger settings.
   size_t num_logger_settings;
   /// Capacity of logger settings.

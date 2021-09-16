@@ -34,10 +34,10 @@ extern "C"
 /**
  * This should be defined by the rmw implementation.
  */
-typedef struct rmw_init_options_impl_t rmw_init_options_impl_t;
+typedef struct rmw_init_options_impl_s rmw_init_options_impl_t;
 
 /// Options structure used during rmw_init().
-typedef struct RMW_PUBLIC_TYPE rmw_init_options_t
+typedef struct RMW_PUBLIC_TYPE rmw_init_options_s
 {
   /// Locally (process local) unique ID that represents this init/shutdown cycle.
   /**
