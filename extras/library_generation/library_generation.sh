@@ -72,7 +72,7 @@ fi
 if [[ " ${PLATFORMS[@]} " =~ " cortex_m0 " ]]; then
     rm -rf firmware/build
 
-    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/cortex_m0_toolchain.cmake /project/extras/library_generation/colcon_verylowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
