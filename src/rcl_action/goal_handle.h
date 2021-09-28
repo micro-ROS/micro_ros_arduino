@@ -27,13 +27,13 @@ extern "C"
 
 
 /// Internal rcl action goal implementation struct.
-struct rcl_action_goal_handle_impl_t;
+typedef struct rcl_action_goal_handle_impl_s rcl_action_goal_handle_impl_t;
 
 /// Goal handle for an action.
-typedef struct rcl_action_goal_handle_t
+typedef struct rcl_action_goal_handle_s
 {
   /// Pointer to the action goal handle implementation
-  struct rcl_action_goal_handle_impl_t * impl;
+  rcl_action_goal_handle_impl_t * impl;
 } rcl_action_goal_handle_t;
 
 /// Return a rcl_action_goal_handle_t struct with members set to `NULL`.
