@@ -59,14 +59,11 @@ extern "C"
 #define zerouuid (uint8_t[UUID_SIZE]) {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 #define uuidcmpzero(uuid) uuidcmp(uuid, (zerouuid))
 
-// Forward declare
-typedef struct rcl_action_server_t rcl_action_server_t;
-
 // Typedef generated messages for convenience
 typedef action_msgs__msg__GoalInfo rcl_action_goal_info_t;
 typedef action_msgs__msg__GoalStatus rcl_action_goal_status_t;
 /// Struct with the action goal status array
-typedef struct rcl_action_goal_status_array_t
+typedef struct rcl_action_goal_status_array_s
 {
   /// Goal status array message
   action_msgs__msg__GoalStatusArray msg;
@@ -75,7 +72,7 @@ typedef struct rcl_action_goal_status_array_t
 } rcl_action_goal_status_array_t;
 typedef action_msgs__srv__CancelGoal_Request rcl_action_cancel_request_t;
 /// Struct with the action cancel response
-typedef struct rcl_action_cancel_response_t
+typedef struct rcl_action_cancel_response_s
 {
   /// Cancel goal response message
   action_msgs__srv__CancelGoal_Response msg;
@@ -103,7 +100,7 @@ extern const char * goal_state_descriptions[];
 extern const char * goal_event_descriptions[];
 
 /// Goal state transition events
-typedef enum rcl_action_goal_event_t
+typedef enum rcl_action_goal_event_e
 {
   GOAL_EVENT_EXECUTE = 0,
   GOAL_EVENT_CANCEL_GOAL,

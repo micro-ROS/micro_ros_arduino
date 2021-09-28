@@ -30,17 +30,17 @@ extern "C"
 #include "rosidl_runtime_c/action_type_support_struct.h"
 
 /// Internal rcl_action implementation struct.
-struct rcl_action_server_impl_t;
+typedef struct rcl_action_server_impl_s rcl_action_server_impl_t;
 
 /// Structure which encapsulates a ROS Action Server.
-typedef struct rcl_action_server_t
+typedef struct rcl_action_server_s
 {
   /// Pointer to the action server implementation
-  struct rcl_action_server_impl_t * impl;
+  rcl_action_server_impl_t * impl;
 } rcl_action_server_t;
 
 /// Options available for a rcl_action_server_t.
-typedef struct rcl_action_server_options_t
+typedef struct rcl_action_server_options_s
 {
   /// Middleware quality of service settings for the action server.
   /// Goal service quality of service
