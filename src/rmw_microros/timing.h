@@ -70,6 +70,30 @@ rmw_ret_t rmw_uros_set_client_session_timeout(
   rmw_client_t * client,
   int session_timeout);
 
+/**
+ * \brief Sets the DDS-XRCE session spin time for creating entities
+ *
+ * \param[in] context RWM context where the spin time is configured
+ * \param[in] session_timeout time in milliseconds
+ * \return RMW_RET_OK when success.
+ * \return RMW_RET_INVALID_ARGUMENT If client is not valid or unexpected arguments.
+ */
+rmw_ret_t rmw_uros_set_context_entity_creation_session_timeout(
+  rmw_context_t * context,
+  int session_timeout);
+
+/**
+ * \brief Sets the DDS-XRCE session spin time for destroying entities
+ *
+ * \param[in] context RWM context where the spin time is configured
+ * \param[in] session_timeout time in milliseconds
+ * \return RMW_RET_OK when success.
+ * \return RMW_RET_INVALID_ARGUMENT If client is not valid or unexpected arguments.
+ */
+rmw_ret_t rmw_uros_set_context_entity_destroy_session_timeout(
+  rmw_context_t * context,
+  int session_timeout);
+
 /** @}*/
 
 #if defined(__cplusplus)
