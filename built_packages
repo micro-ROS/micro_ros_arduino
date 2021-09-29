@@ -6,7 +6,7 @@ https://github.com/ament/ament_cmake.git 099871343a8e0b6cee2e90cdc815dd61eaf5abf
 https://github.com/ament/ament_index.git 2d6efc545159c4d1ea0b7b827bbd7efa6a34646f
 https://github.com/ament/ament_lint.git 1f5c6bba4c5180aa8d2b593c6f3aa8ee1309d36a
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
-https://github.com/eProsima/Micro-XRCE-DDS-Client.git 4ccec07f4089ec1ec49e72c4ed0484ae6515cd75
+https://github.com/eProsima/Micro-XRCE-DDS-Client.git 81fccf9f2285e043a0cab2573148709c905e5163
 https://github.com/eProsima/Micro-CDR.git 21c99e0d8d140c50b45f13c8ed3716cb9fa0fb27
 https://github.com/ros-controls/control_msgs 11fdcdf76434d8ca9047787d17add4e18f56e9d6
 https://github.com/ros2/rcpputils.git ce44a14cce10132f0eff630e9ae016fbf296ac51
@@ -16,7 +16,7 @@ https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57
 https://github.com/ros2/rmw_implementation.git 0fcac11eef35dbfd393695c8550c7af9945ebd82
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
-https://github.com/ros2/rcl.git 89ebbdea8c17d53c26490bed44b2816484e2186b
+https://github.com/ros2/rcl.git 991240da1da7c084da28760ebd72dba3520fa1fb
 https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb0cf5355
 https://github.com/ros2/rcl_interfaces.git 9a44202bbaf76e19fde21da0e90d8afbe89bd263
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
@@ -30,5 +30,5 @@ https://github.com/micro-ROS/rcl 0208455335d4951262737ad3afbe3078219294b8
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 7efaceec0a8156f0f6c16a988b5670781892e923
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ ad79dad92013e554b902bfcb460003038f14a8a3
 https://github.com/micro-ROS/rosidl_typesupport.git 64f56cb01cf53f89a6715d59de523d67e64086b7
-https://github.com/micro-ROS/rmw-microxrcedds.git 66a626cb7db3aeca2df195b7f457bbec6bfb69eb
+https://github.com/micro-ROS/rmw-microxrcedds.git 5ebdd83e8a3a718eea8fa5232125562c68b9dd35
 https://github.com/micro-ROS/micro_ros_utilities 31653d7fb0fe01cfaf0c5a54451b8ca4515efde5

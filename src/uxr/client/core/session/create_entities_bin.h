@@ -141,6 +141,7 @@ typedef enum uxrQoSDurability
  * @param topic_id              The identifier of the associated XRCE Topic.
  * @param reliable              Reliability flag.
  * @param keep_last             Keep last flag.
+ * @param depth                 Depth of the history.
  * @param transient_local       Transient local flag.
  * @param mode                  The set of flags that determines the entity creation mode.
  *                              The Creation Mode Table describes the entities creation behaviour according to the
@@ -156,6 +157,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datawriter_bin(
         uxrObjectId topic_id,
         bool reliable,
         bool keep_last,
+        uint16_t depth,
         uxrQoSDurability durability,
         uint8_t mode);
 
@@ -171,6 +173,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datawriter_bin(
  * @param topic_id              The identifier of the associated XRCE Topic.
  * @param reliable              Reliability flag.
  * @param keep_last             Keep last flag.
+ * @param depth                 Depth of the history.
  * @param transient_local       Transient local flag.
  * @param mode                  The set of flags that determines the entity creation mode.
  *                              The Creation Mode Table describes the entities creation behaviour according to the
@@ -186,6 +189,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datareader_bin(
         uxrObjectId topic_id,
         bool reliable,
         bool keep_last,
+        uint16_t depth,
         uxrQoSDurability durability,
         uint8_t mode);
 /**
