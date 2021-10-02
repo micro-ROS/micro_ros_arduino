@@ -13,7 +13,7 @@ https://github.com/ros2/rcpputils.git ce44a14cce10132f0eff630e9ae016fbf296ac51
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/rcl_logging.git 1187edb08e3b6f9bc93e849e22a473a9c2b72934
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
-https://github.com/ros2/rmw_implementation.git 0fcac11eef35dbfd393695c8550c7af9945ebd82
+https://github.com/ros2/rmw_implementation.git 0bb811c54eb0138aa20ecbb4494ad0947d834243
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
 https://github.com/ros2/rcl.git 2234fbffaa3e0c4883ccef492a5b03bfbc85dea6
