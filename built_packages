@@ -26,7 +26,7 @@ https://github.com/micro-ROS/rcutils a76caed04b9aeede63bb0cc2a3028f2327263667
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 7efaceec0a8156f0f6c16a988b5670781892e923
 https://github.com/ros2/rclc 2c2287af3a4ed14eeeb50244a4faa8ebba20d8c7
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
-https://github.com/ament/ament_cmake.git 09c5b06f6bb51ecf232ee4094799e0325538cd5a
+https://github.com/ament/ament_cmake.git 215ddb6f506469cee5dff4c2b17c6af485b9f2b9
 https://github.com/ament/ament_index.git 2d6efc545159c4d1ea0b7b827bbd7efa6a34646f
 https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
 https://github.com/ament/ament_lint.git ebd524bb9973d5ec1dc48a670ce54f958a5a0243
