@@ -17,7 +17,7 @@ https://github.com/ros2/rosidl_dds.git e88b1d0e62a2dca0788142cf1fb266a3a3c3d7dc
 https://github.com/ros2/rmw.git 6d23f9fc6bfe4616e1efeeefee7a927635a83afe
 https://github.com/ros2/rosidl.git 75964cbdb3ba13854e749dcd2dd8274b73a5360c
 https://github.com/ros2/rcpputils.git f4ce24de0b9b6b2c0c3807d6ce43418d4e1db331
-https://github.com/micro-ROS/rmw-microxrcedds.git 642bd161f4d3fe7bf49841cc86b74b73fde608ae
+https://github.com/micro-ROS/rmw-microxrcedds.git bfb641ce41d3a3ffb727d5a1b6c1bcd332a7d65f
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing d11b87737245b8456bbada44dfa7b1d670b1c4d0
 https://github.com/micro-ROS/rcl fc14a9a73f5e0579ec0c902a1a4375c9a013cabf
