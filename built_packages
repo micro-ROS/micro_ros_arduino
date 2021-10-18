@@ -9,7 +9,7 @@ https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48
 https://github.com/ros2/rcl_interfaces.git ee04e046132be9d9fdcdaeff8dd54a5d0d9aa022
 https://github.com/ros2/rosidl_defaults.git cbc7ffd38d98c5b15823fc62b0891d2264ae4472
 https://github.com/ros2/common_interfaces.git 0377ea7b95d98457284d0fbfc01bc53f16ca3332
-https://github.com/ros2/rcl.git f96196512edd48f89eefdb6d590a7ef879053971
+https://github.com/ros2/rcl.git f91a556bcb855fd22974d2115077b93c9f5a9e54
 https://github.com/ros2/example_interfaces.git e3caaaf66bf664afc6c59d88a127f9c15597107e
 https://github.com/ros2/rmw_implementation.git abdb5837e36f606ebce2e8313e6ca7d2c28a237a
 https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
