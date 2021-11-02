@@ -14,7 +14,7 @@ https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb
 https://github.com/ros2/rmw_implementation.git 0bb811c54eb0138aa20ecbb4494ad0947d834243
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/rmw.git 35fc6ab8fad4db90eb55db9d1ecf50dc1aa3638d
-https://github.com/ros2/rosidl.git de87159a7fbe5e2286166ea9829c13dc3344bdf8
+https://github.com/ros2/rosidl.git 4343bbb72a3bab52d8823207732aeaa324ccc07e
 https://github.com/ros2/rcpputils.git ce44a14cce10132f0eff630e9ae016fbf296ac51
 https://github.com/micro-ROS/rmw-microxrcedds.git a02f895302853bb1151c36010a2b78055db56892
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
