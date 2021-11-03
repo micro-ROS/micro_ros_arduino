@@ -22,14 +22,12 @@ extern "C"
 {
 #endif
 
-#include <rcl/init_options.h>
 #include <rcl/context.h>
 #include <rcl/allocator.h>
 #include <rcl/time.h>
 
 typedef struct
 {
-  rcl_init_options_t init_options;
   rcl_context_t context;
   rcl_allocator_t * allocator;
   rcl_clock_t clock;
