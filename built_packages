@@ -9,7 +9,7 @@ https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48
 https://github.com/ros2/rcl_interfaces.git ee04e046132be9d9fdcdaeff8dd54a5d0d9aa022
 https://github.com/ros2/rosidl_defaults.git cbc7ffd38d98c5b15823fc62b0891d2264ae4472
 https://github.com/ros2/common_interfaces.git 0377ea7b95d98457284d0fbfc01bc53f16ca3332
-https://github.com/ros2/rcl.git f91a556bcb855fd22974d2115077b93c9f5a9e54
+https://github.com/ros2/rcl.git e88a953ec92d8d0a3b7528cdbdc7c572ffd734ca
 https://github.com/ros2/example_interfaces.git e3caaaf66bf664afc6c59d88a127f9c15597107e
 https://github.com/ros2/rmw_implementation.git abdb5837e36f606ebce2e8313e6ca7d2c28a237a
 https://github.com/ros2/tinydir_vendor.git f1ee71b2fb02b24ee40123a905b16922938ca80a
@@ -24,7 +24,7 @@ https://github.com/micro-ROS/rcl ca508448d3f68ebdf8e3fc07ec48aa6992fc522b
 https://github.com/micro-ROS/rosidl_typesupport.git 5d974dbee4cd6988ce33923246eb404db327fad8
 https://github.com/micro-ROS/rcutils 4213addd56ca84bd37f1d418efb2becc1f2096db
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 197b1ae73e6f50fc8196f2b724a7da248491c2bc
-https://github.com/ros2/rclc 0f37874c44cf529d11f6c8f37a37693dd0ec8a1a
+https://github.com/ros2/rclc df0d8c2a6b9cc8804863179db4f884db11c71171
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
 https://github.com/ament/ament_cmake.git c47c4a9b925a3f73858f57fa6ad08f4f4ac7e393
 https://github.com/ament/ament_index.git 07492c3ada0f835464ef55178080f3df93c22292
