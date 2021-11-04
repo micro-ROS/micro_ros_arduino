@@ -23,7 +23,7 @@
 
 #include "rosidl_typesupport_introspection_c/message_introspection.h"
 
-typedef struct rosidl_typesupport_introspection_c__ServiceMembers
+typedef struct rosidl_typesupport_introspection_c__ServiceMembers_s
 {
   const char * service_namespace_;
   const char * service_name_;
