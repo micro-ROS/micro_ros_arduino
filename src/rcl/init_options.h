@@ -127,6 +127,50 @@ RCL_WARN_UNUSED
 rcl_ret_t
 rcl_init_options_fini(rcl_init_options_t * init_options);
 
+/// Return the domain_id stored in the init options.
+/**
+ * Get the domain id from the specified rcl_init_options_t object.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] init_options object from which the domain id should be retrieved.
+ * \param[out] domain_id domain id to be set in init_options object.
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_init_options_get_domain_id(rcl_init_options_t * init_options, size_t * domain_id);
+
+/// Set a domain id in the init options provided.
+/**
+ * Store the domain id in the specified init_options object.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] init_options objects in which to set the specified domain id.
+ * \param[in] domain_id domain id to be set in init_options object.
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_init_options_set_domain_id(rcl_init_options_t * init_options, size_t domain_id);
+
 /// Return the rmw init options which are stored internally.
 /**
  * This function can fail and return `NULL` if:
