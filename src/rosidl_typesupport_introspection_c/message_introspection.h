@@ -24,7 +24,7 @@
 
 #include "rosidl_typesupport_introspection_c/visibility_control.h"
 
-typedef struct rosidl_typesupport_introspection_c__MessageMember
+typedef struct rosidl_typesupport_introspection_c__MessageMember_s
 {
   const char * name_;
   uint8_t type_id_;
@@ -41,7 +41,7 @@ typedef struct rosidl_typesupport_introspection_c__MessageMember
   bool (* resize_function)(void *, size_t size);
 } rosidl_typesupport_introspection_c__MessageMember;
 
-typedef struct rosidl_typesupport_introspection_c__MessageMembers
+typedef struct rosidl_typesupport_introspection_c__MessageMembers_s
 {
   const char * message_namespace_;
   const char * message_name_;
