@@ -21,11 +21,16 @@ extern "C"
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 // Member 'joint_names'
+// Member 'multi_dof_joint_names'
 #include "rosidl_runtime_c/string.h"
 // Member 'desired'
 // Member 'actual'
 // Member 'error'
 #include "trajectory_msgs/msg/detail/joint_trajectory_point__struct.h"
+// Member 'multi_dof_desired'
+// Member 'multi_dof_actual'
+// Member 'multi_dof_error'
+#include "trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__struct.h"
 
 // Struct defined in msg/JointTrajectoryControllerState in the package control_msgs.
 typedef struct control_msgs__msg__JointTrajectoryControllerState
@@ -35,6 +40,10 @@ typedef struct control_msgs__msg__JointTrajectoryControllerState
   trajectory_msgs__msg__JointTrajectoryPoint desired;
   trajectory_msgs__msg__JointTrajectoryPoint actual;
   trajectory_msgs__msg__JointTrajectoryPoint error;
+  rosidl_runtime_c__String__Sequence multi_dof_joint_names;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_desired;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_actual;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_error;
 } control_msgs__msg__JointTrajectoryControllerState;
 
 // Struct for a sequence of control_msgs__msg__JointTrajectoryControllerState.

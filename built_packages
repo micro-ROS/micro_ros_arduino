@@ -10,12 +10,12 @@ https://github.com/micro-ROS/rcl e02f7f550bde0e7f5f879ea259132161b92808e0
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 02451969966335ebf08a08cce72d7d211e93c366
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 44acd23388f445b5b06fd84b40c0daafb498ee5f
 https://github.com/eProsima/Micro-CDR.git 21c99e0d8d140c50b45f13c8ed3716cb9fa0fb27
-https://github.com/ros-controls/control_msgs 11fdcdf76434d8ca9047787d17add4e18f56e9d6
+https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
 https://github.com/ros2/rcl_interfaces.git 9a44202bbaf76e19fde21da0e90d8afbe89bd263
 https://github.com/ros2/rcpputils.git ce44a14cce10132f0eff630e9ae016fbf296ac51
 https://github.com/ros2/rmw.git 35fc6ab8fad4db90eb55db9d1ecf50dc1aa3638d
 https://github.com/ros2/rcl_logging.git 1187edb08e3b6f9bc93e849e22a473a9c2b72934
-https://github.com/ros2/rosidl.git b12a9cc5a4a5c62d3b920423fae626db41fdfce4
+https://github.com/ros2/rosidl.git e3f815647a9a29e49f6d64a97f67cb685fce3075
 https://github.com/ros2/rmw_implementation.git 0bb811c54eb0138aa20ecbb4494ad0947d834243
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
@@ -23,7 +23,7 @@ https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95
 https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb0cf5355
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
-https://github.com/ros2/rcl.git d8817fdd24c33b5e02786663f804a6240746c751
+https://github.com/ros2/rcl.git 9efffb1c8497cc9618446511a337829502ede227
 https://github.com/ros2/common_interfaces.git a3a0dde2ba184b01cdc59a3003728906de3240a9
 https://github.com/ament/ament_lint.git 7cc0054fab2c408f6d08d895acf8b2ecf55da36e
 https://github.com/ament/ament_package.git b3669d80d8166f14871d98555dd1d5083e35ecde
