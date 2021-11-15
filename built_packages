@@ -7,7 +7,7 @@ https://github.com/ros2/rclc 0b90b3f725db666b892375cb6fe9f5b39f987c45
 https://github.com/micro-ROS/rcutils aa77aa4fde86bb51de0ceb57a8e4684dad9448fc
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://github.com/micro-ROS/rcl 139a1ea1b6762663fdaea6b6f7ec13fb9a4e6a02
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 02451969966335ebf08a08cce72d7d211e93c366
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 3611264449ec5fc6fdca0149de050348ce5ff935
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 44acd23388f445b5b06fd84b40c0daafb498ee5f
 https://github.com/eProsima/Micro-CDR.git 21c99e0d8d140c50b45f13c8ed3716cb9fa0fb27
 https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
@@ -24,7 +24,7 @@ https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
 https://github.com/ros2/rcl.git 9efffb1c8497cc9618446511a337829502ede227
-https://github.com/ros2/common_interfaces.git a3a0dde2ba184b01cdc59a3003728906de3240a9
+https://github.com/ros2/common_interfaces.git f22c4360b5bbd59c6780b9ba155eaaa20da1adc1
 https://github.com/ament/ament_lint.git 7cc0054fab2c408f6d08d895acf8b2ecf55da36e
 https://github.com/ament/ament_package.git b3669d80d8166f14871d98555dd1d5083e35ecde
 https://github.com/ament/ament_cmake.git a51ed2214ce96fe0ef1ee00455cb03ba14bd52f1
