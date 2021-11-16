@@ -32,6 +32,8 @@ extern "C"
 #include "rclc/timer.h"
 #include "rclc/client.h"
 #include "rclc/service.h"
+#include "rclc/action_client.h"
+#include "rclc/action_server.h"
 #include "rclc/types.h"
 #include "rclc/visibility_control.h"
 #if __cplusplus
