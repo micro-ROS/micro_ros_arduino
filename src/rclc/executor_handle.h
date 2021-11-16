@@ -24,6 +24,9 @@ extern "C"
 #include <rcl/rcl.h>
 #include <rclc/visibility_control.h>
 
+#include <rclc/action_client.h>
+#include <rclc/action_server.h>
+
 /// TODO (jst3si) Where is this defined? - in my build environment this variable is not set.
 // #define ROS_PACKAGE_NAME "rclc"
 
@@ -40,6 +43,8 @@ typedef enum
   SERVICE,
   SERVICE_WITH_REQUEST_ID,
   SERVICE_WITH_CONTEXT,
+  ACTION_CLIENT,
+  ACTION_SERVER,
   GUARD_CONDITION,
   // GUARD_CONDITION_WITH_CONTEXT,  //TODO
   NONE
@@ -52,6 +57,19 @@ typedef enum
   ON_NEW_DATA,
   ALWAYS
 } rclc_executor_handle_invocation_t;
+
+/// Type definition for subscription callback function
+/// - incoming message
+typedef void (* rclc_subscription_callback_t)(const void *);
+
+/// Type definition (duplicate) for subscription callback function (alias for foxy and galactic).
+/// - incoming message
+typedef rclc_subscription_callback_t rclc_callback_t;
+
+/// Type definition for subscription callback function
+/// - incoming message
+/// - additional callback context
+typedef void (* rclc_subscription_callback_with_context_t)(const void *, void *);
 
 /// Type definition for subscription callback function
 /// - incoming message
@@ -110,6 +128,8 @@ typedef struct
     rcl_client_t * client;
     rcl_service_t * service;
     rcl_guard_condition_t * gc;
+    rclc_action_client_t * action_client;
+    rclc_action_server_t * action_server;
   };
   /// Storage of data, which holds the message of a subscription, service, etc.
   /// subscription: ptr to message
@@ -171,6 +191,10 @@ typedef struct
   size_t number_of_clients;
   /// Total number of services
   size_t number_of_services;
+  /// Total number of action clients
+  size_t number_of_action_clients;
+  /// Total number of action servers
+  size_t number_of_action_servers;
   /// Total number of guard conditions
   size_t number_of_guard_conditions;
   /// Total number of events
