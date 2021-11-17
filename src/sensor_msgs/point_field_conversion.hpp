@@ -49,60 +49,132 @@
   */
 namespace sensor_msgs
 {
-/*!
- * \Enum to type mapping.
+/**
+ * \brief Enum to type mapping.
  */
 template<int>
 struct pointFieldTypeAsType {};
+/** \brief Concrete templatization of Enum to type for INT8 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::INT8> { typedef int8_t type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::INT8>
+{
+  /** Enum to type for INT8 -> int8_t */
+  typedef int8_t type;
+};
+/** \brief Concrete templatization of Enum to type for UINT8 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::UINT8> { typedef uint8_t type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::UINT8>
+{
+  /** Enum to type for UINT8 -> uint8_t */
+  typedef uint8_t type;
+};
+/** \brief Concrete templatization of Enum to type for INT16 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::INT16> { typedef int16_t type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::INT16>
+{
+  /** Enum to type for INT16 -> int16_t */
+  typedef int16_t type;
+};
+/** \brief Concrete templatization of Enum to type for UINT16 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::UINT16> { typedef uint16_t type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::UINT16>
+{
+  /** Enum to type for UINT16 -> uint16_t */
+  typedef uint16_t type;
+};
+/** \brief Concrete templatization of Enum to type for INT32 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::INT32> { typedef int32_t type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::INT32>
+{
+  /** Enum to type for INT32 -> int32_t */
+  typedef int32_t type;
+};
+/** \brief Concrete templatization of Enum to type for UINT32 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::UINT32> { typedef uint32_t type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::UINT32>
+{
+  /** Enum to type for UINT32 -> uint32_t */
+  typedef uint32_t type;
+};
+/** \brief Concrete templatization of Enum to type for FLOAT32 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::FLOAT32> { typedef float type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::FLOAT32>
+{
+  /** Enum to type for FLOAT32 -> float */
+  typedef float type;
+};
+/** \brief Concrete templatization of Enum to type for FLOAT64 */
 template<>
-struct pointFieldTypeAsType<sensor_msgs::msg::PointField::FLOAT64> { typedef double type; };
+struct pointFieldTypeAsType<sensor_msgs::msg::PointField::FLOAT64>
+{
+  /** Enum to type for FLOAT64 -> double */
+  typedef double type;
+};
 
-/*!
- * \Type to enum mapping.
+/**
+ * \brief Type to enum mapping.
  */
 template<typename T>
 struct typeAsPointFieldType {};
+/** \brief Concrete templatization of type to enum for int8_t */
 template<>
-struct typeAsPointFieldType<int8_t> { static const uint8_t value =
-    sensor_msgs::msg::PointField::INT8; };
+struct typeAsPointFieldType<int8_t>
+{
+  /** Type to enum for int8_t -> INT8 */
+  static const uint8_t value = sensor_msgs::msg::PointField::INT8;
+};
+/** \brief Concrete templatization of type to enum for uint8_t */
 template<>
-struct typeAsPointFieldType<uint8_t> { static const uint8_t value =
-    sensor_msgs::msg::PointField::UINT8;};
+struct typeAsPointFieldType<uint8_t>
+{
+  /** Type to enum for uint8_t -> UINT8 */
+  static const uint8_t value = sensor_msgs::msg::PointField::UINT8;
+};
+/** \brief Concrete templatization of type to enum for int16_t */
 template<>
-struct typeAsPointFieldType<int16_t> { static const uint8_t value =
-    sensor_msgs::msg::PointField::INT16;};
+struct typeAsPointFieldType<int16_t>
+{
+  /** Type to enum for int16_t -> INT16 */
+  static const uint8_t value = sensor_msgs::msg::PointField::INT16;
+};
+/** \brief Concrete templatization of type to enum for uint16_t */
 template<>
-struct typeAsPointFieldType<uint16_t> { static const uint8_t value =
-    sensor_msgs::msg::PointField::UINT16;};
+struct typeAsPointFieldType<uint16_t>
+{
+  /** Type to enum for uint16_t -> UINT16 */
+  static const uint8_t value = sensor_msgs::msg::PointField::UINT16;
+};
+/** \brief Concrete templatization of type to enum for int32_t */
 template<>
-struct typeAsPointFieldType<int32_t> { static const uint8_t value =
-    sensor_msgs::msg::PointField::INT32;};
+struct typeAsPointFieldType<int32_t>
+{
+  /** Type to enum for int32_t -> INT32 */
+  static const uint8_t value = sensor_msgs::msg::PointField::INT32;
+};
+/** \brief Concrete templatization of type to enum for uint32_t */
 template<>
-struct typeAsPointFieldType<uint32_t> { static const uint8_t value =
-    sensor_msgs::msg::PointField::UINT32;};
+struct typeAsPointFieldType<uint32_t>
+{
+  /** Type to enum for uint32_t -> UINT32 */
+  static const uint8_t value = sensor_msgs::msg::PointField::UINT32;
+};
+/** \brief Concrete templatization of type to enum for float */
 template<>
-struct typeAsPointFieldType<float> { static const uint8_t value =
-    sensor_msgs::msg::PointField::FLOAT32;};
+struct typeAsPointFieldType<float>
+{
+  /** Type to enum for float -> FLOAT32 */
+  static const uint8_t value = sensor_msgs::msg::PointField::FLOAT32;
+};
+/** \brief Concrete templatization of type to enum for double */
 template<>
-struct typeAsPointFieldType<double> { static const uint8_t value =
-    sensor_msgs::msg::PointField::FLOAT64;};
+struct typeAsPointFieldType<double>
+{
+  /** Type to enum for double -> FLOAT64 */
+  static const uint8_t value = sensor_msgs::msg::PointField::FLOAT64;
+};
 
-/*!
- * \Converts a value at the given pointer position, interpreted as the datatype
+/**
+ * \brief Converts a value at the given pointer position, interpreted as the datatype
  *  specified by the given template argument point_field_type, to the given
  *  template type T and returns it.
  * \param data_ptr            pointer into the point cloud 2 buffer
@@ -116,8 +188,8 @@ inline T readPointCloud2BufferValue(const unsigned char * data_ptr)
   return static_cast<T>(*(reinterpret_cast<type const *>(data_ptr)));
 }
 
-/*!
- * \Converts a value at the given pointer position interpreted as the datatype
+/**
+ * \brief Converts a value at the given pointer position interpreted as the datatype
  *  specified by the given datatype parameter to the given template type and returns it.
  * \param data_ptr    pointer into the point cloud 2 buffer
  * \param datatype    sensor_msgs::PointField datatype value

@@ -159,23 +159,6 @@ inline void PointCloud2Modifier::clear()
 }
 
 
-/**
- * @brief Function setting some fields in a PointCloud and adjusting the
- *        internals of the PointCloud2
- * @param n_fields the number of fields to add. The fields are given as
- *        triplets: name of the field as char*, number of elements in the
- *        field, the datatype of the elements in the field
- *
- * E.g, you create your PointCloud2 message with XYZ/RGB as follows:
- * <PRE>
- *   setPointCloud2FieldsByString(cloud_msg, 4, "x", 1, sensor_msgs::msg::PointField::FLOAT32,
- *                                              "y", 1, sensor_msgs::msg::PointField::FLOAT32,
- *                                              "z", 1, sensor_msgs::msg::PointField::FLOAT32,
- *                                              "rgb", 1, sensor_msgs::msg::PointField::FLOAT32);
- * </PRE>
- * WARNING: THIS DOES NOT TAKE INTO ACCOUNT ANY PADDING AS DONE UNTIL HYDRO
- * For simple usual cases, the overloaded setPointCloud2FieldsByString is what you want.
- */
 inline void PointCloud2Modifier::setPointCloud2Fields(int n_fields, ...)
 {
   cloud_msg_.fields.clear();
@@ -198,16 +181,6 @@ inline void PointCloud2Modifier::setPointCloud2Fields(int n_fields, ...)
   cloud_msg_.data.resize(cloud_msg_.height * cloud_msg_.row_step);
 }
 
-/**
- * @brief Function setting some fields in a PointCloud and adjusting the
- *        internals of the PointCloud2
- * @param n_fields the number of fields to add. The fields are given as
- *        strings: "xyz" (3 floats), "rgb" (3 uchar stacked in a float),
- *        "rgba" (4 uchar stacked in a float)
- * @return void
- *
- * WARNING: THIS FUNCTION DOES ADD ANY NECESSARY PADDING TRANSPARENTLY
- */
 inline void PointCloud2Modifier::setPointCloud2FieldsByString(int n_fields, ...)
 {
   cloud_msg_.fields.clear();
