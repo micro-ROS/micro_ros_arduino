@@ -60,7 +60,7 @@ namespace sensor_msgs
 {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /** \brief Get the index of a specified field (i.e., dimension/channel)
-  * \param points the the point cloud message
+  * \param cloud the the point cloud message
   * \param field_name the string defining the field name
   */
 static inline int getPointCloud2FieldIndex(

@@ -77,7 +77,7 @@ static inline bool fillImage(
 /// Clear the data of an image message.
 /**
  * \details All fields but `data` are kept the same.
- * \param[out]image Image to be cleared.
+ * \param[out] image Image to be cleared.
  */
 static inline void clearImage(msg::Image & image)
 {
