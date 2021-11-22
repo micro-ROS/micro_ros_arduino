@@ -31,4 +31,4 @@ https://github.com/ament/googletest.git 32b0a101649314e0729d2f71737c375d3810f63b
 https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
 https://github.com/ament/ament_package.git 46571c0fd57ca23449fd6fa2425b947805ef8d60
 https://github.com/ament/ament_cmake.git a51ed2214ce96fe0ef1ee00455cb03ba14bd52f1
-https://github.com/ros2/ament_cmake_ros.git b8ee10cb6876220e6bff6475cb9f5284f4ff0d5e
+https://github.com/ros2/ament_cmake_ros.git add4d35a981fadef6ffc7f5180bcb19a84acc08d
