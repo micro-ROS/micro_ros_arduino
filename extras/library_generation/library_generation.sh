@@ -16,6 +16,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("teensy35")
     PLATFORMS+=("cortex_m0")
     PLATFORMS+=("cortex_m3")
+    PLATFORMS+=("cortex_m4")
     # PLATFORMS+=("portenta-m4")
     PLATFORMS+=("portenta-m7")
     PLATFORMS+=("kakutef7-m7")
@@ -99,6 +100,20 @@ if [[ " ${PLATFORMS[@]} " =~ " cortex_m3 " ]]; then
 
     mkdir -p /project/src/cortex-m3
     cp -R firmware/build/libmicroros.a /project/src/cortex-m3/libmicroros.a
+fi
+
+######## Build for STM32F4 ########
+if [[ " ${PLATFORMS[@]} " =~ " cortex_m4 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/cortex_m4_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/cortex-m4
+    cp -R firmware/build/libmicroros.a /project/src/cortex-m4/libmicroros.a
 fi
 
 ######## Build for Teensy 3.2 ########
