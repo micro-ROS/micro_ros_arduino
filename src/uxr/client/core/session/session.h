@@ -193,6 +193,7 @@ typedef struct uxrSession
     void* on_reply_args;
 
     bool on_data_flag;
+    bool on_pong_flag;
     uxrContinuousArgs continuous_args;
 
 #ifdef UCLIENT_PROFILE_MULTITHREAD
