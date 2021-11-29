@@ -44,7 +44,7 @@ struct uxrSession;
  *          interfere with the rest of the application.
  * @ingroup      general_utils
  * @param   session Pointer to the uxrSession struct inited.
- * @param   timeout Time, in milliseconds, for a ping attempt.
+ * @param   timeout_ms Time, in milliseconds, for a ping attempt.
  * @param   attempts Maximum number of ping attempts to be performed.
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
@@ -61,7 +61,7 @@ bool uxr_ping_agent_session(
  * @ingroup      general_utils
  * @param   comm Pointer to the uxrCommunication struct holding the transport
  *               information and callback methods.
- * @param   timeout Time, in milliseconds, for a ping attempt.
+ * @param   timeout_ms Time, in milliseconds, for a ping attempt.
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
 UXRDLLAPI bool uxr_ping_agent(
@@ -78,7 +78,7 @@ UXRDLLAPI bool uxr_ping_agent(
  * @ingroup     general_utils
  * @param   comm Pointer to the uxrCommunication struct holding the transport
  *               information and callback methods.
- * @param   timeout Time, in milliseconds, for a ping attempt.
+ * @param   timeout_ms Time, in milliseconds, for a ping attempt.
  * @param   attempts Maximum number of ping attempts to be performed.
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
