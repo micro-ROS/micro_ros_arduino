@@ -28,6 +28,40 @@ extern "C"
 //==================================================================
 
 /**
+ * The enum that identifies the durability of the QoS of the DDS entity.
+ */
+
+typedef enum uxrQoSDurability
+{
+    UXR_DURABILITY_TRANSIENT_LOCAL = 0,
+    UXR_DURABILITY_TRANSIENT,
+    UXR_DURABILITY_VOLATILE,
+    UXR_DURABILITY_PERSISTENT
+} uxrQoSDurability;
+
+typedef enum uxrQoSReliability
+{
+    UXR_RELIABILITY_RELIABLE = 0,
+    UXR_RELIABILITY_BEST_EFFORT,
+} uxrQoSReliability;
+
+
+// uxrQosHistory
+typedef enum uxrQoSHistory
+{
+    UXR_HISTORY_KEEP_LAST = 0,
+    UXR_HISTORY_KEEP_ALL
+} uxrQoSHistory;
+
+typedef struct uxrQoS_t
+{
+    uxrQoSDurability durability;
+    uxrQoSReliability reliability;
+    uxrQoSHistory history;
+    uint16_t depth;
+} uxrQoS_t;
+
+/**
  * @brief Buffers into the stream identified by `stream_id` an XRCE CREATE submessage with an XRCE Participant payload.
  *        The submessage will be sent when `uxr_flash_output_streams` or `uxr_run_session` function are called.
  *        As a result of the reception of this submessage, the Agent will create an XRCE Participant according to
@@ -118,18 +152,6 @@ UXRDLLAPI uint16_t uxr_buffer_create_subscriber_bin(
         uint8_t mode);
 
 /**
- * The enum that identifies the durability of the QoS of the DDS entity.
- */
-
-typedef enum uxrQoSDurability
-{
-    UXR_DURABILITY_VOLATILE = 0,
-    UXR_DURABILITY_TRANSIENT_LOCAL,
-    UXR_DURABILITY_TRANSIENT,
-    UXR_DURABILITY_PERSISTENT
-} uxrQoSDurability;
-
-/**
  * @brief Buffers into the stream identified by `stream_id` an XRCE CREATE submessage with an XRCE DataWriter payload.
  *        The submessage will be sent when `uxr_flash_output_streams` or `uxr_run_session` function are called.
  *        As a result of the reception of this submessage, the Agent will create an XRCE DataWriter according to
@@ -139,10 +161,7 @@ typedef enum uxrQoSDurability
  * @param object_id             The identifier of the XRCE DataWriter.
  * @param publisher_id          The identifier of the associated XRCE Publisher.
  * @param topic_id              The identifier of the associated XRCE Topic.
- * @param reliable              Reliability flag.
- * @param keep_last             Keep last flag.
- * @param depth                 Depth of the history.
- * @param transient_local       Transient local flag.
+ * @param qos                   QoS definition.
  * @param mode                  The set of flags that determines the entity creation mode.
  *                              The Creation Mode Table describes the entities creation behaviour according to the
  *                              `UXR_REUSE` and `UXR_REPLACE` flags.
@@ -155,10 +174,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datawriter_bin(
         uxrObjectId object_id,
         uxrObjectId publisher_id,
         uxrObjectId topic_id,
-        bool reliable,
-        bool keep_last,
-        uint16_t depth,
-        uxrQoSDurability durability,
+        uxrQoS_t qos,
         uint8_t mode);
 
 /**
@@ -171,10 +187,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datawriter_bin(
  * @param object_id             The identifier of the XRCE DataReader.
  * @param subscriber_id         The identifier of the associated XRCE Subscriber.
  * @param topic_id              The identifier of the associated XRCE Topic.
- * @param reliable              Reliability flag.
- * @param keep_last             Keep last flag.
- * @param depth                 Depth of the history.
- * @param transient_local       Transient local flag.
+ * @param qos                   QoS definition.
  * @param mode                  The set of flags that determines the entity creation mode.
  *                              The Creation Mode Table describes the entities creation behaviour according to the
  *                              `UXR_REUSE` and `UXR_REPLACE` flags.
@@ -187,10 +200,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datareader_bin(
         uxrObjectId object_id,
         uxrObjectId subscriber_id,
         uxrObjectId topic_id,
-        bool reliable,
-        bool keep_last,
-        uint16_t depth,
-        uxrQoSDurability durability,
+        uxrQoS_t qos,
         uint8_t mode);
 /**
  * @brief Buffers into the stream identified by `stream_id` an XRCE CREATE submessage with an XRCE Requester payload.
@@ -207,6 +217,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_datareader_bin(
  * @param reply_type            Requester reply type.
  * @param request_topic_name    Requester request topic name.
  * @param reply_topic_name      Requester reply topic name.
+ * @param qos                   QoS definition.
  * @param mode                  The set of flags that determines the entitiy creation mode.
  *                              the Creation Mode Table describes the entities creation behaviour according to the
  *                              `UXR_REUSE` and `UXR_REPLACE` flags.
@@ -223,6 +234,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_requester_bin(
         const char* reply_type,
         const char* request_topic_name,
         const char* reply_topic_name,
+        uxrQoS_t qos,
         uint8_t mode);
 
 /**
@@ -240,6 +252,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_requester_bin(
  * @param reply_type            Replier reply type.
  * @param request_topic_name    Replier request topic name.
  * @param reply_topic_name      Replier reply topic name.
+ * @param qos                   QoS definition.
  * @param mode                  The set of flags that determines the entitiy creation mode.
  *                              the Creation Mode Table describes the entities creation behaviour according to the
  *                              `UXR_REUSE` and `UXR_REPLACE` flags.
@@ -256,6 +269,7 @@ UXRDLLAPI uint16_t uxr_buffer_create_replier_bin(
         const char* reply_type,
         const char* request_topic_name,
         const char* reply_topic_name,
+        uxrQoS_t qos,
         uint8_t mode);
 
 #ifdef __cplusplus
