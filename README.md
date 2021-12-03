@@ -45,13 +45,9 @@ You can find the available precompiled ROS 2 types for messages and services in 
 
 ## How to use the precompiled library
 
-<<<<<<< HEAD
-Go to [link to release section](https://github.com/micro-ROS/micro_ros_arduino/releases) and download the last release of micro-ROS library for Arduino. 
-=======
 ### Arduino IDE
 
 Go to [link to release section](https://github.com/micro-ROS/micro_ros_arduino/releases) and download the last release of micro-ROS library for Arduino.
->>>>>>> bfe1696 (How to use Micro-ROS with PlatformIO (#617))
 
 Include it in your proyect using `Sketch -> Include library -> Add .ZIP Library...`
 
@@ -139,4 +135,4 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro-ros.github.io/docs/tutorials/core/microxrcedds_rmw_configuration/).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanims. Only USB serial transports are provided.
-- Teensyduino support files have to be patched in order to use precompiled libraries. 
+- Teensyduino support files have to be patched in order to use precompiled libraries.
