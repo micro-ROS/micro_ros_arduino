@@ -4,6 +4,21 @@ This is a micro-ROS library for baremetal projects based on Arduino IDE or Ardui
 
 As the build process for ROS 2 and micro-ROS is based on custom meta-build system tools and CMake, this library is provided as a precompiled library. Anyways, users can rebuild its own precompiled libraries in order to modify micro-ROS parameters, for example customizing prebuild meta file.
 
+- [micro-ROS for Arduino](#micro-ros-for-arduino)
+  - [Supported boards](#supported-boards)
+  - [How to use the precompiled library](#how-to-use-the-precompiled-library)
+    - [Arduino IDE](#arduino-ide)
+    - [PlatformIO](#platformio)
+  - [How to build the precompiled library](#how-to-build-the-precompiled-library)
+  - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
+    - [Patch Teensyduino](#patch-teensyduino)
+    - [Patch SAMD](#patch-samd)
+  - [Purpose of the Project](#purpose-of-the-project)
+  - [License](#license)
+  - [Known Issues/Limitations](#known-issueslimitations)
+
+## Supported boards
+
 Supported boards are:
 
 | Board                                                                               | Min version | State      | Details                                                                                             | Prebuild meta            |
