@@ -24,10 +24,85 @@ Community contributed boards are:
 | [Arduino Due](https://store.arduino.cc/arduino-due)             | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
 | [Arduino Zero](https://store.arduino.cc/arduino-zero)           | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
 | [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/) | -           | [@amfern](https://github.com/amfern)           |         | `colcon.meta`            |
+| [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/) | -           | [@amfern](https://github.com/amfern)           |         | `colcon.meta`            |
+| [STM32-E407](https://www.olimex.com/Products/ARM/ST/STM32-E407/resources/STM32-E407.pdf) | -           | [@dominikn](https://github.com/dominikn)           |         | `colcon.meta`            |
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 
 ## How to use the precompiled library
+
+### PlatformIO
+
+For boards supported by Micro-ROS, all you have to do to add the library to your project is including the following lines in the existing `platformio.ini` file:
+
+```ini
+[env:<YOUR_BOARD>]
+
+...
+lib_deps =
+    https://github.com/micro-ROS/micro_ros_arduino
+
+build_flags = 
+    -L ./.pio/libdeps/<YOUR_BOARD>/micro_ros_arduino/src/<BOARD_ARCHITECTURE>/
+    -l microros
+    -D <TARGET_DEFINITION>
+```
+
+Now to install deppendencies run:
+
+```bash
+pio lib install
+```
+
+To build the firmware run:
+
+```bash
+$ pio run
+```
+
+And finally, to upload the firmware to the target:
+
+```bash
+$ pio run --target upload
+```
+
+The complete PlatformIO project using Micro-ROS for STM32F4 board with Ethernet interface is [here](https://github.com/husarion/micro_ros_stm32_template). 
+
+> **Running the demo**
+>
+> [The repo with PlatformIO project](https://github.com/husarion/micro_ros_stm32_template) contains a basic ROS 2 demo, where embedded board (STM32F4) runs a `talker` ROS 2 node, and `listener` node runs on a computer connected over Ethernet with the board.
+> 
+> To start just clone this example:
+> 
+> ```bash
+> git clone git@github.com:husarion/micro_ros_stm32_template.git
+> ```
+> 
+> Connect the board using Ethernet cable directly to your computer with a static IP `192.168.1.176`, and start `listener` and `talker` nodes:
+> 
+> **1. Starting the `talker`**
+> 
+> ```
+> cd micro_ros_stm32_template/demo
+> docker-compose up
+> ```
+> 
+> **2. Starting the `listener`**
+> 
+> Connect ST-Link to the STM32F4 board and run
+> 
+> ```
+> cd micro_ros_stm32_template
+> pio lib install
+> pio run --target upload
+> ```
+>
+> You should now see logs from talker and listener sending messages over the `chatter` topic. 
+> 
+> More details are in [the README](https://github.com/husarion/micro_ros_stm32_template/blob/main/README.md).
+
+
+### Arduino IDE
 
 Go to [link to release section](https://github.com/micro-ROS/micro_ros_arduino/releases) and download the last release of micro-ROS library for Arduino.
 
