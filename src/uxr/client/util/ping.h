@@ -35,6 +35,24 @@ extern "C"
 #define GET_INFO_MSG_SIZE   8
 #define GET_INFO_REQUEST_ID 9
 
+struct uxrSession;
+
+/**
+ * @brief   Checks the availability status of a valid connection with an agent.
+ *          This methods performs a single attempt.
+ *          This method uses an already opened session in order to do not
+ *          interfere with the rest of the application.
+ * @ingroup      general_utils
+ * @param   session Pointer to the uxrSession struct inited.
+ * @param   timeout_ms Time, in milliseconds, for a ping attempt.
+ * @param   attempts Maximum number of ping attempts to be performed.
+ * @return `true` in case of a successful ping to the agent, `false` otherwise.
+ */
+bool uxr_ping_agent_session(
+        struct uxrSession* session,
+        const int timeout_ms,
+        const uint8_t attempts);
+
 /**
  * @brief   Checks the availability status of a valid connection with an agent.
  *          This methods performs a single attempt.
@@ -43,12 +61,12 @@ extern "C"
  * @ingroup      general_utils
  * @param   comm Pointer to the uxrCommunication struct holding the transport
  *               information and callback methods.
- * @param   timeout Time, in milliseconds, for a ping attempt.
+ * @param   timeout_ms Time, in milliseconds, for a ping attempt.
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
 UXRDLLAPI bool uxr_ping_agent(
         uxrCommunication* comm,
-        const int timeout);
+        const int timeout_ms);
 
 /**
  * @brief   Checks the availability status of a valid connection with an agent.
@@ -60,13 +78,13 @@ UXRDLLAPI bool uxr_ping_agent(
  * @ingroup     general_utils
  * @param   comm Pointer to the uxrCommunication struct holding the transport
  *               information and callback methods.
- * @param   timeout Time, in milliseconds, for a ping attempt.
+ * @param   timeout_ms Time, in milliseconds, for a ping attempt.
  * @param   attempts Maximum number of ping attempts to be performed.
  * @return `true` in case of a successful ping to the agent, `false` otherwise.
  */
 UXRDLLAPI bool uxr_ping_agent_attempts(
         uxrCommunication* comm,
-        const int timeout,
+        const int timeout_ms,
         const uint8_t attempts);
 
 

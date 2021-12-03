@@ -43,6 +43,7 @@ extern "C"
  * \brief Check if micro-ROS Agent is up and running.
  *        This function can be called even when the micro-ROS context has not yet been
  *        initialized by the application logics.
+ *        This function cannot be called concurrently with `rmw_init()` or `rmw_shutdown()`.
  * \param[in] timeout_ms Timeout in ms (per attempt).
  * \param[in] attempts Number of tries before considering the ping as failed.
  * \return RMW_RET_OK If micro-ROS Agent is available.
@@ -56,6 +57,7 @@ rmw_ret_t rmw_uros_ping_agent(
  * \brief Check if micro-ROS Agent is up and running using the transport set on the given rmw options.
  *        This function can be called even when the micro-ROS context has not yet been initialized.
  *        The transport will be initialized and closed once during the ping process.
+ *        This function cannot be called concurrently with `rmw_init()` or `rmw_shutdown()`.
  * \param[in] timeout_ms Timeout in ms (per attempt).
  * \param[in] attempts Number of tries before considering the ping as failed.
  * \param[in] rmw_options rmw options with populated transport parameters.
