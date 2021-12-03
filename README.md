@@ -81,8 +81,7 @@ Now to proceed with the PlatformIO workflow:
 ```bash
 pio lib install # Install dependencies
 pio run # Build the firmware
-$ pio run --target upload # Flash the firmware
-
+pio run --target upload # Flash the firmware
 ```
 
 An example of a micro-ROS application using PlatformIO is available [here](https://github.com/husarion/micro_ros_stm32_template).
