@@ -97,7 +97,7 @@ The complete PlatformIO project using Micro-ROS for STM32F4 board with Ethernet 
 > pio run --target upload
 > ```
 >
-> You should now see logs from talker and listener sending messages over the `chatter` topic. 
+> You should now see logs from `talker` and `listener` nodes sending messages over the `chatter` topic. 
 > 
 > More details are in [the README](https://github.com/husarion/micro_ros_stm32_template/blob/main/README.md).
 
