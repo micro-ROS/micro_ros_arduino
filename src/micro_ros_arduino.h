@@ -42,7 +42,13 @@ static inline void set_microros_transports(){
 #include <uxr/client/transport.h>
 #include <rmw_microros/rmw_microros.h>
 #include "IPAddress.h"
+#endif
 
+#ifdef ARDUINO_TEENSY41
+#include <NativeEthernet.h>
+#endif
+
+#if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41)
 extern "C" bool arduino_native_ethernet_udp_transport_open(struct uxrCustomTransport * transport);
 extern "C" bool arduino_native_ethernet_udp_transport_close(struct uxrCustomTransport * transport);
 extern "C" size_t arduino_native_ethernet_udp_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
