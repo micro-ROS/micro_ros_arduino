@@ -41,6 +41,12 @@ enum
   shape_msgs__msg__SolidPrimitive__CONE = 4
 };
 
+/// Constant 'PRISM'.
+enum
+{
+  shape_msgs__msg__SolidPrimitive__PRISM = 5
+};
+
 /// Constant 'BOX_X'.
 enum
 {
@@ -89,9 +95,17 @@ enum
   shape_msgs__msg__SolidPrimitive__CONE_RADIUS = 1
 };
 
+/// Constant 'PRISM_HEIGHT'.
+enum
+{
+  shape_msgs__msg__SolidPrimitive__PRISM_HEIGHT = 0
+};
+
 // Include directives for member types
 // Member 'dimensions'
 #include "rosidl_runtime_c/primitives_sequence.h"
+// Member 'polygon'
+#include "geometry_msgs/msg/detail/polygon__struct.h"
 
 // constants for array fields with an upper bound
 // dimensions
@@ -105,6 +119,7 @@ typedef struct shape_msgs__msg__SolidPrimitive
 {
   uint8_t type;
   rosidl_runtime_c__double__Sequence dimensions;
+  geometry_msgs__msg__Polygon__Sequence polygon;
 } shape_msgs__msg__SolidPrimitive;
 
 // Struct for a sequence of shape_msgs__msg__SolidPrimitive.
