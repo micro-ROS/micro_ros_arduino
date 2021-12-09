@@ -4,7 +4,14 @@
 #include <EthernetUdp.h>
 #include <STM32Ethernet.h>
 #include <micro_ros_arduino.h>
+#endif
 
+#ifdef ARDUINO_TEENSY41
+#include <NativeEthernet.h>
+#include <micro_ros_arduino.h>
+#endif
+
+#if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41)
 extern "C" {
 
 #include <stdbool.h>
@@ -74,7 +81,6 @@ int clock_gettime(clockid_t unused, struct timespec *tp) {
 
   return 0;
 }
-
 }
 
 #endif
