@@ -473,7 +473,7 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_difference_times(
-  rcl_time_point_t * start, rcl_time_point_t * finish, rcl_duration_t * delta);
+  const rcl_time_point_t * start, const rcl_time_point_t * finish, rcl_duration_t * delta);
 
 /// Fill the time point value with the current value of the associated clock.
 /**
