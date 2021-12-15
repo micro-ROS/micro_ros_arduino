@@ -29,7 +29,7 @@ extern "C"
 #include <uxr/client/visibility.h>
 #include <uxr/client/transport.h>
 
-#define UXR_CONFIG_CAN_TRANSPORT_MTU 64
+#define UXR_CONFIG_CAN_TRANSPORT_MTU 63
 
 typedef struct uxrCANTransport
 {
