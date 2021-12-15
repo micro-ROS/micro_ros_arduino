@@ -46,6 +46,8 @@
 #ifdef UCLIENT_PROFILE_SERIAL
 #if defined(UCLIENT_PLATFORM_POSIX)
 #include <uxr/client/profile/transport/serial/serial_transport_posix.h>
+#elif defined(UCLIENT_PLATFORM_RTEMS_BSD_NET)
+#include <uxr/client/profile/transport/serial/serial_transport_rtems_bsd_net.h>
 #endif // if defined(UCLIENT_EXTERNAL_SERIAL)
 #include <uxr/client/profile/transport/serial/serial_transport.h>
 #endif //UCLIENT_PROFILE_SERIAL
