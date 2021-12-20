@@ -34,6 +34,10 @@
 #include <rmw_microros/custom_transport.h>
 #endif  // RMW_UXRCE_TRANSPORT_CUSTOM
 
+#ifdef RMW_UROS_ERROR_HANDLING
+#include <rmw_microros/error_handling.h>
+#endif  // RMW_UROS_ERROR_HANDLING
+
 #if defined(__cplusplus)
 extern "C"
 {
