@@ -19,6 +19,8 @@
 
 #include "rcl_lifecycle/visibility_control.h"
 
+#include "lifecycle_msgs/msg/transition_event.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -84,6 +86,8 @@ typedef struct rcl_lifecycle_com_interface_s
   rcl_service_t srv_get_available_transitions;
   /// Service that allows to get transitions from the graph
   rcl_service_t srv_get_transition_graph;
+  /// Cached transition event message.
+  lifecycle_msgs__msg__TransitionEvent msg;
 } rcl_lifecycle_com_interface_t;
 
 /// It contains various options to configure the rcl_lifecycle_state_machine_t instance
