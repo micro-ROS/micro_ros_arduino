@@ -19,7 +19,7 @@ https://github.com/ros2/libyaml_vendor.git 73c8ea6cec14474d9b256c61fc6a2d9af9e5d
 https://github.com/ros2/test_interface_files.git 96d65b61e9acdb9480075ffdc00dadddd67ff832
 https://github.com/ros2/rosidl.git e76ed132fb51d825cc6765059c13664bff0130a1
 https://github.com/ros2/rcl.git 13e117b684f852be22023e2b1ac5a4155102af47
-https://github.com/ros2/rmw_implementation.git 567e92247bd8bd864151e2579667a3fae82868a0
+https://github.com/ros2/rmw_implementation.git afecc5dc46afdd776aa2b95b0da5e75b62dfb5d2
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/rcl_interfaces.git 9c9f5935cff0eeeffe7e3eb31beba396cb22dd1a
 https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
@@ -29,7 +29,7 @@ https://github.com/ament/googletest.git baf8569d2e1f5dd48df1328466d04eabf920e57d
 https://github.com/ament/ament_cmake.git 4ac1ed1153ac774116c273021944eb3ea836495c
 https://github.com/ament/ament_package.git 37f9a1f5e19a2513051ece437c3ef14a0cbaf836
 https://github.com/ament/ament_lint.git d502e7bc45ba4ed9dc23c198299899f97ebd0d7e
-https://github.com/ament/uncrustify_vendor.git 981fe73ba87dacbb94917fe65550ccd7e5da885a
+https://github.com/ament/uncrustify_vendor.git fd52d19c51190e6277b39706f728cedb8cf9c02e
 https://github.com/ament/ament_index.git aa774fe3773169f0f18bbbf4ef2baaa7bf3a1540
 https://github.com/uncrustify/uncrustify.git 1d3d8fa5e81bece0fac4b81316b0844f7cc35926
 https://github.com/ros2/ament_cmake_ros.git add4d35a981fadef6ffc7f5180bcb19a84acc08d
