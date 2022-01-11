@@ -31,6 +31,7 @@ jobs:
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
             arduino-cli core install arduino:mbed -v
+            arduino-cli core install esp32:esp32 -v
             #
             # INSTALLING TEENSY SUPPORT
             wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
@@ -79,3 +80,5 @@ jobs:
             # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
