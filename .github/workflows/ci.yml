@@ -19,7 +19,7 @@ jobs:
         - name: Build
           run: |
             apt update
-            apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync python-is-python3
+            apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync python-is-python3 python3-pip
             pip3 install pyserial
             curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
             mkdir -p /github/home/Arduino/libraries/micro_ros_arduino/
