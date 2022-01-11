@@ -103,7 +103,6 @@ struct micro_ros_agent_locator {
 
 static inline void set_microros_wifi_transports(char * ssid, char * pass, char * agent_ip, uint agent_port){
 
-	WiFi.mode(WIFI_STA);
 	WiFi.begin(ssid, pass);
 
     while (WiFi.status() != WL_CONNECTED) {
