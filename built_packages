@@ -25,6 +25,7 @@ https://github.com/ros2/rcl_interfaces.git 9c9f5935cff0eeeffe7e3eb31beba396cb22d
 https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git e61bfa0e0bfdb74f4a592b2efbf7acbfcfeb6c1f
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
+<<<<<<< HEAD
 https://github.com/ament/googletest.git baf8569d2e1f5dd48df1328466d04eabf920e57d
 https://github.com/ament/ament_cmake.git b474e31a3fc46df99b8d164e8ad65a7336fdb3c1
 https://github.com/ament/ament_package.git 37f9a1f5e19a2513051ece437c3ef14a0cbaf836
@@ -33,3 +34,13 @@ https://github.com/ament/uncrustify_vendor.git fd52d19c51190e6277b39706f728cedb8
 https://github.com/ament/ament_index.git 5ce2eba781801154d93c6fd7d6f66b23e4a7182d
 https://github.com/uncrustify/uncrustify.git 1d3d8fa5e81bece0fac4b81316b0844f7cc35926
 https://github.com/ros2/ament_cmake_ros.git add4d35a981fadef6ffc7f5180bcb19a84acc08d
+=======
+https://github.com/ament/googletest.git 79c4c9db1a7bc8bc5473a280499bf776173653d6
+https://github.com/ament/ament_cmake.git 852a7d8abe8a743938a9167aa3f1f7b0a40e631f
+https://github.com/ament/ament_package.git 54ff09f9eb8d35ca914376ae872cc7e60093547b
+https://github.com/ament/ament_lint.git 4bc68c815ce308b3443e3cb38fd71e2b03ffdc40
+https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
+https://github.com/ament/ament_index.git 7c8a2762453bf928909cc3dd65d2164b2f67dbaf
+https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
+
+>>>>>>> a809407 (Add ESP32 support (#680))
