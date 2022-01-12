@@ -8,8 +8,8 @@
 
 #include <std_msgs/msg/int32.h>
 
-#if !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_NANO_RP2040_CONNECT)
-#error This example is only avaible for Arduino Portenta and Arduino Nano RP2040 Connect
+#if !defined(ESP32) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_NANO_RP2040_CONNECT)
+#error This example is only avaible for Arduino Portenta, Arduino Nano RP2040 Connect and ESP32 Dev module
 #endif
 
 rcl_publisher_t publisher;

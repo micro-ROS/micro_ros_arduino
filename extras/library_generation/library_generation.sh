@@ -21,6 +21,7 @@ if [ $OPTIND -eq 1 ]; then
     # PLATFORMS+=("portenta-m4")
     PLATFORMS+=("portenta-m7")
     PLATFORMS+=("kakutef7-m7")
+    PLATFORMS+=("esp32")
 fi
 
 shift $((OPTIND-1))
@@ -53,6 +54,23 @@ pushd firmware/mcu_ws > /dev/null
 
 popd > /dev/null
 
+<<<<<<< HEAD
+=======
+cd firmware
+echo "" > /project/built_packages
+for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /project/built_packages; popd > /dev/null; done;
+
+cd /project
+if [[ `git diff-index --name-only HEAD | grep built_packages` ]]; then
+    echo "Changes detected"
+else
+    echo "No changes detected"
+    exit 0
+fi
+
+cd /uros_ws
+
+>>>>>>> a809407 (Add ESP32 support (#680))
 ######## Clean and source ########
 find /project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.cpp ! -name *.c.in -delete
 
@@ -215,13 +233,23 @@ if [[ " ${PLATFORMS[@]} " =~ " kakutef7-m7 " ]]; then
     cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv5-sp-d16-hardfp/libmicroros.a
 fi
 
+######## Build for ESP 32  ########
+if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/xtensa-esp32-elf/bin/xtensa-esp32-elf-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/esp32_toolchain.cmake /project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/esp32
+    cp -R firmware/build/libmicroros.a /project/src/esp32/libmicroros.a
+fi
+
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /project/available_ros2_types
 find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /project/available_ros2_types
-
-cd firmware
-echo "" > /project/built_packages
-for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /project/built_packages; popd > /dev/null; done;
 
 ######## Fix permissions ########
 sudo chmod -R 777 .
