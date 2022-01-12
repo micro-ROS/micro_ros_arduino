@@ -81,12 +81,12 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 
 #endif
 
-#if defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
 
-#if defined(TARGET_PORTENTA_H7_M7)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7)
 #include <WiFi.h>
 #include <WiFiUdp.h>
-#else defined(ARDUINO_NANO_RP2040_CONNECT)
+#elif defined(ARDUINO_NANO_RP2040_CONNECT)
 #include <SPI.h>
 #include <WiFiNINA.h>
 #endif
@@ -102,10 +102,12 @@ struct micro_ros_agent_locator {
 };
 
 static inline void set_microros_wifi_transports(char * ssid, char * pass, char * agent_ip, uint agent_port){
-	while (WiFi.begin(ssid, pass) != WL_CONNECTED)
-	{
-    	delay(500);
-	}
+
+	WiFi.begin(ssid, pass);
+
+    while (WiFi.status() != WL_CONNECTED) {
+      delay(500);
+    }
 
 	static struct micro_ros_agent_locator locator;
 	locator.address.fromString(agent_ip);

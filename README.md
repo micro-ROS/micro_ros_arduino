@@ -31,6 +31,7 @@ Supported boards are:
 | [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)                          | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta`     |
 | [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta`     |
 | [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta`     |
+| [ESP32 Dev Module](https://docs.espressif.com/projects/arduino-esp32/en/latest/boards/ESP32-DevKitC-1.html) | v1.8.5  | Supported  | [Arduino core for the ESP32 (v2.0.2)](https://github.com/espressif/arduino-esp32/releases/tag/2.0.2) | `colcon.meta`   |
 
 Community contributed boards are:
 
@@ -135,3 +136,4 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro-ros.github.io/docs/tutorials/core/microxrcedds_rmw_configuration/).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanims. Only USB serial transports are provided.
 - Teensyduino support files have to be patched in order to use precompiled libraries.
+- To solve Python errors on ESP32 compilation: `apt install python-is-python3 && pip3 install pyserial`
