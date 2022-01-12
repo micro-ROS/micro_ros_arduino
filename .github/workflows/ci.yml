@@ -19,18 +19,21 @@ jobs:
         - name: Build
           run: |
             apt update
-            apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync
+            apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync python-is-python3 python3-pip
+            pip3 install pyserial
             curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
             mkdir -p /github/home/Arduino/libraries/micro_ros_arduino/
             cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino/
             echo '''board_manager:
               additional_urls:
-                - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json''' > arduino-cli.yaml
+                - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
+                - https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json''' > arduino-cli.yaml
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
             arduino-cli core install arduino:mbed -v
+            arduino-cli core install esp32:esp32 -v
             #
             # INSTALLING TEENSY SUPPORT
             wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
@@ -80,3 +83,5 @@ jobs:
             # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
