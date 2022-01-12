@@ -68,6 +68,11 @@ fi
 
 cd /uros_ws
 
+# Workaround for https://github.com/ros2/rosidl/pull/599
+touch firmware/mcu_ws/ros2/common_interfaces/actionlib_msgs/COLCON_IGNORE;
+touch firmware/mcu_ws/ros2/common_interfaces/std_srvs/COLCON_IGNORE;
+touch firmware/mcu_ws/ros2/example_interfaces/COLCON_IGNORE;
+
 ######## Clean and source ########
 find /project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.cpp ! -name *.c.in -delete
 
