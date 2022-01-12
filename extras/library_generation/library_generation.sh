@@ -53,10 +53,19 @@ pushd firmware/mcu_ws > /dev/null
 
 popd > /dev/null
 
-# Workaround. Remove when https://github.com/ros2/rosidl/pull/596 is merged
-touch firmware/mcu_ws/ros2/common_interfaces/actionlib_msgs/COLCON_IGNORE;
-touch firmware/mcu_ws/ros2/common_interfaces/std_srvs/COLCON_IGNORE;
-touch firmware/mcu_ws/ros2/example_interfaces/COLCON_IGNORE;
+cd firmware
+echo "" > /project/built_packages
+for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /project/built_packages; popd > /dev/null; done;
+
+cd /project
+if [[ `git diff-index --name-only HEAD | grep built_packages` ]]; then
+    echo "Changes detected"
+else
+    echo "No changes detected"
+    exit 0
+fi
+
+cd /uros_ws
 
 ######## Clean and source ########
 find /project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.cpp ! -name *.c.in -delete

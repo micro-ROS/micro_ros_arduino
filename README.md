@@ -136,3 +136,4 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro-ros.github.io/docs/tutorials/core/microxrcedds_rmw_configuration/).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanims. Only USB serial transports are provided.
 - Teensyduino support files have to be patched in order to use precompiled libraries.
+- To solve Python errors on ESP32 compilation: `apt install python-is-python3 && pip3 install pyserial`
