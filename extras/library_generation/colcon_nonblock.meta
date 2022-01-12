@@ -1,0 +1,56 @@
+{
+    "names": {
+        "tracetools": {
+            "cmake-args": [
+                "-DTRACETOOLS_DISABLED=ON",
+                "-DTRACETOOLS_STATUS_CHECKING_TOOL=OFF"
+            ]
+        },
+        "rosidl_typesupport": {
+            "cmake-args": [
+                "-DROSIDL_TYPESUPPORT_SINGLE_TYPESUPPORT=ON"
+            ]
+        },
+        "rcl": {
+            "cmake-args": [
+                "-DBUILD_TESTING=OFF",
+                "-DRCL_COMMAND_LINE_ENABLED=OFF",
+                "-DRCL_LOGGING_ENABLED=OFF"
+            ]
+        },
+        "rcutils": {
+            "cmake-args": [
+                "-DENABLE_TESTING=OFF",
+                "-DRCUTILS_NO_FILESYSTEM=ON",
+                "-DRCUTILS_NO_THREAD_SUPPORT=ON",
+                "-DRCUTILS_NO_64_ATOMIC=ON",
+                "-DRCUTILS_AVOID_DYNAMIC_ALLOCATION=ON"
+            ]
+        },
+        "microxrcedds_client": {
+            "cmake-args": [
+                "-DUCLIENT_PIC=OFF",
+                "-DUCLIENT_PROFILE_UDP=OFF",
+                "-DUCLIENT_PROFILE_TCP=OFF",
+                "-DUCLIENT_PROFILE_DISCOVERY=OFF",
+                "-DUCLIENT_PROFILE_SERIAL=OFF",
+                "-UCLIENT_PROFILE_STREAM_FRAMING=ON",
+                "-DUCLIENT_PROFILE_CUSTOM_TRANSPORT=ON",
+                "-DUCLIENT_MAX_SESSION_CONNECTION_ATTEMPTS=1",
+                "-DUCLIENT_MIN_SESSION_CONNECTION_INTERVAL=0"
+            ]
+        },
+        "rmw_microxrcedds": {
+            "cmake-args": [
+                "-DRMW_UXRCE_MAX_NODES=1",
+                "-DRMW_UXRCE_MAX_PUBLISHERS=10",
+                "-DRMW_UXRCE_MAX_SUBSCRIPTIONS=6",
+                "-DRMW_UXRCE_MAX_SERVICES=1",
+                "-DRMW_UXRCE_MAX_CLIENTS=1",
+                "-DRMW_UXRCE_MAX_HISTORY=4",
+                "-DRMW_UXRCE_TRANSPORT=custom",
+                "-DRMW_UXRCE_ENTITY_CREATION_DESTROY_TIMEOUT=0"
+            ]
+        }
+    }
+}

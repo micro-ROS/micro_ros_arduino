@@ -21,6 +21,7 @@ if [ $OPTIND -eq 1 ]; then
     # PLATFORMS+=("portenta-m4")
     PLATFORMS+=("portenta-m7")
     PLATFORMS+=("kakutef7-m7")
+    PLATFORMS+=("kakutef7-m7-nonblock")
 fi
 
 shift $((OPTIND-1))
@@ -207,11 +208,15 @@ if [[ " ${PLATFORMS[@]} " =~ " portenta-m7 " ]]; then
 fi
 
 ######## Build for Kakute F7 M7 core  ########
-if [[ " ${PLATFORMS[@]} " =~ " kakutef7-m7 " ]]; then
+if [[ " ${PLATFORMS[@]} " =~ kakutef7-m7.* ]]; then
     rm -rf firmware/build
 
     export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-
-    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/kakutef7-m7_toolchain.cmake /project/extras/library_generation/colcon.meta
+    if [[ " ${PLATFORMS[@]} " =~ " kakutef7-m7-nonblock " ]]; then
+        ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/kakutef7-m7_toolchain.cmake /project/extras/library_generation/colcon.meta
+    elif [[ " ${PLATFORMS[@]} " =~ " kakutef7-m7 " ]]; then
+        ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/kakutef7-m7_toolchain.cmake /project/extras/library_generation/colcon_nonblock.meta
+    fi
 
     find firmware/build/include/ -name "*.c"  -delete
     cp -R firmware/build/include/* /project/src/
