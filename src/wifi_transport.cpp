@@ -1,12 +1,12 @@
-#if defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
 
 #include <Arduino.h>
 
 
-#if defined(TARGET_PORTENTA_H7_M7)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7)
 #include <WiFi.h>
 #include <WiFiUdp.h>
-#else defined(ARDUINO_NANO_RP2040_CONNECT)
+#elif defined(ARDUINO_NANO_RP2040_CONNECT)
 #include <SPI.h>
 #include <WiFiNINA.h>
 #endif
