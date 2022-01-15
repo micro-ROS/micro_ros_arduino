@@ -23,7 +23,10 @@ extern "C"
 // Member 'accel'
 #include "geometry_msgs/msg/detail/accel__struct.h"
 
-// Struct defined in msg/AccelStamped in the package geometry_msgs.
+/// Struct defined in msg/AccelStamped in the package geometry_msgs.
+/**
+  * An accel with reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__AccelStamped
 {
   std_msgs__msg__Header header;

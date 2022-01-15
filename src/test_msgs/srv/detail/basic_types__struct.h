@@ -21,7 +21,7 @@ extern "C"
 // Member 'string_value'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/BasicTypes in the package test_msgs.
+/// Struct defined in srv/BasicTypes in the package test_msgs.
 typedef struct test_msgs__srv__BasicTypes_Request
 {
   bool bool_value;
@@ -58,7 +58,7 @@ typedef struct test_msgs__srv__BasicTypes_Request__Sequence
 // already included above
 // #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/BasicTypes in the package test_msgs.
+/// Struct defined in srv/BasicTypes in the package test_msgs.
 typedef struct test_msgs__srv__BasicTypes_Response
 {
   bool bool_value;

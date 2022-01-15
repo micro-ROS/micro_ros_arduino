@@ -23,10 +23,19 @@ extern "C"
 // Member 'data'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/Float32MultiArray in the package example_interfaces.
+/// Struct defined in msg/Float32MultiArray in the package example_interfaces.
+/**
+  * This is an example of using complex datatypes.
+  * It is not recommended to use directly.
+  * To use a similar datastruct please define a custom message with appropriate semantic meaning.
+ */
 typedef struct example_interfaces__msg__Float32MultiArray
 {
+  /// Please look at the MultiArrayLayout message definition for
+  /// documentation on all multiarrays.
+  /// specification of data layout
   example_interfaces__msg__MultiArrayLayout layout;
+  /// array of data
   rosidl_runtime_c__float__Sequence data;
 } example_interfaces__msg__Float32MultiArray;
 

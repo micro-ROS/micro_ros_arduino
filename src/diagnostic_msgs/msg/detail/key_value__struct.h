@@ -22,10 +22,14 @@ extern "C"
 // Member 'value'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/KeyValue in the package diagnostic_msgs.
+/// Struct defined in msg/KeyValue in the package diagnostic_msgs.
+/**
+  * What to label this value when viewing.
+ */
 typedef struct diagnostic_msgs__msg__KeyValue
 {
   rosidl_runtime_c__String key;
+  /// A value to track over time.
   rosidl_runtime_c__String value;
 } diagnostic_msgs__msg__KeyValue;
 

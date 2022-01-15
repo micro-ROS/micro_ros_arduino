@@ -18,6 +18,13 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'POWER_SUPPLY_STATUS_UNKNOWN'.
+/**
+  * Constants are chosen to match the enums in the linux kernel
+  * defined in include/linux/power_supply.h as of version 3.7
+  * The one difference is for style reasons the constants are
+  * all uppercase not mixed case.
+  * Power supply status constants
+ */
 enum
 {
   sensor_msgs__msg__BatteryState__POWER_SUPPLY_STATUS_UNKNOWN = 0
@@ -48,6 +55,9 @@ enum
 };
 
 /// Constant 'POWER_SUPPLY_HEALTH_UNKNOWN'.
+/**
+  * Power supply health constants
+ */
 enum
 {
   sensor_msgs__msg__BatteryState__POWER_SUPPLY_HEALTH_UNKNOWN = 0
@@ -102,6 +112,9 @@ enum
 };
 
 /// Constant 'POWER_SUPPLY_TECHNOLOGY_UNKNOWN'.
+/**
+  * Power supply technology (chemistry) constants
+ */
 enum
 {
   sensor_msgs__msg__BatteryState__POWER_SUPPLY_TECHNOLOGY_UNKNOWN = 0
@@ -153,24 +166,41 @@ enum
 // Member 'serial_number'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/BatteryState in the package sensor_msgs.
+/// Struct defined in msg/BatteryState in the package sensor_msgs.
 typedef struct sensor_msgs__msg__BatteryState
 {
   std_msgs__msg__Header header;
+  /// Voltage in Volts (Mandatory)
   float voltage;
+  /// Temperature in Degrees Celsius (If unmeasured NaN)
   float temperature;
+  /// Negative when discharging (A)  (If unmeasured NaN)
   float current;
+  /// Current charge in Ah  (If unmeasured NaN)
   float charge;
+  /// Capacity in Ah (last full capacity)  (If unmeasured NaN)
   float capacity;
+  /// Capacity in Ah (design capacity)  (If unmeasured NaN)
   float design_capacity;
+  /// Charge percentage on 0 to 1 range  (If unmeasured NaN)
   float percentage;
+  /// The charging status as reported. Values defined above
   uint8_t power_supply_status;
+  /// The battery health metric. Values defined above
   uint8_t power_supply_health;
+  /// The battery chemistry. Values defined above
   uint8_t power_supply_technology;
+  /// True if the battery is present
   bool present;
+  /// An array of individual cell voltages for each cell in the pack
+  /// If individual voltages unknown but number of cells known set each to NaN
   rosidl_runtime_c__float__Sequence cell_voltage;
+  /// An array of individual cell temperatures for each cell in the pack
+  /// If individual temperatures unknown but number of cells known set each to NaN
   rosidl_runtime_c__float__Sequence cell_temperature;
+  /// The location into which the battery is inserted. (slot number or plug)
   rosidl_runtime_c__String location;
+  /// The best approximation of the battery serial number
   rosidl_runtime_c__String serial_number;
 } sensor_msgs__msg__BatteryState;
 

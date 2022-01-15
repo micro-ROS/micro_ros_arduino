@@ -25,11 +25,23 @@ extern "C"
 // Member 'channels'
 #include "sensor_msgs/msg/detail/channel_float32__struct.h"
 
-// Struct defined in msg/PointCloud in the package sensor_msgs.
+/// Struct defined in msg/PointCloud in the package sensor_msgs.
+/**
+  * THIS MESSAGE IS DEPRECATED AS OF FOXY
+  * Please use sensor_msgs/PointCloud2
+ */
 typedef struct sensor_msgs__msg__PointCloud
 {
+  /// This message holds a collection of 3d points, plus optional additional
+  /// information about each point.
+  /// Time of sensor data acquisition, coordinate frame ID.
   std_msgs__msg__Header header;
+  /// Array of 3d points. Each Point32 should be interpreted as a 3d point
+  /// in the frame given in the header.
   geometry_msgs__msg__Point32__Sequence points;
+  /// Each channel should have the same number of elements as points array,
+  /// and the data in each channel should correspond 1:1 with each point.
+  /// Channel names in common practice are listed in ChannelFloat32.msg.
   sensor_msgs__msg__ChannelFloat32__Sequence channels;
 } sensor_msgs__msg__PointCloud;
 

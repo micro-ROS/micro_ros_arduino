@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/Empty in the package std_srvs.
+/// Struct defined in srv/Empty in the package std_srvs.
 typedef struct std_srvs__srv__Empty_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -36,7 +36,7 @@ typedef struct std_srvs__srv__Empty_Request__Sequence
 
 // Constants defined in the message
 
-// Struct defined in srv/Empty in the package std_srvs.
+/// Struct defined in srv/Empty in the package std_srvs.
 typedef struct std_srvs__srv__Empty_Response
 {
   uint8_t structure_needs_at_least_one_member;

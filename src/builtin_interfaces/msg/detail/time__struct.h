@@ -17,10 +17,16 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Time in the package builtin_interfaces.
+/// Struct defined in msg/Time in the package builtin_interfaces.
+/**
+  * This message communicates ROS Time defined here:
+  * https://design.ros2.org/articles/clock_and_time.html
+ */
 typedef struct builtin_interfaces__msg__Time
 {
+  /// The seconds component, valid over all int32 values.
   int32_t sec;
+  /// The nanoseconds component, valid in the range [0, 10e9).
   uint32_t nanosec;
 } builtin_interfaces__msg__Time;
 

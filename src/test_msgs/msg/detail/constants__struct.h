@@ -86,7 +86,7 @@ enum
   test_msgs__msg__Constants__UINT64_CONST = 50000000ull
 };
 
-// Struct defined in msg/Constants in the package test_msgs.
+/// Struct defined in msg/Constants in the package test_msgs.
 typedef struct test_msgs__msg__Constants
 {
   uint8_t structure_needs_at_least_one_member;

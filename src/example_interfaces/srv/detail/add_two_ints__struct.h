@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/AddTwoInts in the package example_interfaces.
+/// Struct defined in srv/AddTwoInts in the package example_interfaces.
 typedef struct example_interfaces__srv__AddTwoInts_Request
 {
   int64_t a;
@@ -37,7 +37,7 @@ typedef struct example_interfaces__srv__AddTwoInts_Request__Sequence
 
 // Constants defined in the message
 
-// Struct defined in srv/AddTwoInts in the package example_interfaces.
+/// Struct defined in srv/AddTwoInts in the package example_interfaces.
 typedef struct example_interfaces__srv__AddTwoInts_Response
 {
   int64_t sum;

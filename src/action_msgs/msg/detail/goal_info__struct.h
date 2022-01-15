@@ -23,10 +23,14 @@ extern "C"
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in msg/GoalInfo in the package action_msgs.
+/// Struct defined in msg/GoalInfo in the package action_msgs.
+/**
+  * Goal ID
+ */
 typedef struct action_msgs__msg__GoalInfo
 {
   unique_identifier_msgs__msg__UUID goal_id;
+  /// Time when the goal was accepted
   builtin_interfaces__msg__Time stamp;
 } action_msgs__msg__GoalInfo;
 

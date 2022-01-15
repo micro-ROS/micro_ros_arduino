@@ -23,12 +23,18 @@ extern "C"
 // Member 'cells'
 #include "geometry_msgs/msg/detail/point__struct.h"
 
-// Struct defined in msg/GridCells in the package nav_msgs.
+/// Struct defined in msg/GridCells in the package nav_msgs.
+/**
+  * An array of cells in a 2D grid
+ */
 typedef struct nav_msgs__msg__GridCells
 {
   std_msgs__msg__Header header;
+  /// Width of each cell
   float cell_width;
+  /// Height of each cell
   float cell_height;
+  /// Each cell is represented by the Point at the center of the cell
   geometry_msgs__msg__Point__Sequence cells;
 } nav_msgs__msg__GridCells;
 

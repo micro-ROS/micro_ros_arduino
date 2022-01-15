@@ -27,7 +27,7 @@ extern "C"
 // Member 'min_duration'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_Goal
 {
   geometry_msgs__msg__PointStamped target;
@@ -50,7 +50,7 @@ typedef struct control_msgs__action__PointHead_Goal__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_Result
 {
   uint8_t structure_needs_at_least_one_member;
@@ -69,7 +69,7 @@ typedef struct control_msgs__action__PointHead_Result__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_Feedback
 {
   double pointing_angle_error;
@@ -94,7 +94,7 @@ typedef struct control_msgs__action__PointHead_Feedback__Sequence
 // Member 'goal'
 #include "control_msgs/action/detail/point_head__struct.h"
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -118,7 +118,7 @@ typedef struct control_msgs__action__PointHead_SendGoal_Request__Sequence
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_SendGoal_Response
 {
   bool accepted;
@@ -143,7 +143,7 @@ typedef struct control_msgs__action__PointHead_SendGoal_Response__Sequence
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -167,7 +167,7 @@ typedef struct control_msgs__action__PointHead_GetResult_Request__Sequence
 // already included above
 // #include "control_msgs/action/detail/point_head__struct.h"
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_GetResult_Response
 {
   int8_t status;
@@ -195,7 +195,7 @@ typedef struct control_msgs__action__PointHead_GetResult_Response__Sequence
 // already included above
 // #include "control_msgs/action/detail/point_head__struct.h"
 
-// Struct defined in action/PointHead in the package control_msgs.
+/// Struct defined in action/PointHead in the package control_msgs.
 typedef struct control_msgs__action__PointHead_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

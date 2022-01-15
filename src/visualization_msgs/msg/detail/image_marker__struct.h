@@ -74,21 +74,34 @@ enum
 // Member 'lifetime'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in msg/ImageMarker in the package visualization_msgs.
+/// Struct defined in msg/ImageMarker in the package visualization_msgs.
 typedef struct visualization_msgs__msg__ImageMarker
 {
   std_msgs__msg__Header header;
+  /// Namespace which is used with the id to form a unique id.
   rosidl_runtime_c__String ns;
+  /// Unique id within the namespace.
   int32_t id;
+  /// One of the above types, e.g. CIRCLE, LINE_STRIP, etc.
   int32_t type;
+  /// Either ADD or REMOVE.
   int32_t action;
+  /// Two-dimensional coordinate position, in pixel-coordinates.
   geometry_msgs__msg__Point position;
+  /// The scale of the object, e.g. the diameter for a CIRCLE.
   float scale;
+  /// The outline color of the marker.
   std_msgs__msg__ColorRGBA outline_color;
+  /// Whether or not to fill in the shape with color.
   uint8_t filled;
+  /// Fill color; in the range:
   std_msgs__msg__ColorRGBA fill_color;
+  /// How long the object should last before being automatically deleted.
+  /// 0 indicates forever.
   builtin_interfaces__msg__Duration lifetime;
+  /// Coordinates in 2D in pixel coords. Used for LINE_STRIP, LINE_LIST, POINTS, etc.
   geometry_msgs__msg__Point__Sequence points;
+  /// The color for each line, point, etc. in the points field.
   std_msgs__msg__ColorRGBA__Sequence outline_colors;
 } visualization_msgs__msg__ImageMarker;
 

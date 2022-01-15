@@ -23,10 +23,15 @@ extern "C"
 // Member 'vertices'
 #include "geometry_msgs/msg/detail/point__struct.h"
 
-// Struct defined in msg/Mesh in the package shape_msgs.
+/// Struct defined in msg/Mesh in the package shape_msgs.
+/**
+  * Definition of a mesh.
+ */
 typedef struct shape_msgs__msg__Mesh
 {
+  /// List of triangles; the index values refer to positions in vertices[].
   shape_msgs__msg__MeshTriangle__Sequence triangles;
+  /// The actual vertices that make up the mesh.
   geometry_msgs__msg__Point__Sequence vertices;
 } shape_msgs__msg__Mesh;
 

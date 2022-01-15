@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/GripperCommand in the package control_msgs.
+/// Struct defined in msg/GripperCommand in the package control_msgs.
 typedef struct control_msgs__msg__GripperCommand
 {
   double position;

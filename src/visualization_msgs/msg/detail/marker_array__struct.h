@@ -21,7 +21,7 @@ extern "C"
 // Member 'markers'
 #include "visualization_msgs/msg/detail/marker__struct.h"
 
-// Struct defined in msg/MarkerArray in the package visualization_msgs.
+/// Struct defined in msg/MarkerArray in the package visualization_msgs.
 typedef struct visualization_msgs__msg__MarkerArray
 {
   visualization_msgs__msg__Marker__Sequence markers;

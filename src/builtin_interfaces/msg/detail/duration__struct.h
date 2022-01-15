@@ -17,10 +17,17 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Duration in the package builtin_interfaces.
+/// Struct defined in msg/Duration in the package builtin_interfaces.
+/**
+  * Duration defines a period between two time points.
+  * Messages of this datatype are of ROS Time following this design:
+  * https://design.ros2.org/articles/clock_and_time.html
+ */
 typedef struct builtin_interfaces__msg__Duration
 {
+  /// Seconds component, range is valid over any possible int32 value.
   int32_t sec;
+  /// Nanoseconds component in the range of [0, 10e9).
   uint32_t nanosec;
 } builtin_interfaces__msg__Duration;
 

@@ -18,6 +18,9 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'OK'.
+/**
+  * Possible levels of operations.
+ */
 enum
 {
   diagnostic_msgs__msg__DiagnosticStatus__OK = 0
@@ -49,13 +52,21 @@ enum
 // Member 'values'
 #include "diagnostic_msgs/msg/detail/key_value__struct.h"
 
-// Struct defined in msg/DiagnosticStatus in the package diagnostic_msgs.
+/// Struct defined in msg/DiagnosticStatus in the package diagnostic_msgs.
+/**
+  * This message holds the status of an individual component of the robot.
+ */
 typedef struct diagnostic_msgs__msg__DiagnosticStatus
 {
+  /// Level of operation enumerated above.
   uint8_t level;
+  /// A description of the test/component reporting.
   rosidl_runtime_c__String name;
+  /// A description of the status.
   rosidl_runtime_c__String message;
+  /// A hardware unique string.
   rosidl_runtime_c__String hardware_id;
+  /// An array of values associated with the status.
   diagnostic_msgs__msg__KeyValue__Sequence values;
 } diagnostic_msgs__msg__DiagnosticStatus;
 

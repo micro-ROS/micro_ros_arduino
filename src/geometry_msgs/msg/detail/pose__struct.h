@@ -23,7 +23,10 @@ extern "C"
 // Member 'orientation'
 #include "geometry_msgs/msg/detail/quaternion__struct.h"
 
-// Struct defined in msg/Pose in the package geometry_msgs.
+/// Struct defined in msg/Pose in the package geometry_msgs.
+/**
+  * A representation of pose in free space, composed of position and orientation.
+ */
 typedef struct geometry_msgs__msg__Pose
 {
   geometry_msgs__msg__Point position;

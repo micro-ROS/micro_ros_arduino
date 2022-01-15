@@ -23,7 +23,10 @@ extern "C"
 // Member 'accel'
 #include "geometry_msgs/msg/detail/accel_with_covariance__struct.h"
 
-// Struct defined in msg/AccelWithCovarianceStamped in the package geometry_msgs.
+/// Struct defined in msg/AccelWithCovarianceStamped in the package geometry_msgs.
+/**
+  * This represents an estimated accel with reference coordinate frame and timestamp.
+ */
 typedef struct geometry_msgs__msg__AccelWithCovarianceStamped
 {
   std_msgs__msg__Header header;

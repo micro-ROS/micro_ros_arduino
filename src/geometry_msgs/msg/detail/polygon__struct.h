@@ -21,7 +21,10 @@ extern "C"
 // Member 'points'
 #include "geometry_msgs/msg/detail/point32__struct.h"
 
-// Struct defined in msg/Polygon in the package geometry_msgs.
+/// Struct defined in msg/Polygon in the package geometry_msgs.
+/**
+  * A specification of a polygon where the first and last points are assumed to be connected
+ */
 typedef struct geometry_msgs__msg__Polygon
 {
   geometry_msgs__msg__Point32__Sequence points;

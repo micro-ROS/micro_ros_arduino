@@ -23,7 +23,10 @@ extern "C"
 // Member 'wrench'
 #include "geometry_msgs/msg/detail/wrench__struct.h"
 
-// Struct defined in msg/WrenchStamped in the package geometry_msgs.
+/// Struct defined in msg/WrenchStamped in the package geometry_msgs.
+/**
+  * A wrench with reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__WrenchStamped
 {
   std_msgs__msg__Header header;

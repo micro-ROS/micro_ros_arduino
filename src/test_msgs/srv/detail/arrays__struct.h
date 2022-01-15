@@ -28,7 +28,7 @@ extern "C"
 // Member 'defaults_values'
 #include "test_msgs/msg/detail/defaults__struct.h"
 
-// Struct defined in srv/Arrays in the package test_msgs.
+/// Struct defined in srv/Arrays in the package test_msgs.
 typedef struct test_msgs__srv__Arrays_Request
 {
   bool bool_values[3];
@@ -92,7 +92,7 @@ typedef struct test_msgs__srv__Arrays_Request__Sequence
 // already included above
 // #include "test_msgs/msg/detail/defaults__struct.h"
 
-// Struct defined in srv/Arrays in the package test_msgs.
+/// Struct defined in srv/Arrays in the package test_msgs.
 typedef struct test_msgs__srv__Arrays_Response
 {
   bool bool_values[3];

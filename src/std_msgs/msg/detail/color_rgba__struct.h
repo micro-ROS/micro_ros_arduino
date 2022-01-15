@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/ColorRGBA in the package std_msgs.
+/// Struct defined in msg/ColorRGBA in the package std_msgs.
 typedef struct std_msgs__msg__ColorRGBA
 {
   float r;

@@ -23,7 +23,10 @@ extern "C"
 // Member 'pose'
 #include "geometry_msgs/msg/detail/pose__struct.h"
 
-// Struct defined in msg/PoseStamped in the package geometry_msgs.
+/// Struct defined in msg/PoseStamped in the package geometry_msgs.
+/**
+  * A Pose with reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__PoseStamped
 {
   std_msgs__msg__Header header;

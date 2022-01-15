@@ -25,7 +25,7 @@ extern "C"
 // Member 'nested_different_pkg'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_Goal
 {
   test_msgs__msg__Builtins nested_field_no_pkg;
@@ -57,7 +57,7 @@ typedef struct test_msgs__action__NestedMessage_Goal__Sequence
 // already included above
 // #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_Result
 {
   test_msgs__msg__Builtins nested_field_no_pkg;
@@ -89,7 +89,7 @@ typedef struct test_msgs__action__NestedMessage_Result__Sequence
 // already included above
 // #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_Feedback
 {
   test_msgs__msg__Builtins nested_field_no_pkg;
@@ -116,7 +116,7 @@ typedef struct test_msgs__action__NestedMessage_Feedback__Sequence
 // Member 'goal'
 #include "test_msgs/action/detail/nested_message__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -141,7 +141,7 @@ typedef struct test_msgs__action__NestedMessage_SendGoal_Request__Sequence
 // already included above
 // #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_SendGoal_Response
 {
   bool accepted;
@@ -166,7 +166,7 @@ typedef struct test_msgs__action__NestedMessage_SendGoal_Response__Sequence
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -190,7 +190,7 @@ typedef struct test_msgs__action__NestedMessage_GetResult_Request__Sequence
 // already included above
 // #include "test_msgs/action/detail/nested_message__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_GetResult_Response
 {
   int8_t status;
@@ -218,7 +218,7 @@ typedef struct test_msgs__action__NestedMessage_GetResult_Response__Sequence
 // already included above
 // #include "test_msgs/action/detail/nested_message__struct.h"
 
-// Struct defined in action/NestedMessage in the package test_msgs.
+/// Struct defined in action/NestedMessage in the package test_msgs.
 typedef struct test_msgs__action__NestedMessage_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

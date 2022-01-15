@@ -21,7 +21,7 @@ extern "C"
 // Member 'names'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/DescribeParameters in the package rcl_interfaces.
+/// Struct defined in srv/DescribeParameters in the package rcl_interfaces.
 typedef struct rcl_interfaces__srv__DescribeParameters_Request
 {
   rosidl_runtime_c__String__Sequence names;
@@ -44,7 +44,7 @@ typedef struct rcl_interfaces__srv__DescribeParameters_Request__Sequence
 // Member 'descriptors'
 #include "rcl_interfaces/msg/detail/parameter_descriptor__struct.h"
 
-// Struct defined in srv/DescribeParameters in the package rcl_interfaces.
+/// Struct defined in srv/DescribeParameters in the package rcl_interfaces.
 typedef struct rcl_interfaces__srv__DescribeParameters_Response
 {
   rcl_interfaces__msg__ParameterDescriptor__Sequence descriptors;

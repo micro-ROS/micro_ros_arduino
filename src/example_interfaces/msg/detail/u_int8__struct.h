@@ -17,7 +17,13 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/UInt8 in the package example_interfaces.
+/// Struct defined in msg/UInt8 in the package example_interfaces.
+/**
+  * This is an example message of using a primitive datatype, uint8.
+  * If you want to test with this that's fine, but if you are deploying
+  * it into a system you should create a semantically meaningful message type.
+  * If you want to embed it in another message, use the primitive data type instead.
+ */
 typedef struct example_interfaces__msg__UInt8
 {
   uint8_t data;

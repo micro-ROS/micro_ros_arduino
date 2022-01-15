@@ -23,11 +23,22 @@ extern "C"
 // Member 'markers'
 #include "visualization_msgs/msg/detail/interactive_marker__struct.h"
 
-// Struct defined in msg/InteractiveMarkerInit in the package visualization_msgs.
+/// Struct defined in msg/InteractiveMarkerInit in the package visualization_msgs.
+/**
+  * Identifying string. Must be unique in the topic namespace
+  * that this server works on.
+ */
 typedef struct visualization_msgs__msg__InteractiveMarkerInit
 {
   rosidl_runtime_c__String server_id;
+  /// Sequence number.
+  /// The client will use this to detect if it has missed a subsequent
+  /// update.  Every update message will have the same sequence number as
+  /// an init message.  Clients will likely want to unsubscribe from the
+  /// init topic after a successful initialization to avoid receiving
+  /// duplicate data.
   uint64_t seq_num;
+  /// All markers.
   visualization_msgs__msg__InteractiveMarker__Sequence markers;
 } visualization_msgs__msg__InteractiveMarkerInit;
 

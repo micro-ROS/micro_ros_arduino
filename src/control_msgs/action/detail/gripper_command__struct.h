@@ -21,7 +21,7 @@ extern "C"
 // Member 'command'
 #include "control_msgs/msg/detail/gripper_command__struct.h"
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_Goal
 {
   control_msgs__msg__GripperCommand command;
@@ -40,12 +40,16 @@ typedef struct control_msgs__action__GripperCommand_Goal__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_Result
 {
+  /// The current gripper gap size (in meters)
   double position;
+  /// The current effort exerted (in Newtons)
   double effort;
+  /// True iff the gripper is exerting max effort and not moving
   bool stalled;
+  /// True iff the gripper position has reached the commanded setpoint
   bool reached_goal;
 } control_msgs__action__GripperCommand_Result;
 
@@ -62,12 +66,16 @@ typedef struct control_msgs__action__GripperCommand_Result__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_Feedback
 {
+  /// The current gripper gap size (in meters)
   double position;
+  /// The current effort exerted (in Newtons)
   double effort;
+  /// True iff the gripper is exerting max effort and not moving
   bool stalled;
+  /// True iff the gripper position has reached the commanded setpoint
   bool reached_goal;
 } control_msgs__action__GripperCommand_Feedback;
 
@@ -90,7 +98,7 @@ typedef struct control_msgs__action__GripperCommand_Feedback__Sequence
 // Member 'goal'
 #include "control_msgs/action/detail/gripper_command__struct.h"
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -114,7 +122,7 @@ typedef struct control_msgs__action__GripperCommand_SendGoal_Request__Sequence
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_SendGoal_Response
 {
   bool accepted;
@@ -139,7 +147,7 @@ typedef struct control_msgs__action__GripperCommand_SendGoal_Response__Sequence
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -163,7 +171,7 @@ typedef struct control_msgs__action__GripperCommand_GetResult_Request__Sequence
 // already included above
 // #include "control_msgs/action/detail/gripper_command__struct.h"
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_GetResult_Response
 {
   int8_t status;
@@ -191,7 +199,7 @@ typedef struct control_msgs__action__GripperCommand_GetResult_Response__Sequence
 // already included above
 // #include "control_msgs/action/detail/gripper_command__struct.h"
 
-// Struct defined in action/GripperCommand in the package control_msgs.
+/// Struct defined in action/GripperCommand in the package control_msgs.
 typedef struct control_msgs__action__GripperCommand_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

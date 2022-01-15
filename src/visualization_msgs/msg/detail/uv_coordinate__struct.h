@@ -17,7 +17,11 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/UVCoordinate in the package visualization_msgs.
+/// Struct defined in msg/UVCoordinate in the package visualization_msgs.
+/**
+  * Location of the pixel as a ratio of the width of a 2D texture.
+  * Values should be in range:.
+ */
 typedef struct visualization_msgs__msg__UVCoordinate
 {
   float u;

@@ -22,7 +22,10 @@ extern "C"
 // Member 'angular'
 #include "geometry_msgs/msg/detail/vector3__struct.h"
 
-// Struct defined in msg/Accel in the package geometry_msgs.
+/// Struct defined in msg/Accel in the package geometry_msgs.
+/**
+  * This expresses acceleration in free space broken into its linear and angular parts.
+ */
 typedef struct geometry_msgs__msg__Accel
 {
   geometry_msgs__msg__Vector3 linear;

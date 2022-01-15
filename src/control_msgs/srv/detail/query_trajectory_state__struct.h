@@ -21,7 +21,7 @@ extern "C"
 // Member 'time'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in srv/QueryTrajectoryState in the package control_msgs.
+/// Struct defined in srv/QueryTrajectoryState in the package control_msgs.
 typedef struct control_msgs__srv__QueryTrajectoryState_Request
 {
   builtin_interfaces__msg__Time time;
@@ -49,10 +49,12 @@ typedef struct control_msgs__srv__QueryTrajectoryState_Request__Sequence
 // Member 'acceleration'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in srv/QueryTrajectoryState in the package control_msgs.
+/// Struct defined in srv/QueryTrajectoryState in the package control_msgs.
 typedef struct control_msgs__srv__QueryTrajectoryState_Response
 {
+  /// indicate successful run of triggered service
   bool success;
+  /// informational, e.g. for error messages
   rosidl_runtime_c__String message;
   rosidl_runtime_c__String__Sequence name;
   rosidl_runtime_c__double__Sequence position;

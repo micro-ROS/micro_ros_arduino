@@ -25,10 +25,17 @@ extern "C"
 // Member 'points'
 #include "trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__struct.h"
 
-// Struct defined in msg/MultiDOFJointTrajectory in the package trajectory_msgs.
+/// Struct defined in msg/MultiDOFJointTrajectory in the package trajectory_msgs.
+/**
+  * The header is used to specify the coordinate frame and the reference time for the trajectory durations
+ */
 typedef struct trajectory_msgs__msg__MultiDOFJointTrajectory
 {
   std_msgs__msg__Header header;
+  /// A representation of a multi-dof joint trajectory (each point is a transformation)
+  /// Each point along the trajectory will include an array of positions/velocities/accelerations
+  /// that has the same length as the array of joint names, and has the same order of joints as
+  /// the joint names array.
   rosidl_runtime_c__String__Sequence joint_names;
   trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence points;
 } trajectory_msgs__msg__MultiDOFJointTrajectory;

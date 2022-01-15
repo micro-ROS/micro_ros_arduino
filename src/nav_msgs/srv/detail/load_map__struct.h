@@ -21,7 +21,7 @@ extern "C"
 // Member 'map_url'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/LoadMap in the package nav_msgs.
+/// Struct defined in srv/LoadMap in the package nav_msgs.
 typedef struct nav_msgs__srv__LoadMap_Request
 {
   rosidl_runtime_c__String map_url;
@@ -74,9 +74,10 @@ enum
 // Member 'map'
 #include "nav_msgs/msg/detail/occupancy_grid__struct.h"
 
-// Struct defined in srv/LoadMap in the package nav_msgs.
+/// Struct defined in srv/LoadMap in the package nav_msgs.
 typedef struct nav_msgs__srv__LoadMap_Response
 {
+  /// Returned map is only valid if result equals RESULT_SUCCESS
   nav_msgs__msg__OccupancyGrid map;
   uint8_t result;
 } nav_msgs__srv__LoadMap_Response;

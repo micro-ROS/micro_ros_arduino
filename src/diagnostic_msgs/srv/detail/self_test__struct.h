@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/SelfTest in the package diagnostic_msgs.
+/// Struct defined in srv/SelfTest in the package diagnostic_msgs.
 typedef struct diagnostic_msgs__srv__SelfTest_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -42,7 +42,7 @@ typedef struct diagnostic_msgs__srv__SelfTest_Request__Sequence
 // Member 'status'
 #include "diagnostic_msgs/msg/detail/diagnostic_status__struct.h"
 
-// Struct defined in srv/SelfTest in the package diagnostic_msgs.
+/// Struct defined in srv/SelfTest in the package diagnostic_msgs.
 typedef struct diagnostic_msgs__srv__SelfTest_Response
 {
   rosidl_runtime_c__String id;
