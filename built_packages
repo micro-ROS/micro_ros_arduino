@@ -3,7 +3,7 @@ https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c27
 https://github.com/ament/ament_package.git 54ff09f9eb8d35ca914376ae872cc7e60093547b
 https://github.com/ament/ament_index.git 7c8a2762453bf928909cc3dd65d2164b2f67dbaf
 https://github.com/ament/ament_lint.git 4bc68c815ce308b3443e3cb38fd71e2b03ffdc40
-https://github.com/ament/ament_cmake.git 852a7d8abe8a743938a9167aa3f1f7b0a40e631f
+https://github.com/ament/ament_cmake.git 6011ffd7ce61e8e9a01eb9871aac5b0aa3c2c85b
 https://github.com/ament/googletest.git 79c4c9db1a7bc8bc5473a280499bf776173653d6
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
 https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
