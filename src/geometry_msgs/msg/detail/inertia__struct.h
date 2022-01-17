@@ -21,11 +21,19 @@ extern "C"
 // Member 'com'
 #include "geometry_msgs/msg/detail/vector3__struct.h"
 
-// Struct defined in msg/Inertia in the package geometry_msgs.
+/// Struct defined in msg/Inertia in the package geometry_msgs.
+/**
+  * Mass
+ */
 typedef struct geometry_msgs__msg__Inertia
 {
   double m;
+  /// Center of mass
   geometry_msgs__msg__Vector3 com;
+  /// Inertia Tensor
+  ///     | ixx ixy ixz |
+  /// I = | ixy iyy iyz |
+  ///     | ixz iyz izz |
   double ixx;
   double ixy;
   double ixz;

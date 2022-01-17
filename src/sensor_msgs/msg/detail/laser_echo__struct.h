@@ -21,9 +21,15 @@ extern "C"
 // Member 'echoes'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/LaserEcho in the package sensor_msgs.
+/// Struct defined in msg/LaserEcho in the package sensor_msgs.
+/**
+  * This message is a submessage of MultiEchoLaserScan and is not intended
+  * to be used separately.
+ */
 typedef struct sensor_msgs__msg__LaserEcho
 {
+  /// Multiple values of ranges or intensities.
+  /// Each array represents data from the same angle increment.
   rosidl_runtime_c__float__Sequence echoes;
 } sensor_msgs__msg__LaserEcho;
 

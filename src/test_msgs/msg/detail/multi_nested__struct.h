@@ -48,7 +48,10 @@ enum
   test_msgs__msg__MultiNested__bounded_sequence_of_unbounded_sequences__MAX_SIZE = 3
 };
 
-// Struct defined in msg/MultiNested in the package test_msgs.
+/// Struct defined in msg/MultiNested in the package test_msgs.
+/**
+  * Mulitple levels of nested messages
+ */
 typedef struct test_msgs__msg__MultiNested
 {
   test_msgs__msg__Arrays array_of_arrays[3];

@@ -22,11 +22,15 @@ extern "C"
 // Member 'goal'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.h"
 
-// Struct defined in srv/GetPlan in the package nav_msgs.
+/// Struct defined in srv/GetPlan in the package nav_msgs.
 typedef struct nav_msgs__srv__GetPlan_Request
 {
+  /// The start pose for the plan
   geometry_msgs__msg__PoseStamped start;
+  /// The final pose of the goal position
   geometry_msgs__msg__PoseStamped goal;
+  /// If the goal is obstructed, how many meters the planner can
+  /// relax the constraint in x and y before failing.
   float tolerance;
 } nav_msgs__srv__GetPlan_Request;
 
@@ -47,7 +51,7 @@ typedef struct nav_msgs__srv__GetPlan_Request__Sequence
 // Member 'plan'
 #include "nav_msgs/msg/detail/path__struct.h"
 
-// Struct defined in srv/GetPlan in the package nav_msgs.
+/// Struct defined in srv/GetPlan in the package nav_msgs.
 typedef struct nav_msgs__srv__GetPlan_Response
 {
   nav_msgs__msg__Path plan;

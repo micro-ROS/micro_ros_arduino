@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/GetAvailableTransitions in the package lifecycle_msgs.
+/// Struct defined in srv/GetAvailableTransitions in the package lifecycle_msgs.
 typedef struct lifecycle_msgs__srv__GetAvailableTransitions_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -40,7 +40,7 @@ typedef struct lifecycle_msgs__srv__GetAvailableTransitions_Request__Sequence
 // Member 'available_transitions'
 #include "lifecycle_msgs/msg/detail/transition_description__struct.h"
 
-// Struct defined in srv/GetAvailableTransitions in the package lifecycle_msgs.
+/// Struct defined in srv/GetAvailableTransitions in the package lifecycle_msgs.
 typedef struct lifecycle_msgs__srv__GetAvailableTransitions_Response
 {
   lifecycle_msgs__msg__TransitionDescription__Sequence available_transitions;

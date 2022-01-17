@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Empty in the package test_msgs.
+/// Struct defined in msg/Empty in the package test_msgs.
 typedef struct test_msgs__msg__Empty
 {
   uint8_t structure_needs_at_least_one_member;

@@ -28,14 +28,32 @@ extern "C"
 // Member 'statistics'
 #include "statistics_msgs/msg/detail/statistic_data_point__struct.h"
 
-// Struct defined in msg/MetricsMessage in the package statistics_msgs.
+/// Struct defined in msg/MetricsMessage in the package statistics_msgs.
+/**
+  * A generic metrics message providing statistics for measurements from different sources. For example,
+  * measure a system's CPU % for a given window yields the following data points over a window of time:
+  *
+  *   - average cpu %
+  *   - std deviation
+  *   - min
+  *   - max
+  *   - sample count
+  *
+  * These are all represented as different 'StatisticDataPoint's.
+ */
 typedef struct statistics_msgs__msg__MetricsMessage
 {
+  /// Name metric measurement source, e.g., node, topic, or process name
   rosidl_runtime_c__String measurement_source_name;
+  /// Name of the metric being measured, e.g. cpu_percentage, free_memory_mb, message_age, etc.
   rosidl_runtime_c__String metrics_source;
+  /// Unit of measure of the metric, e.g. percent, mb, seconds, etc.
   rosidl_runtime_c__String unit;
+  /// Measurement window start time
   builtin_interfaces__msg__Time window_start;
+  /// Measurement window end time
   builtin_interfaces__msg__Time window_stop;
+  /// A list of statistics data point, defined in StatisticDataPoint.msg
   statistics_msgs__msg__StatisticDataPoint__Sequence statistics;
 } statistics_msgs__msg__MetricsMessage;
 

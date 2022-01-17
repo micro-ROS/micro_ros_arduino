@@ -21,7 +21,7 @@ extern "C"
 // Member 'basic_types_value'
 #include "test_msgs/msg/detail/basic_types__struct.h"
 
-// Struct defined in msg/Nested in the package test_msgs.
+/// Struct defined in msg/Nested in the package test_msgs.
 typedef struct test_msgs__msg__Nested
 {
   test_msgs__msg__BasicTypes basic_types_value;

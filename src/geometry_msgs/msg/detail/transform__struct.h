@@ -23,7 +23,10 @@ extern "C"
 // Member 'rotation'
 #include "geometry_msgs/msg/detail/quaternion__struct.h"
 
-// Struct defined in msg/Transform in the package geometry_msgs.
+/// Struct defined in msg/Transform in the package geometry_msgs.
+/**
+  * This represents the transform between two coordinate frames in free space.
+ */
 typedef struct geometry_msgs__msg__Transform
 {
   geometry_msgs__msg__Vector3 translation;

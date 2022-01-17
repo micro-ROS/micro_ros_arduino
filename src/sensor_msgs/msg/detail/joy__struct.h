@@ -24,11 +24,17 @@ extern "C"
 // Member 'buttons'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/Joy in the package sensor_msgs.
+/// Struct defined in msg/Joy in the package sensor_msgs.
+/**
+  * Reports the state of a joystick's axes and buttons.
+ */
 typedef struct sensor_msgs__msg__Joy
 {
+  /// The timestamp is the time at which data is received from the joystick.
   std_msgs__msg__Header header;
+  /// The axes measurements from a joystick.
   rosidl_runtime_c__float__Sequence axes;
+  /// The buttons measurements from a joystick.
   rosidl_runtime_c__int32__Sequence buttons;
 } sensor_msgs__msg__Joy;
 

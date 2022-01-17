@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_Goal
 {
   int32_t order;
@@ -40,7 +40,7 @@ typedef struct test_msgs__action__Fibonacci_Goal__Sequence
 // Member 'sequence'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_Result
 {
   rosidl_runtime_c__int32__Sequence sequence;
@@ -64,7 +64,7 @@ typedef struct test_msgs__action__Fibonacci_Result__Sequence
 // already included above
 // #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_Feedback
 {
   rosidl_runtime_c__int32__Sequence sequence;
@@ -89,7 +89,7 @@ typedef struct test_msgs__action__Fibonacci_Feedback__Sequence
 // Member 'goal'
 #include "test_msgs/action/detail/fibonacci__struct.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -113,7 +113,7 @@ typedef struct test_msgs__action__Fibonacci_SendGoal_Request__Sequence
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_SendGoal_Response
 {
   bool accepted;
@@ -138,7 +138,7 @@ typedef struct test_msgs__action__Fibonacci_SendGoal_Response__Sequence
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -162,7 +162,7 @@ typedef struct test_msgs__action__Fibonacci_GetResult_Request__Sequence
 // already included above
 // #include "test_msgs/action/detail/fibonacci__struct.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_GetResult_Response
 {
   int8_t status;
@@ -190,7 +190,7 @@ typedef struct test_msgs__action__Fibonacci_GetResult_Response__Sequence
 // already included above
 // #include "test_msgs/action/detail/fibonacci__struct.h"
 
-// Struct defined in action/Fibonacci in the package test_msgs.
+/// Struct defined in action/Fibonacci in the package test_msgs.
 typedef struct test_msgs__action__Fibonacci_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

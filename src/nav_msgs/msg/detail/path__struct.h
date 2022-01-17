@@ -23,10 +23,15 @@ extern "C"
 // Member 'poses'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.h"
 
-// Struct defined in msg/Path in the package nav_msgs.
+/// Struct defined in msg/Path in the package nav_msgs.
+/**
+  * An array of poses that represents a Path for a robot to follow.
+ */
 typedef struct nav_msgs__msg__Path
 {
+  /// Indicates the frame_id of the path.
   std_msgs__msg__Header header;
+  /// Array of poses to follow.
   geometry_msgs__msg__PoseStamped__Sequence poses;
 } nav_msgs__msg__Path;
 

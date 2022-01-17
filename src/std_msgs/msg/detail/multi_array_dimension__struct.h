@@ -21,11 +21,20 @@ extern "C"
 // Member 'label'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/MultiArrayDimension in the package std_msgs.
+/// Struct defined in msg/MultiArrayDimension in the package std_msgs.
+/**
+  * This was originally provided as an example message.
+  * It is deprecated as of Foxy
+  * It is recommended to create your own semantically meaningful message.
+  * However if you would like to continue using this please use the equivalent in example_msgs.
+ */
 typedef struct std_msgs__msg__MultiArrayDimension
 {
+  /// label of given dimension
   rosidl_runtime_c__String label;
+  /// size of given dimension (in type units)
   uint32_t size;
+  /// stride of given dimension
   uint32_t stride;
 } std_msgs__msg__MultiArrayDimension;
 

@@ -25,11 +25,24 @@ extern "C"
 // Member 'data'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/CompressedImage in the package sensor_msgs.
+/// Struct defined in msg/CompressedImage in the package sensor_msgs.
+/**
+  * This message contains a compressed image.
+ */
 typedef struct sensor_msgs__msg__CompressedImage
 {
+  /// Header timestamp should be acquisition time of image
+  /// Header frame_id should be optical frame of camera
+  /// origin of frame should be optical center of cameara
+  /// +x should point to the right in the image
+  /// +y should point down in the image
+  /// +z should point into to plane of the image
   std_msgs__msg__Header header;
+  /// Specifies the format of the data
+  ///   Acceptable values:
+  ///     jpeg, png, tiff
   rosidl_runtime_c__String format;
+  /// Compressed image buffer
   rosidl_runtime_c__uint8__Sequence data;
 } sensor_msgs__msg__CompressedImage;
 

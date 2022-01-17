@@ -21,7 +21,7 @@ extern "C"
 // Member 'parameters'
 #include "rcl_interfaces/msg/detail/parameter__struct.h"
 
-// Struct defined in srv/SetParametersAtomically in the package rcl_interfaces.
+/// Struct defined in srv/SetParametersAtomically in the package rcl_interfaces.
 typedef struct rcl_interfaces__srv__SetParametersAtomically_Request
 {
   rcl_interfaces__msg__Parameter__Sequence parameters;
@@ -44,7 +44,7 @@ typedef struct rcl_interfaces__srv__SetParametersAtomically_Request__Sequence
 // Member 'result'
 #include "rcl_interfaces/msg/detail/set_parameters_result__struct.h"
 
-// Struct defined in srv/SetParametersAtomically in the package rcl_interfaces.
+/// Struct defined in srv/SetParametersAtomically in the package rcl_interfaces.
 typedef struct rcl_interfaces__srv__SetParametersAtomically_Response
 {
   rcl_interfaces__msg__SetParametersResult result;

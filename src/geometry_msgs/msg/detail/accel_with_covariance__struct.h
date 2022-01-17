@@ -21,10 +21,17 @@ extern "C"
 // Member 'accel'
 #include "geometry_msgs/msg/detail/accel__struct.h"
 
-// Struct defined in msg/AccelWithCovariance in the package geometry_msgs.
+/// Struct defined in msg/AccelWithCovariance in the package geometry_msgs.
+/**
+  * This expresses acceleration in free space with uncertainty.
+ */
 typedef struct geometry_msgs__msg__AccelWithCovariance
 {
   geometry_msgs__msg__Accel accel;
+  /// Row-major representation of the 6x6 covariance matrix
+  /// The orientation parameters use a fixed-axis representation.
+  /// In order, the parameters are:
+  /// (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
   double covariance[36];
 } geometry_msgs__msg__AccelWithCovariance;
 

@@ -25,11 +25,19 @@ extern "C"
 // Member 'points'
 #include "trajectory_msgs/msg/detail/joint_trajectory_point__struct.h"
 
-// Struct defined in msg/JointTrajectory in the package trajectory_msgs.
+/// Struct defined in msg/JointTrajectory in the package trajectory_msgs.
+/**
+  * The header is used to specify the coordinate frame and the reference time for
+  * the trajectory durations
+ */
 typedef struct trajectory_msgs__msg__JointTrajectory
 {
   std_msgs__msg__Header header;
+  /// The names of the active joints in each trajectory point. These names are
+  /// ordered and must correspond to the values in each trajectory point.
   rosidl_runtime_c__String__Sequence joint_names;
+  /// Array of trajectory points, which describe the positions, velocities,
+  /// accelerations and/or efforts of the joints at each time point.
   trajectory_msgs__msg__JointTrajectoryPoint__Sequence points;
 } trajectory_msgs__msg__JointTrajectory;
 

@@ -69,12 +69,21 @@ enum
 // Member 'name'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/PointField in the package sensor_msgs.
+/// Struct defined in msg/PointField in the package sensor_msgs.
+/**
+  * This message holds the description of one point entry in the
+  * PointCloud2 message format.
+ */
 typedef struct sensor_msgs__msg__PointField
 {
+  /// Common PointField names are x, y, z, intensity, rgb, rgba
+  /// Name of field
   rosidl_runtime_c__String name;
+  /// Offset from start of point struct
   uint32_t offset;
+  /// Datatype enumeration, see above
   uint8_t datatype;
+  /// How many elements in the field
   uint32_t count;
 } sensor_msgs__msg__PointField;
 

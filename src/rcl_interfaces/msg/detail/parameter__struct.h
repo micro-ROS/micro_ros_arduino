@@ -23,10 +23,17 @@ extern "C"
 // Member 'value'
 #include "rcl_interfaces/msg/detail/parameter_value__struct.h"
 
-// Struct defined in msg/Parameter in the package rcl_interfaces.
+/// Struct defined in msg/Parameter in the package rcl_interfaces.
+/**
+  * This is the message to communicate a parameter. It is an open struct with an enum in
+  * the descriptor to select which value is active.
+ */
 typedef struct rcl_interfaces__msg__Parameter
 {
+  /// The full name of the parameter.
   rosidl_runtime_c__String name;
+  /// The parameter's value which can be one of several types, see
+  /// `ParameterValue.msg` and `ParameterType.msg`.
   rcl_interfaces__msg__ParameterValue value;
 } rcl_interfaces__msg__Parameter;
 

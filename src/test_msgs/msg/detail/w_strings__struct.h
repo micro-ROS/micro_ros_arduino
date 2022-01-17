@@ -34,13 +34,16 @@ enum
   test_msgs__msg__WStrings__bounded_sequence_of_wstrings__MAX_SIZE = 3
 };
 
-// Struct defined in msg/WStrings in the package test_msgs.
+/// Struct defined in msg/WStrings in the package test_msgs.
 typedef struct test_msgs__msg__WStrings
 {
   rosidl_runtime_c__U16String wstring_value;
   rosidl_runtime_c__U16String wstring_value_default1;
   rosidl_runtime_c__U16String wstring_value_default2;
   rosidl_runtime_c__U16String wstring_value_default3;
+  /// wstring WSTRING_CONST="Hello world!"
+  /// wstring<=22 bounded_wstring_value
+  /// wstring<=22 bounded_wstring_value_default1 "Hello world!"
   rosidl_runtime_c__U16String array_of_wstrings[3];
   rosidl_runtime_c__U16String__Sequence bounded_sequence_of_wstrings;
   rosidl_runtime_c__U16String__Sequence unbounded_sequence_of_wstrings;

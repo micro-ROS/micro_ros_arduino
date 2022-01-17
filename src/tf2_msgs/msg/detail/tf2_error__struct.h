@@ -63,7 +63,7 @@ enum
 // Member 'error_string'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/TF2Error in the package tf2_msgs.
+/// Struct defined in msg/TF2Error in the package tf2_msgs.
 typedef struct tf2_msgs__msg__TF2Error
 {
   uint8_t error;

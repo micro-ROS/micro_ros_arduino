@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/FrameGraph in the package tf2_msgs.
+/// Struct defined in srv/FrameGraph in the package tf2_msgs.
 typedef struct tf2_msgs__srv__FrameGraph_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -40,7 +40,7 @@ typedef struct tf2_msgs__srv__FrameGraph_Request__Sequence
 // Member 'frame_yaml'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/FrameGraph in the package tf2_msgs.
+/// Struct defined in srv/FrameGraph in the package tf2_msgs.
 typedef struct tf2_msgs__srv__FrameGraph_Response
 {
   rosidl_runtime_c__String frame_yaml;

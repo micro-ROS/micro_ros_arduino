@@ -21,7 +21,7 @@ extern "C"
 // Member 'transforms'
 #include "geometry_msgs/msg/detail/transform_stamped__struct.h"
 
-// Struct defined in msg/TFMessage in the package tf2_msgs.
+/// Struct defined in msg/TFMessage in the package tf2_msgs.
 typedef struct tf2_msgs__msg__TFMessage
 {
   geometry_msgs__msg__TransformStamped__Sequence transforms;

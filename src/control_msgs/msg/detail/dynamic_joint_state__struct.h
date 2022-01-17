@@ -25,11 +25,13 @@ extern "C"
 // Member 'interface_values'
 #include "control_msgs/msg/detail/interface_value__struct.h"
 
-// Struct defined in msg/DynamicJointState in the package control_msgs.
+/// Struct defined in msg/DynamicJointState in the package control_msgs.
 typedef struct control_msgs__msg__DynamicJointState
 {
   std_msgs__msg__Header header;
+  /// List of resource names, e.g. ["arm_joint_1", "arm_joint_2", "gripper_joint"]
   rosidl_runtime_c__String__Sequence joint_names;
+  /// Key-value pairs representing interfaces and their corresponding values for each joint listed in `joint_names`
   control_msgs__msg__InterfaceValue__Sequence interface_values;
 } control_msgs__msg__DynamicJointState;
 

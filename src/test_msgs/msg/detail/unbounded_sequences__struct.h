@@ -55,7 +55,10 @@ extern "C"
 // Member 'defaults_values'
 #include "test_msgs/msg/detail/defaults__struct.h"
 
-// Struct defined in msg/UnboundedSequences in the package test_msgs.
+/// Struct defined in msg/UnboundedSequences in the package test_msgs.
+/**
+  * Unbounded sequences of different types
+ */
 typedef struct test_msgs__msg__UnboundedSequences
 {
   rosidl_runtime_c__boolean__Sequence bool_values;
@@ -89,6 +92,7 @@ typedef struct test_msgs__msg__UnboundedSequences
   rosidl_runtime_c__int64__Sequence int64_values_default;
   rosidl_runtime_c__uint64__Sequence uint64_values_default;
   rosidl_runtime_c__String__Sequence string_values_default;
+  /// Regression test: check alignment of basic field after a sequence field is correct
   int32_t alignment_check;
 } test_msgs__msg__UnboundedSequences;
 

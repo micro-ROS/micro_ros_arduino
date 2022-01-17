@@ -28,15 +28,17 @@ extern "C"
 // Member 'timeout'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_Goal
 {
   rosidl_runtime_c__String target_frame;
   rosidl_runtime_c__String source_frame;
   builtin_interfaces__msg__Time source_time;
   builtin_interfaces__msg__Duration timeout;
+  /// Advanced API
   builtin_interfaces__msg__Time target_time;
   rosidl_runtime_c__String fixed_frame;
+  /// Whether or not to use the advanced API
   bool advanced;
 } tf2_msgs__action__LookupTransform_Goal;
 
@@ -59,7 +61,7 @@ typedef struct tf2_msgs__action__LookupTransform_Goal__Sequence
 // Member 'error'
 #include "tf2_msgs/msg/detail/tf2_error__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_Result
 {
   geometry_msgs__msg__TransformStamped transform;
@@ -79,7 +81,7 @@ typedef struct tf2_msgs__action__LookupTransform_Result__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_Feedback
 {
   uint8_t structure_needs_at_least_one_member;
@@ -104,7 +106,7 @@ typedef struct tf2_msgs__action__LookupTransform_Feedback__Sequence
 // Member 'goal'
 #include "tf2_msgs/action/detail/lookup_transform__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -129,7 +131,7 @@ typedef struct tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence
 // already included above
 // #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_SendGoal_Response
 {
   bool accepted;
@@ -154,7 +156,7 @@ typedef struct tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -178,7 +180,7 @@ typedef struct tf2_msgs__action__LookupTransform_GetResult_Request__Sequence
 // already included above
 // #include "tf2_msgs/action/detail/lookup_transform__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_GetResult_Response
 {
   int8_t status;
@@ -206,7 +208,7 @@ typedef struct tf2_msgs__action__LookupTransform_GetResult_Response__Sequence
 // already included above
 // #include "tf2_msgs/action/detail/lookup_transform__struct.h"
 
-// Struct defined in action/LookupTransform in the package tf2_msgs.
+/// Struct defined in action/LookupTransform in the package tf2_msgs.
 typedef struct tf2_msgs__action__LookupTransform_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

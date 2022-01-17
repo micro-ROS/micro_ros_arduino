@@ -23,7 +23,10 @@ extern "C"
 // Member 'twist'
 #include "geometry_msgs/msg/detail/twist_with_covariance__struct.h"
 
-// Struct defined in msg/TwistWithCovarianceStamped in the package geometry_msgs.
+/// Struct defined in msg/TwistWithCovarianceStamped in the package geometry_msgs.
+/**
+  * This represents an estimated twist with reference coordinate frame and timestamp.
+ */
 typedef struct geometry_msgs__msg__TwistWithCovarianceStamped
 {
   std_msgs__msg__Header header;

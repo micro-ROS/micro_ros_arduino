@@ -21,11 +21,18 @@ extern "C"
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in msg/Temperature in the package sensor_msgs.
+/// Struct defined in msg/Temperature in the package sensor_msgs.
+/**
+  * Single temperature reading.
+ */
 typedef struct sensor_msgs__msg__Temperature
 {
+  /// timestamp is the time the temperature was measured
+  /// frame_id is the location of the temperature reading
   std_msgs__msg__Header header;
+  /// Measurement of the Temperature in Degrees Celsius.
   double temperature;
+  /// 0 is interpreted as variance unknown.
   double variance;
 } sensor_msgs__msg__Temperature;
 

@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/GetMap in the package nav_msgs.
+/// Struct defined in srv/GetMap in the package nav_msgs.
 typedef struct nav_msgs__srv__GetMap_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -40,7 +40,7 @@ typedef struct nav_msgs__srv__GetMap_Request__Sequence
 // Member 'map'
 #include "nav_msgs/msg/detail/occupancy_grid__struct.h"
 
-// Struct defined in srv/GetMap in the package nav_msgs.
+/// Struct defined in srv/GetMap in the package nav_msgs.
 typedef struct nav_msgs__srv__GetMap_Response
 {
   nav_msgs__msg__OccupancyGrid map;

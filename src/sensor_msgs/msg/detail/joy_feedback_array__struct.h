@@ -21,7 +21,10 @@ extern "C"
 // Member 'array'
 #include "sensor_msgs/msg/detail/joy_feedback__struct.h"
 
-// Struct defined in msg/JoyFeedbackArray in the package sensor_msgs.
+/// Struct defined in msg/JoyFeedbackArray in the package sensor_msgs.
+/**
+  * This message publishes values for multiple feedback at once.
+ */
 typedef struct sensor_msgs__msg__JoyFeedbackArray
 {
   sensor_msgs__msg__JoyFeedback__Sequence array;

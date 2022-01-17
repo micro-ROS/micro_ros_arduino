@@ -23,7 +23,10 @@ extern "C"
 // Member 'pose'
 #include "geometry_msgs/msg/detail/pose_with_covariance__struct.h"
 
-// Struct defined in msg/PoseWithCovarianceStamped in the package geometry_msgs.
+/// Struct defined in msg/PoseWithCovarianceStamped in the package geometry_msgs.
+/**
+  * This expresses an estimated pose with a reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__PoseWithCovarianceStamped
 {
   std_msgs__msg__Header header;

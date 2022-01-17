@@ -22,10 +22,15 @@ extern "C"
 // Member 'prefixes'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/ListParametersResult in the package rcl_interfaces.
+/// Struct defined in msg/ListParametersResult in the package rcl_interfaces.
+/**
+  * The resulting parameters under the given prefixes.
+ */
 typedef struct rcl_interfaces__msg__ListParametersResult
 {
   rosidl_runtime_c__String__Sequence names;
+  /// The resulting prefixes under the given prefixes.
+  /// TODO(wjwwood): link to prefix definition and rules.
   rosidl_runtime_c__String__Sequence prefixes;
 } rcl_interfaces__msg__ListParametersResult;
 

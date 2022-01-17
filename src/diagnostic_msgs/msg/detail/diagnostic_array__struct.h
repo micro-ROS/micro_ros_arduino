@@ -23,10 +23,15 @@ extern "C"
 // Member 'status'
 #include "diagnostic_msgs/msg/detail/diagnostic_status__struct.h"
 
-// Struct defined in msg/DiagnosticArray in the package diagnostic_msgs.
+/// Struct defined in msg/DiagnosticArray in the package diagnostic_msgs.
+/**
+  * This message is used to send diagnostic information about the state of the robot.
+ */
 typedef struct diagnostic_msgs__msg__DiagnosticArray
 {
+  /// for timestamp
   std_msgs__msg__Header header;
+  /// an array of components being reported on
   diagnostic_msgs__msg__DiagnosticStatus__Sequence status;
 } diagnostic_msgs__msg__DiagnosticArray;
 

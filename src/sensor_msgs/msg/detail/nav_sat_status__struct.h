@@ -18,30 +18,46 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'STATUS_NO_FIX'.
+/**
+  * unable to fix position
+ */
 enum
 {
   sensor_msgs__msg__NavSatStatus__STATUS_NO_FIX = -1
 };
 
 /// Constant 'STATUS_FIX'.
+/**
+  * unaugmented fix
+ */
 enum
 {
   sensor_msgs__msg__NavSatStatus__STATUS_FIX = 0
 };
 
 /// Constant 'STATUS_SBAS_FIX'.
+/**
+  * with satellite-based augmentation
+ */
 enum
 {
   sensor_msgs__msg__NavSatStatus__STATUS_SBAS_FIX = 1
 };
 
 /// Constant 'STATUS_GBAS_FIX'.
+/**
+  * with ground-based augmentation
+ */
 enum
 {
   sensor_msgs__msg__NavSatStatus__STATUS_GBAS_FIX = 2
 };
 
 /// Constant 'SERVICE_GPS'.
+/**
+  * Bits defining which Global Navigation Satellite System signals were
+  * used by the receiver.
+ */
 enum
 {
   sensor_msgs__msg__NavSatStatus__SERVICE_GPS = 1
@@ -54,6 +70,9 @@ enum
 };
 
 /// Constant 'SERVICE_COMPASS'.
+/**
+  * includes BeiDou.
+ */
 enum
 {
   sensor_msgs__msg__NavSatStatus__SERVICE_COMPASS = 4
@@ -65,7 +84,14 @@ enum
   sensor_msgs__msg__NavSatStatus__SERVICE_GALILEO = 8
 };
 
-// Struct defined in msg/NavSatStatus in the package sensor_msgs.
+/// Struct defined in msg/NavSatStatus in the package sensor_msgs.
+/**
+  * Navigation Satellite fix status for any Global Navigation Satellite System.
+  *
+  * Whether to output an augmented fix is determined by both the fix
+  * type and the last time differential corrections were received.  A
+  * fix is valid when status >= STATUS_FIX.
+ */
 typedef struct sensor_msgs__msg__NavSatStatus
 {
   int8_t status;

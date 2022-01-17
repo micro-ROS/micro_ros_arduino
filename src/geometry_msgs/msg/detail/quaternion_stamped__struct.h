@@ -23,7 +23,10 @@ extern "C"
 // Member 'quaternion'
 #include "geometry_msgs/msg/detail/quaternion__struct.h"
 
-// Struct defined in msg/QuaternionStamped in the package geometry_msgs.
+/// Struct defined in msg/QuaternionStamped in the package geometry_msgs.
+/**
+  * This represents an orientation with reference coordinate frame and timestamp.
+ */
 typedef struct geometry_msgs__msg__QuaternionStamped
 {
   std_msgs__msg__Header header;

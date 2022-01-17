@@ -23,7 +23,10 @@ extern "C"
 // Member 'polygon'
 #include "geometry_msgs/msg/detail/polygon__struct.h"
 
-// Struct defined in msg/PolygonStamped in the package geometry_msgs.
+/// Struct defined in msg/PolygonStamped in the package geometry_msgs.
+/**
+  * This represents a Polygon with reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__PolygonStamped
 {
   std_msgs__msg__Header header;

@@ -22,7 +22,10 @@ extern "C"
 // Member 'torque'
 #include "geometry_msgs/msg/detail/vector3__struct.h"
 
-// Struct defined in msg/Wrench in the package geometry_msgs.
+/// Struct defined in msg/Wrench in the package geometry_msgs.
+/**
+  * This represents force in free space, separated into its linear and angular parts.
+ */
 typedef struct geometry_msgs__msg__Wrench
 {
   geometry_msgs__msg__Vector3 force;

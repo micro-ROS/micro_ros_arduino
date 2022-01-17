@@ -139,25 +139,65 @@ enum
 // Member 'mesh_file'
 #include "visualization_msgs/msg/detail/mesh_file__struct.h"
 
-// Struct defined in msg/Marker in the package visualization_msgs.
+/// Struct defined in msg/Marker in the package visualization_msgs.
+/**
+  * See:
+  *  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
+  *  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
+  *
+  * for more information on using this message with rviz.
+ */
 typedef struct visualization_msgs__msg__Marker
 {
+  /// Header for timestamp and frame id.
   std_msgs__msg__Header header;
+  /// Namespace in which to place the object.
+  /// Used in conjunction with id to create a unique name for the object.
   rosidl_runtime_c__String ns;
+  /// Object ID used in conjunction with the namespace for manipulating and deleting the object later.
   int32_t id;
+  /// Type of object.
   int32_t type;
+  /// Action to take; one of:
+  ///  - 0 add/modify an object
+  ///  - 1 (deprecated)
+  ///  - 2 deletes an object (with the given ns and id)
+  ///  - 3 deletes all objects (or those with the given ns if any)
   int32_t action;
+  /// Pose of the object with respect the frame_id specified in the header.
   geometry_msgs__msg__Pose pose;
+  /// Scale of the object; 1,1,1 means default (usually 1 meter square).
   geometry_msgs__msg__Vector3 scale;
+  /// Color of the object; in the range:
   std_msgs__msg__ColorRGBA color;
+  /// How long the object should last before being automatically deleted.
+  /// 0 indicates forever.
   builtin_interfaces__msg__Duration lifetime;
+  /// If this marker should be frame-locked, i.e. retransformed into its frame every timestep.
   bool frame_locked;
+  /// Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)
   geometry_msgs__msg__Point__Sequence points;
+  /// Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)
+  /// The number of colors provided must either be 0 or equal to the number of points provided.
+  /// NOTE: alpha is not yet used
   std_msgs__msg__ColorRGBA__Sequence colors;
+  /// Texture resource is a special URI that can either reference a texture file in
+  /// a format acceptable to (resource retriever)
+  /// or an embedded texture via a string matching the format:
+  ///   "embedded://texture_name"
   rosidl_runtime_c__String texture_resource;
+  /// An image to be loaded into the rendering engine as the texture for this marker.
+  /// This will be used iff texture_resource is set to embedded.
   sensor_msgs__msg__CompressedImage texture;
+  /// Location of each vertex within the texture; in the range:
   visualization_msgs__msg__UVCoordinate__Sequence uv_coordinates;
+  /// Only used for text markers
   rosidl_runtime_c__String text;
+  /// Only used for MESH_RESOURCE markers.
+  /// Similar to texture_resource, mesh_resource uses resource retriever to load a mesh.
+  /// Optionally, a mesh file can be sent in-message via the mesh_file field. If doing so,
+  /// use the following format for mesh_resource:
+  ///   "embedded://mesh_name"
   rosidl_runtime_c__String mesh_resource;
   visualization_msgs__msg__MeshFile mesh_file;
   bool mesh_use_embedded_materials;

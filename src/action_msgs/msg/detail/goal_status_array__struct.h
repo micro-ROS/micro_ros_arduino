@@ -21,7 +21,10 @@ extern "C"
 // Member 'status_list'
 #include "action_msgs/msg/detail/goal_status__struct.h"
 
-// Struct defined in msg/GoalStatusArray in the package action_msgs.
+/// Struct defined in msg/GoalStatusArray in the package action_msgs.
+/**
+  * An array of goal statuses.
+ */
 typedef struct action_msgs__msg__GoalStatusArray
 {
   action_msgs__msg__GoalStatus__Sequence status_list;

@@ -67,7 +67,7 @@ enum
   test_msgs__msg__Strings__bounded_string_value_default5__MAX_STRING_SIZE = 22
 };
 
-// Struct defined in msg/Strings in the package test_msgs.
+/// Struct defined in msg/Strings in the package test_msgs.
 typedef struct test_msgs__msg__Strings
 {
   rosidl_runtime_c__String string_value;

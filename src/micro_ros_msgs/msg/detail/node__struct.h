@@ -36,7 +36,7 @@ enum
   micro_ros_msgs__msg__Node__node_name__MAX_STRING_SIZE = 256
 };
 
-// Struct defined in msg/Node in the package micro_ros_msgs.
+/// Struct defined in msg/Node in the package micro_ros_msgs.
 typedef struct micro_ros_msgs__msg__Node
 {
   rosidl_runtime_c__String node_namespace;

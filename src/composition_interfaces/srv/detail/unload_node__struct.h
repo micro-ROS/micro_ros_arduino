@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/UnloadNode in the package composition_interfaces.
+/// Struct defined in srv/UnloadNode in the package composition_interfaces.
 typedef struct composition_interfaces__srv__UnloadNode_Request
 {
   uint64_t unique_id;
@@ -40,10 +40,11 @@ typedef struct composition_interfaces__srv__UnloadNode_Request__Sequence
 // Member 'error_message'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/UnloadNode in the package composition_interfaces.
+/// Struct defined in srv/UnloadNode in the package composition_interfaces.
 typedef struct composition_interfaces__srv__UnloadNode_Response
 {
   bool success;
+  /// Human readable error message if success is false, else empty string.
   rosidl_runtime_c__String error_message;
 } composition_interfaces__srv__UnloadNode_Response;
 

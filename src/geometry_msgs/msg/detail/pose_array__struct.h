@@ -23,7 +23,10 @@ extern "C"
 // Member 'poses'
 #include "geometry_msgs/msg/detail/pose__struct.h"
 
-// Struct defined in msg/PoseArray in the package geometry_msgs.
+/// Struct defined in msg/PoseArray in the package geometry_msgs.
+/**
+  * An array of poses with a header for global reference.
+ */
 typedef struct geometry_msgs__msg__PoseArray
 {
   std_msgs__msg__Header header;

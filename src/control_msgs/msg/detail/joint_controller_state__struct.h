@@ -21,16 +21,27 @@ extern "C"
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in msg/JointControllerState in the package control_msgs.
+/// Struct defined in msg/JointControllerState in the package control_msgs.
+/**
+  * This message presents current controller state of one joint.
+ */
 typedef struct control_msgs__msg__JointControllerState
 {
+  /// Header timestamp should be update time of controller state
   std_msgs__msg__Header header;
+  /// The set point, that is, desired state.
   double set_point;
+  /// Current value of the process (ie: latest sensor measurement on the controlled value).
   double process_value;
+  /// First time-derivative of the process value.
   double process_value_dot;
+  /// The error of the controlled value, essentially process_value - set_point (for a regular PID implementation).
   double error;
+  /// Time between two consecutive updates/execution of the control law.
   double time_step;
+  /// Current output of the controller.
   double command;
+  /// Current PID parameters of the controller.
   double p;
   double i;
   double d;

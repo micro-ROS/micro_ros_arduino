@@ -23,7 +23,10 @@ extern "C"
 // Member 'point'
 #include "geometry_msgs/msg/detail/point__struct.h"
 
-// Struct defined in msg/PointStamped in the package geometry_msgs.
+/// Struct defined in msg/PointStamped in the package geometry_msgs.
+/**
+  * This represents a Point with reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__PointStamped
 {
   std_msgs__msg__Header header;

@@ -17,7 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Quaternion in the package geometry_msgs.
+/// Struct defined in msg/Quaternion in the package geometry_msgs.
+/**
+  * This represents an orientation in free space in quaternion form.
+ */
 typedef struct geometry_msgs__msg__Quaternion
 {
   double x;

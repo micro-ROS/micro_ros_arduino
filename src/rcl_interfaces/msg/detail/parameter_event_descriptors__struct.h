@@ -23,7 +23,12 @@ extern "C"
 // Member 'deleted_parameters'
 #include "rcl_interfaces/msg/detail/parameter_descriptor__struct.h"
 
-// Struct defined in msg/ParameterEventDescriptors in the package rcl_interfaces.
+/// Struct defined in msg/ParameterEventDescriptors in the package rcl_interfaces.
+/**
+  * This message contains descriptors of a parameter event.
+  * It was an atomic update.
+  * A specific parameter name can only be in one of the three sets.
+ */
 typedef struct rcl_interfaces__msg__ParameterEventDescriptors
 {
   rcl_interfaces__msg__ParameterDescriptor__Sequence new_parameters;
