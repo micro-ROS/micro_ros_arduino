@@ -23,7 +23,10 @@ extern "C"
 // Member 'inertia'
 #include "geometry_msgs/msg/detail/inertia__struct.h"
 
-// Struct defined in msg/InertiaStamped in the package geometry_msgs.
+/// Struct defined in msg/InertiaStamped in the package geometry_msgs.
+/**
+  * An Inertia with a time stamp and reference frame.
+ */
 typedef struct geometry_msgs__msg__InertiaStamped
 {
   std_msgs__msg__Header header;

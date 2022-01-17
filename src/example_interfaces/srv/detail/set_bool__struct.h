@@ -17,9 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/SetBool in the package example_interfaces.
+/// Struct defined in srv/SetBool in the package example_interfaces.
 typedef struct example_interfaces__srv__SetBool_Request
 {
+  /// e.g. for hardware enabling / disabling
   bool data;
 } example_interfaces__srv__SetBool_Request;
 
@@ -40,10 +41,12 @@ typedef struct example_interfaces__srv__SetBool_Request__Sequence
 // Member 'message'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/SetBool in the package example_interfaces.
+/// Struct defined in srv/SetBool in the package example_interfaces.
 typedef struct example_interfaces__srv__SetBool_Response
 {
+  /// indicate successful run of triggered service
   bool success;
+  /// informational, e.g. for error messages
   rosidl_runtime_c__String message;
 } example_interfaces__srv__SetBool_Response;
 

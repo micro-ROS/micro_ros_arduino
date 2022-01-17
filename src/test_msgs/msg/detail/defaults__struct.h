@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Defaults in the package test_msgs.
+/// Struct defined in msg/Defaults in the package test_msgs.
 typedef struct test_msgs__msg__Defaults
 {
   bool bool_value;

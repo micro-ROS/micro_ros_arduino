@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/GetInteractiveMarkers in the package visualization_msgs.
+/// Struct defined in srv/GetInteractiveMarkers in the package visualization_msgs.
 typedef struct visualization_msgs__srv__GetInteractiveMarkers_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -40,10 +40,11 @@ typedef struct visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence
 // Member 'markers'
 #include "visualization_msgs/msg/detail/interactive_marker__struct.h"
 
-// Struct defined in srv/GetInteractiveMarkers in the package visualization_msgs.
+/// Struct defined in srv/GetInteractiveMarkers in the package visualization_msgs.
 typedef struct visualization_msgs__srv__GetInteractiveMarkers_Response
 {
   uint64_t sequence_number;
+  /// All interactive markers provided by the server.
   visualization_msgs__msg__InteractiveMarker__Sequence markers;
 } visualization_msgs__srv__GetInteractiveMarkers_Response;
 

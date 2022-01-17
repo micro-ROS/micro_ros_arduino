@@ -18,12 +18,18 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'STATISTICS_DATA_TYPE_UNINITIALIZED'.
+/**
+  * Constant for uninitialized
+ */
 enum
 {
   statistics_msgs__msg__StatisticDataType__STATISTICS_DATA_TYPE_UNINITIALIZED = 0
 };
 
 /// Constant 'STATISTICS_DATA_TYPE_AVERAGE'.
+/**
+  * Allowed values
+ */
 enum
 {
   statistics_msgs__msg__StatisticDataType__STATISTICS_DATA_TYPE_AVERAGE = 1
@@ -53,7 +59,14 @@ enum
   statistics_msgs__msg__StatisticDataType__STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5
 };
 
-// Struct defined in msg/StatisticDataType in the package statistics_msgs.
+/// Struct defined in msg/StatisticDataType in the package statistics_msgs.
+/**
+  * This file contains the commonly used constants for the statistics data type.
+  *
+  * The value 0 is reserved for unitialized statistic message data type.
+  * Range of values: [0, 255].
+  * Unallowed values: any value that is not specified in this file.
+ */
 typedef struct statistics_msgs__msg__StatisticDataType
 {
   uint8_t structure_needs_at_least_one_member;

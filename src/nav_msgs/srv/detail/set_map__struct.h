@@ -23,10 +23,12 @@ extern "C"
 // Member 'initial_pose'
 #include "geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.h"
 
-// Struct defined in srv/SetMap in the package nav_msgs.
+/// Struct defined in srv/SetMap in the package nav_msgs.
 typedef struct nav_msgs__srv__SetMap_Request
 {
+  /// Requested 2D map to be set.
   nav_msgs__msg__OccupancyGrid map;
+  /// Estimated initial pose when setting new map.
   geometry_msgs__msg__PoseWithCovarianceStamped initial_pose;
 } nav_msgs__srv__SetMap_Request;
 
@@ -43,9 +45,10 @@ typedef struct nav_msgs__srv__SetMap_Request__Sequence
 
 // Constants defined in the message
 
-// Struct defined in srv/SetMap in the package nav_msgs.
+/// Struct defined in srv/SetMap in the package nav_msgs.
 typedef struct nav_msgs__srv__SetMap_Response
 {
+  /// True if the map was successfully set, false otherwise.
   bool success;
 } nav_msgs__srv__SetMap_Response;
 

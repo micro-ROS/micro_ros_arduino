@@ -21,7 +21,7 @@ extern "C"
 // Member 'min_duration'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_Goal
 {
   double position;
@@ -42,7 +42,7 @@ typedef struct control_msgs__action__SingleJointPosition_Goal__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_Result
 {
   uint8_t structure_needs_at_least_one_member;
@@ -65,7 +65,7 @@ typedef struct control_msgs__action__SingleJointPosition_Result__Sequence
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_Feedback
 {
   std_msgs__msg__Header header;
@@ -93,7 +93,7 @@ typedef struct control_msgs__action__SingleJointPosition_Feedback__Sequence
 // Member 'goal'
 #include "control_msgs/action/detail/single_joint_position__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -117,7 +117,7 @@ typedef struct control_msgs__action__SingleJointPosition_SendGoal_Request__Seque
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_SendGoal_Response
 {
   bool accepted;
@@ -142,7 +142,7 @@ typedef struct control_msgs__action__SingleJointPosition_SendGoal_Response__Sequ
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -166,7 +166,7 @@ typedef struct control_msgs__action__SingleJointPosition_GetResult_Request__Sequ
 // already included above
 // #include "control_msgs/action/detail/single_joint_position__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_GetResult_Response
 {
   int8_t status;
@@ -194,7 +194,7 @@ typedef struct control_msgs__action__SingleJointPosition_GetResult_Response__Seq
 // already included above
 // #include "control_msgs/action/detail/single_joint_position__struct.h"
 
-// Struct defined in action/SingleJointPosition in the package control_msgs.
+/// Struct defined in action/SingleJointPosition in the package control_msgs.
 typedef struct control_msgs__action__SingleJointPosition_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

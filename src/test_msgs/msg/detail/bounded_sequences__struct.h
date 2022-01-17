@@ -212,7 +212,10 @@ enum
   test_msgs__msg__BoundedSequences__string_values_default__MAX_SIZE = 3
 };
 
-// Struct defined in msg/BoundedSequences in the package test_msgs.
+/// Struct defined in msg/BoundedSequences in the package test_msgs.
+/**
+  * Bounded sequences of different types
+ */
 typedef struct test_msgs__msg__BoundedSequences
 {
   rosidl_runtime_c__boolean__Sequence bool_values;
@@ -246,6 +249,7 @@ typedef struct test_msgs__msg__BoundedSequences
   rosidl_runtime_c__int64__Sequence int64_values_default;
   rosidl_runtime_c__uint64__Sequence uint64_values_default;
   rosidl_runtime_c__String__Sequence string_values_default;
+  /// Regression test: check alignment of basic field after a sequence field is correct
   int32_t alignment_check;
 } test_msgs__msg__BoundedSequences;
 

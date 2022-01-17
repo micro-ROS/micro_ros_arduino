@@ -18,6 +18,9 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'PARAMETER_NOT_SET'.
+/**
+  * Default value, which implies this is not a valid parameter.
+ */
 enum
 {
   rcl_interfaces__msg__ParameterType__PARAMETER_NOT_SET = 0
@@ -77,7 +80,10 @@ enum
   rcl_interfaces__msg__ParameterType__PARAMETER_STRING_ARRAY = 9
 };
 
-// Struct defined in msg/ParameterType in the package rcl_interfaces.
+/// Struct defined in msg/ParameterType in the package rcl_interfaces.
+/**
+  * These types correspond to the value that is set in the ParameterValue message.
+ */
 typedef struct rcl_interfaces__msg__ParameterType
 {
   uint8_t structure_needs_at_least_one_member;

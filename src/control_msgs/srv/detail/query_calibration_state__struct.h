@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/QueryCalibrationState in the package control_msgs.
+/// Struct defined in srv/QueryCalibrationState in the package control_msgs.
 typedef struct control_msgs__srv__QueryCalibrationState_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -36,7 +36,7 @@ typedef struct control_msgs__srv__QueryCalibrationState_Request__Sequence
 
 // Constants defined in the message
 
-// Struct defined in srv/QueryCalibrationState in the package control_msgs.
+/// Struct defined in srv/QueryCalibrationState in the package control_msgs.
 typedef struct control_msgs__srv__QueryCalibrationState_Response
 {
   bool is_calibrated;

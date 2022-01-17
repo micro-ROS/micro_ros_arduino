@@ -21,11 +21,23 @@ extern "C"
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in msg/RelativeHumidity in the package sensor_msgs.
+/// Struct defined in msg/RelativeHumidity in the package sensor_msgs.
+/**
+  * Single reading from a relative humidity sensor.
+  * Defines the ratio of partial pressure of water vapor to the saturated vapor
+  * pressure at a temperature.
+ */
 typedef struct sensor_msgs__msg__RelativeHumidity
 {
+  /// timestamp of the measurement
+  /// frame_id is the location of the humidity sensor
   std_msgs__msg__Header header;
+  /// Expression of the relative humidity
+  /// from 0.0 to 1.0.
+  /// 0.0 is no partial pressure of water vapor
+  /// 1.0 represents partial pressure of saturation
   double relative_humidity;
+  /// 0 is interpreted as variance unknown
   double variance;
 } sensor_msgs__msg__RelativeHumidity;
 

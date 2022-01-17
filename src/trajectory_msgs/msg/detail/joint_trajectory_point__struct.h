@@ -26,13 +26,31 @@ extern "C"
 // Member 'time_from_start'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in msg/JointTrajectoryPoint in the package trajectory_msgs.
+/// Struct defined in msg/JointTrajectoryPoint in the package trajectory_msgs.
+/**
+  * Each trajectory point specifies either positions[, velocities[, accelerations]]
+  * or positions[, effort] for the trajectory to be executed.
+  * All specified values are in the same order as the joint names in JointTrajectory.msg.
+ */
 typedef struct trajectory_msgs__msg__JointTrajectoryPoint
 {
+  /// Single DOF joint positions for each joint relative to their "0" position.
+  /// The units depend on the specific joint type: radians for revolute or
+  /// continuous joints, and meters for prismatic joints.
   rosidl_runtime_c__double__Sequence positions;
+  /// The rate of change in position of each joint. Units are joint type dependent.
+  /// Radians/second for revolute or continuous joints, and meters/second for
+  /// prismatic joints.
   rosidl_runtime_c__double__Sequence velocities;
+  /// Rate of change in velocity of each joint. Units are joint type dependent.
+  /// Radians/second^2 for revolute or continuous joints, and meters/second^2 for
+  /// prismatic joints.
   rosidl_runtime_c__double__Sequence accelerations;
+  /// The torque or the force to be applied at each joint. For revolute/continuous
+  /// joints effort denotes a torque in newton-meters. For prismatic joints, effort
+  /// denotes a force in newtons.
   rosidl_runtime_c__double__Sequence effort;
+  /// Desired time from the trajectory start to arrive at this trajectory point.
   builtin_interfaces__msg__Duration time_from_start;
 } trajectory_msgs__msg__JointTrajectoryPoint;
 

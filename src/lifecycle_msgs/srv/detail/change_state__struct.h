@@ -21,7 +21,7 @@ extern "C"
 // Member 'transition'
 #include "lifecycle_msgs/msg/detail/transition__struct.h"
 
-// Struct defined in srv/ChangeState in the package lifecycle_msgs.
+/// Struct defined in srv/ChangeState in the package lifecycle_msgs.
 typedef struct lifecycle_msgs__srv__ChangeState_Request
 {
   lifecycle_msgs__msg__Transition transition;
@@ -40,9 +40,10 @@ typedef struct lifecycle_msgs__srv__ChangeState_Request__Sequence
 
 // Constants defined in the message
 
-// Struct defined in srv/ChangeState in the package lifecycle_msgs.
+/// Struct defined in srv/ChangeState in the package lifecycle_msgs.
 typedef struct lifecycle_msgs__srv__ChangeState_Response
 {
+  /// Indicates whether the service was able to initiate the state transition
   bool success;
 } lifecycle_msgs__srv__ChangeState_Response;
 

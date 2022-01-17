@@ -21,11 +21,19 @@ extern "C"
 // Member 'label'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/MultiArrayDimension in the package example_interfaces.
+/// Struct defined in msg/MultiArrayDimension in the package example_interfaces.
+/**
+  * This is an example of using complex datatypes.
+  * It is not recommended to use directly.
+  * To use a similar datastruct please define a custom message with appropriate semantic meaning.
+ */
 typedef struct example_interfaces__msg__MultiArrayDimension
 {
+  /// label of given dimension
   rosidl_runtime_c__String label;
+  /// size of given dimension (in type units)
   uint32_t size;
+  /// stride of given dimension
   uint32_t stride;
 } example_interfaces__msg__MultiArrayDimension;
 

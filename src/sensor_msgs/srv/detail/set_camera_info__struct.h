@@ -21,9 +21,10 @@ extern "C"
 // Member 'camera_info'
 #include "sensor_msgs/msg/detail/camera_info__struct.h"
 
-// Struct defined in srv/SetCameraInfo in the package sensor_msgs.
+/// Struct defined in srv/SetCameraInfo in the package sensor_msgs.
 typedef struct sensor_msgs__srv__SetCameraInfo_Request
 {
+  /// The camera_info to store
   sensor_msgs__msg__CameraInfo camera_info;
 } sensor_msgs__srv__SetCameraInfo_Request;
 
@@ -44,10 +45,12 @@ typedef struct sensor_msgs__srv__SetCameraInfo_Request__Sequence
 // Member 'status_message'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/SetCameraInfo in the package sensor_msgs.
+/// Struct defined in srv/SetCameraInfo in the package sensor_msgs.
 typedef struct sensor_msgs__srv__SetCameraInfo_Response
 {
+  /// True if the call succeeded
   bool success;
+  /// Used to give details about success
   rosidl_runtime_c__String status_message;
 } sensor_msgs__srv__SetCameraInfo_Response;
 

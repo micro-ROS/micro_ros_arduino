@@ -21,9 +21,10 @@ extern "C"
 // Member 'names'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/GetParameters in the package rcl_interfaces.
+/// Struct defined in srv/GetParameters in the package rcl_interfaces.
 typedef struct rcl_interfaces__srv__GetParameters_Request
 {
+  /// A list of parameter names to get.
   rosidl_runtime_c__String__Sequence names;
 } rcl_interfaces__srv__GetParameters_Request;
 
@@ -44,7 +45,7 @@ typedef struct rcl_interfaces__srv__GetParameters_Request__Sequence
 // Member 'values'
 #include "rcl_interfaces/msg/detail/parameter_value__struct.h"
 
-// Struct defined in srv/GetParameters in the package rcl_interfaces.
+/// Struct defined in srv/GetParameters in the package rcl_interfaces.
 typedef struct rcl_interfaces__srv__GetParameters_Response
 {
   rcl_interfaces__msg__ParameterValue__Sequence values;

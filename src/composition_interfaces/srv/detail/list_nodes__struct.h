@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/ListNodes in the package composition_interfaces.
+/// Struct defined in srv/ListNodes in the package composition_interfaces.
 typedef struct composition_interfaces__srv__ListNodes_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -42,10 +42,11 @@ typedef struct composition_interfaces__srv__ListNodes_Request__Sequence
 // Member 'unique_ids'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in srv/ListNodes in the package composition_interfaces.
+/// Struct defined in srv/ListNodes in the package composition_interfaces.
 typedef struct composition_interfaces__srv__ListNodes_Response
 {
   rosidl_runtime_c__String__Sequence full_node_names;
+  /// corresponding unique ids (must have same length as full_node_names).
   rosidl_runtime_c__uint64__Sequence unique_ids;
 } composition_interfaces__srv__ListNodes_Response;
 

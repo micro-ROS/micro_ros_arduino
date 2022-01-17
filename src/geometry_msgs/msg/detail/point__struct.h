@@ -17,7 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Point in the package geometry_msgs.
+/// Struct defined in msg/Point in the package geometry_msgs.
+/**
+  * This contains the position of a point in free space
+ */
 typedef struct geometry_msgs__msg__Point
 {
   double x;

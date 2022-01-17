@@ -17,9 +17,15 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Vector3 in the package geometry_msgs.
+/// Struct defined in msg/Vector3 in the package geometry_msgs.
+/**
+  * This represents a vector in free space.
+ */
 typedef struct geometry_msgs__msg__Vector3
 {
+  /// This is semantically different than a point.
+  /// A vector is always anchored at the origin.
+  /// When a transform is applied to a vector, only the rotational component is applied.
   double x;
   double y;
   double z;

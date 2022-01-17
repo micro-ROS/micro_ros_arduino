@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/GetState in the package lifecycle_msgs.
+/// Struct defined in srv/GetState in the package lifecycle_msgs.
 typedef struct lifecycle_msgs__srv__GetState_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -40,7 +40,7 @@ typedef struct lifecycle_msgs__srv__GetState_Request__Sequence
 // Member 'current_state'
 #include "lifecycle_msgs/msg/detail/state__struct.h"
 
-// Struct defined in srv/GetState in the package lifecycle_msgs.
+/// Struct defined in srv/GetState in the package lifecycle_msgs.
 typedef struct lifecycle_msgs__srv__GetState_Response
 {
   lifecycle_msgs__msg__State current_state;

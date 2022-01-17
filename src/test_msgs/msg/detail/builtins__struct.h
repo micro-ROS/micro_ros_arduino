@@ -23,7 +23,7 @@ extern "C"
 // Member 'time_value'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in msg/Builtins in the package test_msgs.
+/// Struct defined in msg/Builtins in the package test_msgs.
 typedef struct test_msgs__msg__Builtins
 {
   builtin_interfaces__msg__Duration duration_value;

@@ -25,11 +25,21 @@ extern "C"
 // Member 'data'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/OccupancyGrid in the package nav_msgs.
+/// Struct defined in msg/OccupancyGrid in the package nav_msgs.
+/**
+  * This represents a 2-D grid map
+ */
 typedef struct nav_msgs__msg__OccupancyGrid
 {
   std_msgs__msg__Header header;
+  /// MetaData for the map
   nav_msgs__msg__MapMetaData info;
+  /// The map data, in row-major order, starting with (0,0).
+  /// Cell (1, 0) will be listed second, representing the next cell in the x direction.
+  /// Cell (0, 1) will be at the index equal to info.width, followed by (1, 1).
+  /// The values inside are application dependent, but frequently,
+  /// 0 represents unoccupied, 1 represents definitely occupied, and
+  /// -1 represents unknown.
   rosidl_runtime_c__int8__Sequence data;
 } nav_msgs__msg__OccupancyGrid;
 

@@ -17,7 +17,11 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Empty in the package example_interfaces.
+/// Struct defined in msg/Empty in the package example_interfaces.
+/**
+  * If you want to test with this that's fine, but if you are deploying
+  * it into a system you should create a semantically meaningful message type.
+ */
 typedef struct example_interfaces__msg__Empty
 {
   uint8_t structure_needs_at_least_one_member;

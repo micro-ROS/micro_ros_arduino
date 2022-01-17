@@ -21,11 +21,22 @@ extern "C"
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in msg/FluidPressure in the package sensor_msgs.
+/// Struct defined in msg/FluidPressure in the package sensor_msgs.
+/**
+  * Single pressure reading.  This message is appropriate for measuring the
+  * pressure inside of a fluid (air, water, etc).  This also includes
+  * atmospheric or barometric pressure.
+  *
+  * This message is not appropriate for force/pressure contact sensors.
+ */
 typedef struct sensor_msgs__msg__FluidPressure
 {
+  /// timestamp of the measurement
+  /// frame_id is the location of the pressure sensor
   std_msgs__msg__Header header;
+  /// Absolute pressure reading in Pascals.
   double fluid_pressure;
+  /// 0 is interpreted as variance unknown
   double variance;
 } sensor_msgs__msg__FluidPressure;
 

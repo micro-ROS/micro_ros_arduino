@@ -23,10 +23,14 @@ extern "C"
 // Member 'values'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/InterfaceValue in the package control_msgs.
+/// Struct defined in msg/InterfaceValue in the package control_msgs.
+/**
+  * List of resource interface names
+ */
 typedef struct control_msgs__msg__InterfaceValue
 {
   rosidl_runtime_c__String__Sequence interface_names;
+  /// Values corresponding to the list of interfaces in `interface_names`, [1.0, 0.0] for example
   rosidl_runtime_c__double__Sequence values;
 } control_msgs__msg__InterfaceValue;
 

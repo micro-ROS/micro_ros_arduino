@@ -23,7 +23,7 @@ extern "C"
 // Member 'timestep'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in msg/PidState in the package control_msgs.
+/// Struct defined in msg/PidState in the package control_msgs.
 typedef struct control_msgs__msg__PidState
 {
   std_msgs__msg__Header header;

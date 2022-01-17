@@ -17,7 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/MeshTriangle in the package shape_msgs.
+/// Struct defined in msg/MeshTriangle in the package shape_msgs.
+/**
+  * Definition of a triangle's vertices.
+ */
 typedef struct shape_msgs__msg__MeshTriangle
 {
   uint32_t vertex_indices[3];

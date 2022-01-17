@@ -25,11 +25,15 @@ extern "C"
 // Member 'name'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/InteractiveMarkerPose in the package visualization_msgs.
+/// Struct defined in msg/InteractiveMarkerPose in the package visualization_msgs.
 typedef struct visualization_msgs__msg__InteractiveMarkerPose
 {
+  /// Time/frame info.
   std_msgs__msg__Header header;
+  /// Initial pose. Also, defines the pivot point for rotations.
   geometry_msgs__msg__Pose pose;
+  /// Identifying string. Must be globally unique in
+  /// the topic that this message is sent through.
   rosidl_runtime_c__String name;
 } visualization_msgs__msg__InteractiveMarkerPose;
 

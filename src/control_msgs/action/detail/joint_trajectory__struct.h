@@ -21,7 +21,7 @@ extern "C"
 // Member 'trajectory'
 #include "trajectory_msgs/msg/detail/joint_trajectory__struct.h"
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_Goal
 {
   trajectory_msgs__msg__JointTrajectory trajectory;
@@ -40,7 +40,7 @@ typedef struct control_msgs__action__JointTrajectory_Goal__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_Result
 {
   uint8_t structure_needs_at_least_one_member;
@@ -59,7 +59,7 @@ typedef struct control_msgs__action__JointTrajectory_Result__Sequence
 
 // Constants defined in the message
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_Feedback
 {
   uint8_t structure_needs_at_least_one_member;
@@ -84,7 +84,7 @@ typedef struct control_msgs__action__JointTrajectory_Feedback__Sequence
 // Member 'goal'
 #include "control_msgs/action/detail/joint_trajectory__struct.h"
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -108,7 +108,7 @@ typedef struct control_msgs__action__JointTrajectory_SendGoal_Request__Sequence
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_SendGoal_Response
 {
   bool accepted;
@@ -133,7 +133,7 @@ typedef struct control_msgs__action__JointTrajectory_SendGoal_Response__Sequence
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -157,7 +157,7 @@ typedef struct control_msgs__action__JointTrajectory_GetResult_Request__Sequence
 // already included above
 // #include "control_msgs/action/detail/joint_trajectory__struct.h"
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_GetResult_Response
 {
   int8_t status;
@@ -185,7 +185,7 @@ typedef struct control_msgs__action__JointTrajectory_GetResult_Response__Sequenc
 // already included above
 // #include "control_msgs/action/detail/joint_trajectory__struct.h"
 
-// Struct defined in action/JointTrajectory in the package control_msgs.
+/// Struct defined in action/JointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__JointTrajectory_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

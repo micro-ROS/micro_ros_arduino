@@ -23,10 +23,20 @@ extern "C"
 // Member 'data'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/UInt8MultiArray in the package std_msgs.
+/// Struct defined in msg/UInt8MultiArray in the package std_msgs.
+/**
+  * This was originally provided as an example message.
+  * It is deprecated as of Foxy
+  * It is recommended to create your own semantically meaningful message.
+  * However if you would like to continue using this please use the equivalent in example_msgs.
+ */
 typedef struct std_msgs__msg__UInt8MultiArray
 {
+  /// Please look at the MultiArrayLayout message definition for
+  /// documentation on all multiarrays.
+  /// specification of data layout
   std_msgs__msg__MultiArrayLayout layout;
+  /// array of data
   rosidl_runtime_c__uint8__Sequence data;
 } std_msgs__msg__UInt8MultiArray;
 

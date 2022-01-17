@@ -17,9 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/SetBool in the package std_srvs.
+/// Struct defined in srv/SetBool in the package std_srvs.
 typedef struct std_srvs__srv__SetBool_Request
 {
+  /// e.g. for hardware enabling / disabling
   bool data;
 } std_srvs__srv__SetBool_Request;
 
@@ -40,10 +41,12 @@ typedef struct std_srvs__srv__SetBool_Request__Sequence
 // Member 'message'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/SetBool in the package std_srvs.
+/// Struct defined in srv/SetBool in the package std_srvs.
 typedef struct std_srvs__srv__SetBool_Response
 {
+  /// indicate successful run of triggered service
   bool success;
+  /// informational, e.g. for error messages
   rosidl_runtime_c__String message;
 } std_srvs__srv__SetBool_Response;
 

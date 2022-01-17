@@ -21,10 +21,16 @@ extern "C"
 // Member 'reason'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/SetParametersResult in the package rcl_interfaces.
+/// Struct defined in msg/SetParametersResult in the package rcl_interfaces.
+/**
+  * A true value of the same index indicates that the parameter was set
+  * successfully. A false value indicates the change was rejected.
+ */
 typedef struct rcl_interfaces__msg__SetParametersResult
 {
   bool successful;
+  /// Reason why the setting was either successful or a failure. This should only be
+  /// used for logging and user interfaces.
   rosidl_runtime_c__String reason;
 } rcl_interfaces__msg__SetParametersResult;
 

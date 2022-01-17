@@ -23,7 +23,11 @@ extern "C"
 // Member 'status_list'
 #include "actionlib_msgs/msg/detail/goal_status__struct.h"
 
-// Struct defined in msg/GoalStatusArray in the package actionlib_msgs.
+/// Struct defined in msg/GoalStatusArray in the package actionlib_msgs.
+/**
+  * Stores the statuses for goals that are currently being tracked
+  * by an action server
+ */
 typedef struct actionlib_msgs__msg__GoalStatusArray
 {
   std_msgs__msg__Header header;

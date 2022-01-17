@@ -58,7 +58,7 @@ enum
   micro_ros_msgs__msg__Entity__types__MAX_STRING_SIZE = 256
 };
 
-// Struct defined in msg/Entity in the package micro_ros_msgs.
+/// Struct defined in msg/Entity in the package micro_ros_msgs.
 typedef struct micro_ros_msgs__msg__Entity
 {
   uint8_t entity_type;

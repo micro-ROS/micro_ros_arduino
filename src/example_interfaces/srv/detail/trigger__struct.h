@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in srv/Trigger in the package example_interfaces.
+/// Struct defined in srv/Trigger in the package example_interfaces.
 typedef struct example_interfaces__srv__Trigger_Request
 {
   uint8_t structure_needs_at_least_one_member;
@@ -40,10 +40,12 @@ typedef struct example_interfaces__srv__Trigger_Request__Sequence
 // Member 'message'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in srv/Trigger in the package example_interfaces.
+/// Struct defined in srv/Trigger in the package example_interfaces.
 typedef struct example_interfaces__srv__Trigger_Response
 {
+  /// indicate successful run of triggered service
   bool success;
+  /// informational, e.g. for error messages.
   rosidl_runtime_c__String message;
 } example_interfaces__srv__Trigger_Response;
 

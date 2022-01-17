@@ -23,7 +23,10 @@ extern "C"
 // Member 'twist'
 #include "geometry_msgs/msg/detail/twist__struct.h"
 
-// Struct defined in msg/TwistStamped in the package geometry_msgs.
+/// Struct defined in msg/TwistStamped in the package geometry_msgs.
+/**
+  * A twist with reference coordinate frame and timestamp
+ */
 typedef struct geometry_msgs__msg__TwistStamped
 {
   std_msgs__msg__Header header;

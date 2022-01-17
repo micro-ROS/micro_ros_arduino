@@ -17,7 +17,15 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Plane in the package shape_msgs.
+/// Struct defined in msg/Plane in the package shape_msgs.
+/**
+  * Representation of a plane, using the plane equation ax + by + cz + d = 0.
+  *
+  * a := coef[0]
+  * b := coef[1]
+  * c := coef[2]
+  * d := coef[3]
+ */
 typedef struct shape_msgs__msg__Plane
 {
   double coef[4];

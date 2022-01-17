@@ -48,6 +48,10 @@ enum
 };
 
 /// Constant 'BOX_X'.
+/**
+  * The meaning of the shape dimensions: each constant defines the index in the 'dimensions' array.
+  * For type BOX, the X, Y, and Z dimensions are the length of the corresponding sides of the box.
+ */
 enum
 {
   shape_msgs__msg__SolidPrimitive__BOX_X = 0
@@ -66,12 +70,24 @@ enum
 };
 
 /// Constant 'SPHERE_RADIUS'.
+/**
+  * For the SPHERE type, only one component is used, and it gives the radius of the sphere.
+ */
 enum
 {
   shape_msgs__msg__SolidPrimitive__SPHERE_RADIUS = 0
 };
 
 /// Constant 'CYLINDER_HEIGHT'.
+/**
+  * For the CYLINDER and CONE types, the center line is oriented along the Z axis.
+  * Therefore the CYLINDER_HEIGHT (CONE_HEIGHT) component of dimensions gives the
+  * height of the cylinder (cone).
+  * The CYLINDER_RADIUS (CONE_RADIUS) component of dimensions gives the radius of
+  * the base of the cylinder (cone).
+  * Cone and cylinder primitives are defined to be circular. The tip of the cone
+  * is pointing up, along +Z axis.
+ */
 enum
 {
   shape_msgs__msg__SolidPrimitive__CYLINDER_HEIGHT = 0
@@ -96,6 +112,16 @@ enum
 };
 
 /// Constant 'PRISM_HEIGHT'.
+/**
+  * For the type PRISM, the center line is oriented along Z axis.
+  * The PRISM_HEIGHT component of dimensions gives the
+  * height of the prism.
+  * The polygon defines the Z axis centered base of the prism.
+  * The prism is constructed by extruding the base in +Z and -Z
+  * directions by half of the PRISM_HEIGHT
+  * Only x and y fields of the points are used in the polygon.
+  * Points of the polygon are ordered counter-clockwise.
+ */
 enum
 {
   shape_msgs__msg__SolidPrimitive__PRISM_HEIGHT = 0
@@ -114,10 +140,17 @@ enum
   shape_msgs__msg__SolidPrimitive__dimensions__MAX_SIZE = 3
 };
 
-// Struct defined in msg/SolidPrimitive in the package shape_msgs.
+/// Struct defined in msg/SolidPrimitive in the package shape_msgs.
+/**
+  * Defines box, sphere, cylinder, cone and prism.
+  * All shapes are defined to have their bounding boxes centered around 0,0,0.
+ */
 typedef struct shape_msgs__msg__SolidPrimitive
 {
+  /// The type of the shape
   uint8_t type;
+  /// The dimensions of the shape
+  /// At no point will dimensions have a length > 3.
   rosidl_runtime_c__double__Sequence dimensions;
   geometry_msgs__msg__Polygon__Sequence polygon;
 } shape_msgs__msg__SolidPrimitive;

@@ -18,6 +18,20 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'X_AXIS'.
+/**
+  * Since each joint has multiple degrees of freedom,
+  * there can be multiple tolerances for each joint, each looking
+  * at different components.
+  * If the component is X_AXIS, Y_AXIS, or Z_AXIS, then the tolerance
+  * is only applied for the specific axis.
+  * However, if the component is TRANSLATION, then the tolerance is for
+  * the overall Euclidean distance.
+  * For these components, the units are meters, meters/sec and meters/sec^2.
+  * Z_AXIS is only valid with a floating joint, not planar.
+  * If the component is ROTATION the tolerance is measured in
+  * radians, radians/sec and radians/sec^2, computed
+  * between the difference in quaternions.
+ */
 enum
 {
   control_msgs__msg__JointComponentTolerance__X_AXIS = 1
@@ -51,7 +65,13 @@ enum
 // Member 'joint_name'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/JointComponentTolerance in the package control_msgs.
+/// Struct defined in msg/JointComponentTolerance in the package control_msgs.
+/**
+  * Version of JointTolerance.msg with added component field for joints with multiple degrees of freedom
+  * The difference between two MultiDOFJointTrajectoryPoint cannot be represented as a single number,
+  * hence we use the component field to represent how to calculate the difference in a way that can
+  * be represented as a single number.
+ */
 typedef struct control_msgs__msg__JointComponentTolerance
 {
   rosidl_runtime_c__String joint_name;

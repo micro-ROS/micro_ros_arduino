@@ -18,6 +18,15 @@ extern "C"
 // Constants defined in the message
 
 /// Constant 'KEEP_ALIVE'.
+/**
+  * Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.
+  * UPDATE: Incremental update to previous state.
+  *         The sequence number must be 1 higher than for
+  *         the previous update.
+  * KEEP_ALIVE: Indicates the that the server is still living.
+  *             The sequence number does not increase.
+  *             No payload data should be filled out (markers, poses, or erases).
+ */
 enum
 {
   visualization_msgs__msg__InteractiveMarkerUpdate__KEEP_ALIVE = 0
@@ -38,14 +47,23 @@ enum
 // Member 'poses'
 #include "visualization_msgs/msg/detail/interactive_marker_pose__struct.h"
 
-// Struct defined in msg/InteractiveMarkerUpdate in the package visualization_msgs.
+/// Struct defined in msg/InteractiveMarkerUpdate in the package visualization_msgs.
 typedef struct visualization_msgs__msg__InteractiveMarkerUpdate
 {
+  /// Identifying string. Must be unique in the topic namespace
+  /// that this server works on.
   rosidl_runtime_c__String server_id;
+  /// Sequence number.
+  /// The client will use this to detect if it has missed an update.
   uint64_t seq_num;
   uint8_t type;
+  /// Note: No guarantees on the order of processing.
+  ///       Contents must be kept consistent by sender.
+  /// Markers to be added or updated
   visualization_msgs__msg__InteractiveMarker__Sequence markers;
+  /// Poses of markers that should be moved
   visualization_msgs__msg__InteractiveMarkerPose__Sequence poses;
+  /// Names of markers to be erased
   rosidl_runtime_c__String__Sequence erases;
 } visualization_msgs__msg__InteractiveMarkerUpdate;
 

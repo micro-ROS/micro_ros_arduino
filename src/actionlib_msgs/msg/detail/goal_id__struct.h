@@ -23,10 +23,16 @@ extern "C"
 // Member 'id'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/GoalID in the package actionlib_msgs.
+/// Struct defined in msg/GoalID in the package actionlib_msgs.
 typedef struct actionlib_msgs__msg__GoalID
 {
+  /// The stamp should store the time at which this goal was requested.
+  /// It is used by an action server when it tries to preempt all
+  /// goals that were requested before a certain time
   builtin_interfaces__msg__Time stamp;
+  /// The id provides a way to associate feedback and
+  /// result message with specific goal requests. The id
+  /// specified must be unique.
   rosidl_runtime_c__String id;
 } actionlib_msgs__msg__GoalID;
 

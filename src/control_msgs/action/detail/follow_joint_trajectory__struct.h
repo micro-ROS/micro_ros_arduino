@@ -31,13 +31,32 @@ extern "C"
 // Member 'goal_time_tolerance'
 #include "builtin_interfaces/msg/detail/duration__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_Goal
 {
   trajectory_msgs__msg__JointTrajectory trajectory;
+  /// The trajectory for all planar or floating joints (i.e. individual joints with more than one DOF)
   trajectory_msgs__msg__MultiDOFJointTrajectory multi_dof_trajectory;
+  /// Tolerances for the trajectory.  If the measured joint values fall
+  /// outside the tolerances the trajectory goal is aborted.  Any
+  /// tolerances that are not specified (by being omitted or set to 0) are
+  /// set to the defaults for the action server (often taken from the
+  /// parameter server).
+  /// Tolerances applied to the joints as the trajectory is executed.  If
+  /// violated, the goal aborts with error_code set to
+  /// PATH_TOLERANCE_VIOLATED.
   control_msgs__msg__JointTolerance__Sequence path_tolerance;
   control_msgs__msg__JointComponentTolerance__Sequence component_path_tolerance;
+  /// To report success, the joints must be within goal_tolerance of the
+  /// final trajectory value.  The goal must be achieved by time the
+  /// trajectory ends plus goal_time_tolerance.  (goal_time_tolerance
+  /// allows some leeway in time, so that the trajectory goal can still
+  /// succeed even if the joints reach the goal some time after the
+  /// precise end time of the trajectory).
+  ///
+  /// If the joints are not within goal_tolerance after "trajectory finish
+  /// time" + goal_time_tolerance, the goal aborts with error_code set to
+  /// GOAL_TOLERANCE_VIOLATED
   control_msgs__msg__JointTolerance__Sequence goal_tolerance;
   control_msgs__msg__JointComponentTolerance__Sequence component_goal_tolerance;
   builtin_interfaces__msg__Duration goal_time_tolerance;
@@ -96,10 +115,18 @@ enum
 // Member 'error_string'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_Result
 {
   int32_t error_code;
+  /// Human readable description of the error code. Contains complementary
+  /// information that is especially useful when execution fails, for instance:
+  /// - INVALID_GOAL: The reason for the invalid goal (e.g., the requested
+  ///   trajectory is in the past).
+  /// - INVALID_JOINTS: The mismatch between the expected controller joints
+  ///   and those provided in the goal.
+  /// - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint
+  ///   violated which tolerance, and by how much.
   rosidl_runtime_c__String error_string;
 } control_msgs__action__FollowJointTrajectory_Result;
 
@@ -132,7 +159,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_Result__Sequence
 // Member 'multi_dof_error'
 #include "trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_Feedback
 {
   std_msgs__msg__Header header;
@@ -165,7 +192,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_Feedback__Sequence
 // Member 'goal'
 #include "control_msgs/action/detail/follow_joint_trajectory__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_SendGoal_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -189,7 +216,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_SendGoal_Request__Seq
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_SendGoal_Response
 {
   bool accepted;
@@ -214,7 +241,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_SendGoal_Response__Se
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_GetResult_Request
 {
   unique_identifier_msgs__msg__UUID goal_id;
@@ -238,7 +265,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_GetResult_Request__Se
 // already included above
 // #include "control_msgs/action/detail/follow_joint_trajectory__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_GetResult_Response
 {
   int8_t status;
@@ -266,7 +293,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_GetResult_Response__S
 // already included above
 // #include "control_msgs/action/detail/follow_joint_trajectory__struct.h"
 
-// Struct defined in action/FollowJointTrajectory in the package control_msgs.
+/// Struct defined in action/FollowJointTrajectory in the package control_msgs.
 typedef struct control_msgs__action__FollowJointTrajectory_FeedbackMessage
 {
   unique_identifier_msgs__msg__UUID goal_id;

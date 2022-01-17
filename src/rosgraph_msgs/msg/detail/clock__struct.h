@@ -21,7 +21,12 @@ extern "C"
 // Member 'clock'
 #include "builtin_interfaces/msg/detail/time__struct.h"
 
-// Struct defined in msg/Clock in the package rosgraph_msgs.
+/// Struct defined in msg/Clock in the package rosgraph_msgs.
+/**
+  * This message communicates the current time.
+  *
+  * For more information, see https://design.ros2.org/articles/clock_and_time.html.
+ */
 typedef struct rosgraph_msgs__msg__Clock
 {
   builtin_interfaces__msg__Time clock;

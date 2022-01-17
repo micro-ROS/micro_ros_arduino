@@ -24,11 +24,16 @@ extern "C"
 // Member 'goal_state'
 #include "lifecycle_msgs/msg/detail/state__struct.h"
 
-// Struct defined in msg/TransitionDescription in the package lifecycle_msgs.
+/// Struct defined in msg/TransitionDescription in the package lifecycle_msgs.
+/**
+  * The transition id and label of this description.
+ */
 typedef struct lifecycle_msgs__msg__TransitionDescription
 {
   lifecycle_msgs__msg__Transition transition;
+  /// The current state from which this transition transitions.
   lifecycle_msgs__msg__State start_state;
+  /// The desired target state of this transition.
   lifecycle_msgs__msg__State goal_state;
 } lifecycle_msgs__msg__TransitionDescription;
 

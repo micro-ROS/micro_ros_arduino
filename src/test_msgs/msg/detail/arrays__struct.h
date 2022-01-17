@@ -28,7 +28,10 @@ extern "C"
 // Member 'defaults_values'
 #include "test_msgs/msg/detail/defaults__struct.h"
 
-// Struct defined in msg/Arrays in the package test_msgs.
+/// Struct defined in msg/Arrays in the package test_msgs.
+/**
+  * Arrays of different types
+ */
 typedef struct test_msgs__msg__Arrays
 {
   bool bool_values[3];
@@ -62,6 +65,7 @@ typedef struct test_msgs__msg__Arrays
   int64_t int64_values_default[3];
   uint64_t uint64_values_default[3];
   rosidl_runtime_c__String string_values_default[3];
+  /// Regression test: check alignment of basic field after an array field is correct
   int32_t alignment_check;
 } test_msgs__msg__Arrays;
 

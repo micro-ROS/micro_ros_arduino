@@ -21,7 +21,13 @@ extern "C"
 // Member 'data'
 #include "rosidl_runtime_c/u16string.h"
 
-// Struct defined in msg/WString in the package example_interfaces.
+/// Struct defined in msg/WString in the package example_interfaces.
+/**
+  * This is an example message of using a primitive datatype, wstring.
+  * If you want to test with this that's fine, but if you are deploying
+  * it into a system you should create a semantically meaningful message type.
+  * If you want to embed it in another message, use the primitive data type instead.
+ */
 typedef struct example_interfaces__msg__WString
 {
   rosidl_runtime_c__U16String data;

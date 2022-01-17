@@ -17,7 +17,16 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Point32 in the package geometry_msgs.
+/// Struct defined in msg/Point32 in the package geometry_msgs.
+/**
+  * This contains the position of a point in free space(with 32 bits of precision).
+  * It is recommended to use Point wherever possible instead of Point32.
+  *
+  * This recommendation is to promote interoperability.
+  *
+  * This message is designed to take up less space when sending
+  * lots of points at once, as in the case of a PointCloud.
+ */
 typedef struct geometry_msgs__msg__Point32
 {
   float x;
