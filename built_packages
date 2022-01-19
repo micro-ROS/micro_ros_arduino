@@ -1,7 +1,7 @@
 
 https://github.com/uncrustify/uncrustify.git 1d3d8fa5e81bece0fac4b81316b0844f7cc35926
 https://github.com/ament/uncrustify_vendor.git fd52d19c51190e6277b39706f728cedb8cf9c02e
-https://github.com/ament/ament_package.git 2a809ca3f8a947afe90591dce9f4a1e5537d586e
+https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
 https://github.com/ament/ament_index.git 5ce2eba781801154d93c6fd7d6f66b23e4a7182d
 https://github.com/ament/ament_lint.git e4e45fca36974e5681b6cac1e2ac835b4c3692eb
 https://github.com/ament/ament_cmake.git 3fc4db9dc728bcade5f02bb191ce20c8d3e62511
