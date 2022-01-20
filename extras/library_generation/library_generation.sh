@@ -22,6 +22,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("portenta-m7")
     PLATFORMS+=("kakutef7-m7")
     PLATFORMS+=("esp32")
+    PLATFORMS+=("esp32_5_2_0")
 fi
 
 shift $((OPTIND-1))
@@ -247,6 +248,20 @@ if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
 
     mkdir -p /project/src/esp32
     cp -R firmware/build/libmicroros.a /project/src/esp32/libmicroros.a
+fi
+
+######## Build for ESP32 with toolchain v5.2.0  ########
+if [[ " ${PLATFORMS[@]} " =~ " esp32_5_2_0 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/xtensa-esp32-elf-linux64-1.22/bin/xtensa-esp32-elf-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/esp32_toolchain.cmake /project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/esp32_5_2_0
+    cp -R firmware/build/libmicroros.a /project/src/esp32_5_2_0/libmicroros.a
 fi
 
 ######## Generate extra files ########

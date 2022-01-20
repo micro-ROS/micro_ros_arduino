@@ -1,4 +1,4 @@
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
+#if !defined(HUSARNET) && defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
 
 #include <Arduino.h>
 
