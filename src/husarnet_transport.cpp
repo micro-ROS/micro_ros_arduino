@@ -12,8 +12,6 @@ bool arduino_husarnet_transport_open(struct uxrCustomTransport *transport) {
   struct micro_ros_agent_locator *locator =
       (struct micro_ros_agent_locator *)transport->args;
 
-  Serial1.printf("Connecting to \"%s:%d\"... ", locator->hostname,
-                 locator->port);
 
   /* Try to connect to a server on port 8888 on your laptop */
   if (!client.connect(locator->hostname, locator->port)) {
