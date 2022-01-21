@@ -13,7 +13,7 @@ https://github.com/ros2/rclc 5ea1a2a7f3c71fce724fedc6a4f60e2f5c2f1ead
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6ae9376f84b62dae228ccd83a34b6e5a9458ea6c
 https://github.com/micro-ROS/rmw-microxrcedds.git 2eee1a22a1c7a14c2ced4714f9bf1484f10ed7c6
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ d8e21c581520e0ceb64028e20c9901fabdc8e4e1
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 4701ae68f259b66b77526ea9604dee4a5c4fae11
 https://github.com/micro-ROS/rcl 04a2962b88aa7460ce7f7b6d50938e32196899a4
 https://github.com/micro-ROS/rcutils b0ba303b3da30d5f4f048efb9655a15a1bf0cd5e
 https://github.com/micro-ROS/micro_ros_utilities 3c3ddf7c0569a17634dd66fd89bfd166d159dd64
@@ -24,12 +24,12 @@ https://github.com/ros2/rmw.git 9f3c3e1b010a95013eb119ce2ae9b225bdfdc1ba
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
 https://github.com/ros2/rcpputils.git 0d9930df35929d02b7801ebbe18576226c7d47aa
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
-https://github.com/ros2/rcl.git 6640eebe7f8493eaa03349d192b84e863b11be82
+https://github.com/ros2/rcl.git 0be33d25522a904eeade91984cb979fde34ff37e
 https://github.com/ros2/common_interfaces.git f41462f5dd36f5c3ae28866f18f356423ffb84e4
 https://github.com/ros2/rcl_logging.git e0b66658bd5978a8605ba28fdffc235d8cfccb85
 https://github.com/ros2/test_interface_files.git 96d65b61e9acdb9480075ffdc00dadddd67ff832
 https://github.com/ros2/libyaml_vendor.git 73c8ea6cec14474d9b256c61fc6a2d9af9e5dcbb
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
-https://github.com/ros2/rosidl.git f38d55fc9c810d5392950473c122e26819a30b68
+https://github.com/ros2/rosidl.git 2243064a021c36655dae597f1bd447e637029276
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git e61bfa0e0bfdb74f4a592b2efbf7acbfcfeb6c1f
