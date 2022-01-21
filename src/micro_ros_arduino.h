@@ -112,8 +112,6 @@ static inline void set_microros_husarnet_transports(char* agent_hostname,
   locator.hostname = agent_hostname;
   locator.port = agent_port;
 
-  Serial1.printf("Wait until \"%s\" is available", agent_hostname);
-
   while (false == agentAvailable) {
     for (auto const& host : Husarnet.listPeers()) {
       if (host.second == locator.hostname) {
@@ -122,10 +120,8 @@ static inline void set_microros_husarnet_transports(char* agent_hostname,
         break;
       }
     }
-	Serial1.printf(".");
-	delay(1);
+    delay(1);
   }
-  Serial1.printf("done");
 
   rmw_uros_set_custom_transport(
       false, (void*)&locator, arduino_husarnet_transport_open,
