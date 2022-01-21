@@ -15,11 +15,8 @@ bool arduino_husarnet_transport_open(struct uxrCustomTransport *transport) {
 
   /* Try to connect to a server on port 8888 on your laptop */
   if (!client.connect(locator->hostname, locator->port)) {
-    Serial1.printf("failed\r\n");
     return false;
   }
-
-  Serial1.printf("done\r\n");
 
   return true;
 }
