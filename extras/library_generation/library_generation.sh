@@ -240,7 +240,7 @@ fi
 if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
     rm -rf firmware/build
 
-    export TOOLCHAIN_PREFIX=/uros_ws/xtensa-esp32-elf/bin/xtensa-esp32-elf-
+    export TOOLCHAIN_PREFIX=/uros_ws/xtensa-esp32-elf-gcc8_4_0-esp-2021r2/bin/xtensa-esp32-elf-
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/esp32_toolchain.cmake /project/extras/library_generation/colcon.meta
 
     find firmware/build/include/ -name "*.c"  -delete
