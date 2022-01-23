@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__ByteMultiArray__destroy(example_interfaces__msg__ByteMultiArray * msg);
 
+/// Check for msg/ByteMultiArray message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__ByteMultiArray__are_equal(const example_interfaces__msg__ByteMultiArray * lhs, const example_interfaces__msg__ByteMultiArray * rhs);
 
 /// Initialize array of msg/ByteMultiArray messages.
 /**
@@ -116,6 +125,16 @@ example_interfaces__msg__ByteMultiArray__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__ByteMultiArray__Sequence__destroy(example_interfaces__msg__ByteMultiArray__Sequence * array);
+
+/// Check for msg/ByteMultiArray message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__ByteMultiArray__Sequence__are_equal(const example_interfaces__msg__ByteMultiArray__Sequence * lhs, const example_interfaces__msg__ByteMultiArray__Sequence * rhs);
 
 #ifdef __cplusplus
 }

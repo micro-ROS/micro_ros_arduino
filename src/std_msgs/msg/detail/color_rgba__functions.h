@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 void
 std_msgs__msg__ColorRGBA__destroy(std_msgs__msg__ColorRGBA * msg);
 
+/// Check for msg/ColorRGBA message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__ColorRGBA__are_equal(const std_msgs__msg__ColorRGBA * lhs, const std_msgs__msg__ColorRGBA * rhs);
 
 /// Initialize array of msg/ColorRGBA messages.
 /**
@@ -116,6 +125,16 @@ std_msgs__msg__ColorRGBA__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 void
 std_msgs__msg__ColorRGBA__Sequence__destroy(std_msgs__msg__ColorRGBA__Sequence * array);
+
+/// Check for msg/ColorRGBA message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__ColorRGBA__Sequence__are_equal(const std_msgs__msg__ColorRGBA__Sequence * lhs, const std_msgs__msg__ColorRGBA__Sequence * rhs);
 
 #ifdef __cplusplus
 }

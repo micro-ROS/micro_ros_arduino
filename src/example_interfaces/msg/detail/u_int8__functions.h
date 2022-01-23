@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__UInt8__destroy(example_interfaces__msg__UInt8 * msg);
 
+/// Check for msg/UInt8 message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__UInt8__are_equal(const example_interfaces__msg__UInt8 * lhs, const example_interfaces__msg__UInt8 * rhs);
 
 /// Initialize array of msg/UInt8 messages.
 /**
@@ -116,6 +125,16 @@ example_interfaces__msg__UInt8__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__UInt8__Sequence__destroy(example_interfaces__msg__UInt8__Sequence * array);
+
+/// Check for msg/UInt8 message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__UInt8__Sequence__are_equal(const example_interfaces__msg__UInt8__Sequence * lhs, const example_interfaces__msg__UInt8__Sequence * rhs);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__Odometry__destroy(nav_msgs__msg__Odometry * msg);
 
+/// Check for msg/Odometry message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__Odometry__are_equal(const nav_msgs__msg__Odometry * lhs, const nav_msgs__msg__Odometry * rhs);
 
 /// Initialize array of msg/Odometry messages.
 /**
@@ -116,6 +125,16 @@ nav_msgs__msg__Odometry__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__Odometry__Sequence__destroy(nav_msgs__msg__Odometry__Sequence * array);
+
+/// Check for msg/Odometry message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__Odometry__Sequence__are_equal(const nav_msgs__msg__Odometry__Sequence * lhs, const nav_msgs__msg__Odometry__Sequence * rhs);
 
 #ifdef __cplusplus
 }

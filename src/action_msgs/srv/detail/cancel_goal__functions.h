@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 void
 action_msgs__srv__CancelGoal_Request__destroy(action_msgs__srv__CancelGoal_Request * msg);
 
+/// Check for srv/CancelGoal message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_action_msgs
+bool
+action_msgs__srv__CancelGoal_Request__are_equal(const action_msgs__srv__CancelGoal_Request * lhs, const action_msgs__srv__CancelGoal_Request * rhs);
 
 /// Initialize array of srv/CancelGoal messages.
 /**
@@ -117,6 +126,16 @@ ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 void
 action_msgs__srv__CancelGoal_Request__Sequence__destroy(action_msgs__srv__CancelGoal_Request__Sequence * array);
 
+/// Check for srv/CancelGoal message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_action_msgs
+bool
+action_msgs__srv__CancelGoal_Request__Sequence__are_equal(const action_msgs__srv__CancelGoal_Request__Sequence * lhs, const action_msgs__srv__CancelGoal_Request__Sequence * rhs);
+
 /// Initialize srv/CancelGoal message.
 /**
  * If the init function is called twice for the same message without
@@ -165,6 +184,15 @@ ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 void
 action_msgs__srv__CancelGoal_Response__destroy(action_msgs__srv__CancelGoal_Response * msg);
 
+/// Check for srv/CancelGoal message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_action_msgs
+bool
+action_msgs__srv__CancelGoal_Response__are_equal(const action_msgs__srv__CancelGoal_Response * lhs, const action_msgs__srv__CancelGoal_Response * rhs);
 
 /// Initialize array of srv/CancelGoal messages.
 /**
@@ -215,6 +243,16 @@ action_msgs__srv__CancelGoal_Response__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 void
 action_msgs__srv__CancelGoal_Response__Sequence__destroy(action_msgs__srv__CancelGoal_Response__Sequence * array);
+
+/// Check for srv/CancelGoal message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_action_msgs
+bool
+action_msgs__srv__CancelGoal_Response__Sequence__are_equal(const action_msgs__srv__CancelGoal_Response__Sequence * lhs, const action_msgs__srv__CancelGoal_Response__Sequence * rhs);
 
 #ifdef __cplusplus
 }

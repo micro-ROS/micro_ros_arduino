@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
 void
 rosgraph_msgs__msg__Clock__destroy(rosgraph_msgs__msg__Clock * msg);
 
+/// Check for msg/Clock message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
+bool
+rosgraph_msgs__msg__Clock__are_equal(const rosgraph_msgs__msg__Clock * lhs, const rosgraph_msgs__msg__Clock * rhs);
 
 /// Initialize array of msg/Clock messages.
 /**
@@ -116,6 +125,16 @@ rosgraph_msgs__msg__Clock__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
 void
 rosgraph_msgs__msg__Clock__Sequence__destroy(rosgraph_msgs__msg__Clock__Sequence * array);
+
+/// Check for msg/Clock message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
+bool
+rosgraph_msgs__msg__Clock__Sequence__are_equal(const rosgraph_msgs__msg__Clock__Sequence * lhs, const rosgraph_msgs__msg__Clock__Sequence * rhs);
 
 #ifdef __cplusplus
 }

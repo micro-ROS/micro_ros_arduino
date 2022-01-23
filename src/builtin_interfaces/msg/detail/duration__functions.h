@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
 void
 builtin_interfaces__msg__Duration__destroy(builtin_interfaces__msg__Duration * msg);
 
+/// Check for msg/Duration message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
+bool
+builtin_interfaces__msg__Duration__are_equal(const builtin_interfaces__msg__Duration * lhs, const builtin_interfaces__msg__Duration * rhs);
 
 /// Initialize array of msg/Duration messages.
 /**
@@ -116,6 +125,16 @@ builtin_interfaces__msg__Duration__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
 void
 builtin_interfaces__msg__Duration__Sequence__destroy(builtin_interfaces__msg__Duration__Sequence * array);
+
+/// Check for msg/Duration message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
+bool
+builtin_interfaces__msg__Duration__Sequence__are_equal(const builtin_interfaces__msg__Duration__Sequence * lhs, const builtin_interfaces__msg__Duration__Sequence * rhs);
 
 #ifdef __cplusplus
 }

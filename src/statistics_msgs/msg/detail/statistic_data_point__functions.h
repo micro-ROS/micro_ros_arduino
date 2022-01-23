@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
 void
 statistics_msgs__msg__StatisticDataPoint__destroy(statistics_msgs__msg__StatisticDataPoint * msg);
 
+/// Check for msg/StatisticDataPoint message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
+bool
+statistics_msgs__msg__StatisticDataPoint__are_equal(const statistics_msgs__msg__StatisticDataPoint * lhs, const statistics_msgs__msg__StatisticDataPoint * rhs);
 
 /// Initialize array of msg/StatisticDataPoint messages.
 /**
@@ -116,6 +125,16 @@ statistics_msgs__msg__StatisticDataPoint__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
 void
 statistics_msgs__msg__StatisticDataPoint__Sequence__destroy(statistics_msgs__msg__StatisticDataPoint__Sequence * array);
+
+/// Check for msg/StatisticDataPoint message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
+bool
+statistics_msgs__msg__StatisticDataPoint__Sequence__are_equal(const statistics_msgs__msg__StatisticDataPoint__Sequence * lhs, const statistics_msgs__msg__StatisticDataPoint__Sequence * rhs);
 
 #ifdef __cplusplus
 }

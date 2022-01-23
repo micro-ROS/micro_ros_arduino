@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Vector3Stamped__destroy(geometry_msgs__msg__Vector3Stamped * msg);
 
+/// Check for msg/Vector3Stamped message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Vector3Stamped__are_equal(const geometry_msgs__msg__Vector3Stamped * lhs, const geometry_msgs__msg__Vector3Stamped * rhs);
 
 /// Initialize array of msg/Vector3Stamped messages.
 /**
@@ -116,6 +125,16 @@ geometry_msgs__msg__Vector3Stamped__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Vector3Stamped__Sequence__destroy(geometry_msgs__msg__Vector3Stamped__Sequence * array);
+
+/// Check for msg/Vector3Stamped message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Vector3Stamped__Sequence__are_equal(const geometry_msgs__msg__Vector3Stamped__Sequence * lhs, const geometry_msgs__msg__Vector3Stamped__Sequence * rhs);
 
 #ifdef __cplusplus
 }

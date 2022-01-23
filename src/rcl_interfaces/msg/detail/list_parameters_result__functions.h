@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 void
 rcl_interfaces__msg__ListParametersResult__destroy(rcl_interfaces__msg__ListParametersResult * msg);
 
+/// Check for msg/ListParametersResult message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ListParametersResult__are_equal(const rcl_interfaces__msg__ListParametersResult * lhs, const rcl_interfaces__msg__ListParametersResult * rhs);
 
 /// Initialize array of msg/ListParametersResult messages.
 /**
@@ -116,6 +125,16 @@ rcl_interfaces__msg__ListParametersResult__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 void
 rcl_interfaces__msg__ListParametersResult__Sequence__destroy(rcl_interfaces__msg__ListParametersResult__Sequence * array);
+
+/// Check for msg/ListParametersResult message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ListParametersResult__Sequence__are_equal(const rcl_interfaces__msg__ListParametersResult__Sequence * lhs, const rcl_interfaces__msg__ListParametersResult__Sequence * rhs);
 
 #ifdef __cplusplus
 }
