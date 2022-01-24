@@ -54,6 +54,19 @@ ROSIDL_GENERATOR_C_PUBLIC
 void
 rosidl_runtime_c__U16String__fini(rosidl_runtime_c__U16String * str);
 
+/// Check for rosidl_runtime_c__U16String structure equality.
+/**
+ * \param[in] lhs a pointer to the left hand side of the equality operator.
+ * \param[in] lhs a pointer to the right hand side of the equality operator.
+ * \return true if rosidl_runtime_c__U16String structures are equal
+ *   in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__U16String__are_equal(
+  const rosidl_runtime_c__U16String * lhs,
+  const rosidl_runtime_c__U16String * rhs);
+
 /// Assign the uint16_t value of n characters to the rosidl_runtime_c__U16String structure.
 /*
  * This function returns `false` if memory cannot be allocated,
@@ -163,6 +176,19 @@ ROSIDL_GENERATOR_C_PUBLIC
 void
 rosidl_runtime_c__U16String__Sequence__fini(
   rosidl_runtime_c__U16String__Sequence * sequence);
+
+/// Check for rosidl_runtime_c__U16String__Sequence structure equality.
+/**
+ * \param[in] lhs a pointer to the left hand side of the equality operator.
+ * \param[in] lhs a pointer to the right hand side of the equality operator.
+ * \return true if rosidl_runtime_c__U16String__Sequence structures are equal
+ *   in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__U16String__Sequence__are_equal(
+  const rosidl_runtime_c__U16String__Sequence * lhs,
+  const rosidl_runtime_c__U16String__Sequence * rhs);
 
 /// Create a U16 string sequence structure with a specific size.
 /*

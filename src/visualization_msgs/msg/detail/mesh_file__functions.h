@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__msg__MeshFile__destroy(visualization_msgs__msg__MeshFile * msg);
 
+/// Check for msg/MeshFile message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__MeshFile__are_equal(const visualization_msgs__msg__MeshFile * lhs, const visualization_msgs__msg__MeshFile * rhs);
 
 /// Initialize array of msg/MeshFile messages.
 /**
@@ -116,6 +125,16 @@ visualization_msgs__msg__MeshFile__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__msg__MeshFile__Sequence__destroy(visualization_msgs__msg__MeshFile__Sequence * array);
+
+/// Check for msg/MeshFile message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__MeshFile__Sequence__are_equal(const visualization_msgs__msg__MeshFile__Sequence * lhs, const visualization_msgs__msg__MeshFile__Sequence * rhs);
 
 #ifdef __cplusplus
 }

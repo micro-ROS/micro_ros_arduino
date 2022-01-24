@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 void
 diagnostic_msgs__srv__AddDiagnostics_Request__destroy(diagnostic_msgs__srv__AddDiagnostics_Request * msg);
 
+/// Check for srv/AddDiagnostics message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__AddDiagnostics_Request__are_equal(const diagnostic_msgs__srv__AddDiagnostics_Request * lhs, const diagnostic_msgs__srv__AddDiagnostics_Request * rhs);
 
 /// Initialize array of srv/AddDiagnostics messages.
 /**
@@ -117,6 +126,16 @@ ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 void
 diagnostic_msgs__srv__AddDiagnostics_Request__Sequence__destroy(diagnostic_msgs__srv__AddDiagnostics_Request__Sequence * array);
 
+/// Check for srv/AddDiagnostics message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__AddDiagnostics_Request__Sequence__are_equal(const diagnostic_msgs__srv__AddDiagnostics_Request__Sequence * lhs, const diagnostic_msgs__srv__AddDiagnostics_Request__Sequence * rhs);
+
 /// Initialize srv/AddDiagnostics message.
 /**
  * If the init function is called twice for the same message without
@@ -165,6 +184,15 @@ ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 void
 diagnostic_msgs__srv__AddDiagnostics_Response__destroy(diagnostic_msgs__srv__AddDiagnostics_Response * msg);
 
+/// Check for srv/AddDiagnostics message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__AddDiagnostics_Response__are_equal(const diagnostic_msgs__srv__AddDiagnostics_Response * lhs, const diagnostic_msgs__srv__AddDiagnostics_Response * rhs);
 
 /// Initialize array of srv/AddDiagnostics messages.
 /**
@@ -215,6 +243,16 @@ diagnostic_msgs__srv__AddDiagnostics_Response__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 void
 diagnostic_msgs__srv__AddDiagnostics_Response__Sequence__destroy(diagnostic_msgs__srv__AddDiagnostics_Response__Sequence * array);
+
+/// Check for srv/AddDiagnostics message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__AddDiagnostics_Response__Sequence__are_equal(const diagnostic_msgs__srv__AddDiagnostics_Response__Sequence * lhs, const diagnostic_msgs__srv__AddDiagnostics_Response__Sequence * rhs);
 
 #ifdef __cplusplus
 }

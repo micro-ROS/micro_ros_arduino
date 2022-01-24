@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
 void
 unique_identifier_msgs__msg__UUID__destroy(unique_identifier_msgs__msg__UUID * msg);
 
+/// Check for msg/UUID message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
+bool
+unique_identifier_msgs__msg__UUID__are_equal(const unique_identifier_msgs__msg__UUID * lhs, const unique_identifier_msgs__msg__UUID * rhs);
 
 /// Initialize array of msg/UUID messages.
 /**
@@ -116,6 +125,16 @@ unique_identifier_msgs__msg__UUID__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
 void
 unique_identifier_msgs__msg__UUID__Sequence__destroy(unique_identifier_msgs__msg__UUID__Sequence * array);
+
+/// Check for msg/UUID message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
+bool
+unique_identifier_msgs__msg__UUID__Sequence__are_equal(const unique_identifier_msgs__msg__UUID__Sequence * lhs, const unique_identifier_msgs__msg__UUID__Sequence * rhs);
 
 #ifdef __cplusplus
 }

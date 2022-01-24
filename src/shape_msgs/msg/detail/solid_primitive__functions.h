@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 void
 shape_msgs__msg__SolidPrimitive__destroy(shape_msgs__msg__SolidPrimitive * msg);
 
+/// Check for msg/SolidPrimitive message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__SolidPrimitive__are_equal(const shape_msgs__msg__SolidPrimitive * lhs, const shape_msgs__msg__SolidPrimitive * rhs);
 
 /// Initialize array of msg/SolidPrimitive messages.
 /**
@@ -116,6 +125,16 @@ shape_msgs__msg__SolidPrimitive__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 void
 shape_msgs__msg__SolidPrimitive__Sequence__destroy(shape_msgs__msg__SolidPrimitive__Sequence * array);
+
+/// Check for msg/SolidPrimitive message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__SolidPrimitive__Sequence__are_equal(const shape_msgs__msg__SolidPrimitive__Sequence * lhs, const shape_msgs__msg__SolidPrimitive__Sequence * rhs);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__WString__destroy(example_interfaces__msg__WString * msg);
 
+/// Check for msg/WString message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__WString__are_equal(const example_interfaces__msg__WString * lhs, const example_interfaces__msg__WString * rhs);
 
 /// Initialize array of msg/WString messages.
 /**
@@ -116,6 +125,16 @@ example_interfaces__msg__WString__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__WString__Sequence__destroy(example_interfaces__msg__WString__Sequence * array);
+
+/// Check for msg/WString message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__WString__Sequence__are_equal(const example_interfaces__msg__WString__Sequence * lhs, const example_interfaces__msg__WString__Sequence * rhs);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 void
 lifecycle_msgs__msg__State__destroy(lifecycle_msgs__msg__State * msg);
 
+/// Check for msg/State message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+bool
+lifecycle_msgs__msg__State__are_equal(const lifecycle_msgs__msg__State * lhs, const lifecycle_msgs__msg__State * rhs);
 
 /// Initialize array of msg/State messages.
 /**
@@ -116,6 +125,16 @@ lifecycle_msgs__msg__State__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 void
 lifecycle_msgs__msg__State__Sequence__destroy(lifecycle_msgs__msg__State__Sequence * array);
+
+/// Check for msg/State message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+bool
+lifecycle_msgs__msg__State__Sequence__are_equal(const lifecycle_msgs__msg__State__Sequence * lhs, const lifecycle_msgs__msg__State__Sequence * rhs);
 
 #ifdef __cplusplus
 }

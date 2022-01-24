@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__Arrays__destroy(test_msgs__msg__Arrays * msg);
 
+/// Check for msg/Arrays message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__Arrays__are_equal(const test_msgs__msg__Arrays * lhs, const test_msgs__msg__Arrays * rhs);
 
 /// Initialize array of msg/Arrays messages.
 /**
@@ -116,6 +125,16 @@ test_msgs__msg__Arrays__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__Arrays__Sequence__destroy(test_msgs__msg__Arrays__Sequence * array);
+
+/// Check for msg/Arrays message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__Arrays__Sequence__are_equal(const test_msgs__msg__Arrays__Sequence * lhs, const test_msgs__msg__Arrays__Sequence * rhs);
 
 #ifdef __cplusplus
 }

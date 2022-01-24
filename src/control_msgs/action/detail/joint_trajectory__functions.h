@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_Goal__destroy(control_msgs__action__JointTrajectory_Goal * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Goal__are_equal(const control_msgs__action__JointTrajectory_Goal * lhs, const control_msgs__action__JointTrajectory_Goal * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -117,6 +126,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_Goal__Sequence__destroy(control_msgs__action__JointTrajectory_Goal__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Goal__Sequence__are_equal(const control_msgs__action__JointTrajectory_Goal__Sequence * lhs, const control_msgs__action__JointTrajectory_Goal__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -165,6 +184,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_Result__destroy(control_msgs__action__JointTrajectory_Result * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Result__are_equal(const control_msgs__action__JointTrajectory_Result * lhs, const control_msgs__action__JointTrajectory_Result * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -216,6 +244,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_Result__Sequence__destroy(control_msgs__action__JointTrajectory_Result__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Result__Sequence__are_equal(const control_msgs__action__JointTrajectory_Result__Sequence * lhs, const control_msgs__action__JointTrajectory_Result__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -264,6 +302,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_Feedback__destroy(control_msgs__action__JointTrajectory_Feedback * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Feedback__are_equal(const control_msgs__action__JointTrajectory_Feedback * lhs, const control_msgs__action__JointTrajectory_Feedback * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -315,6 +362,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_Feedback__Sequence__destroy(control_msgs__action__JointTrajectory_Feedback__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Feedback__Sequence__are_equal(const control_msgs__action__JointTrajectory_Feedback__Sequence * lhs, const control_msgs__action__JointTrajectory_Feedback__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -363,6 +420,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_SendGoal_Request__destroy(control_msgs__action__JointTrajectory_SendGoal_Request * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Request__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Request * lhs, const control_msgs__action__JointTrajectory_SendGoal_Request * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -414,6 +480,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_SendGoal_Request__Sequence__destroy(control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Request__Sequence__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * lhs, const control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -462,6 +538,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_SendGoal_Response__destroy(control_msgs__action__JointTrajectory_SendGoal_Response * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Response__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Response * lhs, const control_msgs__action__JointTrajectory_SendGoal_Response * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -513,6 +598,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_SendGoal_Response__Sequence__destroy(control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Response__Sequence__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * lhs, const control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -561,6 +656,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_GetResult_Request__destroy(control_msgs__action__JointTrajectory_GetResult_Request * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Request__are_equal(const control_msgs__action__JointTrajectory_GetResult_Request * lhs, const control_msgs__action__JointTrajectory_GetResult_Request * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -612,6 +716,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_GetResult_Request__Sequence__destroy(control_msgs__action__JointTrajectory_GetResult_Request__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Request__Sequence__are_equal(const control_msgs__action__JointTrajectory_GetResult_Request__Sequence * lhs, const control_msgs__action__JointTrajectory_GetResult_Request__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -660,6 +774,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_GetResult_Response__destroy(control_msgs__action__JointTrajectory_GetResult_Response * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Response__are_equal(const control_msgs__action__JointTrajectory_GetResult_Response * lhs, const control_msgs__action__JointTrajectory_GetResult_Response * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -711,6 +834,16 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_GetResult_Response__Sequence__destroy(control_msgs__action__JointTrajectory_GetResult_Response__Sequence * array);
 
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Response__Sequence__are_equal(const control_msgs__action__JointTrajectory_GetResult_Response__Sequence * lhs, const control_msgs__action__JointTrajectory_GetResult_Response__Sequence * rhs);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -759,6 +892,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_FeedbackMessage__destroy(control_msgs__action__JointTrajectory_FeedbackMessage * msg);
 
+/// Check for action/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_FeedbackMessage__are_equal(const control_msgs__action__JointTrajectory_FeedbackMessage * lhs, const control_msgs__action__JointTrajectory_FeedbackMessage * rhs);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -809,6 +951,16 @@ control_msgs__action__JointTrajectory_FeedbackMessage__Sequence__create(size_t s
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__action__JointTrajectory_FeedbackMessage__Sequence__destroy(control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * array);
+
+/// Check for action/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_FeedbackMessage__Sequence__are_equal(const control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * lhs, const control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * rhs);
 
 #ifdef __cplusplus
 }

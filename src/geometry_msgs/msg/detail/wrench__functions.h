@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Wrench__destroy(geometry_msgs__msg__Wrench * msg);
 
+/// Check for msg/Wrench message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Wrench__are_equal(const geometry_msgs__msg__Wrench * lhs, const geometry_msgs__msg__Wrench * rhs);
 
 /// Initialize array of msg/Wrench messages.
 /**
@@ -116,6 +125,16 @@ geometry_msgs__msg__Wrench__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Wrench__Sequence__destroy(geometry_msgs__msg__Wrench__Sequence * array);
+
+/// Check for msg/Wrench message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Wrench__Sequence__are_equal(const geometry_msgs__msg__Wrench__Sequence * lhs, const geometry_msgs__msg__Wrench__Sequence * rhs);
 
 #ifdef __cplusplus
 }

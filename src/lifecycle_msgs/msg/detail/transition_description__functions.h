@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 void
 lifecycle_msgs__msg__TransitionDescription__destroy(lifecycle_msgs__msg__TransitionDescription * msg);
 
+/// Check for msg/TransitionDescription message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+bool
+lifecycle_msgs__msg__TransitionDescription__are_equal(const lifecycle_msgs__msg__TransitionDescription * lhs, const lifecycle_msgs__msg__TransitionDescription * rhs);
 
 /// Initialize array of msg/TransitionDescription messages.
 /**
@@ -116,6 +125,16 @@ lifecycle_msgs__msg__TransitionDescription__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 void
 lifecycle_msgs__msg__TransitionDescription__Sequence__destroy(lifecycle_msgs__msg__TransitionDescription__Sequence * array);
+
+/// Check for msg/TransitionDescription message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+bool
+lifecycle_msgs__msg__TransitionDescription__Sequence__are_equal(const lifecycle_msgs__msg__TransitionDescription__Sequence * lhs, const lifecycle_msgs__msg__TransitionDescription__Sequence * rhs);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 void
 shape_msgs__msg__Plane__destroy(shape_msgs__msg__Plane * msg);
 
+/// Check for msg/Plane message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__Plane__are_equal(const shape_msgs__msg__Plane * lhs, const shape_msgs__msg__Plane * rhs);
 
 /// Initialize array of msg/Plane messages.
 /**
@@ -116,6 +125,16 @@ shape_msgs__msg__Plane__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 void
 shape_msgs__msg__Plane__Sequence__destroy(shape_msgs__msg__Plane__Sequence * array);
+
+/// Check for msg/Plane message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__Plane__Sequence__are_equal(const shape_msgs__msg__Plane__Sequence * lhs, const shape_msgs__msg__Plane__Sequence * rhs);
 
 #ifdef __cplusplus
 }

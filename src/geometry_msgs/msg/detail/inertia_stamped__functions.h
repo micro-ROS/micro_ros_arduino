@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__InertiaStamped__destroy(geometry_msgs__msg__InertiaStamped * msg);
 
+/// Check for msg/InertiaStamped message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__InertiaStamped__are_equal(const geometry_msgs__msg__InertiaStamped * lhs, const geometry_msgs__msg__InertiaStamped * rhs);
 
 /// Initialize array of msg/InertiaStamped messages.
 /**
@@ -116,6 +125,16 @@ geometry_msgs__msg__InertiaStamped__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__InertiaStamped__Sequence__destroy(geometry_msgs__msg__InertiaStamped__Sequence * array);
+
+/// Check for msg/InertiaStamped message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__InertiaStamped__Sequence__are_equal(const geometry_msgs__msg__InertiaStamped__Sequence * lhs, const geometry_msgs__msg__InertiaStamped__Sequence * rhs);
 
 #ifdef __cplusplus
 }

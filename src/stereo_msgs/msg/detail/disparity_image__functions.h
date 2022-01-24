@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 void
 stereo_msgs__msg__DisparityImage__destroy(stereo_msgs__msg__DisparityImage * msg);
 
+/// Check for msg/DisparityImage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__are_equal(const stereo_msgs__msg__DisparityImage * lhs, const stereo_msgs__msg__DisparityImage * rhs);
 
 /// Initialize array of msg/DisparityImage messages.
 /**
@@ -116,6 +125,16 @@ stereo_msgs__msg__DisparityImage__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 void
 stereo_msgs__msg__DisparityImage__Sequence__destroy(stereo_msgs__msg__DisparityImage__Sequence * array);
+
+/// Check for msg/DisparityImage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__Sequence__are_equal(const stereo_msgs__msg__DisparityImage__Sequence * lhs, const stereo_msgs__msg__DisparityImage__Sequence * rhs);
 
 #ifdef __cplusplus
 }

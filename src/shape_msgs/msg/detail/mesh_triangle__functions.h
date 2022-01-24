@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 void
 shape_msgs__msg__MeshTriangle__destroy(shape_msgs__msg__MeshTriangle * msg);
 
+/// Check for msg/MeshTriangle message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__MeshTriangle__are_equal(const shape_msgs__msg__MeshTriangle * lhs, const shape_msgs__msg__MeshTriangle * rhs);
 
 /// Initialize array of msg/MeshTriangle messages.
 /**
@@ -116,6 +125,16 @@ shape_msgs__msg__MeshTriangle__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 void
 shape_msgs__msg__MeshTriangle__Sequence__destroy(shape_msgs__msg__MeshTriangle__Sequence * array);
+
+/// Check for msg/MeshTriangle message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__MeshTriangle__Sequence__are_equal(const shape_msgs__msg__MeshTriangle__Sequence * lhs, const shape_msgs__msg__MeshTriangle__Sequence * rhs);
 
 #ifdef __cplusplus
 }

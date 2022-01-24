@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 void
 action_msgs__msg__GoalInfo__destroy(action_msgs__msg__GoalInfo * msg);
 
+/// Check for msg/GoalInfo message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_action_msgs
+bool
+action_msgs__msg__GoalInfo__are_equal(const action_msgs__msg__GoalInfo * lhs, const action_msgs__msg__GoalInfo * rhs);
 
 /// Initialize array of msg/GoalInfo messages.
 /**
@@ -116,6 +125,16 @@ action_msgs__msg__GoalInfo__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 void
 action_msgs__msg__GoalInfo__Sequence__destroy(action_msgs__msg__GoalInfo__Sequence * array);
+
+/// Check for msg/GoalInfo message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_action_msgs
+bool
+action_msgs__msg__GoalInfo__Sequence__are_equal(const action_msgs__msg__GoalInfo__Sequence * lhs, const action_msgs__msg__GoalInfo__Sequence * rhs);
 
 #ifdef __cplusplus
 }
