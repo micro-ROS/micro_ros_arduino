@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__BoundedPlainSequences__destroy(test_msgs__msg__BoundedPlainSequences * msg);
 
+/// Check for msg/BoundedPlainSequences message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedPlainSequences__are_equal(const test_msgs__msg__BoundedPlainSequences * lhs, const test_msgs__msg__BoundedPlainSequences * rhs);
 
 /// Initialize array of msg/BoundedPlainSequences messages.
 /**
@@ -116,6 +125,16 @@ test_msgs__msg__BoundedPlainSequences__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__BoundedPlainSequences__Sequence__destroy(test_msgs__msg__BoundedPlainSequences__Sequence * array);
+
+/// Check for msg/BoundedPlainSequences message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedPlainSequences__Sequence__are_equal(const test_msgs__msg__BoundedPlainSequences__Sequence * lhs, const test_msgs__msg__BoundedPlainSequences__Sequence * rhs);
 
 #ifdef __cplusplus
 }

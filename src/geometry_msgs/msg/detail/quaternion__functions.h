@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Quaternion__destroy(geometry_msgs__msg__Quaternion * msg);
 
+/// Check for msg/Quaternion message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Quaternion__are_equal(const geometry_msgs__msg__Quaternion * lhs, const geometry_msgs__msg__Quaternion * rhs);
 
 /// Initialize array of msg/Quaternion messages.
 /**
@@ -116,6 +125,16 @@ geometry_msgs__msg__Quaternion__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Quaternion__Sequence__destroy(geometry_msgs__msg__Quaternion__Sequence * array);
+
+/// Check for msg/Quaternion message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Quaternion__Sequence__are_equal(const geometry_msgs__msg__Quaternion__Sequence * lhs, const geometry_msgs__msg__Quaternion__Sequence * rhs);
 
 #ifdef __cplusplus
 }

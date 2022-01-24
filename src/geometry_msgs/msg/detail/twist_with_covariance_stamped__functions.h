@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__TwistWithCovarianceStamped__destroy(geometry_msgs__msg__TwistWithCovarianceStamped * msg);
 
+/// Check for msg/TwistWithCovarianceStamped message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__TwistWithCovarianceStamped__are_equal(const geometry_msgs__msg__TwistWithCovarianceStamped * lhs, const geometry_msgs__msg__TwistWithCovarianceStamped * rhs);
 
 /// Initialize array of msg/TwistWithCovarianceStamped messages.
 /**
@@ -116,6 +125,16 @@ geometry_msgs__msg__TwistWithCovarianceStamped__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__TwistWithCovarianceStamped__Sequence__destroy(geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * array);
+
+/// Check for msg/TwistWithCovarianceStamped message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__TwistWithCovarianceStamped__Sequence__are_equal(const geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * lhs, const geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * rhs);
 
 #ifdef __cplusplus
 }

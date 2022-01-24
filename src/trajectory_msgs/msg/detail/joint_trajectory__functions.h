@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 void
 trajectory_msgs__msg__JointTrajectory__destroy(trajectory_msgs__msg__JointTrajectory * msg);
 
+/// Check for msg/JointTrajectory message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__JointTrajectory__are_equal(const trajectory_msgs__msg__JointTrajectory * lhs, const trajectory_msgs__msg__JointTrajectory * rhs);
 
 /// Initialize array of msg/JointTrajectory messages.
 /**
@@ -116,6 +125,16 @@ trajectory_msgs__msg__JointTrajectory__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 void
 trajectory_msgs__msg__JointTrajectory__Sequence__destroy(trajectory_msgs__msg__JointTrajectory__Sequence * array);
+
+/// Check for msg/JointTrajectory message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__JointTrajectory__Sequence__are_equal(const trajectory_msgs__msg__JointTrajectory__Sequence * lhs, const trajectory_msgs__msg__JointTrajectory__Sequence * rhs);
 
 #ifdef __cplusplus
 }

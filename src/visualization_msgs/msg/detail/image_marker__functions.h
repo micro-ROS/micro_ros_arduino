@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__msg__ImageMarker__destroy(visualization_msgs__msg__ImageMarker * msg);
 
+/// Check for msg/ImageMarker message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__ImageMarker__are_equal(const visualization_msgs__msg__ImageMarker * lhs, const visualization_msgs__msg__ImageMarker * rhs);
 
 /// Initialize array of msg/ImageMarker messages.
 /**
@@ -116,6 +125,16 @@ visualization_msgs__msg__ImageMarker__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__msg__ImageMarker__Sequence__destroy(visualization_msgs__msg__ImageMarker__Sequence * array);
+
+/// Check for msg/ImageMarker message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__ImageMarker__Sequence__are_equal(const visualization_msgs__msg__ImageMarker__Sequence * lhs, const visualization_msgs__msg__ImageMarker__Sequence * rhs);
 
 #ifdef __cplusplus
 }

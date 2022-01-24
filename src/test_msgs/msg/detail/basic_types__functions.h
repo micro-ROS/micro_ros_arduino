@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__BasicTypes__destroy(test_msgs__msg__BasicTypes * msg);
 
+/// Check for msg/BasicTypes message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BasicTypes__are_equal(const test_msgs__msg__BasicTypes * lhs, const test_msgs__msg__BasicTypes * rhs);
 
 /// Initialize array of msg/BasicTypes messages.
 /**
@@ -116,6 +125,16 @@ test_msgs__msg__BasicTypes__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__BasicTypes__Sequence__destroy(test_msgs__msg__BasicTypes__Sequence * array);
+
+/// Check for msg/BasicTypes message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BasicTypes__Sequence__are_equal(const test_msgs__msg__BasicTypes__Sequence * lhs, const test_msgs__msg__BasicTypes__Sequence * rhs);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 void
 tf2_msgs__msg__TFMessage__destroy(tf2_msgs__msg__TFMessage * msg);
 
+/// Check for msg/TFMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__msg__TFMessage__are_equal(const tf2_msgs__msg__TFMessage * lhs, const tf2_msgs__msg__TFMessage * rhs);
 
 /// Initialize array of msg/TFMessage messages.
 /**
@@ -116,6 +125,16 @@ tf2_msgs__msg__TFMessage__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 void
 tf2_msgs__msg__TFMessage__Sequence__destroy(tf2_msgs__msg__TFMessage__Sequence * array);
+
+/// Check for msg/TFMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__msg__TFMessage__Sequence__are_equal(const tf2_msgs__msg__TFMessage__Sequence * lhs, const tf2_msgs__msg__TFMessage__Sequence * rhs);
 
 #ifdef __cplusplus
 }

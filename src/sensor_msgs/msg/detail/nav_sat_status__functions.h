@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 void
 sensor_msgs__msg__NavSatStatus__destroy(sensor_msgs__msg__NavSatStatus * msg);
 
+/// Check for msg/NavSatStatus message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__NavSatStatus__are_equal(const sensor_msgs__msg__NavSatStatus * lhs, const sensor_msgs__msg__NavSatStatus * rhs);
 
 /// Initialize array of msg/NavSatStatus messages.
 /**
@@ -116,6 +125,16 @@ sensor_msgs__msg__NavSatStatus__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 void
 sensor_msgs__msg__NavSatStatus__Sequence__destroy(sensor_msgs__msg__NavSatStatus__Sequence * array);
+
+/// Check for msg/NavSatStatus message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__NavSatStatus__Sequence__are_equal(const sensor_msgs__msg__NavSatStatus__Sequence * lhs, const sensor_msgs__msg__NavSatStatus__Sequence * rhs);
 
 #ifdef __cplusplus
 }

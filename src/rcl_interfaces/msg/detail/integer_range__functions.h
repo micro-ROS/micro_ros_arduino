@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 void
 rcl_interfaces__msg__IntegerRange__destroy(rcl_interfaces__msg__IntegerRange * msg);
 
+/// Check for msg/IntegerRange message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__IntegerRange__are_equal(const rcl_interfaces__msg__IntegerRange * lhs, const rcl_interfaces__msg__IntegerRange * rhs);
 
 /// Initialize array of msg/IntegerRange messages.
 /**
@@ -116,6 +125,16 @@ rcl_interfaces__msg__IntegerRange__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 void
 rcl_interfaces__msg__IntegerRange__Sequence__destroy(rcl_interfaces__msg__IntegerRange__Sequence * array);
+
+/// Check for msg/IntegerRange message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__IntegerRange__Sequence__are_equal(const rcl_interfaces__msg__IntegerRange__Sequence * lhs, const rcl_interfaces__msg__IntegerRange__Sequence * rhs);
 
 #ifdef __cplusplus
 }

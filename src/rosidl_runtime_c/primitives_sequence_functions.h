@@ -62,14 +62,31 @@ extern "C"
     rosidl_runtime_c__ ## STRUCT_NAME ## __Sequence * sequence);
 
 /**
+ * \def ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(STRUCT_NAME)
+ *
+ * \brief Check for sequence equality.
+ *
+ * param lhs a pointer to a sequence struct
+ * param rhs a pointer to another sequence struct
+ */
+#define ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(STRUCT_NAME) \
+  /** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(STRUCT_NAME) */ \
+  ROSIDL_GENERATOR_C_PUBLIC \
+  bool rosidl_runtime_c__ ## STRUCT_NAME ## __Sequence__are_equal( \
+    const rosidl_runtime_c__ ## STRUCT_NAME ## __Sequence * lhs, \
+    const rosidl_runtime_c__ ## STRUCT_NAME ## __Sequence * rhs);
+
+/**
  * \def ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_FUNCTIONS(STRUCT_NAME)
  *
- * \brief See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_INIT(STRUCT_NAME) and
- * #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_FINI(STRUCT_NAME)
+ * \brief See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_INIT(STRUCT_NAME),
+ * #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_FINI(STRUCT_NAME), and
+ * #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(STRUCT_NAME).
  */
 #define ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_FUNCTIONS(STRUCT_NAME) \
   ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_INIT(STRUCT_NAME) \
-  ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_FINI(STRUCT_NAME)
+  ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_FINI(STRUCT_NAME) \
+  ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(STRUCT_NAME)
 
 /**
  * \defgroup primitives_sequence_functions__basic_types Sequence functions for all basic types.
@@ -104,6 +121,11 @@ bool rosidl_runtime_c__bool__Sequence__init(
 ROSIDL_GENERATOR_C_PUBLIC
 void rosidl_runtime_c__bool__Sequence__fini(
   rosidl_runtime_c__boolean__Sequence * sequence);
+/** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(bool) */
+ROSIDL_GENERATOR_C_PUBLIC
+bool rosidl_runtime_c__bool__Sequence__are_equal(
+  const rosidl_runtime_c__boolean__Sequence * lhs,
+  const rosidl_runtime_c__boolean__Sequence * rhs);
 
 /** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_INIT(byte) */
 ROSIDL_GENERATOR_C_PUBLIC
@@ -113,6 +135,11 @@ bool rosidl_runtime_c__byte__Sequence__init(
 ROSIDL_GENERATOR_C_PUBLIC
 void rosidl_runtime_c__byte__Sequence__fini(
   rosidl_runtime_c__octet__Sequence * sequence);
+/** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(byte) */
+ROSIDL_GENERATOR_C_PUBLIC
+bool rosidl_runtime_c__byte__Sequence__are_equal(
+  const rosidl_runtime_c__octet__Sequence * lhs,
+  const rosidl_runtime_c__octet__Sequence * rhs);
 
 /** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_INIT(float32) */
 ROSIDL_GENERATOR_C_PUBLIC
@@ -122,6 +149,11 @@ bool rosidl_runtime_c__float32__Sequence__init(
 ROSIDL_GENERATOR_C_PUBLIC
 void rosidl_runtime_c__float32__Sequence__fini(
   rosidl_runtime_c__float__Sequence * sequence);
+/** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(float32) */
+ROSIDL_GENERATOR_C_PUBLIC
+bool rosidl_runtime_c__float32__Sequence__are_equal(
+  const rosidl_runtime_c__float__Sequence * lhs,
+  const rosidl_runtime_c__float__Sequence * rhs);
 
 /** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_INIT(float64) */
 ROSIDL_GENERATOR_C_PUBLIC
@@ -131,6 +163,11 @@ bool rosidl_runtime_c__float64__Sequence__init(
 ROSIDL_GENERATOR_C_PUBLIC
 void rosidl_runtime_c__float64__Sequence__fini(
   rosidl_runtime_c__double__Sequence * sequence);
+/** See #ROSIDL_RUNTIME_C__DECLARE_PRIMITIVE_SEQUENCE_EQ(float64) */
+ROSIDL_GENERATOR_C_PUBLIC
+bool rosidl_runtime_c__float64__Sequence__are_equal(
+  const rosidl_runtime_c__double__Sequence * lhs,
+  const rosidl_runtime_c__double__Sequence * rhs);
 /**@}*/
 
 #ifdef __cplusplus

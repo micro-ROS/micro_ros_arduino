@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 void
 micro_ros_msgs__msg__Graph__destroy(micro_ros_msgs__msg__Graph * msg);
 
+/// Check for msg/Graph message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Graph__are_equal(const micro_ros_msgs__msg__Graph * lhs, const micro_ros_msgs__msg__Graph * rhs);
 
 /// Initialize array of msg/Graph messages.
 /**
@@ -116,6 +125,16 @@ micro_ros_msgs__msg__Graph__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 void
 micro_ros_msgs__msg__Graph__Sequence__destroy(micro_ros_msgs__msg__Graph__Sequence * array);
+
+/// Check for msg/Graph message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Graph__Sequence__are_equal(const micro_ros_msgs__msg__Graph__Sequence * lhs, const micro_ros_msgs__msg__Graph__Sequence * rhs);
 
 #ifdef __cplusplus
 }

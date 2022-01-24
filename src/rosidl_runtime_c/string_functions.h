@@ -55,6 +55,18 @@ ROSIDL_GENERATOR_C_PUBLIC
 void
 rosidl_runtime_c__String__fini(rosidl_runtime_c__String * str);
 
+/// Check for rosidl_runtime_c__String structure equality.
+/**
+ * \param[in] lhs a pointer to the left hand side of the equality operator.
+ * \param[in] lhs a pointer to the right hand side of the equality operator.
+ * \return true if rosidl_runtime_c__String structures are equal in size and content,
+ *   otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__String__are_equal(
+  const rosidl_runtime_c__String * lhs, const rosidl_runtime_c__String * rhs);
+
 /// Assign the c string pointer of n characters to the rosidl_runtime_c__String structure.
 /*
  * \param[inout] str a pointer to a string structure
@@ -116,6 +128,19 @@ ROSIDL_GENERATOR_C_PUBLIC
 void
 rosidl_runtime_c__String__Sequence__fini(
   rosidl_runtime_c__String__Sequence * sequence);
+
+/// Check for rosidl_runtime_c__String__Sequence structure equality.
+/**
+ * \param[in] lhs a pointer to the left hand side of the equality operator.
+ * \param[in] lhs a pointer to the right hand side of the equality operator.
+ * \return true if rosidl_runtime_c__String__Sequence structures are equal
+ *   in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__String__Sequence__are_equal(
+  const rosidl_runtime_c__String__Sequence * lhs,
+  const rosidl_runtime_c__String__Sequence * rhs);
 
 /// Create a rosidl_runtime_c__String__Sequence structure with a specific size.
 /*

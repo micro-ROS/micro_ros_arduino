@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__srv__GetPlan_Request__destroy(nav_msgs__srv__GetPlan_Request * msg);
 
+/// Check for srv/GetPlan message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__srv__GetPlan_Request__are_equal(const nav_msgs__srv__GetPlan_Request * lhs, const nav_msgs__srv__GetPlan_Request * rhs);
 
 /// Initialize array of srv/GetPlan messages.
 /**
@@ -117,6 +126,16 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__srv__GetPlan_Request__Sequence__destroy(nav_msgs__srv__GetPlan_Request__Sequence * array);
 
+/// Check for srv/GetPlan message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__srv__GetPlan_Request__Sequence__are_equal(const nav_msgs__srv__GetPlan_Request__Sequence * lhs, const nav_msgs__srv__GetPlan_Request__Sequence * rhs);
+
 /// Initialize srv/GetPlan message.
 /**
  * If the init function is called twice for the same message without
@@ -165,6 +184,15 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__srv__GetPlan_Response__destroy(nav_msgs__srv__GetPlan_Response * msg);
 
+/// Check for srv/GetPlan message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__srv__GetPlan_Response__are_equal(const nav_msgs__srv__GetPlan_Response * lhs, const nav_msgs__srv__GetPlan_Response * rhs);
 
 /// Initialize array of srv/GetPlan messages.
 /**
@@ -215,6 +243,16 @@ nav_msgs__srv__GetPlan_Response__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__srv__GetPlan_Response__Sequence__destroy(nav_msgs__srv__GetPlan_Response__Sequence * array);
+
+/// Check for srv/GetPlan message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__srv__GetPlan_Response__Sequence__are_equal(const nav_msgs__srv__GetPlan_Response__Sequence * lhs, const nav_msgs__srv__GetPlan_Response__Sequence * rhs);
 
 #ifdef __cplusplus
 }

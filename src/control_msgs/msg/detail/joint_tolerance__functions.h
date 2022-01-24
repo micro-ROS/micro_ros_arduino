@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__JointTolerance__destroy(control_msgs__msg__JointTolerance * msg);
 
+/// Check for msg/JointTolerance message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointTolerance__are_equal(const control_msgs__msg__JointTolerance * lhs, const control_msgs__msg__JointTolerance * rhs);
 
 /// Initialize array of msg/JointTolerance messages.
 /**
@@ -116,6 +125,16 @@ control_msgs__msg__JointTolerance__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__JointTolerance__Sequence__destroy(control_msgs__msg__JointTolerance__Sequence * array);
+
+/// Check for msg/JointTolerance message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointTolerance__Sequence__are_equal(const control_msgs__msg__JointTolerance__Sequence * lhs, const control_msgs__msg__JointTolerance__Sequence * rhs);
 
 #ifdef __cplusplus
 }

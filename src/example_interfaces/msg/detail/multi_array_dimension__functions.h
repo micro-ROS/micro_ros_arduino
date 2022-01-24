@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__MultiArrayDimension__destroy(example_interfaces__msg__MultiArrayDimension * msg);
 
+/// Check for msg/MultiArrayDimension message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__MultiArrayDimension__are_equal(const example_interfaces__msg__MultiArrayDimension * lhs, const example_interfaces__msg__MultiArrayDimension * rhs);
 
 /// Initialize array of msg/MultiArrayDimension messages.
 /**
@@ -116,6 +125,16 @@ example_interfaces__msg__MultiArrayDimension__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__MultiArrayDimension__Sequence__destroy(example_interfaces__msg__MultiArrayDimension__Sequence * array);
+
+/// Check for msg/MultiArrayDimension message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__MultiArrayDimension__Sequence__are_equal(const example_interfaces__msg__MultiArrayDimension__Sequence * lhs, const example_interfaces__msg__MultiArrayDimension__Sequence * rhs);
 
 #ifdef __cplusplus
 }

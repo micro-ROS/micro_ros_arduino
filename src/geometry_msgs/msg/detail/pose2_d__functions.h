@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Pose2D__destroy(geometry_msgs__msg__Pose2D * msg);
 
+/// Check for msg/Pose2D message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Pose2D__are_equal(const geometry_msgs__msg__Pose2D * lhs, const geometry_msgs__msg__Pose2D * rhs);
 
 /// Initialize array of msg/Pose2D messages.
 /**
@@ -116,6 +125,16 @@ geometry_msgs__msg__Pose2D__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Pose2D__Sequence__destroy(geometry_msgs__msg__Pose2D__Sequence * array);
+
+/// Check for msg/Pose2D message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Pose2D__Sequence__are_equal(const geometry_msgs__msg__Pose2D__Sequence * lhs, const geometry_msgs__msg__Pose2D__Sequence * rhs);
 
 #ifdef __cplusplus
 }

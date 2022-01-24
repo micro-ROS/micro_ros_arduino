@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__Char__destroy(example_interfaces__msg__Char * msg);
 
+/// Check for msg/Char message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__Char__are_equal(const example_interfaces__msg__Char * lhs, const example_interfaces__msg__Char * rhs);
 
 /// Initialize array of msg/Char messages.
 /**
@@ -116,6 +125,16 @@ example_interfaces__msg__Char__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__Char__Sequence__destroy(example_interfaces__msg__Char__Sequence * array);
+
+/// Check for msg/Char message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__Char__Sequence__are_equal(const example_interfaces__msg__Char__Sequence * lhs, const example_interfaces__msg__Char__Sequence * rhs);
 
 #ifdef __cplusplus
 }

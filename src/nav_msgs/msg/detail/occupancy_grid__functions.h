@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__OccupancyGrid__destroy(nav_msgs__msg__OccupancyGrid * msg);
 
+/// Check for msg/OccupancyGrid message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__OccupancyGrid__are_equal(const nav_msgs__msg__OccupancyGrid * lhs, const nav_msgs__msg__OccupancyGrid * rhs);
 
 /// Initialize array of msg/OccupancyGrid messages.
 /**
@@ -116,6 +125,16 @@ nav_msgs__msg__OccupancyGrid__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__OccupancyGrid__Sequence__destroy(nav_msgs__msg__OccupancyGrid__Sequence * array);
+
+/// Check for msg/OccupancyGrid message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__OccupancyGrid__Sequence__are_equal(const nav_msgs__msg__OccupancyGrid__Sequence * lhs, const nav_msgs__msg__OccupancyGrid__Sequence * rhs);
 
 #ifdef __cplusplus
 }

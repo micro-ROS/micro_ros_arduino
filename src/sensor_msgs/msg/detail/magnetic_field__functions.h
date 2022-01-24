@@ -66,6 +66,15 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 void
 sensor_msgs__msg__MagneticField__destroy(sensor_msgs__msg__MagneticField * msg);
 
+/// Check for msg/MagneticField message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__MagneticField__are_equal(const sensor_msgs__msg__MagneticField * lhs, const sensor_msgs__msg__MagneticField * rhs);
 
 /// Initialize array of msg/MagneticField messages.
 /**
@@ -116,6 +125,16 @@ sensor_msgs__msg__MagneticField__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 void
 sensor_msgs__msg__MagneticField__Sequence__destroy(sensor_msgs__msg__MagneticField__Sequence * array);
+
+/// Check for msg/MagneticField message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__MagneticField__Sequence__are_equal(const sensor_msgs__msg__MagneticField__Sequence * lhs, const sensor_msgs__msg__MagneticField__Sequence * rhs);
 
 #ifdef __cplusplus
 }
