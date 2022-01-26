@@ -67,6 +67,24 @@ rosidl_runtime_c__U16String__are_equal(
   const rosidl_runtime_c__U16String * lhs,
   const rosidl_runtime_c__U16String * rhs);
 
+/// Copy rosidl_runtime_c__U16String structure content.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input a pointer to a rosidl_runtime_c__U16String structure
+ *   to copy from.
+ * \param[out] output a pointer to an initialized rosidl_runtime_c__U16String
+ *   structure to copy into.
+ * \return true if successful, false if either pointer is null or memory
+ *   allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__U16String__copy(
+  const rosidl_runtime_c__U16String * input,
+  rosidl_runtime_c__U16String * output);
+
 /// Assign the uint16_t value of n characters to the rosidl_runtime_c__U16String structure.
 /*
  * This function returns `false` if memory cannot be allocated,
@@ -189,6 +207,24 @@ bool
 rosidl_runtime_c__U16String__Sequence__are_equal(
   const rosidl_runtime_c__U16String__Sequence * lhs,
   const rosidl_runtime_c__U16String__Sequence * rhs);
+
+/// Copy a U16 string sequence content.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy
+ * that plain assignment yields.
+ *
+ * \param[in] input a pointer to a rosidl_runtime_c__String__Sequence
+ *   structure to copy from.
+ * \param[out] output a pointer to an initialized rosidl_runtime_c__String__Sequence
+ *   structure to copy into.
+ * \return true if successful, false if either pointer is null or memory
+ *   allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__U16String__Sequence__copy(
+  const rosidl_runtime_c__U16String__Sequence * input,
+  rosidl_runtime_c__U16String__Sequence * output);
 
 /// Create a U16 string sequence structure with a specific size.
 /*

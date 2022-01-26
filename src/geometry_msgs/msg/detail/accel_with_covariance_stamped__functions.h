@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 bool
 geometry_msgs__msg__AccelWithCovarianceStamped__are_equal(const geometry_msgs__msg__AccelWithCovarianceStamped * lhs, const geometry_msgs__msg__AccelWithCovarianceStamped * rhs);
 
+/// Copy a msg/AccelWithCovarianceStamped message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__AccelWithCovarianceStamped__copy(
+  const geometry_msgs__msg__AccelWithCovarianceStamped * input,
+  geometry_msgs__msg__AccelWithCovarianceStamped * output);
+
 /// Initialize array of msg/AccelWithCovarianceStamped messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ geometry_msgs__msg__AccelWithCovarianceStamped__Sequence__destroy(geometry_msgs_
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 bool
 geometry_msgs__msg__AccelWithCovarianceStamped__Sequence__are_equal(const geometry_msgs__msg__AccelWithCovarianceStamped__Sequence * lhs, const geometry_msgs__msg__AccelWithCovarianceStamped__Sequence * rhs);
+
+/// Copy an array of msg/AccelWithCovarianceStamped messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__AccelWithCovarianceStamped__Sequence__copy(
+  const geometry_msgs__msg__AccelWithCovarianceStamped__Sequence * input,
+  geometry_msgs__msg__AccelWithCovarianceStamped__Sequence * output);
 
 #ifdef __cplusplus
 }

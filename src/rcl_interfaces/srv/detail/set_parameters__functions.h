@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__srv__SetParameters_Request__are_equal(const rcl_interfaces__srv__SetParameters_Request * lhs, const rcl_interfaces__srv__SetParameters_Request * rhs);
 
+/// Copy a srv/SetParameters message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__srv__SetParameters_Request__copy(
+  const rcl_interfaces__srv__SetParameters_Request * input,
+  rcl_interfaces__srv__SetParameters_Request * output);
+
 /// Initialize array of srv/SetParameters messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -136,6 +153,23 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__srv__SetParameters_Request__Sequence__are_equal(const rcl_interfaces__srv__SetParameters_Request__Sequence * lhs, const rcl_interfaces__srv__SetParameters_Request__Sequence * rhs);
 
+/// Copy an array of srv/SetParameters messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__srv__SetParameters_Request__Sequence__copy(
+  const rcl_interfaces__srv__SetParameters_Request__Sequence * input,
+  rcl_interfaces__srv__SetParameters_Request__Sequence * output);
+
 /// Initialize srv/SetParameters message.
 /**
  * If the init function is called twice for the same message without
@@ -193,6 +227,23 @@ rcl_interfaces__srv__SetParameters_Response__destroy(rcl_interfaces__srv__SetPar
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__srv__SetParameters_Response__are_equal(const rcl_interfaces__srv__SetParameters_Response * lhs, const rcl_interfaces__srv__SetParameters_Response * rhs);
+
+/// Copy a srv/SetParameters message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__srv__SetParameters_Response__copy(
+  const rcl_interfaces__srv__SetParameters_Response * input,
+  rcl_interfaces__srv__SetParameters_Response * output);
 
 /// Initialize array of srv/SetParameters messages.
 /**
@@ -253,6 +304,23 @@ rcl_interfaces__srv__SetParameters_Response__Sequence__destroy(rcl_interfaces__s
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__srv__SetParameters_Response__Sequence__are_equal(const rcl_interfaces__srv__SetParameters_Response__Sequence * lhs, const rcl_interfaces__srv__SetParameters_Response__Sequence * rhs);
+
+/// Copy an array of srv/SetParameters messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__srv__SetParameters_Response__Sequence__copy(
+  const rcl_interfaces__srv__SetParameters_Response__Sequence * input,
+  rcl_interfaces__srv__SetParameters_Response__Sequence * output);
 
 #ifdef __cplusplus
 }

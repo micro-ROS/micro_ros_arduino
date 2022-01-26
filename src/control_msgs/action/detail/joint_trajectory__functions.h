@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_Goal__are_equal(const control_msgs__action__JointTrajectory_Goal * lhs, const control_msgs__action__JointTrajectory_Goal * rhs);
 
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Goal__copy(
+  const control_msgs__action__JointTrajectory_Goal * input,
+  control_msgs__action__JointTrajectory_Goal * output);
+
 /// Initialize array of action/JointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -136,6 +153,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_Goal__Sequence__are_equal(const control_msgs__action__JointTrajectory_Goal__Sequence * lhs, const control_msgs__action__JointTrajectory_Goal__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Goal__Sequence__copy(
+  const control_msgs__action__JointTrajectory_Goal__Sequence * input,
+  control_msgs__action__JointTrajectory_Goal__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -193,6 +227,23 @@ control_msgs__action__JointTrajectory_Result__destroy(control_msgs__action__Join
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_Result__are_equal(const control_msgs__action__JointTrajectory_Result * lhs, const control_msgs__action__JointTrajectory_Result * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Result__copy(
+  const control_msgs__action__JointTrajectory_Result * input,
+  control_msgs__action__JointTrajectory_Result * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -254,6 +305,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_Result__Sequence__are_equal(const control_msgs__action__JointTrajectory_Result__Sequence * lhs, const control_msgs__action__JointTrajectory_Result__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Result__Sequence__copy(
+  const control_msgs__action__JointTrajectory_Result__Sequence * input,
+  control_msgs__action__JointTrajectory_Result__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -311,6 +379,23 @@ control_msgs__action__JointTrajectory_Feedback__destroy(control_msgs__action__Jo
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_Feedback__are_equal(const control_msgs__action__JointTrajectory_Feedback * lhs, const control_msgs__action__JointTrajectory_Feedback * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Feedback__copy(
+  const control_msgs__action__JointTrajectory_Feedback * input,
+  control_msgs__action__JointTrajectory_Feedback * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -372,6 +457,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_Feedback__Sequence__are_equal(const control_msgs__action__JointTrajectory_Feedback__Sequence * lhs, const control_msgs__action__JointTrajectory_Feedback__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_Feedback__Sequence__copy(
+  const control_msgs__action__JointTrajectory_Feedback__Sequence * input,
+  control_msgs__action__JointTrajectory_Feedback__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -429,6 +531,23 @@ control_msgs__action__JointTrajectory_SendGoal_Request__destroy(control_msgs__ac
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_SendGoal_Request__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Request * lhs, const control_msgs__action__JointTrajectory_SendGoal_Request * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Request__copy(
+  const control_msgs__action__JointTrajectory_SendGoal_Request * input,
+  control_msgs__action__JointTrajectory_SendGoal_Request * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -490,6 +609,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_SendGoal_Request__Sequence__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * lhs, const control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Request__Sequence__copy(
+  const control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * input,
+  control_msgs__action__JointTrajectory_SendGoal_Request__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -547,6 +683,23 @@ control_msgs__action__JointTrajectory_SendGoal_Response__destroy(control_msgs__a
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_SendGoal_Response__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Response * lhs, const control_msgs__action__JointTrajectory_SendGoal_Response * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Response__copy(
+  const control_msgs__action__JointTrajectory_SendGoal_Response * input,
+  control_msgs__action__JointTrajectory_SendGoal_Response * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -608,6 +761,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_SendGoal_Response__Sequence__are_equal(const control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * lhs, const control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_SendGoal_Response__Sequence__copy(
+  const control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * input,
+  control_msgs__action__JointTrajectory_SendGoal_Response__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -665,6 +835,23 @@ control_msgs__action__JointTrajectory_GetResult_Request__destroy(control_msgs__a
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_GetResult_Request__are_equal(const control_msgs__action__JointTrajectory_GetResult_Request * lhs, const control_msgs__action__JointTrajectory_GetResult_Request * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Request__copy(
+  const control_msgs__action__JointTrajectory_GetResult_Request * input,
+  control_msgs__action__JointTrajectory_GetResult_Request * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -726,6 +913,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_GetResult_Request__Sequence__are_equal(const control_msgs__action__JointTrajectory_GetResult_Request__Sequence * lhs, const control_msgs__action__JointTrajectory_GetResult_Request__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Request__Sequence__copy(
+  const control_msgs__action__JointTrajectory_GetResult_Request__Sequence * input,
+  control_msgs__action__JointTrajectory_GetResult_Request__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -783,6 +987,23 @@ control_msgs__action__JointTrajectory_GetResult_Response__destroy(control_msgs__
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_GetResult_Response__are_equal(const control_msgs__action__JointTrajectory_GetResult_Response * lhs, const control_msgs__action__JointTrajectory_GetResult_Response * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Response__copy(
+  const control_msgs__action__JointTrajectory_GetResult_Response * input,
+  control_msgs__action__JointTrajectory_GetResult_Response * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -844,6 +1065,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_GetResult_Response__Sequence__are_equal(const control_msgs__action__JointTrajectory_GetResult_Response__Sequence * lhs, const control_msgs__action__JointTrajectory_GetResult_Response__Sequence * rhs);
 
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_GetResult_Response__Sequence__copy(
+  const control_msgs__action__JointTrajectory_GetResult_Response__Sequence * input,
+  control_msgs__action__JointTrajectory_GetResult_Response__Sequence * output);
+
 /// Initialize action/JointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -901,6 +1139,23 @@ control_msgs__action__JointTrajectory_FeedbackMessage__destroy(control_msgs__act
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_FeedbackMessage__are_equal(const control_msgs__action__JointTrajectory_FeedbackMessage * lhs, const control_msgs__action__JointTrajectory_FeedbackMessage * rhs);
+
+/// Copy a action/JointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_FeedbackMessage__copy(
+  const control_msgs__action__JointTrajectory_FeedbackMessage * input,
+  control_msgs__action__JointTrajectory_FeedbackMessage * output);
 
 /// Initialize array of action/JointTrajectory messages.
 /**
@@ -961,6 +1216,23 @@ control_msgs__action__JointTrajectory_FeedbackMessage__Sequence__destroy(control
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__action__JointTrajectory_FeedbackMessage__Sequence__are_equal(const control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * lhs, const control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * rhs);
+
+/// Copy an array of action/JointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__action__JointTrajectory_FeedbackMessage__Sequence__copy(
+  const control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * input,
+  control_msgs__action__JointTrajectory_FeedbackMessage__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__msg__FloatingPointRange__are_equal(const rcl_interfaces__msg__FloatingPointRange * lhs, const rcl_interfaces__msg__FloatingPointRange * rhs);
 
+/// Copy a msg/FloatingPointRange message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__FloatingPointRange__copy(
+  const rcl_interfaces__msg__FloatingPointRange * input,
+  rcl_interfaces__msg__FloatingPointRange * output);
+
 /// Initialize array of msg/FloatingPointRange messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ rcl_interfaces__msg__FloatingPointRange__Sequence__destroy(rcl_interfaces__msg__
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__msg__FloatingPointRange__Sequence__are_equal(const rcl_interfaces__msg__FloatingPointRange__Sequence * lhs, const rcl_interfaces__msg__FloatingPointRange__Sequence * rhs);
+
+/// Copy an array of msg/FloatingPointRange messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__FloatingPointRange__Sequence__copy(
+  const rcl_interfaces__msg__FloatingPointRange__Sequence * input,
+  rcl_interfaces__msg__FloatingPointRange__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 bool
 std_msgs__msg__Int64MultiArray__are_equal(const std_msgs__msg__Int64MultiArray * lhs, const std_msgs__msg__Int64MultiArray * rhs);
 
+/// Copy a msg/Int64MultiArray message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__Int64MultiArray__copy(
+  const std_msgs__msg__Int64MultiArray * input,
+  std_msgs__msg__Int64MultiArray * output);
+
 /// Initialize array of msg/Int64MultiArray messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ std_msgs__msg__Int64MultiArray__Sequence__destroy(std_msgs__msg__Int64MultiArray
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 bool
 std_msgs__msg__Int64MultiArray__Sequence__are_equal(const std_msgs__msg__Int64MultiArray__Sequence * lhs, const std_msgs__msg__Int64MultiArray__Sequence * rhs);
+
+/// Copy an array of msg/Int64MultiArray messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__Int64MultiArray__Sequence__copy(
+  const std_msgs__msg__Int64MultiArray__Sequence * input,
+  std_msgs__msg__Int64MultiArray__Sequence * output);
 
 #ifdef __cplusplus
 }

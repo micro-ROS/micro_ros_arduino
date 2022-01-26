@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__MultiEchoLaserScan__are_equal(const sensor_msgs__msg__MultiEchoLaserScan * lhs, const sensor_msgs__msg__MultiEchoLaserScan * rhs);
 
+/// Copy a msg/MultiEchoLaserScan message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__MultiEchoLaserScan__copy(
+  const sensor_msgs__msg__MultiEchoLaserScan * input,
+  sensor_msgs__msg__MultiEchoLaserScan * output);
+
 /// Initialize array of msg/MultiEchoLaserScan messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ sensor_msgs__msg__MultiEchoLaserScan__Sequence__destroy(sensor_msgs__msg__MultiE
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__MultiEchoLaserScan__Sequence__are_equal(const sensor_msgs__msg__MultiEchoLaserScan__Sequence * lhs, const sensor_msgs__msg__MultiEchoLaserScan__Sequence * rhs);
+
+/// Copy an array of msg/MultiEchoLaserScan messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__MultiEchoLaserScan__Sequence__copy(
+  const sensor_msgs__msg__MultiEchoLaserScan__Sequence * input,
+  sensor_msgs__msg__MultiEchoLaserScan__Sequence * output);
 
 #ifdef __cplusplus
 }

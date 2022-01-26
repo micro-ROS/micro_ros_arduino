@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__ImageMarker__are_equal(const visualization_msgs__msg__ImageMarker * lhs, const visualization_msgs__msg__ImageMarker * rhs);
 
+/// Copy a msg/ImageMarker message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__ImageMarker__copy(
+  const visualization_msgs__msg__ImageMarker * input,
+  visualization_msgs__msg__ImageMarker * output);
+
 /// Initialize array of msg/ImageMarker messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ visualization_msgs__msg__ImageMarker__Sequence__destroy(visualization_msgs__msg_
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__ImageMarker__Sequence__are_equal(const visualization_msgs__msg__ImageMarker__Sequence * lhs, const visualization_msgs__msg__ImageMarker__Sequence * rhs);
+
+/// Copy an array of msg/ImageMarker messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__ImageMarker__Sequence__copy(
+  const visualization_msgs__msg__ImageMarker__Sequence * input,
+  visualization_msgs__msg__ImageMarker__Sequence * output);
 
 #ifdef __cplusplus
 }

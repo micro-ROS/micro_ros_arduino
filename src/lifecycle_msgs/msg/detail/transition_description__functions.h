@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 bool
 lifecycle_msgs__msg__TransitionDescription__are_equal(const lifecycle_msgs__msg__TransitionDescription * lhs, const lifecycle_msgs__msg__TransitionDescription * rhs);
 
+/// Copy a msg/TransitionDescription message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+bool
+lifecycle_msgs__msg__TransitionDescription__copy(
+  const lifecycle_msgs__msg__TransitionDescription * input,
+  lifecycle_msgs__msg__TransitionDescription * output);
+
 /// Initialize array of msg/TransitionDescription messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ lifecycle_msgs__msg__TransitionDescription__Sequence__destroy(lifecycle_msgs__ms
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 bool
 lifecycle_msgs__msg__TransitionDescription__Sequence__are_equal(const lifecycle_msgs__msg__TransitionDescription__Sequence * lhs, const lifecycle_msgs__msg__TransitionDescription__Sequence * rhs);
+
+/// Copy an array of msg/TransitionDescription messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+bool
+lifecycle_msgs__msg__TransitionDescription__Sequence__copy(
+  const lifecycle_msgs__msg__TransitionDescription__Sequence * input,
+  lifecycle_msgs__msg__TransitionDescription__Sequence * output);
 
 #ifdef __cplusplus
 }

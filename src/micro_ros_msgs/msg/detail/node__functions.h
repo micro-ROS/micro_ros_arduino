@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 bool
 micro_ros_msgs__msg__Node__are_equal(const micro_ros_msgs__msg__Node * lhs, const micro_ros_msgs__msg__Node * rhs);
 
+/// Copy a msg/Node message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Node__copy(
+  const micro_ros_msgs__msg__Node * input,
+  micro_ros_msgs__msg__Node * output);
+
 /// Initialize array of msg/Node messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ micro_ros_msgs__msg__Node__Sequence__destroy(micro_ros_msgs__msg__Node__Sequence
 ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 bool
 micro_ros_msgs__msg__Node__Sequence__are_equal(const micro_ros_msgs__msg__Node__Sequence * lhs, const micro_ros_msgs__msg__Node__Sequence * rhs);
+
+/// Copy an array of msg/Node messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Node__Sequence__copy(
+  const micro_ros_msgs__msg__Node__Sequence * input,
+  micro_ros_msgs__msg__Node__Sequence * output);
 
 #ifdef __cplusplus
 }

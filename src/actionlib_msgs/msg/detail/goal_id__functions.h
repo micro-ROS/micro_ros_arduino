@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
 bool
 actionlib_msgs__msg__GoalID__are_equal(const actionlib_msgs__msg__GoalID * lhs, const actionlib_msgs__msg__GoalID * rhs);
 
+/// Copy a msg/GoalID message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
+bool
+actionlib_msgs__msg__GoalID__copy(
+  const actionlib_msgs__msg__GoalID * input,
+  actionlib_msgs__msg__GoalID * output);
+
 /// Initialize array of msg/GoalID messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ actionlib_msgs__msg__GoalID__Sequence__destroy(actionlib_msgs__msg__GoalID__Sequ
 ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
 bool
 actionlib_msgs__msg__GoalID__Sequence__are_equal(const actionlib_msgs__msg__GoalID__Sequence * lhs, const actionlib_msgs__msg__GoalID__Sequence * rhs);
+
+/// Copy an array of msg/GoalID messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
+bool
+actionlib_msgs__msg__GoalID__Sequence__copy(
+  const actionlib_msgs__msg__GoalID__Sequence * input,
+  actionlib_msgs__msg__GoalID__Sequence * output);
 
 #ifdef __cplusplus
 }

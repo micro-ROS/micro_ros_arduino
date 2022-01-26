@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 bool
 stereo_msgs__msg__DisparityImage__are_equal(const stereo_msgs__msg__DisparityImage * lhs, const stereo_msgs__msg__DisparityImage * rhs);
 
+/// Copy a msg/DisparityImage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__copy(
+  const stereo_msgs__msg__DisparityImage * input,
+  stereo_msgs__msg__DisparityImage * output);
+
 /// Initialize array of msg/DisparityImage messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ stereo_msgs__msg__DisparityImage__Sequence__destroy(stereo_msgs__msg__DisparityI
 ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 bool
 stereo_msgs__msg__DisparityImage__Sequence__are_equal(const stereo_msgs__msg__DisparityImage__Sequence * lhs, const stereo_msgs__msg__DisparityImage__Sequence * rhs);
+
+/// Copy an array of msg/DisparityImage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__Sequence__copy(
+  const stereo_msgs__msg__DisparityImage__Sequence * input,
+  stereo_msgs__msg__DisparityImage__Sequence * output);
 
 #ifdef __cplusplus
 }

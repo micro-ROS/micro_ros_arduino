@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__msg__BoundedSequences__are_equal(const test_msgs__msg__BoundedSequences * lhs, const test_msgs__msg__BoundedSequences * rhs);
 
+/// Copy a msg/BoundedSequences message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedSequences__copy(
+  const test_msgs__msg__BoundedSequences * input,
+  test_msgs__msg__BoundedSequences * output);
+
 /// Initialize array of msg/BoundedSequences messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ test_msgs__msg__BoundedSequences__Sequence__destroy(test_msgs__msg__BoundedSeque
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__msg__BoundedSequences__Sequence__are_equal(const test_msgs__msg__BoundedSequences__Sequence * lhs, const test_msgs__msg__BoundedSequences__Sequence * rhs);
+
+/// Copy an array of msg/BoundedSequences messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedSequences__Sequence__copy(
+  const test_msgs__msg__BoundedSequences__Sequence * input,
+  test_msgs__msg__BoundedSequences__Sequence * output);
 
 #ifdef __cplusplus
 }

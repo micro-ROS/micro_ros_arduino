@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__msg__ParameterEvent__are_equal(const rcl_interfaces__msg__ParameterEvent * lhs, const rcl_interfaces__msg__ParameterEvent * rhs);
 
+/// Copy a msg/ParameterEvent message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ParameterEvent__copy(
+  const rcl_interfaces__msg__ParameterEvent * input,
+  rcl_interfaces__msg__ParameterEvent * output);
+
 /// Initialize array of msg/ParameterEvent messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ rcl_interfaces__msg__ParameterEvent__Sequence__destroy(rcl_interfaces__msg__Para
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 bool
 rcl_interfaces__msg__ParameterEvent__Sequence__are_equal(const rcl_interfaces__msg__ParameterEvent__Sequence * lhs, const rcl_interfaces__msg__ParameterEvent__Sequence * rhs);
+
+/// Copy an array of msg/ParameterEvent messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ParameterEvent__Sequence__copy(
+  const rcl_interfaces__msg__ParameterEvent__Sequence * input,
+  rcl_interfaces__msg__ParameterEvent__Sequence * output);
 
 #ifdef __cplusplus
 }

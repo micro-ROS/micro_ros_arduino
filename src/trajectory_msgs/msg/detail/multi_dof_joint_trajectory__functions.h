@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 bool
 trajectory_msgs__msg__MultiDOFJointTrajectory__are_equal(const trajectory_msgs__msg__MultiDOFJointTrajectory * lhs, const trajectory_msgs__msg__MultiDOFJointTrajectory * rhs);
 
+/// Copy a msg/MultiDOFJointTrajectory message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__MultiDOFJointTrajectory__copy(
+  const trajectory_msgs__msg__MultiDOFJointTrajectory * input,
+  trajectory_msgs__msg__MultiDOFJointTrajectory * output);
+
 /// Initialize array of msg/MultiDOFJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence__destroy(trajectory_msgs
 ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 bool
 trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence__are_equal(const trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence * lhs, const trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence * rhs);
+
+/// Copy an array of msg/MultiDOFJointTrajectory messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence__copy(
+  const trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence * input,
+  trajectory_msgs__msg__MultiDOFJointTrajectory__Sequence * output);
 
 #ifdef __cplusplus
 }

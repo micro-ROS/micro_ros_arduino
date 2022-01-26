@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 bool
 diagnostic_msgs__srv__SelfTest_Request__are_equal(const diagnostic_msgs__srv__SelfTest_Request * lhs, const diagnostic_msgs__srv__SelfTest_Request * rhs);
 
+/// Copy a srv/SelfTest message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__SelfTest_Request__copy(
+  const diagnostic_msgs__srv__SelfTest_Request * input,
+  diagnostic_msgs__srv__SelfTest_Request * output);
+
 /// Initialize array of srv/SelfTest messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -136,6 +153,23 @@ ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 bool
 diagnostic_msgs__srv__SelfTest_Request__Sequence__are_equal(const diagnostic_msgs__srv__SelfTest_Request__Sequence * lhs, const diagnostic_msgs__srv__SelfTest_Request__Sequence * rhs);
 
+/// Copy an array of srv/SelfTest messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__SelfTest_Request__Sequence__copy(
+  const diagnostic_msgs__srv__SelfTest_Request__Sequence * input,
+  diagnostic_msgs__srv__SelfTest_Request__Sequence * output);
+
 /// Initialize srv/SelfTest message.
 /**
  * If the init function is called twice for the same message without
@@ -193,6 +227,23 @@ diagnostic_msgs__srv__SelfTest_Response__destroy(diagnostic_msgs__srv__SelfTest_
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 bool
 diagnostic_msgs__srv__SelfTest_Response__are_equal(const diagnostic_msgs__srv__SelfTest_Response * lhs, const diagnostic_msgs__srv__SelfTest_Response * rhs);
+
+/// Copy a srv/SelfTest message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__SelfTest_Response__copy(
+  const diagnostic_msgs__srv__SelfTest_Response * input,
+  diagnostic_msgs__srv__SelfTest_Response * output);
 
 /// Initialize array of srv/SelfTest messages.
 /**
@@ -253,6 +304,23 @@ diagnostic_msgs__srv__SelfTest_Response__Sequence__destroy(diagnostic_msgs__srv_
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 bool
 diagnostic_msgs__srv__SelfTest_Response__Sequence__are_equal(const diagnostic_msgs__srv__SelfTest_Response__Sequence * lhs, const diagnostic_msgs__srv__SelfTest_Response__Sequence * rhs);
+
+/// Copy an array of srv/SelfTest messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+bool
+diagnostic_msgs__srv__SelfTest_Response__Sequence__copy(
+  const diagnostic_msgs__srv__SelfTest_Response__Sequence * input,
+  diagnostic_msgs__srv__SelfTest_Response__Sequence * output);
 
 #ifdef __cplusplus
 }

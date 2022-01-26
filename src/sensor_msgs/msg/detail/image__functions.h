@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__Image__are_equal(const sensor_msgs__msg__Image * lhs, const sensor_msgs__msg__Image * rhs);
 
+/// Copy a msg/Image message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__Image__copy(
+  const sensor_msgs__msg__Image * input,
+  sensor_msgs__msg__Image * output);
+
 /// Initialize array of msg/Image messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ sensor_msgs__msg__Image__Sequence__destroy(sensor_msgs__msg__Image__Sequence * a
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__Image__Sequence__are_equal(const sensor_msgs__msg__Image__Sequence * lhs, const sensor_msgs__msg__Image__Sequence * rhs);
+
+/// Copy an array of msg/Image messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__Image__Sequence__copy(
+  const sensor_msgs__msg__Image__Sequence * input,
+  sensor_msgs__msg__Image__Sequence * output);
 
 #ifdef __cplusplus
 }
