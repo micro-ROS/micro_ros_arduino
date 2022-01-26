@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_Goal__are_equal(const example_interfaces__action__Fibonacci_Goal * lhs, const example_interfaces__action__Fibonacci_Goal * rhs);
 
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_Goal__copy(
+  const example_interfaces__action__Fibonacci_Goal * input,
+  example_interfaces__action__Fibonacci_Goal * output);
+
 /// Initialize array of action/Fibonacci messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -136,6 +153,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_Goal__Sequence__are_equal(const example_interfaces__action__Fibonacci_Goal__Sequence * lhs, const example_interfaces__action__Fibonacci_Goal__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_Goal__Sequence__copy(
+  const example_interfaces__action__Fibonacci_Goal__Sequence * input,
+  example_interfaces__action__Fibonacci_Goal__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -193,6 +227,23 @@ example_interfaces__action__Fibonacci_Result__destroy(example_interfaces__action
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_Result__are_equal(const example_interfaces__action__Fibonacci_Result * lhs, const example_interfaces__action__Fibonacci_Result * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_Result__copy(
+  const example_interfaces__action__Fibonacci_Result * input,
+  example_interfaces__action__Fibonacci_Result * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -254,6 +305,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_Result__Sequence__are_equal(const example_interfaces__action__Fibonacci_Result__Sequence * lhs, const example_interfaces__action__Fibonacci_Result__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_Result__Sequence__copy(
+  const example_interfaces__action__Fibonacci_Result__Sequence * input,
+  example_interfaces__action__Fibonacci_Result__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -311,6 +379,23 @@ example_interfaces__action__Fibonacci_Feedback__destroy(example_interfaces__acti
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_Feedback__are_equal(const example_interfaces__action__Fibonacci_Feedback * lhs, const example_interfaces__action__Fibonacci_Feedback * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_Feedback__copy(
+  const example_interfaces__action__Fibonacci_Feedback * input,
+  example_interfaces__action__Fibonacci_Feedback * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -372,6 +457,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_Feedback__Sequence__are_equal(const example_interfaces__action__Fibonacci_Feedback__Sequence * lhs, const example_interfaces__action__Fibonacci_Feedback__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_Feedback__Sequence__copy(
+  const example_interfaces__action__Fibonacci_Feedback__Sequence * input,
+  example_interfaces__action__Fibonacci_Feedback__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -429,6 +531,23 @@ example_interfaces__action__Fibonacci_SendGoal_Request__destroy(example_interfac
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_SendGoal_Request__are_equal(const example_interfaces__action__Fibonacci_SendGoal_Request * lhs, const example_interfaces__action__Fibonacci_SendGoal_Request * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_SendGoal_Request__copy(
+  const example_interfaces__action__Fibonacci_SendGoal_Request * input,
+  example_interfaces__action__Fibonacci_SendGoal_Request * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -490,6 +609,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_SendGoal_Request__Sequence__are_equal(const example_interfaces__action__Fibonacci_SendGoal_Request__Sequence * lhs, const example_interfaces__action__Fibonacci_SendGoal_Request__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_SendGoal_Request__Sequence__copy(
+  const example_interfaces__action__Fibonacci_SendGoal_Request__Sequence * input,
+  example_interfaces__action__Fibonacci_SendGoal_Request__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -547,6 +683,23 @@ example_interfaces__action__Fibonacci_SendGoal_Response__destroy(example_interfa
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_SendGoal_Response__are_equal(const example_interfaces__action__Fibonacci_SendGoal_Response * lhs, const example_interfaces__action__Fibonacci_SendGoal_Response * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_SendGoal_Response__copy(
+  const example_interfaces__action__Fibonacci_SendGoal_Response * input,
+  example_interfaces__action__Fibonacci_SendGoal_Response * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -608,6 +761,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_SendGoal_Response__Sequence__are_equal(const example_interfaces__action__Fibonacci_SendGoal_Response__Sequence * lhs, const example_interfaces__action__Fibonacci_SendGoal_Response__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_SendGoal_Response__Sequence__copy(
+  const example_interfaces__action__Fibonacci_SendGoal_Response__Sequence * input,
+  example_interfaces__action__Fibonacci_SendGoal_Response__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -665,6 +835,23 @@ example_interfaces__action__Fibonacci_GetResult_Request__destroy(example_interfa
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_GetResult_Request__are_equal(const example_interfaces__action__Fibonacci_GetResult_Request * lhs, const example_interfaces__action__Fibonacci_GetResult_Request * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_GetResult_Request__copy(
+  const example_interfaces__action__Fibonacci_GetResult_Request * input,
+  example_interfaces__action__Fibonacci_GetResult_Request * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -726,6 +913,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_GetResult_Request__Sequence__are_equal(const example_interfaces__action__Fibonacci_GetResult_Request__Sequence * lhs, const example_interfaces__action__Fibonacci_GetResult_Request__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_GetResult_Request__Sequence__copy(
+  const example_interfaces__action__Fibonacci_GetResult_Request__Sequence * input,
+  example_interfaces__action__Fibonacci_GetResult_Request__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -783,6 +987,23 @@ example_interfaces__action__Fibonacci_GetResult_Response__destroy(example_interf
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_GetResult_Response__are_equal(const example_interfaces__action__Fibonacci_GetResult_Response * lhs, const example_interfaces__action__Fibonacci_GetResult_Response * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_GetResult_Response__copy(
+  const example_interfaces__action__Fibonacci_GetResult_Response * input,
+  example_interfaces__action__Fibonacci_GetResult_Response * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -844,6 +1065,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_GetResult_Response__Sequence__are_equal(const example_interfaces__action__Fibonacci_GetResult_Response__Sequence * lhs, const example_interfaces__action__Fibonacci_GetResult_Response__Sequence * rhs);
 
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_GetResult_Response__Sequence__copy(
+  const example_interfaces__action__Fibonacci_GetResult_Response__Sequence * input,
+  example_interfaces__action__Fibonacci_GetResult_Response__Sequence * output);
+
 /// Initialize action/Fibonacci message.
 /**
  * If the init function is called twice for the same message without
@@ -901,6 +1139,23 @@ example_interfaces__action__Fibonacci_FeedbackMessage__destroy(example_interface
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_FeedbackMessage__are_equal(const example_interfaces__action__Fibonacci_FeedbackMessage * lhs, const example_interfaces__action__Fibonacci_FeedbackMessage * rhs);
+
+/// Copy a action/Fibonacci message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_FeedbackMessage__copy(
+  const example_interfaces__action__Fibonacci_FeedbackMessage * input,
+  example_interfaces__action__Fibonacci_FeedbackMessage * output);
 
 /// Initialize array of action/Fibonacci messages.
 /**
@@ -961,6 +1216,23 @@ example_interfaces__action__Fibonacci_FeedbackMessage__Sequence__destroy(example
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__action__Fibonacci_FeedbackMessage__Sequence__are_equal(const example_interfaces__action__Fibonacci_FeedbackMessage__Sequence * lhs, const example_interfaces__action__Fibonacci_FeedbackMessage__Sequence * rhs);
+
+/// Copy an array of action/Fibonacci messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__action__Fibonacci_FeedbackMessage__Sequence__copy(
+  const example_interfaces__action__Fibonacci_FeedbackMessage__Sequence * input,
+  example_interfaces__action__Fibonacci_FeedbackMessage__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__msg__BasicTypes__are_equal(const test_msgs__msg__BasicTypes * lhs, const test_msgs__msg__BasicTypes * rhs);
 
+/// Copy a msg/BasicTypes message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BasicTypes__copy(
+  const test_msgs__msg__BasicTypes * input,
+  test_msgs__msg__BasicTypes * output);
+
 /// Initialize array of msg/BasicTypes messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ test_msgs__msg__BasicTypes__Sequence__destroy(test_msgs__msg__BasicTypes__Sequen
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__msg__BasicTypes__Sequence__are_equal(const test_msgs__msg__BasicTypes__Sequence * lhs, const test_msgs__msg__BasicTypes__Sequence * rhs);
+
+/// Copy an array of msg/BasicTypes messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BasicTypes__Sequence__copy(
+  const test_msgs__msg__BasicTypes__Sequence * input,
+  test_msgs__msg__BasicTypes__Sequence * output);
 
 #ifdef __cplusplus
 }

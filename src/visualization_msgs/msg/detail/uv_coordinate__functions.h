@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__UVCoordinate__are_equal(const visualization_msgs__msg__UVCoordinate * lhs, const visualization_msgs__msg__UVCoordinate * rhs);
 
+/// Copy a msg/UVCoordinate message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__UVCoordinate__copy(
+  const visualization_msgs__msg__UVCoordinate * input,
+  visualization_msgs__msg__UVCoordinate * output);
+
 /// Initialize array of msg/UVCoordinate messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ visualization_msgs__msg__UVCoordinate__Sequence__destroy(visualization_msgs__msg
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__UVCoordinate__Sequence__are_equal(const visualization_msgs__msg__UVCoordinate__Sequence * lhs, const visualization_msgs__msg__UVCoordinate__Sequence * rhs);
+
+/// Copy an array of msg/UVCoordinate messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__UVCoordinate__Sequence__copy(
+  const visualization_msgs__msg__UVCoordinate__Sequence * input,
+  visualization_msgs__msg__UVCoordinate__Sequence * output);
 
 #ifdef __cplusplus
 }

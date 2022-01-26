@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 bool
 trajectory_msgs__msg__JointTrajectoryPoint__are_equal(const trajectory_msgs__msg__JointTrajectoryPoint * lhs, const trajectory_msgs__msg__JointTrajectoryPoint * rhs);
 
+/// Copy a msg/JointTrajectoryPoint message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__JointTrajectoryPoint__copy(
+  const trajectory_msgs__msg__JointTrajectoryPoint * input,
+  trajectory_msgs__msg__JointTrajectoryPoint * output);
+
 /// Initialize array of msg/JointTrajectoryPoint messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ trajectory_msgs__msg__JointTrajectoryPoint__Sequence__destroy(trajectory_msgs__m
 ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 bool
 trajectory_msgs__msg__JointTrajectoryPoint__Sequence__are_equal(const trajectory_msgs__msg__JointTrajectoryPoint__Sequence * lhs, const trajectory_msgs__msg__JointTrajectoryPoint__Sequence * rhs);
+
+/// Copy an array of msg/JointTrajectoryPoint messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__JointTrajectoryPoint__Sequence__copy(
+  const trajectory_msgs__msg__JointTrajectoryPoint__Sequence * input,
+  trajectory_msgs__msg__JointTrajectoryPoint__Sequence * output);
 
 #ifdef __cplusplus
 }

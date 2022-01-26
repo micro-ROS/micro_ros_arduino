@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 bool
 shape_msgs__msg__Mesh__are_equal(const shape_msgs__msg__Mesh * lhs, const shape_msgs__msg__Mesh * rhs);
 
+/// Copy a msg/Mesh message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__Mesh__copy(
+  const shape_msgs__msg__Mesh * input,
+  shape_msgs__msg__Mesh * output);
+
 /// Initialize array of msg/Mesh messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ shape_msgs__msg__Mesh__Sequence__destroy(shape_msgs__msg__Mesh__Sequence * array
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 bool
 shape_msgs__msg__Mesh__Sequence__are_equal(const shape_msgs__msg__Mesh__Sequence * lhs, const shape_msgs__msg__Mesh__Sequence * rhs);
+
+/// Copy an array of msg/Mesh messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
+bool
+shape_msgs__msg__Mesh__Sequence__copy(
+  const shape_msgs__msg__Mesh__Sequence * input,
+  shape_msgs__msg__Mesh__Sequence * output);
 
 #ifdef __cplusplus
 }

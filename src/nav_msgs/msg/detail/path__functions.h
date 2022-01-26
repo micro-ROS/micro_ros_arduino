@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 bool
 nav_msgs__msg__Path__are_equal(const nav_msgs__msg__Path * lhs, const nav_msgs__msg__Path * rhs);
 
+/// Copy a msg/Path message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__Path__copy(
+  const nav_msgs__msg__Path * input,
+  nav_msgs__msg__Path * output);
+
 /// Initialize array of msg/Path messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ nav_msgs__msg__Path__Sequence__destroy(nav_msgs__msg__Path__Sequence * array);
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 bool
 nav_msgs__msg__Path__Sequence__are_equal(const nav_msgs__msg__Path__Sequence * lhs, const nav_msgs__msg__Path__Sequence * rhs);
+
+/// Copy an array of msg/Path messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__Path__Sequence__copy(
+  const nav_msgs__msg__Path__Sequence * input,
+  nav_msgs__msg__Path__Sequence * output);
 
 #ifdef __cplusplus
 }

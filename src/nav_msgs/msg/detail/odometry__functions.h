@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 bool
 nav_msgs__msg__Odometry__are_equal(const nav_msgs__msg__Odometry * lhs, const nav_msgs__msg__Odometry * rhs);
 
+/// Copy a msg/Odometry message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__Odometry__copy(
+  const nav_msgs__msg__Odometry * input,
+  nav_msgs__msg__Odometry * output);
+
 /// Initialize array of msg/Odometry messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ nav_msgs__msg__Odometry__Sequence__destroy(nav_msgs__msg__Odometry__Sequence * a
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 bool
 nav_msgs__msg__Odometry__Sequence__are_equal(const nav_msgs__msg__Odometry__Sequence * lhs, const nav_msgs__msg__Odometry__Sequence * rhs);
+
+/// Copy an array of msg/Odometry messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__Odometry__Sequence__copy(
+  const nav_msgs__msg__Odometry__Sequence * input,
+  nav_msgs__msg__Odometry__Sequence * output);
 
 #ifdef __cplusplus
 }

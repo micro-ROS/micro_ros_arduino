@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__MenuEntry__are_equal(const visualization_msgs__msg__MenuEntry * lhs, const visualization_msgs__msg__MenuEntry * rhs);
 
+/// Copy a msg/MenuEntry message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__MenuEntry__copy(
+  const visualization_msgs__msg__MenuEntry * input,
+  visualization_msgs__msg__MenuEntry * output);
+
 /// Initialize array of msg/MenuEntry messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ visualization_msgs__msg__MenuEntry__Sequence__destroy(visualization_msgs__msg__M
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__MenuEntry__Sequence__are_equal(const visualization_msgs__msg__MenuEntry__Sequence * lhs, const visualization_msgs__msg__MenuEntry__Sequence * rhs);
+
+/// Copy an array of msg/MenuEntry messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__MenuEntry__Sequence__copy(
+  const visualization_msgs__msg__MenuEntry__Sequence * input,
+  visualization_msgs__msg__MenuEntry__Sequence * output);
 
 #ifdef __cplusplus
 }

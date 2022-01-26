@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__Temperature__are_equal(const sensor_msgs__msg__Temperature * lhs, const sensor_msgs__msg__Temperature * rhs);
 
+/// Copy a msg/Temperature message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__Temperature__copy(
+  const sensor_msgs__msg__Temperature * input,
+  sensor_msgs__msg__Temperature * output);
+
 /// Initialize array of msg/Temperature messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ sensor_msgs__msg__Temperature__Sequence__destroy(sensor_msgs__msg__Temperature__
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__Temperature__Sequence__are_equal(const sensor_msgs__msg__Temperature__Sequence * lhs, const sensor_msgs__msg__Temperature__Sequence * rhs);
+
+/// Copy an array of msg/Temperature messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__Temperature__Sequence__copy(
+  const sensor_msgs__msg__Temperature__Sequence * input,
+  sensor_msgs__msg__Temperature__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__PointCloud__are_equal(const sensor_msgs__msg__PointCloud * lhs, const sensor_msgs__msg__PointCloud * rhs);
 
+/// Copy a msg/PointCloud message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__PointCloud__copy(
+  const sensor_msgs__msg__PointCloud * input,
+  sensor_msgs__msg__PointCloud * output);
+
 /// Initialize array of msg/PointCloud messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ sensor_msgs__msg__PointCloud__Sequence__destroy(sensor_msgs__msg__PointCloud__Se
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 bool
 sensor_msgs__msg__PointCloud__Sequence__are_equal(const sensor_msgs__msg__PointCloud__Sequence * lhs, const sensor_msgs__msg__PointCloud__Sequence * rhs);
+
+/// Copy an array of msg/PointCloud messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__PointCloud__Sequence__copy(
+  const sensor_msgs__msg__PointCloud__Sequence * input,
+  sensor_msgs__msg__PointCloud__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 bool
 trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__are_equal(const trajectory_msgs__msg__MultiDOFJointTrajectoryPoint * lhs, const trajectory_msgs__msg__MultiDOFJointTrajectoryPoint * rhs);
 
+/// Copy a msg/MultiDOFJointTrajectoryPoint message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__copy(
+  const trajectory_msgs__msg__MultiDOFJointTrajectoryPoint * input,
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint * output);
+
 /// Initialize array of msg/MultiDOFJointTrajectoryPoint messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence__destroy(trajectory
 ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 bool
 trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence__are_equal(const trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence * lhs, const trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence * rhs);
+
+/// Copy an array of msg/MultiDOFJointTrajectoryPoint messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
+bool
+trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence__copy(
+  const trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence * input,
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__Sequence * output);
 
 #ifdef __cplusplus
 }

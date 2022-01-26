@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__msg__GripperCommand__are_equal(const control_msgs__msg__GripperCommand * lhs, const control_msgs__msg__GripperCommand * rhs);
 
+/// Copy a msg/GripperCommand message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__GripperCommand__copy(
+  const control_msgs__msg__GripperCommand * input,
+  control_msgs__msg__GripperCommand * output);
+
 /// Initialize array of msg/GripperCommand messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ control_msgs__msg__GripperCommand__Sequence__destroy(control_msgs__msg__GripperC
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 bool
 control_msgs__msg__GripperCommand__Sequence__are_equal(const control_msgs__msg__GripperCommand__Sequence * lhs, const control_msgs__msg__GripperCommand__Sequence * rhs);
+
+/// Copy an array of msg/GripperCommand messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__GripperCommand__Sequence__copy(
+  const control_msgs__msg__GripperCommand__Sequence * input,
+  control_msgs__msg__GripperCommand__Sequence * output);
 
 #ifdef __cplusplus
 }

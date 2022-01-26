@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__InteractiveMarker__are_equal(const visualization_msgs__msg__InteractiveMarker * lhs, const visualization_msgs__msg__InteractiveMarker * rhs);
 
+/// Copy a msg/InteractiveMarker message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__InteractiveMarker__copy(
+  const visualization_msgs__msg__InteractiveMarker * input,
+  visualization_msgs__msg__InteractiveMarker * output);
+
 /// Initialize array of msg/InteractiveMarker messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ visualization_msgs__msg__InteractiveMarker__Sequence__destroy(visualization_msgs
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 bool
 visualization_msgs__msg__InteractiveMarker__Sequence__are_equal(const visualization_msgs__msg__InteractiveMarker__Sequence * lhs, const visualization_msgs__msg__InteractiveMarker__Sequence * rhs);
+
+/// Copy an array of msg/InteractiveMarker messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__InteractiveMarker__Sequence__copy(
+  const visualization_msgs__msg__InteractiveMarker__Sequence * input,
+  visualization_msgs__msg__InteractiveMarker__Sequence * output);
 
 #ifdef __cplusplus
 }

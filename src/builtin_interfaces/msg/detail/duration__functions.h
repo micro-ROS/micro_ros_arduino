@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
 bool
 builtin_interfaces__msg__Duration__are_equal(const builtin_interfaces__msg__Duration * lhs, const builtin_interfaces__msg__Duration * rhs);
 
+/// Copy a msg/Duration message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
+bool
+builtin_interfaces__msg__Duration__copy(
+  const builtin_interfaces__msg__Duration * input,
+  builtin_interfaces__msg__Duration * output);
+
 /// Initialize array of msg/Duration messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ builtin_interfaces__msg__Duration__Sequence__destroy(builtin_interfaces__msg__Du
 ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
 bool
 builtin_interfaces__msg__Duration__Sequence__are_equal(const builtin_interfaces__msg__Duration__Sequence * lhs, const builtin_interfaces__msg__Duration__Sequence * rhs);
+
+/// Copy an array of msg/Duration messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
+bool
+builtin_interfaces__msg__Duration__Sequence__copy(
+  const builtin_interfaces__msg__Duration__Sequence * input,
+  builtin_interfaces__msg__Duration__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -55,6 +55,24 @@ ROSIDL_GENERATOR_C_PUBLIC
 void
 rosidl_runtime_c__String__fini(rosidl_runtime_c__String * str);
 
+/// Copy rosidl_runtime_c__String structure content.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input a pointer to a rosidl_runtime_c__String structure
+ *   to copy from.
+ * \param[out] output a pointer to an initialized rosidl_runtime_c__String
+ *   structure to copy into.
+ * \return true if successful, false if either pointer is null or memory
+ *   allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__String__copy(
+  const rosidl_runtime_c__String * input,
+  rosidl_runtime_c__String * output);
+
 /// Check for rosidl_runtime_c__String structure equality.
 /**
  * \param[in] lhs a pointer to the left hand side of the equality operator.
@@ -141,6 +159,24 @@ bool
 rosidl_runtime_c__String__Sequence__are_equal(
   const rosidl_runtime_c__String__Sequence * lhs,
   const rosidl_runtime_c__String__Sequence * rhs);
+
+/// Copy rosidl_runtime_c__String__Sequence structure content.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy
+ * that plain assignment yields.
+ *
+ * \param[in] input a pointer to a rosidl_runtime_c__String__Sequence
+ *   structure to copy from.
+ * \param[out] output a pointer to an initialized rosidl_runtime_c__String__Sequence
+ *   structure to copy into.
+ * \return true if successful, false if either pointer is null or memory
+ *   allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC
+bool
+rosidl_runtime_c__String__Sequence__copy(
+  const rosidl_runtime_c__String__Sequence * input,
+  rosidl_runtime_c__String__Sequence * output);
 
 /// Create a rosidl_runtime_c__String__Sequence structure with a specific size.
 /*

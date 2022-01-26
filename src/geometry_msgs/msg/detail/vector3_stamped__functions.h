@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 bool
 geometry_msgs__msg__Vector3Stamped__are_equal(const geometry_msgs__msg__Vector3Stamped * lhs, const geometry_msgs__msg__Vector3Stamped * rhs);
 
+/// Copy a msg/Vector3Stamped message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Vector3Stamped__copy(
+  const geometry_msgs__msg__Vector3Stamped * input,
+  geometry_msgs__msg__Vector3Stamped * output);
+
 /// Initialize array of msg/Vector3Stamped messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ geometry_msgs__msg__Vector3Stamped__Sequence__destroy(geometry_msgs__msg__Vector
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 bool
 geometry_msgs__msg__Vector3Stamped__Sequence__are_equal(const geometry_msgs__msg__Vector3Stamped__Sequence * lhs, const geometry_msgs__msg__Vector3Stamped__Sequence * rhs);
+
+/// Copy an array of msg/Vector3Stamped messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Vector3Stamped__Sequence__copy(
+  const geometry_msgs__msg__Vector3Stamped__Sequence * input,
+  geometry_msgs__msg__Vector3Stamped__Sequence * output);
 
 #ifdef __cplusplus
 }

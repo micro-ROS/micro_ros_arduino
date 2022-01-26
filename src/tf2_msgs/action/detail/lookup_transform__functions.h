@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_Goal__are_equal(const tf2_msgs__action__LookupTransform_Goal * lhs, const tf2_msgs__action__LookupTransform_Goal * rhs);
 
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_Goal__copy(
+  const tf2_msgs__action__LookupTransform_Goal * input,
+  tf2_msgs__action__LookupTransform_Goal * output);
+
 /// Initialize array of action/LookupTransform messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -136,6 +153,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_Goal__Sequence__are_equal(const tf2_msgs__action__LookupTransform_Goal__Sequence * lhs, const tf2_msgs__action__LookupTransform_Goal__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_Goal__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_Goal__Sequence * input,
+  tf2_msgs__action__LookupTransform_Goal__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -193,6 +227,23 @@ tf2_msgs__action__LookupTransform_Result__destroy(tf2_msgs__action__LookupTransf
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_Result__are_equal(const tf2_msgs__action__LookupTransform_Result * lhs, const tf2_msgs__action__LookupTransform_Result * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_Result__copy(
+  const tf2_msgs__action__LookupTransform_Result * input,
+  tf2_msgs__action__LookupTransform_Result * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -254,6 +305,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_Result__Sequence__are_equal(const tf2_msgs__action__LookupTransform_Result__Sequence * lhs, const tf2_msgs__action__LookupTransform_Result__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_Result__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_Result__Sequence * input,
+  tf2_msgs__action__LookupTransform_Result__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -311,6 +379,23 @@ tf2_msgs__action__LookupTransform_Feedback__destroy(tf2_msgs__action__LookupTran
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_Feedback__are_equal(const tf2_msgs__action__LookupTransform_Feedback * lhs, const tf2_msgs__action__LookupTransform_Feedback * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_Feedback__copy(
+  const tf2_msgs__action__LookupTransform_Feedback * input,
+  tf2_msgs__action__LookupTransform_Feedback * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -372,6 +457,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_Feedback__Sequence__are_equal(const tf2_msgs__action__LookupTransform_Feedback__Sequence * lhs, const tf2_msgs__action__LookupTransform_Feedback__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_Feedback__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_Feedback__Sequence * input,
+  tf2_msgs__action__LookupTransform_Feedback__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -429,6 +531,23 @@ tf2_msgs__action__LookupTransform_SendGoal_Request__destroy(tf2_msgs__action__Lo
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_SendGoal_Request__are_equal(const tf2_msgs__action__LookupTransform_SendGoal_Request * lhs, const tf2_msgs__action__LookupTransform_SendGoal_Request * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_SendGoal_Request__copy(
+  const tf2_msgs__action__LookupTransform_SendGoal_Request * input,
+  tf2_msgs__action__LookupTransform_SendGoal_Request * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -490,6 +609,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence__are_equal(const tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence * lhs, const tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence * input,
+  tf2_msgs__action__LookupTransform_SendGoal_Request__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -547,6 +683,23 @@ tf2_msgs__action__LookupTransform_SendGoal_Response__destroy(tf2_msgs__action__L
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_SendGoal_Response__are_equal(const tf2_msgs__action__LookupTransform_SendGoal_Response * lhs, const tf2_msgs__action__LookupTransform_SendGoal_Response * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_SendGoal_Response__copy(
+  const tf2_msgs__action__LookupTransform_SendGoal_Response * input,
+  tf2_msgs__action__LookupTransform_SendGoal_Response * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -608,6 +761,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence__are_equal(const tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence * lhs, const tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence * input,
+  tf2_msgs__action__LookupTransform_SendGoal_Response__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -665,6 +835,23 @@ tf2_msgs__action__LookupTransform_GetResult_Request__destroy(tf2_msgs__action__L
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_GetResult_Request__are_equal(const tf2_msgs__action__LookupTransform_GetResult_Request * lhs, const tf2_msgs__action__LookupTransform_GetResult_Request * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_GetResult_Request__copy(
+  const tf2_msgs__action__LookupTransform_GetResult_Request * input,
+  tf2_msgs__action__LookupTransform_GetResult_Request * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -726,6 +913,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_GetResult_Request__Sequence__are_equal(const tf2_msgs__action__LookupTransform_GetResult_Request__Sequence * lhs, const tf2_msgs__action__LookupTransform_GetResult_Request__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_GetResult_Request__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_GetResult_Request__Sequence * input,
+  tf2_msgs__action__LookupTransform_GetResult_Request__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -783,6 +987,23 @@ tf2_msgs__action__LookupTransform_GetResult_Response__destroy(tf2_msgs__action__
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_GetResult_Response__are_equal(const tf2_msgs__action__LookupTransform_GetResult_Response * lhs, const tf2_msgs__action__LookupTransform_GetResult_Response * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_GetResult_Response__copy(
+  const tf2_msgs__action__LookupTransform_GetResult_Response * input,
+  tf2_msgs__action__LookupTransform_GetResult_Response * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -844,6 +1065,23 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_GetResult_Response__Sequence__are_equal(const tf2_msgs__action__LookupTransform_GetResult_Response__Sequence * lhs, const tf2_msgs__action__LookupTransform_GetResult_Response__Sequence * rhs);
 
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_GetResult_Response__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_GetResult_Response__Sequence * input,
+  tf2_msgs__action__LookupTransform_GetResult_Response__Sequence * output);
+
 /// Initialize action/LookupTransform message.
 /**
  * If the init function is called twice for the same message without
@@ -901,6 +1139,23 @@ tf2_msgs__action__LookupTransform_FeedbackMessage__destroy(tf2_msgs__action__Loo
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_FeedbackMessage__are_equal(const tf2_msgs__action__LookupTransform_FeedbackMessage * lhs, const tf2_msgs__action__LookupTransform_FeedbackMessage * rhs);
+
+/// Copy a action/LookupTransform message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_FeedbackMessage__copy(
+  const tf2_msgs__action__LookupTransform_FeedbackMessage * input,
+  tf2_msgs__action__LookupTransform_FeedbackMessage * output);
 
 /// Initialize array of action/LookupTransform messages.
 /**
@@ -961,6 +1216,23 @@ tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence__destroy(tf2_msgs__a
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 bool
 tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence__are_equal(const tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence * lhs, const tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence * rhs);
+
+/// Copy an array of action/LookupTransform messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence__copy(
+  const tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence * input,
+  tf2_msgs__action__LookupTransform_FeedbackMessage__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__msg__Byte__are_equal(const example_interfaces__msg__Byte * lhs, const example_interfaces__msg__Byte * rhs);
 
+/// Copy a msg/Byte message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__Byte__copy(
+  const example_interfaces__msg__Byte * input,
+  example_interfaces__msg__Byte * output);
+
 /// Initialize array of msg/Byte messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ example_interfaces__msg__Byte__Sequence__destroy(example_interfaces__msg__Byte__
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 bool
 example_interfaces__msg__Byte__Sequence__are_equal(const example_interfaces__msg__Byte__Sequence * lhs, const example_interfaces__msg__Byte__Sequence * rhs);
+
+/// Copy an array of msg/Byte messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__Byte__Sequence__copy(
+  const example_interfaces__msg__Byte__Sequence * input,
+  example_interfaces__msg__Byte__Sequence * output);
 
 #ifdef __cplusplus
 }

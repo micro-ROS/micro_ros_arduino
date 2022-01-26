@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__srv__Empty_Request__are_equal(const test_msgs__srv__Empty_Request * lhs, const test_msgs__srv__Empty_Request * rhs);
 
+/// Copy a srv/Empty message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__srv__Empty_Request__copy(
+  const test_msgs__srv__Empty_Request * input,
+  test_msgs__srv__Empty_Request * output);
+
 /// Initialize array of srv/Empty messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -136,6 +153,23 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__srv__Empty_Request__Sequence__are_equal(const test_msgs__srv__Empty_Request__Sequence * lhs, const test_msgs__srv__Empty_Request__Sequence * rhs);
 
+/// Copy an array of srv/Empty messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__srv__Empty_Request__Sequence__copy(
+  const test_msgs__srv__Empty_Request__Sequence * input,
+  test_msgs__srv__Empty_Request__Sequence * output);
+
 /// Initialize srv/Empty message.
 /**
  * If the init function is called twice for the same message without
@@ -193,6 +227,23 @@ test_msgs__srv__Empty_Response__destroy(test_msgs__srv__Empty_Response * msg);
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__srv__Empty_Response__are_equal(const test_msgs__srv__Empty_Response * lhs, const test_msgs__srv__Empty_Response * rhs);
+
+/// Copy a srv/Empty message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__srv__Empty_Response__copy(
+  const test_msgs__srv__Empty_Response * input,
+  test_msgs__srv__Empty_Response * output);
 
 /// Initialize array of srv/Empty messages.
 /**
@@ -253,6 +304,23 @@ test_msgs__srv__Empty_Response__Sequence__destroy(test_msgs__srv__Empty_Response
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 bool
 test_msgs__srv__Empty_Response__Sequence__are_equal(const test_msgs__srv__Empty_Response__Sequence * lhs, const test_msgs__srv__Empty_Response__Sequence * rhs);
+
+/// Copy an array of srv/Empty messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__srv__Empty_Response__Sequence__copy(
+  const test_msgs__srv__Empty_Response__Sequence * input,
+  test_msgs__srv__Empty_Response__Sequence * output);
 
 #ifdef __cplusplus
 }

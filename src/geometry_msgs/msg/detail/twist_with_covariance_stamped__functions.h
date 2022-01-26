@@ -76,6 +76,23 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 bool
 geometry_msgs__msg__TwistWithCovarianceStamped__are_equal(const geometry_msgs__msg__TwistWithCovarianceStamped * lhs, const geometry_msgs__msg__TwistWithCovarianceStamped * rhs);
 
+/// Copy a msg/TwistWithCovarianceStamped message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__TwistWithCovarianceStamped__copy(
+  const geometry_msgs__msg__TwistWithCovarianceStamped * input,
+  geometry_msgs__msg__TwistWithCovarianceStamped * output);
+
 /// Initialize array of msg/TwistWithCovarianceStamped messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -135,6 +152,23 @@ geometry_msgs__msg__TwistWithCovarianceStamped__Sequence__destroy(geometry_msgs_
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 bool
 geometry_msgs__msg__TwistWithCovarianceStamped__Sequence__are_equal(const geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * lhs, const geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * rhs);
+
+/// Copy an array of msg/TwistWithCovarianceStamped messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__TwistWithCovarianceStamped__Sequence__copy(
+  const geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * input,
+  geometry_msgs__msg__TwistWithCovarianceStamped__Sequence * output);
 
 #ifdef __cplusplus
 }
