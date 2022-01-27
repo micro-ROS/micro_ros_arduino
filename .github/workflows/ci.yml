@@ -49,10 +49,12 @@ jobs:
             rsync -a  arduino-1.8.13/hardware/tools/ /github/home/.arduino15/packages/tools/
             rm -rf arduino-1.8.13 arduino-1.8.13-linux64.tar.xz
             #
-            # PATCHING TEENSY AND SAM
+            # PATCHING TEENSY, SAM AND OPENCR
             cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
             # remove when https://github.com/arduino/ArduinoCore-sam/pull/115 merged
             cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /github/home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
+            # remove when https://github.com/ROBOTIS-GIT/OpenCR/pull/294 merged and released
+            cat checkout/extras/patching_boards/platform_arduinocore_opencr.txt > /github/home/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.18/platform.txt
             #
             # BUILDING EXAPLE FOR EACH PLATFORM
             arduino-cli core update-index
@@ -61,8 +63,7 @@ jobs:
             arduino-cli lib install "STM32duino X-NUCLEO-IKS01A3"
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            # Workaround. Remove when https://github.com/ros2/rosidl/pull/596 is merged
-            # arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_reconnection_example -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
