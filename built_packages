@@ -17,7 +17,7 @@ https://github.com/ros2/test_interface_files.git 96d65b61e9acdb9480075ffdc00dadd
 https://github.com/ros2/rosidl.git d690f7a4b6c839dd67a12477209e16168e678a37
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6ae9376f84b62dae228ccd83a34b6e5a9458ea6c
 https://github.com/micro-ROS/rmw-microxrcedds.git 2eee1a22a1c7a14c2ced4714f9bf1484f10ed7c6
-https://github.com/micro-ROS/rcutils b0ba303b3da30d5f4f048efb9655a15a1bf0cd5e
+https://github.com/micro-ROS/rcutils a6492cb65fae03398f4ac438edda2996dfd272e3
 https://github.com/micro-ROS/rcl ccf07688ff03a1afb4c3a611c610f502a28f4cf8
 https://github.com/micro-ROS/rosidl_typesupport.git acaa92b845e418d67dd364fc612a7647c1b4a9ec
 https://github.com/ros2/rclc 9c844f1b0de2421d8eae3bab1fe064304a74a1b8
