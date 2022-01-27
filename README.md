@@ -13,6 +13,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
     - [Patch SAMD](#patch-samd)
+    - [Patch OpenCR](#patch-opencr)
   - [Purpose of the Project](#purpose-of-the-project)
   - [License](#license)
   - [Known Issues/Limitations](#known-issueslimitations)
@@ -113,6 +114,17 @@ Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 export ARDUINO_PATH=[Your Arduino path]
 cd $ARDUINO_PATH/hardware/sam/1.6.12/
 curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/galactic/extras/patching_boards/platform_arduinocore_sam.txt > platform.txt
+```
+
+### Patch OpenCR
+
+Go inside your Arduino OpenCR installation and replace `platform.txt`:
+
+```bash
+export ARDUINO_PATH=[Your Arduino OpenCR path]
+/home/username/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.18/platform.txt
+cd $ARDUINO_PATH/hardware/OpenCR/1.4.18/
+curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/galactic/extras/patching_boards/platform_arduinocore_opencr.txt > platform.txt
 ```
 
 ## Purpose of the Project
