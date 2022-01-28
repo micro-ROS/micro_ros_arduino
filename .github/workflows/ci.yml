@@ -49,12 +49,10 @@ jobs:
             rsync -a  arduino-1.8.13/hardware/tools/ /github/home/.arduino15/packages/tools/
             rm -rf arduino-1.8.13 arduino-1.8.13-linux64.tar.xz
             #
-            # PATCHING TEENSY, SAM AND OPENCR
+            # PATCHING TEENSY AND SAM
             cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
             # remove when https://github.com/arduino/ArduinoCore-sam/pull/115 merged
             cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /github/home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
-            # remove when https://github.com/ROBOTIS-GIT/OpenCR/pull/294 merged and released
-            cat checkout/extras/patching_boards/platform_arduinocore_opencr.txt > /github/home/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.18/platform.txt
             #
             # BUILDING EXAPLE FOR EACH PLATFORM
             arduino-cli core update-index

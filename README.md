@@ -13,7 +13,6 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
     - [Patch SAMD](#patch-samd)
-    - [Patch OpenCR](#patch-opencr)
   - [Purpose of the Project](#purpose-of-the-project)
   - [License](#license)
   - [Known Issues/Limitations](#known-issueslimitations)
@@ -26,7 +25,7 @@ Supported boards are:
 | ----------------------------------------------------------------------------------- | ----------- | ---------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
 | [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                 | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon.meta`            |
 | [Arduino Nano RP2040 Connect](https://docs.arduino.cc/hardware/nano-rp2040-connect) | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon_verylowmem.meta` |
-| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/)            | v1.4.16     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide) | `colcon.meta`            |
+| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/)            | v1.4.19     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide) | `colcon.meta`            |
 | [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`            |
 | [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon.meta`            |
 | [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)                          | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/teensy/td_download.html)                                | `colcon_lowmem.meta`     |
@@ -114,17 +113,6 @@ Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 export ARDUINO_PATH=[Your Arduino path]
 cd $ARDUINO_PATH/hardware/sam/1.6.12/
 curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/galactic/extras/patching_boards/platform_arduinocore_sam.txt > platform.txt
-```
-
-### Patch OpenCR
-
-Go inside your Arduino OpenCR installation and replace `platform.txt`:
-
-```bash
-export ARDUINO_PATH=[Your Arduino OpenCR path]
-/home/username/.arduino15/packages/OpenCR/hardware/OpenCR/1.4.18/platform.txt
-cd $ARDUINO_PATH/hardware/OpenCR/1.4.18/
-curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/galactic/extras/patching_boards/platform_arduinocore_opencr.txt > platform.txt
 ```
 
 ## Purpose of the Project
