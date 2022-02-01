@@ -5,7 +5,7 @@
 #ifndef STD_SRVS__MSG__ROSIDL_TYPESUPPORT_MICROXRCEDDS_C__VISIBILITY_CONTROL_H_
 #define STD_SRVS__MSG__ROSIDL_TYPESUPPORT_MICROXRCEDDS_C__VISIBILITY_CONTROL_H_
 
-#if __cplusplus
+#ifdef __cplusplus
 extern "C"
 {
 #endif
@@ -36,7 +36,7 @@ extern "C"
   #endif
 #endif
 
-#if __cplusplus
+#ifdef __cplusplus
 }
 #endif
 
