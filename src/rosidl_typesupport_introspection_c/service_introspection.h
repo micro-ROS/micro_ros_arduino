@@ -23,11 +23,18 @@
 
 #include "rosidl_typesupport_introspection_c/message_introspection.h"
 
+/// This struct provides introspection information for one service definition.
+/// A service is comprised of two interfaces: the request and the response.
 typedef struct rosidl_typesupport_introspection_c__ServiceMembers_s
 {
+  /// The namespace in which the service resides, e.g. "example_messages__srv" for
+  /// example_messages/srv
   const char * service_namespace_;
+  /// The name of the service, e.g. "AddTwoInts"
   const char * service_name_;
+  /// A pointer to the introspection information structure for the request interface.
   const rosidl_typesupport_introspection_c__MessageMembers * request_members_;
+  /// A pointer to the introspection information structure for the response interface.
   const rosidl_typesupport_introspection_c__MessageMembers * response_members_;
 } rosidl_typesupport_introspection_c__ServiceMembers;
 
