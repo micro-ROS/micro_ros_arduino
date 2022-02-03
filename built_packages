@@ -14,7 +14,7 @@ https://github.com/ros2/rmw.git de38e79ca8906c8a7757557acdef57f8474351ff
 https://github.com/ros2/rcl_logging.git f332780e111a6f9921b6cb67af7dbbd6e12ddd2d
 https://github.com/ros2/rmw_implementation.git d45227448dbb085edd69503f37f17c8ef6e6bde6
 https://github.com/ros2/test_interface_files.git 96d65b61e9acdb9480075ffdc00dadddd67ff832
-https://github.com/ros2/rosidl.git ea69c5275e61de995ec816240a37073b0093b6e5
+https://github.com/ros2/rosidl.git 18676da107ae12ea9c518b545ac1d2c30429829a
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 28b88ac044e504095fbe9381508925e0aec7bc24
 https://github.com/micro-ROS/rmw-microxrcedds.git 2eee1a22a1c7a14c2ced4714f9bf1484f10ed7c6
 https://github.com/micro-ROS/rcutils a6492cb65fae03398f4ac438edda2996dfd272e3
