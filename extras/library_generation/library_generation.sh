@@ -230,7 +230,7 @@ if [[ " ${PLATFORMS[@]} " =~ " kakutef7-m7 " ]]; then
     cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv5-sp-d16-hardfp/libmicroros.a
 fi
 
-######## Build for ESP 32  ########
+######## Build for ESP32  ########
 if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
     rm -rf firmware/build
 
@@ -243,6 +243,12 @@ if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
     mkdir -p /project/src/esp32
     cp -R firmware/build/libmicroros.a /project/src/esp32/libmicroros.a
 fi
+
+######## Fix include paths  ########
+INCLUDE_ROS2_PACKAGES=( rmw rcl rcl_action rcl_lifecycle rcl_logging_interface )
+for var in "${INCLUDE_ROS2_PACKAGES[@]}"; do
+  mv /project/src/${var}/${var}/* /project/src/${var}
+done
 
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /project/available_ros2_types
