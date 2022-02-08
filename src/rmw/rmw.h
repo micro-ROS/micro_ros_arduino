@@ -2564,10 +2564,10 @@ rmw_destroy_wait_set(rmw_wait_set_t * wait_set);
  * This function adds middleware-specific conditions to the wait set and waits
  * until one or more become ready, or until the timeout is reached.
  *
- * \remark Elapsed time is measured against the system clock.
- *   Timeout granularity is thus bound to that of the aforementioned clock and,
- *   depending on the underlying implementation, to that of platform-specific
- *   APIs to sleep and/or wait.
+ * \remark Elapsed time should be measured using a monotonic clock,
+ *   though rmw implementations could use a different one.
+ *   Timeout granularity is thus bound to that of the clock used by the underlying implementation,
+ *   and to the platform-specific APIs used to sleep and/or wait.
  *
  * \remark
  *   The amount of time this function actually waits may be either above or
