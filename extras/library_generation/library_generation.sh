@@ -245,7 +245,7 @@ if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
 fi
 
 ######## Fix include paths  ########
-INCLUDE_ROS2_PACKAGES=( rmw rcl rcl_action rcl_lifecycle rcl_logging_interface rosidl_runtime_c rosidl_typesupport_interface)
+INCLUDE_ROS2_PACKAGES=( rmw rcl rcl_action rcl_lifecycle rcl_logging_interface rosidl_runtime_c rosidl_typesupport_interface rosidl_typesupport_introspection_c )
 for var in "${INCLUDE_ROS2_PACKAGES[@]}"; do
   mv /project/src/${var}/${var}/* /project/src/${var}
 done
