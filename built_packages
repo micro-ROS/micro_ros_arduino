@@ -28,7 +28,7 @@ https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebc
 https://github.com/ament/ament_index.git 5ce2eba781801154d93c6fd7d6f66b23e4a7182d
 https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
 https://github.com/ament/uncrustify_vendor.git fd52d19c51190e6277b39706f728cedb8cf9c02e
-https://github.com/ament/ament_cmake.git 3fc4db9dc728bcade5f02bb191ce20c8d3e62511
+https://github.com/ament/ament_cmake.git 031e37e8a8c642455f168065ecc7834443ef2397
 https://github.com/ament/ament_lint.git e4e45fca36974e5681b6cac1e2ac835b4c3692eb
 https://github.com/ament/googletest.git 6df7425fdcbd368d2d1b99ffd89b9168014abb07
 https://github.com/uncrustify/uncrustify.git 1d3d8fa5e81bece0fac4b81316b0844f7cc35926
