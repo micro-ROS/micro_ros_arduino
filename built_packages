@@ -4,7 +4,7 @@ https://github.com/micro-ROS/rmw-microxrcedds.git 2eee1a22a1c7a14c2ced4714f9bf14
 https://github.com/micro-ROS/rcl 7816f59d27c64b147e52c5bf046ec84b2ddfafb9
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 30a757935ea1fbfcfbdcc224b42c796155ac7d19
 https://github.com/micro-ROS/rosidl_typesupport.git 8be6780b52947f6bc726c7b0e972767ea4684cc3
-https://github.com/ros2/rclc ce4296879a08794ff701978fac45eb885ab9e40c
+https://github.com/ros2/rclc dab5792f780ce2bcddae242966af877605822518
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 28b88ac044e504095fbe9381508925e0aec7bc24
 https://github.com/micro-ROS/rcutils a6492cb65fae03398f4ac438edda2996dfd272e3
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
@@ -15,7 +15,7 @@ https://github.com/ros2/rmw.git 5c822d1f0d15132a983080527e2e3cebbfceb2cc
 https://github.com/ros2/test_interface_files.git 96d65b61e9acdb9480075ffdc00dadddd67ff832
 https://github.com/ros2/rcl.git 83ac5b0c38c65b05a80f74f4a8a11665f3506735
 https://github.com/ros2/example_interfaces.git 2977bbe4e5e30c74d3594d31a8212193f5c27761
-https://github.com/ros2/rosidl.git 750326db76e0ae92999293f47d1fdc1d8cff6554
+https://github.com/ros2/rosidl.git 3cfdb4cd7c934cb0e91e6d2e6a43e8f42cc39b67
 https://github.com/ros2/rcpputils.git b8fe7a3e91c7e1a940120bfb7466d3e1df1d25a8
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/common_interfaces.git fa1d0093db5df80c886093f27810d09c46f5111e
@@ -28,7 +28,7 @@ https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebc
 https://github.com/ament/ament_index.git 5ce2eba781801154d93c6fd7d6f66b23e4a7182d
 https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
 https://github.com/ament/uncrustify_vendor.git fd52d19c51190e6277b39706f728cedb8cf9c02e
-https://github.com/ament/ament_cmake.git 031e37e8a8c642455f168065ecc7834443ef2397
+https://github.com/ament/ament_cmake.git 199ac7a046cbf686912a198a41a501858382af60
 https://github.com/ament/ament_lint.git e4e45fca36974e5681b6cac1e2ac835b4c3692eb
 https://github.com/ament/googletest.git 6df7425fdcbd368d2d1b99ffd89b9168014abb07
 https://github.com/uncrustify/uncrustify.git 1d3d8fa5e81bece0fac4b81316b0844f7cc35926
