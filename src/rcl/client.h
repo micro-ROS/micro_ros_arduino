@@ -409,6 +409,58 @@ RCL_PUBLIC
 bool
 rcl_client_is_valid(const rcl_client_t * client);
 
+/// Get the actual qos settings of the client's request publisher.
+/**
+ * Used to get the actual qos settings of the client's request publisher.
+ * The actual configuration applied when using RMW_*_SYSTEM_DEFAULT
+ * can only be resolved after the creation of the client, and it
+ * depends on the underlying rmw implementation.
+ * If the underlying setting in use can't be represented in ROS terms,
+ * it will be set to RMW_*_UNKNOWN.
+ * The returned struct is only valid as long as the rcl_client_t is valid.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] client pointer to the rcl client
+ * \return qos struct if successful, otherwise `NULL`
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+const rmw_qos_profile_t *
+rcl_client_request_publisher_get_actual_qos(const rcl_client_t * client);
+
+/// Get the actual qos settings of the client's response subscription.
+/**
+ * Used to get the actual qos settings of the client's response subscription.
+ * The actual configuration applied when using RMW_*_SYSTEM_DEFAULT
+ * can only be resolved after the creation of the client, and it
+ * depends on the underlying rmw implementation.
+ * If the underlying setting in use can't be represented in ROS terms,
+ * it will be set to RMW_*_UNKNOWN.
+ * The returned struct is only valid as long as the rcl_client_t is valid.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] client pointer to the rcl client
+ * \return qos struct if successful, otherwise `NULL`
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+const rmw_qos_profile_t *
+rcl_client_response_subscription_get_actual_qos(const rcl_client_t * client);
+
 #ifdef __cplusplus
 }
 #endif

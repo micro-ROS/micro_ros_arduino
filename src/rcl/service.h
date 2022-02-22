@@ -440,6 +440,58 @@ RCL_PUBLIC
 bool
 rcl_service_is_valid(const rcl_service_t * service);
 
+/// Get the actual qos settings of the service's request subscription.
+/**
+ * Used to get the actual qos settings of the service's request subscription.
+ * The actual configuration applied when using RMW_*_SYSTEM_DEFAULT
+ * can only be resolved after the creation of the service, and it
+ * depends on the underlying rmw implementation.
+ * If the underlying setting in use can't be represented in ROS terms,
+ * it will be set to RMW_*_UNKNOWN.
+ * The returned struct is only valid as long as the rcl_service_t is valid.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] service pointer to the rcl service
+ * \return qos struct if successful, otherwise `NULL`
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+const rmw_qos_profile_t *
+rcl_service_request_subscription_get_actual_qos(const rcl_service_t * service);
+
+/// Get the actual qos settings of the service's response publisher.
+/**
+ * Used to get the actual qos settings of the service's response publisher.
+ * The actual configuration applied when using RMW_*_SYSTEM_DEFAULT
+ * can only be resolved after the creation of the service, and it
+ * depends on the underlying rmw implementation.
+ * If the underlying setting in use can't be represented in ROS terms,
+ * it will be set to RMW_*_UNKNOWN.
+ * The returned struct is only valid as long as the rcl_service_t is valid.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] service pointer to the rcl service
+ * \return qos struct if successful, otherwise `NULL`
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+const rmw_qos_profile_t *
+rcl_service_response_publisher_get_actual_qos(const rcl_service_t * service);
+
 #ifdef __cplusplus
 }
 #endif
