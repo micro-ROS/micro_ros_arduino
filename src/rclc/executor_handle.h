@@ -71,19 +71,6 @@ typedef rclc_subscription_callback_t rclc_callback_t;
 /// - additional callback context
 typedef void (* rclc_subscription_callback_with_context_t)(const void *, void *);
 
-/// Type definition for subscription callback function
-/// - incoming message
-typedef void (* rclc_subscription_callback_t)(const void *);
-
-/// Type definition (duplicate) for subscription callback function (alias for foxy and galactic).
-/// - incoming message
-typedef rclc_subscription_callback_t rclc_callback_t;
-
-/// Type definition for subscription callback function
-/// - incoming message
-/// - additional callback context
-typedef void (* rclc_subscription_callback_with_context_t)(const void *, void *);
-
 /// Type definition for client callback function
 /// - request message
 /// - response message
