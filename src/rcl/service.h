@@ -24,6 +24,7 @@ extern "C"
 
 #include "rosidl_runtime_c/service_type_support_struct.h"
 
+#include "rcl/event_callback.h"
 #include "rcl/macros.h"
 #include "rcl/node.h"
 #include "rcl/visibility_control.h"
@@ -491,6 +492,37 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 const rmw_qos_profile_t *
 rcl_service_response_publisher_get_actual_qos(const rcl_service_t * service);
+
+/// Set the on new request callback function for the service.
+/**
+ * This API sets the callback function to be called whenever the
+ * service is notified about a new request.
+ *
+ * \sa rmw_service_set_on_new_request_callback for details about this function.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] rmw implementation defined</i>
+ *
+ * \param[in] service The service on which to set the callback
+ * \param[in] callback The callback to be called when new requests arrive, may be NULL
+ * \param[in] user_data Given to the callback when called later, may be NULL
+ * \return `RCL_RET_OK` if callback was set to the listener, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if `service` is NULL, or
+ * \return `RCL_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_service_set_on_new_request_callback(
+  const rcl_service_t * service,
+  rcl_event_callback_t callback,
+  const void * user_data);
 
 #ifdef __cplusplus
 }

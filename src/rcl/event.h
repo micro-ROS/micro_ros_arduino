@@ -25,6 +25,7 @@ extern "C"
 #include <rmw/event.h>
 
 #include "rcl/client.h"
+#include "rcl/event_callback.h"
 #include "rcl/macros.h"
 #include "rcl/publisher.h"
 #include "rcl/service.h"
@@ -197,6 +198,37 @@ rcl_event_get_rmw_handle(const rcl_event_t * event);
 RCL_PUBLIC
 bool
 rcl_event_is_valid(const rcl_event_t * event);
+
+/// Set the callback function for the event.
+/**
+ * This API sets the callback function to be called whenever the
+ * event is notified about a new instance of the event.
+ *
+ * \sa rmw_event_set_callback for more details about this function.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] rmw implementation defined</i>
+ *
+ * \param[in] event The event on which to set the callback
+ * \param[in] callback The callback to be called when new events occur, may be NULL
+ * \param[in] user_data Given to the callback when called later, may be NULL
+ * \return `RCL_RET_OK` if callback was set to the listener, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if `event` is NULL, or
+ * \return `RCL_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_event_set_callback(
+  const rcl_event_t * event,
+  rcl_event_callback_t callback,
+  const void * user_data);
 
 #ifdef __cplusplus
 }

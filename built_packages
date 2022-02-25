@@ -1,7 +1,7 @@
 
 https://github.com/micro-ROS/micro_ros_utilities ba1c537f4b5c25a9335dfa5c1439d63111e24122
-https://github.com/micro-ROS/rmw-microxrcedds.git 2eee1a22a1c7a14c2ced4714f9bf1484f10ed7c6
-https://github.com/micro-ROS/rcl bf110eb7271fd334e5d7c8253a882cb160d73869
+https://github.com/micro-ROS/rmw-microxrcedds.git 1166b3ac71ab2d8caa3e67951c9f2b0ebbcd9c75
+https://github.com/micro-ROS/rcl 3b161c715c21900275f13de180d01851d3de41c9
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 30a757935ea1fbfcfbdcc224b42c796155ac7d19
 https://github.com/micro-ROS/rosidl_typesupport.git 8be6780b52947f6bc726c7b0e972767ea4684cc3
 https://github.com/ros2/rclc 2381ec52547c10e20881860509bc5a51e193931f
@@ -11,16 +11,16 @@ https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3
 https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 243b16b659f1b46e6678db21c30f246910a3b697
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
-https://github.com/ros2/rmw.git 5c822d1f0d15132a983080527e2e3cebbfceb2cc
+https://github.com/ros2/rmw.git cebd22cc456c3fb2624116671dfde55e7248f2c4
 https://github.com/ros2/test_interface_files.git 96d65b61e9acdb9480075ffdc00dadddd67ff832
-https://github.com/ros2/rcl.git 4e4bdc76dc94d425c3a3c59159788d68525a3610
+https://github.com/ros2/rcl.git 5040c6049f2320fb34fb803ac97c4a458212102c
 https://github.com/ros2/example_interfaces.git 2977bbe4e5e30c74d3594d31a8212193f5c27761
 https://github.com/ros2/rosidl.git 917a40d79143230b4833f14e18b80cfe0930a09f
 https://github.com/ros2/rcpputils.git b8fe7a3e91c7e1a940120bfb7466d3e1df1d25a8
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/common_interfaces.git ea761cc4be8b6cfed67a7aeb0c057400c91f90e5
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
-https://github.com/ros2/rmw_implementation.git d45227448dbb085edd69503f37f17c8ef6e6bde6
+https://github.com/ros2/rmw_implementation.git 61939927d56db49ab9ce7b4904463918b95777d5
 https://github.com/ros2/rcl_interfaces.git 3aecf019ea2612bd7142c52813e4809b724e5785
 https://github.com/ros2/libyaml_vendor.git 73c8ea6cec14474d9b256c61fc6a2d9af9e5dcbb
 https://github.com/ros2/rcl_logging.git f332780e111a6f9921b6cb67af7dbbd6e12ddd2d
