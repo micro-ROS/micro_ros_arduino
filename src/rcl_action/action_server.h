@@ -23,6 +23,7 @@ extern "C"
 #include "rcl_action/goal_handle.h"
 #include "rcl_action/types.h"
 #include "rcl_action/visibility_control.h"
+#include "rcl/event_callback.h"
 #include "rcl/macros.h"
 #include "rcl/node.h"
 #include "rcl/time.h"
@@ -929,6 +930,30 @@ RCL_ACTION_PUBLIC
 RCL_WARN_UNUSED
 bool
 rcl_action_server_is_valid_except_context(const rcl_action_server_t * action_server);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_server_set_goal_service_callback(
+  const rcl_action_server_t * action_server,
+  rcl_event_callback_t callback,
+  const void * user_data);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_server_set_cancel_service_callback(
+  const rcl_action_server_t * action_server,
+  rcl_event_callback_t callback,
+  const void * user_data);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_server_set_result_service_callback(
+  const rcl_action_server_t * action_server,
+  rcl_event_callback_t callback,
+  const void * user_data);
 
 #ifdef __cplusplus
 }

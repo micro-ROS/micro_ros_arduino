@@ -22,6 +22,7 @@ extern "C"
 
 #include "rcl_action/types.h"
 #include "rcl_action/visibility_control.h"
+#include "rcl/event_callback.h"
 #include "rcl/macros.h"
 #include "rcl/node.h"
 
@@ -740,6 +741,46 @@ RCL_ACTION_PUBLIC
 bool
 rcl_action_client_is_valid(
   const rcl_action_client_t * action_client);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_client_set_goal_client_callback(
+  const rcl_action_client_t * action_client,
+  rcl_event_callback_t callback,
+  const void * user_data);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_client_set_cancel_client_callback(
+  const rcl_action_client_t * action_client,
+  rcl_event_callback_t callback,
+  const void * user_data);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_client_set_result_client_callback(
+  const rcl_action_client_t * action_client,
+  rcl_event_callback_t callback,
+  const void * user_data);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_client_set_feedback_subscription_callback(
+  const rcl_action_client_t * action_client,
+  rcl_event_callback_t callback,
+  const void * user_data);
+
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_client_set_status_subscription_callback(
+  const rcl_action_client_t * action_client,
+  rcl_event_callback_t callback,
+  const void * user_data);
 
 #ifdef __cplusplus
 }

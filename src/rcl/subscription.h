@@ -24,6 +24,7 @@ extern "C"
 
 #include "rosidl_runtime_c/message_type_support_struct.h"
 
+#include "rcl/event_callback.h"
 #include "rcl/macros.h"
 #include "rcl/node.h"
 #include "rcl/visibility_control.h"
@@ -610,6 +611,38 @@ rcl_subscription_get_actual_qos(const rcl_subscription_t * subscription);
 RCL_PUBLIC
 bool
 rcl_subscription_can_loan_messages(const rcl_subscription_t * subscription);
+
+/// Set the on new message callback function for the subscription.
+/**
+ * This API sets the callback function to be called whenever the
+ * subscription is notified about a new message.
+ *
+ * \sa rmw_subscription_set_on_new_message_callback for details about this
+ * function.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] rmw implementation defined</i>
+ *
+ * \param[in] subscription The subscription on which to set the callback
+ * \param[in] callback The callback to be called when new messages arrive, may be NULL
+ * \param[in] user_data Given to the callback when called later, may be NULL
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if `subscription` is NULL, or
+ * \return `RCL_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_subscription_set_on_new_message_callback(
+  const rcl_subscription_t * subscription,
+  rcl_event_callback_t callback,
+  const void * user_data);
 
 #ifdef __cplusplus
 }
