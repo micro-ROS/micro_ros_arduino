@@ -54,6 +54,7 @@ pushd firmware/mcu_ws > /dev/null
 
 popd > /dev/null
 
+<<<<<<< HEAD
 cd firmware
 echo "" > /project/built_packages
 for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /project/built_packages; popd > /dev/null; done;
@@ -69,6 +70,8 @@ fi
 cd /uros_ws
 
 
+=======
+>>>>>>> e4a7fb7 (Disable changes check (#794))
 ######## Clean and source ########
 find /project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.cpp ! -name *.c.in -delete
 
