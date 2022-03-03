@@ -43,11 +43,11 @@ jobs:
             ./TeensyduinoInstall.linux64 --dir=arduino-1.8.19
             # Faking Teensy loader
             TRUE_PATH=$(which true)
-            rm -rf arduino-1.8.13/hardware/tools/teensy_post_compile
-            cp $TRUE_PATH arduino-1.8.13/hardware/tools/teensy_post_compile
-            cp -R arduino-1.8.13/hardware/teensy/ /github/home/.arduino15/packages/
-            rsync -a  arduino-1.8.13/hardware/tools/ /github/home/.arduino15/packages/tools/
-            rm -rf arduino-1.8.13 arduino-1.8.19-linux64.tar.xz
+            rm -rf arduino-1.8.19/hardware/tools/teensy_post_compile
+            cp $TRUE_PATH arduino-1.8.19/hardware/tools/teensy_post_compile
+            cp -R arduino-1.8.19/hardware/teensy/ /github/home/.arduino15/packages/
+            rsync -a  arduino-1.8.19/hardware/tools/ /github/home/.arduino15/packages/tools/
+            rm -rf arduino-1.8.19 arduino-1.8.19-linux64.tar.xz
             #
             # PATCHING TEENSY AND SAM
             cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
