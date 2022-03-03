@@ -36,18 +36,18 @@ jobs:
             arduino-cli core install esp32:esp32 -v
             #
             # INSTALLING TEENSY SUPPORT
-            wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
-            tar -xf arduino-1.8.13-linux64.tar.xz
-            wget https://www.pjrc.com/teensy/td_153/TeensyduinoInstall.linux64
+            wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
+            tar -xf arduino-1.8.19-linux64.tar.xz
+            wget https://www.pjrc.com/teensy/td_156/TeensyduinoInstall.linux64
             chmod 755 TeensyduinoInstall.linux64
-            ./TeensyduinoInstall.linux64 --dir=arduino-1.8.13
+            ./TeensyduinoInstall.linux64 --dir=arduino-1.8.19
             # Faking Teensy loader
             TRUE_PATH=$(which true)
-            rm -rf arduino-1.8.13/hardware/tools/teensy_post_compile
-            cp $TRUE_PATH arduino-1.8.13/hardware/tools/teensy_post_compile
-            cp -R arduino-1.8.13/hardware/teensy/ /github/home/.arduino15/packages/
-            rsync -a  arduino-1.8.13/hardware/tools/ /github/home/.arduino15/packages/tools/
-            rm -rf arduino-1.8.13 arduino-1.8.13-linux64.tar.xz
+            rm -rf arduino-1.8.19/hardware/tools/teensy_post_compile
+            cp $TRUE_PATH arduino-1.8.19/hardware/tools/teensy_post_compile
+            cp -R arduino-1.8.19/hardware/teensy/ /github/home/.arduino15/packages/
+            rsync -a  arduino-1.8.19/hardware/tools/ /github/home/.arduino15/packages/tools/
+            rm -rf arduino-1.8.19 arduino-1.8.19-linux64.tar.xz
             #
             # PATCHING TEENSY AND SAM
             cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/avr/platform.txt
@@ -77,6 +77,7 @@ jobs:
             arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy36 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy40 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
