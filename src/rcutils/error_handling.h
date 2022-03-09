@@ -49,11 +49,13 @@ extern "C"
 #elif !defined(RCUTILS_NO_FILESYSTEM)
 #define RCUTILS_SAFE_FWRITE_TO_STDERR(msg) \
   do {fwrite(msg, sizeof(char), strlen(msg), stderr);} while (0)
-#else 
+#else
   #define RCUTILS_SAFE_FWRITE_TO_STDERR(msg)
 #endif
 
 // fixed constraints
+#if !defined(RCUTILS_AVOID_DYNAMIC_ALLOCATION)
+/// The maximum length a formatted number is allowed to have.
 #define RCUTILS_ERROR_STATE_LINE_NUMBER_STR_MAX_LENGTH 20  // "18446744073709551615"
 #define RCUTILS_ERROR_FORMATTING_CHARACTERS 6  // ', at ' + ':'
 
@@ -71,6 +73,13 @@ extern "C"
     RCUTILS_ERROR_STATE_LINE_NUMBER_STR_MAX_LENGTH - \
     RCUTILS_ERROR_FORMATTING_CHARACTERS - \
     1)
+#else
+#define RCUTILS_ERROR_STATE_LINE_NUMBER_STR_MAX_LENGTH 1
+#define RCUTILS_ERROR_FORMATTING_CHARACTERS 1
+#define RCUTILS_ERROR_MESSAGE_MAX_LENGTH 1
+#define RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH 1
+#define RCUTILS_ERROR_STATE_FILE_MAX_LENGTH 1
+#endif  // RCUTILS_AVOID_DYNAMIC_ALLOCATION
 
 /// Struct wrapping a fixed-size c string used for returning the formatted error string.
 typedef struct rcutils_error_string_t
@@ -91,7 +100,7 @@ typedef struct rcutils_error_state_t
 } rcutils_error_state_t;
 
 // make sure our math is right...
-#if __STDC_VERSION__ >= 201112L
+#if __STDC_VERSION__ >= 201112L && !defined(RCUTILS_AVOID_DYNAMIC_ALLOCATION)
 static_assert(
   sizeof(rcutils_error_string_t) == (
     RCUTILS_ERROR_STATE_MESSAGE_MAX_LENGTH +
