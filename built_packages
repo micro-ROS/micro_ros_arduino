@@ -28,7 +28,7 @@ https://github.com/ros2/rcl_logging.git e9e2c3515cf4099a4369a4da1cea257f99384f49
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
 https://github.com/ament/ament_index.git f019d6c40991799a13b18c9c3dcc583e3fde0381
 https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
-https://github.com/ament/uncrustify_vendor.git 85010a6306dba4c546d9085e3a3a340ab02b80ce
+https://github.com/ament/uncrustify_vendor.git a42e2cd21059958b421c26ee39839e3d41489450
 https://github.com/ament/ament_cmake.git aee9acf2fde3a7e221ea8ce245b1916a511bf071
 https://github.com/ament/ament_lint.git e80862cf718412450dfe7f2f1331ee626beb7dc7
 https://github.com/ament/googletest.git 6df7425fdcbd368d2d1b99ffd89b9168014abb07
