@@ -318,6 +318,7 @@ rcl_timer_is_ready(const rcl_timer_t * timer, bool * is_ready);
  * \return #RCL_RET_OK if the timer until next call was successfully calculated, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
  * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
+ * \return #RCL_RET_TIMER_CANCELED if the timer is canceled, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
 RCL_PUBLIC
