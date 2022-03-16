@@ -14,7 +14,7 @@ https://github.com/eProsima/Micro-XRCE-DDS-Client.git 9b9278c0b3a633aa7ad634bda2
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
 https://github.com/ros2/rmw.git bceeda0a2a1d1451e1e5243fba09aaa3811f33cd
 https://github.com/ros2/test_interface_files.git db93f7052ac028634f85c1e73c0ed27d5abd5590
-https://github.com/ros2/rcl.git 01dacfc69bcfaa7408358adc51cd98abce507dd4
+https://github.com/ros2/rcl.git cae279aa780ea558265517926703048f77504fd8
 https://github.com/ros2/example_interfaces.git 2977bbe4e5e30c74d3594d31a8212193f5c27761
 https://github.com/ros2/rosidl.git caef9b8f820dfcb16e6a2df9118c5669cc816642
 https://github.com/ros2/rcpputils.git a7898d98ab684bb5d0cb2c20c823a1b4014fa0dc
