@@ -42,6 +42,7 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 
 void setup() {
   byte arduino_mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+  // The IP address will be dependent on your local network
   IPAddress arduino_ip(192, 168, 1, 177);
   IPAddress agent_ip(192, 168, 1, 113);
   set_microros_native_ethernet_udp_transports(arduino_mac, arduino_ip, agent_ip, 9999);
