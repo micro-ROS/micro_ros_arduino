@@ -9,6 +9,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [How to use the precompiled library](#how-to-use-the-precompiled-library)
     - [Arduino IDE](#arduino-ide)
     - [PlatformIO](#platformio)
+      - [Known issues](#known-issues)
   - [How to build the precompiled library](#how-to-build-the-precompiled-library)
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
@@ -86,6 +87,56 @@ pio run --target upload # Flash the firmware
 ```
 
 An example of a micro-ROS application using PlatformIO is available [here](https://github.com/husarion/micro_ros_stm32_template).
+
+#### Known issues
+
+- Arduino Nano RP2040 Connect
+
+  - The following versioning shall be used:
+    ```
+    lib_deps =
+      arduino-libraries/WiFiNINA@^1.8.13
+      ...
+
+    platform_packages =
+      toolchain-gccarmnoneeabi @ ~1.70201.0
+      framework-arduino-mbed @ ~2.4.1
+    ```
+
+  - Library dependency finder shall be set to `chain+`: `lib_ldf_mode = chain+`
+
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/780
+
+- Arduino Due
+  - The following versioning shall be used:
+    ```
+    platform_packages =
+      toolchain-gccarmnoneeabi@<1.50000.0
+    ```
+
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/698
+
+- ESP32 Dev Module
+  - Known issues with espressif32 arduino package, use `2.0.2` version:
+    ```
+    [env:esp32dev]
+    platform = https://github.com/platformio/platform-espressif32.git#feature/arduino-upstream
+    board = esp32dev
+    framework = arduino
+    lib_deps =
+        https://github.com/micro-ROS/micro_ros_arduino.git
+    build_flags =
+        -L ./.pio/libdeps/esp32dev/micro_ros_arduino/src/esp32/
+        -l microros
+        -D ESP32
+
+    platform_packages =
+      toolchain-xtensa32 @ ~2.80400.0
+      framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.2
+    ```
+
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/736, https://github.com/platformio/platform-espressif32/issues/616
+
 ## How to build the precompiled library
 
 ```bash
