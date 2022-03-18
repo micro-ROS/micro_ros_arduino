@@ -86,6 +86,31 @@ pio run --target upload # Flash the firmware
 ```
 
 An example of a micro-ROS application using PlatformIO is available [here](https://github.com/husarion/micro_ros_stm32_template).
+
+#### Arduino Portenta H7
+
+The `platformio.ini` file for this board must contain:
+```
+[env:portenta_h7_m7]
+platform = ststm32
+board = portenta_h7_m7
+framework = arduino
+extra_scripts = fix_linker.py
+lib_deps = 
+    https://github.com/micro-ROS/micro_ros_arduino
+build_flags =
+    -L ./.pio/libdeps/portenta_h7_m7/micro_ros_arduino/src/cortex-m7/fpv5-d16-softfp/
+    -D TARGET_PORTENTA_H7_M7
+```
+And create a `fix_linker.py` file with these contents:
+```
+Import("env")
+env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
+                    '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, '
+                    'LIBSUFFIXES, __env__)} -Wl,--no-whole-archive -lstdc++ '
+                    '-lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
+```
+
 ## How to build the precompiled library
 
 ```bash
