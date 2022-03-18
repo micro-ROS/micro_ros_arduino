@@ -90,26 +90,6 @@ An example of a micro-ROS application using PlatformIO is available [here](https
 
 #### Known issues
 
-- `multiple definition of` Link errors on galactic:
-
-  Create a python script fix_linker.py on your directory and modify the linker flags manually:
-  ```
-  Import("env")
-  env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
-                      '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, '
-                      'LIBSUFFIXES, __env__)} -Wl,--no-whole-archive -lstdc++ '
-                      '-lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
-  ```
-
-  Now add it to your `platformio.ini` like this: `extra_scripts = fix_linker.py` and delete the `-l libmicroros` line on `build_flags`.
-
-  Related: https://github.com/micro-ROS/micro_ros_arduino/pull/848#issuecomment-1072196933, https://github.com/micro-ROS/micro_ros_arduino/issues/774
-
-- Arduino Portenta H7
-  - Follow **`multiple definition of` Link errors on galactic** modifications
-
-    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/847
-
 - Arduino Nano RP2040 Connect
 
   - The following versioning shall be used:
@@ -124,7 +104,6 @@ An example of a micro-ROS application using PlatformIO is available [here](https
     ```
 
   - Library dependency finder shall be set to `chain+`: `lib_ldf_mode = chain+`
-  - Follow **`multiple definition of` Link errors on galactic** modifications
 
     Related: https://github.com/micro-ROS/micro_ros_arduino/issues/780
 
