@@ -103,13 +103,12 @@ An example of a micro-ROS application using PlatformIO is available [here](https
 
   Now add it to your `platformio.ini` like this: `extra_scripts = fix_linker.py` and delete the `-l libmicroros` line on `build_flags`.
 
-  Related:
-    - https://github.com/micro-ROS/micro_ros_arduino/pull/848#issuecomment-1072196933
-    - https://github.com/micro-ROS/micro_ros_arduino/issues/774
+  Related: https://github.com/micro-ROS/micro_ros_arduino/pull/848#issuecomment-1072196933, https://github.com/micro-ROS/micro_ros_arduino/issues/774
 
 - Arduino Portenta H7
   - Follow **`multiple definition of` Link errors on galactic** modifications
 
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/847
 
 - Arduino Nano RP2040 Connect
 
@@ -127,7 +126,7 @@ An example of a micro-ROS application using PlatformIO is available [here](https
   - Library dependency finder shall be set to `chain+`: `lib_ldf_mode = chain+`
   - Follow **`multiple definition of` Link errors on galactic** modifications
 
-  Related: https://github.com/micro-ROS/micro_ros_arduino/issues/780
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/780
 
 - Arduino Due
   - The following versioning shall be used:
@@ -157,35 +156,7 @@ An example of a micro-ROS application using PlatformIO is available [here](https
       framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.2
     ```
 
-  Related: 
-    - https://github.com/micro-ROS/micro_ros_arduino/issues/736
-    - https://github.com/platformio/platform-espressif32/issues/616
-
-The `platformio.ini` file for this board must contain:
-```
-[env:portenta_h7_m7]
-platform = ststm32
-board = portenta_h7_m7
-framework = arduino
-extra_scripts = fix_linker.py
-lib_deps = 
-    https://github.com/micro-ROS/micro_ros_arduino
-build_flags =
-    -L ./.pio/libdeps/portenta_h7_m7/micro_ros_arduino/src/cortex-m7/fpv5-d16-softfp/
-    -D TARGET_PORTENTA_H7_M7
-```
-And create a `fix_linker.py` file with these contents:
-```
-Import("env")
-env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
-                    '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, '
-                    'LIBSUFFIXES, __env__)} -Wl,--no-whole-archive -lstdc++ '
-                    '-lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
-```
-
-env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
-                    '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, LIBSUFFIXES, __env__)} '
-                    '-Wl,--no-whole-archive -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/736, https://github.com/platformio/platform-espressif32/issues/616
 
 ## How to build the precompiled library
 
