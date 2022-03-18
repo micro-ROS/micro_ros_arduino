@@ -9,6 +9,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [How to use the precompiled library](#how-to-use-the-precompiled-library)
     - [Arduino IDE](#arduino-ide)
     - [PlatformIO](#platformio)
+      - [Known issues](#known-issues)
   - [How to build the precompiled library](#how-to-build-the-precompiled-library)
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
@@ -86,6 +87,106 @@ pio run --target upload # Flash the firmware
 ```
 
 An example of a micro-ROS application using PlatformIO is available [here](https://github.com/husarion/micro_ros_stm32_template).
+
+#### Known issues
+
+- `multiple definition of` Link errors on galactic:
+
+  Create a python script fix_linker.py on your directory and modify the linker flags manually:
+  ```
+  Import("env")
+  env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
+                      '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, '
+                      'LIBSUFFIXES, __env__)} -Wl,--no-whole-archive -lstdc++ '
+                      '-lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
+  ```
+
+  Now add it to your `platformio.ini` like this: `extra_scripts = fix_linker.py` and delete the `-l libmicroros` line on `build_flags`.
+
+  Related:
+    - https://github.com/micro-ROS/micro_ros_arduino/pull/848#issuecomment-1072196933
+    - https://github.com/micro-ROS/micro_ros_arduino/issues/774
+
+- Arduino Portenta H7
+  - Follow **`multiple definition of` Link errors on galactic** modifications
+
+
+- Arduino Nano RP2040 Connect
+
+  - The following versioning shall be used:
+    ```
+    lib_deps =
+      arduino-libraries/WiFiNINA@^1.8.13
+      ...
+
+    platform_packages =
+      toolchain-gccarmnoneeabi @ ~1.70201.0
+      framework-arduino-mbed @ ~2.4.1
+    ```
+
+  - Library dependency finder shall be set to `chain+`: `lib_ldf_mode = chain+`
+  - Follow **`multiple definition of` Link errors on galactic** modifications
+
+  Related: https://github.com/micro-ROS/micro_ros_arduino/issues/780
+
+- Arduino Due
+  - The following versioning shall be used:
+    ```
+    platform_packages =
+      toolchain-gccarmnoneeabi@<1.50000.0
+    ```
+
+    Related: https://github.com/micro-ROS/micro_ros_arduino/issues/698
+
+- ESP32 Dev Module
+  - Known issues with espressif32 arduino package, use `2.0.2` version:
+    ```
+    [env:esp32dev]
+    platform = https://github.com/platformio/platform-espressif32.git#feature/arduino-upstream
+    board = esp32dev
+    framework = arduino
+    lib_deps =
+        https://github.com/micro-ROS/micro_ros_arduino.git
+    build_flags =
+        -L ./.pio/libdeps/esp32dev/micro_ros_arduino/src/esp32/
+        -l microros
+        -D ESP32
+
+    platform_packages =
+      toolchain-xtensa32 @ ~2.80400.0
+      framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.2
+    ```
+
+  Related: 
+    - https://github.com/micro-ROS/micro_ros_arduino/issues/736
+    - https://github.com/platformio/platform-espressif32/issues/616
+
+The `platformio.ini` file for this board must contain:
+```
+[env:portenta_h7_m7]
+platform = ststm32
+board = portenta_h7_m7
+framework = arduino
+extra_scripts = fix_linker.py
+lib_deps = 
+    https://github.com/micro-ROS/micro_ros_arduino
+build_flags =
+    -L ./.pio/libdeps/portenta_h7_m7/micro_ros_arduino/src/cortex-m7/fpv5-d16-softfp/
+    -D TARGET_PORTENTA_H7_M7
+```
+And create a `fix_linker.py` file with these contents:
+```
+Import("env")
+env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
+                    '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, '
+                    'LIBSUFFIXES, __env__)} -Wl,--no-whole-archive -lstdc++ '
+                    '-lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
+```
+
+env["_LIBFLAGS"] =  ('-Wl,--start-group -Wl,--whole-archive '
+                    '${_stripixes(LIBLINKPREFIX, LIBS, LIBLINKSUFFIX, LIBPREFIXES, LIBSUFFIXES, __env__)} '
+                    '-Wl,--no-whole-archive -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -lmicroros -Wl,--end-group')
+
 ## How to build the precompiled library
 
 ```bash
