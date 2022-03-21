@@ -51,7 +51,7 @@ You can find the available precompiled ROS 2 types for messages and services in 
 
 Go to [link to release section](https://github.com/micro-ROS/micro_ros_arduino/releases) and download the last release of micro-ROS library for Arduino.
 
-Include it in your proyect using `Sketch -> Include library -> Add .ZIP Library...`
+Include it in your project using `Sketch -> Include library -> Add .ZIP Library...`
 
 You can test micro-ROS examples located in this repo examples folder.
 
