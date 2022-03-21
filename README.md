@@ -78,13 +78,18 @@ build_flags =
     -D <TARGET_DEFINITION>
 ```
 
-| <YOUR_BOARD>                       | <BOARD_ARCHITECTURE>      | <TARGET_DEFINITION>   |
-| -----------------------------------| ------------------------- | --------------------- |
-| portenta_h7_m7                     | cortex-m7/fpv5-d16-softfp | TARGET_PORTENTA_H7_M7 |
-| teensy41                           | imxrt1062/fpv5-d16-hard   | TARGET_TEENSY_41      |
-| teensy36                           | imxrt1062/fpv5-d16-hard   | TARGET_TEENSY_36      |
-| olimex_e407                        | cortex-m4                 | TARGET_STM32F4        |
-| esp32dev                           | esp32                     | ESP32                 |
+| Board                       | <YOUR_BOARD>        | <BOARD_ARCHITECTURE>         | <TARGET_DEFINITION>                 |
+| ----------------------------| ------------------- | ---------------------------- | ----------------------------------- |
+| Arduino Portenta H7 M7 Core | portenta_h7_m7      | cortex-m7/fpv5-d16-softfp    | TARGET_PORTENTA_H7_M7               |
+| Arduino Nano RP2040 Connect | nanorp2040connect   | cortex-m0plus                | ARDUINO_NANO_RP2040_CONNECT         |
+| Teensy 4.1/4.0              | teensy41 / teensy40 | imxrt1062/fpv5-d16-hard      | ARDUINO_TEENSY41                    |
+| Teensy 3.6                  | teensy36            | mk66fx1m0/fpv4-sp-d16-hard   | ARDUINO_TEENSY36                    |
+| Teensy 3.5                  | teensy35            | mk64fx512/fpv4-sp-d16-hard   | ARDUINO_TEENSY35                    |
+| Teensy 3.2  / 3.1           | teensy31            | mk20dx256                    | ARDUINO_TEENSY32 / ARDUINO_TEENSY31 |
+| ESP32 Dev Module            | esp32dev            | esp32                        | ESP32                               |
+| STM32-E407                  | olimex_e407         | cortex-m4                    | TARGET_STM32F4                      |
+| Arduino Due                 | due                 | cortex-m3                    | -                                   |
+| Arduino Zero                | zero                | cortex-m0plus                | -                                   |
 
 Now to proceed with the PlatformIO workflow:
 
