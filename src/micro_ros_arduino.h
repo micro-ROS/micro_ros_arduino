@@ -49,10 +49,7 @@ static inline void set_microros_transports(){
 #endif
 
 #if defined(TARGET_PORTENTA_H7_M7) 
-#include <EthernetUdp.h>
 #include <PortentaEthernet.h>
-#include <uxr/client/transport.h>
-#include <rmw_microros/rmw_microros.h>
 #endif
 
 #if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41)  || defined(TARGET_PORTENTA_H7_M7)
@@ -102,7 +99,7 @@ extern "C" bool arduino_wifi_transport_open(struct uxrCustomTransport * transpor
 extern "C" bool arduino_wifi_transport_close(struct uxrCustomTransport * transport);
 extern "C" size_t arduino_wifi_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
 extern "C" size_t arduino_wifi_transport_read(struct uxrCustomTransport* transport, uint8_t* buf, size_t len, int timeout, uint8_t* err);
-#if not defined(TARGET_PORTENTA_H7_M7)
+#ifndef TARGET_PORTENTA_H7_M7
 struct micro_ros_agent_locator {
 	IPAddress address;
 	int port;
