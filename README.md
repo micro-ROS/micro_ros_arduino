@@ -78,6 +78,13 @@ build_flags =
     -D <TARGET_DEFINITION>
 ```
 
+| <YOUR_BOARD>                       | <BOARD_ARCHITECTURE>       | <TARGET_DEFINITION>   |
+| -----------------------------------| -------------------------- | --------------------- |
+| portenta_h7_m7                     | cortex-m7/fpv5-d16-softfp/ | TARGET_PORTENTA_H7_M7 |
+| teensy41                           | imxrt1062/fpv5-d16-hard/   | TARGET_TEENSY_41      |
+| teensy36                           | imxrt1062/fpv5-d16-hard/   | TARGET_TEENSY_36      |
+| olimex_e407                        | cortex-m4/                 | TARGET_STM32F4        |
+
 Now to proceed with the PlatformIO workflow:
 
 ```bash
