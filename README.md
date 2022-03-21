@@ -78,12 +78,13 @@ build_flags =
     -D <TARGET_DEFINITION>
 ```
 
-| <YOUR_BOARD>                       | <BOARD_ARCHITECTURE>       | <TARGET_DEFINITION>   |
-| -----------------------------------| -------------------------- | --------------------- |
-| portenta_h7_m7                     | cortex-m7/fpv5-d16-softfp/ | TARGET_PORTENTA_H7_M7 |
-| teensy41                           | imxrt1062/fpv5-d16-hard/   | TARGET_TEENSY_41      |
-| teensy36                           | imxrt1062/fpv5-d16-hard/   | TARGET_TEENSY_36      |
-| olimex_e407                        | cortex-m4/                 | TARGET_STM32F4        |
+| <YOUR_BOARD>                       | <BOARD_ARCHITECTURE>      | <TARGET_DEFINITION>   |
+| -----------------------------------| ------------------------- | --------------------- |
+| portenta_h7_m7                     | cortex-m7/fpv5-d16-softfp | TARGET_PORTENTA_H7_M7 |
+| teensy41                           | imxrt1062/fpv5-d16-hard   | TARGET_TEENSY_41      |
+| teensy36                           | imxrt1062/fpv5-d16-hard   | TARGET_TEENSY_36      |
+| olimex_e407                        | cortex-m4                 | TARGET_STM32F4        |
+| esp32dev                           | esp32                     | ESP32                 |
 
 Now to proceed with the PlatformIO workflow:
 
@@ -171,6 +172,15 @@ An example of a micro-ROS application using PlatformIO is available [here](https
 docker pull microros/micro_ros_static_library_builder:galactic
 docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:galactic
 ```
+
+Optionally a specific single target can be built using the `-p <LIBRARY_TARGET>` argument like this:
+
+```bash
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:galactic -p <LIBRARY_TARGET>
+```
+
+Available targets `LIBRARY_TARGETS` are available on the [top of the extras/library_generation/library_generation.sh file](https://github.com/micro-ROS/micro_ros_arduino/blob/main/extras/library_generation/library_generation.sh#L13-L24)
+
 Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 
 ## Patch Arduino board for support precompiled libraries
