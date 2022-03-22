@@ -91,6 +91,7 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rcutils/allocator.h"
 #include "rcutils/macros.h"
 #include "rcutils/types.h"
 
@@ -1116,6 +1117,70 @@ rmw_ret_t
 rmw_subscription_get_actual_qos(
   const rmw_subscription_t * subscription,
   rmw_qos_profile_t * qos);
+
+/// Set the content filter options for the subscription.
+/**
+ * This function will set a filter expression and an array of expression parameters
+ * for the given subscription.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] implementation defined, check the implementation documentation</i>
+ *
+ * \param[in] subscription The subscription to set content filter options.
+ * \param[in] options The content filter options.
+ *   Use `options.filter_expression` with an empty("") string to
+ *   reset/clean content filtered topic for the subscription.
+ * \return `RMW_RET_OK` if successful, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if an argument is null, or
+ * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `subscription` implementation
+ *   identifier does not match this implementation, or
+ * \return `RMW_RET_UNSUPPORTED` if the implementation does not support content filtered topic, or
+ * \return `RMW_RET_ERROR` if an unspecified error occurs.
+ */
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_subscription_set_content_filter(
+  rmw_subscription_t * subscription,
+  const rmw_subscription_content_filter_options_t * options);
+
+/// Retrieve the content filter options of the subscription.
+/**
+ * This function will return a content filter options by the given subscription.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] implementation defined, check the implementation documentation</i>
+ *
+ * \param[in] subscription The subscription object to inspect.
+ * \param[in] allocator Allocator to be used when populating the content filter options.
+ * \param[out] options The content filter options.
+ * \return `RMW_RET_OK` if successful, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if an argument is null, or
+ * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `subscription` implementation
+ *   identifier does not match this implementation, or
+ * \return `RMW_RET_BAD_ALLOC` if memory allocation fails, or
+ * \return `RMW_RET_UNSUPPORTED` if the implementation does not support content filtered topic, or
+ * \return `RMW_RET_ERROR` if an unspecified error occurs.
+ */
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_subscription_get_content_filter(
+  const rmw_subscription_t * subscription,
+  rcutils_allocator_t * allocator,
+  rmw_subscription_content_filter_options_t * options);
 
 /// Take an incoming ROS message.
 /**
