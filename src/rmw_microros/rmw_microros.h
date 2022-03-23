@@ -25,6 +25,7 @@
 #include <rmw_microros/init_options.h>
 #include <rmw_microros/time_sync.h>
 #include <rmw_microros/ping.h>
+#include <rmw_microros/timing.h>
 
 #if defined(RMW_UXRCE_TRANSPORT_UDP) || defined(RMW_UXRCE_TRANSPORT_TCP)
 #include <rmw_microros/discovery.h>
