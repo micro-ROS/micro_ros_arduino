@@ -8,7 +8,7 @@
 #include <std_msgs/msg/int32.h>
 
 #if !defined(TARGET_STM32F4) && !defined(ARDUINO_TEENSY41) && !defined(TARGET_PORTENTA_H7_M7)
-#error This example is only avaible for Arduino Portenta, Arduino Teensy41 and STM32F4
+#error This example is only available for Arduino Portenta, Arduino Teensy41 and STM32F4
 #endif
 
 rcl_publisher_t publisher;
