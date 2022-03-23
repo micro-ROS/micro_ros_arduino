@@ -173,7 +173,7 @@ An example of a micro-ROS application using PlatformIO is available [here](https
 
 ## How to build the precompiled library
 
-If you need to add customized messages or services, or customize the number of server services or any other micros parameter then you will need to recompile this library from source code:
+If you need to add custom packages or types, or customize any internal parameter of the micro-ROS stack, you will need to recompile this library from source code:
 
 ```bash
 docker pull microros/micro_ros_static_library_builder:galactic
@@ -191,7 +191,7 @@ Available targets `LIBRARY_TARGETS` are available on the [top of the extras/libr
 Folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 This should be used for example when adding custom messages or services.
 
-You can [configure many parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) of the `prebuild meta` by editing the respective `.meta` file in the `extras/library_generation/` directory.
+You can [configure many parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) of the library by editing the respective `.meta` file in the `extras/library_generation/` directory.
 
 ## Patch Arduino board for support precompiled libraries
 ### Patch Teensyduino
