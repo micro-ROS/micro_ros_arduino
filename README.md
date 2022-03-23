@@ -189,7 +189,7 @@ docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras micr
 Available targets `LIBRARY_TARGETS` are available on the [top of the extras/library_generation/library_generation.sh file](https://github.com/micro-ROS/micro_ros_arduino/blob/main/extras/library_generation/library_generation.sh#L13-L24)
 
 Folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
-This should be used for example when adding custom messages or services.
+This should be used for example when adding custom messages types or custom micro-ROS packages.
 
 You can [configure many parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) of the library by editing the respective `.meta` file in the `extras/library_generation/` directory.
 
