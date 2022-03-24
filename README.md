@@ -2,7 +2,7 @@
 
 This is a micro-ROS library for baremetal projects based on Arduino IDE or Arduino CLI.
 
-As the build process for ROS 2 and micro-ROS is based on custom meta-build system tools and CMake, this library is provided as a precompiled library. Anyways, users can rebuild its own precompiled libraries in order to modify micro-ROS parameters, for example customizing prebuild meta file.
+As the build process for ROS 2 and micro-ROS is based on custom meta-build system tools and [CMake](https://cmake.org/), this library is provided as a precompiled library. However, users can rebuild their own precompiled libraries in order to modify the micro-ROS configuration or [RMW parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) by customizing the respective [.meta file](https://github.com/micro-ROS/micro_ros_arduino/tree/main/extras/library_generation).
 
 - [micro-ROS for Arduino](#micro-ros-for-arduino)
   - [Supported boards](#supported-boards)
@@ -22,7 +22,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
 
 Supported boards are:
 
-| Board                                                                               | Min version | State      | Details                                                                                             | Prebuild meta            |
+| Board                                                                               | Min version | State      | Details                                                                                             | .meta file               |
 | ----------------------------------------------------------------------------------- | ----------- | ---------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
 | [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                 | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon.meta`            |
 | [Arduino Nano RP2040 Connect](https://docs.arduino.cc/hardware/nano-rp2040-connect) | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon_verylowmem.meta` |
@@ -36,7 +36,7 @@ Supported boards are:
 
 Community contributed boards are:
 
-| Board                                                                                    | Min version | Contributor                                    | Details | Prebuild meta            |
+| Board                                                                                    | Min version | Contributor                                    | Details | .meta file               |
 | ---------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------- | ------- | ------------------------ |
 | [Arduino Due](https://store.arduino.cc/arduino-due)                                      | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
 | [Arduino Zero](https://store.arduino.cc/arduino-zero)                                    | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
