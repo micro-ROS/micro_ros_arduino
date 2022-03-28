@@ -158,7 +158,10 @@ rcl_logging_rosout_fini_publisher_for_node(
  * message out via that publisher. If there is no publisher directly correlated
  * with the logger then nothing will be done.
  *
- * This function is meant to be registered with the logging functions for rcutils
+ * This function is meant to be registered with the logging functions for
+ * rcutils, and shouldn't be used outside of that context.
+ * Additionally, arguments like args should be non-null and properly initialized
+ * otherwise it is undefined behavior.
  *
  * <hr>
  * Attribute          | Adherence
@@ -176,7 +179,8 @@ rcl_logging_rosout_fini_publisher_for_node(
  * \param[in] args argument for the string format
  */
 RCL_PUBLIC
-void rcl_logging_rosout_output_handler(
+void
+rcl_logging_rosout_output_handler(
   const rcutils_log_location_t * location,
   int severity,
   const char * name,
