@@ -225,7 +225,7 @@ rcl_timer_fini(rcl_timer_t * timer);
  * \param[inout] timer the handle to the timer to call
  * \return #RCL_RET_OK if the timer was called successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_TIMER_CANCELED if the timer has been canceled, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
@@ -250,10 +250,9 @@ rcl_timer_call(rcl_timer_t * timer);
  *
  * \param[in] timer the handle to the timer which is being queried
  * \param[out] clock the rcl_clock_t * in which the clock is stored
- * \return #RCL_RET_OK if the period was retrieved successfully, or
+ * \return #RCL_RET_OK if the clock was retrieved successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
- * \return #RCL_RET_ERROR an unspecified error occur.
+ * \return #RCL_RET_TIMER_INVALID if the timer is invalid.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -282,7 +281,7 @@ rcl_timer_clock(rcl_timer_t * timer, rcl_clock_t ** clock);
  * \param[out] is_ready the bool used to store the result of the calculation
  * \return #RCL_RET_OK if the last call time was retrieved successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
 RCL_PUBLIC
@@ -317,7 +316,7 @@ rcl_timer_is_ready(const rcl_timer_t * timer, bool * is_ready);
  * \param[out] time_until_next_call the output variable for the result
  * \return #RCL_RET_OK if the timer until next call was successfully calculated, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_TIMER_CANCELED if the timer is canceled, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
@@ -350,7 +349,7 @@ rcl_timer_get_time_until_next_call(const rcl_timer_t * timer, int64_t * time_unt
  * \param[out] time_since_last_call the struct in which the time is stored
  * \return #RCL_RET_OK if the last call time was retrieved successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
 RCL_PUBLIC
@@ -377,6 +376,7 @@ rcl_timer_get_time_since_last_call(const rcl_timer_t * timer, int64_t * time_sin
  * \param[out] period the int64_t in which the period is stored
  * \return #RCL_RET_OK if the period was retrieved successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
 RCL_PUBLIC
@@ -407,6 +407,7 @@ rcl_timer_get_period(const rcl_timer_t * timer, int64_t * period);
  * \param[out] old_period the int64_t in which the previous period is stored
  * \return #RCL_RET_OK if the period was retrieved successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
 RCL_PUBLIC
@@ -482,10 +483,9 @@ rcl_timer_exchange_callback(rcl_timer_t * timer, const rcl_timer_callback_t new_
  * <i>[1] if `atomic_is_lock_free()` returns true for `atomic_int_least64_t`</i>
  *
  * \param[inout] timer the timer to be canceled
- * \return #RCL_RET_OK if the last call time was retrieved successfully, or
+ * \return #RCL_RET_OK if the timer was canceled successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
- * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
- * \return #RCL_RET_ERROR an unspecified error occur.
+ * \return #RCL_RET_TIMER_INVALID if the timer is invalid.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -513,6 +513,7 @@ rcl_timer_cancel(rcl_timer_t * timer);
  * \param[out] is_canceled storage for the is canceled bool
  * \return #RCL_RET_OK if the last call time was retrieved successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
  * \return #RCL_RET_ERROR an unspecified error occur.
  */
 RCL_PUBLIC
@@ -536,7 +537,7 @@ rcl_timer_is_canceled(const rcl_timer_t * timer, bool * is_canceled);
  * <i>[1] if `atomic_is_lock_free()` returns true for `atomic_int_least64_t`</i>
  *
  * \param[inout] timer the timer to be reset
- * \return #RCL_RET_OK if the last call time was retrieved successfully, or
+ * \return #RCL_RET_OK if the timer was reset successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
  * \return #RCL_RET_TIMER_INVALID if the timer is invalid, or
  * \return #RCL_RET_ERROR an unspecified error occur.
