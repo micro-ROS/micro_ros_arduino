@@ -2,7 +2,7 @@
 
 <a>
    <p align="center">
-      <img width="40%" src=".images/arduino_logo.png">
+      <img width="20%" src=".images/arduino_logo.png">
       <img width="40%" src=".images/microros_logo.png">
    </p>
 </a>
