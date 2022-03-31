@@ -1,3 +1,13 @@
+<br/>
+
+<a>
+   <p align="center">
+      <img width="40%" src=".images/arduino_logo.png">
+      <img width="40%" src=".images/microros_logo.png">
+   </p>
+</a>
+<br/>
+
 # micro-ROS for Arduino
 
 This is a micro-ROS library for baremetal projects based on Arduino IDE or Arduino CLI.
