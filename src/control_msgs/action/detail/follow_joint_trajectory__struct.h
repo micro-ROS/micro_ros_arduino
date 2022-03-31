@@ -124,7 +124,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_Result
   /// - INVALID_GOAL: The reason for the invalid goal (e.g., the requested
   ///   trajectory is in the past).
   /// - INVALID_JOINTS: The mismatch between the expected controller joints
-  ///   and those provided in the goal.
+  /// and those provided in the goal.
   /// - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint
   ///   violated which tolerance, and by how much.
   rosidl_runtime_c__String error_string;
