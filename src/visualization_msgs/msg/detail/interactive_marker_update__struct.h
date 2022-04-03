@@ -21,11 +21,11 @@ extern "C"
 /**
   * Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.
   * UPDATE: Incremental update to previous state.
-  * The sequence number must be 1 higher than for
-  *         the previous update.
+  *         The sequence number must be 1 higher than for
+  * the previous update.
   * KEEP_ALIVE: Indicates the that the server is still living.
-  * The sequence number does not increase.
-  *             No payload data should be filled out (markers, poses, or erases).
+  *             The sequence number does not increase.
+  * No payload data should be filled out (markers, poses, or erases).
  */
 enum
 {

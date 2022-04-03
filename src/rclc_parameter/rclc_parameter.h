@@ -340,7 +340,7 @@ rcl_ret_t
 rclc_parameter_get_int(
   rclc_parameter_server_t * parameter_server,
   const char * parameter_name,
-  int * output);
+  int64_t * output);
 
 /**
  *  Get the value of an existing a RCLC double parameter
