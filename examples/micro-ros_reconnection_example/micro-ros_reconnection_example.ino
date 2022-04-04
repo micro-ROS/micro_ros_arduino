@@ -131,6 +131,4 @@ void loop() {
   } else {
     digitalWrite(LED_PIN, 0);
   }
-
-  delayMicroseconds(delay);
 }
