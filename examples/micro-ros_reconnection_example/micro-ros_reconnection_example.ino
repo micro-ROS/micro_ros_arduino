@@ -118,7 +118,7 @@ void loop() {
         rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
       }
       break;
-    case AGENT_DISCONNECTED:1
+    case AGENT_DISCONNECTED:
       destroy_entities();
       state = WAITING_AGENT;
       break;
