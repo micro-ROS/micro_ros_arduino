@@ -24,7 +24,7 @@ https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 9b9278c0b3a633aa7ad634bda2fd2c4f04093dcf
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
 https://github.com/micro-ROS/rcl 1fac9bf845f32bce311730d3dda1fddbb8b101e6
-https://github.com/ros2/rclc 3a090870a97bc65c37872020610c7dfd96a46b64
+https://github.com/ros2/rclc 2442f752c5071e4de8a5cfaa0bceed1fca14b866
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 51c7e2b36a4ddb8175c4662145c84a66c23be317
 https://github.com/micro-ROS/rcutils 1176652124c12b23cb58f052077901d2c24dbf39
 https://github.com/micro-ROS/rosidl_typesupport.git d569fcc82aca391470a43dd5fc388f9f3a4d477d
