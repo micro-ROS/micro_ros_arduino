@@ -244,10 +244,14 @@ done
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /project/available_ros2_types
 find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /project/available_ros2_types
+# sort it so that the result order is reproducible
+sort -o /project/available_ros2_types /project/available_ros2_types
 
 cd firmware
 echo "" > /project/built_packages
 for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /project/built_packages; popd > /dev/null; done;
+# sort it so that the result order is reproducible
+sort -o /project/built_packages /project/built_packages
 
 ######## Fix permissions ########
 sudo chmod -R 777 .
