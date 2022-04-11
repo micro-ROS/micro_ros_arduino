@@ -12,7 +12,7 @@
 
 This is a micro-ROS library for baremetal projects based on Arduino IDE or Arduino CLI.
 
-As the build process for ROS 2 and micro-ROS is based on custom meta-build system tools and [CMake](https://cmake.org/), this library is provided as a precompiled library. However, users can rebuild their own precompiled libraries in order to modify the micro-ROS configuration or [RMW parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) by customizing the respective [.meta file](https://github.com/micro-ROS/micro_ros_arduino/tree/main/extras/library_generation).
+As the build process for ROS 2 and micro-ROS is based on [custom meta-build system tools](https://colcon.readthedocs.io/en/released/user/quick-start.html) and [CMake](https://cmake.org/), this library is provided as a precompiled library. However, users can rebuild their own precompiled libraries in order to modify the [micro-ROS configuration](https://github.com/micro-ROS/rmw_microxrcedds) or [RMW parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) by customizing the respective [.meta file](https://github.com/micro-ROS/micro_ros_arduino/tree/main/extras/library_generation).
 
 - [micro-ROS for Arduino](#micro-ros-for-arduino)
   - [Supported boards](#supported-boards)
@@ -201,7 +201,7 @@ Available targets `LIBRARY_TARGETS` are available on the [top of the extras/libr
 Folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 This should be used for example when adding custom messages types or custom micro-ROS packages.
 
-You can [configure many parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) of the library by editing the respective `.meta` file in the `extras/library_generation/` directory.
+You can [configure RMW parameters](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/) and [configure µROS itself](https://github.com/micro-ROS/rmw_microxrcedds) by editing the respective `.meta` file in the `extras/library_generation/` directory.
 
 ## Patch Arduino board for support precompiled libraries
 ### Patch Teensyduino
