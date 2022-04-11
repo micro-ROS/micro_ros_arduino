@@ -17,6 +17,11 @@
 #ifndef RCLC_LIFECYCLE__RCLC_LIFECYCLE_H_
 #define RCLC_LIFECYCLE__RCLC_LIFECYCLE_H_
 
+#if __cplusplus
+extern "C"
+{
+#endif
+
 #define RCLC_LIFECYCLE_MAX_NUMBER_OF_STATES 100  // highest transition id: 99
 
 #include <rcutils/logging_macros.h>
@@ -156,5 +161,9 @@ rcl_ret_t
 rclc_lifecycle_node_fini(
   rclc_lifecycle_node_t * node,
   rcl_allocator_t * allocator);
+
+#if __cplusplus
+}
+#endif
 
 #endif  // RCLC_LIFECYCLE__RCLC_LIFECYCLE_H_
