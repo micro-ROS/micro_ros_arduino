@@ -2,10 +2,6 @@
 #ifndef MICRO_ROS_ARDUINO
 #define MICRO_ROS_ARDUINO
 
-// ---- Build fixes -----
-//Removing __attribute__ not supported by gcc-arm-none-eabi-5_4
-#define __attribute__(x)
-
 #ifdef ARDUINO_SAMD_ZERO
 // Avoid macro usage in https://github.com/eProsima/Micro-XRCE-DDS-Client/blob/66df0a6df20063d246dd638ac3d33eb2e652fab2/include/uxr/client/core/session/session.h#L97
 // beacuse of https://github.com/arduino/ArduinoCore-samd/blob/0b60a79c4b194ed2e76fead95caf1bbce8960049/cores/arduino/sync.h#L28
@@ -14,7 +10,20 @@
 // ----------------------
 
 #include <uxr/client/transport.h>
+
+// ---- Build fixes -----
+// In GNU C do not support __attribute__((deprecated(msg))), used in rmw/types.h
+#if __GNUC__ < 6
+#define aux__attribute__(x) __attribute__(x)
+#define __attribute__(x)
+#endif
+
 #include <rmw_microros/rmw_microros.h>
+
+#if __GNUC__ < 6
+#undef __attribute__
+#define __attribute__(x) aux__attribute__(x)
+#endif
 
 extern "C" bool arduino_transport_open(struct uxrCustomTransport * transport);
 extern "C" bool arduino_transport_close(struct uxrCustomTransport * transport);
@@ -48,7 +57,7 @@ static inline void set_microros_transports(){
 #include <NativeEthernet.h>
 #endif
 
-#if defined(TARGET_PORTENTA_H7_M7) 
+#if defined(TARGET_PORTENTA_H7_M7)
 #include <PortentaEthernet.h>
 #endif
 
