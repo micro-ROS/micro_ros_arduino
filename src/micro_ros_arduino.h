@@ -11,8 +11,7 @@
 
 #include <uxr/client/transport.h>
 
-// ---- Build fixes -----
-// In GNU C do not support __attribute__((deprecated(msg))), used in rmw/types.h
+// In GNU C < 6.0.0 __attribute__((deprecated(msg))) is not supported for enums, used in rmw/types.h
 #if __GNUC__ < 6
 #define aux__attribute__(x) __attribute__(x)
 #define __attribute__(x)
