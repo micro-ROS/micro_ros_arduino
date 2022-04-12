@@ -35,7 +35,7 @@ extern "C"
   *
   * - average cpu %
   * - std deviation
-  *   - min
+  * - min
   *   - max
   *   - sample count
   *
