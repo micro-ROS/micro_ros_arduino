@@ -35,9 +35,9 @@ extern "C"
   *
   *   - average cpu %
   * - std deviation
-  *   - min
+  * - min
   *   - max
-  * - sample count
+  *   - sample count
   *
   * These are all represented as different 'StatisticDataPoint's.
  */
