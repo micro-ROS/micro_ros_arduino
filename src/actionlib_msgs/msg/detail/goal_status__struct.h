@@ -38,7 +38,7 @@ enum
 /// Constant 'PREEMPTED'.
 /**
   * The goal received a cancel request after it started executing
-  * and has since completed its execution (Terminal State).
+  *   and has since completed its execution (Terminal State).
  */
 enum
 {
@@ -48,7 +48,7 @@ enum
 /// Constant 'SUCCEEDED'.
 /**
   * The goal was achieved successfully by the action server
-  * (Terminal State).
+  *   (Terminal State).
  */
 enum
 {
@@ -68,7 +68,7 @@ enum
 /// Constant 'REJECTED'.
 /**
   * The goal was rejected by the action server without being processed,
-  *    because the goal was unattainable or invalid (Terminal State).
+  * because the goal was unattainable or invalid (Terminal State).
  */
 enum
 {
@@ -78,7 +78,7 @@ enum
 /// Constant 'PREEMPTING'.
 /**
   * The goal received a cancel request after it started executing
-  *    and has not yet completed execution.
+  * and has not yet completed execution.
  */
 enum
 {
@@ -88,7 +88,7 @@ enum
 /// Constant 'RECALLING'.
 /**
   * The goal received a cancel request before it started executing, but
-  * the action server has not yet confirmed that the goal is canceled.
+  *    the action server has not yet confirmed that the goal is canceled.
  */
 enum
 {
@@ -98,7 +98,7 @@ enum
 /// Constant 'RECALLED'.
 /**
   * The goal received a cancel request before it started executing
-  * and was successfully cancelled (Terminal State).
+  *    and was successfully cancelled (Terminal State).
  */
 enum
 {
