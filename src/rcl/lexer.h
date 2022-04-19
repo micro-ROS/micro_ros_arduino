@@ -88,6 +88,7 @@ typedef enum rcl_lexeme_e
  * This function analyzes a string to see if it starts with a valid lexeme.
  * If the string does not begin with a valid lexeme then lexeme will be RCL_LEXEME_NONE, and the
  * length will be set to include the character that made it impossible.
+ * It will never be longer than the length of the string.
  * If the first character is '\0' then lexeme will be RCL_LEXEME_EOF.
  *
  * <hr>
