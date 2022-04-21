@@ -19,7 +19,6 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [How to use the precompiled library](#how-to-use-the-precompiled-library)
     - [Arduino IDE](#arduino-ide)
     - [PlatformIO](#platformio)
-      - [Known issues](#known-issues)
   - [How to build the precompiled library](#how-to-build-the-precompiled-library)
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
@@ -73,6 +72,7 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 ```
 ### PlatformIO
 
+<<<<<<< HEAD
 For boards supported by micro-ROS, all you have to do to add the library to your project is including the following lines in the existing `platformio.ini` file:
 
 ```ini
@@ -180,6 +180,9 @@ An example of a micro-ROS application using PlatformIO is available [here](https
     ```
 
     Related: https://github.com/micro-ROS/micro_ros_arduino/issues/736, https://github.com/platformio/platform-espressif32/issues/616
+=======
+PlatformIO support for this repository has been deprecated in favor of its own build system: [micro_ros_platformio](https://github.com/micro-ROS/micro_ros_platformio)
+>>>>>>> a67de52 (Deprecate platformIO support (#957))
 
 ## How to build the precompiled library
 
