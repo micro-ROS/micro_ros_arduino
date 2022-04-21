@@ -72,7 +72,7 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 ```
 ### PlatformIO
 
-PlatformIO support form this repository has been deprecated in favor of its custom build system: [micro_ros_platformio](https://github.com/micro-ROS/micro_ros_platformio)
+PlatformIO support for this repository has been deprecated in favor of its own build system: [micro_ros_platformio](https://github.com/micro-ROS/micro_ros_platformio)
 
 ## How to build the precompiled library
 
