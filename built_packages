@@ -1,7 +1,7 @@
 
 https://github.com/ament/ament_cmake.git 6011ffd7ce61e8e9a01eb9871aac5b0aa3c2c85b
 https://github.com/ament/ament_index.git 7c8a2762453bf928909cc3dd65d2164b2f67dbaf
-https://github.com/ament/ament_lint.git 4bc68c815ce308b3443e3cb38fd71e2b03ffdc40
+https://github.com/ament/ament_lint.git bfdebca6b92944ba71def3d8507c47707b8af72e
 https://github.com/ament/ament_package.git de0e60e3b7370df1e2365f125046c5676daae508
 https://github.com/ament/googletest.git 79c4c9db1a7bc8bc5473a280499bf776173653d6
 https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
