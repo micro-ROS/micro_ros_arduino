@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__OccupancyGrid__destroy(nav_msgs__msg__OccupancyGrid * msg);
 
+/// Check for msg/OccupancyGrid message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__OccupancyGrid__are_equal(const nav_msgs__msg__OccupancyGrid * lhs, const nav_msgs__msg__OccupancyGrid * rhs);
+
+/// Copy a msg/OccupancyGrid message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__OccupancyGrid__copy(
+  const nav_msgs__msg__OccupancyGrid * input,
+  nav_msgs__msg__OccupancyGrid * output);
 
 /// Initialize array of msg/OccupancyGrid messages.
 /**
@@ -116,6 +142,33 @@ nav_msgs__msg__OccupancyGrid__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__OccupancyGrid__Sequence__destroy(nav_msgs__msg__OccupancyGrid__Sequence * array);
+
+/// Check for msg/OccupancyGrid message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__OccupancyGrid__Sequence__are_equal(const nav_msgs__msg__OccupancyGrid__Sequence * lhs, const nav_msgs__msg__OccupancyGrid__Sequence * rhs);
+
+/// Copy an array of msg/OccupancyGrid messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__OccupancyGrid__Sequence__copy(
+  const nav_msgs__msg__OccupancyGrid__Sequence * input,
+  nav_msgs__msg__OccupancyGrid__Sequence * output);
 
 #ifdef __cplusplus
 }

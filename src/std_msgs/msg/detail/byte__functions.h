@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 void
 std_msgs__msg__Byte__destroy(std_msgs__msg__Byte * msg);
 
+/// Check for msg/Byte message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__Byte__are_equal(const std_msgs__msg__Byte * lhs, const std_msgs__msg__Byte * rhs);
+
+/// Copy a msg/Byte message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__Byte__copy(
+  const std_msgs__msg__Byte * input,
+  std_msgs__msg__Byte * output);
 
 /// Initialize array of msg/Byte messages.
 /**
@@ -116,6 +142,33 @@ std_msgs__msg__Byte__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 void
 std_msgs__msg__Byte__Sequence__destroy(std_msgs__msg__Byte__Sequence * array);
+
+/// Check for msg/Byte message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__Byte__Sequence__are_equal(const std_msgs__msg__Byte__Sequence * lhs, const std_msgs__msg__Byte__Sequence * rhs);
+
+/// Copy an array of msg/Byte messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_std_msgs
+bool
+std_msgs__msg__Byte__Sequence__copy(
+  const std_msgs__msg__Byte__Sequence * input,
+  std_msgs__msg__Byte__Sequence * output);
 
 #ifdef __cplusplus
 }
