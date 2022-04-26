@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__srv__GetInteractiveMarkers_Request__destroy(visualization_msgs__srv__GetInteractiveMarkers_Request * msg);
 
+/// Check for srv/GetInteractiveMarkers message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Request__are_equal(const visualization_msgs__srv__GetInteractiveMarkers_Request * lhs, const visualization_msgs__srv__GetInteractiveMarkers_Request * rhs);
+
+/// Copy a srv/GetInteractiveMarkers message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Request__copy(
+  const visualization_msgs__srv__GetInteractiveMarkers_Request * input,
+  visualization_msgs__srv__GetInteractiveMarkers_Request * output);
 
 /// Initialize array of srv/GetInteractiveMarkers messages.
 /**
@@ -117,6 +143,33 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence__destroy(visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence * array);
 
+/// Check for srv/GetInteractiveMarkers message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence__are_equal(const visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence * lhs, const visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence * rhs);
+
+/// Copy an array of srv/GetInteractiveMarkers messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence__copy(
+  const visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence * input,
+  visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence * output);
+
 /// Initialize srv/GetInteractiveMarkers message.
 /**
  * If the init function is called twice for the same message without
@@ -165,6 +218,32 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__srv__GetInteractiveMarkers_Response__destroy(visualization_msgs__srv__GetInteractiveMarkers_Response * msg);
 
+/// Check for srv/GetInteractiveMarkers message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Response__are_equal(const visualization_msgs__srv__GetInteractiveMarkers_Response * lhs, const visualization_msgs__srv__GetInteractiveMarkers_Response * rhs);
+
+/// Copy a srv/GetInteractiveMarkers message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Response__copy(
+  const visualization_msgs__srv__GetInteractiveMarkers_Response * input,
+  visualization_msgs__srv__GetInteractiveMarkers_Response * output);
 
 /// Initialize array of srv/GetInteractiveMarkers messages.
 /**
@@ -215,6 +294,33 @@ visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence__create(size_t
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence__destroy(visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence * array);
+
+/// Check for srv/GetInteractiveMarkers message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence__are_equal(const visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence * lhs, const visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence * rhs);
+
+/// Copy an array of srv/GetInteractiveMarkers messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence__copy(
+  const visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence * input,
+  visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence * output);
 
 #ifdef __cplusplus
 }

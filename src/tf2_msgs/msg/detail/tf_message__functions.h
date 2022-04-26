@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 void
 tf2_msgs__msg__TFMessage__destroy(tf2_msgs__msg__TFMessage * msg);
 
+/// Check for msg/TFMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__msg__TFMessage__are_equal(const tf2_msgs__msg__TFMessage * lhs, const tf2_msgs__msg__TFMessage * rhs);
+
+/// Copy a msg/TFMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__msg__TFMessage__copy(
+  const tf2_msgs__msg__TFMessage * input,
+  tf2_msgs__msg__TFMessage * output);
 
 /// Initialize array of msg/TFMessage messages.
 /**
@@ -116,6 +142,33 @@ tf2_msgs__msg__TFMessage__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 void
 tf2_msgs__msg__TFMessage__Sequence__destroy(tf2_msgs__msg__TFMessage__Sequence * array);
+
+/// Check for msg/TFMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__msg__TFMessage__Sequence__are_equal(const tf2_msgs__msg__TFMessage__Sequence * lhs, const tf2_msgs__msg__TFMessage__Sequence * rhs);
+
+/// Copy an array of msg/TFMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+bool
+tf2_msgs__msg__TFMessage__Sequence__copy(
+  const tf2_msgs__msg__TFMessage__Sequence * input,
+  tf2_msgs__msg__TFMessage__Sequence * output);
 
 #ifdef __cplusplus
 }

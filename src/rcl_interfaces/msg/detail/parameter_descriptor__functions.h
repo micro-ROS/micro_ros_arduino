@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 void
 rcl_interfaces__msg__ParameterDescriptor__destroy(rcl_interfaces__msg__ParameterDescriptor * msg);
 
+/// Check for msg/ParameterDescriptor message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ParameterDescriptor__are_equal(const rcl_interfaces__msg__ParameterDescriptor * lhs, const rcl_interfaces__msg__ParameterDescriptor * rhs);
+
+/// Copy a msg/ParameterDescriptor message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ParameterDescriptor__copy(
+  const rcl_interfaces__msg__ParameterDescriptor * input,
+  rcl_interfaces__msg__ParameterDescriptor * output);
 
 /// Initialize array of msg/ParameterDescriptor messages.
 /**
@@ -116,6 +142,33 @@ rcl_interfaces__msg__ParameterDescriptor__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 void
 rcl_interfaces__msg__ParameterDescriptor__Sequence__destroy(rcl_interfaces__msg__ParameterDescriptor__Sequence * array);
+
+/// Check for msg/ParameterDescriptor message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ParameterDescriptor__Sequence__are_equal(const rcl_interfaces__msg__ParameterDescriptor__Sequence * lhs, const rcl_interfaces__msg__ParameterDescriptor__Sequence * rhs);
+
+/// Copy an array of msg/ParameterDescriptor messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+bool
+rcl_interfaces__msg__ParameterDescriptor__Sequence__copy(
+  const rcl_interfaces__msg__ParameterDescriptor__Sequence * input,
+  rcl_interfaces__msg__ParameterDescriptor__Sequence * output);
 
 #ifdef __cplusplus
 }
