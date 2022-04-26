@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__msg__InteractiveMarkerFeedback__destroy(visualization_msgs__msg__InteractiveMarkerFeedback * msg);
 
+/// Check for msg/InteractiveMarkerFeedback message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__InteractiveMarkerFeedback__are_equal(const visualization_msgs__msg__InteractiveMarkerFeedback * lhs, const visualization_msgs__msg__InteractiveMarkerFeedback * rhs);
+
+/// Copy a msg/InteractiveMarkerFeedback message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__InteractiveMarkerFeedback__copy(
+  const visualization_msgs__msg__InteractiveMarkerFeedback * input,
+  visualization_msgs__msg__InteractiveMarkerFeedback * output);
 
 /// Initialize array of msg/InteractiveMarkerFeedback messages.
 /**
@@ -116,6 +142,33 @@ visualization_msgs__msg__InteractiveMarkerFeedback__Sequence__create(size_t size
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 void
 visualization_msgs__msg__InteractiveMarkerFeedback__Sequence__destroy(visualization_msgs__msg__InteractiveMarkerFeedback__Sequence * array);
+
+/// Check for msg/InteractiveMarkerFeedback message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__InteractiveMarkerFeedback__Sequence__are_equal(const visualization_msgs__msg__InteractiveMarkerFeedback__Sequence * lhs, const visualization_msgs__msg__InteractiveMarkerFeedback__Sequence * rhs);
+
+/// Copy an array of msg/InteractiveMarkerFeedback messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+bool
+visualization_msgs__msg__InteractiveMarkerFeedback__Sequence__copy(
+  const visualization_msgs__msg__InteractiveMarkerFeedback__Sequence * input,
+  visualization_msgs__msg__InteractiveMarkerFeedback__Sequence * output);
 
 #ifdef __cplusplus
 }

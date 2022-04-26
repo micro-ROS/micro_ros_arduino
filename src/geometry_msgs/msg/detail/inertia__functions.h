@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Inertia__destroy(geometry_msgs__msg__Inertia * msg);
 
+/// Check for msg/Inertia message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Inertia__are_equal(const geometry_msgs__msg__Inertia * lhs, const geometry_msgs__msg__Inertia * rhs);
+
+/// Copy a msg/Inertia message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Inertia__copy(
+  const geometry_msgs__msg__Inertia * input,
+  geometry_msgs__msg__Inertia * output);
 
 /// Initialize array of msg/Inertia messages.
 /**
@@ -116,6 +142,33 @@ geometry_msgs__msg__Inertia__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__Inertia__Sequence__destroy(geometry_msgs__msg__Inertia__Sequence * array);
+
+/// Check for msg/Inertia message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Inertia__Sequence__are_equal(const geometry_msgs__msg__Inertia__Sequence * lhs, const geometry_msgs__msg__Inertia__Sequence * rhs);
+
+/// Copy an array of msg/Inertia messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__Inertia__Sequence__copy(
+  const geometry_msgs__msg__Inertia__Sequence * input,
+  geometry_msgs__msg__Inertia__Sequence * output);
 
 #ifdef __cplusplus
 }

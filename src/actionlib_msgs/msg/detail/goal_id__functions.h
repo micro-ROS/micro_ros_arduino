@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
 void
 actionlib_msgs__msg__GoalID__destroy(actionlib_msgs__msg__GoalID * msg);
 
+/// Check for msg/GoalID message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
+bool
+actionlib_msgs__msg__GoalID__are_equal(const actionlib_msgs__msg__GoalID * lhs, const actionlib_msgs__msg__GoalID * rhs);
+
+/// Copy a msg/GoalID message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
+bool
+actionlib_msgs__msg__GoalID__copy(
+  const actionlib_msgs__msg__GoalID * input,
+  actionlib_msgs__msg__GoalID * output);
 
 /// Initialize array of msg/GoalID messages.
 /**
@@ -116,6 +142,33 @@ actionlib_msgs__msg__GoalID__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
 void
 actionlib_msgs__msg__GoalID__Sequence__destroy(actionlib_msgs__msg__GoalID__Sequence * array);
+
+/// Check for msg/GoalID message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
+bool
+actionlib_msgs__msg__GoalID__Sequence__are_equal(const actionlib_msgs__msg__GoalID__Sequence * lhs, const actionlib_msgs__msg__GoalID__Sequence * rhs);
+
+/// Copy an array of msg/GoalID messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
+bool
+actionlib_msgs__msg__GoalID__Sequence__copy(
+  const actionlib_msgs__msg__GoalID__Sequence * input,
+  actionlib_msgs__msg__GoalID__Sequence * output);
 
 #ifdef __cplusplus
 }

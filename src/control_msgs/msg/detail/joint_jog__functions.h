@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__JointJog__destroy(control_msgs__msg__JointJog * msg);
 
+/// Check for msg/JointJog message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointJog__are_equal(const control_msgs__msg__JointJog * lhs, const control_msgs__msg__JointJog * rhs);
+
+/// Copy a msg/JointJog message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointJog__copy(
+  const control_msgs__msg__JointJog * input,
+  control_msgs__msg__JointJog * output);
 
 /// Initialize array of msg/JointJog messages.
 /**
@@ -116,6 +142,33 @@ control_msgs__msg__JointJog__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__JointJog__Sequence__destroy(control_msgs__msg__JointJog__Sequence * array);
+
+/// Check for msg/JointJog message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointJog__Sequence__are_equal(const control_msgs__msg__JointJog__Sequence * lhs, const control_msgs__msg__JointJog__Sequence * rhs);
+
+/// Copy an array of msg/JointJog messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointJog__Sequence__copy(
+  const control_msgs__msg__JointJog__Sequence * input,
+  control_msgs__msg__JointJog__Sequence * output);
 
 #ifdef __cplusplus
 }
