@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_Goal__destroy(test_msgs__action__NestedMessage_Goal * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Goal__are_equal(const test_msgs__action__NestedMessage_Goal * lhs, const test_msgs__action__NestedMessage_Goal * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Goal__copy(
+  const test_msgs__action__NestedMessage_Goal * input,
+  test_msgs__action__NestedMessage_Goal * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -117,6 +143,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_Goal__Sequence__destroy(test_msgs__action__NestedMessage_Goal__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Goal__Sequence__are_equal(const test_msgs__action__NestedMessage_Goal__Sequence * lhs, const test_msgs__action__NestedMessage_Goal__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Goal__Sequence__copy(
+  const test_msgs__action__NestedMessage_Goal__Sequence * input,
+  test_msgs__action__NestedMessage_Goal__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -165,6 +218,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_Result__destroy(test_msgs__action__NestedMessage_Result * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Result__are_equal(const test_msgs__action__NestedMessage_Result * lhs, const test_msgs__action__NestedMessage_Result * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Result__copy(
+  const test_msgs__action__NestedMessage_Result * input,
+  test_msgs__action__NestedMessage_Result * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -216,6 +295,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_Result__Sequence__destroy(test_msgs__action__NestedMessage_Result__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Result__Sequence__are_equal(const test_msgs__action__NestedMessage_Result__Sequence * lhs, const test_msgs__action__NestedMessage_Result__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Result__Sequence__copy(
+  const test_msgs__action__NestedMessage_Result__Sequence * input,
+  test_msgs__action__NestedMessage_Result__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -264,6 +370,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_Feedback__destroy(test_msgs__action__NestedMessage_Feedback * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Feedback__are_equal(const test_msgs__action__NestedMessage_Feedback * lhs, const test_msgs__action__NestedMessage_Feedback * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Feedback__copy(
+  const test_msgs__action__NestedMessage_Feedback * input,
+  test_msgs__action__NestedMessage_Feedback * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -315,6 +447,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_Feedback__Sequence__destroy(test_msgs__action__NestedMessage_Feedback__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Feedback__Sequence__are_equal(const test_msgs__action__NestedMessage_Feedback__Sequence * lhs, const test_msgs__action__NestedMessage_Feedback__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_Feedback__Sequence__copy(
+  const test_msgs__action__NestedMessage_Feedback__Sequence * input,
+  test_msgs__action__NestedMessage_Feedback__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -363,6 +522,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_SendGoal_Request__destroy(test_msgs__action__NestedMessage_SendGoal_Request * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Request__are_equal(const test_msgs__action__NestedMessage_SendGoal_Request * lhs, const test_msgs__action__NestedMessage_SendGoal_Request * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Request__copy(
+  const test_msgs__action__NestedMessage_SendGoal_Request * input,
+  test_msgs__action__NestedMessage_SendGoal_Request * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -414,6 +599,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_SendGoal_Request__Sequence__destroy(test_msgs__action__NestedMessage_SendGoal_Request__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Request__Sequence__are_equal(const test_msgs__action__NestedMessage_SendGoal_Request__Sequence * lhs, const test_msgs__action__NestedMessage_SendGoal_Request__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Request__Sequence__copy(
+  const test_msgs__action__NestedMessage_SendGoal_Request__Sequence * input,
+  test_msgs__action__NestedMessage_SendGoal_Request__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -462,6 +674,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_SendGoal_Response__destroy(test_msgs__action__NestedMessage_SendGoal_Response * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Response__are_equal(const test_msgs__action__NestedMessage_SendGoal_Response * lhs, const test_msgs__action__NestedMessage_SendGoal_Response * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Response__copy(
+  const test_msgs__action__NestedMessage_SendGoal_Response * input,
+  test_msgs__action__NestedMessage_SendGoal_Response * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -513,6 +751,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_SendGoal_Response__Sequence__destroy(test_msgs__action__NestedMessage_SendGoal_Response__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Response__Sequence__are_equal(const test_msgs__action__NestedMessage_SendGoal_Response__Sequence * lhs, const test_msgs__action__NestedMessage_SendGoal_Response__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_SendGoal_Response__Sequence__copy(
+  const test_msgs__action__NestedMessage_SendGoal_Response__Sequence * input,
+  test_msgs__action__NestedMessage_SendGoal_Response__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -561,6 +826,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_GetResult_Request__destroy(test_msgs__action__NestedMessage_GetResult_Request * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Request__are_equal(const test_msgs__action__NestedMessage_GetResult_Request * lhs, const test_msgs__action__NestedMessage_GetResult_Request * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Request__copy(
+  const test_msgs__action__NestedMessage_GetResult_Request * input,
+  test_msgs__action__NestedMessage_GetResult_Request * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -612,6 +903,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_GetResult_Request__Sequence__destroy(test_msgs__action__NestedMessage_GetResult_Request__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Request__Sequence__are_equal(const test_msgs__action__NestedMessage_GetResult_Request__Sequence * lhs, const test_msgs__action__NestedMessage_GetResult_Request__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Request__Sequence__copy(
+  const test_msgs__action__NestedMessage_GetResult_Request__Sequence * input,
+  test_msgs__action__NestedMessage_GetResult_Request__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -660,6 +978,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_GetResult_Response__destroy(test_msgs__action__NestedMessage_GetResult_Response * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Response__are_equal(const test_msgs__action__NestedMessage_GetResult_Response * lhs, const test_msgs__action__NestedMessage_GetResult_Response * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Response__copy(
+  const test_msgs__action__NestedMessage_GetResult_Response * input,
+  test_msgs__action__NestedMessage_GetResult_Response * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -711,6 +1055,33 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_GetResult_Response__Sequence__destroy(test_msgs__action__NestedMessage_GetResult_Response__Sequence * array);
 
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Response__Sequence__are_equal(const test_msgs__action__NestedMessage_GetResult_Response__Sequence * lhs, const test_msgs__action__NestedMessage_GetResult_Response__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_GetResult_Response__Sequence__copy(
+  const test_msgs__action__NestedMessage_GetResult_Response__Sequence * input,
+  test_msgs__action__NestedMessage_GetResult_Response__Sequence * output);
+
 /// Initialize action/NestedMessage message.
 /**
  * If the init function is called twice for the same message without
@@ -759,6 +1130,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_FeedbackMessage__destroy(test_msgs__action__NestedMessage_FeedbackMessage * msg);
 
+/// Check for action/NestedMessage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_FeedbackMessage__are_equal(const test_msgs__action__NestedMessage_FeedbackMessage * lhs, const test_msgs__action__NestedMessage_FeedbackMessage * rhs);
+
+/// Copy a action/NestedMessage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_FeedbackMessage__copy(
+  const test_msgs__action__NestedMessage_FeedbackMessage * input,
+  test_msgs__action__NestedMessage_FeedbackMessage * output);
 
 /// Initialize array of action/NestedMessage messages.
 /**
@@ -809,6 +1206,33 @@ test_msgs__action__NestedMessage_FeedbackMessage__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__action__NestedMessage_FeedbackMessage__Sequence__destroy(test_msgs__action__NestedMessage_FeedbackMessage__Sequence * array);
+
+/// Check for action/NestedMessage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_FeedbackMessage__Sequence__are_equal(const test_msgs__action__NestedMessage_FeedbackMessage__Sequence * lhs, const test_msgs__action__NestedMessage_FeedbackMessage__Sequence * rhs);
+
+/// Copy an array of action/NestedMessage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__action__NestedMessage_FeedbackMessage__Sequence__copy(
+  const test_msgs__action__NestedMessage_FeedbackMessage__Sequence * input,
+  test_msgs__action__NestedMessage_FeedbackMessage__Sequence * output);
 
 #ifdef __cplusplus
 }

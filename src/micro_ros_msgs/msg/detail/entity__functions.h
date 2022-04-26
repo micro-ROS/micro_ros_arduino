@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 void
 micro_ros_msgs__msg__Entity__destroy(micro_ros_msgs__msg__Entity * msg);
 
+/// Check for msg/Entity message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Entity__are_equal(const micro_ros_msgs__msg__Entity * lhs, const micro_ros_msgs__msg__Entity * rhs);
+
+/// Copy a msg/Entity message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Entity__copy(
+  const micro_ros_msgs__msg__Entity * input,
+  micro_ros_msgs__msg__Entity * output);
 
 /// Initialize array of msg/Entity messages.
 /**
@@ -116,6 +142,33 @@ micro_ros_msgs__msg__Entity__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 void
 micro_ros_msgs__msg__Entity__Sequence__destroy(micro_ros_msgs__msg__Entity__Sequence * array);
+
+/// Check for msg/Entity message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Entity__Sequence__are_equal(const micro_ros_msgs__msg__Entity__Sequence * lhs, const micro_ros_msgs__msg__Entity__Sequence * rhs);
+
+/// Copy an array of msg/Entity messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
+bool
+micro_ros_msgs__msg__Entity__Sequence__copy(
+  const micro_ros_msgs__msg__Entity__Sequence * input,
+  micro_ros_msgs__msg__Entity__Sequence * output);
 
 #ifdef __cplusplus
 }

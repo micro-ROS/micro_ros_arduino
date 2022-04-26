@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 void
 sensor_msgs__msg__JoyFeedbackArray__destroy(sensor_msgs__msg__JoyFeedbackArray * msg);
 
+/// Check for msg/JoyFeedbackArray message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__JoyFeedbackArray__are_equal(const sensor_msgs__msg__JoyFeedbackArray * lhs, const sensor_msgs__msg__JoyFeedbackArray * rhs);
+
+/// Copy a msg/JoyFeedbackArray message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__JoyFeedbackArray__copy(
+  const sensor_msgs__msg__JoyFeedbackArray * input,
+  sensor_msgs__msg__JoyFeedbackArray * output);
 
 /// Initialize array of msg/JoyFeedbackArray messages.
 /**
@@ -116,6 +142,33 @@ sensor_msgs__msg__JoyFeedbackArray__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 void
 sensor_msgs__msg__JoyFeedbackArray__Sequence__destroy(sensor_msgs__msg__JoyFeedbackArray__Sequence * array);
+
+/// Check for msg/JoyFeedbackArray message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__JoyFeedbackArray__Sequence__are_equal(const sensor_msgs__msg__JoyFeedbackArray__Sequence * lhs, const sensor_msgs__msg__JoyFeedbackArray__Sequence * rhs);
+
+/// Copy an array of msg/JoyFeedbackArray messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
+bool
+sensor_msgs__msg__JoyFeedbackArray__Sequence__copy(
+  const sensor_msgs__msg__JoyFeedbackArray__Sequence * input,
+  sensor_msgs__msg__JoyFeedbackArray__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__BoundedSequences__destroy(test_msgs__msg__BoundedSequences * msg);
 
+/// Check for msg/BoundedSequences message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedSequences__are_equal(const test_msgs__msg__BoundedSequences * lhs, const test_msgs__msg__BoundedSequences * rhs);
+
+/// Copy a msg/BoundedSequences message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedSequences__copy(
+  const test_msgs__msg__BoundedSequences * input,
+  test_msgs__msg__BoundedSequences * output);
 
 /// Initialize array of msg/BoundedSequences messages.
 /**
@@ -116,6 +142,33 @@ test_msgs__msg__BoundedSequences__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 void
 test_msgs__msg__BoundedSequences__Sequence__destroy(test_msgs__msg__BoundedSequences__Sequence * array);
+
+/// Check for msg/BoundedSequences message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedSequences__Sequence__are_equal(const test_msgs__msg__BoundedSequences__Sequence * lhs, const test_msgs__msg__BoundedSequences__Sequence * rhs);
+
+/// Copy an array of msg/BoundedSequences messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+test_msgs__msg__BoundedSequences__Sequence__copy(
+  const test_msgs__msg__BoundedSequences__Sequence * input,
+  test_msgs__msg__BoundedSequences__Sequence * output);
 
 #ifdef __cplusplus
 }

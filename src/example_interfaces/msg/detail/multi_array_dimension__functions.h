@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__MultiArrayDimension__destroy(example_interfaces__msg__MultiArrayDimension * msg);
 
+/// Check for msg/MultiArrayDimension message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__MultiArrayDimension__are_equal(const example_interfaces__msg__MultiArrayDimension * lhs, const example_interfaces__msg__MultiArrayDimension * rhs);
+
+/// Copy a msg/MultiArrayDimension message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__MultiArrayDimension__copy(
+  const example_interfaces__msg__MultiArrayDimension * input,
+  example_interfaces__msg__MultiArrayDimension * output);
 
 /// Initialize array of msg/MultiArrayDimension messages.
 /**
@@ -116,6 +142,33 @@ example_interfaces__msg__MultiArrayDimension__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 void
 example_interfaces__msg__MultiArrayDimension__Sequence__destroy(example_interfaces__msg__MultiArrayDimension__Sequence * array);
+
+/// Check for msg/MultiArrayDimension message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__MultiArrayDimension__Sequence__are_equal(const example_interfaces__msg__MultiArrayDimension__Sequence * lhs, const example_interfaces__msg__MultiArrayDimension__Sequence * rhs);
+
+/// Copy an array of msg/MultiArrayDimension messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+bool
+example_interfaces__msg__MultiArrayDimension__Sequence__copy(
+  const example_interfaces__msg__MultiArrayDimension__Sequence * input,
+  example_interfaces__msg__MultiArrayDimension__Sequence * output);
 
 #ifdef __cplusplus
 }

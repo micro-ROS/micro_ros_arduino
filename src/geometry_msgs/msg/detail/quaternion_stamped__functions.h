@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__QuaternionStamped__destroy(geometry_msgs__msg__QuaternionStamped * msg);
 
+/// Check for msg/QuaternionStamped message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__QuaternionStamped__are_equal(const geometry_msgs__msg__QuaternionStamped * lhs, const geometry_msgs__msg__QuaternionStamped * rhs);
+
+/// Copy a msg/QuaternionStamped message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__QuaternionStamped__copy(
+  const geometry_msgs__msg__QuaternionStamped * input,
+  geometry_msgs__msg__QuaternionStamped * output);
 
 /// Initialize array of msg/QuaternionStamped messages.
 /**
@@ -116,6 +142,33 @@ geometry_msgs__msg__QuaternionStamped__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 void
 geometry_msgs__msg__QuaternionStamped__Sequence__destroy(geometry_msgs__msg__QuaternionStamped__Sequence * array);
+
+/// Check for msg/QuaternionStamped message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__QuaternionStamped__Sequence__are_equal(const geometry_msgs__msg__QuaternionStamped__Sequence * lhs, const geometry_msgs__msg__QuaternionStamped__Sequence * rhs);
+
+/// Copy an array of msg/QuaternionStamped messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
+bool
+geometry_msgs__msg__QuaternionStamped__Sequence__copy(
+  const geometry_msgs__msg__QuaternionStamped__Sequence * input,
+  geometry_msgs__msg__QuaternionStamped__Sequence * output);
 
 #ifdef __cplusplus
 }

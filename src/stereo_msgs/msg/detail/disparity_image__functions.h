@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 void
 stereo_msgs__msg__DisparityImage__destroy(stereo_msgs__msg__DisparityImage * msg);
 
+/// Check for msg/DisparityImage message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__are_equal(const stereo_msgs__msg__DisparityImage * lhs, const stereo_msgs__msg__DisparityImage * rhs);
+
+/// Copy a msg/DisparityImage message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__copy(
+  const stereo_msgs__msg__DisparityImage * input,
+  stereo_msgs__msg__DisparityImage * output);
 
 /// Initialize array of msg/DisparityImage messages.
 /**
@@ -116,6 +142,33 @@ stereo_msgs__msg__DisparityImage__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 void
 stereo_msgs__msg__DisparityImage__Sequence__destroy(stereo_msgs__msg__DisparityImage__Sequence * array);
+
+/// Check for msg/DisparityImage message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__Sequence__are_equal(const stereo_msgs__msg__DisparityImage__Sequence * lhs, const stereo_msgs__msg__DisparityImage__Sequence * rhs);
+
+/// Copy an array of msg/DisparityImage messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
+bool
+stereo_msgs__msg__DisparityImage__Sequence__copy(
+  const stereo_msgs__msg__DisparityImage__Sequence * input,
+  stereo_msgs__msg__DisparityImage__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__JointControllerState__destroy(control_msgs__msg__JointControllerState * msg);
 
+/// Check for msg/JointControllerState message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointControllerState__are_equal(const control_msgs__msg__JointControllerState * lhs, const control_msgs__msg__JointControllerState * rhs);
+
+/// Copy a msg/JointControllerState message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointControllerState__copy(
+  const control_msgs__msg__JointControllerState * input,
+  control_msgs__msg__JointControllerState * output);
 
 /// Initialize array of msg/JointControllerState messages.
 /**
@@ -116,6 +142,33 @@ control_msgs__msg__JointControllerState__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__JointControllerState__Sequence__destroy(control_msgs__msg__JointControllerState__Sequence * array);
+
+/// Check for msg/JointControllerState message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointControllerState__Sequence__are_equal(const control_msgs__msg__JointControllerState__Sequence * lhs, const control_msgs__msg__JointControllerState__Sequence * rhs);
+
+/// Copy an array of msg/JointControllerState messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__JointControllerState__Sequence__copy(
+  const control_msgs__msg__JointControllerState__Sequence * input,
+  control_msgs__msg__JointControllerState__Sequence * output);
 
 #ifdef __cplusplus
 }

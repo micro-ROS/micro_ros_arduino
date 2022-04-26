@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__MapMetaData__destroy(nav_msgs__msg__MapMetaData * msg);
 
+/// Check for msg/MapMetaData message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__MapMetaData__are_equal(const nav_msgs__msg__MapMetaData * lhs, const nav_msgs__msg__MapMetaData * rhs);
+
+/// Copy a msg/MapMetaData message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__MapMetaData__copy(
+  const nav_msgs__msg__MapMetaData * input,
+  nav_msgs__msg__MapMetaData * output);
 
 /// Initialize array of msg/MapMetaData messages.
 /**
@@ -116,6 +142,33 @@ nav_msgs__msg__MapMetaData__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 void
 nav_msgs__msg__MapMetaData__Sequence__destroy(nav_msgs__msg__MapMetaData__Sequence * array);
+
+/// Check for msg/MapMetaData message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__MapMetaData__Sequence__are_equal(const nav_msgs__msg__MapMetaData__Sequence * lhs, const nav_msgs__msg__MapMetaData__Sequence * rhs);
+
+/// Copy an array of msg/MapMetaData messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+bool
+nav_msgs__msg__MapMetaData__Sequence__copy(
+  const nav_msgs__msg__MapMetaData__Sequence * input,
+  nav_msgs__msg__MapMetaData__Sequence * output);
 
 #ifdef __cplusplus
 }

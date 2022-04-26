@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__PidState__destroy(control_msgs__msg__PidState * msg);
 
+/// Check for msg/PidState message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__PidState__are_equal(const control_msgs__msg__PidState * lhs, const control_msgs__msg__PidState * rhs);
+
+/// Copy a msg/PidState message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__PidState__copy(
+  const control_msgs__msg__PidState * input,
+  control_msgs__msg__PidState * output);
 
 /// Initialize array of msg/PidState messages.
 /**
@@ -116,6 +142,33 @@ control_msgs__msg__PidState__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 void
 control_msgs__msg__PidState__Sequence__destroy(control_msgs__msg__PidState__Sequence * array);
+
+/// Check for msg/PidState message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__PidState__Sequence__are_equal(const control_msgs__msg__PidState__Sequence * lhs, const control_msgs__msg__PidState__Sequence * rhs);
+
+/// Copy an array of msg/PidState messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+control_msgs__msg__PidState__Sequence__copy(
+  const control_msgs__msg__PidState__Sequence * input,
+  control_msgs__msg__PidState__Sequence * output);
 
 #ifdef __cplusplus
 }
