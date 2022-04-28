@@ -39,7 +39,7 @@ typedef struct sensor_msgs__msg__CompressedImage
   /// +z should point into to plane of the image
   std_msgs__msg__Header header;
   /// Specifies the format of the data
-  ///   Acceptable values:
+  /// Acceptable values:
   /// jpeg, png, tiff
   rosidl_runtime_c__String format;
   /// Compressed image buffer
