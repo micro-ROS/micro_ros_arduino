@@ -48,7 +48,7 @@ enum
 /// Constant 'SUCCEEDED'.
 /**
   * The goal was achieved successfully by the action server
-  *   (Terminal State).
+  * (Terminal State).
  */
 enum
 {
@@ -58,7 +58,7 @@ enum
 /// Constant 'ABORTED'.
 /**
   * The goal was aborted during execution by the action server due
-  * to some failure (Terminal State).
+  *    to some failure (Terminal State).
  */
 enum
 {
@@ -98,7 +98,7 @@ enum
 /// Constant 'RECALLED'.
 /**
   * The goal received a cancel request before it started executing
-  *    and was successfully cancelled (Terminal State).
+  * and was successfully cancelled (Terminal State).
  */
 enum
 {

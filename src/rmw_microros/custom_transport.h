@@ -27,6 +27,9 @@
 
 #include <uxr/client/profile/transport/custom/custom_transport.h>
 
+#define MICROROS_TRANSPORTS_FRAMING_MODE 1
+#define MICROROS_TRANSPORTS_PACKET_MODE 0
+
 #if defined(__cplusplus)
 extern "C"
 {
