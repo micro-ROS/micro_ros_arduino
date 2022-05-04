@@ -100,6 +100,32 @@ static const rmw_qos_profile_t rmw_qos_profile_system_default =
   false
 };
 
+/// Match majority of endpoints currently available while maintaining the highest level of service
+/**
+ * Reliability, durability, deadline, liveliness, and liveliness lease duration policies will be
+ * chosen at the time of creating a subscription or publisher.
+ *
+ * The actual QoS policy can be retrieved after the endpoint is created with
+ * `rmw_get_subscriptions_info_by_topic` or `rmw_get_publishers_info_by_topic`.
+ *
+ * The middleware is not expected to update policies after creating a subscription or
+ * publisher, even if one or more policies are incompatible with newly discovered endpoints.
+ * Therefore, this profile should be used with care since non-deterministic behavior
+ * can occur due to races with discovery.
+ */
+static const rmw_qos_profile_t rmw_qos_profile_best_available =
+{
+  RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+  10,
+  RMW_QOS_POLICY_RELIABILITY_BEST_AVAILABLE,
+  RMW_QOS_POLICY_DURABILITY_BEST_AVAILABLE,
+  RMW_QOS_DEADLINE_BEST_AVAILABLE,
+  RMW_QOS_LIFESPAN_DEFAULT,
+  RMW_QOS_POLICY_LIVELINESS_BEST_AVAILABLE,
+  RMW_QOS_LIVELINESS_LEASE_DURATION_BEST_AVAILABLE,
+  false
+};
+
 static const rmw_qos_profile_t rmw_qos_profile_unknown =
 {
   RMW_QOS_POLICY_HISTORY_UNKNOWN,

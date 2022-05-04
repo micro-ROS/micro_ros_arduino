@@ -33,11 +33,11 @@ extern "C"
   * A generic metrics message providing statistics for measurements from different sources. For example,
   * measure a system's CPU % for a given window yields the following data points over a window of time:
   *
-  * - average cpu %
-  *   - std deviation
-  * - min
-  * - max
-  *   - sample count
+  *   - average cpu %
+  * - std deviation
+  *   - min
+  *   - max
+  * - sample count
   *
   * These are all represented as different 'StatisticDataPoint's.
  */
