@@ -34,8 +34,8 @@ extern "C"
   * measure a system's CPU % for a given window yields the following data points over a window of time:
   *
   *   - average cpu %
-  *   - std deviation
-  * - min
+  * - std deviation
+  *   - min
   * - max
   *   - sample count
   *
