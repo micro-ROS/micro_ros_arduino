@@ -25,7 +25,7 @@ extern "C"
   *         the previous update.
   * KEEP_ALIVE: Indicates the that the server is still living.
   * The sequence number does not increase.
-  * No payload data should be filled out (markers, poses, or erases).
+  *             No payload data should be filled out (markers, poses, or erases).
  */
 enum
 {
@@ -58,7 +58,7 @@ typedef struct visualization_msgs__msg__InteractiveMarkerUpdate
   uint64_t seq_num;
   uint8_t type;
   /// Note: No guarantees on the order of processing.
-  ///       Contents must be kept consistent by sender.
+  /// Contents must be kept consistent by sender.
   /// Markers to be added or updated
   visualization_msgs__msg__InteractiveMarker__Sequence markers;
   /// Poses of markers that should be moved

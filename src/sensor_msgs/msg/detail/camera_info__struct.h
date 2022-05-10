@@ -35,7 +35,7 @@ extern "C"
   *
   *   image_raw - raw data from the camera driver, possibly Bayer encoded
   * image            - monochrome, distorted
-  *   image_color      - color, distorted
+  * image_color      - color, distorted
   * image_rect       - monochrome, rectified
   *   image_rect_color - color, rectified
   *
@@ -73,7 +73,7 @@ typedef struct sensor_msgs__msg__CameraInfo
   /// #
   /// The internal parameters can be used to warp a raw (distorted) image #
   /// to:                                                                 #
-  ///   1. An undistorted image (requires D and K)                        #
+  /// 1. An undistorted image (requires D and K)                        #
   ///   2. A rectified image (requires D, K, R)                           #
   /// The projection matrix P projects 3D points into the rectified image.#
   ///
@@ -91,7 +91,7 @@ typedef struct sensor_msgs__msg__CameraInfo
   /// Intrinsic camera matrix for the raw (distorted) images.
   ///     [fx  0 cx]
   /// K = [ 0 fy cy]
-  ///     [ 0  0  1]
+  /// [ 0  0  1]
   /// Projects 3D points in the camera coordinate frame to 2D pixel
   /// coordinates using the focal lengths (fx, fy) and principal point
   /// (cx, cy).
@@ -106,25 +106,25 @@ typedef struct sensor_msgs__msg__CameraInfo
   /// Projection/camera matrix
   /// [fx'  0  cx' Tx]
   /// P = [ 0  fy' cy' Ty]
-  /// [ 0   0   1   0]
+  ///     [ 0   0   1   0]
   /// By convention, this matrix specifies the intrinsic (camera) matrix
   ///  of the processed (rectified) image. That is, the left 3x3 portion
-  /// is the normal camera intrinsic matrix for the rectified image.
+  ///  is the normal camera intrinsic matrix for the rectified image.
   /// It projects 3D points in the camera coordinate frame to 2D pixel
-  /// coordinates using the focal lengths (fx', fy') and principal point
+  ///  coordinates using the focal lengths (fx', fy') and principal point
   /// (cx', cy') - these may differ from the values in K.
   /// For monocular cameras, Tx = Ty = 0. Normally, monocular cameras will
   ///  also have R = the identity and P[1:3,1:3] = K.
   /// For a stereo pair, the fourth column [Tx Ty 0]' is related to the
   ///  position of the optical center of the second camera in the first
-  /// camera's frame. We assume Tz = 0 so both cameras are in the same
-  ///  stereo image plane. The first camera always has Tx = Ty = 0. For
+  ///  camera's frame. We assume Tz = 0 so both cameras are in the same
+  /// stereo image plane. The first camera always has Tx = Ty = 0. For
   /// the right (second) camera of a horizontal stereo pair, Ty = 0 and
-  /// Tx = -fx' * B, where B is the baseline between the cameras.
+  ///  Tx = -fx' * B, where B is the baseline between the cameras.
   /// Given a 3D point [X Y Z]', the projection (x, y) of the point onto
-  /// the rectified image is given by:
-  ///  [u v w]' = P * [X Y Z 1]'
-  /// x = u / w
+  ///  the rectified image is given by:
+  /// [u v w]' = P * [X Y Z 1]'
+  ///         x = u / w
   /// y = v / w
   /// This holds for both images of a stereo pair.
   /// 3x4 row-major matrix
@@ -146,7 +146,7 @@ typedef struct sensor_msgs__msg__CameraInfo
   /// Region of interest (subwindow of full camera resolution), given in
   /// full resolution (unbinned) image coordinates. A particular ROI
   ///  always denotes the same window of pixels on the camera sensor,
-  /// regardless of binning settings.
+  ///  regardless of binning settings.
   /// The default setting of roi (all values 0) is considered the same as
   /// full resolution (roi.width = width, roi.height = height).
   sensor_msgs__msg__RegionOfInterest roi;
