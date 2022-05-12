@@ -40,7 +40,7 @@ typedef struct sensor_msgs__msg__CompressedImage
   std_msgs__msg__Header header;
   /// Specifies the format of the data
   ///   Acceptable values:
-  ///     jpeg, png, tiff
+  /// jpeg, png, tiff
   rosidl_runtime_c__String format;
   /// Compressed image buffer
   rosidl_runtime_c__uint8__Sequence data;
