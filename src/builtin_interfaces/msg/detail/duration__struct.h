@@ -27,7 +27,7 @@ typedef struct builtin_interfaces__msg__Duration
 {
   /// Seconds component, range is valid over any possible int32 value.
   int32_t sec;
-  /// Nanoseconds component in the range of [0, 10e9).
+  /// Nanoseconds component in the range of [0, 1e9).
   uint32_t nanosec;
 } builtin_interfaces__msg__Duration;
 
