@@ -32,18 +32,61 @@ extern "C"
 // Memory rule
 typedef struct micro_ros_utilities_memory_rule_t
 {
+  /**
+   * Pattern matching the fully qualified name of a msg field.
+   *
+   */
   const char * rule;
+
+  /**
+   * Maximum string or sequence capacity for fields matching \ref rule.
+   *
+   */
   size_t size;
 } micro_ros_utilities_memory_rule_t;
 
 // Memory configuration string
 typedef struct micro_ros_utilities_memory_conf_t
 {
+  /**
+   * Maximum string capacity to use for msg fields in case they don't have a
+   * custom rule assigned to them.
+   *
+   */
   size_t max_string_capacity;
+
+  /**
+   * Maximum capacity to use for sequence type msg fields (ie: unbounded
+   * arrays and lists) which contain ROS 2 msg types, in case they don't have
+   * a custom rule assigned to them.
+   *
+   */
   size_t max_ros2_type_sequence_capacity;
+
+  /**
+   * Maximum capacity to use for sequence type msg fields (ie: unbounded
+   * arrays and lists) which contain basic types (ie: primitive field types),
+   * in case they don't have a custom rule assigned to them.
+   *
+   */
   size_t max_basic_type_sequence_capacity;
+
+  /**
+   * All rules defined in this configuration.
+   *
+   */
   const micro_ros_utilities_memory_rule_t * rules;
+
+  /**
+   * Total number of rules defined in this configuration.
+   *
+   */
   size_t n_rules;
+
+  /**
+   * The allocator to use when applying this configuration.
+   *
+   */
   const rcutils_allocator_t * allocator;
 } micro_ros_utilities_memory_conf_t;
 
@@ -56,7 +99,7 @@ static const micro_ros_utilities_memory_conf_t micro_ros_utilities_memory_conf_d
  */
 
 /**
- *  Returns a string with the type instronspection data
+ *  Returns a string with the type introspection data
  *
  * <hr>
  * Attribute          | Adherence
