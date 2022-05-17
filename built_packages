@@ -8,7 +8,7 @@ https://github.com/ament/uncrustify_vendor.git d647c05b96bc2b2edf4db652a3fc9ebf0
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 9b9278c0b3a633aa7ad634bda2fd2c4f04093dcf
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
-https://github.com/micro-ROS/micro_ros_utilities 62270ca99edfab516e50ba7c8c761d33dbf31a78
+https://github.com/micro-ROS/micro_ros_utilities c35f3dca290d736f8ecd497d368929b94e8127c0
 https://github.com/micro-ROS/rcl 6d3ba01ad7dc77dd66c0c698c35ca05ee05ac40c
 https://github.com/micro-ROS/rcutils 83752837999fed3e2f6da984784d2d34c0a9f312
 https://github.com/micro-ROS/rmw-microxrcedds.git 77c4b2273e1ded758f8e46f4a1f3ecfbb9afcad4
