@@ -29,7 +29,13 @@ extern "C"
 #include <rcutils/allocator.h>
 #include <micro_ros_utilities/visibility_control.h>
 
-// Memory rule
+/** \addtogroup typeutils micro-ROS Types Utilities
+ *  @{
+ */
+
+/**
+ * Memory rule
+ */
 typedef struct micro_ros_utilities_memory_rule_t
 {
   /**
@@ -45,7 +51,9 @@ typedef struct micro_ros_utilities_memory_rule_t
   size_t size;
 } micro_ros_utilities_memory_rule_t;
 
-// Memory configuration string
+/**
+ * Memory configuration string
+ */
 typedef struct micro_ros_utilities_memory_conf_t
 {
   /**
@@ -94,9 +102,6 @@ typedef struct micro_ros_utilities_memory_conf_t
 static const micro_ros_utilities_memory_conf_t micro_ros_utilities_memory_conf_default =
 {20, 5, 5, NULL, 0, NULL};
 
-/** \addtogroup typeutils micro-ROS Types Utilities
- *  @{
- */
 
 /**
  *  Returns a string with the type introspection data
