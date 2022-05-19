@@ -108,7 +108,7 @@ enum
 /// Constant 'LOST'.
 /**
   * An action client can determine that a goal is LOST. This should not
-  *    be sent over the wire by an action server.
+  * be sent over the wire by an action server.
  */
 enum
 {
