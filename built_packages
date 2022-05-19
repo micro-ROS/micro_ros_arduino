@@ -11,9 +11,9 @@ https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3
 https://github.com/micro-ROS/micro_ros_utilities b9073d8bbda6c15739eca611a713de3bc98f4843
 https://github.com/micro-ROS/rcl 5a8e16dd73464943cd1f6c65e58a61351af40b5f
 https://github.com/micro-ROS/rcutils 85efa4ad786fb6920ae92156ab439dec0315299b
-https://github.com/micro-ROS/rmw-microxrcedds.git b0f9724a2c638cf35b4b1c6003a58b6ddd1e7785
+https://github.com/micro-ROS/rmw-microxrcedds.git 09e77fd1e48ba1b5eb7a7f5d981a02fee9f4b981
 https://github.com/micro-ROS/rosidl_typesupport.git d569fcc82aca391470a43dd5fc388f9f3a4d477d
-https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 2e73cd29508010f467a9b3ca8e2f8caec1a05a5a
+https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git e8e371ea9b441ad1159d81d3655f881f3efde1ef
 https://github.com/ros-controls/control_msgs a555c37f1a3536bb452ea555c58fdd9344d87614
 https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902adac
 https://github.com/ros2/common_interfaces.git 969a56b0b59f7f70b5c4561185ea34aaa2b74e1d
