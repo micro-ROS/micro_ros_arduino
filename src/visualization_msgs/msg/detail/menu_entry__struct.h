@@ -62,11 +62,11 @@ enum
   *
   * Example:
   * - id = 3
-  *   parent_id = 0
+  * parent_id = 0
   * title = "fun"
   * - id = 2
   *   parent_id = 0
-  *   title = "robot"
+  * title = "robot"
   * - id = 4
   *   parent_id = 2
   *   title = "pr2"
@@ -75,8 +75,8 @@ enum
   * title = "turtle"
   *
   * Gives a menu tree like this:
-  *  - fun
-  *  - robot
+  * - fun
+  * - robot
   * - pr2
   * - turtle
  */
