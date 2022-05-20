@@ -63,7 +63,7 @@ typedef struct sensor_msgs__msg__NavSatFix
 {
   /// header.stamp specifies the ROS time for this measurement (the
   /// corresponding satellite time may be reported using the
-  ///        sensor_msgs/TimeReference message).
+  /// sensor_msgs/TimeReference message).
   ///
   /// header.frame_id is the frame of reference reported by the satellite
   ///        receiver, usually the location of the antenna.  This is a
