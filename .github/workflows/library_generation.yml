@@ -20,6 +20,8 @@ jobs:
             branch: main
           - distro: galactic
             branch: galactic
+          - distro: humble
+            branch: humble
     steps:
       - uses: actions/checkout@v2
         with:
