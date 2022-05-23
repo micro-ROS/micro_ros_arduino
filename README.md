@@ -68,7 +68,7 @@ Remember that is possible to use a micro-ROS Agent just with this docker command
 
 ```bash
 # Serial micro-ROS Agent
-docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:rolling serial --dev [YOUR BOARD PORT] -v6
+docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:humble serial --dev [YOUR BOARD PORT] -v6
 ```
 ### PlatformIO
 
@@ -79,14 +79,14 @@ PlatformIO support for this repository has been deprecated in favor of its own b
 If you need to add custom packages or types, or customize any internal parameter of the micro-ROS stack, you will need to recompile this library from source code:
 
 ```bash
-docker pull microros/micro_ros_static_library_builder:rolling
-docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:rolling
+docker pull microros/micro_ros_static_library_builder:humble
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:humble
 ```
 
 Optionally a specific single target can be built using the `-p <LIBRARY_TARGET>` argument like this:
 
 ```bash
-docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:galactic -p <LIBRARY_TARGET>
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:humble -p <LIBRARY_TARGET>
 ```
 
 Available targets `LIBRARY_TARGETS` are available on the [top of the extras/library_generation/library_generation.sh file](https://github.com/micro-ROS/micro_ros_arduino/blob/main/extras/library_generation/library_generation.sh#L13-L24)
