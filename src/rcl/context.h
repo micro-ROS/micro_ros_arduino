@@ -126,11 +126,6 @@ typedef struct rcl_context_s
   // The assumption that this is big enough for an atomic_uint_least64_t is
   // ensured with a static_assert in the context.c file.
   // In most cases it should just be a plain uint64_t.
-/// @cond Doxygen_Suppress
-#if !defined(RCL_CONTEXT_ATOMIC_INSTANCE_ID_STORAGE_SIZE)
-#define RCL_CONTEXT_ATOMIC_INSTANCE_ID_STORAGE_SIZE sizeof(uint_least64_t)
-#endif
-/// @endcond
   /// Private storage for instance ID atomic.
   /**
    * Accessing the instance id should be done using the function
@@ -150,7 +145,7 @@ typedef struct rcl_context_s
    * See this paper for an effort to make this possible in the future:
    *   http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0943r1.html
    */
-  RCL_ALIGNAS(8) uint8_t instance_id_storage[RCL_CONTEXT_ATOMIC_INSTANCE_ID_STORAGE_SIZE];
+  uint32_t instance_id_storage;
 } rcl_context_t;
 
 /// Return a zero initialization context object.
