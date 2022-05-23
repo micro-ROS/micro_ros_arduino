@@ -142,8 +142,8 @@ enum
 /// Struct defined in msg/Marker in the package visualization_msgs.
 /**
   * See:
-  *  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
-  *  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
+  * - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
+  * - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
   *
   * for more information on using this message with rviz.
  */
@@ -160,9 +160,9 @@ typedef struct visualization_msgs__msg__Marker
   int32_t type;
   /// Action to take; one of:
   /// - 0 add/modify an object
-  ///  - 1 (deprecated)
-  ///  - 2 deletes an object (with the given ns and id)
-  /// - 3 deletes all objects (or those with the given ns if any)
+  /// - 1 (deprecated)
+  /// - 2 deletes an object (with the given ns and id)
+  ///  - 3 deletes all objects (or those with the given ns if any)
   int32_t action;
   /// Pose of the object with respect the frame_id specified in the header.
   geometry_msgs__msg__Pose pose;
@@ -184,7 +184,7 @@ typedef struct visualization_msgs__msg__Marker
   /// Texture resource is a special URI that can either reference a texture file in
   /// a format acceptable to (resource retriever)
   /// or an embedded texture via a string matching the format:
-  /// "embedded://texture_name"
+  ///   "embedded://texture_name"
   rosidl_runtime_c__String texture_resource;
   /// An image to be loaded into the rendering engine as the texture for this marker.
   /// This will be used iff texture_resource is set to embedded.
