@@ -88,7 +88,7 @@ enum
 /// Constant 'RECALLING'.
 /**
   * The goal received a cancel request before it started executing, but
-  *    the action server has not yet confirmed that the goal is canceled.
+  * the action server has not yet confirmed that the goal is canceled.
  */
 enum
 {
@@ -108,7 +108,7 @@ enum
 /// Constant 'LOST'.
 /**
   * An action client can determine that a goal is LOST. This should not
-  *    be sent over the wire by an action server.
+  * be sent over the wire by an action server.
  */
 enum
 {
