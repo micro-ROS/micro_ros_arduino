@@ -152,7 +152,7 @@ typedef struct shape_msgs__msg__SolidPrimitive
   /// The dimensions of the shape
   /// At no point will dimensions have a length > 3.
   rosidl_runtime_c__double__Sequence dimensions;
-  geometry_msgs__msg__Polygon__Sequence polygon;
+  geometry_msgs__msg__Polygon polygon;
 } shape_msgs__msg__SolidPrimitive;
 
 // Struct for a sequence of shape_msgs__msg__SolidPrimitive.
