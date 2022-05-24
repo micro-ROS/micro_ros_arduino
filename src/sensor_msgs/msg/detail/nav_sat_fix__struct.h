@@ -66,9 +66,9 @@ typedef struct sensor_msgs__msg__NavSatFix
   /// sensor_msgs/TimeReference message).
   ///
   /// header.frame_id is the frame of reference reported by the satellite
-  /// receiver, usually the location of the antenna.  This is a
-  ///        Euclidean frame relative to the vehicle, not a reference
-  ///        ellipsoid.
+  ///        receiver, usually the location of the antenna.  This is a
+  /// Euclidean frame relative to the vehicle, not a reference
+  /// ellipsoid.
   std_msgs__msg__Header header;
   /// Satellite fix status information.
   sensor_msgs__msg__NavSatStatus status;
