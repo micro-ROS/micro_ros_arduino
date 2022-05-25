@@ -33,7 +33,7 @@ extern "C"
 #define UXR_PING_BUF 16 // 4 (HEADER SIZE) + 4 (SUBHEADER_SIZE) + 8 (GET_Info payload)
 
 #define GET_INFO_MSG_SIZE   8
-#define GET_INFO_REQUEST_ID 9
+#define GET_INFO_REQUEST_PING_ID 10
 
 struct uxrSession;
 
