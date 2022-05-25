@@ -33,7 +33,9 @@
 #endif //UCLIENT_PROFILE_UDP
 
 #ifdef UCLIENT_PROFILE_TCP
-#if defined(UCLIENT_PLATFORM_POSIX)
+#if defined(UCLIENT_PLATFORM_POSIX_NOPOLL)
+#include <uxr/client/profile/transport/ip/tcp/tcp_transport_posix_nopoll.h>
+#elif defined(UCLIENT_PLATFORM_POSIX)
 #include <uxr/client/profile/transport/ip/tcp/tcp_transport_posix.h>
 #elif defined(UCLIENT_PLATFORM_WINDOWS)
 #include <uxr/client/profile/transport/ip/tcp/tcp_transport_windows.h>
