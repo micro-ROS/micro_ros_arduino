@@ -24,6 +24,7 @@ extern "C"
 #endif // ifdef __cplusplus
 
 #include <uxr/client/defines.h>
+#include <uxr/client/config.h>
 
 #include <ucdr/microcdr.h>
 #include <stdint.h>
@@ -40,7 +41,24 @@ extern "C"
 #define UXR_SAMPLE_DELTA_SEQUENCE_MAX      8
 #define UXR_PACKED_SAMPLES_SEQUENCE_MAX    8
 #define UXR_TRANSPORT_LOCATOR_SEQUENCE_MAX 4
+
+#ifdef UCLIENT_PROFILE_SHARED_MEMORY
+#define PROFILE_SHARED_MEMORY_SEQ_COUNT 1
+#else
+#define PROFILE_SHARED_MEMORY_SEQ_COUNT 0
+#endif // ifdef UCLIENT_PROFILE_SHARED_MEMORY
+
+#ifdef UCLIENT_HARD_LIVELINESS_CHECK
+#define HARD_LIVELINESS_CHECK_SEQ_COUNT 1
+#else
+#define HARD_LIVELINESS_CHECK_SEQ_COUNT 0
+#endif // ifdef UCLIENT_HARD_LIVELINESS_CHECK
+
+#if  (PROFILE_SHARED_MEMORY_SEQ_COUNT + HARD_LIVELINESS_CHECK_SEQ_COUNT) == 0
 #define UXR_PROPERTY_SEQUENCE_MAX          1
+#else
+#define UXR_PROPERTY_SEQUENCE_MAX          PROFILE_SHARED_MEMORY_SEQ_COUNT + HARD_LIVELINESS_CHECK_SEQ_COUNT
+#endif // if  (PROFILE_SHARED_MEMORY_SEQ_COUNT + HARD_LIVELINESS_CHECK_SEQ_COUNT) == 0
 
 typedef struct Time_t
 {
