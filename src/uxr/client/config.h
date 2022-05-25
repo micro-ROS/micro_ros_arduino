@@ -67,5 +67,18 @@
 
 #define UCLIENT_TWEAK_XRCE_WRITE_LIMIT
 
+/* #undef UCLIENT_HARD_LIVELINESS_CHECK */
+
+#ifdef UCLIENT_HARD_LIVELINESS_CHECK
+#define UXR_CONFIG_HARD_LIVELINESS_CHECK_TIMEOUT_STR     "10000"
+#endif
+
+
+// Version checks
+#if UXR_CLIENT_VERSION_MAJOR >= 3
+#error UCLIENT_HARD_LIVELINESS_CHECK shall be included in session API
+#error MTU must be included in CREATE_CLIENT_Payload properties
+#error Reorder ObjectInfo https://github.com/eProsima/Micro-XRCE-DDS/issues/137
+#endif
 
 #endif // _UXR_CLIENT_CONFIG_H_
