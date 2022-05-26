@@ -32,7 +32,7 @@ extern "C"
   * This is a message that holds data to describe the state of a set of torque controlled joints.
   *
   * The state of each joint (revolute or prismatic) is defined by:
-  * * the position of the joint (rad or m),
+  *  * the position of the joint (rad or m),
   * * the velocity of the joint (rad/s or m/s) and
   * * the effort that is applied in the joint (Nm or N).
   *
