@@ -32,4 +32,4 @@ https://github.com/ros2/rosidl_defaults.git 7409fb6c570dd02f45be86ea1236ceefbdb9
 https://github.com/ros2/test_interface_files.git 33b40020ea05c0a21b9759ac4211ddc9f4332956
 https://github.com/ros2/unique_identifier_msgs.git 44de2e55b1b5f85ec816ff5f49c9ebd06b4eacff
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 590a512db73d53398d8e4bcb1faa827484617eb2
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 638fa0ab095ae1e941b05187418f0089c431e8d9

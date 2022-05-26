@@ -142,7 +142,7 @@ enum
 /// Struct defined in msg/Marker in the package visualization_msgs.
 /**
   * See:
-  * - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
+  *  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
   *  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
   *
   * for more information on using this message with rviz.
@@ -159,10 +159,10 @@ typedef struct visualization_msgs__msg__Marker
   /// Type of object.
   int32_t type;
   /// Action to take; one of:
-  /// - 0 add/modify an object
+  ///  - 0 add/modify an object
   ///  - 1 (deprecated)
-  /// - 2 deletes an object (with the given ns and id)
-  ///  - 3 deletes all objects (or those with the given ns if any)
+  ///  - 2 deletes an object (with the given ns and id)
+  /// - 3 deletes all objects (or those with the given ns if any)
   int32_t action;
   /// Pose of the object with respect the frame_id specified in the header.
   geometry_msgs__msg__Pose pose;
