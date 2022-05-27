@@ -122,7 +122,7 @@ typedef struct control_msgs__action__FollowJointTrajectory_Result
   /// Human readable description of the error code. Contains complementary
   /// information that is especially useful when execution fails, for instance:
   /// - INVALID_GOAL: The reason for the invalid goal (e.g., the requested
-  /// trajectory is in the past).
+  ///   trajectory is in the past).
   /// - INVALID_JOINTS: The mismatch between the expected controller joints
   ///   and those provided in the goal.
   /// - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint
