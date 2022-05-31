@@ -382,7 +382,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_DEBUG_THROTTLE(get_time_point_value, duration, ...) \
@@ -399,7 +399,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_DEBUG_SKIPFIRST_THROTTLE(get_time_point_value, duration, ...) \
@@ -415,7 +415,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -433,7 +433,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -629,7 +629,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_INFO_THROTTLE(get_time_point_value, duration, ...) \
@@ -646,7 +646,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_INFO_SKIPFIRST_THROTTLE(get_time_point_value, duration, ...) \
@@ -662,7 +662,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -680,7 +680,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -876,7 +876,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_WARN_THROTTLE(get_time_point_value, duration, ...) \
@@ -893,7 +893,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_WARN_SKIPFIRST_THROTTLE(get_time_point_value, duration, ...) \
@@ -909,7 +909,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -927,7 +927,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -1123,7 +1123,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_ERROR_THROTTLE(get_time_point_value, duration, ...) \
@@ -1140,7 +1140,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_ERROR_SKIPFIRST_THROTTLE(get_time_point_value, duration, ...) \
@@ -1156,7 +1156,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -1174,7 +1174,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -1370,7 +1370,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_FATAL_THROTTLE(get_time_point_value, duration, ...) \
@@ -1387,7 +1387,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
 # define RCUTILS_LOG_FATAL_SKIPFIRST_THROTTLE(get_time_point_value, duration, ...) \
@@ -1403,7 +1403,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
@@ -1421,7 +1421,7 @@ typedef bool (* RclLogFilter)();
  * \note The conditions will only be evaluated if this logging statement is enabled.
  *
  * \param[in] get_time_point_value Function that returns rcutils_ret_t and expects a rcutils_time_point_value_t pointer.
- * \param[in] duration The duration of the throttle interval
+ * \param[in] duration The duration of the throttle interval as an integral value in milliseconds.
  * \param[in] name The name of the logger
  * \param[in] ... The format string, followed by the variable arguments for the format string
  */
