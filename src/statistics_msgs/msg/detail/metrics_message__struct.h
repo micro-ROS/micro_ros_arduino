@@ -37,7 +37,7 @@ extern "C"
   *   - std deviation
   *   - min
   *   - max
-  * - sample count
+  *   - sample count
   *
   * These are all represented as different 'StatisticDataPoint's.
  */
