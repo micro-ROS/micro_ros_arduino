@@ -78,7 +78,7 @@ enum
 /// Constant 'PREEMPTING'.
 /**
   * The goal received a cancel request after it started executing
-  * and has not yet completed execution.
+  *    and has not yet completed execution.
  */
 enum
 {
@@ -98,7 +98,7 @@ enum
 /// Constant 'RECALLED'.
 /**
   * The goal received a cancel request before it started executing
-  *    and was successfully cancelled (Terminal State).
+  * and was successfully cancelled (Terminal State).
  */
 enum
 {
@@ -108,7 +108,7 @@ enum
 /// Constant 'LOST'.
 /**
   * An action client can determine that a goal is LOST. This should not
-  *    be sent over the wire by an action server.
+  * be sent over the wire by an action server.
  */
 enum
 {
