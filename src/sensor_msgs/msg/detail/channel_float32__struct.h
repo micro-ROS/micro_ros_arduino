@@ -35,11 +35,11 @@ extern "C"
   *   "u", "v" - row and column (respectively) in the left stereo image.
   * This is opposite to usual conventions but remains for
   *              historical reasons. The newer PointCloud2 message has no
-  * such problem.
-  *   "rgb" - For point clouds produced by color stereo cameras. uint8
+  *              such problem.
+  * "rgb" - For point clouds produced by color stereo cameras. uint8
   * (R,G,B) values packed into the least significant 24 bits,
-  *           in order.
-  * "intensity" - laser or pixel intensity.
+  * in order.
+  *   "intensity" - laser or pixel intensity.
   *   "distance"
  */
 typedef struct sensor_msgs__msg__ChannelFloat32
