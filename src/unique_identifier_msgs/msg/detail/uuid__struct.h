@@ -21,7 +21,7 @@ extern "C"
 /**
   * A universally unique identifier (UUID).
   *
-  * http://en.wikipedia.org/wiki/Universally_unique_identifier
+  *  http://en.wikipedia.org/wiki/Universally_unique_identifier
   *  http://tools.ietf.org/html/rfc4122.html
  */
 typedef struct unique_identifier_msgs__msg__UUID

@@ -65,18 +65,18 @@ enum
   *   parent_id = 0
   *   title = "fun"
   * - id = 2
-  *   parent_id = 0
-  *   title = "robot"
+  * parent_id = 0
+  * title = "robot"
   * - id = 4
-  * parent_id = 2
-  * title = "pr2"
+  *   parent_id = 2
+  *   title = "pr2"
   * - id = 5
   * parent_id = 2
-  *   title = "turtle"
+  * title = "turtle"
   *
   * Gives a menu tree like this:
   * - fun
-  * - robot
+  *  - robot
   * - pr2
   *    - turtle
  */
