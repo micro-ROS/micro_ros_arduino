@@ -151,7 +151,7 @@ typedef struct visualization_msgs__msg__InteractiveMarkerControl
   ///
   /// Note:
   /// - The markers can be defined in an arbitrary coordinate frame,
-  /// but will be transformed into the local frame of the interactive marker.
+  ///   but will be transformed into the local frame of the interactive marker.
   /// - If the header of a marker is empty, its pose will be interpreted as
   ///   relative to the pose of the parent interactive marker.
   visualization_msgs__msg__Marker__Sequence markers;
