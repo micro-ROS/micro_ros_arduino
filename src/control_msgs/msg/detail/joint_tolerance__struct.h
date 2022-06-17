@@ -31,8 +31,8 @@ extern "C"
   *
   * There are two special values for tolerances:
   * * 0 - The tolerance is unspecified and will remain at whatever the default is
-  *  * -1 - The tolerance is "erased".  If there was a default, the joint will be
-  *         allowed to move without restriction.
+  * * -1 - The tolerance is "erased".  If there was a default, the joint will be
+  * allowed to move without restriction.
  */
 typedef struct control_msgs__msg__JointTolerance
 {
