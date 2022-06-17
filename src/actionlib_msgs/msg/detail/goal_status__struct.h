@@ -48,7 +48,7 @@ enum
 /// Constant 'SUCCEEDED'.
 /**
   * The goal was achieved successfully by the action server
-  * (Terminal State).
+  *   (Terminal State).
  */
 enum
 {
@@ -58,7 +58,7 @@ enum
 /// Constant 'ABORTED'.
 /**
   * The goal was aborted during execution by the action server due
-  * to some failure (Terminal State).
+  *    to some failure (Terminal State).
  */
 enum
 {
@@ -108,7 +108,7 @@ enum
 /// Constant 'LOST'.
 /**
   * An action client can determine that a goal is LOST. This should not
-  *    be sent over the wire by an action server.
+  * be sent over the wire by an action server.
  */
 enum
 {
