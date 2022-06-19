@@ -153,7 +153,7 @@ typedef struct visualization_msgs__msg__InteractiveMarkerControl
   /// - The markers can be defined in an arbitrary coordinate frame,
   ///   but will be transformed into the local frame of the interactive marker.
   /// - If the header of a marker is empty, its pose will be interpreted as
-  ///   relative to the pose of the parent interactive marker.
+  /// relative to the pose of the parent interactive marker.
   visualization_msgs__msg__Marker__Sequence markers;
   /// In VIEW_FACING mode, set this to true if you don't want the markers
   /// to be aligned with the camera view point. The markers will show up
