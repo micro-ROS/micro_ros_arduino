@@ -34,8 +34,8 @@ extern "C"
   * All other Photometric and Radiometric measurements should not use this message.
   * This message cannot represent:
   *  - Luminous intensity (candela/light source output)
-  *  - Luminance (nits/light output per area)
-  *  - Irradiance (watt/area), etc.
+  * - Luminance (nits/light output per area)
+  * - Irradiance (watt/area), etc.
  */
 typedef struct sensor_msgs__msg__Illuminance
 {
