@@ -26,6 +26,7 @@
 #include "test_msgs/srv/empty.hpp"
 
 
+static inline
 std::vector<
   std::pair<
     test_msgs::srv::Empty::Request::SharedPtr,
@@ -48,6 +49,7 @@ get_services_empty()
   return services;
 }
 
+static inline
 std::vector<
   std::pair<
     test_msgs::srv::BasicTypes::Request::SharedPtr,
@@ -139,6 +141,7 @@ get_services_basic_types()
   return services;
 }
 
+static inline
 std::vector<
   std::pair<
     test_msgs::srv::Arrays::Request::SharedPtr,
