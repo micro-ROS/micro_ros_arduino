@@ -48,8 +48,8 @@ typedef struct stereo_msgs__msg__DisparityImage
   /// In the disparity image, any disparity less than min_disparity is invalid.
   /// The disparity search range defines the horopter, or 3D volume that the
   /// stereo algorithm can "see". Points with Z outside of:
-  ///     Z_min = fT / max_disparity
-  ///     Z_max = fT / min_disparity
+  /// Z_min = fT / max_disparity
+  /// Z_max = fT / min_disparity
   /// could not be found.
   float min_disparity;
   float max_disparity;
