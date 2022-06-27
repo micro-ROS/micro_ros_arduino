@@ -31,7 +31,7 @@ typedef struct geometry_msgs__msg__Inertia
   /// Center of mass
   geometry_msgs__msg__Vector3 com;
   /// Inertia Tensor
-  ///     | ixx ixy ixz |
+  /// | ixx ixy ixz |
   /// I = | ixy iyy iyz |
   /// | ixz iyz izz |
   double ixx;
