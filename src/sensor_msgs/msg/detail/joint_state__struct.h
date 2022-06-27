@@ -34,7 +34,7 @@ extern "C"
   * The state of each joint (revolute or prismatic) is defined by:
   *  * the position of the joint (rad or m),
   *  * the velocity of the joint (rad/s or m/s) and
-  *  * the effort that is applied in the joint (Nm or N).
+  * * the effort that is applied in the joint (Nm or N).
   *
   * Each joint is uniquely identified by its name
   * The header specifies the time at which the joint states were recorded. All the joint states
