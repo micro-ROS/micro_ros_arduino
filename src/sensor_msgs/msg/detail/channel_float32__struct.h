@@ -33,7 +33,7 @@ extern "C"
   *
   * Channel names in existing practice include:
   *   "u", "v" - row and column (respectively) in the left stereo image.
-  * This is opposite to usual conventions but remains for
+  *              This is opposite to usual conventions but remains for
   * historical reasons. The newer PointCloud2 message has no
   *              such problem.
   *   "rgb" - For point clouds produced by color stereo cameras. uint8
