@@ -143,7 +143,7 @@ enum
 /**
   * See:
   *  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
-  *  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
+  * - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
   *
   * for more information on using this message with rviz.
  */
@@ -159,10 +159,10 @@ typedef struct visualization_msgs__msg__Marker
   /// Type of object.
   int32_t type;
   /// Action to take; one of:
-  ///  - 0 add/modify an object
-  ///  - 1 (deprecated)
+  /// - 0 add/modify an object
+  /// - 1 (deprecated)
   /// - 2 deletes an object (with the given ns and id)
-  /// - 3 deletes all objects (or those with the given ns if any)
+  ///  - 3 deletes all objects (or those with the given ns if any)
   int32_t action;
   /// Pose of the object with respect the frame_id specified in the header.
   geometry_msgs__msg__Pose pose;
@@ -197,7 +197,7 @@ typedef struct visualization_msgs__msg__Marker
   /// Similar to texture_resource, mesh_resource uses resource retriever to load a mesh.
   /// Optionally, a mesh file can be sent in-message via the mesh_file field. If doing so,
   /// use the following format for mesh_resource:
-  ///   "embedded://mesh_name"
+  /// "embedded://mesh_name"
   rosidl_runtime_c__String mesh_resource;
   visualization_msgs__msg__MeshFile mesh_file;
   bool mesh_use_embedded_materials;
