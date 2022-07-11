@@ -11,6 +11,13 @@
 #error This example is only available for Arduino Portenta, Arduino Teensy41 and STM32F4
 #endif
 
+#if defined(ARDUINO_TEENSY41)
+void get_teensy_mac(uint8_t *mac) {
+    for(uint8_t by=0; by<2; by++) mac[by]=(HW_OCOTP_MAC1 >> ((1-by)*8)) & 0xFF;
+    for(uint8_t by=0; by<4; by++) mac[by+2]=(HW_OCOTP_MAC0 >> ((3-by)*8)) & 0xFF;
+}
+#endif
+
 rcl_publisher_t publisher;
 std_msgs__msg__Int32 msg;
 rclc_support_t support;
@@ -22,8 +29,6 @@ rcl_node_t node;
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
 #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
 
-
-
 void error_loop(){
   while(1){
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
@@ -31,21 +36,19 @@ void error_loop(){
   }
 }
 
-void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
-{
-  RCLC_UNUSED(last_call_time);
-  if (timer != NULL) {
-    RCSOFTCHECK(rcl_publish(&publisher, &msg, NULL));
-    msg.data++;
-  }
-}
-
 void setup() {
+  #if defined(ARDUINO_TEENSY41)
+  uint8_t mac[6];
+  get_teensy_mac(mac);
+  byte arduino_mac[] = { mac[0], mac[1], mac[2], mac[3], mac[4], mac[5] };
+  #else
   byte arduino_mac[] = { 0xAA, 0xBB, 0xCC, 0xEE, 0xDD, 0xFF };
+  #endif
+
   IPAddress arduino_ip(192, 168, 1, 177);
   IPAddress agent_ip(192, 168, 1, 113);
   set_microros_native_ethernet_udp_transports(arduino_mac, arduino_ip, agent_ip, 9999);
-  
+
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, HIGH);
 
