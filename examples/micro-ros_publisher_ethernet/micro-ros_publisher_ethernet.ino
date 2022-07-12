@@ -37,12 +37,10 @@ void error_loop(){
 }
 
 void setup() {
+   byte arduino_mac[] = { 0xAA, 0xBB, 0xCC, 0xEE, 0xDD, 0xFF };
+
   #if defined(ARDUINO_TEENSY41)
-  uint8_t mac[6];
-  get_teensy_mac(mac);
-  byte arduino_mac[] = { mac[0], mac[1], mac[2], mac[3], mac[4], mac[5] };
-  #else
-  byte arduino_mac[] = { 0xAA, 0xBB, 0xCC, 0xEE, 0xDD, 0xFF };
+  get_teensy_mac(arduino_mac);
   #endif
 
   IPAddress arduino_ip(192, 168, 1, 177);
