@@ -160,9 +160,9 @@ typedef struct visualization_msgs__msg__Marker
   int32_t type;
   /// Action to take; one of:
   ///  - 0 add/modify an object
-  /// - 1 (deprecated)
+  ///  - 1 (deprecated)
   ///  - 2 deletes an object (with the given ns and id)
-  /// - 3 deletes all objects (or those with the given ns if any)
+  ///  - 3 deletes all objects (or those with the given ns if any)
   int32_t action;
   /// Pose of the object with respect the frame_id specified in the header.
   geometry_msgs__msg__Pose pose;

@@ -33,7 +33,7 @@ typedef struct geometry_msgs__msg__Inertia
   /// Inertia Tensor
   ///     | ixx ixy ixz |
   /// I = | ixy iyy iyz |
-  /// | ixz iyz izz |
+  ///     | ixz iyz izz |
   double ixx;
   double ixy;
   double ixz;
