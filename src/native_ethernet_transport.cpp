@@ -48,7 +48,7 @@ size_t arduino_native_ethernet_udp_transport_write(
   size_t sent = 0;
   if(1 == udp_client.beginPacket(locator->address, locator->port)){
     sent = udp_client.write(buf, len);
-    sent = 1 == udp_client.endPacket() ? sent : 0;
+    udp_client.endPacket();
   }
 
   udp_client.flush();
