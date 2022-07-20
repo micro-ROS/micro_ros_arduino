@@ -76,7 +76,9 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 	static struct micro_ros_agent_locator locator;
 
    	Ethernet.begin(mac, client_ip);
-	delay(1000);
+	while (Ethernet.linkStatus() == LinkOFF){
+		delay(100);
+	}
 
 	locator.address = agent_ip;
 	locator.port = agent_port;
