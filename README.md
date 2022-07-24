@@ -102,7 +102,7 @@ curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/main/extras/p
 
 ### Patch SAMD
 
-Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
+Go inside your Arduino installation and replace `platform.txt`:
 
 ```bash
 export ARDUINO_PATH=[Your Arduino path]
