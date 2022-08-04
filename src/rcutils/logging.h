@@ -451,10 +451,46 @@ RCUTILS_PUBLIC
 RCUTILS_WARN_UNUSED
 int rcutils_logging_get_logger_effective_level(const char * name);
 
+/// Internal call to log a message.
+/**
+ * Unconditionally log a message.
+ * This is an internal function, and assumes that the caller has already called
+ * rcutils_logging_logger_is_enabled_for().
+ * End-user software should never call this, and instead should call rcutils_log()
+ * or one of the RCUTILS_LOG_ macros.
+ *
+ * The attributes of this function are influenced by the currently set output handler.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No, for formatted outputs <= 1023 characters
+ *                    | Yes, for formatted outputs >= 1024 characters
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] location The pointer to the location struct or NULL
+ * \param[in] severity The severity level
+ * \param[in] name The name of the logger, must be null terminated c string or NULL
+ * \param[in] format The format string
+ * \param[in] ... The variable arguments
+ */
+RCUTILS_PUBLIC
+void rcutils_log_internal(
+  const rcutils_log_location_t * location,
+  int severity,
+  const char * name,
+  const char * format,
+  ...)
+/// @cond Doxygen_Suppress
+RCUTILS_ATTRIBUTE_PRINTF_FORMAT(4, 5)
+/// @endcond
+;
+
 /// Log a message.
 /**
- * The attributes of this function are also being influenced by the currently
- * set output handler.
+ * The attributes of this function are influenced by the currently set output handler.
  *
  * <hr>
  * Attribute          | Adherence
