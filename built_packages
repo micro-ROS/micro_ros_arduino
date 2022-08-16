@@ -1,12 +1,12 @@
 
-https://github.com/ament/ament_cmake.git 6011ffd7ce61e8e9a01eb9871aac5b0aa3c2c85b
+https://github.com/ament/ament_cmake.git 796cef7d7df2ddb806f774a9889e608cc82285d3
 https://github.com/ament/ament_index.git 7c8a2762453bf928909cc3dd65d2164b2f67dbaf
 https://github.com/ament/ament_lint.git 6121502cfb2e6b5f3a8c9f3121314f1077d70048
 https://github.com/ament/ament_package.git de0e60e3b7370df1e2365f125046c5676daae508
 https://github.com/ament/googletest.git 79c4c9db1a7bc8bc5473a280499bf776173653d6
 https://github.com/ament/uncrustify_vendor.git 8945c291fbd36d7980f7e4fd641601c277c178ec
 https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c90070d
-https://github.com/eProsima/Micro-XRCE-DDS-Client.git 88bb91044c0bc58ba39828973f5dfd2b13feb8d6
+https://github.com/eProsima/Micro-XRCE-DDS-Client.git 1d0497c3df13e8bf748e4bc23b88f5be593ed9e8
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://github.com/micro-ROS/micro_ros_utilities d242d4f650969ffd36126a30927c0fbf29cc1aff
 https://github.com/micro-ROS/rcl 563fba39606ed1531a8cff747b5fd5d02fb73380
