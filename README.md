@@ -15,7 +15,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [How to build the precompiled library](#how-to-build-the-precompiled-library)
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
-    - [Patch SAMD](#patch-samd)
+    - [Patch SAM](#patch-sam)
   - [Purpose of the Project](#purpose-of-the-project)
   - [License](#license)
   - [Known Issues/Limitations](#known-issueslimitations)
@@ -100,7 +100,7 @@ cd $ARDUINO_PATH/hardware/teensy/avr/
 curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/foxy/extras/patching_boards/platform_teensy.txt > platform.txt
 ```
 
-### Patch SAMD
+### Patch SAM
 
 Go inside your Arduino installation and replace `platform.txt`:
 
