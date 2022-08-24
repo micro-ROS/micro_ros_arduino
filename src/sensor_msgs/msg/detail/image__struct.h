@@ -46,7 +46,7 @@ typedef struct sensor_msgs__msg__Image
   uint32_t height;
   /// image width, that is, number of columns
   uint32_t width;
-  /// The legal values for encoding are in file include/sensor_msgs/image_encodings.hpp
+  /// The legal values for encoding are in file src/image_encodings.cpp
   /// If you want to standardize a new string format, join
   /// ros-users@lists.ros.org and send an email proposing a new encoding.
   /// Encoding of pixels -- channel meaning, ordering, size
