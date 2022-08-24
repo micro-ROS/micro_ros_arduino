@@ -156,7 +156,7 @@ rcutils_get_zero_initialized_hash_map();
  * ```
  *
  * \param[inout] hash_map rcutils_hash_map_t to be initialized
- * \param[in] initial_capacity the amount of initial capacity for the hash_map
+ * \param[in] initial_capacity the amount of initial capacity for the hash_map - this must be greater than zero and a power of 2
  * \param[in] key_size the size (in bytes) of the key used to index the data
  * \param[in] data_size the size (in bytes) of the data being stored
  * \param[in] key_hashing_func a function that returns a hashed value for a key
