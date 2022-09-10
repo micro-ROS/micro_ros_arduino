@@ -164,6 +164,10 @@ typedef struct rcutils_log_location_s
 } rcutils_log_location_t;
 
 /// The severity levels of log messages / loggers.
+/**
+ * Note: all logging levels have their Least Significant Bit as 0, which is used as an
+ * optimization.  If adding new logging levels, ensure that the new levels keep this property.
+ */
 enum RCUTILS_LOG_SEVERITY
 {
   RCUTILS_LOG_SEVERITY_UNSET = 0,  ///< The unset log level

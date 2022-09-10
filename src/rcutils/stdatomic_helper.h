@@ -32,9 +32,9 @@
 // The my__has_feature avoids a preprocessor error when you check for it and
 // use it on the same line below.
 #if defined(__has_feature)
-#define my__has_feature(...) __has_feature(__VAR_ARGS__)
+#define my__has_feature __has_feature
 #else
-#define my__has_feature(...) 0
+#define my__has_feature(x) 0
 #endif
 
 #if !defined(__clang__) && defined(__GNUC__) && __GNUC__ <= 4 && __GNUC_MINOR__ <= 9
