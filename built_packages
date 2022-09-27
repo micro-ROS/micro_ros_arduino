@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git e4d63eea0c1f6f6e3e02c8fb198921450b72a6c0
+https://github.com/ament/ament_cmake.git 799183ab9bcfd9b66df0de9b644abaf8c9b78e84
 https://github.com/ament/ament_index.git 23da167ecf3890d52684fa52c8f1effac2ef0108
 https://github.com/ament/ament_lint.git bbdaa17224f3b8dfece53662b65d7d18b7404b6a
 https://github.com/ament/ament_package.git 122af3e498dc7387639af0a2e745f49f3160f6e2
@@ -10,7 +10,7 @@ https://github.com/eProsima/Micro-XRCE-DDS-Client.git 1d0497c3df13e8bf748e4bc23b
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://github.com/micro-ROS/micro_ros_utilities fa107f7a935fd2fb9b05e2c1ee9f1819b56da68d
 https://github.com/micro-ROS/rcl ca393e1aab11e824c13cc859b7681fef198487d6
-https://github.com/micro-ROS/rcutils 5879b950287d83bbe6cff1a1ecf2ff697f025258
+https://github.com/micro-ROS/rcutils 745dd0f8fcb03574a449095f3779ba7b2446d479
 https://github.com/micro-ROS/rmw-microxrcedds.git 0424785933cf9eff5fd24a0e282ad4951e187302
 https://github.com/micro-ROS/rosidl_typesupport.git 8477585bfa0cf98deeeb15aa10a525cba9edaea9
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 1310b44fa2fd5327634a39e640a644d2dca745e4
@@ -21,11 +21,11 @@ https://github.com/ros2/example_interfaces.git 4415bc52b67fdd7373981129033032d7a
 https://github.com/ros2/libyaml_vendor.git ec7967d1a29059404075cf7f4c8daf6309aab73c
 https://github.com/ros2/rcl.git 3fa178ad6c60bf16447654a01a4f68e8d400b517
 https://github.com/ros2/rcl_interfaces.git 35b61e2ec5be26dda919ee6c8b1899af5c629277
-https://github.com/ros2/rcl_logging.git d3227b9faab6a2ec49620e7694cebe33f4f58ac8
+https://github.com/ros2/rcl_logging.git 92cba58951c5fec3ced71b11bcf440b89a1c3aad
 https://github.com/ros2/rclc 1c0ea5af6c1d5b3715af9a8029de2e5b03821b03
 https://github.com/ros2/rcpputils.git 358b62b672094470e61c2edf19ecda51845de8ec
-https://github.com/ros2/rmw.git b9036d42dab44b2a44e3da6ed1ad347cef1cd449
-https://github.com/ros2/rmw_implementation.git 4a205126abd1079bdc8ddb23003935922fd23112
+https://github.com/ros2/rmw.git 67b0f0a229c0bd665913a1d937ee82bf896ad554
+https://github.com/ros2/rmw_implementation.git 8c3c133eb070a4f19259f027cc2cea720b28eff0
 https://github.com/ros2/rosidl.git 9348ce9b466335590dc334aab01f4f0dd270713b
 https://github.com/ros2/rosidl_core.git 020a782c73461ce7c7cf237fbfcbf5f3ba997da0
 https://github.com/ros2/rosidl_dds.git a3b598b5b2f5a86c46c525982c733806defa07d3
