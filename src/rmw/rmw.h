@@ -2973,6 +2973,42 @@ RMW_WARN_UNUSED
 rmw_ret_t
 rmw_get_gid_for_publisher(const rmw_publisher_t * publisher, rmw_gid_t * gid);
 
+/// Get the unique identifier (gid) of a service client.
+/**
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ *
+ * <i>[1] implementation defined, check implementation documentation.</i>
+ *
+ * \par Thread-safety
+ *   Service clients are thread-safe objects, and so are all operations on them except for
+ *   finalization.
+ *   Therefore, it is safe to get the unique identifier from the same client concurrently.
+ *   However, access to the gid is not synchronized.
+ *   It is not safe to read or write `gid` while rmw_get_gid_for_client() uses it.
+ *
+ * \pre Given `client` must be a valid service client, as returned by rmw_create_client().
+ *
+ * \param[in] client Service client to get a gid from.
+ * \param[out] gid Service client's unique identifier, populated on success
+ *   but left unchanged on failure.
+ * \return `RMW_RET_OK` if successful, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `publisher` is NULL, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `gid` is NULL, or
+ * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `client` implementation
+ *   identifier does not match this implementation, or
+ * \return `RMW_RET_ERROR` if an unspecified error occurs.
+ */
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_get_gid_for_client(const rmw_client_t * client, rmw_gid_t * gid);
+
 /// Check if two unique identifiers (gids) are equal.
 /**
  * <hr>
