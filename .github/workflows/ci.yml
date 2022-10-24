@@ -28,6 +28,8 @@ jobs:
               additional_urls:
                 - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
                 - https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json''' > arduino-cli.yaml
+            # curl -fsSL https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json -o /root/.arduino15/package_opencr_index.json
+            # curl -fsSL https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json -o /root/.arduino15/package_esp32_index.json
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
