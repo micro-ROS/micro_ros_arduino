@@ -486,9 +486,20 @@ RCUTILS_ATTRIBUTE_PRINTF_FORMAT(4, 5)
  * ------------------ | -------------
  * Allocates Memory   | No, for formatted outputs <= 1023 characters
  *                    | Yes, for formatted outputs >= 1024 characters
- * Thread-Safe        | No
+ * Thread-Safe        | Yes, with itself [1]
  * Uses Atomics       | No
  * Lock-Free          | Yes
+ * <i>[1] should be thread-safe with itself but not with other logging functions</i>
+ *
+ * This should be thread-safe with itself, but is not thread-safe with other
+ * logging functions that do things like set logger levels.
+ *
+ * \todo There are no thread-safety gurantees between this function and other
+ *   logging functions in rcutils, even though it is likely users are calling
+ *   them concurrently today.
+ *   We need to revisit these functions with respect to this issue and make
+ *   guarantees where we can, and change functions higher in the stack to
+ *   provide the thread-safety where we cannot.
  *
  * \param[in] location The pointer to the location struct or NULL
  * \param[in] severity The severity level

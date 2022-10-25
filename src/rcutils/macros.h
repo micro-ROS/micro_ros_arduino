@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// \file
+/// @file
 
 #ifndef RCUTILS__MACROS_H_
 #define RCUTILS__MACROS_H_
@@ -32,7 +32,7 @@ extern "C"
 #define RCUTILS_WARN_UNUSED _Check_return_
 #endif
 
-/// @cond Doxygen_Suppress
+/// \cond Doxygen_Suppress
 // This block either sets RCUTILS_THREAD_LOCAL or RCUTILS_THREAD_LOCAL_PTHREAD.
 #if defined(RCUTILS_NO_THREAD_SUPPORT)
     #define RCUTILS_THREAD_LOCAL
@@ -144,6 +144,19 @@ extern "C"
  * No op since Windows doesn't support providing branch prediction information.
  */
 # define RCUTILS_UNLIKELY(x) (x)
+#endif  // _WIN32
+
+// Provide the compiler a hint about an argument being nonnull when possible.
+#ifndef _WIN32
+# define RCUTILS_NONNULL __attribute__((__nonnull__))
+# define RCUTILS_NONNULL_ARGS(...) __attribute__((__nonnull__(__VA_ARGS__)))
+# define RCUTILS_RETURNS_NONNULL __attribute__((__returns_nonnull__))
+# define RCUTILS_HAS_NONNULL 1
+#else
+# define RCUTILS_NONNULL
+# define RCUTILS_NONNULL_ARGS(...)
+# define RCUTILS_RETURNS_NONNULL
+# define RCUTILS_HAS_NONNULL 0
 #endif  // _WIN32
 
 #if defined RCUTILS_ENABLE_FAULT_INJECTION
