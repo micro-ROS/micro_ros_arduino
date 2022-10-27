@@ -18,7 +18,7 @@ https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e8738
 https://github.com/ros2/ament_cmake_ros.git f4a2bcde898b7c076beefb410989294a92ee76c3
 https://github.com/ros2/common_interfaces.git 2faca4bffed0abe664e676808e892569de84ad7d
 https://github.com/ros2/example_interfaces.git 4415bc52b67fdd7373981129033032d7a2b9f97c
-https://github.com/ros2/libyaml_vendor.git a5877ba93987633501ebe943ab54b306842c529c
+https://github.com/ros2/libyaml_vendor.git 9e14d58ce2198933f97a91adf2af31d788ae59aa
 https://github.com/ros2/rcl.git 0e41255e5522c8636a4691312009eae4920fe114
 https://github.com/ros2/rcl_interfaces.git 35b61e2ec5be26dda919ee6c8b1899af5c629277
 https://github.com/ros2/rcl_logging.git 92cba58951c5fec3ced71b11bcf440b89a1c3aad
