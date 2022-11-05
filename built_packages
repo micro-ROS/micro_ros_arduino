@@ -20,7 +20,7 @@ https://github.com/ros2/common_interfaces.git 60df44894caafa67767da4c71d91f8c5eb
 https://github.com/ros2/example_interfaces.git f8deb566a1facf91bd38b9f00c4cf684c5007d85
 https://github.com/ros2/libyaml_vendor.git 239f695ceaa0820255f3d0fe02ec8c2bd41b8e78
 https://github.com/ros2/rcl.git 7bb8d4d039a3a3c7bee452464358270d6f4ab616
-https://github.com/ros2/rcl_interfaces.git 4be87b33fb6aef6ea5ec5a0662c53f923f9fe9be
+https://github.com/ros2/rcl_interfaces.git 1b2e75388ded2c224e662df60ca957c14e2a8852
 https://github.com/ros2/rcl_logging.git 764508af43391d4583bb1aa310e809409ab166d5
 https://github.com/ros2/rclc 786d95e3f2b20c156c8a88e7ff4b693e41171125
 https://github.com/ros2/rcpputils.git a7898d98ab684bb5d0cb2c20c823a1b4014fa0dc

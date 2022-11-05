@@ -1,4 +1,3 @@
-﻿// NOLINT: This file starts with a BOM since it contain non-ASCII characters
 // generated from rosidl_generator_c/resource/idl__struct.h.em
 // with input from lifecycle_msgs:msg/Transition.idl
 // generated code does not contain a copyright notice
@@ -33,7 +32,7 @@ enum
 
 /// Constant 'TRANSITION_CONFIGURE'.
 /**
-  * The node’s onConfigure callback will be called to allow the node to load its
+  * The node's onConfigure callback will be called to allow the node to load its
   * configuration and conduct any required setup.
  */
 enum
@@ -43,7 +42,7 @@ enum
 
 /// Constant 'TRANSITION_CLEANUP'.
 /**
-  * The node’s callback onCleanup will be called in this transition to allow the
+  * The node's callback onCleanup will be called in this transition to allow the
   * node to load its configuration and conduct any required setup.
  */
 enum
