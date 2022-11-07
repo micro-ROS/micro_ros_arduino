@@ -1,4 +1,3 @@
-﻿// NOLINT: This file starts with a BOM since it contain non-ASCII characters
 // generated from rosidl_generator_c/resource/idl__struct.h.em
 // with input from lifecycle_msgs:msg/State.idl
 // generated code does not contain a copyright notice
@@ -50,7 +49,7 @@ enum
 
 /// Constant 'PRIMARY_STATE_ACTIVE'.
 /**
-  * This is the main state of the node’s life cycle. While in this state, the node
+  * This is the main state of the node's life cycle. While in this state, the node
   * performs any processing, responds to service requests, reads and processes
   * data, produces output, etc.
  */
@@ -73,7 +72,7 @@ enum
 /**
   * Temporary intermediate states. When a transition is requested, the node
   * changes its state into one of these states.
-  * In this transition state the node’s onConfigure callback will be called to
+  * In this transition state the node's onConfigure callback will be called to
   * allow the node to load its configuration and conduct any required setup.
  */
 enum
@@ -83,7 +82,7 @@ enum
 
 /// Constant 'TRANSITION_STATE_CLEANINGUP'.
 /**
-  * In this transition state the node’s callback onCleanup will be called to clear
+  * In this transition state the node's callback onCleanup will be called to clear
   * all state and return the node to a functionally equivalent state as when
   * first created.
  */
