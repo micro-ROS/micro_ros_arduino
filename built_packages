@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git 96ffc1aa661026c6532be3cc6bc11e154ab91b1d
+https://github.com/ament/ament_cmake.git 39d0d36e53d9c208dd5a21c5e7cdae38e937cc7c
 https://github.com/ament/ament_index.git f019d6c40991799a13b18c9c3dcc583e3fde0381
 https://github.com/ament/ament_lint.git 159b10de6c710c7838da8cf8a7420245a9c8e89a
 https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
@@ -20,16 +20,16 @@ https://github.com/ros2/common_interfaces.git 60df44894caafa67767da4c71d91f8c5eb
 https://github.com/ros2/example_interfaces.git f8deb566a1facf91bd38b9f00c4cf684c5007d85
 https://github.com/ros2/libyaml_vendor.git 239f695ceaa0820255f3d0fe02ec8c2bd41b8e78
 https://github.com/ros2/rcl.git 7bb8d4d039a3a3c7bee452464358270d6f4ab616
-https://github.com/ros2/rcl_interfaces.git 1b2e75388ded2c224e662df60ca957c14e2a8852
-https://github.com/ros2/rcl_logging.git 764508af43391d4583bb1aa310e809409ab166d5
+https://github.com/ros2/rcl_interfaces.git 5e01a28f9866a564491480e12d8659a134678741
+https://github.com/ros2/rcl_logging.git 1b7a4e34884005f28eeb04065b5d94565c67b11d
 https://github.com/ros2/rclc 786d95e3f2b20c156c8a88e7ff4b693e41171125
 https://github.com/ros2/rcpputils.git a7898d98ab684bb5d0cb2c20c823a1b4014fa0dc
-https://github.com/ros2/rmw.git edfa61b1644deb7cb92f1999ef5a3fdf547ac24e
+https://github.com/ros2/rmw.git 2a4ee718d0da004d5629f50afd2896fbd1f4aedd
 https://github.com/ros2/rmw_implementation.git 31843adc17f28a4af0dc5f160e9e3b4dfb9710ea
-https://github.com/ros2/rosidl.git bdc43f017e537649ca4306a977e838d3f1d0e825
+https://github.com/ros2/rosidl.git 81e90074ad5a36d63affabf966c71914660c417f
 https://github.com/ros2/rosidl_dds.git ab8497770c652edb40d6b1591118198cbcf14237
 https://github.com/ros2/rosidl_defaults.git 1f1ee2a6169837b10302ffb2a52fb2f2a57239b2
 https://github.com/ros2/test_interface_files.git a0c8f5e338490ddf8b98238dce35c06810115e8b
 https://github.com/ros2/unique_identifier_msgs.git 27767cefcf8a80da44641dc208c57722c28aa11c
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 638fa0ab095ae1e941b05187418f0089c431e8d9
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 548634dd2837d65c043436c8186614e924be5c6c
