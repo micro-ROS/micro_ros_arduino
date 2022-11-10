@@ -1,4 +1,3 @@
-﻿// NOLINT: This file starts with a BOM since it contain non-ASCII characters
 // generated from rosidl_generator_c/resource/idl__struct.h.em
 // with input from sensor_msgs:msg/BatteryState.idl
 // generated code does not contain a copyright notice
@@ -124,7 +123,7 @@ enum
 
 /// Constant 'POWER_SUPPLY_TECHNOLOGY_NIMH'.
 /**
-  * Nickel–Metal Hydride battery
+  * Nickel-Metal Hydride battery
  */
 enum
 {

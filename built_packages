@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git 97270a9d26bdbb7d0715676700d108cc603276d7
+https://github.com/ament/ament_cmake.git 4d56683ae48c985e715207bfd8a0880900beb2f2
 https://github.com/ament/ament_index.git 23da167ecf3890d52684fa52c8f1effac2ef0108
 https://github.com/ament/ament_lint.git bbdaa17224f3b8dfece53662b65d7d18b7404b6a
 https://github.com/ament/ament_package.git 122af3e498dc7387639af0a2e745f49f3160f6e2
@@ -16,17 +16,17 @@ https://github.com/micro-ROS/rosidl_typesupport.git 8477585bfa0cf98deeeb15aa10a5
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 1310b44fa2fd5327634a39e640a644d2dca745e4
 https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e87386cf60
 https://github.com/ros2/ament_cmake_ros.git f4a2bcde898b7c076beefb410989294a92ee76c3
-https://github.com/ros2/common_interfaces.git a5bebf2d7a6f8a877cff2201ab641ea18b90c500
+https://github.com/ros2/common_interfaces.git 864ce4faf5309375cbed49d93b744fb588e2a847
 https://github.com/ros2/example_interfaces.git 4415bc52b67fdd7373981129033032d7a2b9f97c
 https://github.com/ros2/libyaml_vendor.git 4eed20285c0a6292f2b003f659fdf7e9881026cb
-https://github.com/ros2/rcl.git cece5208716405a35f9b8bb0dd555c27b24130cd
+https://github.com/ros2/rcl.git e47ed58d8d2018ee0fdb309b130bffa1e18c0c3d
 https://github.com/ros2/rcl_interfaces.git 4bcbc32c800b6ffc780e28d742c457c070cfd36c
 https://github.com/ros2/rcl_logging.git 911bbbd62b398c7dd030b5a7bcb69e55c613b119
 https://github.com/ros2/rclc 243ee63ca369f0fb90397ba9ae0ca1283ab16ad3
 https://github.com/ros2/rcpputils.git 8789f6357567d2ccd660ef83d41c3d862c35f181
 https://github.com/ros2/rmw.git 8b5cefaa054d48f5034e2a3495b7bf1115c13088
 https://github.com/ros2/rmw_implementation.git 11652db13a0af843b4e6cca12659d07959a9dd24
-https://github.com/ros2/rosidl.git 0894a84fb80b48fdf367fddca4c83e7197cb8192
+https://github.com/ros2/rosidl.git bdcaddd542fb15b46c2e235c601f4a87a10ed3a5
 https://github.com/ros2/rosidl_core.git 020a782c73461ce7c7cf237fbfcbf5f3ba997da0
 https://github.com/ros2/rosidl_dds.git a3b598b5b2f5a86c46c525982c733806defa07d3
 https://github.com/ros2/rosidl_defaults.git 864eebcdb768260a9aba4a826ecfb8f86d658358
