@@ -168,6 +168,49 @@ typedef struct rcl_time_point_s
 // } rcl_rate_t;
 // TODO(tfoote) integrate rate and timer implementations
 
+/// Check if the time point value is valid.
+/**
+ * This function returns true if the time point value is non-zero.
+ * Note that if data is uninitialized it may give a false positive.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] time_point_value the time point value which is being queried
+ * \return true if the source is believed to be valid, otherwise return false.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+bool
+rcl_time_point_value_valid(rcl_time_point_value_t time_point_value);
+
+/// Check if the time point is valid.
+/**
+ * This function returns true if the time point appears to be valid.
+ * It will check that the type is not uninitialized, and that the time point value is non-zero.
+ * Note that if data is uninitialized it may give a false positive.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] time_point the time point which is being queried
+ * \return true if the source is believed to be valid, otherwise return false.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+bool
+rcl_time_point_valid(rcl_time_point_t * time_point);
+
 /// Check if the clock has valid values.
 /**
  * This function returns true if the time source appears to be valid.
