@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git 796cef7d7df2ddb806f774a9889e608cc82285d3
+https://github.com/ament/ament_cmake.git df76b1a153c3f7d164b2f5f2896e60f78dc4ad80
 https://github.com/ament/ament_index.git 7c8a2762453bf928909cc3dd65d2164b2f67dbaf
 https://github.com/ament/ament_lint.git 6121502cfb2e6b5f3a8c9f3121314f1077d70048
 https://github.com/ament/ament_package.git de0e60e3b7370df1e2365f125046c5676daae508
@@ -19,14 +19,14 @@ https://github.com/ros2/ament_cmake_ros.git 7b6b599c3fc8023806db2a97b344e8610902
 https://github.com/ros2/common_interfaces.git 969a56b0b59f7f70b5c4561185ea34aaa2b74e1d
 https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb0cf5355
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
-https://github.com/ros2/rcl.git 47753122084d9762e570761af95c5e123ececf37
+https://github.com/ros2/rcl.git 160039d038130ce515dd204bd050a414c63b5dd4
 https://github.com/ros2/rcl_interfaces.git c5d0a20150533a6cb93d5dcbd6e27cea9300aa6e
-https://github.com/ros2/rcl_logging.git deed0c949998e015459fe6f3de9c0d25c8b7d426
+https://github.com/ros2/rcl_logging.git 48d9680111e4d53440cc7e830a53eabbbe98f94b
 https://github.com/ros2/rclc 24f6d2e3421eb2c07bd61a880b3064bc5e5994a5
-https://github.com/ros2/rcpputils.git cc1148f8d161c9ea19cb10d37fa2a616e5ef2fe4
+https://github.com/ros2/rcpputils.git a84bb6630b8c885592a44913fde082fae3121765
 https://github.com/ros2/rmw.git f9f4ef46f8dd3ef938526a1140a3c57c155a259f
 https://github.com/ros2/rmw_implementation.git f635b57f5218ee931b62bf2ecdc7d83f8a92073f
-https://github.com/ros2/rosidl.git a0752a9e12937683cd2cb644737a30e402e09d2d
+https://github.com/ros2/rosidl.git 3be0e4db59979c7b74b50e2778cdd5c700e3b248
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
 https://github.com/ros2/test_interface_files.git d0ee98f449c428fc2afa888b06fea48b87dc6645
