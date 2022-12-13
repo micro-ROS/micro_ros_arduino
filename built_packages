@@ -11,7 +11,7 @@ https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3
 https://github.com/micro-ROS/micro_ros_utilities fa107f7a935fd2fb9b05e2c1ee9f1819b56da68d
 https://github.com/micro-ROS/rcl a1351599e2fb8371464efe12e0b044257d10be4c
 https://github.com/micro-ROS/rcutils 742f6173bf7508f0bc48bf2fcbfa736bc2892bf7
-https://github.com/micro-ROS/rmw-microxrcedds.git b80b96a04a0c139e4406400515faf1563e869cc4
+https://github.com/micro-ROS/rmw-microxrcedds.git a08c301b9dc32253198a811a29ba2375678bdf9c
 https://github.com/micro-ROS/rosidl_typesupport.git 8477585bfa0cf98deeeb15aa10a525cba9edaea9
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 1310b44fa2fd5327634a39e640a644d2dca745e4
 https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e87386cf60
