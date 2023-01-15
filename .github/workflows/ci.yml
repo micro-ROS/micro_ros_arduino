@@ -27,15 +27,18 @@ jobs:
             echo '''board_manager:
               additional_urls:
                 - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
-                - https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json''' > arduino-cli.yaml
+                - https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json
+                - https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json''' > arduino-cli.yaml
             curl -fsSL https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json -o /github/home/.arduino15/package_opencr_index.json
             curl -fsSL https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json -o /github/home/.arduino15/package_esp32_index.json
+            curl -fsSL https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json -o /github/home/.arduino15/package_seeeduino_boards_index.json
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
             arduino-cli core install arduino:mbed -v
             arduino-cli core install esp32:esp32 -v
+            arduino-cli core install Seeeduino:samd -v
             #
             # INSTALLING TEENSY SUPPORT
             wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
@@ -60,6 +63,7 @@ jobs:
             arduino-cli core update-index
             arduino-cli lib update-index
             arduino-cli lib install WiFiNINA
+            arduino-cli lib install "Seeed Arduino rpcWiFi" # Dependent libraries(e.g. "Seeed Arduino rpcUnified") will be installed together. See https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#needed-libraries-for-wi-fi for more details.
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
@@ -83,3 +87,4 @@ jobs:
             arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
