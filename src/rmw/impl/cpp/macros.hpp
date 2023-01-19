@@ -17,13 +17,11 @@
 
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 
-#include "rcutils/snprintf.h"
-
-#include "rmw/allocators.h"
+#include "rmw/check_type_identifiers_match.h"
 #include "rmw/error_handling.h"
-#include "rmw/impl/config.h"  // For RMW_AVOID_MEMORY_ALLOCATION
 #include "rmw/impl/cpp/demangle.hpp"  // For demangle.
 
 #define RMW_TRY_PLACEMENT_NEW(Destination, BufferForNew, FailureAction, Type, ...) \
@@ -71,63 +69,5 @@
       " while handling a failure at: " << __FILE__ << ":" << __LINE__ << '\n'; \
     (std::cerr << ss.str()).flush(); \
   }
-
-#if RMW_AVOID_MEMORY_ALLOCATION
-#define RMW_CHECK_TYPE_IDENTIFIERS_MATCH(ElementName, ElementTypeID, ExpectedTypeID, OnFailure) \
-  { \
-    if (ElementTypeID != ExpectedTypeID) { \
-      char __msg[1024]; \
-      int ret = rcutils_snprintf( \
-        __msg, sizeof(__msg), \
-        #ElementName " implementation '%s'(%p) does not match rmw implementation '%s'(%p)", \
-        ElementTypeID, reinterpret_cast<const void *>(ElementTypeID), \
-        ExpectedTypeID, reinterpret_cast<const void *>(ExpectedTypeID)); \
-      if (ret < 0) { \
-        static const char error_msg[] = \
-          "RMW_CHECK_TYPE_IDENTIFIERS_MATCH(): rcutils_snprintf() failed"; \
-        memmove(__msg, error_msg, sizeof(error_msg)); \
-      } \
-      RMW_SET_ERROR_MSG(__msg); \
-      OnFailure; \
-    } \
-  }
-#else  // RMW_AVOID_MEMORY_ALLOCATION
-#define RMW_CHECK_TYPE_IDENTIFIERS_MATCH(ElementName, ElementTypeID, ExpectedTypeID, OnFailure) \
-  { \
-    if (ElementTypeID != ExpectedTypeID) { \
-      int __bytes_that_would_have_been_written = rcutils_snprintf( \
-        NULL, 0, \
-        #ElementName " implementation '%s'(%p) does not match rmw implementation '%s'(%p)", \
-        ElementTypeID, reinterpret_cast<const void *>(ElementTypeID), \
-        ExpectedTypeID, reinterpret_cast<const void *>(ExpectedTypeID)); \
-      if (__bytes_that_would_have_been_written < 0) { \
-        RMW_SET_ERROR_MSG( \
-          "RMW_CHECK_TYPE_IDENTIFIERS_MATCH(): rcutils_snprintf(NULL, 0, ...) failed"); \
-        OnFailure; \
-      } else { \
-        char * __msg = \
-          reinterpret_cast<char *>(rmw_allocate(__bytes_that_would_have_been_written + 1)); \
-        if (NULL == __msg) { \
-          RMW_SET_ERROR_MSG( \
-            "RMW_CHECK_TYPE_IDENTIFIERS_MATCH(): rmw_allocate() failed"); \
-        } else { \
-          int ret = rcutils_snprintf( \
-            __msg, __bytes_that_would_have_been_written + 1, \
-            #ElementName " implementation '%s'(%p) does not match rmw implementation '%s'(%p)", \
-            ElementTypeID, reinterpret_cast<const void *>(ElementTypeID), \
-            ExpectedTypeID, reinterpret_cast<const void *>(ExpectedTypeID)); \
-          if (ret < 0) { \
-            RMW_SET_ERROR_MSG( \
-              "RMW_CHECK_TYPE_IDENTIFIERS_MATCH(): rcutils_snprintf() failed"); \
-          } else { \
-            RMW_SET_ERROR_MSG(__msg); \
-          } \
-        } \
-        rmw_free(__msg); \
-        OnFailure; \
-      } \
-    } \
-  }
-#endif  // RMW_AVOID_MEMORY_ALLOCATION
 
 #endif  // RMW__IMPL__CPP__MACROS_HPP_
