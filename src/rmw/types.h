@@ -37,9 +37,11 @@ extern "C"
 #include "rmw/time.h"
 #include "rmw/visibility_control.h"
 
-// 24 bytes is the most memory needed to represent the GID by any current
-// implementation. It may need to be increased in the future.
-#define RMW_GID_STORAGE_SIZE 24u
+// We define the GID as 16 bytes (128 bits).  This should be enough to ensure
+// uniqueness amongst all entities in the system.  It is up to the individual
+// RMW implementations to fill that in, either from the underlying middleware
+// or from the RMW layer itself.
+#define RMW_GID_STORAGE_SIZE 16u
 
 /// Structure which encapsulates an rmw node
 typedef struct RMW_PUBLIC_TYPE rmw_node_s
@@ -356,7 +358,7 @@ typedef struct RMW_PUBLIC_TYPE rmw_wait_set_s
 typedef struct RMW_PUBLIC_TYPE rmw_request_id_s
 {
   /// The guid of the writer associated with this request
-  int8_t writer_guid[16];
+  int8_t writer_guid[RMW_GID_STORAGE_SIZE];
 
   /// Sequence number of this service
   int64_t sequence_number;
@@ -622,7 +624,7 @@ typedef struct RMW_PUBLIC_TYPE rmw_gid_s
   /// Name of the rmw implementation
   const char * implementation_identifier;
 
-  /// Bype data Gid value
+  /// Byte data Gid value
   uint8_t data[RMW_GID_STORAGE_SIZE];
 } rmw_gid_t;
 
