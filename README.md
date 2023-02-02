@@ -9,6 +9,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
 
 - [micro-ROS for Arduino](#micro-ros-for-arduino)
   - [Supported boards](#supported-boards)
+- [| Teensy 3.6                              | v1.8.5      | Supported  | Based on Teensyduino                                | `colcon_lowmem.meta`     |](#-teensy-36-------------------------------v185-------supported---based-on-teensyduino---------------------------------colcon_lowmemmeta-----)
   - [How to use the precompiled library](#how-to-use-the-precompiled-library)
     - [Arduino IDE](#arduino-ide)
     - [PlatformIO](#platformio)
@@ -104,16 +105,10 @@ You can [configure many parameters](https://micro.ros.org/docs/tutorials/advance
 Go inside your Arduino + Teensyduino installation and replace `platform.txt`:
 
 ```bash
-<<<<<<< HEAD
-export ARDUINO_PATH=[Your Arduino + Teensiduino path]
-cd $ARDUINO_PATH/hardware/teensy/avr/
-curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/galactic/extras/patching_boards/platform_teensy.txt > platform.txt
-=======
 export TEENSYDUINO_VERSION=[Your Teensyduino library version, e.g: 1.57.2]
 export ARDUINO_PATH=[Your Arduino + Teensyduino path]
 cd $ARDUINO_PATH/hardware/avr/$TEENSYDUINO_VERSION/
 curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/main/extras/patching_boards/platform_teensy.txt > platform.txt
->>>>>>> 3734b09 (Update Teensy documentation (#1275))
 ```
 
 ### Patch SAM
