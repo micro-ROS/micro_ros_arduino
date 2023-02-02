@@ -9,7 +9,7 @@ https://github.com/eProsima/Micro-CDR.git cb4403a8780095df94a7b1936b1e00153c9007
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 1d0497c3df13e8bf748e4bc23b88f5be593ed9e8
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://github.com/micro-ROS/micro_ros_utilities fa107f7a935fd2fb9b05e2c1ee9f1819b56da68d
-https://github.com/micro-ROS/rcl e576a367ee70178795e2b7eda1cc9e64c494e064
+https://github.com/micro-ROS/rcl 342d773356a39b5bfb9ee98936834413176e5d58
 https://github.com/micro-ROS/rcutils 73781bba07c1b1d389d3a418435d75db3bf3271a
 https://github.com/micro-ROS/rmw-microxrcedds.git 5a62caedc900edfca3b19f1536ca5e477fb5d43d
 https://github.com/micro-ROS/rosidl_typesupport.git 8477585bfa0cf98deeeb15aa10a525cba9edaea9
@@ -18,13 +18,13 @@ https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e8738
 https://github.com/ros2/ament_cmake_ros.git 134b6b8f7775d6b72bf6fc95d09bc884f521c1f8
 https://github.com/ros2/common_interfaces.git eb4f3e31ddd223fd33f69f40f0ce6d79da8effe2
 https://github.com/ros2/example_interfaces.git b8f0d45b3f5a7dd2f493ca9821bcfc40f69d5103
-https://github.com/ros2/libyaml_vendor.git 227b23b98a231deb5964945fb9b045ef211f61f3
-https://github.com/ros2/rcl.git bddbb377cbfbaa80f5a23f7c75bd1f5296d0cadf
+https://github.com/ros2/libyaml_vendor.git 1501196665666188702cdba4f9537ff0e20a5a41
+https://github.com/ros2/rcl.git b9de17458e5f359368257a2f0608c7031d607595
 https://github.com/ros2/rcl_interfaces.git 43ffb7b6df6a98a1a35d0932d148ad12de549594
-https://github.com/ros2/rcl_logging.git d76b545f881552a6d9b8563c5fd20d73545ddffa
+https://github.com/ros2/rcl_logging.git 6612b45b23500f3a798c3b9cc293abb234c70a5a
 https://github.com/ros2/rclc 361fcdf6574eefb61ec82e50a7b82231394c3e41
 https://github.com/ros2/rcpputils.git 8593a4fc66bb1348eba263639559ca638f21a19a
-https://github.com/ros2/rmw.git b9e5349d54e24a78ce896f596d253303c2cbc191
+https://github.com/ros2/rmw.git 4b6f14b3f03fa3fea31f31ab7c232eceb12b0c41
 https://github.com/ros2/rmw_implementation.git 5ca69c397ac694598c8f4c3f34aac8256aa0ae17
 https://github.com/ros2/rosidl.git a46056cc3cf0c69d1d1db5b9c2afbfd13fe9fba3
 https://github.com/ros2/rosidl_core.git ef51d18c37ab3fe9da87b2f6e0eb38730c5daad4
@@ -33,4 +33,4 @@ https://github.com/ros2/rosidl_defaults.git 3a33f8afee61cf77480a7bac1ae6d176bbc3
 https://github.com/ros2/test_interface_files.git 9735cbc1b4116c3f59289e2be45b1bd70a3b4e40
 https://github.com/ros2/unique_identifier_msgs.git 1183d57d2ec2598fa4285fb0f38fd0f56d90d08f
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 0d79e0210eb976ed94dd30c640432a1b4bd76766
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 0ecf50568caedd3b0faa063015c6f1ece3696655

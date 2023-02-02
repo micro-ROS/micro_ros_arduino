@@ -358,7 +358,7 @@ typedef struct RMW_PUBLIC_TYPE rmw_wait_set_s
 typedef struct RMW_PUBLIC_TYPE rmw_request_id_s
 {
   /// The guid of the writer associated with this request
-  int8_t writer_guid[RMW_GID_STORAGE_SIZE];
+  uint8_t writer_guid[RMW_GID_STORAGE_SIZE];
 
   /// Sequence number of this service
   int64_t sequence_number;
