@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Fail fast
+set -e
+
 PLATFORMS=()
 while getopts "p:" o; do
     case "$o" in
