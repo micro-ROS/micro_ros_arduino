@@ -78,6 +78,43 @@ typedef struct diagnostic_msgs__srv__AddDiagnostics_Response__Sequence
   size_t capacity;
 } diagnostic_msgs__srv__AddDiagnostics_Response__Sequence;
 
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  diagnostic_msgs__srv__AddDiagnostics_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  diagnostic_msgs__srv__AddDiagnostics_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/AddDiagnostics in the package diagnostic_msgs.
+typedef struct diagnostic_msgs__srv__AddDiagnostics_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  diagnostic_msgs__srv__AddDiagnostics_Request__Sequence request;
+  diagnostic_msgs__srv__AddDiagnostics_Response__Sequence response;
+} diagnostic_msgs__srv__AddDiagnostics_Event;
+
+// Struct for a sequence of diagnostic_msgs__srv__AddDiagnostics_Event.
+typedef struct diagnostic_msgs__srv__AddDiagnostics_Event__Sequence
+{
+  diagnostic_msgs__srv__AddDiagnostics_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} diagnostic_msgs__srv__AddDiagnostics_Event__Sequence;
+
 #ifdef __cplusplus
 }
 #endif

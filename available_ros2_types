@@ -159,6 +159,7 @@ sensor_msgs/RelativeHumidity.msg
 sensor_msgs/SetCameraInfo.srv
 sensor_msgs/Temperature.msg
 sensor_msgs/TimeReference.msg
+service_msgs/ServiceEventInfo.msg
 shape_msgs/Mesh.msg
 shape_msgs/MeshTriangle.msg
 shape_msgs/Plane.msg

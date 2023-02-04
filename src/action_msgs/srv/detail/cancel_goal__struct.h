@@ -113,6 +113,43 @@ typedef struct action_msgs__srv__CancelGoal_Response__Sequence
   size_t capacity;
 } action_msgs__srv__CancelGoal_Response__Sequence;
 
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  action_msgs__srv__CancelGoal_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  action_msgs__srv__CancelGoal_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/CancelGoal in the package action_msgs.
+typedef struct action_msgs__srv__CancelGoal_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  action_msgs__srv__CancelGoal_Request__Sequence request;
+  action_msgs__srv__CancelGoal_Response__Sequence response;
+} action_msgs__srv__CancelGoal_Event;
+
+// Struct for a sequence of action_msgs__srv__CancelGoal_Event.
+typedef struct action_msgs__srv__CancelGoal_Event__Sequence
+{
+  action_msgs__srv__CancelGoal_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} action_msgs__srv__CancelGoal_Event__Sequence;
+
 #ifdef __cplusplus
 }
 #endif

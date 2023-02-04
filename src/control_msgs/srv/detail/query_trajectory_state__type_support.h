@@ -39,6 +39,19 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   QueryTrajectoryState_Response
 )();
 
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+
+// Forward declare the get type support functions for this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  control_msgs,
+  srv,
+  QueryTrajectoryState_Event
+)();
+
 #include "rosidl_runtime_c/service_type_support_struct.h"
 
 // Forward declare the get type support functions for this type.
@@ -50,6 +63,32 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(
   srv,
   QueryTrajectoryState
 )();
+
+// Forward declare the function to create a service event message for this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+void *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  control_msgs,
+  srv,
+  QueryTrajectoryState
+)(
+  const rosidl_service_introspection_info_t * info,
+  rcutils_allocator_t * allocator,
+  const void * request_message,
+  const void * response_message);
+
+// Forward declare the function to destroy a service event message for this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+bool
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  control_msgs,
+  srv,
+  QueryTrajectoryState
+)(
+  void * event_msg,
+  rcutils_allocator_t * allocator);
 
 #ifdef __cplusplus
 }
