@@ -67,6 +67,43 @@ typedef struct nav_msgs__srv__GetPlan_Response__Sequence
   size_t capacity;
 } nav_msgs__srv__GetPlan_Response__Sequence;
 
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  nav_msgs__srv__GetPlan_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  nav_msgs__srv__GetPlan_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/GetPlan in the package nav_msgs.
+typedef struct nav_msgs__srv__GetPlan_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  nav_msgs__srv__GetPlan_Request__Sequence request;
+  nav_msgs__srv__GetPlan_Response__Sequence response;
+} nav_msgs__srv__GetPlan_Event;
+
+// Struct for a sequence of nav_msgs__srv__GetPlan_Event.
+typedef struct nav_msgs__srv__GetPlan_Event__Sequence
+{
+  nav_msgs__srv__GetPlan_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} nav_msgs__srv__GetPlan_Event__Sequence;
+
 #ifdef __cplusplus
 }
 #endif
