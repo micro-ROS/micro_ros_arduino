@@ -90,6 +90,19 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   NestedMessage_SendGoal_Response
 )();
 
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+
+// Forward declare the get type support functions for this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  test_msgs,
+  action,
+  NestedMessage_SendGoal_Event
+)();
+
 #include "rosidl_runtime_c/service_type_support_struct.h"
 
 // Forward declare the get type support functions for this type.
@@ -101,6 +114,32 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(
   action,
   NestedMessage_SendGoal
 )();
+
+// Forward declare the function to create a service event message for this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+void *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  test_msgs,
+  action,
+  NestedMessage_SendGoal
+)(
+  const rosidl_service_introspection_info_t * info,
+  rcutils_allocator_t * allocator,
+  const void * request_message,
+  const void * response_message);
+
+// Forward declare the function to destroy a service event message for this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  test_msgs,
+  action,
+  NestedMessage_SendGoal
+)(
+  void * event_msg,
+  rcutils_allocator_t * allocator);
 
 // already included above
 // #include "rosidl_runtime_c/message_type_support_struct.h"
@@ -129,6 +168,19 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
 )();
 
 // already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+
+// Forward declare the get type support functions for this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  test_msgs,
+  action,
+  NestedMessage_GetResult_Event
+)();
+
+// already included above
 // #include "rosidl_runtime_c/service_type_support_struct.h"
 
 // Forward declare the get type support functions for this type.
@@ -140,6 +192,32 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(
   action,
   NestedMessage_GetResult
 )();
+
+// Forward declare the function to create a service event message for this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+void *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  test_msgs,
+  action,
+  NestedMessage_GetResult
+)(
+  const rosidl_service_introspection_info_t * info,
+  rcutils_allocator_t * allocator,
+  const void * request_message,
+  const void * response_message);
+
+// Forward declare the function to destroy a service event message for this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+bool
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  test_msgs,
+  action,
+  NestedMessage_GetResult
+)(
+  void * event_msg,
+  rcutils_allocator_t * allocator);
 
 // already included above
 // #include "rosidl_runtime_c/message_type_support_struct.h"

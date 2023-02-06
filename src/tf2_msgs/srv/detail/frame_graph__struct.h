@@ -56,6 +56,43 @@ typedef struct tf2_msgs__srv__FrameGraph_Response__Sequence
   size_t capacity;
 } tf2_msgs__srv__FrameGraph_Response__Sequence;
 
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  tf2_msgs__srv__FrameGraph_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  tf2_msgs__srv__FrameGraph_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/FrameGraph in the package tf2_msgs.
+typedef struct tf2_msgs__srv__FrameGraph_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  tf2_msgs__srv__FrameGraph_Request__Sequence request;
+  tf2_msgs__srv__FrameGraph_Response__Sequence response;
+} tf2_msgs__srv__FrameGraph_Event;
+
+// Struct for a sequence of tf2_msgs__srv__FrameGraph_Event.
+typedef struct tf2_msgs__srv__FrameGraph_Event__Sequence
+{
+  tf2_msgs__srv__FrameGraph_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} tf2_msgs__srv__FrameGraph_Event__Sequence;
+
 #ifdef __cplusplus
 }
 #endif

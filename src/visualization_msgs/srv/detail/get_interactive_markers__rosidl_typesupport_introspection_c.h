@@ -30,6 +30,17 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_PUBLIC_visualization_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, visualization_msgs, srv, GetInteractiveMarkers_Response)();
 
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+// already included above
+// #include "visualization_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h"
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_C_PUBLIC_visualization_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, visualization_msgs, srv, GetInteractiveMarkers_Event)();
+
 #include "rosidl_runtime_c/service_type_support_struct.h"
 // already included above
 // #include "rosidl_typesupport_interface/macros.h"
