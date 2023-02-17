@@ -2937,6 +2937,108 @@ rmw_count_subscribers(
   const char * topic_name,
   size_t * count);
 
+/// Count the number of known clients matching a service name.
+/**
+ * This function returns the numbers of clients of a given service in the ROS graph,
+ * as discovered so far by the given node.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] implementation defined, check the implementation documentation</i>
+ *
+ * \par Runtime behavior
+ *   To query the ROS graph is a synchronous operation.
+ *   It is also non-blocking, but it is not guaranteed to be lock-free.
+ *   Generally speaking, implementations may synchronize access to internal resources using
+ *   locks but are not allowed to wait for events with no guaranteed time bound (barring
+ *   the effects of starvation due to OS scheduling).
+ *
+ * \par Thread-safety
+ *   Nodes are thread-safe objects, and so are all operations on them except for finalization.
+ *   Therefore, it is safe to query the ROS graph using the same node concurrently.
+ *   However, access to primitive data-type arguments is not synchronized.
+ *   It is not safe to read or write `service_name` or `count` while rmw_count_clients()
+ *   uses them.
+ *
+ * \pre Given `node` must be a valid node handle, as returned by rmw_create_node().
+ *
+ * \param[in] node Handle to node to use to query the ROS graph.
+ * \param[in] service_name Fully qualified ROS topic name.
+ * \param[out] count Number of clients matching the given topic name.
+ * \return `RMW_RET_OK` if the query was successful, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `node` is NULL, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `service_name` is NULL, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `service_name` is not a fully qualified topic name,
+ *   by rmw_validate_full_topic_name() definition, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `count` is NULL, or
+ * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `node` implementation
+ *   identifier does not match this implementation, or
+ * \return `RMW_RET_ERROR` if an unspecified error occurs.
+ */
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_count_clients(
+  const rmw_node_t * node,
+  const char * service_name,
+  size_t * count);
+
+/// Count the number of known servers matching a service name.
+/**
+ * This function returns the numbers of servers of a given service in the ROS graph,
+ * as discovered so far by the given node.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] implementation defined, check the implementation documentation</i>
+ *
+ * \par Runtime behavior
+ *   To query the ROS graph is a synchronous operation.
+ *   It is also non-blocking, but it is not guaranteed to be lock-free.
+ *   Generally speaking, implementations may synchronize access to internal resources using
+ *   locks but are not allowed to wait for events with no guaranteed time bound (barring
+ *   the effects of starvation due to OS scheduling).
+ *
+ * \par Thread-safety
+ *   Nodes are thread-safe objects, and so are all operations on them except for finalization.
+ *   Therefore, it is safe to query the ROS graph using the same node concurrently.
+ *   However, access to primitive data-type arguments is not synchronized.
+ *   It is not safe to read or write `service_name` or `count` while rmw_count_services()
+ *   uses them.
+ *
+ * \pre Given `node` must be a valid node handle, as returned by rmw_create_node().
+ *
+ * \param[in] node Handle to node to use to query the ROS graph.
+ * \param[in] service_name Fully qualified ROS topic name.
+ * \param[out] count Number of services matching the given topic name.
+ * \return `RMW_RET_OK` if the query was successful, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `node` is NULL, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `service_name` is NULL, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `service_name` is not a fully qualified service name,
+ *   by rmw_validate_full_topic_name() definition, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `count` is NULL, or
+ * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `node` implementation
+ *   identifier does not match this implementation, or
+ * \return `RMW_RET_ERROR` if an unspecified error occurs.
+ */
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_count_services(
+  const rmw_node_t * node,
+  const char * service_name,
+  size_t * count);
+
 /// Get the unique identifier (gid) of a publisher.
 /**
  * <hr>
