@@ -26,6 +26,7 @@ extern "C"
 
 #include "rcl/allocator.h"
 #include "rcl/context.h"
+#include "rcl/event_callback.h"
 #include "rcl/guard_condition.h"
 #include "rcl/macros.h"
 #include "rcl/time.h"
@@ -40,6 +41,14 @@ typedef struct rcl_timer_s
   /// Private implementation pointer.
   rcl_timer_impl_t * impl;
 } rcl_timer_t;
+
+/// Structure which encapsulates the on reset callback data
+typedef struct rcl_timer_on_reset_callback_data_s
+{
+  rcl_event_callback_t on_reset_callback;
+  const void * user_data;
+  size_t reset_counter;
+} rcl_timer_on_reset_callback_data_t;
 
 /// User callback signature for timers.
 /**
@@ -589,6 +598,34 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_guard_condition_t *
 rcl_timer_get_guard_condition(const rcl_timer_t * timer);
+
+/// Set the on reset callback function for the timer.
+/**
+ * This API sets the callback function to be called whenever the
+ * timer is reset.
+ * If the timer has already been reset, the callback will be called.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | No
+ *
+ * \param[in] timer The handle to the timer on which to set the callback
+ * \param[in] on_reset_callback The callback to be called when timer is reset
+ * \param[in] user_data Given to the callback when called later, may be NULL
+ * \return `RCL_RET_OK` if successful, or
+ * \return `RCL_RET_INVALID_ARGUMENT` if `timer` is NULL
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_timer_set_on_reset_callback(
+  const rcl_timer_t * timer,
+  rcl_event_callback_t on_reset_callback,
+  const void * user_data);
 
 #ifdef __cplusplus
 }
