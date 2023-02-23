@@ -19,7 +19,7 @@ https://github.com/ros2/ament_cmake_ros.git ede6248e1f36aaef85eb4eac23c782a134ef
 https://github.com/ros2/common_interfaces.git 4bac182a0a582b5e6b784d9fa9f0dabc1aca4d35
 https://github.com/ros2/example_interfaces.git 58899de0f85388be333e32bcb78c551a6877db4d
 https://github.com/ros2/libyaml_vendor.git 0c814892fe8c31aeb20688a8b43906aeefda015e
-https://github.com/ros2/rcl.git fcabfaca94809627aefc1bd1c290e2a07a859492
+https://github.com/ros2/rcl.git d15594effa63065a19a9f69960ea80f5ac5be8bd
 https://github.com/ros2/rcl_interfaces.git 0aa89223ab92fc028173047a2ba3d987b0f01f71
 https://github.com/ros2/rcl_logging.git cdef749a304f734ba275f8466a4883db6400dc75
 https://github.com/ros2/rclc 3b4ff9e46ad63ca08a1131760a86b0f42c2bba63
@@ -33,4 +33,4 @@ https://github.com/ros2/rosidl_defaults.git 34a204f3ce0528c6ec3bb89d33404422eb87
 https://github.com/ros2/test_interface_files.git 3abbbf68d939cac86e53992b68ee93f9a37fff41
 https://github.com/ros2/unique_identifier_msgs.git 1ced881f07e5d5744d01867b1caedbc13c856195
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ e7a9669589b33fbab579007e5022da332a6bbf42
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 80961966934357384e98ebea6a61150032d27a40
