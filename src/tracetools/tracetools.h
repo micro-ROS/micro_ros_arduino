@@ -48,10 +48,18 @@
   (ros_trace_ ## event_name)()
 #  define _TRACEPOINT_ARGS(event_name, ...) \
   (ros_trace_ ## event_name)(__VA_ARGS__)
+#  define _DO_TRACEPOINT_NOARGS(event_name) \
+  (ros_trace_do_ ## event_name)()
+#  define _DO_TRACEPOINT_ARGS(event_name, ...) \
+  (ros_trace_do_ ## event_name)(__VA_ARGS__)
 #  define _DECLARE_TRACEPOINT_NOARGS(event_name) \
-  TRACETOOLS_PUBLIC void ros_trace_ ## event_name();
+  TRACETOOLS_PUBLIC void ros_trace_ ## event_name(); \
+  TRACETOOLS_PUBLIC bool ros_trace_enabled_ ## event_name(); \
+  TRACETOOLS_PUBLIC void ros_trace_do_ ## event_name();
 #  define _DECLARE_TRACEPOINT_ARGS(event_name, ...) \
-  TRACETOOLS_PUBLIC void ros_trace_ ## event_name(__VA_ARGS__);
+  TRACETOOLS_PUBLIC void ros_trace_ ## event_name(__VA_ARGS__); \
+  TRACETOOLS_PUBLIC bool ros_trace_enabled_ ## event_name(); \
+  TRACETOOLS_PUBLIC void ros_trace_do_ ## event_name(__VA_ARGS__);
 
 #  define _GET_MACRO_TRACEPOINT(...) \
   _GET_MACRO( \
@@ -59,6 +67,12 @@
     _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, \
     _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, _TRACEPOINT_ARGS, _TRACEPOINT_NOARGS, \
     shoud_not_be_called_without_any_arguments)
+#  define _GET_MACRO_DO_TRACEPOINT(...) \
+  _GET_MACRO( \
+    __VA_ARGS__, \
+    _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_ARGS, \
+    _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_ARGS, \
+    _DO_TRACEPOINT_ARGS, _DO_TRACEPOINT_NOARGS, shoud_not_be_called_without_any_arguments)
 #  define _GET_MACRO_DECLARE_TRACEPOINT(...) \
   _GET_MACRO( \
     __VA_ARGS__, \
@@ -77,10 +91,16 @@
  */
 #  define TRACEPOINT(...) \
   _GET_MACRO_TRACEPOINT(__VA_ARGS__)(__VA_ARGS__)
+#  define TRACEPOINT_ENABLED(event_name) \
+  ros_trace_enabled_ ## event_name()
+#  define DO_TRACEPOINT(...) \
+  _GET_MACRO_DO_TRACEPOINT(__VA_ARGS__)(__VA_ARGS__)
 #  define DECLARE_TRACEPOINT(...) \
   _GET_MACRO_DECLARE_TRACEPOINT(__VA_ARGS__)(__VA_ARGS__)
 #else
 #  define TRACEPOINT(...) ((void) (0))
+#  define TRACEPOINT_ENABLED(event_name) false
+#  define DO_TRACEPOINT(...) ((void) (0))
 #  define DECLARE_TRACEPOINT(...)
 #endif  // TRACETOOLS_DISABLED
 

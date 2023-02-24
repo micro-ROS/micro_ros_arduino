@@ -9,7 +9,7 @@ https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 8dfd8dc031b1aaf10a088e541ef932f54c9678a5
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://github.com/micro-ROS/micro_ros_utilities fa107f7a935fd2fb9b05e2c1ee9f1819b56da68d
-https://github.com/micro-ROS/rcl e18713a5d842a159773df994e16bc88427904551
+https://github.com/micro-ROS/rcl 3bdff28053393d6fd80bac2aec04783afed875d9
 https://github.com/micro-ROS/rcutils acd0e1bd9ad8a4da6580570175ab6c344d33fdf1
 https://github.com/micro-ROS/rmw-microxrcedds.git 96487376bb38cc8bce36be34fc74958ee2f5a76e
 https://github.com/micro-ROS/rosidl_typesupport.git 8477585bfa0cf98deeeb15aa10a525cba9edaea9
@@ -19,7 +19,7 @@ https://github.com/ros2/ament_cmake_ros.git ede6248e1f36aaef85eb4eac23c782a134ef
 https://github.com/ros2/common_interfaces.git 4bac182a0a582b5e6b784d9fa9f0dabc1aca4d35
 https://github.com/ros2/example_interfaces.git 58899de0f85388be333e32bcb78c551a6877db4d
 https://github.com/ros2/libyaml_vendor.git 0c814892fe8c31aeb20688a8b43906aeefda015e
-https://github.com/ros2/rcl.git fcabfaca94809627aefc1bd1c290e2a07a859492
+https://github.com/ros2/rcl.git 2d34ba831fc4693e2e44af2da40281f393ed88c8
 https://github.com/ros2/rcl_interfaces.git 0aa89223ab92fc028173047a2ba3d987b0f01f71
 https://github.com/ros2/rcl_logging.git cdef749a304f734ba275f8466a4883db6400dc75
 https://github.com/ros2/rclc 3b4ff9e46ad63ca08a1131760a86b0f42c2bba63
@@ -33,4 +33,4 @@ https://github.com/ros2/rosidl_defaults.git 34a204f3ce0528c6ec3bb89d33404422eb87
 https://github.com/ros2/test_interface_files.git 3abbbf68d939cac86e53992b68ee93f9a37fff41
 https://github.com/ros2/unique_identifier_msgs.git 1ced881f07e5d5744d01867b1caedbc13c856195
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
-https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ e7a9669589b33fbab579007e5022da332a6bbf42
+https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 80961966934357384e98ebea6a61150032d27a40
