@@ -38,6 +38,7 @@ extern "C"
 {
 #endif
 
+#include <stddef.h>
 #include <stdint.h>
 
 #include "rcutils/visibility_control.h"
