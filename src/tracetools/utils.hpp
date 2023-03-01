@@ -20,9 +20,6 @@
 
 #include "tracetools/config.h"
 
-/// Default symbol, used when address resolution fails.
-#define TRACETOOLS_SYMBOL_UNKNOWN "UNKNOWN"
-
 #ifndef TRACETOOLS_DISABLED
 
 namespace tracetools
@@ -33,28 +30,30 @@ namespace detail
 
 /// Demangle symbol string.
 /**
- * Internal function.
+ * \param[in] mangled the pointer to the mangled symbol string
+ * \return the demangled symbol, or nullptr if demangling failed. The caller is responsible for
+ * deallocating this memory using free.
  */
-const char * demangle_symbol(const char * mangled);
+char * demangle_symbol(const char * mangled);
 
-/// Get symbol string from function pointer.
+/// Get demangled symbol string from function pointer.
 /**
- * Internal function.
+ * \param[in] funcptr the function pointer
+ * \return the demangled symbol, or nullptr if the pointer could not be matched to a shared object
+ * or if demangling failed. The caller is responsible for deallocating this memory using free.
  */
-const char * get_symbol_funcptr(void * funcptr);
+char * get_symbol_funcptr(const void * funcptr);
 
 }  // namespace detail
 
-/// Get symbol from an std::function object.
+/// Get demangled symbol from an std::function object.
 /**
- * If function address resolution or symbol demangling fails,
- * this will return a string that starts with \ref TRACETOOLS_SYMBOL_UNKNOWN.
- *
  * \param[in] f the std::function object
- * \return the symbol, or a placeholder
+ * \return the symbol, or nullptr if the symbol could not be retrieved or if demangling failed. The
+ * caller is responsible for deallocating this memory using free.
  */
 template<typename T, typename ... U>
-const char * get_symbol(std::function<T(U...)> f)
+char * get_symbol(std::function<T(U...)> f)
 {
   typedef T (fnType)(U...);
   fnType ** fnPointer = f.template target<fnType *>();
@@ -67,15 +66,16 @@ const char * get_symbol(std::function<T(U...)> f)
   return detail::demangle_symbol(f.target_type().name());
 }
 
-/// Get symbol from a function-related object.
+/// Get demangled symbol from a function-related object.
 /**
  * Fallback meant for lambdas with captures.
  *
  * \param[in] l a generic object
- * \return the symbol
+ * \return the symbol, or nullptr if demangling failed. The caller is responsible for deallocating
+ * this memory using free.
  */
 template<typename L>
-const char * get_symbol(L && l)
+char * get_symbol(L && l)
 {
   return detail::demangle_symbol(typeid(l).name());
 }
