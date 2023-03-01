@@ -49,6 +49,8 @@ typedef struct rcl_publisher_options_s
   rcl_allocator_t allocator;
   /// rmw specific publisher options, e.g. the rmw implementation specific payload.
   rmw_publisher_options_t rmw_publisher_options;
+  /// Disable flag to LoanedMessage, initialized via environmental variable.
+  bool disable_loaned_message;
 } rcl_publisher_options_t;
 
 /// Return a rcl_publisher_t struct with members set to `NULL`.
@@ -194,6 +196,7 @@ rcl_publisher_fini(rcl_publisher_t * publisher, rcl_node_t * node);
  * - qos = rmw_qos_profile_default
  * - allocator = rcl_get_default_allocator()
  * - rmw_publisher_options = rmw_get_default_publisher_options()
+ * - disable_loaned_message = false, true only if ROS_DISABLE_LOANED_MESSAGES=1
  *
  * \return A structure with the default publisher options.
  */
