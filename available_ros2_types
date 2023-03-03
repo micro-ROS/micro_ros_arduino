@@ -227,6 +227,10 @@ trajectory_msgs/JointTrajectory.msg
 trajectory_msgs/JointTrajectoryPoint.msg
 trajectory_msgs/MultiDOFJointTrajectory.msg
 trajectory_msgs/MultiDOFJointTrajectoryPoint.msg
+type_description_interfaces/Field.msg
+type_description_interfaces/FieldType.msg
+type_description_interfaces/IndividualTypeDescription.msg
+type_description_interfaces/TypeDescription.msg
 unique_identifier_msgs/UUID.msg
 visualization_msgs/GetInteractiveMarkers.srv
 visualization_msgs/ImageMarker.msg
