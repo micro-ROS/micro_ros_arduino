@@ -130,7 +130,7 @@ rclc_executor_get_zero_initialized_executor(void);
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \param[inout] e preallocated rclc_executor_t
+ * \param[inout] executor preallocated rclc_executor_t
  * \param[in] context RCL context
  * \param[in] number_of_handles is the total number of subscriptions, timers, services,
  *  clients and guard conditions. Do not include the number of nodes and publishers.
@@ -401,7 +401,7 @@ rclc_executor_add_service(
   rclc_service_callback_t callback);
 
 /**
- *  Adds a action client to an executor.
+ *  Adds an action client to an executor.
  *  An error is returned if {@link rclc_executor_t.handles} array is full.
  *  The total number_of_action_clients field of {@link rclc_executor_t.info}
  *  is incremented by one.
@@ -442,7 +442,7 @@ rclc_executor_add_action_client(
   void * context);
 
 /**
- *  Adds a action server to an executor.
+ *  Adds an action server to an executor.
  * * An error is returned if {@link rclc_executor_t.handles} array is full.
  * * The total number_of_action_servers field of {@link rclc_executor_t.info}
  *   is incremented by one.
@@ -738,7 +738,7 @@ rclc_executor_prepare(
   rclc_executor_t * executor);
 
 /**
- *  The spin-some function checks one-time for new data from the DDS-queue.
+ *  The spin_some function checks one-time for new data from the DDS-queue.
  * * the timeout is defined in {@link rclc_executor_t.timeout_ns} and can
  *   be set by calling {@link rclc_executor_set_timeout()} function (default value is 100ms)
  *
@@ -775,7 +775,7 @@ rclc_executor_spin_some(
 
 /**
  *  The spin function checks for new data at DDS queue as long as ros context is available.
- *  It calls {@link rclc_executor_spin_some()} as long as rcl_is_context_is_valid() returns true.
+ *  It calls {@link rclc_executor_spin_some()} as long as rcl_context_is_valid() returns true.
  *
  *  Memory is dynamically allocated within rcl-layer, when DDS queue is accessed with rcl_wait_set_init()
  *  (in spin_some function)
@@ -801,7 +801,7 @@ rclc_executor_spin(rclc_executor_t * executor);
 /**
  *  The spin_period function checks for new data at DDS queue as long as ros context is available.
  *  It is called every period nanoseconds.
- *  It calls {@link rclc_executor_spin_some()} as long as rcl_is_context_is_valid() returns true.
+ *  It calls {@link rclc_executor_spin_some()} as long as rcl_context_is_valid() returns true.
  *
  *  Memory is dynamically allocated within rcl-layer, when DDS queue is accessed with rcl_wait_set_init()
  *  (in spin_some function)
