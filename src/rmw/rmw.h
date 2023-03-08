@@ -3039,7 +3039,7 @@ rmw_count_services(
   const char * service_name,
   size_t * count);
 
-/// Get the unique identifier (gid) of a publisher.
+/// Get the globally unique identifier (GID) of a publisher.
 /**
  * <hr>
  * Attribute          | Adherence
@@ -3055,12 +3055,16 @@ rmw_count_services(
  *   Publishers are thread-safe objects, and so are all operations on them except for
  *   finalization.
  *   Therefore, it is safe to get the unique identifier from the same publisher concurrently.
- *   However, access to the gid is not synchronized.
+ *   However, access to the GID is not synchronized.
  *   It is not safe to read or write `gid` while rmw_get_gid_for_publisher() uses it.
  *
  * \pre Given `publisher` must be a valid publisher, as returned by rmw_create_publisher().
  *
- * \param[in] publisher Publisher to get a gid from.
+ * This is expected to be globally unique within a ROS domain.
+ * The identifier should be the same when reported both locally (where the entity was created)
+ * and on remote hosts or processes.
+ *
+ * \param[in] publisher Publisher to get a GID from.
  * \param[out] gid Publisher's unique identifier, populated on success
  *   but left unchanged on failure.
  * \return `RMW_RET_OK` if successful, or
@@ -3075,7 +3079,7 @@ RMW_WARN_UNUSED
 rmw_ret_t
 rmw_get_gid_for_publisher(const rmw_publisher_t * publisher, rmw_gid_t * gid);
 
-/// Get the unique identifier (gid) of a service client.
+/// Get the globally unique identifier (GID) of a service client.
 /**
  * <hr>
  * Attribute          | Adherence
@@ -3091,12 +3095,15 @@ rmw_get_gid_for_publisher(const rmw_publisher_t * publisher, rmw_gid_t * gid);
  *   Service clients are thread-safe objects, and so are all operations on them except for
  *   finalization.
  *   Therefore, it is safe to get the unique identifier from the same client concurrently.
- *   However, access to the gid is not synchronized.
+ *   However, access to the GID is not synchronized.
  *   It is not safe to read or write `gid` while rmw_get_gid_for_client() uses it.
  *
  * \pre Given `client` must be a valid service client, as returned by rmw_create_client().
  *
- * \param[in] client Service client to get a gid from.
+ * This is expected to be globally unique within a ROS domain.
+ * The identifier should be the same when reported both locally (where the entity was created)
+ * and on remote hosts or processes.
+ * \param[in] client Service client to get a GID from.
  * \param[out] gid Service client's unique identifier, populated on success
  *   but left unchanged on failure.
  * \return `RMW_RET_OK` if successful, or
@@ -3111,7 +3118,7 @@ RMW_WARN_UNUSED
 rmw_ret_t
 rmw_get_gid_for_client(const rmw_client_t * client, rmw_gid_t * gid);
 
-/// Check if two unique identifiers (gids) are equal.
+/// Check if two globally unique identifiers (GIDs) are equal.
 /**
  * <hr>
  * Attribute          | Adherence
@@ -3125,14 +3132,14 @@ rmw_get_gid_for_client(const rmw_client_t * client, rmw_gid_t * gid);
  *
  * \par Thread-safety
  *   Unique identifier comparison is a reentrant function, but:
- *   - Access to both gids is read-only but it is not synchronized.
+ *   - Access to both GIDs is read-only but it is not synchronized.
  *     Concurrent `gid1` and `gid2` reads are safe, but concurrent reads and writes are not.
  *   - Access to primitive data-type arguments is not synchronized.
  *     It is not safe to read or write `result` while rmw_compare_gids_equal() uses it.
  *
  * \param[in] gid1 First unique identifier to compare.
  * \param[in] gid2 Second unique identifier to compare.
- * \param[out] result true if both gids are equal, false otherwise.
+ * \param[out] result true if both GIDs are equal, false otherwise.
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `gid1` or `gid2` is NULL, or
  * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the implementation
