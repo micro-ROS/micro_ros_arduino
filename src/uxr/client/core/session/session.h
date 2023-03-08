@@ -122,7 +122,7 @@ typedef void (* uxrOnRequestFunc) (
  * @param reply_id      Identifier of the reply.
  * @param ub            Serialized request data.
  * @param length        Length of the serialized data.
- * @param args		    User pointer data.
+ * @param args		User pointer data.
  */
 typedef void (* uxrOnReplyFunc) (
         struct uxrSession* session,
@@ -136,6 +136,7 @@ typedef void (* uxrOnReplyFunc) (
 /**
  * @brief Function signature used for flush_callback callbacks.
  * @param session   Session structure related to the buffer to be flushed.
+ * @param args	    Flush callback args pointer.
  */
 typedef bool (* uxrOnBuffersFull) (
         struct uxrSession* session,
