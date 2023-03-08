@@ -618,13 +618,18 @@ typedef struct RMW_PUBLIC_TYPE rmw_qos_profile_s
   bool avoid_ros_namespace_conventions;
 } rmw_qos_profile_t;
 
-/// ROS graph ID of the topic
+/// Globally unique identifier for a ROS graph entity
+/**
+ * This is expected to be globally unique within a ROS domain.
+ * The identifier should be the same when reported both locally (where the entity was created)
+ * and on remote hosts or processes.
+ */
 typedef struct RMW_PUBLIC_TYPE rmw_gid_s
 {
   /// Name of the rmw implementation
   const char * implementation_identifier;
 
-  /// Byte data Gid value
+  /// Byte data GID value
   uint8_t data[RMW_GID_STORAGE_SIZE];
 } rmw_gid_t;
 
