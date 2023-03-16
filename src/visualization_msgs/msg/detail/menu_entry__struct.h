@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define visualization_msgs__msg__MenuEntry__TYPE_VERSION_HASH__INIT {1, { \
+      0x00, 0x1f, 0xbe, 0x92, 0xfa, 0xf3, 0xaa, 0xdc, \
+      0xb9, 0x58, 0x34, 0x6a, 0x6c, 0xfa, 0xe8, 0x9e, \
+      0x72, 0xb1, 0xa2, 0xd9, 0xe5, 0xd6, 0x8b, 0x25, \
+      0xd4, 0x86, 0x33, 0x51, 0xd2, 0x7f, 0xc3, 0x57, \
+    }}
+static const rosidl_type_hash_t visualization_msgs__msg__MenuEntry__TYPE_VERSION_HASH = visualization_msgs__msg__MenuEntry__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

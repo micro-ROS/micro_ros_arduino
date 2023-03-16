@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define action_msgs__msg__GoalStatus__TYPE_VERSION_HASH__INIT {1, { \
+      0xc7, 0xfb, 0xb6, 0x4d, 0xeb, 0xd5, 0x4b, 0x47, \
+      0xd0, 0xb7, 0x20, 0x62, 0x93, 0xab, 0xe6, 0xd4, \
+      0xa1, 0xb4, 0xcd, 0xd7, 0xab, 0x26, 0x3a, 0x7d, \
+      0x22, 0xf6, 0x54, 0x4c, 0x38, 0xfb, 0x35, 0x70, \
+    }}
+static const rosidl_type_hash_t action_msgs__msg__GoalStatus__TYPE_VERSION_HASH = action_msgs__msg__GoalStatus__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

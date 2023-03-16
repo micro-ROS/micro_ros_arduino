@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define sensor_msgs__msg__MagneticField__TYPE_VERSION_HASH__INIT {1, { \
+      0xac, 0xfc, 0x87, 0x24, 0xa5, 0x7e, 0x10, 0xcf, \
+      0xe7, 0x6e, 0x35, 0xec, 0x6c, 0x02, 0x2d, 0xae, \
+      0xca, 0x1b, 0xb4, 0x9a, 0xaa, 0x3d, 0x1c, 0xa5, \
+      0xb9, 0x41, 0xff, 0xfd, 0xcf, 0xac, 0xd8, 0xf8, \
+    }}
+static const rosidl_type_hash_t sensor_msgs__msg__MagneticField__TYPE_VERSION_HASH = sensor_msgs__msg__MagneticField__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

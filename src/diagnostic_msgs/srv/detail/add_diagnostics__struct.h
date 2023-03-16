@@ -14,6 +14,28 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define diagnostic_msgs__srv__AddDiagnostics__TYPE_VERSION_HASH__INIT {1, { \
+      0x59, 0xcb, 0x6d, 0x75, 0xc8, 0x77, 0x61, 0x3f, \
+      0xbd, 0x85, 0xa7, 0x33, 0x11, 0x22, 0x4d, 0x9f, \
+      0xb6, 0x70, 0xa7, 0x4d, 0xd9, 0x78, 0xd1, 0x75, \
+      0x06, 0xc8, 0x21, 0x24, 0x05, 0x0e, 0xbe, 0xff, \
+    }}
+static const rosidl_type_hash_t diagnostic_msgs__srv__AddDiagnostics__TYPE_VERSION_HASH = diagnostic_msgs__srv__AddDiagnostics__TYPE_VERSION_HASH__INIT;
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define diagnostic_msgs__srv__AddDiagnostics_Request__TYPE_VERSION_HASH__INIT {1, { \
+      0x85, 0x8f, 0xcb, 0x79, 0x23, 0x7f, 0x9c, 0x26, \
+      0x50, 0x98, 0xe6, 0x95, 0x95, 0xcf, 0x70, 0x86, \
+      0xd9, 0x4c, 0xf0, 0x98, 0xaa, 0x1e, 0x1b, 0xc8, \
+      0x5e, 0x8d, 0xd4, 0x03, 0xb1, 0x68, 0x36, 0x70, \
+    }}
+static const rosidl_type_hash_t diagnostic_msgs__srv__AddDiagnostics_Request__TYPE_VERSION_HASH = diagnostic_msgs__srv__AddDiagnostics_Request__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -49,6 +71,16 @@ typedef struct diagnostic_msgs__srv__AddDiagnostics_Request__Sequence
 } diagnostic_msgs__srv__AddDiagnostics_Request__Sequence;
 
 
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define diagnostic_msgs__srv__AddDiagnostics_Response__TYPE_VERSION_HASH__INIT {1, { \
+      0x6b, 0x66, 0xa6, 0x48, 0x1b, 0x06, 0x2f, 0xf0, \
+      0xb8, 0x68, 0x3d, 0xcd, 0xd2, 0x29, 0x7b, 0xf6, \
+      0xa2, 0x07, 0x9a, 0xc2, 0xb1, 0xd3, 0xc6, 0x95, \
+      0xf8, 0x46, 0x7f, 0x0e, 0x28, 0xb8, 0xa0, 0x24, \
+    }}
+static const rosidl_type_hash_t diagnostic_msgs__srv__AddDiagnostics_Response__TYPE_VERSION_HASH = diagnostic_msgs__srv__AddDiagnostics_Response__TYPE_VERSION_HASH__INIT;
+
 // Constants defined in the message
 
 // Include directives for member types
@@ -78,6 +110,16 @@ typedef struct diagnostic_msgs__srv__AddDiagnostics_Response__Sequence
   size_t capacity;
 } diagnostic_msgs__srv__AddDiagnostics_Response__Sequence;
 
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define diagnostic_msgs__srv__AddDiagnostics_Event__TYPE_VERSION_HASH__INIT {1, { \
+      0x12, 0x70, 0x7a, 0x5d, 0x14, 0x0f, 0x10, 0x3e, \
+      0xf3, 0xde, 0x34, 0x7a, 0x87, 0xb7, 0x6e, 0x98, \
+      0xb2, 0x6f, 0x56, 0x6a, 0x23, 0x7b, 0x2b, 0x7b, \
+      0x16, 0x72, 0xd4, 0xa2, 0xff, 0xeb, 0xaf, 0xa3, \
+    }}
+static const rosidl_type_hash_t diagnostic_msgs__srv__AddDiagnostics_Event__TYPE_VERSION_HASH = diagnostic_msgs__srv__AddDiagnostics_Event__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

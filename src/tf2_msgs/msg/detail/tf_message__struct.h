@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define tf2_msgs__msg__TFMessage__TYPE_VERSION_HASH__INIT {1, { \
+      0x76, 0x5e, 0x62, 0x0a, 0x8e, 0x92, 0xd3, 0x29, \
+      0x64, 0x4a, 0x27, 0xd0, 0xa5, 0x80, 0x75, 0x79, \
+      0x48, 0x66, 0xf0, 0x60, 0x52, 0xec, 0x81, 0x1b, \
+      0x15, 0x60, 0xfd, 0x78, 0x58, 0xff, 0xb5, 0xf4, \
+    }}
+static const rosidl_type_hash_t tf2_msgs__msg__TFMessage__TYPE_VERSION_HASH = tf2_msgs__msg__TFMessage__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

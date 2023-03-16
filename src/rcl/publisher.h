@@ -300,9 +300,9 @@ rcl_return_loaned_message_from_publisher(
  * calling rcl_publish() at the same time as non-thread safe publisher
  * functions is not, e.g. calling rcl_publish() and rcl_publisher_fini()
  * concurrently is not allowed.
- * Before calling rcl_publish() the message can change and after calling
- * rcl_publish() the message can change, but it cannot be changed during the
- * publish call.
+ * The message cannot change during the rcl_publish() call.
+ * Before calling rcl_publish() the message can change but after calling
+ * rcl_publish() it depends on RMW implementation behavior.
  * The same `ros_message`, however, can be passed to multiple calls of
  * rcl_publish() simultaneously, even if the publishers differ.
  * The `ros_message` is unmodified by rcl_publish().

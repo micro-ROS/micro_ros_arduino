@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define lifecycle_msgs__msg__TransitionDescription__TYPE_VERSION_HASH__INIT {1, { \
+      0x32, 0x51, 0x18, 0xae, 0x2e, 0x80, 0x01, 0xeb, \
+      0x93, 0x53, 0xbc, 0xcd, 0xfc, 0xb7, 0x66, 0x3e, \
+      0x43, 0x06, 0x3f, 0xe0, 0xa9, 0x45, 0x76, 0x67, \
+      0x58, 0x4f, 0x36, 0x7e, 0xec, 0xd9, 0xec, 0xa5, \
+    }}
+static const rosidl_type_hash_t lifecycle_msgs__msg__TransitionDescription__TYPE_VERSION_HASH = lifecycle_msgs__msg__TransitionDescription__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

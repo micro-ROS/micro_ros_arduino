@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define test_msgs__msg__UnboundedSequences__TYPE_VERSION_HASH__INIT {1, { \
+      0x2d, 0x73, 0x02, 0x70, 0xbd, 0xe0, 0x6d, 0x38, \
+      0xc4, 0x80, 0xef, 0x56, 0xe3, 0x6c, 0xa2, 0x90, \
+      0x92, 0xc4, 0x30, 0x0d, 0x5a, 0xc6, 0x08, 0x36, \
+      0x23, 0x30, 0x63, 0x78, 0xa4, 0x6d, 0x4d, 0x1c, \
+    }}
+static const rosidl_type_hash_t test_msgs__msg__UnboundedSequences__TYPE_VERSION_HASH = test_msgs__msg__UnboundedSequences__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
