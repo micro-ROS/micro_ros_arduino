@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define shape_msgs__msg__SolidPrimitive__TYPE_VERSION_HASH__INIT {1, { \
+      0x02, 0xe1, 0xee, 0x8c, 0xaa, 0x81, 0xcf, 0xb7, \
+      0xd3, 0x9a, 0x3d, 0xf9, 0xb2, 0x9e, 0x7e, 0xa1, \
+      0xc9, 0xb2, 0xe6, 0x86, 0x5f, 0xa9, 0xc2, 0x69, \
+      0x86, 0xa9, 0x7e, 0x58, 0x9c, 0x22, 0x2a, 0xb5, \
+    }}
+static const rosidl_type_hash_t shape_msgs__msg__SolidPrimitive__TYPE_VERSION_HASH = shape_msgs__msg__SolidPrimitive__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define shape_msgs__msg__MeshTriangle__TYPE_VERSION_HASH__INIT {1, { \
+      0x80, 0xa3, 0xe9, 0x53, 0xc8, 0x0b, 0xfc, 0x62, \
+      0x91, 0x06, 0x53, 0x88, 0x4e, 0x98, 0xd7, 0xc1, \
+      0x05, 0x0c, 0x2d, 0xd9, 0xc0, 0x87, 0xe7, 0xf3, \
+      0xfa, 0x77, 0xf0, 0x6e, 0xd0, 0x96, 0x9b, 0x60, \
+    }}
+static const rosidl_type_hash_t shape_msgs__msg__MeshTriangle__TYPE_VERSION_HASH = shape_msgs__msg__MeshTriangle__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

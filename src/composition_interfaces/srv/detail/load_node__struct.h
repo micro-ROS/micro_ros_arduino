@@ -14,6 +14,28 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define composition_interfaces__srv__LoadNode__TYPE_VERSION_HASH__INIT {1, { \
+      0x0c, 0x1c, 0xe8, 0x60, 0xb5, 0x30, 0xc1, 0xf7, \
+      0xb9, 0x6e, 0x29, 0xd0, 0x8e, 0x6e, 0x55, 0xfa, \
+      0xc9, 0x47, 0xbf, 0x9a, 0x98, 0x2c, 0xf6, 0x19, \
+      0x36, 0x55, 0xb0, 0x31, 0xc8, 0x0c, 0x5e, 0xd0, \
+    }}
+static const rosidl_type_hash_t composition_interfaces__srv__LoadNode__TYPE_VERSION_HASH = composition_interfaces__srv__LoadNode__TYPE_VERSION_HASH__INIT;
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define composition_interfaces__srv__LoadNode_Request__TYPE_VERSION_HASH__INIT {1, { \
+      0xf7, 0x7d, 0xa8, 0xd1, 0x1e, 0x26, 0x1d, 0x82, \
+      0x0a, 0xcb, 0xbe, 0xd3, 0x3e, 0xb7, 0xa9, 0x90, \
+      0x1b, 0x3d, 0xe2, 0xcf, 0x72, 0x67, 0x2b, 0xa0, \
+      0xdd, 0x05, 0x5a, 0x37, 0xb8, 0xc4, 0x47, 0x2b, \
+    }}
+static const rosidl_type_hash_t composition_interfaces__srv__LoadNode_Request__TYPE_VERSION_HASH = composition_interfaces__srv__LoadNode_Request__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -66,6 +88,16 @@ typedef struct composition_interfaces__srv__LoadNode_Request__Sequence
 } composition_interfaces__srv__LoadNode_Request__Sequence;
 
 
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define composition_interfaces__srv__LoadNode_Response__TYPE_VERSION_HASH__INIT {1, { \
+      0x00, 0xf6, 0xc1, 0x69, 0x2a, 0xc1, 0xe2, 0xfd, \
+      0x5c, 0xf3, 0x01, 0xcf, 0xcd, 0x4d, 0x0a, 0xfa, \
+      0x36, 0x54, 0xa9, 0x46, 0xf8, 0x76, 0x13, 0x72, \
+      0x78, 0x5b, 0xa3, 0xac, 0xfd, 0x1e, 0x29, 0xae, \
+    }}
+static const rosidl_type_hash_t composition_interfaces__srv__LoadNode_Response__TYPE_VERSION_HASH = composition_interfaces__srv__LoadNode_Response__TYPE_VERSION_HASH__INIT;
+
 // Constants defined in the message
 
 // Include directives for member types
@@ -96,6 +128,16 @@ typedef struct composition_interfaces__srv__LoadNode_Response__Sequence
   size_t capacity;
 } composition_interfaces__srv__LoadNode_Response__Sequence;
 
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define composition_interfaces__srv__LoadNode_Event__TYPE_VERSION_HASH__INIT {1, { \
+      0x15, 0x2e, 0xeb, 0x9e, 0x8e, 0xe0, 0x30, 0x2d, \
+      0x6b, 0x27, 0x13, 0xf0, 0x3c, 0x3c, 0xb1, 0x8c, \
+      0x88, 0x8f, 0x33, 0x94, 0x27, 0x7d, 0x87, 0x60, \
+      0xe7, 0x5d, 0xbc, 0x72, 0x30, 0xad, 0xc6, 0xca, \
+    }}
+static const rosidl_type_hash_t composition_interfaces__srv__LoadNode_Event__TYPE_VERSION_HASH = composition_interfaces__srv__LoadNode_Event__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

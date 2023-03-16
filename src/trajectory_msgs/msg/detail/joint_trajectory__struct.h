@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define trajectory_msgs__msg__JointTrajectory__TYPE_VERSION_HASH__INIT {1, { \
+      0x02, 0x4a, 0x6f, 0xe9, 0x2a, 0xa6, 0x75, 0x09, \
+      0x1b, 0x87, 0x08, 0x14, 0x8b, 0x84, 0xcd, 0xb0, \
+      0x5a, 0xc4, 0x45, 0x34, 0x05, 0xb5, 0xd0, 0xb9, \
+      0xf8, 0x2f, 0x13, 0x8f, 0xb3, 0x28, 0x0a, 0x1b, \
+    }}
+static const rosidl_type_hash_t trajectory_msgs__msg__JointTrajectory__TYPE_VERSION_HASH = trajectory_msgs__msg__JointTrajectory__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

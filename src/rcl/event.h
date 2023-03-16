@@ -38,6 +38,7 @@ typedef enum rcl_publisher_event_type_e
   RCL_PUBLISHER_OFFERED_DEADLINE_MISSED,
   RCL_PUBLISHER_LIVELINESS_LOST,
   RCL_PUBLISHER_OFFERED_INCOMPATIBLE_QOS,
+  RCL_PUBLISHER_INCOMPATIBLE_TYPE,
 } rcl_publisher_event_type_t;
 
 /// Enumeration of all of the subscription events that may fire.
@@ -47,6 +48,7 @@ typedef enum rcl_subscription_event_type_e
   RCL_SUBSCRIPTION_LIVELINESS_CHANGED,
   RCL_SUBSCRIPTION_REQUESTED_INCOMPATIBLE_QOS,
   RCL_SUBSCRIPTION_MESSAGE_LOST,
+  RCL_SUBSCRIPTION_INCOMPATIBLE_TYPE,
 } rcl_subscription_event_type_t;
 
 /// Internal rcl implementation struct.

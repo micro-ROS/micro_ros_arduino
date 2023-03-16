@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define stereo_msgs__msg__DisparityImage__TYPE_VERSION_HASH__INIT {1, { \
+      0x18, 0x09, 0xc0, 0x50, 0x6e, 0x1d, 0x82, 0x8c, \
+      0xa8, 0x2c, 0xfe, 0x6c, 0x13, 0xa7, 0xaf, 0x7b, \
+      0x68, 0xa5, 0xe4, 0x9f, 0xc5, 0xae, 0x40, 0x22, \
+      0x78, 0xa6, 0xa7, 0x12, 0x06, 0x67, 0xd6, 0x84, \
+    }}
+static const rosidl_type_hash_t stereo_msgs__msg__DisparityImage__TYPE_VERSION_HASH = stereo_msgs__msg__DisparityImage__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

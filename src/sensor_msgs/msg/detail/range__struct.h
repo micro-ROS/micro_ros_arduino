@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define sensor_msgs__msg__Range__TYPE_VERSION_HASH__INIT {1, { \
+      0x44, 0xf8, 0xc7, 0x5b, 0x02, 0x73, 0x91, 0x42, \
+      0x22, 0x53, 0x38, 0xdc, 0x04, 0xb9, 0x11, 0x15, \
+      0x30, 0x00, 0x93, 0xe3, 0x00, 0xc9, 0x37, 0x4f, \
+      0x60, 0x29, 0x0d, 0x79, 0x8c, 0xeb, 0xbd, 0x04, \
+    }}
+static const rosidl_type_hash_t sensor_msgs__msg__Range__TYPE_VERSION_HASH = sensor_msgs__msg__Range__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -77,6 +89,9 @@ typedef struct sensor_msgs__msg__Range
   /// +Inf represents no detection within the fixed distance.
   /// (Object out of range)
   float range;
+  /// variance of the range sensor
+  /// 0 is interpreted as variance unknown
+  float variance;
 } sensor_msgs__msg__Range;
 
 // Struct for a sequence of sensor_msgs__msg__Range.

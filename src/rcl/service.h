@@ -308,9 +308,9 @@ rcl_take_request(
  * allowed, but calling rcl_send_response() at the same time as non-thread safe
  * service functions is not, e.g. calling rcl_send_response() and
  * rcl_service_fini() concurrently is not allowed.
- * Before calling rcl_send_response() the message can change and after calling
- * rcl_send_response() the message can change, but it cannot be changed during
- * the rcl_send_response() call.
+ * The message cannot change during the rcl_send_response() call.
+ * Before calling rcl_send_response() the message can change but after calling
+ * rcl_send_response() it depends on RMW implementation behavior.
  * The same `ros_response`, however, can be passed to multiple calls of
  * rcl_send_response() simultaneously, even if the services differ.
  * The `ros_response` is unmodified by rcl_send_response().

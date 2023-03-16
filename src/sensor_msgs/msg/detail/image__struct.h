@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define sensor_msgs__msg__Image__TYPE_VERSION_HASH__INIT {1, { \
+      0x3b, 0xcf, 0xce, 0xfc, 0xab, 0xed, 0xbb, 0x51, \
+      0x56, 0x89, 0x10, 0xaf, 0x08, 0x8f, 0xf5, 0xd8, \
+      0x22, 0x0a, 0x7b, 0x60, 0xc3, 0x23, 0xff, 0xa7, \
+      0x2a, 0x05, 0x60, 0x90, 0x1a, 0xfc, 0x4c, 0xa5, \
+    }}
+static const rosidl_type_hash_t sensor_msgs__msg__Image__TYPE_VERSION_HASH = sensor_msgs__msg__Image__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

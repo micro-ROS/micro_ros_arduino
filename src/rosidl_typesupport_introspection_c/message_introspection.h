@@ -21,6 +21,7 @@
 
 #include "rosidl_runtime_c/message_initialization.h"
 #include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 
 #include "rosidl_typesupport_introspection_c/visibility_control.h"
 
@@ -85,6 +86,8 @@ typedef struct rosidl_typesupport_introspection_c__MessageMembers_s
   const char * message_namespace_;
   /// The name of the interface, e.g. "Int16"
   const char * message_name_;
+  /// Hashed value of the interface description
+  const rosidl_type_hash_t type_hash_;
   /// The number of fields in the interface
   uint32_t member_count_;
   /// The size of the interface structure in memory

@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define std_msgs__msg__UInt8MultiArray__TYPE_VERSION_HASH__INIT {1, { \
+      0x45, 0x65, 0x31, 0xd2, 0x2f, 0x1c, 0xe7, 0x61, \
+      0x8e, 0x43, 0x77, 0x71, 0x5d, 0xf3, 0x61, 0x03, \
+      0xec, 0x9b, 0xbe, 0xb6, 0x7c, 0xcc, 0xf2, 0x01, \
+      0x32, 0x84, 0x22, 0x93, 0x0e, 0x86, 0x6c, 0x35, \
+    }}
+static const rosidl_type_hash_t std_msgs__msg__UInt8MultiArray__TYPE_VERSION_HASH = std_msgs__msg__UInt8MultiArray__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

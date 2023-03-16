@@ -14,6 +14,28 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define visualization_msgs__srv__GetInteractiveMarkers__TYPE_VERSION_HASH__INIT {1, { \
+      0x19, 0xde, 0xe2, 0xf6, 0x6b, 0x6d, 0x8f, 0x44, \
+      0x27, 0x93, 0xcd, 0x33, 0xb4, 0x49, 0x3c, 0xde, \
+      0x35, 0x64, 0x37, 0x63, 0x74, 0x82, 0xd3, 0x67, \
+      0xd2, 0x3a, 0x4e, 0xf1, 0xf2, 0x69, 0xcd, 0x23, \
+    }}
+static const rosidl_type_hash_t visualization_msgs__srv__GetInteractiveMarkers__TYPE_VERSION_HASH = visualization_msgs__srv__GetInteractiveMarkers__TYPE_VERSION_HASH__INIT;
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define visualization_msgs__srv__GetInteractiveMarkers_Request__TYPE_VERSION_HASH__INIT {1, { \
+      0x81, 0xcd, 0x0d, 0x35, 0x35, 0x65, 0x6f, 0x33, \
+      0xc6, 0xe0, 0xec, 0xe5, 0x0f, 0x70, 0x10, 0x6e, \
+      0xcd, 0xf4, 0xfc, 0x81, 0x54, 0x4c, 0x7e, 0x77, \
+      0x90, 0x3b, 0x18, 0x38, 0xae, 0xc3, 0x03, 0x03, \
+    }}
+static const rosidl_type_hash_t visualization_msgs__srv__GetInteractiveMarkers_Request__TYPE_VERSION_HASH = visualization_msgs__srv__GetInteractiveMarkers_Request__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -33,6 +55,16 @@ typedef struct visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence
   size_t capacity;
 } visualization_msgs__srv__GetInteractiveMarkers_Request__Sequence;
 
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define visualization_msgs__srv__GetInteractiveMarkers_Response__TYPE_VERSION_HASH__INIT {1, { \
+      0x1c, 0x69, 0x42, 0x11, 0xf2, 0x44, 0x7f, 0x7b, \
+      0xce, 0x8a, 0x11, 0x55, 0x23, 0xcc, 0x70, 0x16, \
+      0x1a, 0x0d, 0x21, 0x3f, 0x09, 0x53, 0x1b, 0x63, \
+      0x99, 0xd7, 0x67, 0x96, 0xd2, 0x2c, 0x81, 0x17, \
+    }}
+static const rosidl_type_hash_t visualization_msgs__srv__GetInteractiveMarkers_Response__TYPE_VERSION_HASH = visualization_msgs__srv__GetInteractiveMarkers_Response__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -58,6 +90,16 @@ typedef struct visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence
   size_t capacity;
 } visualization_msgs__srv__GetInteractiveMarkers_Response__Sequence;
 
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define visualization_msgs__srv__GetInteractiveMarkers_Event__TYPE_VERSION_HASH__INIT {1, { \
+      0x4d, 0xfe, 0xd3, 0x8c, 0x1c, 0x89, 0xb7, 0x70, \
+      0xda, 0x92, 0xa4, 0x4c, 0xca, 0x13, 0x5e, 0x8d, \
+      0xf4, 0x16, 0x12, 0x7a, 0xaf, 0x3b, 0xa9, 0x18, \
+      0x46, 0x97, 0xed, 0x61, 0xae, 0xb7, 0xa0, 0x2a, \
+    }}
+static const rosidl_type_hash_t visualization_msgs__srv__GetInteractiveMarkers_Event__TYPE_VERSION_HASH = visualization_msgs__srv__GetInteractiveMarkers_Event__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

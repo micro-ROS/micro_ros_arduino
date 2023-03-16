@@ -291,9 +291,9 @@ rcl_action_server_is_available(
  *
  * The ROS goal message given by the `ros_goal_request` void pointer is always
  * owned by the calling code, but should remain constant during execution of this
- * function. i.e. Before and after calling rcl_action_send_goal_request() the
- * `ros_goal_request` message can change, but it cannot be changed during the call to
- * rcl_action_send_goal_request().
+ * function. i.e. The message cannot change during the rcl_action_send_goal_request() call.
+ * Before calling rcl_action_send_goal_request() the message can change but after calling
+ * rcl_action_send_goal_request() it depends on RMW implementation behavior.
  * The same `ros_goal_request` can be passed to multiple calls of this function
  * simultaneously, even if the action clients differ.
  *
@@ -346,9 +346,9 @@ rcl_action_send_goal_request(
  * If the take is successful, this function will populate the fields of `ros_goal_response`.
  * The ROS message given by the `ros_goal_response` void pointer is always
  * owned by the calling code, but should remain constant during execution of this
- * function. i.e. Before and after calling rcl_action_send_goal_response() the
- * `ros_goal_response` message can change, but it cannot be changed during the call to
- * rcl_action_send_goal_response().
+ * function. i.e. The message cannot change during the rcl_action_send_goal_response() call.
+ * Before calling rcl_action_send_goal_response() the message can change but after calling
+ * rcl_action_send_goal_response() it depends on RMW implementation behavior.
  *
  * <hr>
  * Attribute          | Adherence
@@ -481,9 +481,9 @@ rcl_action_take_status(
  *
  * The ROS message given by the `ros_result_request` void pointer is always
  * owned by the calling code, but should remain constant during execution of this
- * function. i.e. Before and after calling rcl_action_send_result_request() the
- * `ros_result_request` message can change, but it cannot be changed during the call to
- * rcl_action_send_result_request().
+ * function. i.e. The message cannot change during the rcl_action_send_result_request() call.
+ * Before calling rcl_action_send_result_request() the message can change but after calling
+ * rcl_action_send_result_request() it depends on RMW implementation behavior.
  * The same `ros_result_request` can be passed to multiple calls of this function
  * simultaneously, even if the action clients differ.
  *
@@ -536,9 +536,9 @@ rcl_action_send_result_request(
  * If the take is successful, this function will populate the fields of `ros_result_response`.
  * The ROS message given by the `ros_result_response` void pointer is always
  * owned by the calling code, but should remain constant during execution of this
- * function. i.e. Before and after calling rcl_action_take_result_response() the
- * `ros_result_response` message can change, but it cannot be changed during the call to
- * rcl_action_take_result_response().
+ * function. i.e. The message cannot change during the rcl_action_take_result_response() call.
+ * Before calling rcl_action_take_result_response() the message can change but after calling
+ * rcl_action_take_result_response() it depends on RMW implementation behavior.
  *
  * If allocation is required when taking the result, e.g. if space needs to
  * be allocated for a dynamically sized array in the target message, then the

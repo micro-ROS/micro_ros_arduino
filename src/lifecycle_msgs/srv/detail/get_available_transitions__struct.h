@@ -14,6 +14,28 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define lifecycle_msgs__srv__GetAvailableTransitions__TYPE_VERSION_HASH__INIT {1, { \
+      0x0c, 0xcd, 0x1c, 0xba, 0x71, 0x21, 0x05, 0x53, \
+      0x53, 0x4f, 0x9a, 0x83, 0x33, 0x53, 0x31, 0x65, \
+      0x22, 0x70, 0x91, 0x12, 0x30, 0x2a, 0x2d, 0x2a, \
+      0x70, 0x30, 0x62, 0x28, 0xbd, 0x1a, 0x8c, 0x51, \
+    }}
+static const rosidl_type_hash_t lifecycle_msgs__srv__GetAvailableTransitions__TYPE_VERSION_HASH = lifecycle_msgs__srv__GetAvailableTransitions__TYPE_VERSION_HASH__INIT;
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define lifecycle_msgs__srv__GetAvailableTransitions_Request__TYPE_VERSION_HASH__INIT {1, { \
+      0xda, 0x1b, 0xab, 0x4c, 0x75, 0x76, 0x45, 0x17, \
+      0xff, 0xd4, 0xea, 0x12, 0xb3, 0xe8, 0xe3, 0x24, \
+      0x92, 0x6d, 0xff, 0xd2, 0x42, 0x68, 0x09, 0x0f, \
+      0x6f, 0xf6, 0x18, 0xc1, 0x21, 0x84, 0xe5, 0xfc, \
+    }}
+static const rosidl_type_hash_t lifecycle_msgs__srv__GetAvailableTransitions_Request__TYPE_VERSION_HASH = lifecycle_msgs__srv__GetAvailableTransitions_Request__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -33,6 +55,16 @@ typedef struct lifecycle_msgs__srv__GetAvailableTransitions_Request__Sequence
   size_t capacity;
 } lifecycle_msgs__srv__GetAvailableTransitions_Request__Sequence;
 
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define lifecycle_msgs__srv__GetAvailableTransitions_Response__TYPE_VERSION_HASH__INIT {1, { \
+      0xd4, 0x38, 0xf1, 0xd3, 0x8a, 0xc9, 0x3e, 0x66, \
+      0x70, 0x6e, 0x9a, 0xa0, 0xc5, 0x48, 0x8f, 0x67, \
+      0xef, 0x9c, 0xf3, 0x0c, 0x85, 0x4c, 0xaf, 0x2f, \
+      0x68, 0x0f, 0xd7, 0x5f, 0x2b, 0x5c, 0xca, 0x9c, \
+    }}
+static const rosidl_type_hash_t lifecycle_msgs__srv__GetAvailableTransitions_Response__TYPE_VERSION_HASH = lifecycle_msgs__srv__GetAvailableTransitions_Response__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 
@@ -56,6 +88,16 @@ typedef struct lifecycle_msgs__srv__GetAvailableTransitions_Response__Sequence
   size_t capacity;
 } lifecycle_msgs__srv__GetAvailableTransitions_Response__Sequence;
 
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define lifecycle_msgs__srv__GetAvailableTransitions_Event__TYPE_VERSION_HASH__INIT {1, { \
+      0x7b, 0xf3, 0x9e, 0x74, 0xc5, 0x0f, 0x29, 0x12, \
+      0x45, 0x6d, 0xc4, 0x69, 0x52, 0xd2, 0xd5, 0x5e, \
+      0x4b, 0xf9, 0xe6, 0x7b, 0x1b, 0xd5, 0xdd, 0x68, \
+      0x3c, 0xa3, 0x44, 0x4f, 0x22, 0xe2, 0xc2, 0x27, \
+    }}
+static const rosidl_type_hash_t lifecycle_msgs__srv__GetAvailableTransitions_Event__TYPE_VERSION_HASH = lifecycle_msgs__srv__GetAvailableTransitions_Event__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

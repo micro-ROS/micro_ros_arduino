@@ -16,6 +16,7 @@
 #define RMW__EVENTS_STATUSES__EVENTS_STATUSES_H_
 
 #include "rmw/events_statuses/incompatible_qos.h"
+#include "rmw/events_statuses/incompatible_type.h"
 #include "rmw/events_statuses/liveliness_changed.h"
 #include "rmw/events_statuses/liveliness_lost.h"
 #include "rmw/events_statuses/message_lost.h"

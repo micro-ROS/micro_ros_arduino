@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define geometry_msgs__msg__Polygon__TYPE_VERSION_HASH__INIT {1, { \
+      0x9a, 0x34, 0x04, 0x9c, 0xfe, 0x7d, 0xca, 0x6f, \
+      0x01, 0xfc, 0xb9, 0xf5, 0x4d, 0xb2, 0x44, 0xb4, \
+      0xfa, 0xff, 0x07, 0x17, 0x0b, 0x5a, 0xa2, 0xf2, \
+      0xbf, 0x18, 0xf5, 0xfe, 0xcc, 0x78, 0x4b, 0xcd, \
+    }}
+static const rosidl_type_hash_t geometry_msgs__msg__Polygon__TYPE_VERSION_HASH = geometry_msgs__msg__Polygon__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

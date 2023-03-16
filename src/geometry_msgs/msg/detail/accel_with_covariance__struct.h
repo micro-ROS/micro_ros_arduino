@@ -14,6 +14,18 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
+#include "rosidl_runtime_c/type_hash.h"
+
+
+// Type Version Hash for interface
+// Note: this define is for MSVC, where the static const var can't be used in downstream aggregate initializers
+#define geometry_msgs__msg__AccelWithCovariance__TYPE_VERSION_HASH__INIT {1, { \
+      0xad, 0x53, 0x8f, 0xfc, 0x96, 0x01, 0x97, 0x21, \
+      0x8e, 0x65, 0x9a, 0x2d, 0x3f, 0x97, 0x83, 0x96, \
+      0x86, 0x63, 0xc3, 0x30, 0x78, 0x9d, 0x95, 0xe0, \
+      0x30, 0x4b, 0x82, 0xb5, 0xc3, 0xa2, 0x0d, 0xe2, \
+    }}
+static const rosidl_type_hash_t geometry_msgs__msg__AccelWithCovariance__TYPE_VERSION_HASH = geometry_msgs__msg__AccelWithCovariance__TYPE_VERSION_HASH__INIT;
 
 // Constants defined in the message
 

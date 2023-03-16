@@ -227,9 +227,9 @@ rcl_client_get_default_options(void);
  * but calling rcl_send_request() at the same time as non-thread safe client
  * functions is not, e.g. calling rcl_send_request() and rcl_client_fini()
  * concurrently is not allowed.
- * Before calling rcl_send_request() the message can change and after calling
- * rcl_send_request() the message can change, but it cannot be changed during
- * the `send_request` call.
+ * The message cannot change during the rcl_send_request() call.
+ * Before calling rcl_send_request() the message can change but after calling
+ * rcl_send_request() it depends on RMW implementation behavior.
  * The same `ros_request`, however, can be passed to multiple calls of
  * rcl_send_request() simultaneously, even if the clients differ.
  * The `ros_request` is unmodified by rcl_send_request().
