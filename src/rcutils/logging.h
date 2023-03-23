@@ -558,9 +558,18 @@ void rcutils_logging_console_output_handler(
  * All logging macros ensure that this has been called once.
  */
 #define RCUTILS_LOGGING_AUTOINIT \
+  RCUTILS_LOGGING_AUTOINIT_WITH_ALLOCATOR(rcutils_get_default_allocator())
+
+/**
+ * \def RCUTILS_LOGGING_AUTOINIT_WITH_ALLOCATOR
+ * \brief Initialize the rcl logging library with allocator.
+ * Usually it is unnecessary to call the macro directly.
+ * All logging macros ensure that this has been called once.
+ */
+#define RCUTILS_LOGGING_AUTOINIT_WITH_ALLOCATOR(alloc) \
   do { \
     if (RCUTILS_UNLIKELY(!g_rcutils_logging_initialized)) { \
-      if (rcutils_logging_initialize() != RCUTILS_RET_OK) { \
+      if (rcutils_logging_initialize_with_allocator(alloc) != RCUTILS_RET_OK) { \
         RCUTILS_SAFE_FWRITE_TO_STDERR( \
           "[rcutils|" __FILE__ ":" RCUTILS_STRINGIFY(__LINE__) \
           "] error initializing logging: "); \
