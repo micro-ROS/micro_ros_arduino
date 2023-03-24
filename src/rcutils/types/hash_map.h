@@ -44,7 +44,7 @@ typedef struct RCUTILS_PUBLIC_TYPE rcutils_hash_map_s
  * \return A hash value for the provided string
  */
 typedef size_t (* rcutils_hash_map_key_hasher_t)(
-  const void *  // key to hash
+  const void * key
 );
 
 /// The function signature for a key comparison function.
@@ -56,8 +56,8 @@ typedef size_t (* rcutils_hash_map_key_hasher_t)(
  * \return Zero if val1 == val2.
  */
 typedef int (* rcutils_hash_map_key_cmp_t)(
-  const void *,  // val1
-  const void *  // val2
+  const void * val1,
+  const void * val2
 );
 
 /**

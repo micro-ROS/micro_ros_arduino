@@ -12,12 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// \file Provides a simple SHA256 algorithm for hashing.
-/// This implementation makes no security guarantees, its use case
-/// is for non-sensitive comparison of message digests
-/// Implementation originally copied from Brad Conte
-/// https://github.com/B-Con/crypto-algorithms/blob/master/sha256.c
-
 /** \file sha256.h
  *  \brief SHA256 implementation
  *
@@ -28,6 +22,8 @@
  *  Algorithm specification can be found here:
  *  http://csrc.nist.gov/publications/fips/fips180-2/fips180-2withchangenotice.pdf
  *  This implementation uses little endian byte order.
+ *  This implementation makes no security guarantees, its use case if for
+ *  non-sensitive comparison of message digests.
  */
 
 #ifndef RCUTILS__SHA256_H_
@@ -83,10 +79,19 @@ void rcutils_sha256_update(rcutils_sha256_ctx_t * ctx, const uint8_t * data, siz
  * \param[out] output_hash Calculated sha256 message digest to be filled
  * \return void
  */
+#ifdef DOXYGEN_ONLY
+// One of the tools used by rosdoc2 misunderstands uint8_t[] as a uint8_t,
+// so make it a pointer for documentation purposes.
+RCUTILS_PUBLIC
+void rcutils_sha256_final(
+  rcutils_sha256_ctx_t * ctx,
+  uint8_t * output_hash);
+#else
 RCUTILS_PUBLIC
 void rcutils_sha256_final(
   rcutils_sha256_ctx_t * ctx,
   uint8_t output_hash[RCUTILS_SHA256_BLOCK_SIZE]);
+#endif
 
 #ifdef __cplusplus
 }
