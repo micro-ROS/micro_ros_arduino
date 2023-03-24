@@ -215,12 +215,12 @@ rcutils_logging_severity_level_from_string(
  * \param[in] args The variable argument list
  */
 typedef void (* rcutils_logging_output_handler_t)(
-  const rcutils_log_location_t *,  // location
-  int,  // severity
-  const char *,  // name
-  rcutils_time_point_value_t,  // timestamp
-  const char *,  // format
-  va_list *  // args
+  const rcutils_log_location_t * location,
+  int severity,
+  const char * name,
+  rcutils_time_point_value_t timestamp,
+  const char * format,
+  va_list * args
 );
 
 /// Get the current output handler.

@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git 5f96d9c83c54e2e813aea45220eec47b45209499
+https://github.com/ament/ament_cmake.git e355e9ca44fd06d267052021e6b1ef59cb4b83cc
 https://github.com/ament/ament_index.git ba818db036e82d5f752d17e3e6fe6e3efd583bfb
 https://github.com/ament/ament_lint.git a1b6c57be91b05ffa11d5eb6ff8700a478f1a890
 https://github.com/ament/ament_package.git d990e0e321793a475602b4a8e6f09b64d1c1f179
@@ -9,8 +9,8 @@ https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git c28bf96f6e93ad1e01b8f0d74ea255e6bd8b07d2
 https://github.com/micro-ROS/micro_ros_msgs.git e3664463e78ae5d0c34d86be92d707b3d9dfd27d
 https://github.com/micro-ROS/micro_ros_utilities fa107f7a935fd2fb9b05e2c1ee9f1819b56da68d
-https://github.com/micro-ROS/rcl 02a9248d3884e0f3853af5c1802c160bba7e3d2d
-https://github.com/micro-ROS/rcutils a059ad33ee78f7885a6633e4412dc905de7ea483
+https://github.com/micro-ROS/rcl b28c2cedbb70f69d6ebc3740c39512bbd859e5a0
+https://github.com/micro-ROS/rcutils 521b58140a672067c2140c63e071686b23717df5
 https://github.com/micro-ROS/rmw-microxrcedds.git a374e1d5c9ce01555ef6843aa9a2358d37c63da9
 https://github.com/micro-ROS/rosidl_typesupport.git 8477585bfa0cf98deeeb15aa10a525cba9edaea9
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 1310b44fa2fd5327634a39e640a644d2dca745e4
@@ -20,7 +20,7 @@ https://github.com/ros2/common_interfaces.git 05d7e1942acffefbeb40f7dd9d69ce4298
 https://github.com/ros2/example_interfaces.git 58899de0f85388be333e32bcb78c551a6877db4d
 https://github.com/ros2/libyaml_vendor.git 0c814892fe8c31aeb20688a8b43906aeefda015e
 https://github.com/ros2/rcl.git fae1a019fd563e1165bc27e3144c82f414d41d5c
-https://github.com/ros2/rcl_interfaces.git 18d891afec8002e00c5ca3b392cf05d035e6efa4
+https://github.com/ros2/rcl_interfaces.git aafd90e360208d620761e0d813c96a217278c435
 https://github.com/ros2/rcl_logging.git 380006436d192d98d56fe1a8a75936fb274964f2
 https://github.com/ros2/rclc 442c4e84bf9ce9c819aa371b2d01e0c4e0835e06
 https://github.com/ros2/rcpputils.git 39b20134e571ba74baa7c77750eab586da90b7a5
