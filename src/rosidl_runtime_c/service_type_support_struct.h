@@ -19,6 +19,7 @@
 
 #include "rcutils/allocator.h"
 #include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 
 #include "rosidl_typesupport_interface/macros.h"
@@ -81,12 +82,18 @@ struct rosidl_service_type_support_t
   const void * data;
   /// Pointer to the service type support handler function
   rosidl_service_typesupport_handle_function func;
+  /// Service request message typesupport
+  const rosidl_message_type_support_t * request_typesupport;
+  /// Service response message typesupport
+  const rosidl_message_type_support_t * response_typesupport;
+  /// Service event message typesupport
+  const rosidl_message_type_support_t * event_typesupport;
   /// Pointer to function to create the introspection message
   rosidl_event_message_create_handle_function_function event_message_create_handle_function;
   /// Pointer to function to finalize the introspection message
   rosidl_event_message_destroy_handle_function_function event_message_destroy_handle_function;
-  /// Service event message typesupport
-  const rosidl_message_type_support_t * event_typesupport;
+  /// Hash of the service's description
+  const rosidl_type_hash_t * type_hash;
 };
 
 /// Get the service type support handle specific to this identifier.

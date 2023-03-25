@@ -15,6 +15,7 @@
 #ifndef ROSIDL_RUNTIME_C__MESSAGE_TYPE_SUPPORT_STRUCT_H_
 #define ROSIDL_RUNTIME_C__MESSAGE_TYPE_SUPPORT_STRUCT_H_
 
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "rosidl_typesupport_interface/macros.h"
 
@@ -37,6 +38,8 @@ struct rosidl_message_type_support_t
   const void * data;
   /// Pointer to the message type support handler function
   rosidl_message_typesupport_handle_function func;
+  /// Hash of the message's description
+  const rosidl_type_hash_t * type_hash;
 };
 
 /// Get the message type support handle specific to this identifier.
