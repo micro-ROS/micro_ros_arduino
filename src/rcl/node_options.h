@@ -23,9 +23,9 @@ extern "C"
 #endif
 
 #include "rcl/allocator.h"
-#ifdef RCL_COMMAND_LINE_ENABLED
+#ifdef RCL_MICROROS_COMPLETE_IMPL
 #include "rcl/arguments.h"
-#endif // RCL_COMMAND_LINE_ENABLED
+#endif // RCL_MICROROS_COMPLETE_IMPL
 #include "rcl/macros.h"
 
 #include "rcl/domain_id.h"
@@ -49,10 +49,10 @@ typedef struct rcl_node_options_s
   /// If false then only use arguments in this struct, otherwise use global arguments also.
   bool use_global_arguments;
 
-#ifdef RCL_COMMAND_LINE_ENABLED
+#ifdef RCL_MICROROS_COMPLETE_IMPL
   /// Command line arguments that apply only to this node.
   rcl_arguments_t arguments;
-#endif // RCL_COMMAND_LINE_ENABLED
+#endif // RCL_MICROROS_COMPLETE_IMPL
 
   /// Flag to enable rosout for this node
   bool enable_rosout;

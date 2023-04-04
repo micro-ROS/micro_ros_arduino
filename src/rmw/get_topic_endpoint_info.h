@@ -31,6 +31,9 @@ extern "C"
  * the associated topic type, the publisher's gid, and the publisher QoS profile.
  * Names of non-existent topics are allowed, in which case an empty array will be returned.
  *
+ * Depending on the RMW in use, discovery may be asynchronous.  Therefore, creating a publisher
+ * and then calling this API may not show the newly created publisher immediately.
+ *
  * \par QoS that are correctly read
  * The QoS profiles returned might have some invalid fields.
  * The rmw implementation must set the invalid fields to `RMW_QOS_POLICY_*_UNKNOWN`.
@@ -112,6 +115,9 @@ rmw_get_publishers_info_by_topic(
  * Endpoint information includes the subscription's node name and namespace,
  * the associated topic type, the subscription's gid, and the subscription QoS profile.
  * Names of non-existent topics are allowed, in which case an empty array will be returned.
+ *
+ * Depending on the RMW in use, discovery may be asynchronous.  Therefore, creating a subscription
+ * and then calling this API may not show the newly created subscription immediately.
  *
  * \par QoS that are correctly read
  * Not all QoS may be read correctly, \sa rmw_get_publishers_info_by_topic() for more details.
