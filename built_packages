@@ -3,7 +3,7 @@ https://github.com/ament/ament_cmake.git 15ea54ad541f367a76fd491f028e2659ec712ef
 https://github.com/ament/ament_index.git f019d6c40991799a13b18c9c3dcc583e3fde0381
 https://github.com/ament/ament_lint.git 4f4bf85fcc117ee6ccd19b62551f77f3163105c1
 https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
-https://github.com/ament/googletest.git 6df7425fdcbd368d2d1b99ffd89b9168014abb07
+https://github.com/ament/googletest.git 0acc5196ddd5364fe24b729185c81746573835dd
 https://github.com/ament/uncrustify_vendor.git ec8f8b4d03483671e8ea2b3039f1015f92b0ef89
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 5cd43eb0ba97c7ec21949492344b8bf05e04572c
