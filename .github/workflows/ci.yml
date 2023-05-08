@@ -21,22 +21,32 @@ jobs:
             apt update
             apt install -y git curl lib32z1 wget libfontconfig libxft2 xz-utils rsync python-is-python3 python3-pip
             pip3 install pyserial
-            curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
-            mkdir -p /home/Arduino/libraries/micro_ros_arduino/
-            cp -R checkout/* /home/Arduino/libraries/micro_ros_arduino/
-            export PATH=$PATH:/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
-            arduino-cli core install OpenCR:OpenCR -v --additional-urls https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
+            curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/0.30.0/install.sh | sh
+            mkdir -p /github/home/Arduino/libraries/micro_ros_arduino/
+            cp -R checkout/* /github/home/Arduino/libraries/micro_ros_arduino/
+            echo '''board_manager:
+              additional_urls:
+                - https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
+                - https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json
+                - https://www.pjrc.com/teensy/td_156/package_teensy_index.json
+                - https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json''' > arduino-cli.yaml
+            curl -fsSL https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json -o /github/home/.arduino15/package_opencr_index.json
+            curl -fsSL https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json -o /github/home/.arduino15/package_esp32_index.json
+            curl -fsSL https://www.pjrc.com/teensy/td_156/package_teensy_index.json -o /github/home/.arduino15/package_teensy_index.json
+            curl -fsSL https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json -o /github/home/.arduino15/package_seeeduino_boards_index.json
+            export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
+            arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
             arduino-cli core install arduino:mbed -v
-            arduino-cli core install esp32:esp32 -v --additional-urls https://github.com/espressif/arduino-esp32/releases/download/2.0.2/package_esp32_index.json
-            arduino-cli core install teensy:avr -v --additional-urls https://www.pjrc.com/teensy/td_156/package_teensy_index.json
-            arduino-cli core install Seeeduino:samd -v --additional-urls https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+            arduino-cli core install esp32:esp32 -v
+            arduino-cli core install teensy:avr -v
+            arduino-cli core install Seeeduino:samd -v
             #
             # PATCHING TEENSY AND SAM
-            cat checkout/extras/patching_boards/platform_teensy.txt > /home/.arduino15/packages/teensy/hardware/avr/1.57.2/platform.txt
-            # remove when https:/.com/arduino/ArduinoCore-sam/pull/115 merged
-            cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
+            cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/hardware/avr/1.57.2/platform.txt
+            # remove when https://github.com/arduino/ArduinoCore-sam/pull/115 merged
+            cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /github/home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
             #
             # BUILDING EXAPLE FOR EACH PLATFORM
             arduino-cli core update-index
@@ -45,29 +55,29 @@ jobs:
             arduino-cli lib install "STM32duino X-NUCLEO-IKS01A3"
             arduino-cli lib install "Seeed Arduino rpcWiFi" # Dependent libraries(e.g. "Seeed Arduino rpcUnified") will be installed together. See https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#needed-libraries-for-wi-fi for more details.
             # Build all demos
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_reconnection_example -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
-            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_tf_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy41 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_time_sync -v
-            arduino-cli compile --fqbn teensy:avr:teensy41 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_types_handling -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_reconnection_example -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_subscriber_twist -v
+            arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_tf_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_time_sync -v
+            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_types_handling -v
             # Build one demo for each platform
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_decibels -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_IMU_ML -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            arduino-cli compile --fqbn teensy:avr:teensy31 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy35 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy36 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy41 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy40 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:samd:arduino_zero_native /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:sam:arduino_due_x /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            # arduino-cli compile --fqbn arduino:mbed:envie_m4 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:envie_m7 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:envie_m7 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            arduino-cli compile --fqbn esp32:esp32:esp32 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn esp32:esp32:esp32 /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_decibels -v
+            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_IMU_ML -v
+            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy36 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn teensy:avr:teensy40 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
