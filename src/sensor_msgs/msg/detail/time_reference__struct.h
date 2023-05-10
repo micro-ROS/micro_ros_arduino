@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/TimeReference.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/time_reference.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__TIME_REFERENCE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__TIME_REFERENCE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__TimeReference__TYPE_HASH = {1, {
-    0xdd, 0x66, 0xe8, 0x4c, 0xf4, 0x0b, 0xbb, 0x5d,
-    0x5a, 0x40, 0x47, 0x2e, 0x6e, 0xcf, 0x26, 0x75,
-    0xa0, 0x31, 0x33, 0x4d, 0x4c, 0x42, 0x6a, 0xbd,
-    0xb2, 0xad, 0x41, 0x80, 0x1a, 0x8e, 0xfc, 0x99,
-  }};
 
 // Constants defined in the message
 

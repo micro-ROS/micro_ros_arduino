@@ -2,6 +2,9 @@
 // with input from example_interfaces:srv/SetBool.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/srv/set_bool.h"
+
+
 #ifndef EXAMPLE_INTERFACES__SRV__DETAIL__SET_BOOL__TYPE_SUPPORT_H_
 #define EXAMPLE_INTERFACES__SRV__DETAIL__SET_BOOL__TYPE_SUPPORT_H_
 

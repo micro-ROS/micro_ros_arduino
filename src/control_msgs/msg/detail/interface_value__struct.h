@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/InterfaceValue.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/interface_value.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__INTERFACE_VALUE__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__INTERFACE_VALUE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__InterfaceValue__TYPE_HASH = {1, {
-    0x74, 0xa1, 0x21, 0x44, 0xef, 0x6b, 0x7a, 0xf6,
-    0x75, 0x33, 0x19, 0x5c, 0xb3, 0x0f, 0x7f, 0x60,
-    0x7d, 0x33, 0x01, 0xb6, 0x69, 0x50, 0x20, 0x8a,
-    0x72, 0xd2, 0x80, 0x69, 0x5f, 0x3e, 0x19, 0x0c,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/ColorRGBA.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/color_rgba.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__COLOR_RGBA__TYPE_SUPPORT_H_
 #define STD_MSGS__MSG__DETAIL__COLOR_RGBA__TYPE_SUPPORT_H_
 

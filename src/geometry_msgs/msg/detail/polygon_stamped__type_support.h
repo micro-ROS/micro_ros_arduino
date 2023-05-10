@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/PolygonStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/polygon_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POLYGON_STAMPED__TYPE_SUPPORT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POLYGON_STAMPED__TYPE_SUPPORT_H_
 

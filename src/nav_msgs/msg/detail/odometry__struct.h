@@ -2,6 +2,9 @@
 // with input from nav_msgs:msg/Odometry.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/msg/odometry.h"
+
+
 #ifndef NAV_MSGS__MSG__DETAIL__ODOMETRY__STRUCT_H_
 #define NAV_MSGS__MSG__DETAIL__ODOMETRY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t nav_msgs__msg__Odometry__TYPE_HASH = {1, {
-    0x3c, 0xc9, 0x7d, 0xc7, 0xfb, 0x75, 0x02, 0xf8,
-    0x71, 0x44, 0x62, 0xc5, 0x26, 0xd3, 0x69, 0xe3,
-    0x5b, 0x60, 0x3c, 0xfc, 0x34, 0xd9, 0x46, 0xe3,
-    0xf2, 0xed, 0xa2, 0x76, 0x6d, 0xfe, 0xc6, 0xe0,
-  }};
 
 // Constants defined in the message
 

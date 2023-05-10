@@ -2,6 +2,9 @@
 // with input from example_interfaces:srv/Trigger.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/srv/trigger.h"
+
+
 #ifndef EXAMPLE_INTERFACES__SRV__DETAIL__TRIGGER__FUNCTIONS_H_
 #define EXAMPLE_INTERFACES__SRV__DETAIL__TRIGGER__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "example_interfaces/msg/rosidl_generator_c__visibility_control.h"
 
 #include "example_interfaces/srv/detail/trigger__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__Trigger__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__Trigger__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__Trigger__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__Trigger__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/Trigger message.
 /**
@@ -92,6 +125,30 @@ bool
 example_interfaces__srv__Trigger_Request__copy(
   const example_interfaces__srv__Trigger_Request * input,
   example_interfaces__srv__Trigger_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__Trigger_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__Trigger_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__Trigger_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__Trigger_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/Trigger messages.
 /**
@@ -245,6 +302,30 @@ example_interfaces__srv__Trigger_Response__copy(
   const example_interfaces__srv__Trigger_Response * input,
   example_interfaces__srv__Trigger_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__Trigger_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__Trigger_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__Trigger_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__Trigger_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/Trigger messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 example_interfaces__srv__Trigger_Event__copy(
   const example_interfaces__srv__Trigger_Event * input,
   example_interfaces__srv__Trigger_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__Trigger_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__Trigger_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__Trigger_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__Trigger_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/Trigger messages.
 /**

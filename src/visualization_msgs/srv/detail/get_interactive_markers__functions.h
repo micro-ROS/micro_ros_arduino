@@ -2,6 +2,9 @@
 // with input from visualization_msgs:srv/GetInteractiveMarkers.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "visualization_msgs/srv/get_interactive_markers.h"
+
+
 #ifndef VISUALIZATION_MSGS__SRV__DETAIL__GET_INTERACTIVE_MARKERS__FUNCTIONS_H_
 #define VISUALIZATION_MSGS__SRV__DETAIL__GET_INTERACTIVE_MARKERS__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "visualization_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "visualization_msgs/srv/detail/get_interactive_markers__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_type_hash_t *
+visualization_msgs__srv__GetInteractiveMarkers__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+visualization_msgs__srv__GetInteractiveMarkers__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+visualization_msgs__srv__GetInteractiveMarkers__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+visualization_msgs__srv__GetInteractiveMarkers__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/GetInteractiveMarkers message.
 /**
@@ -92,6 +125,30 @@ bool
 visualization_msgs__srv__GetInteractiveMarkers_Request__copy(
   const visualization_msgs__srv__GetInteractiveMarkers_Request * input,
   visualization_msgs__srv__GetInteractiveMarkers_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_type_hash_t *
+visualization_msgs__srv__GetInteractiveMarkers_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+visualization_msgs__srv__GetInteractiveMarkers_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+visualization_msgs__srv__GetInteractiveMarkers_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+visualization_msgs__srv__GetInteractiveMarkers_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/GetInteractiveMarkers messages.
 /**
@@ -245,6 +302,30 @@ visualization_msgs__srv__GetInteractiveMarkers_Response__copy(
   const visualization_msgs__srv__GetInteractiveMarkers_Response * input,
   visualization_msgs__srv__GetInteractiveMarkers_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_type_hash_t *
+visualization_msgs__srv__GetInteractiveMarkers_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+visualization_msgs__srv__GetInteractiveMarkers_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+visualization_msgs__srv__GetInteractiveMarkers_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+visualization_msgs__srv__GetInteractiveMarkers_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/GetInteractiveMarkers messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 visualization_msgs__srv__GetInteractiveMarkers_Event__copy(
   const visualization_msgs__srv__GetInteractiveMarkers_Event * input,
   visualization_msgs__srv__GetInteractiveMarkers_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_type_hash_t *
+visualization_msgs__srv__GetInteractiveMarkers_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+visualization_msgs__srv__GetInteractiveMarkers_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+visualization_msgs__srv__GetInteractiveMarkers_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+visualization_msgs__srv__GetInteractiveMarkers_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/GetInteractiveMarkers messages.
 /**

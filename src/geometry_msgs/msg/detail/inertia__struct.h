@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/Inertia.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/inertia.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__INERTIA__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__INERTIA__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__Inertia__TYPE_HASH = {1, {
-    0x2d, 0xdd, 0x5d, 0xab, 0x5c, 0x34, 0x78, 0x25,
-    0xba, 0x2e, 0x56, 0xc8, 0x95, 0xdd, 0xcc, 0xfd,
-    0x0b, 0x8e, 0xfe, 0x53, 0xae, 0x93, 0x1b, 0xf6,
-    0x7f, 0x90, 0x55, 0x29, 0x93, 0x0b, 0x4b, 0xd7,
-  }};
 
 // Constants defined in the message
 

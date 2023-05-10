@@ -15,6 +15,8 @@
 #ifndef ROSIDL_RUNTIME_C__MESSAGE_TYPE_SUPPORT_STRUCT_H_
 #define ROSIDL_RUNTIME_C__MESSAGE_TYPE_SUPPORT_STRUCT_H_
 
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
 #include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "rosidl_typesupport_interface/macros.h"
@@ -29,6 +31,15 @@ typedef struct rosidl_message_type_support_t rosidl_message_type_support_t;
 typedef const rosidl_message_type_support_t * (* rosidl_message_typesupport_handle_function)(
   const rosidl_message_type_support_t *, const char *);
 
+typedef const rosidl_type_hash_t *
+(* rosidl_message_get_type_hash_function)(const rosidl_message_type_support_t *);
+
+typedef const rosidl_runtime_c__type_description__TypeDescription *
+(* rosidl_message_get_type_description_function)(const rosidl_message_type_support_t *);
+
+typedef const rosidl_runtime_c__type_description__TypeSource__Sequence *
+(* rosidl_message_get_type_description_sources_function)(const rosidl_message_type_support_t *);
+
 /// Contains rosidl message type support data
 struct rosidl_message_type_support_t
 {
@@ -38,9 +49,17 @@ struct rosidl_message_type_support_t
   const void * data;
   /// Pointer to the message type support handler function
   rosidl_message_typesupport_handle_function func;
-  /// Hash of the message's description
-  const rosidl_type_hash_t * type_hash;
+  /// Pointer to function to get the hash of the message's description
+  rosidl_message_get_type_hash_function get_type_hash_func;
+  /// Pointer to function to get the description of the type
+  rosidl_message_get_type_description_function get_type_description_func;
+  /// Pointer to function to get the text of the sources that defined the description of the type
+  rosidl_message_get_type_description_sources_function get_type_description_sources_func;
 };
+
+/// Return a rosidl_message_type_support_t struct with members set to `NULL`.
+ROSIDL_GENERATOR_C_PUBLIC
+rosidl_message_type_support_t rosidl_get_zero_initialized_message_type_support_handle(void);
 
 /// Get the message type support handle specific to this identifier.
 /**

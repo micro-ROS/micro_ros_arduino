@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/CameraInfo.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/camera_info.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__CAMERA_INFO__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__CAMERA_INFO__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__CameraInfo__TYPE_HASH = {1, {
-    0xb3, 0xdf, 0xd6, 0x8f, 0xf4, 0x6c, 0x9d, 0x56,
-    0xc8, 0x0f, 0xd3, 0xbd, 0x4e, 0xd2, 0x2c, 0x7a,
-    0x4d, 0xdc, 0xe8, 0xc8, 0x34, 0x8f, 0x2f, 0x59,
-    0xc2, 0x99, 0xe7, 0x31, 0x18, 0xe7, 0xe2, 0x75,
-  }};
 
 // Constants defined in the message
 

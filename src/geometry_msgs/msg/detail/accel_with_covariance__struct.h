@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/AccelWithCovariance.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/accel_with_covariance.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__ACCEL_WITH_COVARIANCE__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__ACCEL_WITH_COVARIANCE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__AccelWithCovariance__TYPE_HASH = {1, {
-    0x23, 0x0d, 0x51, 0xbd, 0x53, 0xbc, 0x36, 0xf2,
-    0x60, 0x57, 0x4e, 0x73, 0xb4, 0x29, 0x41, 0xce,
-    0xfe, 0x44, 0x68, 0x47, 0x53, 0x48, 0x0b, 0x6f,
-    0xc3, 0x30, 0xc0, 0x32, 0xc5, 0xdb, 0x59, 0x97,
-  }};
 
 // Constants defined in the message
 

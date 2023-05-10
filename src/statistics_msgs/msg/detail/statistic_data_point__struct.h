@@ -2,6 +2,9 @@
 // with input from statistics_msgs:msg/StatisticDataPoint.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "statistics_msgs/msg/statistic_data_point.h"
+
+
 #ifndef STATISTICS_MSGS__MSG__DETAIL__STATISTIC_DATA_POINT__STRUCT_H_
 #define STATISTICS_MSGS__MSG__DETAIL__STATISTIC_DATA_POINT__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t statistics_msgs__msg__StatisticDataPoint__TYPE_HASH = {1, {
-    0xb7, 0xe6, 0x1a, 0x40, 0x73, 0x46, 0xea, 0x91,
-    0x2e, 0xff, 0xb6, 0x95, 0x40, 0x23, 0xd2, 0xd2,
-    0xc9, 0xad, 0xf8, 0xf7, 0xbc, 0x10, 0xf6, 0xca,
-    0xe5, 0x76, 0xd3, 0x50, 0xc4, 0x45, 0xf6, 0xa5,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/Inertia.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/inertia.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__INERTIA__TYPE_SUPPORT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__INERTIA__TYPE_SUPPORT_H_
 

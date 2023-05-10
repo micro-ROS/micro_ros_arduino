@@ -2,6 +2,9 @@
 // with input from nav_msgs:msg/MapMetaData.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/msg/map_meta_data.h"
+
+
 #ifndef NAV_MSGS__MSG__DETAIL__MAP_META_DATA__STRUCT_H_
 #define NAV_MSGS__MSG__DETAIL__MAP_META_DATA__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t nav_msgs__msg__MapMetaData__TYPE_HASH = {1, {
-    0x27, 0x72, 0xd4, 0xb2, 0x00, 0x0e, 0xf2, 0xb3,
-    0x5d, 0xba, 0xeb, 0x80, 0xfd, 0x39, 0x46, 0xc1,
-    0x36, 0x9f, 0x81, 0x7f, 0xb4, 0xf7, 0x56, 0x77,
-    0xd9, 0x16, 0xd2, 0x7c, 0x17, 0xd7, 0x63, 0xc8,
-  }};
 
 // Constants defined in the message
 

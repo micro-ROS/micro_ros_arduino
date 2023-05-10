@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/JointState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/joint_state.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__JOINT_STATE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__JOINT_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__JointState__TYPE_HASH = {1, {
-    0xa1, 0x3e, 0xe3, 0xa3, 0x30, 0xe3, 0x46, 0xc9,
-    0xd8, 0x7b, 0x5a, 0xa1, 0x8d, 0x24, 0xe1, 0x16,
-    0x90, 0x75, 0x2b, 0xd3, 0x3a, 0x03, 0x50, 0xf1,
-    0x1c, 0x58, 0x82, 0xbc, 0x91, 0x79, 0x26, 0x0e,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/Twist.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/twist.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__TWIST__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__TWIST__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__Twist__TYPE_HASH = {1, {
-    0x9c, 0x45, 0xbf, 0x16, 0xfe, 0x09, 0x83, 0xd8,
-    0x0e, 0x3c, 0xfe, 0x75, 0x0d, 0x68, 0x35, 0x84,
-    0x3d, 0x26, 0x5a, 0x9a, 0x6c, 0x46, 0xbd, 0x2e,
-    0x60, 0x9f, 0xcd, 0xdd, 0xe6, 0xfb, 0x8d, 0x2a,
-  }};
 
 // Constants defined in the message
 

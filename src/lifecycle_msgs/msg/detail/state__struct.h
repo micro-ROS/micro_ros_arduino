@@ -2,6 +2,9 @@
 // with input from lifecycle_msgs:msg/State.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "lifecycle_msgs/msg/state.h"
+
+
 #ifndef LIFECYCLE_MSGS__MSG__DETAIL__STATE__STRUCT_H_
 #define LIFECYCLE_MSGS__MSG__DETAIL__STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t lifecycle_msgs__msg__State__TYPE_HASH = {1, {
-    0xdd, 0x2d, 0x02, 0xb8, 0x2f, 0x3e, 0xbc, 0x85,
-    0x8e, 0x53, 0xc4, 0x31, 0xb1, 0xe6, 0xe9, 0x1f,
-    0x3f, 0xfc, 0x71, 0x43, 0x6f, 0xc8, 0x1d, 0x07,
-    0x15, 0x21, 0x4a, 0xc6, 0xee, 0x21, 0x07, 0xa0,
-  }};
 
 // Constants defined in the message
 

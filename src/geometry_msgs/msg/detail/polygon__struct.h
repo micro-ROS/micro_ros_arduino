@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/Polygon.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/polygon.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POLYGON__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POLYGON__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__Polygon__TYPE_HASH = {1, {
-    0x37, 0x82, 0xf9, 0xf0, 0xbf, 0x04, 0x49, 0x64,
-    0xd6, 0x92, 0xd6, 0xc0, 0x17, 0xd7, 0x05, 0xe3,
-    0x76, 0x11, 0xaf, 0xb1, 0xf0, 0xbf, 0x6a, 0x9d,
-    0xee, 0x24, 0x8a, 0x7d, 0xda, 0x0f, 0x78, 0x4a,
-  }};
 
 // Constants defined in the message
 

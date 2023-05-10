@@ -68,6 +68,8 @@ extern "C"
   #define RCUTILS_THREAD_LOCAL _Thread_local
 #endif
 
+// Helper macros for nested macro expansion
+#define RCUTILS_EXPAND(x) x
 #define RCUTILS_STRINGIFY_IMPL(x) #x
 #define RCUTILS_STRINGIFY(x) RCUTILS_STRINGIFY_IMPL(x)
 

@@ -29,7 +29,7 @@ namespace cpp
 // TODO(karsten1987): Implement based on
 // https://github.com/PrismTech/opensplice/blob/master/docs/pdf/OpenSplice_refman_CPP.pdf
 static std::map<std::string, std::vector<uint8_t>>
-parse_key_value(std::vector<uint8_t> kv)
+parse_key_value(const std::vector<uint8_t> & kv)
 {
   std::map<std::string, std::vector<uint8_t>> m;
 

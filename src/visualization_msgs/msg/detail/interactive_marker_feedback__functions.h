@@ -2,6 +2,9 @@
 // with input from visualization_msgs:msg/InteractiveMarkerFeedback.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "visualization_msgs/msg/interactive_marker_feedback.h"
+
+
 #ifndef VISUALIZATION_MSGS__MSG__DETAIL__INTERACTIVE_MARKER_FEEDBACK__FUNCTIONS_H_
 #define VISUALIZATION_MSGS__MSG__DETAIL__INTERACTIVE_MARKER_FEEDBACK__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "visualization_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -92,6 +101,30 @@ bool
 visualization_msgs__msg__InteractiveMarkerFeedback__copy(
   const visualization_msgs__msg__InteractiveMarkerFeedback * input,
   visualization_msgs__msg__InteractiveMarkerFeedback * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_type_hash_t *
+visualization_msgs__msg__InteractiveMarkerFeedback__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+visualization_msgs__msg__InteractiveMarkerFeedback__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+visualization_msgs__msg__InteractiveMarkerFeedback__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+visualization_msgs__msg__InteractiveMarkerFeedback__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/InteractiveMarkerFeedback messages.
 /**

@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/Imu.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/imu.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__IMU__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__IMU__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__Imu__TYPE_HASH = {1, {
-    0x7d, 0x9a, 0x00, 0xff, 0x13, 0x10, 0x80, 0x89,
-    0x7a, 0x5e, 0xc7, 0xe2, 0x6e, 0x31, 0x59, 0x54,
-    0xb8, 0xea, 0xe3, 0x35, 0x3c, 0x3f, 0x99, 0x5c,
-    0x55, 0xfa, 0xf7, 0x15, 0x74, 0x00, 0x0b, 0x5b,
-  }};
 
 // Constants defined in the message
 

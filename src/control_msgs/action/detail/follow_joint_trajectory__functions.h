@@ -2,6 +2,9 @@
 // with input from control_msgs:action/FollowJointTrajectory.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/action/follow_joint_trajectory.h"
+
+
 #ifndef CONTROL_MSGS__ACTION__DETAIL__FOLLOW_JOINT_TRAJECTORY__FUNCTIONS_H_
 #define CONTROL_MSGS__ACTION__DETAIL__FOLLOW_JOINT_TRAJECTORY__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "control_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "control_msgs/action/detail/follow_joint_trajectory__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory__get_type_hash(
+  const rosidl_action_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory__get_type_description(
+  const rosidl_action_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory__get_individual_type_description_source(
+  const rosidl_action_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory__get_type_description_sources(
+  const rosidl_action_type_support_t * type_support);
 
 /// Initialize action/FollowJointTrajectory message.
 /**
@@ -92,6 +125,30 @@ bool
 control_msgs__action__FollowJointTrajectory_Goal__copy(
   const control_msgs__action__FollowJointTrajectory_Goal * input,
   control_msgs__action__FollowJointTrajectory_Goal * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_Goal__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_Goal__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_Goal__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_Goal__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
@@ -245,6 +302,30 @@ control_msgs__action__FollowJointTrajectory_Result__copy(
   const control_msgs__action__FollowJointTrajectory_Result * input,
   control_msgs__action__FollowJointTrajectory_Result * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_Result__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_Result__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_Result__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_Result__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -397,6 +478,30 @@ control_msgs__action__FollowJointTrajectory_Feedback__copy(
   const control_msgs__action__FollowJointTrajectory_Feedback * input,
   control_msgs__action__FollowJointTrajectory_Feedback * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_Feedback__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_Feedback__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_Feedback__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_Feedback__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -474,6 +579,30 @@ control_msgs__action__FollowJointTrajectory_Feedback__Sequence__copy(
   const control_msgs__action__FollowJointTrajectory_Feedback__Sequence * input,
   control_msgs__action__FollowJointTrajectory_Feedback__Sequence * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_SendGoal__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_SendGoal__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_SendGoal__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_SendGoal__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
+
 /// Initialize action/FollowJointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -548,6 +677,30 @@ bool
 control_msgs__action__FollowJointTrajectory_SendGoal_Request__copy(
   const control_msgs__action__FollowJointTrajectory_SendGoal_Request * input,
   control_msgs__action__FollowJointTrajectory_SendGoal_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_SendGoal_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_SendGoal_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_SendGoal_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_SendGoal_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
@@ -701,6 +854,30 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Response__copy(
   const control_msgs__action__FollowJointTrajectory_SendGoal_Response * input,
   control_msgs__action__FollowJointTrajectory_SendGoal_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_SendGoal_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_SendGoal_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_SendGoal_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_SendGoal_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -853,6 +1030,30 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Event__copy(
   const control_msgs__action__FollowJointTrajectory_SendGoal_Event * input,
   control_msgs__action__FollowJointTrajectory_SendGoal_Event * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_SendGoal_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_SendGoal_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_SendGoal_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_SendGoal_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -930,6 +1131,30 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Event__Sequence__copy(
   const control_msgs__action__FollowJointTrajectory_SendGoal_Event__Sequence * input,
   control_msgs__action__FollowJointTrajectory_SendGoal_Event__Sequence * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_GetResult__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_GetResult__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_GetResult__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_GetResult__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
+
 /// Initialize action/FollowJointTrajectory message.
 /**
  * If the init function is called twice for the same message without
@@ -1004,6 +1229,30 @@ bool
 control_msgs__action__FollowJointTrajectory_GetResult_Request__copy(
   const control_msgs__action__FollowJointTrajectory_GetResult_Request * input,
   control_msgs__action__FollowJointTrajectory_GetResult_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_GetResult_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_GetResult_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_GetResult_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_GetResult_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
@@ -1157,6 +1406,30 @@ control_msgs__action__FollowJointTrajectory_GetResult_Response__copy(
   const control_msgs__action__FollowJointTrajectory_GetResult_Response * input,
   control_msgs__action__FollowJointTrajectory_GetResult_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_GetResult_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_GetResult_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_GetResult_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_GetResult_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -1309,6 +1582,30 @@ control_msgs__action__FollowJointTrajectory_GetResult_Event__copy(
   const control_msgs__action__FollowJointTrajectory_GetResult_Event * input,
   control_msgs__action__FollowJointTrajectory_GetResult_Event * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_GetResult_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_GetResult_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_GetResult_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_GetResult_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of action/FollowJointTrajectory messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -1460,6 +1757,30 @@ bool
 control_msgs__action__FollowJointTrajectory_FeedbackMessage__copy(
   const control_msgs__action__FollowJointTrajectory_FeedbackMessage * input,
   control_msgs__action__FollowJointTrajectory_FeedbackMessage * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__action__FollowJointTrajectory_FeedbackMessage__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__action__FollowJointTrajectory_FeedbackMessage__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__action__FollowJointTrajectory_FeedbackMessage__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__action__FollowJointTrajectory_FeedbackMessage__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/FollowJointTrajectory messages.
 /**

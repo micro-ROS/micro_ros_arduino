@@ -2,6 +2,9 @@
 // with input from lifecycle_msgs:srv/GetAvailableTransitions.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "lifecycle_msgs/srv/get_available_transitions.h"
+
+
 #ifndef LIFECYCLE_MSGS__SRV__DETAIL__GET_AVAILABLE_TRANSITIONS__FUNCTIONS_H_
 #define LIFECYCLE_MSGS__SRV__DETAIL__GET_AVAILABLE_TRANSITIONS__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "lifecycle_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "lifecycle_msgs/srv/detail/get_available_transitions__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_type_hash_t *
+lifecycle_msgs__srv__GetAvailableTransitions__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+lifecycle_msgs__srv__GetAvailableTransitions__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+lifecycle_msgs__srv__GetAvailableTransitions__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+lifecycle_msgs__srv__GetAvailableTransitions__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/GetAvailableTransitions message.
 /**
@@ -92,6 +125,30 @@ bool
 lifecycle_msgs__srv__GetAvailableTransitions_Request__copy(
   const lifecycle_msgs__srv__GetAvailableTransitions_Request * input,
   lifecycle_msgs__srv__GetAvailableTransitions_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_type_hash_t *
+lifecycle_msgs__srv__GetAvailableTransitions_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+lifecycle_msgs__srv__GetAvailableTransitions_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+lifecycle_msgs__srv__GetAvailableTransitions_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+lifecycle_msgs__srv__GetAvailableTransitions_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/GetAvailableTransitions messages.
 /**
@@ -245,6 +302,30 @@ lifecycle_msgs__srv__GetAvailableTransitions_Response__copy(
   const lifecycle_msgs__srv__GetAvailableTransitions_Response * input,
   lifecycle_msgs__srv__GetAvailableTransitions_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_type_hash_t *
+lifecycle_msgs__srv__GetAvailableTransitions_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+lifecycle_msgs__srv__GetAvailableTransitions_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+lifecycle_msgs__srv__GetAvailableTransitions_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+lifecycle_msgs__srv__GetAvailableTransitions_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/GetAvailableTransitions messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 lifecycle_msgs__srv__GetAvailableTransitions_Event__copy(
   const lifecycle_msgs__srv__GetAvailableTransitions_Event * input,
   lifecycle_msgs__srv__GetAvailableTransitions_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_type_hash_t *
+lifecycle_msgs__srv__GetAvailableTransitions_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+lifecycle_msgs__srv__GetAvailableTransitions_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+lifecycle_msgs__srv__GetAvailableTransitions_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+lifecycle_msgs__srv__GetAvailableTransitions_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/GetAvailableTransitions messages.
 /**

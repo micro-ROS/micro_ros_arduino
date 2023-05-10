@@ -2,6 +2,9 @@
 // with input from tf2_msgs:srv/FrameGraph.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tf2_msgs/srv/frame_graph.h"
+
+
 #ifndef TF2_MSGS__SRV__DETAIL__FRAME_GRAPH__FUNCTIONS_H_
 #define TF2_MSGS__SRV__DETAIL__FRAME_GRAPH__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "tf2_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "tf2_msgs/srv/detail/frame_graph__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_type_hash_t *
+tf2_msgs__srv__FrameGraph__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tf2_msgs__srv__FrameGraph__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tf2_msgs__srv__FrameGraph__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tf2_msgs__srv__FrameGraph__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/FrameGraph message.
 /**
@@ -92,6 +125,30 @@ bool
 tf2_msgs__srv__FrameGraph_Request__copy(
   const tf2_msgs__srv__FrameGraph_Request * input,
   tf2_msgs__srv__FrameGraph_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_type_hash_t *
+tf2_msgs__srv__FrameGraph_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tf2_msgs__srv__FrameGraph_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tf2_msgs__srv__FrameGraph_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tf2_msgs__srv__FrameGraph_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/FrameGraph messages.
 /**
@@ -245,6 +302,30 @@ tf2_msgs__srv__FrameGraph_Response__copy(
   const tf2_msgs__srv__FrameGraph_Response * input,
   tf2_msgs__srv__FrameGraph_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_type_hash_t *
+tf2_msgs__srv__FrameGraph_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tf2_msgs__srv__FrameGraph_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tf2_msgs__srv__FrameGraph_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tf2_msgs__srv__FrameGraph_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/FrameGraph messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 tf2_msgs__srv__FrameGraph_Event__copy(
   const tf2_msgs__srv__FrameGraph_Event * input,
   tf2_msgs__srv__FrameGraph_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_type_hash_t *
+tf2_msgs__srv__FrameGraph_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tf2_msgs__srv__FrameGraph_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tf2_msgs__srv__FrameGraph_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tf2_msgs__srv__FrameGraph_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/FrameGraph messages.
 /**

@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/PidState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/pid_state.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__PID_STATE__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__PID_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__PidState__TYPE_HASH = {1, {
-    0x9a, 0xb3, 0x29, 0x82, 0x50, 0x48, 0xab, 0x61,
-    0x52, 0x86, 0x8c, 0x2d, 0x08, 0x6f, 0xc1, 0x9f,
-    0x55, 0x25, 0xed, 0x2c, 0x6f, 0xec, 0x88, 0x6f,
-    0x71, 0x95, 0x77, 0xe1, 0xae, 0x3a, 0x6a, 0xcd,
-  }};
 
 // Constants defined in the message
 

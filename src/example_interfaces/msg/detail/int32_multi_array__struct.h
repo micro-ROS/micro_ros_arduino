@@ -2,6 +2,9 @@
 // with input from example_interfaces:msg/Int32MultiArray.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/msg/int32_multi_array.h"
+
+
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__INT32_MULTI_ARRAY__STRUCT_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__INT32_MULTI_ARRAY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t example_interfaces__msg__Int32MultiArray__TYPE_HASH = {1, {
-    0xb3, 0x47, 0xaf, 0xf8, 0xe3, 0x8e, 0x2c, 0xe3,
-    0xf7, 0xf4, 0x02, 0x3d, 0xb7, 0x92, 0x2d, 0x2d,
-    0x4a, 0xbb, 0x9d, 0x59, 0x3b, 0x03, 0xc4, 0x0b,
-    0x14, 0x27, 0x64, 0x0c, 0x26, 0x59, 0x5b, 0xfa,
-  }};
 
 // Constants defined in the message
 

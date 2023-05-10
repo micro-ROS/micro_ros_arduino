@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/FluidPressure.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/fluid_pressure.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__FLUID_PRESSURE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__FLUID_PRESSURE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__FluidPressure__TYPE_HASH = {1, {
-    0x22, 0xdf, 0xb2, 0xb1, 0x45, 0xa0, 0xbd, 0x5a,
-    0x31, 0xa1, 0xac, 0x38, 0x82, 0xa1, 0xb3, 0x21,
-    0x48, 0xb5, 0x1d, 0x9b, 0x2f, 0x3b, 0xab, 0x25,
-    0x02, 0x90, 0xd6, 0x6f, 0x35, 0x95, 0xbc, 0x32,
-  }};
 
 // Constants defined in the message
 

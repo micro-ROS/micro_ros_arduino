@@ -2,6 +2,9 @@
 // with input from visualization_msgs:msg/InteractiveMarker.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "visualization_msgs/msg/interactive_marker.h"
+
+
 #ifndef VISUALIZATION_MSGS__MSG__DETAIL__INTERACTIVE_MARKER__STRUCT_H_
 #define VISUALIZATION_MSGS__MSG__DETAIL__INTERACTIVE_MARKER__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t visualization_msgs__msg__InteractiveMarker__TYPE_HASH = {1, {
-    0x3d, 0x5b, 0x51, 0x44, 0x8b, 0x51, 0xd7, 0x3b,
-    0x0f, 0x39, 0x5b, 0x94, 0xd2, 0x59, 0xed, 0xd3,
-    0xa5, 0xd2, 0x69, 0xae, 0x9f, 0x7d, 0x9f, 0xd5,
-    0xcc, 0xeb, 0x9a, 0xe4, 0xb7, 0x2b, 0xe3, 0x46,
-  }};
 
 // Constants defined in the message
 

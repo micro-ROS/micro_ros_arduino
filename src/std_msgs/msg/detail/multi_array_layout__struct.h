@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/MultiArrayLayout.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/multi_array_layout.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__MULTI_ARRAY_LAYOUT__STRUCT_H_
 #define STD_MSGS__MSG__DETAIL__MULTI_ARRAY_LAYOUT__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t std_msgs__msg__MultiArrayLayout__TYPE_HASH = {1, {
-    0x4c, 0x66, 0xe6, 0xf7, 0x8e, 0x74, 0x0a, 0xc1,
-    0x03, 0xa9, 0x4c, 0xf6, 0x32, 0x59, 0xf9, 0x68,
-    0xe4, 0x8c, 0x61, 0x7e, 0x76, 0x99, 0xe8, 0x29,
-    0xb6, 0x3c, 0x21, 0xa5, 0xcb, 0x50, 0xda, 0xc6,
-  }};
 
 // Constants defined in the message
 

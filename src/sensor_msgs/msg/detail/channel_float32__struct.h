@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/ChannelFloat32.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/channel_float32.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__CHANNEL_FLOAT32__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__CHANNEL_FLOAT32__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__ChannelFloat32__TYPE_HASH = {1, {
-    0x92, 0x66, 0x54, 0x37, 0xdd, 0xf3, 0x93, 0x46,
-    0xf4, 0xba, 0x39, 0xee, 0x32, 0xe6, 0x48, 0x39,
-    0x06, 0x05, 0xb6, 0x33, 0xcc, 0x07, 0x7d, 0x40,
-    0xf4, 0xbd, 0x4d, 0x7b, 0x58, 0xaf, 0x6c, 0xd4,
-  }};
 
 // Constants defined in the message
 

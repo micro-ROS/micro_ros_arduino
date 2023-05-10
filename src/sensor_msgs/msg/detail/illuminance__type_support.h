@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/Illuminance.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/illuminance.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__ILLUMINANCE__TYPE_SUPPORT_H_
 #define SENSOR_MSGS__MSG__DETAIL__ILLUMINANCE__TYPE_SUPPORT_H_
 

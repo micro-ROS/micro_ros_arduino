@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/TransformStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/transform_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__TRANSFORM_STAMPED__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__TRANSFORM_STAMPED__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__TransformStamped__TYPE_HASH = {1, {
-    0x0a, 0x24, 0x1f, 0x87, 0xd0, 0x46, 0x68, 0xd9,
-    0x40, 0x99, 0xcb, 0xb5, 0xba, 0x11, 0x69, 0x1d,
-    0x5a, 0xd3, 0x2c, 0x2f, 0x29, 0x68, 0x2e, 0x4e,
-    0xb5, 0x65, 0x34, 0x24, 0xbd, 0x27, 0x52, 0x06,
-  }};
 
 // Constants defined in the message
 

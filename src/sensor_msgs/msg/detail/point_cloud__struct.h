@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/PointCloud.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/point_cloud.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__POINT_CLOUD__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__POINT_CLOUD__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__PointCloud__TYPE_HASH = {1, {
-    0x61, 0x45, 0x93, 0xdf, 0x71, 0xd3, 0xc2, 0xb9,
-    0xbd, 0x46, 0x04, 0xa7, 0x1b, 0x75, 0x0f, 0xd2,
-    0x18, 0xf0, 0xd6, 0x5c, 0x04, 0x5e, 0xa9, 0x88,
-    0xb7, 0x13, 0x71, 0x94, 0x55, 0xa6, 0x5b, 0x3b,
-  }};
 
 // Constants defined in the message
 

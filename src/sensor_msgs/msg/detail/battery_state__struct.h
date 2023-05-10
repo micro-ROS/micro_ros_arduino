@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/BatteryState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/battery_state.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__BATTERY_STATE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__BATTERY_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__BatteryState__TYPE_HASH = {1, {
-    0x4b, 0xee, 0x5d, 0xfc, 0xe9, 0x81, 0xc9, 0x8f,
-    0xaa, 0x68, 0x28, 0xb8, 0x68, 0x30, 0x7a, 0x0a,
-    0x73, 0xf9, 0x92, 0xed, 0x07, 0x89, 0xf3, 0x74,
-    0xee, 0x96, 0xc8, 0xf8, 0x40, 0xe6, 0x97, 0x41,
-  }};
 
 // Constants defined in the message
 

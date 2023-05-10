@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/JoyFeedback.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/joy_feedback.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__JOY_FEEDBACK__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__JOY_FEEDBACK__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__JoyFeedback__TYPE_HASH = {1, {
-    0x23, 0x1d, 0xd3, 0x62, 0xf7, 0x1d, 0x6f, 0xc0,
-    0x82, 0x72, 0x77, 0x0d, 0x07, 0x12, 0x0a, 0xd5,
-    0xfe, 0x58, 0x74, 0xce, 0x2d, 0xba, 0xc7, 0x01,
-    0x09, 0xb2, 0x89, 0x86, 0x83, 0x42, 0x90, 0xcd,
-  }};
 
 // Constants defined in the message
 

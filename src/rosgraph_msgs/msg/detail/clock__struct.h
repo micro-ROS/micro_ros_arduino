@@ -2,6 +2,9 @@
 // with input from rosgraph_msgs:msg/Clock.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rosgraph_msgs/msg/clock.h"
+
+
 #ifndef ROSGRAPH_MSGS__MSG__DETAIL__CLOCK__STRUCT_H_
 #define ROSGRAPH_MSGS__MSG__DETAIL__CLOCK__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t rosgraph_msgs__msg__Clock__TYPE_HASH = {1, {
-    0x69, 0x2f, 0x7a, 0x66, 0xe9, 0x3a, 0x3c, 0x83,
-    0xe7, 0x17, 0x65, 0xd0, 0x33, 0xb6, 0x03, 0x49,
-    0xba, 0x68, 0x02, 0x3a, 0x8c, 0x68, 0x9a, 0x79,
-    0xe4, 0x80, 0x78, 0xbc, 0xb5, 0xc5, 0x85, 0x64,
-  }};
 
 // Constants defined in the message
 

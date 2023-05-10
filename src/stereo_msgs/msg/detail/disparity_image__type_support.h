@@ -2,6 +2,9 @@
 // with input from stereo_msgs:msg/DisparityImage.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "stereo_msgs/msg/disparity_image.h"
+
+
 #ifndef STEREO_MSGS__MSG__DETAIL__DISPARITY_IMAGE__TYPE_SUPPORT_H_
 #define STEREO_MSGS__MSG__DETAIL__DISPARITY_IMAGE__TYPE_SUPPORT_H_
 

@@ -2,6 +2,9 @@
 // with input from nav_msgs:srv/LoadMap.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/srv/load_map.h"
+
+
 #ifndef NAV_MSGS__SRV__DETAIL__LOAD_MAP__FUNCTIONS_H_
 #define NAV_MSGS__SRV__DETAIL__LOAD_MAP__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "nav_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "nav_msgs/srv/detail/load_map__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_type_hash_t *
+nav_msgs__srv__LoadMap__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+nav_msgs__srv__LoadMap__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+nav_msgs__srv__LoadMap__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+nav_msgs__srv__LoadMap__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/LoadMap message.
 /**
@@ -92,6 +125,30 @@ bool
 nav_msgs__srv__LoadMap_Request__copy(
   const nav_msgs__srv__LoadMap_Request * input,
   nav_msgs__srv__LoadMap_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_type_hash_t *
+nav_msgs__srv__LoadMap_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+nav_msgs__srv__LoadMap_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+nav_msgs__srv__LoadMap_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+nav_msgs__srv__LoadMap_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/LoadMap messages.
 /**
@@ -245,6 +302,30 @@ nav_msgs__srv__LoadMap_Response__copy(
   const nav_msgs__srv__LoadMap_Response * input,
   nav_msgs__srv__LoadMap_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_type_hash_t *
+nav_msgs__srv__LoadMap_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+nav_msgs__srv__LoadMap_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+nav_msgs__srv__LoadMap_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+nav_msgs__srv__LoadMap_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/LoadMap messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 nav_msgs__srv__LoadMap_Event__copy(
   const nav_msgs__srv__LoadMap_Event * input,
   nav_msgs__srv__LoadMap_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_type_hash_t *
+nav_msgs__srv__LoadMap_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+nav_msgs__srv__LoadMap_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+nav_msgs__srv__LoadMap_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+nav_msgs__srv__LoadMap_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/LoadMap messages.
 /**

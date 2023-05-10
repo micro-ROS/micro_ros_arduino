@@ -2,6 +2,9 @@
 // with input from tf2_msgs:msg/TF2Error.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tf2_msgs/msg/tf2_error.h"
+
+
 #ifndef TF2_MSGS__MSG__DETAIL__TF2_ERROR__STRUCT_H_
 #define TF2_MSGS__MSG__DETAIL__TF2_ERROR__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t tf2_msgs__msg__TF2Error__TYPE_HASH = {1, {
-    0xdb, 0x24, 0x85, 0xe7, 0xd6, 0xa0, 0xec, 0x75,
-    0xbf, 0x08, 0x7e, 0x05, 0x8e, 0xe4, 0x5d, 0xf6,
-    0x82, 0xac, 0xc3, 0xa6, 0x21, 0xca, 0x77, 0x80,
-    0x50, 0x3d, 0x10, 0xaa, 0xc1, 0x41, 0x80, 0x9a,
-  }};
 
 // Constants defined in the message
 

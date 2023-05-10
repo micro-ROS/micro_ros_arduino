@@ -2,6 +2,9 @@
 // with input from example_interfaces:msg/ByteMultiArray.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/msg/byte_multi_array.h"
+
+
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__BYTE_MULTI_ARRAY__STRUCT_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__BYTE_MULTI_ARRAY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t example_interfaces__msg__ByteMultiArray__TYPE_HASH = {1, {
-    0x25, 0x7f, 0xc3, 0x42, 0x9b, 0x3c, 0x4d, 0xd0,
-    0xae, 0xa6, 0x78, 0xc2, 0x34, 0xf5, 0x43, 0x66,
-    0x5d, 0x11, 0x44, 0xb3, 0x96, 0xf8, 0x2c, 0x7e,
-    0xe6, 0x0f, 0xed, 0x15, 0x1e, 0x1d, 0xac, 0xe3,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/DynamicJointState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/dynamic_joint_state.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__DYNAMIC_JOINT_STATE__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__DYNAMIC_JOINT_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__DynamicJointState__TYPE_HASH = {1, {
-    0x18, 0x02, 0x4c, 0x98, 0xa6, 0x26, 0x97, 0x68,
-    0x0f, 0x58, 0x11, 0x08, 0xee, 0xed, 0x40, 0xb2,
-    0x8f, 0xb4, 0x54, 0x2f, 0xa0, 0xac, 0x5a, 0x8e,
-    0x36, 0xf5, 0x6c, 0x62, 0xb6, 0x81, 0x3d, 0x26,
-  }};
 
 // Constants defined in the message
 

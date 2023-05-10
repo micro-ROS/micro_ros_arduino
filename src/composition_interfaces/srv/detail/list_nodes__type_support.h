@@ -2,6 +2,9 @@
 // with input from composition_interfaces:srv/ListNodes.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "composition_interfaces/srv/list_nodes.h"
+
+
 #ifndef COMPOSITION_INTERFACES__SRV__DETAIL__LIST_NODES__TYPE_SUPPORT_H_
 #define COMPOSITION_INTERFACES__SRV__DETAIL__LIST_NODES__TYPE_SUPPORT_H_
 

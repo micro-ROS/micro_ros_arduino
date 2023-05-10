@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:msg/ParameterDescriptor.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/msg/parameter_descriptor.h"
+
+
 #ifndef RCL_INTERFACES__MSG__DETAIL__PARAMETER_DESCRIPTOR__TYPE_SUPPORT_H_
 #define RCL_INTERFACES__MSG__DETAIL__PARAMETER_DESCRIPTOR__TYPE_SUPPORT_H_
 
