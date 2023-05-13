@@ -2,6 +2,9 @@
 // with input from example_interfaces:msg/String.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/msg/string.h"
+
+
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__STRING__STRUCT_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__STRING__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t example_interfaces__msg__String__TYPE_HASH = {1, {
-    0x55, 0x09, 0xd8, 0x66, 0xa5, 0x79, 0x95, 0x1f,
-    0x2f, 0xc6, 0xc1, 0x95, 0x77, 0xc3, 0x26, 0x05,
-    0xba, 0x16, 0xf3, 0x08, 0xca, 0xe7, 0xb4, 0x98,
-    0x34, 0x1d, 0x79, 0x53, 0x6d, 0x4e, 0xb0, 0x6b,
-  }};
 
 // Constants defined in the message
 

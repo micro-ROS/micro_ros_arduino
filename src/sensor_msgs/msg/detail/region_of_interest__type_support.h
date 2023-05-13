@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/RegionOfInterest.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/region_of_interest.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__REGION_OF_INTEREST__TYPE_SUPPORT_H_
 #define SENSOR_MSGS__MSG__DETAIL__REGION_OF_INTEREST__TYPE_SUPPORT_H_
 

@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/MultiArrayLayout.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/multi_array_layout.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__MULTI_ARRAY_LAYOUT__TYPE_SUPPORT_H_
 #define STD_MSGS__MSG__DETAIL__MULTI_ARRAY_LAYOUT__TYPE_SUPPORT_H_
 

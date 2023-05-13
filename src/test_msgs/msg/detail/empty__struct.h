@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/Empty.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/empty.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__EMPTY__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__EMPTY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t test_msgs__msg__Empty__TYPE_HASH = {1, {
-    0x65, 0x87, 0xce, 0xac, 0xfd, 0xb9, 0x7a, 0x89,
-    0x5b, 0x60, 0x77, 0x4d, 0x02, 0x10, 0x11, 0xc6,
-    0x4f, 0x8c, 0x72, 0x99, 0xf5, 0x33, 0x22, 0x40,
-    0x4a, 0xf4, 0x03, 0x6d, 0xec, 0x61, 0x42, 0xdc,
-  }};
 
 // Constants defined in the message
 

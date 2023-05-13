@@ -2,6 +2,9 @@
 // with input from visualization_msgs:msg/MenuEntry.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "visualization_msgs/msg/menu_entry.h"
+
+
 #ifndef VISUALIZATION_MSGS__MSG__DETAIL__MENU_ENTRY__STRUCT_H_
 #define VISUALIZATION_MSGS__MSG__DETAIL__MENU_ENTRY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t visualization_msgs__msg__MenuEntry__TYPE_HASH = {1, {
-    0x22, 0x17, 0x0c, 0x38, 0x7c, 0x70, 0xfd, 0x42,
-    0x36, 0x23, 0x2e, 0xc9, 0x02, 0xde, 0x86, 0x04,
-    0xe7, 0x2f, 0xf0, 0x27, 0x34, 0x2c, 0x7c, 0x0f,
-    0x28, 0xad, 0x9f, 0x68, 0xc6, 0x4c, 0x51, 0xd6,
-  }};
 
 // Constants defined in the message
 

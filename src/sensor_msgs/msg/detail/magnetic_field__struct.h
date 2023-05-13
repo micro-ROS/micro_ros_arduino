@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/MagneticField.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/magnetic_field.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__MAGNETIC_FIELD__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__MAGNETIC_FIELD__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__MagneticField__TYPE_HASH = {1, {
-    0xe8, 0x0f, 0x32, 0xf5, 0x6a, 0x20, 0x48, 0x6c,
-    0x99, 0x23, 0x00, 0x8f, 0xc1, 0xa1, 0xdb, 0x07,
-    0xbb, 0xb2, 0x73, 0xcb, 0xbf, 0x6a, 0x5b, 0x3b,
-    0xfa, 0x00, 0x83, 0x5e, 0xe0, 0x0e, 0x4d, 0xff,
-  }};
 
 // Constants defined in the message
 

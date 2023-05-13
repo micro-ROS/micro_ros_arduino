@@ -2,6 +2,9 @@
 // with input from action_msgs:msg/GoalInfo.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "action_msgs/msg/goal_info.h"
+
+
 #ifndef ACTION_MSGS__MSG__DETAIL__GOAL_INFO__STRUCT_H_
 #define ACTION_MSGS__MSG__DETAIL__GOAL_INFO__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t action_msgs__msg__GoalInfo__TYPE_HASH = {1, {
-    0x63, 0x98, 0xfe, 0x76, 0x31, 0x54, 0x55, 0x43,
-    0x53, 0x93, 0x07, 0x16, 0xb2, 0x25, 0x94, 0x7f,
-    0x93, 0xb6, 0x72, 0xf0, 0xfb, 0x2e, 0x49, 0xfd,
-    0xd0, 0x1b, 0xb7, 0xa7, 0xe3, 0x79, 0x33, 0xe9,
-  }};
 
 // Constants defined in the message
 

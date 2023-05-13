@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/UInt32MultiArray.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/u_int32_multi_array.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__U_INT32_MULTI_ARRAY__TYPE_SUPPORT_H_
 #define STD_MSGS__MSG__DETAIL__U_INT32_MULTI_ARRAY__TYPE_SUPPORT_H_
 

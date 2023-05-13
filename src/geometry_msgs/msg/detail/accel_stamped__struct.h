@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/AccelStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/accel_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__ACCEL_STAMPED__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__ACCEL_STAMPED__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__AccelStamped__TYPE_HASH = {1, {
-    0xef, 0x1d, 0xf9, 0xea, 0xba, 0xe0, 0xa7, 0x08,
-    0xcc, 0x04, 0x9a, 0x06, 0x1e, 0xbc, 0xdd, 0xc4,
-    0xe2, 0xa5, 0xf7, 0x45, 0x73, 0x01, 0x00, 0xba,
-    0x68, 0x0e, 0x08, 0x6a, 0x96, 0x98, 0xb1, 0x65,
-  }};
 
 // Constants defined in the message
 

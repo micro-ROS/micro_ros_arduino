@@ -2,6 +2,9 @@
 // with input from shape_msgs:msg/Mesh.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "shape_msgs/msg/mesh.h"
+
+
 #ifndef SHAPE_MSGS__MSG__DETAIL__MESH__STRUCT_H_
 #define SHAPE_MSGS__MSG__DETAIL__MESH__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t shape_msgs__msg__Mesh__TYPE_HASH = {1, {
-    0xf2, 0x15, 0x0b, 0x82, 0xd8, 0xee, 0x7e, 0x8b,
-    0xc3, 0xf3, 0x96, 0xa2, 0xb1, 0x58, 0xae, 0xfb,
-    0x4b, 0x9a, 0x55, 0x10, 0xa4, 0x74, 0xbe, 0x27,
-    0x1b, 0xa1, 0x26, 0x8a, 0xeb, 0xb5, 0x52, 0x89,
-  }};
 
 // Constants defined in the message
 

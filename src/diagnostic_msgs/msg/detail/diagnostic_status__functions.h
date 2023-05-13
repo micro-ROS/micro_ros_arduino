@@ -2,6 +2,9 @@
 // with input from diagnostic_msgs:msg/DiagnosticStatus.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "diagnostic_msgs/msg/diagnostic_status.h"
+
+
 #ifndef DIAGNOSTIC_MSGS__MSG__DETAIL__DIAGNOSTIC_STATUS__FUNCTIONS_H_
 #define DIAGNOSTIC_MSGS__MSG__DETAIL__DIAGNOSTIC_STATUS__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "diagnostic_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -92,6 +101,30 @@ bool
 diagnostic_msgs__msg__DiagnosticStatus__copy(
   const diagnostic_msgs__msg__DiagnosticStatus * input,
   diagnostic_msgs__msg__DiagnosticStatus * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+const rosidl_type_hash_t *
+diagnostic_msgs__msg__DiagnosticStatus__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+diagnostic_msgs__msg__DiagnosticStatus__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+diagnostic_msgs__msg__DiagnosticStatus__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+diagnostic_msgs__msg__DiagnosticStatus__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/DiagnosticStatus messages.
 /**

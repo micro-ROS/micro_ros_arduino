@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/RegionOfInterest.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/region_of_interest.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__REGION_OF_INTEREST__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__REGION_OF_INTEREST__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__RegionOfInterest__TYPE_HASH = {1, {
-    0xad, 0x16, 0xbc, 0xba, 0x5f, 0x91, 0x31, 0xdc,
-    0xdb, 0xa6, 0xfb, 0xde, 0xd1, 0x9f, 0x72, 0x6f,
-    0x54, 0x40, 0xe3, 0xc5, 0x13, 0xb4, 0xfb, 0x58,
-    0x6d, 0xd3, 0x02, 0x7e, 0xee, 0xd8, 0xab, 0xb1,
-  }};
 
 // Constants defined in the message
 

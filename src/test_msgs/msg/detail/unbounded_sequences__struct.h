@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/UnboundedSequences.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/unbounded_sequences.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__UNBOUNDED_SEQUENCES__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__UNBOUNDED_SEQUENCES__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t test_msgs__msg__UnboundedSequences__TYPE_HASH = {1, {
-    0xa6, 0x39, 0x75, 0x51, 0x42, 0x93, 0xa2, 0xc6,
-    0xb2, 0x4a, 0x80, 0x76, 0x75, 0xbc, 0xbd, 0x91,
-    0x80, 0xbd, 0xa1, 0x99, 0x5d, 0xd4, 0xee, 0x10,
-    0xf2, 0x69, 0x8d, 0x45, 0xff, 0x77, 0xdb, 0x05,
-  }};
 
 // Constants defined in the message
 

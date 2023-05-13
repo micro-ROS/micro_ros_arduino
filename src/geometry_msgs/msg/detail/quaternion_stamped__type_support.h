@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/QuaternionStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/quaternion_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__QUATERNION_STAMPED__TYPE_SUPPORT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__QUATERNION_STAMPED__TYPE_SUPPORT_H_
 

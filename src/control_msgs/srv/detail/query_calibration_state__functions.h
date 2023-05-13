@@ -2,6 +2,9 @@
 // with input from control_msgs:srv/QueryCalibrationState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/srv/query_calibration_state.h"
+
+
 #ifndef CONTROL_MSGS__SRV__DETAIL__QUERY_CALIBRATION_STATE__FUNCTIONS_H_
 #define CONTROL_MSGS__SRV__DETAIL__QUERY_CALIBRATION_STATE__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "control_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "control_msgs/srv/detail/query_calibration_state__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__srv__QueryCalibrationState__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__srv__QueryCalibrationState__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__srv__QueryCalibrationState__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__srv__QueryCalibrationState__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/QueryCalibrationState message.
 /**
@@ -92,6 +125,30 @@ bool
 control_msgs__srv__QueryCalibrationState_Request__copy(
   const control_msgs__srv__QueryCalibrationState_Request * input,
   control_msgs__srv__QueryCalibrationState_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__srv__QueryCalibrationState_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__srv__QueryCalibrationState_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__srv__QueryCalibrationState_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__srv__QueryCalibrationState_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/QueryCalibrationState messages.
 /**
@@ -245,6 +302,30 @@ control_msgs__srv__QueryCalibrationState_Response__copy(
   const control_msgs__srv__QueryCalibrationState_Response * input,
   control_msgs__srv__QueryCalibrationState_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__srv__QueryCalibrationState_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__srv__QueryCalibrationState_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__srv__QueryCalibrationState_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__srv__QueryCalibrationState_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/QueryCalibrationState messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 control_msgs__srv__QueryCalibrationState_Event__copy(
   const control_msgs__srv__QueryCalibrationState_Event * input,
   control_msgs__srv__QueryCalibrationState_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_type_hash_t *
+control_msgs__srv__QueryCalibrationState_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+control_msgs__srv__QueryCalibrationState_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+control_msgs__srv__QueryCalibrationState_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_control_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+control_msgs__srv__QueryCalibrationState_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/QueryCalibrationState messages.
 /**

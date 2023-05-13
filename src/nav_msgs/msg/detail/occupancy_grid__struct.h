@@ -2,6 +2,9 @@
 // with input from nav_msgs:msg/OccupancyGrid.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/msg/occupancy_grid.h"
+
+
 #ifndef NAV_MSGS__MSG__DETAIL__OCCUPANCY_GRID__STRUCT_H_
 #define NAV_MSGS__MSG__DETAIL__OCCUPANCY_GRID__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t nav_msgs__msg__OccupancyGrid__TYPE_HASH = {1, {
-    0x8d, 0x34, 0x81, 0x50, 0xc1, 0x29, 0x13, 0xa3,
-    0x1e, 0xe0, 0xec, 0x17, 0x0f, 0xbf, 0x25, 0x08,
-    0x9e, 0x47, 0x45, 0xd1, 0x70, 0x35, 0x79, 0x2a,
-    0x1b, 0xa9, 0x4d, 0x6f, 0x0b, 0xc0, 0xcf, 0xc7,
-  }};
 
 // Constants defined in the message
 

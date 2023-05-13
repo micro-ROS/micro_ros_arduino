@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/JointTrajectoryControllerState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/joint_trajectory_controller_state.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__JOINT_TRAJECTORY_CONTROLLER_STATE__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__JOINT_TRAJECTORY_CONTROLLER_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__JointTrajectoryControllerState__TYPE_HASH = {1, {
-    0xa1, 0xe5, 0xc4, 0xdd, 0x48, 0xaa, 0x18, 0x1a,
-    0x25, 0x2b, 0x09, 0xc6, 0xe9, 0x8b, 0x93, 0x4c,
-    0xec, 0xcf, 0xc8, 0xd2, 0xc2, 0xe8, 0xb8, 0xea,
-    0x7c, 0xa4, 0x6a, 0x6d, 0x7f, 0x65, 0x8b, 0x5f,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/GripperCommand.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/gripper_command.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__GRIPPER_COMMAND__TYPE_SUPPORT_H_
 #define CONTROL_MSGS__MSG__DETAIL__GRIPPER_COMMAND__TYPE_SUPPORT_H_
 

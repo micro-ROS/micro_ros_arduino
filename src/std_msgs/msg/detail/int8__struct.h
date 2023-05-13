@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/Int8.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/int8.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__INT8__STRUCT_H_
 #define STD_MSGS__MSG__DETAIL__INT8__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t std_msgs__msg__Int8__TYPE_HASH = {1, {
-    0x26, 0x52, 0x50, 0x65, 0xa4, 0x03, 0xd9, 0x72,
-    0xcb, 0x67, 0x2f, 0x07, 0x77, 0xe3, 0x33, 0xf0,
-    0xc7, 0x99, 0xad, 0x44, 0x4a, 0xe5, 0xfc, 0xd7,
-    0x9e, 0x43, 0xd1, 0xe7, 0x3b, 0xd0, 0xf4, 0x40,
-  }};
 
 // Constants defined in the message
 

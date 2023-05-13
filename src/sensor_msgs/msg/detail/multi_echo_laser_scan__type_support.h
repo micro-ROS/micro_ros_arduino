@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/MultiEchoLaserScan.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/multi_echo_laser_scan.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__MULTI_ECHO_LASER_SCAN__TYPE_SUPPORT_H_
 #define SENSOR_MSGS__MSG__DETAIL__MULTI_ECHO_LASER_SCAN__TYPE_SUPPORT_H_
 

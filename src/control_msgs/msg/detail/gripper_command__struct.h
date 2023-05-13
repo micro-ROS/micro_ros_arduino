@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/GripperCommand.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/gripper_command.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__GRIPPER_COMMAND__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__GRIPPER_COMMAND__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__GripperCommand__TYPE_HASH = {1, {
-    0x57, 0xeb, 0x8f, 0x32, 0x6c, 0x98, 0x89, 0xca,
-    0x8b, 0xb3, 0x4e, 0xad, 0x82, 0xcc, 0x94, 0xcc,
-    0x09, 0xbf, 0x6b, 0xc5, 0xc3, 0xb6, 0xc0, 0x95,
-    0x46, 0xdc, 0xa3, 0xa0, 0x0b, 0x58, 0x98, 0x90,
-  }};
 
 // Constants defined in the message
 

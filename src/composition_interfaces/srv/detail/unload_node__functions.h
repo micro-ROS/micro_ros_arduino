@@ -2,6 +2,9 @@
 // with input from composition_interfaces:srv/UnloadNode.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "composition_interfaces/srv/unload_node.h"
+
+
 #ifndef COMPOSITION_INTERFACES__SRV__DETAIL__UNLOAD_NODE__FUNCTIONS_H_
 #define COMPOSITION_INTERFACES__SRV__DETAIL__UNLOAD_NODE__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "composition_interfaces/msg/rosidl_generator_c__visibility_control.h"
 
 #include "composition_interfaces/srv/detail/unload_node__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_type_hash_t *
+composition_interfaces__srv__UnloadNode__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+composition_interfaces__srv__UnloadNode__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+composition_interfaces__srv__UnloadNode__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+composition_interfaces__srv__UnloadNode__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/UnloadNode message.
 /**
@@ -92,6 +125,30 @@ bool
 composition_interfaces__srv__UnloadNode_Request__copy(
   const composition_interfaces__srv__UnloadNode_Request * input,
   composition_interfaces__srv__UnloadNode_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_type_hash_t *
+composition_interfaces__srv__UnloadNode_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+composition_interfaces__srv__UnloadNode_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+composition_interfaces__srv__UnloadNode_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+composition_interfaces__srv__UnloadNode_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/UnloadNode messages.
 /**
@@ -245,6 +302,30 @@ composition_interfaces__srv__UnloadNode_Response__copy(
   const composition_interfaces__srv__UnloadNode_Response * input,
   composition_interfaces__srv__UnloadNode_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_type_hash_t *
+composition_interfaces__srv__UnloadNode_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+composition_interfaces__srv__UnloadNode_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+composition_interfaces__srv__UnloadNode_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+composition_interfaces__srv__UnloadNode_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/UnloadNode messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 composition_interfaces__srv__UnloadNode_Event__copy(
   const composition_interfaces__srv__UnloadNode_Event * input,
   composition_interfaces__srv__UnloadNode_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_type_hash_t *
+composition_interfaces__srv__UnloadNode_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+composition_interfaces__srv__UnloadNode_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+composition_interfaces__srv__UnloadNode_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+composition_interfaces__srv__UnloadNode_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/UnloadNode messages.
 /**

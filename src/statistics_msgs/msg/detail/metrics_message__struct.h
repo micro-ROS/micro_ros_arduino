@@ -2,6 +2,9 @@
 // with input from statistics_msgs:msg/MetricsMessage.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "statistics_msgs/msg/metrics_message.h"
+
+
 #ifndef STATISTICS_MSGS__MSG__DETAIL__METRICS_MESSAGE__STRUCT_H_
 #define STATISTICS_MSGS__MSG__DETAIL__METRICS_MESSAGE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t statistics_msgs__msg__MetricsMessage__TYPE_HASH = {1, {
-    0x36, 0xa6, 0x7f, 0xb4, 0x99, 0xfc, 0x2a, 0x11,
-    0xb8, 0xb9, 0xff, 0x9a, 0xc7, 0x35, 0xed, 0x76,
-    0xe8, 0xd5, 0xa1, 0xf7, 0x77, 0x5d, 0x6d, 0x5b,
-    0x97, 0xb6, 0x25, 0x18, 0x8e, 0xc6, 0x8e, 0x20,
-  }};
 
 // Constants defined in the message
 

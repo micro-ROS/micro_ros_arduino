@@ -2,6 +2,9 @@
 // with input from shape_msgs:msg/SolidPrimitive.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "shape_msgs/msg/solid_primitive.h"
+
+
 #ifndef SHAPE_MSGS__MSG__DETAIL__SOLID_PRIMITIVE__STRUCT_H_
 #define SHAPE_MSGS__MSG__DETAIL__SOLID_PRIMITIVE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t shape_msgs__msg__SolidPrimitive__TYPE_HASH = {1, {
-    0x28, 0x02, 0xa1, 0x51, 0x90, 0xaa, 0xdc, 0x3f,
-    0x49, 0x65, 0x84, 0xdf, 0x4b, 0x0b, 0x4c, 0x58,
-    0x24, 0xd8, 0xa0, 0xb3, 0x1a, 0xae, 0xf8, 0x39,
-    0xfa, 0xa7, 0x5b, 0xc3, 0x4d, 0xda, 0x38, 0xac,
-  }};
 
 // Constants defined in the message
 

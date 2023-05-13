@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/RelativeHumidity.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/relative_humidity.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__RELATIVE_HUMIDITY__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__RELATIVE_HUMIDITY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__RelativeHumidity__TYPE_HASH = {1, {
-    0x86, 0x87, 0xc9, 0x9b, 0x4f, 0xb3, 0x93, 0xcb,
-    0x2e, 0x54, 0x5e, 0x40, 0x7b, 0x5e, 0xa7, 0xfd,
-    0x0b, 0x5d, 0x89, 0x60, 0xbc, 0xd8, 0x49, 0xa0,
-    0xf8, 0x6c, 0x54, 0x47, 0x40, 0x13, 0x88, 0x39,
-  }};
 
 // Constants defined in the message
 

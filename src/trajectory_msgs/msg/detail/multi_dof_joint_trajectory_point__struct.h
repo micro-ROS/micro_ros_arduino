@@ -2,6 +2,9 @@
 // with input from trajectory_msgs:msg/MultiDOFJointTrajectoryPoint.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "trajectory_msgs/msg/multi_dof_joint_trajectory_point.h"
+
+
 #ifndef TRAJECTORY_MSGS__MSG__DETAIL__MULTI_DOF_JOINT_TRAJECTORY_POINT__STRUCT_H_
 #define TRAJECTORY_MSGS__MSG__DETAIL__MULTI_DOF_JOINT_TRAJECTORY_POINT__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__TYPE_HASH = {1, {
-    0x6a, 0xda, 0x10, 0x85, 0xb5, 0xee, 0x64, 0xea,
-    0xa0, 0x69, 0xb0, 0x74, 0x96, 0x8e, 0x69, 0xf0,
-    0xe2, 0x7c, 0x8c, 0x5e, 0x6f, 0x5b, 0xb0, 0x58,
-    0x6d, 0xd1, 0xc8, 0x34, 0xef, 0x0e, 0x32, 0xb8,
-  }};
 
 // Constants defined in the message
 

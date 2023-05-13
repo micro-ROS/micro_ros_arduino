@@ -2,6 +2,9 @@
 // with input from service_msgs:msg/ServiceEventInfo.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "service_msgs/msg/service_event_info.h"
+
+
 #ifndef SERVICE_MSGS__MSG__DETAIL__SERVICE_EVENT_INFO__STRUCT_H_
 #define SERVICE_MSGS__MSG__DETAIL__SERVICE_EVENT_INFO__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t service_msgs__msg__ServiceEventInfo__TYPE_HASH = {1, {
-    0x41, 0xbc, 0xbb, 0xe0, 0x7a, 0x75, 0xc9, 0xb5,
-    0x2b, 0xc9, 0x6b, 0xfd, 0x5c, 0x24, 0xd7, 0xf0,
-    0xfc, 0x0a, 0x08, 0xc0, 0xcb, 0x79, 0x21, 0xb3,
-    0x37, 0x3c, 0x57, 0x32, 0x34, 0x5a, 0x6f, 0x45,
-  }};
 
 // Constants defined in the message
 

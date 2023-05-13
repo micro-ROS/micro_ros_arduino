@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/PoseArray.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/pose_array.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POSE_ARRAY__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POSE_ARRAY__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__PoseArray__TYPE_HASH = {1, {
-    0xaf, 0x0c, 0xc3, 0x6d, 0x19, 0x0e, 0x10, 0x4d,
-    0x54, 0x6d, 0x16, 0x8d, 0x6b, 0x39, 0xdf, 0x04,
-    0xfa, 0x4b, 0x4c, 0xce, 0xcf, 0x59, 0xcb, 0x4c,
-    0x9e, 0xd3, 0x28, 0xd3, 0xd5, 0x00, 0x4a, 0xa0,
-  }};
 
 // Constants defined in the message
 

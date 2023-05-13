@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/MultiEchoLaserScan.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/multi_echo_laser_scan.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__MULTI_ECHO_LASER_SCAN__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__MULTI_ECHO_LASER_SCAN__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__MultiEchoLaserScan__TYPE_HASH = {1, {
-    0xba, 0x5e, 0xac, 0x34, 0x1c, 0xd5, 0xbb, 0xb2,
-    0x70, 0x15, 0x27, 0xaa, 0x45, 0x68, 0xe8, 0xba,
-    0xec, 0x17, 0x2b, 0x69, 0xca, 0xdb, 0x9a, 0x19,
-    0x45, 0xd6, 0xf1, 0x49, 0xd0, 0x87, 0xee, 0x48,
-  }};
 
 // Constants defined in the message
 

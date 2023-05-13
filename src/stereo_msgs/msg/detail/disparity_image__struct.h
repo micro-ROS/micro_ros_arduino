@@ -2,6 +2,9 @@
 // with input from stereo_msgs:msg/DisparityImage.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "stereo_msgs/msg/disparity_image.h"
+
+
 #ifndef STEREO_MSGS__MSG__DETAIL__DISPARITY_IMAGE__STRUCT_H_
 #define STEREO_MSGS__MSG__DETAIL__DISPARITY_IMAGE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t stereo_msgs__msg__DisparityImage__TYPE_HASH = {1, {
-    0x1e, 0xc1, 0xff, 0x6b, 0x5b, 0xac, 0xe9, 0x19,
-    0xe4, 0x54, 0x4a, 0x37, 0xf2, 0xd9, 0x6e, 0xad,
-    0x9f, 0x81, 0x78, 0x37, 0x01, 0xb7, 0xb7, 0xa4,
-    0xd9, 0x7a, 0x09, 0x32, 0x5e, 0xcf, 0x27, 0x11,
-  }};
 
 // Constants defined in the message
 

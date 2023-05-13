@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/Arrays.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/arrays.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__ARRAYS__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__ARRAYS__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t test_msgs__msg__Arrays__TYPE_HASH = {1, {
-    0x8a, 0x32, 0x1b, 0x80, 0xda, 0xe8, 0xc4, 0x4d,
-    0xfd, 0x1c, 0xe5, 0x58, 0xea, 0xf1, 0xb1, 0xcd,
-    0x5e, 0xbb, 0xe5, 0x95, 0x08, 0x63, 0xed, 0x67,
-    0x58, 0x36, 0x53, 0x55, 0x11, 0xa7, 0xf9, 0x1a,
-  }};
 
 // Constants defined in the message
 

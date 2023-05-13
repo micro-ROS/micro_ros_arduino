@@ -2,6 +2,9 @@
 // with input from example_interfaces:msg/Int64MultiArray.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/msg/int64_multi_array.h"
+
+
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__INT64_MULTI_ARRAY__TYPE_SUPPORT_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__INT64_MULTI_ARRAY__TYPE_SUPPORT_H_
 

@@ -2,6 +2,9 @@
 // with input from type_description_interfaces:msg/KeyValue.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "type_description_interfaces/msg/key_value.h"
+
+
 #ifndef TYPE_DESCRIPTION_INTERFACES__MSG__DETAIL__KEY_VALUE__STRUCT_H_
 #define TYPE_DESCRIPTION_INTERFACES__MSG__DETAIL__KEY_VALUE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t type_description_interfaces__msg__KeyValue__TYPE_HASH = {1, {
-    0x27, 0x4f, 0xe5, 0x6b, 0xf1, 0x4f, 0x33, 0xc7,
-    0x51, 0x2e, 0x34, 0xc6, 0x46, 0xa3, 0x75, 0x79,
-    0xee, 0x36, 0x77, 0x9f, 0x74, 0x5f, 0x04, 0x9a,
-    0x97, 0x60, 0x76, 0x3e, 0x81, 0x7f, 0x0c, 0x42,
-  }};
 
 // Constants defined in the message
 

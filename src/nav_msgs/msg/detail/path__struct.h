@@ -2,6 +2,9 @@
 // with input from nav_msgs:msg/Path.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/msg/path.h"
+
+
 #ifndef NAV_MSGS__MSG__DETAIL__PATH__STRUCT_H_
 #define NAV_MSGS__MSG__DETAIL__PATH__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t nav_msgs__msg__Path__TYPE_HASH = {1, {
-    0x19, 0x57, 0xa5, 0xbb, 0x3c, 0xee, 0x5d, 0xa6,
-    0x5c, 0x4e, 0x52, 0xe5, 0x2b, 0x65, 0xa9, 0x3d,
-    0xf2, 0x27, 0xef, 0xce, 0x4c, 0x20, 0xf8, 0x45,
-    0x8b, 0x36, 0xe7, 0x30, 0x66, 0xca, 0x33, 0x4b,
-  }};
 
 // Constants defined in the message
 

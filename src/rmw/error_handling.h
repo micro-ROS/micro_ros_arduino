@@ -175,6 +175,29 @@ typedef rcutils_error_state_t rmw_error_state_t;
 /// Reset the error state by clearing any previously set error state.
 #define rmw_reset_error rcutils_reset_error
 
+/// Set the error message using RCUTILS_SET_ERROR_MSG and append the previous error.
+/**
+ * If there is no previous error, has same behavior as RCUTILS_SET_ERROR_MSG.
+ * \param[in] msg The error message to be set.
+ */
+#define RMW_SET_ERROR_MSG_AND_APPEND_PREV_ERROR(msg) \
+  RCUTILS_SET_ERROR_MSG_AND_APPEND_PREV_ERROR(msg)
+
+/// Set the error message with RCUTILS_SET_ERROR_MSG_WITH_FORMAT_STRING and append the previous
+/// error.
+/**
+ * This function sets the error message using the given format string, and appends and resets the
+ * latest error string.
+ * The resulting formatted string is silently truncated at RCUTILS_ERROR_MESSAGE_MAX_LENGTH.
+ *
+ * If there is no previous error, has same behavior as RCUTILS_SET_ERROR_MSG_WITH_FORMAT_STRING.
+ *
+ * \param[in] format_string The string to be used as the format of the error message.
+ * \param[in] ... Arguments for the format string.
+ */
+#define RMW_SET_ERROR_MSG_WITH_FORMAT_STRING_AND_APPEND_PREV_ERROR(format_string, ...) \
+  RCUTILS_SET_ERROR_MSG_WITH_FORMAT_STRING_AND_APPEND_PREV_ERROR(format_string, __VA_ARGS__)
+
 #ifdef __cplusplus
 }
 #endif

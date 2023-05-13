@@ -2,6 +2,9 @@
 // with input from shape_msgs:msg/MeshTriangle.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "shape_msgs/msg/mesh_triangle.h"
+
+
 #ifndef SHAPE_MSGS__MSG__DETAIL__MESH_TRIANGLE__STRUCT_H_
 #define SHAPE_MSGS__MSG__DETAIL__MESH_TRIANGLE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t shape_msgs__msg__MeshTriangle__TYPE_HASH = {1, {
-    0x61, 0x8e, 0x5c, 0x07, 0x3e, 0xeb, 0x72, 0x9e,
-    0x43, 0x3e, 0xf6, 0x22, 0x6e, 0x72, 0xc0, 0x1d,
-    0x99, 0x5c, 0x45, 0x9f, 0xb7, 0xd7, 0x63, 0x48,
-    0xc9, 0x70, 0x04, 0x09, 0xa5, 0x02, 0x0b, 0xd0,
-  }};
 
 // Constants defined in the message
 

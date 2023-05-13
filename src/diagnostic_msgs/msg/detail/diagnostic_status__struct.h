@@ -2,6 +2,9 @@
 // with input from diagnostic_msgs:msg/DiagnosticStatus.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "diagnostic_msgs/msg/diagnostic_status.h"
+
+
 #ifndef DIAGNOSTIC_MSGS__MSG__DETAIL__DIAGNOSTIC_STATUS__STRUCT_H_
 #define DIAGNOSTIC_MSGS__MSG__DETAIL__DIAGNOSTIC_STATUS__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t diagnostic_msgs__msg__DiagnosticStatus__TYPE_HASH = {1, {
-    0xb0, 0xe3, 0xe6, 0x92, 0xea, 0x2d, 0x54, 0xa8,
-    0xaf, 0x2f, 0x4e, 0xf1, 0x93, 0x0e, 0x81, 0x55,
-    0x6a, 0x2d, 0xb5, 0x52, 0x16, 0xb7, 0x71, 0xf8,
-    0xa7, 0xd2, 0x72, 0x4e, 0xd4, 0x7b, 0xf0, 0xe4,
-  }};
 
 // Constants defined in the message
 

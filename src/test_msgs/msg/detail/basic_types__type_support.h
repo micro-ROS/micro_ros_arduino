@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/BasicTypes.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/basic_types.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__BASIC_TYPES__TYPE_SUPPORT_H_
 #define TEST_MSGS__MSG__DETAIL__BASIC_TYPES__TYPE_SUPPORT_H_
 

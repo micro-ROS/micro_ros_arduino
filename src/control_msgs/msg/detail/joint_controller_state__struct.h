@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/JointControllerState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/joint_controller_state.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__JOINT_CONTROLLER_STATE__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__JOINT_CONTROLLER_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__JointControllerState__TYPE_HASH = {1, {
-    0x1f, 0x6e, 0xe6, 0x4b, 0x3b, 0x1f, 0x19, 0x47,
-    0x95, 0x1f, 0x34, 0x69, 0x4f, 0x8e, 0x19, 0xa1,
-    0x0e, 0xa3, 0x2f, 0x34, 0xfe, 0x35, 0x52, 0xdf,
-    0x26, 0x51, 0x4f, 0x8b, 0x30, 0x97, 0x6e, 0x90,
-  }};
 
 // Constants defined in the message
 

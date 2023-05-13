@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:srv/GetParameters.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/srv/get_parameters.h"
+
+
 #ifndef RCL_INTERFACES__SRV__DETAIL__GET_PARAMETERS__FUNCTIONS_H_
 #define RCL_INTERFACES__SRV__DETAIL__GET_PARAMETERS__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "rcl_interfaces/msg/rosidl_generator_c__visibility_control.h"
 
 #include "rcl_interfaces/srv/detail/get_parameters__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_type_hash_t *
+rcl_interfaces__srv__GetParameters__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+rcl_interfaces__srv__GetParameters__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+rcl_interfaces__srv__GetParameters__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+rcl_interfaces__srv__GetParameters__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/GetParameters message.
 /**
@@ -92,6 +125,30 @@ bool
 rcl_interfaces__srv__GetParameters_Request__copy(
   const rcl_interfaces__srv__GetParameters_Request * input,
   rcl_interfaces__srv__GetParameters_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_type_hash_t *
+rcl_interfaces__srv__GetParameters_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+rcl_interfaces__srv__GetParameters_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+rcl_interfaces__srv__GetParameters_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+rcl_interfaces__srv__GetParameters_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/GetParameters messages.
 /**
@@ -245,6 +302,30 @@ rcl_interfaces__srv__GetParameters_Response__copy(
   const rcl_interfaces__srv__GetParameters_Response * input,
   rcl_interfaces__srv__GetParameters_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_type_hash_t *
+rcl_interfaces__srv__GetParameters_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+rcl_interfaces__srv__GetParameters_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+rcl_interfaces__srv__GetParameters_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+rcl_interfaces__srv__GetParameters_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/GetParameters messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 rcl_interfaces__srv__GetParameters_Event__copy(
   const rcl_interfaces__srv__GetParameters_Event * input,
   rcl_interfaces__srv__GetParameters_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_type_hash_t *
+rcl_interfaces__srv__GetParameters_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+rcl_interfaces__srv__GetParameters_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+rcl_interfaces__srv__GetParameters_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+rcl_interfaces__srv__GetParameters_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/GetParameters messages.
 /**

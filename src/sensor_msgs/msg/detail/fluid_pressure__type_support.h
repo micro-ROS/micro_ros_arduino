@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/FluidPressure.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/fluid_pressure.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__FLUID_PRESSURE__TYPE_SUPPORT_H_
 #define SENSOR_MSGS__MSG__DETAIL__FLUID_PRESSURE__TYPE_SUPPORT_H_
 

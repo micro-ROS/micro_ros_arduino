@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/BoundedPlainSequences.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/bounded_plain_sequences.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__BOUNDED_PLAIN_SEQUENCES__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__BOUNDED_PLAIN_SEQUENCES__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t test_msgs__msg__BoundedPlainSequences__TYPE_HASH = {1, {
-    0x06, 0x70, 0xc0, 0x10, 0xd3, 0x3c, 0x1d, 0xb2,
-    0xc5, 0x58, 0x9a, 0xb5, 0xbb, 0xd2, 0x08, 0xc5,
-    0x51, 0xb5, 0xc7, 0x2c, 0x88, 0xa7, 0x6d, 0xe8,
-    0x0d, 0xfd, 0x0d, 0x23, 0x62, 0x25, 0x58, 0x89,
-  }};
 
 // Constants defined in the message
 
