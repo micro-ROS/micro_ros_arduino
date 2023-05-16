@@ -428,7 +428,7 @@ rmw_destroy_publisher(rmw_node_t * node, rmw_publisher_t * publisher);
  * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if `publisher` implementation identifier
  *   does not match this implementation, or
  * \return `RMW_RET_UNSUPPORTED` if the implementation does not support ROS message loaning, or
- * \return `RMW_RET_ERROR` if an unexpected error occured.
+ * \return `RMW_RET_ERROR` if an unexpected error occurred.
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
