@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/CompressedImage.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/compressed_image.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__COMPRESSED_IMAGE__TYPE_SUPPORT_H_
 #define SENSOR_MSGS__MSG__DETAIL__COMPRESSED_IMAGE__TYPE_SUPPORT_H_
 

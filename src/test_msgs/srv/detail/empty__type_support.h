@@ -2,6 +2,9 @@
 // with input from test_msgs:srv/Empty.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/srv/empty.h"
+
+
 #ifndef TEST_MSGS__SRV__DETAIL__EMPTY__TYPE_SUPPORT_H_
 #define TEST_MSGS__SRV__DETAIL__EMPTY__TYPE_SUPPORT_H_
 

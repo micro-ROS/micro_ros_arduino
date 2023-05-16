@@ -2,6 +2,9 @@
 // with input from micro_ros_msgs:msg/Node.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "micro_ros_msgs/msg/node.h"
+
+
 #ifndef MICRO_ROS_MSGS__MSG__DETAIL__NODE__STRUCT_H_
 #define MICRO_ROS_MSGS__MSG__DETAIL__NODE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t micro_ros_msgs__msg__Node__TYPE_HASH = {1, {
-    0xb1, 0x4c, 0xdb, 0xce, 0x7f, 0x1a, 0x1f, 0xe7,
-    0xfa, 0x56, 0x1a, 0x53, 0x16, 0xdd, 0x45, 0x44,
-    0x5d, 0x7a, 0x76, 0xc3, 0x99, 0x8b, 0x29, 0x44,
-    0x06, 0x86, 0xa3, 0x33, 0xbf, 0x10, 0x22, 0x1d,
-  }};
 
 // Constants defined in the message
 

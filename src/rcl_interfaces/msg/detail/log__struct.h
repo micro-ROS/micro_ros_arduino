@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:msg/Log.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/msg/log.h"
+
+
 #ifndef RCL_INTERFACES__MSG__DETAIL__LOG__STRUCT_H_
 #define RCL_INTERFACES__MSG__DETAIL__LOG__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t rcl_interfaces__msg__Log__TYPE_HASH = {1, {
-    0xe2, 0x8c, 0xe2, 0x54, 0xca, 0x8a, 0xbc, 0x06,
-    0xab, 0xf9, 0x27, 0x73, 0xb7, 0x46, 0x02, 0xcd,
-    0xbf, 0x11, 0x6e, 0xd3, 0x4f, 0xba, 0xf2, 0x94,
-    0xfb, 0x9f, 0x81, 0xda, 0x9f, 0x31, 0x8e, 0xac,
-  }};
 
 // Constants defined in the message
 

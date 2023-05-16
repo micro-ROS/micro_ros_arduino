@@ -138,8 +138,8 @@ rcl_get_zero_initialized_node(void);
  *   pass in.
  * \return #RCL_RET_OK if the node was initialized successfully, or
  * \return #RCL_RET_ALREADY_INIT if the node has already be initialized, or
- * \return #RCL_RET_NOT_INIT if the given context is invalid, or
- * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NOT_INIT if the given context is not initialized, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid or context is NULL, or
  * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
  * \return #RCL_RET_NODE_INVALID_NAME if the name is invalid, or
  * \return #RCL_RET_NODE_INVALID_NAMESPACE if the namespace_ is invalid, or

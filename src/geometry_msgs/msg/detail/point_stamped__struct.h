@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/PointStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/point_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POINT_STAMPED__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POINT_STAMPED__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__PointStamped__TYPE_HASH = {1, {
-    0x4c, 0x02, 0x96, 0xaf, 0x86, 0xe0, 0x1e, 0x56,
-    0x2e, 0x9e, 0x04, 0x05, 0xd1, 0x38, 0xa0, 0x15,
-    0x37, 0x24, 0x75, 0x80, 0x07, 0x6c, 0x58, 0xea,
-    0x38, 0xd7, 0x92, 0x3a, 0xc1, 0x04, 0x58, 0x97,
-  }};
 
 // Constants defined in the message
 

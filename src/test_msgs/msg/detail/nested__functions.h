@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/Nested.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/nested.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__NESTED__FUNCTIONS_H_
 #define TEST_MSGS__MSG__DETAIL__NESTED__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "test_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -92,6 +101,30 @@ bool
 test_msgs__msg__Nested__copy(
   const test_msgs__msg__Nested * input,
   test_msgs__msg__Nested * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+const rosidl_type_hash_t *
+test_msgs__msg__Nested__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+test_msgs__msg__Nested__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+test_msgs__msg__Nested__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_test_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+test_msgs__msg__Nested__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/Nested messages.
 /**

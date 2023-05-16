@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/Vector3.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/vector3.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__VECTOR3__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__VECTOR3__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__Vector3__TYPE_HASH = {1, {
-    0xcc, 0x12, 0xfe, 0x83, 0xe4, 0xc0, 0x27, 0x19,
-    0xf1, 0xce, 0x80, 0x70, 0xbf, 0xd1, 0x4a, 0xec,
-    0xd4, 0x0f, 0x75, 0xa9, 0x66, 0x96, 0xa6, 0x7a,
-    0x2a, 0x1f, 0x37, 0xf7, 0xdb, 0xb0, 0x76, 0x5d,
-  }};
 
 // Constants defined in the message
 

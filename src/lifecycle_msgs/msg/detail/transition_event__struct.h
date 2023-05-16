@@ -2,6 +2,9 @@
 // with input from lifecycle_msgs:msg/TransitionEvent.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "lifecycle_msgs/msg/transition_event.h"
+
+
 #ifndef LIFECYCLE_MSGS__MSG__DETAIL__TRANSITION_EVENT__STRUCT_H_
 #define LIFECYCLE_MSGS__MSG__DETAIL__TRANSITION_EVENT__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t lifecycle_msgs__msg__TransitionEvent__TYPE_HASH = {1, {
-    0xd5, 0xf8, 0x87, 0x3a, 0x2f, 0x01, 0x46, 0x49,
-    0x8f, 0x81, 0x2d, 0x78, 0x85, 0xc7, 0x32, 0x7c,
-    0xe2, 0x7e, 0x46, 0x3d, 0x36, 0x81, 0x1d, 0x87,
-    0x92, 0xf3, 0x5e, 0xe3, 0x8c, 0x0d, 0x6c, 0x38,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/Illuminance.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/illuminance.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__ILLUMINANCE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__ILLUMINANCE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__Illuminance__TYPE_HASH = {1, {
-    0xb9, 0x54, 0xb2, 0x5f, 0x45, 0x2f, 0xcf, 0x81,
-    0xa9, 0x1c, 0x9c, 0x2a, 0x7e, 0x3b, 0x3f, 0xd8,
-    0x5c, 0x4c, 0x87, 0x3d, 0x45, 0x2a, 0xec, 0xb3,
-    0xcf, 0xd8, 0xfd, 0x1d, 0xa7, 0x32, 0xa2, 0x2d,
-  }};
 
 // Constants defined in the message
 

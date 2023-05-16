@@ -2,6 +2,9 @@
 // with input from std_srvs:srv/SetBool.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_srvs/srv/set_bool.h"
+
+
 #ifndef STD_SRVS__SRV__DETAIL__SET_BOOL__TYPE_SUPPORT_H_
 #define STD_SRVS__SRV__DETAIL__SET_BOOL__TYPE_SUPPORT_H_
 

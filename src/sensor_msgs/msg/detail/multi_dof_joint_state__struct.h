@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/MultiDOFJointState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/multi_dof_joint_state.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__MULTI_DOF_JOINT_STATE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__MULTI_DOF_JOINT_STATE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__MultiDOFJointState__TYPE_HASH = {1, {
-    0x4d, 0x4d, 0xed, 0x70, 0x2c, 0xfb, 0xa7, 0xff,
-    0x3e, 0xc7, 0x83, 0x83, 0x5c, 0x1a, 0x14, 0x25,
-    0xf7, 0x5e, 0x53, 0x93, 0x9a, 0x43, 0x0f, 0xf3,
-    0x55, 0xd1, 0xfe, 0xe4, 0xb3, 0xbb, 0xc4, 0x0b,
-  }};
 
 // Constants defined in the message
 

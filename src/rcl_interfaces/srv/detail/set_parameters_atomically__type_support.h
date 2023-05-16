@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:srv/SetParametersAtomically.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/srv/set_parameters_atomically.h"
+
+
 #ifndef RCL_INTERFACES__SRV__DETAIL__SET_PARAMETERS_ATOMICALLY__TYPE_SUPPORT_H_
 #define RCL_INTERFACES__SRV__DETAIL__SET_PARAMETERS_ATOMICALLY__TYPE_SUPPORT_H_
 

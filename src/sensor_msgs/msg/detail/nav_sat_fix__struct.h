@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/NavSatFix.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/nav_sat_fix.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__NAV_SAT_FIX__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__NAV_SAT_FIX__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__NavSatFix__TYPE_HASH = {1, {
-    0x62, 0x22, 0x3a, 0xb3, 0xfe, 0x21, 0x0a, 0x15,
-    0x97, 0x60, 0x21, 0xda, 0x7a, 0xfd, 0xdc, 0x9e,
-    0x20, 0x0d, 0xc9, 0xec, 0x75, 0x23, 0x1c, 0x1b,
-    0x6a, 0x55, 0x7f, 0xc5, 0x98, 0xa6, 0x54, 0x04,
-  }};
 
 // Constants defined in the message
 

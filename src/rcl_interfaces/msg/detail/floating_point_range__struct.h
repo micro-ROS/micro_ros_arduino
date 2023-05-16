@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:msg/FloatingPointRange.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/msg/floating_point_range.h"
+
+
 #ifndef RCL_INTERFACES__MSG__DETAIL__FLOATING_POINT_RANGE__STRUCT_H_
 #define RCL_INTERFACES__MSG__DETAIL__FLOATING_POINT_RANGE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t rcl_interfaces__msg__FloatingPointRange__TYPE_HASH = {1, {
-    0xe6, 0xaf, 0x23, 0xa2, 0x3c, 0x17, 0x7f, 0xee,
-    0x5f, 0x30, 0x75, 0xc8, 0xb1, 0xe4, 0x35, 0x16,
-    0x2a, 0x9b, 0x63, 0xc8, 0x63, 0xd7, 0x8c, 0x06,
-    0x01, 0x74, 0x60, 0xb4, 0x96, 0x84, 0x26, 0x2d,
-  }};
 
 // Constants defined in the message
 

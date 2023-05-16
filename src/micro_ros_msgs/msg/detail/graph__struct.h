@@ -2,6 +2,9 @@
 // with input from micro_ros_msgs:msg/Graph.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "micro_ros_msgs/msg/graph.h"
+
+
 #ifndef MICRO_ROS_MSGS__MSG__DETAIL__GRAPH__STRUCT_H_
 #define MICRO_ROS_MSGS__MSG__DETAIL__GRAPH__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t micro_ros_msgs__msg__Graph__TYPE_HASH = {1, {
-    0x43, 0xaa, 0xc5, 0x88, 0x23, 0x93, 0x27, 0x50,
-    0x60, 0x7f, 0xe3, 0xb8, 0xdd, 0x34, 0x2c, 0xa1,
-    0x68, 0xbe, 0xf4, 0x81, 0xb4, 0x08, 0x89, 0xf8,
-    0x93, 0xcb, 0xea, 0xa3, 0xd5, 0xc4, 0xc7, 0x37,
-  }};
 
 // Constants defined in the message
 

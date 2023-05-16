@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/Float64.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/float64.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__FLOAT64__STRUCT_H_
 #define STD_MSGS__MSG__DETAIL__FLOAT64__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t std_msgs__msg__Float64__TYPE_HASH = {1, {
-    0x70, 0x5b, 0xa9, 0xc3, 0xd1, 0xa0, 0x9d, 0xf4,
-    0x37, 0x37, 0xeb, 0x67, 0x09, 0x55, 0x34, 0xde,
-    0x36, 0xfd, 0x42, 0x6c, 0x05, 0x87, 0x77, 0x9b,
-    0xda, 0x2b, 0xc5, 0x1f, 0xe7, 0x90, 0x18, 0x2a,
-  }};
 
 // Constants defined in the message
 

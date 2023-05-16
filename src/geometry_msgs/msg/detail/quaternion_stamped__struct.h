@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/QuaternionStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/quaternion_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__QUATERNION_STAMPED__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__QUATERNION_STAMPED__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__QuaternionStamped__TYPE_HASH = {1, {
-    0x38, 0x1a, 0xdd, 0x86, 0xc6, 0xc3, 0x16, 0x06,
-    0x44, 0xd2, 0x28, 0xca, 0x34, 0x21, 0x82, 0xc7,
-    0xfd, 0x6c, 0x7f, 0xab, 0x11, 0xc7, 0xa8, 0x5a,
-    0xd8, 0x17, 0xa9, 0xcc, 0x22, 0xdb, 0xac, 0x6e,
-  }};
 
 // Constants defined in the message
 

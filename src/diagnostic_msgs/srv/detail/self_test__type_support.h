@@ -2,6 +2,9 @@
 // with input from diagnostic_msgs:srv/SelfTest.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "diagnostic_msgs/srv/self_test.h"
+
+
 #ifndef DIAGNOSTIC_MSGS__SRV__DETAIL__SELF_TEST__TYPE_SUPPORT_H_
 #define DIAGNOSTIC_MSGS__SRV__DETAIL__SELF_TEST__TYPE_SUPPORT_H_
 

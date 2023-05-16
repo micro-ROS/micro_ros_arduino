@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/JointJog.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/joint_jog.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__JOINT_JOG__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__JOINT_JOG__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__JointJog__TYPE_HASH = {1, {
-    0xba, 0x24, 0x94, 0x55, 0xa2, 0x0f, 0x70, 0x16,
-    0x8a, 0x1a, 0xcb, 0x7b, 0xf4, 0x3b, 0x77, 0x6b,
-    0x72, 0xff, 0x1f, 0x7e, 0xb5, 0xfc, 0x4c, 0xfe,
-    0xa4, 0x43, 0xf7, 0x49, 0xe9, 0x63, 0xc6, 0xe7,
-  }};
 
 // Constants defined in the message
 

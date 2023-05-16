@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:srv/GetParameterTypes.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/srv/get_parameter_types.h"
+
+
 #ifndef RCL_INTERFACES__SRV__DETAIL__GET_PARAMETER_TYPES__TYPE_SUPPORT_H_
 #define RCL_INTERFACES__SRV__DETAIL__GET_PARAMETER_TYPES__TYPE_SUPPORT_H_
 

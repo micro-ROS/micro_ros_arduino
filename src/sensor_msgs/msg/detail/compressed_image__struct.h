@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/CompressedImage.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/compressed_image.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__COMPRESSED_IMAGE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__COMPRESSED_IMAGE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__CompressedImage__TYPE_HASH = {1, {
-    0x15, 0x64, 0x07, 0x71, 0x53, 0x15, 0x71, 0x18,
-    0x5e, 0x2e, 0xfc, 0x8a, 0x10, 0x0b, 0xaf, 0x92,
-    0x39, 0x61, 0xa4, 0xd1, 0x5d, 0x55, 0x69, 0x65,
-    0x2e, 0x6c, 0xb6, 0x69, 0x1e, 0x8e, 0x37, 0x1a,
-  }};
 
 // Constants defined in the message
 

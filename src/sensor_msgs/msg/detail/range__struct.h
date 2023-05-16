@@ -2,6 +2,9 @@
 // with input from sensor_msgs:msg/Range.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "sensor_msgs/msg/range.h"
+
+
 #ifndef SENSOR_MSGS__MSG__DETAIL__RANGE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__RANGE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t sensor_msgs__msg__Range__TYPE_HASH = {1, {
-    0xb4, 0x2b, 0x62, 0x56, 0x2e, 0x93, 0xcb, 0xfe,
-    0x9d, 0x42, 0xb8, 0x2f, 0xe5, 0x99, 0x4d, 0xfa,
-    0x3d, 0x63, 0xd7, 0xd5, 0xc9, 0x0a, 0x31, 0x79,
-    0x81, 0x70, 0x3f, 0x73, 0x88, 0xad, 0xff, 0x3a,
-  }};
 
 // Constants defined in the message
 

@@ -2,6 +2,9 @@
 // with input from lifecycle_msgs:srv/GetAvailableTransitions.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "lifecycle_msgs/srv/get_available_transitions.h"
+
+
 #ifndef LIFECYCLE_MSGS__SRV__DETAIL__GET_AVAILABLE_TRANSITIONS__TYPE_SUPPORT_H_
 #define LIFECYCLE_MSGS__SRV__DETAIL__GET_AVAILABLE_TRANSITIONS__TYPE_SUPPORT_H_
 

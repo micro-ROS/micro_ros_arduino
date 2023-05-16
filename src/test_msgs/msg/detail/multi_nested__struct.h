@@ -2,6 +2,9 @@
 // with input from test_msgs:msg/MultiNested.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "test_msgs/msg/multi_nested.h"
+
+
 #ifndef TEST_MSGS__MSG__DETAIL__MULTI_NESTED__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__MULTI_NESTED__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t test_msgs__msg__MultiNested__TYPE_HASH = {1, {
-    0x9e, 0xe9, 0xcb, 0xfb, 0x17, 0xc2, 0xdf, 0x99,
-    0x1a, 0x75, 0x0b, 0x76, 0x1a, 0x56, 0xde, 0xf7,
-    0x86, 0x74, 0x03, 0x49, 0x77, 0xc8, 0x29, 0x44,
-    0x98, 0x20, 0xca, 0x07, 0xef, 0xd9, 0x75, 0x8b,
-  }};
 
 // Constants defined in the message
 

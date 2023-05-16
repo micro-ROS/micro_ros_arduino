@@ -2,6 +2,9 @@
 // with input from control_msgs:msg/JointTolerance.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/msg/joint_tolerance.h"
+
+
 #ifndef CONTROL_MSGS__MSG__DETAIL__JOINT_TOLERANCE__STRUCT_H_
 #define CONTROL_MSGS__MSG__DETAIL__JOINT_TOLERANCE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t control_msgs__msg__JointTolerance__TYPE_HASH = {1, {
-    0xc2, 0x54, 0xf9, 0xce, 0xce, 0x0f, 0x3b, 0x73,
-    0x30, 0x17, 0xb6, 0x99, 0x0f, 0xd4, 0x6d, 0x13,
-    0x26, 0xe2, 0x52, 0x42, 0xd6, 0xb8, 0x84, 0x43,
-    0x98, 0xc9, 0x7d, 0x9a, 0x88, 0xe7, 0xd6, 0x48,
-  }};
 
 // Constants defined in the message
 

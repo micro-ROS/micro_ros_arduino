@@ -2,6 +2,9 @@
 // with input from std_msgs:msg/String.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "std_msgs/msg/string.h"
+
+
 #ifndef STD_MSGS__MSG__DETAIL__STRING__STRUCT_H_
 #define STD_MSGS__MSG__DETAIL__STRING__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t std_msgs__msg__String__TYPE_HASH = {1, {
-    0xdf, 0x66, 0x8c, 0x74, 0x04, 0x82, 0xbb, 0xd4,
-    0x8f, 0xb3, 0x9d, 0x76, 0xa7, 0x0d, 0xfd, 0x4b,
-    0xd5, 0x9d, 0xb1, 0x28, 0x80, 0x21, 0x74, 0x35,
-    0x03, 0x25, 0x9e, 0x94, 0x8f, 0x6b, 0x1a, 0x18,
-  }};
 
 // Constants defined in the message
 

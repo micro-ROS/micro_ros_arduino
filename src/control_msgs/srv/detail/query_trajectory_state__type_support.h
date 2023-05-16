@@ -2,6 +2,9 @@
 // with input from control_msgs:srv/QueryTrajectoryState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/srv/query_trajectory_state.h"
+
+
 #ifndef CONTROL_MSGS__SRV__DETAIL__QUERY_TRAJECTORY_STATE__TYPE_SUPPORT_H_
 #define CONTROL_MSGS__SRV__DETAIL__QUERY_TRAJECTORY_STATE__TYPE_SUPPORT_H_
 

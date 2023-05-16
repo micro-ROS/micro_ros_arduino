@@ -2,6 +2,9 @@
 // with input from rosgraph_msgs:msg/Clock.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rosgraph_msgs/msg/clock.h"
+
+
 #ifndef ROSGRAPH_MSGS__MSG__DETAIL__CLOCK__FUNCTIONS_H_
 #define ROSGRAPH_MSGS__MSG__DETAIL__CLOCK__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "rosgraph_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -92,6 +101,30 @@ bool
 rosgraph_msgs__msg__Clock__copy(
   const rosgraph_msgs__msg__Clock * input,
   rosgraph_msgs__msg__Clock * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
+const rosidl_type_hash_t *
+rosgraph_msgs__msg__Clock__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+rosgraph_msgs__msg__Clock__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+rosgraph_msgs__msg__Clock__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+rosgraph_msgs__msg__Clock__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/Clock messages.
 /**

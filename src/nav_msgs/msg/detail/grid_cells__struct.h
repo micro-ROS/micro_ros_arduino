@@ -2,6 +2,9 @@
 // with input from nav_msgs:msg/GridCells.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/msg/grid_cells.h"
+
+
 #ifndef NAV_MSGS__MSG__DETAIL__GRID_CELLS__STRUCT_H_
 #define NAV_MSGS__MSG__DETAIL__GRID_CELLS__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t nav_msgs__msg__GridCells__TYPE_HASH = {1, {
-    0xbb, 0x99, 0xc2, 0xf5, 0xd0, 0xa0, 0x47, 0x50,
-    0x74, 0x5a, 0x81, 0xec, 0x6a, 0x81, 0x47, 0xaa,
-    0x37, 0x3c, 0xce, 0x5b, 0xd1, 0x7c, 0x8c, 0xd6,
-    0x50, 0x7f, 0x24, 0x13, 0x35, 0x4a, 0x69, 0x33,
-  }};
 
 // Constants defined in the message
 

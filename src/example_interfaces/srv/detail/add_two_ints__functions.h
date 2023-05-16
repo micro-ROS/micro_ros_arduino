@@ -2,6 +2,9 @@
 // with input from example_interfaces:srv/AddTwoInts.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "example_interfaces/srv/add_two_ints.h"
+
+
 #ifndef EXAMPLE_INTERFACES__SRV__DETAIL__ADD_TWO_INTS__FUNCTIONS_H_
 #define EXAMPLE_INTERFACES__SRV__DETAIL__ADD_TWO_INTS__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "example_interfaces/msg/rosidl_generator_c__visibility_control.h"
 
 #include "example_interfaces/srv/detail/add_two_ints__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__AddTwoInts__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__AddTwoInts__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__AddTwoInts__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__AddTwoInts__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/AddTwoInts message.
 /**
@@ -92,6 +125,30 @@ bool
 example_interfaces__srv__AddTwoInts_Request__copy(
   const example_interfaces__srv__AddTwoInts_Request * input,
   example_interfaces__srv__AddTwoInts_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__AddTwoInts_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__AddTwoInts_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__AddTwoInts_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__AddTwoInts_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/AddTwoInts messages.
 /**
@@ -245,6 +302,30 @@ example_interfaces__srv__AddTwoInts_Response__copy(
   const example_interfaces__srv__AddTwoInts_Response * input,
   example_interfaces__srv__AddTwoInts_Response * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__AddTwoInts_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__AddTwoInts_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__AddTwoInts_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__AddTwoInts_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
 /// Initialize array of srv/AddTwoInts messages.
 /**
  * It allocates the memory for the number of elements and calls
@@ -396,6 +477,30 @@ bool
 example_interfaces__srv__AddTwoInts_Event__copy(
   const example_interfaces__srv__AddTwoInts_Event * input,
   example_interfaces__srv__AddTwoInts_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_type_hash_t *
+example_interfaces__srv__AddTwoInts_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeDescription *
+example_interfaces__srv__AddTwoInts_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource *
+example_interfaces__srv__AddTwoInts_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+example_interfaces__srv__AddTwoInts_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/AddTwoInts messages.
 /**

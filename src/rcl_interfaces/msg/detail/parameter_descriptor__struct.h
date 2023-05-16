@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:msg/ParameterDescriptor.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/msg/parameter_descriptor.h"
+
+
 #ifndef RCL_INTERFACES__MSG__DETAIL__PARAMETER_DESCRIPTOR__STRUCT_H_
 #define RCL_INTERFACES__MSG__DETAIL__PARAMETER_DESCRIPTOR__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t rcl_interfaces__msg__ParameterDescriptor__TYPE_HASH = {1, {
-    0x52, 0x17, 0x5d, 0xbf, 0xda, 0x6c, 0x51, 0x15,
-    0x31, 0x01, 0xd3, 0x3d, 0x2a, 0x9d, 0xa0, 0x57,
-    0x43, 0xf6, 0x6f, 0x02, 0xd5, 0xab, 0x2c, 0xa9,
-    0xec, 0x47, 0x09, 0xb4, 0x6b, 0x73, 0xd7, 0x04,
-  }};
 
 // Constants defined in the message
 

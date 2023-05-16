@@ -2,6 +2,9 @@
 // with input from rcl_interfaces:msg/IntegerRange.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "rcl_interfaces/msg/integer_range.h"
+
+
 #ifndef RCL_INTERFACES__MSG__DETAIL__INTEGER_RANGE__STRUCT_H_
 #define RCL_INTERFACES__MSG__DETAIL__INTEGER_RANGE__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t rcl_interfaces__msg__IntegerRange__TYPE_HASH = {1, {
-    0xf7, 0xb7, 0xfd, 0xc0, 0xf6, 0x5f, 0x07, 0x70,
-    0x2e, 0x09, 0x92, 0x18, 0xe1, 0x32, 0x88, 0xc3,
-    0x96, 0x3b, 0xcb, 0x93, 0x45, 0xbd, 0xe7, 0x8b,
-    0x56, 0x0e, 0x6c, 0xd1, 0x98, 0x00, 0xfc, 0x5a,
-  }};
 
 // Constants defined in the message
 

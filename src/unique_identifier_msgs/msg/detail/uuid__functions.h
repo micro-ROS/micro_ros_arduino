@@ -2,6 +2,9 @@
 // with input from unique_identifier_msgs:msg/UUID.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "unique_identifier_msgs/msg/uuid.h"
+
+
 #ifndef UNIQUE_IDENTIFIER_MSGS__MSG__DETAIL__UUID__FUNCTIONS_H_
 #define UNIQUE_IDENTIFIER_MSGS__MSG__DETAIL__UUID__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "unique_identifier_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -92,6 +101,30 @@ bool
 unique_identifier_msgs__msg__UUID__copy(
   const unique_identifier_msgs__msg__UUID * input,
   unique_identifier_msgs__msg__UUID * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
+const rosidl_type_hash_t *
+unique_identifier_msgs__msg__UUID__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+unique_identifier_msgs__msg__UUID__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+unique_identifier_msgs__msg__UUID__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+unique_identifier_msgs__msg__UUID__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/UUID messages.
 /**

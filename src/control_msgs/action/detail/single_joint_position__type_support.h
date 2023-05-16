@@ -2,6 +2,9 @@
 // with input from control_msgs:action/SingleJointPosition.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "control_msgs/action/single_joint_position.h"
+
+
 #ifndef CONTROL_MSGS__ACTION__DETAIL__SINGLE_JOINT_POSITION__TYPE_SUPPORT_H_
 #define CONTROL_MSGS__ACTION__DETAIL__SINGLE_JOINT_POSITION__TYPE_SUPPORT_H_
 

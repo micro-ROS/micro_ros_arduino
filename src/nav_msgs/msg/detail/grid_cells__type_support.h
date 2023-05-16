@@ -2,6 +2,9 @@
 // with input from nav_msgs:msg/GridCells.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "nav_msgs/msg/grid_cells.h"
+
+
 #ifndef NAV_MSGS__MSG__DETAIL__GRID_CELLS__TYPE_SUPPORT_H_
 #define NAV_MSGS__MSG__DETAIL__GRID_CELLS__TYPE_SUPPORT_H_
 

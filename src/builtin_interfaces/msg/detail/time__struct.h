@@ -2,6 +2,9 @@
 // with input from builtin_interfaces:msg/Time.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "builtin_interfaces/msg/time.h"
+
+
 #ifndef BUILTIN_INTERFACES__MSG__DETAIL__TIME__STRUCT_H_
 #define BUILTIN_INTERFACES__MSG__DETAIL__TIME__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t builtin_interfaces__msg__Time__TYPE_HASH = {1, {
-    0xb1, 0x06, 0x23, 0x5e, 0x25, 0xa4, 0xc5, 0xed,
-    0x35, 0x09, 0x8a, 0xa0, 0xa6, 0x1a, 0x3e, 0xe9,
-    0xc9, 0xb1, 0x8d, 0x19, 0x7f, 0x39, 0x8b, 0x0e,
-    0x42, 0x06, 0xce, 0xa9, 0xac, 0xf9, 0xc1, 0x97,
-  }};
 
 // Constants defined in the message
 

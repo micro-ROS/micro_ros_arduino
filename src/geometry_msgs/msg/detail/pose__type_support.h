@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/Pose.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/pose.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POSE__TYPE_SUPPORT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POSE__TYPE_SUPPORT_H_
 

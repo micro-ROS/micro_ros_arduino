@@ -2,6 +2,9 @@
 // with input from geometry_msgs:msg/PoseWithCovarianceStamped.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "geometry_msgs/msg/pose_with_covariance_stamped.h"
+
+
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POSE_WITH_COVARIANCE_STAMPED__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POSE_WITH_COVARIANCE_STAMPED__STRUCT_H_
 
@@ -13,17 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
-#include "rosidl_runtime_c/type_hash.h"
-
-
-// Type Hash for interface
-static const rosidl_type_hash_t geometry_msgs__msg__PoseWithCovarianceStamped__TYPE_HASH = {1, {
-    0x26, 0x43, 0x2f, 0x98, 0x03, 0xe4, 0x37, 0x27,
-    0xd3, 0xc8, 0xf6, 0x68, 0xd1, 0xfd, 0xb3, 0xc6,
-    0x30, 0xf5, 0x48, 0xaf, 0x63, 0x1e, 0x2f, 0x4e,
-    0x31, 0x38, 0x23, 0x71, 0xbf, 0xea, 0x3b, 0x6e,
-  }};
 
 // Constants defined in the message
 
