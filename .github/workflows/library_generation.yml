@@ -14,14 +14,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - distro: foxy
-            branch: foxy
+          - distro: humble
+            branch: humble
+          - distro: iron
+            branch: iron
           - distro: rolling
-            branch: main
-          - distro: galactic
-            branch: galactic
+            branch: rolling
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ matrix.branch }}
       - name: Get date
