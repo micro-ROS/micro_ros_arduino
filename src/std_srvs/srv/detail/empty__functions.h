@@ -2,9 +2,6 @@
 // with input from std_srvs:srv/Empty.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_srvs/srv/empty.h"
-
-
 #ifndef STD_SRVS__SRV__DETAIL__EMPTY__FUNCTIONS_H_
 #define STD_SRVS__SRV__DETAIL__EMPTY__FUNCTIONS_H_
 

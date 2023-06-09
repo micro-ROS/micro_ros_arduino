@@ -2,9 +2,6 @@
 // with input from trajectory_msgs:msg/MultiDOFJointTrajectoryPoint.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "trajectory_msgs/msg/multi_dof_joint_trajectory_point.h"
-
-
 #ifndef TRAJECTORY_MSGS__MSG__DETAIL__MULTI_DOF_JOINT_TRAJECTORY_POINT__STRUCT_H_
 #define TRAJECTORY_MSGS__MSG__DETAIL__MULTI_DOF_JOINT_TRAJECTORY_POINT__STRUCT_H_
 

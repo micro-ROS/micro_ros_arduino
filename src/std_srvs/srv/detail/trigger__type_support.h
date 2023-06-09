@@ -2,9 +2,6 @@
 // with input from std_srvs:srv/Trigger.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_srvs/srv/trigger.h"
-
-
 #ifndef STD_SRVS__SRV__DETAIL__TRIGGER__TYPE_SUPPORT_H_
 #define STD_SRVS__SRV__DETAIL__TRIGGER__TYPE_SUPPORT_H_
 

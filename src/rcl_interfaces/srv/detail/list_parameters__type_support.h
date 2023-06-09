@@ -2,9 +2,6 @@
 // with input from rcl_interfaces:srv/ListParameters.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "rcl_interfaces/srv/list_parameters.h"
-
-
 #ifndef RCL_INTERFACES__SRV__DETAIL__LIST_PARAMETERS__TYPE_SUPPORT_H_
 #define RCL_INTERFACES__SRV__DETAIL__LIST_PARAMETERS__TYPE_SUPPORT_H_
 

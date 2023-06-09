@@ -2,9 +2,6 @@
 // with input from test_msgs:msg/Empty.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "test_msgs/msg/empty.h"
-
-
 #ifndef TEST_MSGS__MSG__DETAIL__EMPTY__FUNCTIONS_H_
 #define TEST_MSGS__MSG__DETAIL__EMPTY__FUNCTIONS_H_
 

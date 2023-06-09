@@ -2,9 +2,6 @@
 // with input from diagnostic_msgs:srv/AddDiagnostics.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "diagnostic_msgs/srv/add_diagnostics.h"
-
-
 #ifndef DIAGNOSTIC_MSGS__SRV__DETAIL__ADD_DIAGNOSTICS__STRUCT_H_
 #define DIAGNOSTIC_MSGS__SRV__DETAIL__ADD_DIAGNOSTICS__STRUCT_H_
 

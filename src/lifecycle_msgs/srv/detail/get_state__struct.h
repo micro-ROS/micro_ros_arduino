@@ -2,9 +2,6 @@
 // with input from lifecycle_msgs:srv/GetState.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "lifecycle_msgs/srv/get_state.h"
-
-
 #ifndef LIFECYCLE_MSGS__SRV__DETAIL__GET_STATE__STRUCT_H_
 #define LIFECYCLE_MSGS__SRV__DETAIL__GET_STATE__STRUCT_H_
 

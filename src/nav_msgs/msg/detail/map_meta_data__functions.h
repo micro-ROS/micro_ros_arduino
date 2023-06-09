@@ -2,9 +2,6 @@
 // with input from nav_msgs:msg/MapMetaData.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "nav_msgs/msg/map_meta_data.h"
-
-
 #ifndef NAV_MSGS__MSG__DETAIL__MAP_META_DATA__FUNCTIONS_H_
 #define NAV_MSGS__MSG__DETAIL__MAP_META_DATA__FUNCTIONS_H_
 

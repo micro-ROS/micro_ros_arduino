@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/ChannelFloat32.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/channel_float32.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__CHANNEL_FLOAT32__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__CHANNEL_FLOAT32__STRUCT_H_
 

@@ -2,9 +2,6 @@
 // with input from example_interfaces:msg/UInt8MultiArray.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "example_interfaces/msg/u_int8_multi_array.h"
-
-
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__U_INT8_MULTI_ARRAY__TYPE_SUPPORT_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__U_INT8_MULTI_ARRAY__TYPE_SUPPORT_H_
 

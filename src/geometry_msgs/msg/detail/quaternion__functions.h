@@ -2,9 +2,6 @@
 // with input from geometry_msgs:msg/Quaternion.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "geometry_msgs/msg/quaternion.h"
-
-
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__QUATERNION__FUNCTIONS_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__QUATERNION__FUNCTIONS_H_
 

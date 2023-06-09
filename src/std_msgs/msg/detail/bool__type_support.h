@@ -2,9 +2,6 @@
 // with input from std_msgs:msg/Bool.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_msgs/msg/bool.h"
-
-
 #ifndef STD_MSGS__MSG__DETAIL__BOOL__TYPE_SUPPORT_H_
 #define STD_MSGS__MSG__DETAIL__BOOL__TYPE_SUPPORT_H_
 

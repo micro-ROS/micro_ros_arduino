@@ -2,9 +2,6 @@
 // with input from shape_msgs:msg/MeshTriangle.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "shape_msgs/msg/mesh_triangle.h"
-
-
 #ifndef SHAPE_MSGS__MSG__DETAIL__MESH_TRIANGLE__FUNCTIONS_H_
 #define SHAPE_MSGS__MSG__DETAIL__MESH_TRIANGLE__FUNCTIONS_H_
 

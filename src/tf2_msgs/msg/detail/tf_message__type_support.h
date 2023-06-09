@@ -2,9 +2,6 @@
 // with input from tf2_msgs:msg/TFMessage.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "tf2_msgs/msg/tf_message.h"
-
-
 #ifndef TF2_MSGS__MSG__DETAIL__TF_MESSAGE__TYPE_SUPPORT_H_
 #define TF2_MSGS__MSG__DETAIL__TF_MESSAGE__TYPE_SUPPORT_H_
 

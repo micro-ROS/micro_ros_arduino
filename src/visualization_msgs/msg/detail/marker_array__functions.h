@@ -2,9 +2,6 @@
 // with input from visualization_msgs:msg/MarkerArray.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "visualization_msgs/msg/marker_array.h"
-
-
 #ifndef VISUALIZATION_MSGS__MSG__DETAIL__MARKER_ARRAY__FUNCTIONS_H_
 #define VISUALIZATION_MSGS__MSG__DETAIL__MARKER_ARRAY__FUNCTIONS_H_
 

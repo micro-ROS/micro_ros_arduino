@@ -2,9 +2,6 @@
 // with input from control_msgs:msg/JointComponentTolerance.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "control_msgs/msg/joint_component_tolerance.h"
-
-
 #ifndef CONTROL_MSGS__MSG__DETAIL__JOINT_COMPONENT_TOLERANCE__TYPE_SUPPORT_H_
 #define CONTROL_MSGS__MSG__DETAIL__JOINT_COMPONENT_TOLERANCE__TYPE_SUPPORT_H_
 

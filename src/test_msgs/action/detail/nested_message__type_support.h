@@ -2,9 +2,6 @@
 // with input from test_msgs:action/NestedMessage.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "test_msgs/action/nested_message.h"
-
-
 #ifndef TEST_MSGS__ACTION__DETAIL__NESTED_MESSAGE__TYPE_SUPPORT_H_
 #define TEST_MSGS__ACTION__DETAIL__NESTED_MESSAGE__TYPE_SUPPORT_H_
 

@@ -2,9 +2,6 @@
 // with input from lifecycle_msgs:msg/TransitionEvent.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "lifecycle_msgs/msg/transition_event.h"
-
-
 #ifndef LIFECYCLE_MSGS__MSG__DETAIL__TRANSITION_EVENT__STRUCT_H_
 #define LIFECYCLE_MSGS__MSG__DETAIL__TRANSITION_EVENT__STRUCT_H_
 

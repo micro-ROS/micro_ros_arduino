@@ -2,9 +2,6 @@
 // with input from example_interfaces:msg/UInt64.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "example_interfaces/msg/u_int64.h"
-
-
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__U_INT64__FUNCTIONS_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__U_INT64__FUNCTIONS_H_
 
