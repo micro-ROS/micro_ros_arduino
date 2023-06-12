@@ -104,7 +104,7 @@ rcl_get_zero_initialized_subscription(void);
  * ```
  *
  * The rosidl_message_type_support_t object contains message type specific
- * information used to subscribe to messages.
+ * information used to publish messages.
  *
  * The topic name must be a c string which follows the topic and service name
  * format rules for unexpanded names, also known as non-fully qualified names:

@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/CameraInfo.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/camera_info.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__CAMERA_INFO__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__CAMERA_INFO__STRUCT_H_
 

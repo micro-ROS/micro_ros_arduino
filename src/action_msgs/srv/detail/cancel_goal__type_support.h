@@ -2,9 +2,6 @@
 // with input from action_msgs:srv/CancelGoal.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "action_msgs/srv/cancel_goal.h"
-
-
 #ifndef ACTION_MSGS__SRV__DETAIL__CANCEL_GOAL__TYPE_SUPPORT_H_
 #define ACTION_MSGS__SRV__DETAIL__CANCEL_GOAL__TYPE_SUPPORT_H_
 

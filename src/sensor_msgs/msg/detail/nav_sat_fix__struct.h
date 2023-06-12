@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/NavSatFix.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/nav_sat_fix.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__NAV_SAT_FIX__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__NAV_SAT_FIX__STRUCT_H_
 

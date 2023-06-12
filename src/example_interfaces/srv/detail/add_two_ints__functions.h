@@ -2,9 +2,6 @@
 // with input from example_interfaces:srv/AddTwoInts.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "example_interfaces/srv/add_two_ints.h"
-
-
 #ifndef EXAMPLE_INTERFACES__SRV__DETAIL__ADD_TWO_INTS__FUNCTIONS_H_
 #define EXAMPLE_INTERFACES__SRV__DETAIL__ADD_TWO_INTS__FUNCTIONS_H_
 

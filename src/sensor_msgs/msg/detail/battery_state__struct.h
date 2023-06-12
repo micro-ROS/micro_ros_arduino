@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/BatteryState.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/battery_state.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__BATTERY_STATE__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__BATTERY_STATE__STRUCT_H_
 

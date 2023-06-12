@@ -2,9 +2,6 @@
 // with input from visualization_msgs:msg/InteractiveMarkerPose.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "visualization_msgs/msg/interactive_marker_pose.h"
-
-
 #ifndef VISUALIZATION_MSGS__MSG__DETAIL__INTERACTIVE_MARKER_POSE__TYPE_SUPPORT_H_
 #define VISUALIZATION_MSGS__MSG__DETAIL__INTERACTIVE_MARKER_POSE__TYPE_SUPPORT_H_
 

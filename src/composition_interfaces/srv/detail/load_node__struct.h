@@ -2,9 +2,6 @@
 // with input from composition_interfaces:srv/LoadNode.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "composition_interfaces/srv/load_node.h"
-
-
 #ifndef COMPOSITION_INTERFACES__SRV__DETAIL__LOAD_NODE__STRUCT_H_
 #define COMPOSITION_INTERFACES__SRV__DETAIL__LOAD_NODE__STRUCT_H_
 

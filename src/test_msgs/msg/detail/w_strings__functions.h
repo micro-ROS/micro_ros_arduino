@@ -2,9 +2,6 @@
 // with input from test_msgs:msg/WStrings.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "test_msgs/msg/w_strings.h"
-
-
 #ifndef TEST_MSGS__MSG__DETAIL__W_STRINGS__FUNCTIONS_H_
 #define TEST_MSGS__MSG__DETAIL__W_STRINGS__FUNCTIONS_H_
 

@@ -2,9 +2,6 @@
 // with input from rosgraph_msgs:msg/Clock.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "rosgraph_msgs/msg/clock.h"
-
-
 #ifndef ROSGRAPH_MSGS__MSG__DETAIL__CLOCK__TYPE_SUPPORT_H_
 #define ROSGRAPH_MSGS__MSG__DETAIL__CLOCK__TYPE_SUPPORT_H_
 

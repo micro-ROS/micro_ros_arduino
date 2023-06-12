@@ -2,9 +2,6 @@
 // with input from test_msgs:msg/Defaults.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "test_msgs/msg/defaults.h"
-
-
 #ifndef TEST_MSGS__MSG__DETAIL__DEFAULTS__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__DEFAULTS__STRUCT_H_
 

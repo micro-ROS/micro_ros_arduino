@@ -2,9 +2,6 @@
 // with input from tf2_msgs:srv/FrameGraph.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "tf2_msgs/srv/frame_graph.h"
-
-
 #ifndef TF2_MSGS__SRV__DETAIL__FRAME_GRAPH__FUNCTIONS_H_
 #define TF2_MSGS__SRV__DETAIL__FRAME_GRAPH__FUNCTIONS_H_
 

@@ -2,9 +2,6 @@
 // with input from std_msgs:msg/Float64MultiArray.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_msgs/msg/float64_multi_array.h"
-
-
 #ifndef STD_MSGS__MSG__DETAIL__FLOAT64_MULTI_ARRAY__STRUCT_H_
 #define STD_MSGS__MSG__DETAIL__FLOAT64_MULTI_ARRAY__STRUCT_H_
 

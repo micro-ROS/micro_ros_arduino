@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/JoyFeedback.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/joy_feedback.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__JOY_FEEDBACK__STRUCT_H_
 #define SENSOR_MSGS__MSG__DETAIL__JOY_FEEDBACK__STRUCT_H_
 

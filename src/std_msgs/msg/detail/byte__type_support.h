@@ -2,9 +2,6 @@
 // with input from std_msgs:msg/Byte.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_msgs/msg/byte.h"
-
-
 #ifndef STD_MSGS__MSG__DETAIL__BYTE__TYPE_SUPPORT_H_
 #define STD_MSGS__MSG__DETAIL__BYTE__TYPE_SUPPORT_H_
 

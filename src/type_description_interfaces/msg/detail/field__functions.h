@@ -2,9 +2,6 @@
 // with input from type_description_interfaces:msg/Field.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "type_description_interfaces/msg/field.h"
-
-
 #ifndef TYPE_DESCRIPTION_INTERFACES__MSG__DETAIL__FIELD__FUNCTIONS_H_
 #define TYPE_DESCRIPTION_INTERFACES__MSG__DETAIL__FIELD__FUNCTIONS_H_
 

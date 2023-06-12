@@ -2,9 +2,6 @@
 // with input from builtin_interfaces:msg/Duration.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "builtin_interfaces/msg/duration.h"
-
-
 #ifndef BUILTIN_INTERFACES__MSG__DETAIL__DURATION__STRUCT_H_
 #define BUILTIN_INTERFACES__MSG__DETAIL__DURATION__STRUCT_H_
 

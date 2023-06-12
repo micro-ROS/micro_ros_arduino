@@ -2,9 +2,6 @@
 // with input from example_interfaces:msg/ByteMultiArray.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "example_interfaces/msg/byte_multi_array.h"
-
-
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__BYTE_MULTI_ARRAY__STRUCT_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__BYTE_MULTI_ARRAY__STRUCT_H_
 

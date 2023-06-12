@@ -2,9 +2,6 @@
 // with input from control_msgs:action/PointHead.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "control_msgs/action/point_head.h"
-
-
 #ifndef CONTROL_MSGS__ACTION__DETAIL__POINT_HEAD__FUNCTIONS_H_
 #define CONTROL_MSGS__ACTION__DETAIL__POINT_HEAD__FUNCTIONS_H_
 

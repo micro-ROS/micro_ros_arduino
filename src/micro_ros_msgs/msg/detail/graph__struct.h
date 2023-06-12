@@ -2,9 +2,6 @@
 // with input from micro_ros_msgs:msg/Graph.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "micro_ros_msgs/msg/graph.h"
-
-
 #ifndef MICRO_ROS_MSGS__MSG__DETAIL__GRAPH__STRUCT_H_
 #define MICRO_ROS_MSGS__MSG__DETAIL__GRAPH__STRUCT_H_
 

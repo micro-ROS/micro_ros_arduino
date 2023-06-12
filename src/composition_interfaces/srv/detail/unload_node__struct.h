@@ -2,9 +2,6 @@
 // with input from composition_interfaces:srv/UnloadNode.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "composition_interfaces/srv/unload_node.h"
-
-
 #ifndef COMPOSITION_INTERFACES__SRV__DETAIL__UNLOAD_NODE__STRUCT_H_
 #define COMPOSITION_INTERFACES__SRV__DETAIL__UNLOAD_NODE__STRUCT_H_
 

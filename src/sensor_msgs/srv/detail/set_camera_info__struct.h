@@ -2,9 +2,6 @@
 // with input from sensor_msgs:srv/SetCameraInfo.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/srv/set_camera_info.h"
-
-
 #ifndef SENSOR_MSGS__SRV__DETAIL__SET_CAMERA_INFO__STRUCT_H_
 #define SENSOR_MSGS__SRV__DETAIL__SET_CAMERA_INFO__STRUCT_H_
 
