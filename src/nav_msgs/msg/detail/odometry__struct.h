@@ -2,9 +2,6 @@
 // with input from nav_msgs:msg/Odometry.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "nav_msgs/msg/odometry.h"
-
-
 #ifndef NAV_MSGS__MSG__DETAIL__ODOMETRY__STRUCT_H_
 #define NAV_MSGS__MSG__DETAIL__ODOMETRY__STRUCT_H_
 

@@ -2,9 +2,6 @@
 // with input from tf2_msgs:action/LookupTransform.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "tf2_msgs/action/lookup_transform.h"
-
-
 #ifndef TF2_MSGS__ACTION__DETAIL__LOOKUP_TRANSFORM__STRUCT_H_
 #define TF2_MSGS__ACTION__DETAIL__LOOKUP_TRANSFORM__STRUCT_H_
 

@@ -2,9 +2,6 @@
 // with input from test_msgs:action/Fibonacci.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "test_msgs/action/fibonacci.h"
-
-
 #ifndef TEST_MSGS__ACTION__DETAIL__FIBONACCI__STRUCT_H_
 #define TEST_MSGS__ACTION__DETAIL__FIBONACCI__STRUCT_H_
 

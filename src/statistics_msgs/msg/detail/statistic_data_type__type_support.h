@@ -2,9 +2,6 @@
 // with input from statistics_msgs:msg/StatisticDataType.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "statistics_msgs/msg/statistic_data_type.h"
-
-
 #ifndef STATISTICS_MSGS__MSG__DETAIL__STATISTIC_DATA_TYPE__TYPE_SUPPORT_H_
 #define STATISTICS_MSGS__MSG__DETAIL__STATISTIC_DATA_TYPE__TYPE_SUPPORT_H_
 

@@ -192,7 +192,7 @@ typedef enum RMW_PUBLIC_TYPE rmw_qos_compatibility_type_e
  * \param[in] reason_size: Size of the string buffer `reason`, if one is provided.
  *   If `reason` is `nullptr`, then this parameter must be zero.
  * \return `RMW_RET_OK` if the check was successful, or
- * \return `RMW_RET_INVALID_ARGUMENT` if `compatibility` is `nullptr`, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `compatiblity` is `nullptr`, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `reason` is `NULL` and  `reason_size` is not zero, or
  * \return `RMW_RET_ERROR` if there is an unexpected error.
  */

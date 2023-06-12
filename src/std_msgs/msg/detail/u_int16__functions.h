@@ -2,9 +2,6 @@
 // with input from std_msgs:msg/UInt16.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_msgs/msg/u_int16.h"
-
-
 #ifndef STD_MSGS__MSG__DETAIL__U_INT16__FUNCTIONS_H_
 #define STD_MSGS__MSG__DETAIL__U_INT16__FUNCTIONS_H_
 

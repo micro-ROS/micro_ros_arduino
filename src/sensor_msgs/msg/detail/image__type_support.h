@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/Image.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/image.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__IMAGE__TYPE_SUPPORT_H_
 #define SENSOR_MSGS__MSG__DETAIL__IMAGE__TYPE_SUPPORT_H_
 

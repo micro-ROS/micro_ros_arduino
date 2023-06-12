@@ -2,9 +2,6 @@
 // with input from sensor_msgs:msg/LaserEcho.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "sensor_msgs/msg/laser_echo.h"
-
-
 #ifndef SENSOR_MSGS__MSG__DETAIL__LASER_ECHO__FUNCTIONS_H_
 #define SENSOR_MSGS__MSG__DETAIL__LASER_ECHO__FUNCTIONS_H_
 

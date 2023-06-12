@@ -2,9 +2,6 @@
 // with input from type_description_interfaces:srv/GetTypeDescription.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "type_description_interfaces/srv/get_type_description.h"
-
-
 #ifndef TYPE_DESCRIPTION_INTERFACES__SRV__DETAIL__GET_TYPE_DESCRIPTION__FUNCTIONS_H_
 #define TYPE_DESCRIPTION_INTERFACES__SRV__DETAIL__GET_TYPE_DESCRIPTION__FUNCTIONS_H_
 

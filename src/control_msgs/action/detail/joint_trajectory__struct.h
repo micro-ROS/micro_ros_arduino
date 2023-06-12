@@ -2,9 +2,6 @@
 // with input from control_msgs:action/JointTrajectory.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "control_msgs/action/joint_trajectory.h"
-
-
 #ifndef CONTROL_MSGS__ACTION__DETAIL__JOINT_TRAJECTORY__STRUCT_H_
 #define CONTROL_MSGS__ACTION__DETAIL__JOINT_TRAJECTORY__STRUCT_H_
 

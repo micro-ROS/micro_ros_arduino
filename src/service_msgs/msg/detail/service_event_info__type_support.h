@@ -2,9 +2,6 @@
 // with input from service_msgs:msg/ServiceEventInfo.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "service_msgs/msg/service_event_info.h"
-
-
 #ifndef SERVICE_MSGS__MSG__DETAIL__SERVICE_EVENT_INFO__TYPE_SUPPORT_H_
 #define SERVICE_MSGS__MSG__DETAIL__SERVICE_EVENT_INFO__TYPE_SUPPORT_H_
 

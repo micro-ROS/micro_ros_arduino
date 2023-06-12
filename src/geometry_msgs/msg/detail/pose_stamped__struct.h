@@ -2,9 +2,6 @@
 // with input from geometry_msgs:msg/PoseStamped.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "geometry_msgs/msg/pose_stamped.h"
-
-
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__POSE_STAMPED__STRUCT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__POSE_STAMPED__STRUCT_H_
 

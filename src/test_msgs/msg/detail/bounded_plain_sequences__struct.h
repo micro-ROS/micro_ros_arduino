@@ -2,9 +2,6 @@
 // with input from test_msgs:msg/BoundedPlainSequences.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "test_msgs/msg/bounded_plain_sequences.h"
-
-
 #ifndef TEST_MSGS__MSG__DETAIL__BOUNDED_PLAIN_SEQUENCES__STRUCT_H_
 #define TEST_MSGS__MSG__DETAIL__BOUNDED_PLAIN_SEQUENCES__STRUCT_H_
 

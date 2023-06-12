@@ -2,9 +2,6 @@
 // with input from nav_msgs:srv/SetMap.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "nav_msgs/srv/set_map.h"
-
-
 #ifndef NAV_MSGS__SRV__DETAIL__SET_MAP__TYPE_SUPPORT_H_
 #define NAV_MSGS__SRV__DETAIL__SET_MAP__TYPE_SUPPORT_H_
 

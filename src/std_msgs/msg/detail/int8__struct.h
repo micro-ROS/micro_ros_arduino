@@ -2,9 +2,6 @@
 // with input from std_msgs:msg/Int8.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "std_msgs/msg/int8.h"
-
-
 #ifndef STD_MSGS__MSG__DETAIL__INT8__STRUCT_H_
 #define STD_MSGS__MSG__DETAIL__INT8__STRUCT_H_
 

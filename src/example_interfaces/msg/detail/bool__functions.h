@@ -2,9 +2,6 @@
 // with input from example_interfaces:msg/Bool.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "example_interfaces/msg/bool.h"
-
-
 #ifndef EXAMPLE_INTERFACES__MSG__DETAIL__BOOL__FUNCTIONS_H_
 #define EXAMPLE_INTERFACES__MSG__DETAIL__BOOL__FUNCTIONS_H_
 

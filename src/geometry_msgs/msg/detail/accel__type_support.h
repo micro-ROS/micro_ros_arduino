@@ -2,9 +2,6 @@
 // with input from geometry_msgs:msg/Accel.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "geometry_msgs/msg/accel.h"
-
-
 #ifndef GEOMETRY_MSGS__MSG__DETAIL__ACCEL__TYPE_SUPPORT_H_
 #define GEOMETRY_MSGS__MSG__DETAIL__ACCEL__TYPE_SUPPORT_H_
 

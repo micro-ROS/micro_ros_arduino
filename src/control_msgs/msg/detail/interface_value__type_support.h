@@ -2,9 +2,6 @@
 // with input from control_msgs:msg/InterfaceValue.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "control_msgs/msg/interface_value.h"
-
-
 #ifndef CONTROL_MSGS__MSG__DETAIL__INTERFACE_VALUE__TYPE_SUPPORT_H_
 #define CONTROL_MSGS__MSG__DETAIL__INTERFACE_VALUE__TYPE_SUPPORT_H_
 
