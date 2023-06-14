@@ -34,6 +34,7 @@ extern "C"
 #include <rcl_interfaces/msg/set_parameters_result.h>
 #include <rcl_interfaces/srv/list_parameters.h>
 #include <rcl_interfaces/srv/set_parameters.h>
+#include <rcl_interfaces/srv/set_parameters_atomically.h>
 #include <rcl_interfaces/srv/describe_parameters.h>
 #include <rcl_interfaces/msg/parameter_descriptor.h>
 #include <rosidl_runtime_c/string_functions.h>
@@ -53,6 +54,10 @@ typedef struct rcl_interfaces__srv__SetParameters_Request SetParameters_Request;
 typedef struct rcl_interfaces__srv__SetParameters_Response SetParameters_Response;
 typedef struct rcl_interfaces__msg__SetParametersResult SetParameters_Result;
 
+typedef struct rcl_interfaces__srv__SetParametersAtomically_Request SetParametersAtomically_Request;
+typedef struct rcl_interfaces__srv__SetParametersAtomically_Response
+  SetParametersAtomically_Response;
+
 typedef struct rcl_interfaces__srv__DescribeParameters_Request DescribeParameters_Request;
 typedef struct rcl_interfaces__srv__DescribeParameters_Response DescribeParameters_Response;
 
@@ -67,7 +72,7 @@ typedef struct rcl_interfaces__msg__ParameterDescriptor__Sequence ParameterDescr
 typedef struct rcl_interfaces__msg__ParameterEvent ParameterEvent;
 
 // Number of RCLC executor handles required for a parameter server
-#define RCLC_EXECUTOR_PARAMETER_SERVER_HANDLES 5
+#define RCLC_EXECUTOR_PARAMETER_SERVER_HANDLES 6
 #define RCLC_PARAMETER_MODIFICATION_REJECTED 4001
 #define RCLC_PARAMETER_TYPE_MISMATCH 4002
 #define RCLC_PARAMETER_UNSUPORTED_ON_LOW_MEM 4003
@@ -124,6 +129,7 @@ typedef struct rclc_parameter_server_t
   rcl_service_t get_service;
   rcl_service_t get_types_service;
   rcl_service_t set_service;
+  rcl_service_t set_atomically_service;
   rcl_service_t list_service;
   rcl_service_t describe_service;
   rcl_publisher_t event_publisher;
@@ -136,6 +142,9 @@ typedef struct rclc_parameter_server_t
 
   SetParameters_Request set_request;
   SetParameters_Response set_response;
+
+  SetParametersAtomically_Request set_atomically_request;
+  SetParametersAtomically_Response set_atomically_response;
 
   ListParameters_Request list_request;
   ListParameters_Response list_response;
