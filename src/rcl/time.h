@@ -168,6 +168,32 @@ typedef struct rcl_time_point_s
 // } rcl_rate_t;
 // TODO(tfoote) integrate rate and timer implementations
 
+/// Check if the clock has started.
+/**
+ * This function returns true if the clock contains a time point value
+ * that is non-zero.
+ * Note that if data is uninitialized it may give a false positive.
+ *
+ * This function is primarily used to check if a clock using ROS time
+ * has started. This is because it is possible that a simulator might be
+ * initialized paused, causing ROS time to be 0 until it is unpaused.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] clock the handle to the clock which is being queried
+ * \return true if the clock has started, otherwise return false.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+bool
+rcl_clock_time_started(rcl_clock_t * clock);
+
 /// Check if the clock has valid values.
 /**
  * This function returns true if the time source appears to be valid.
