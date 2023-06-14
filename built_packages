@@ -8,10 +8,10 @@ https://github.com/ament/uncrustify_vendor.git 94ed3f68d1d2e44e04398c4538509f5e7
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 5cd43eb0ba97c7ec21949492344b8bf05e04572c
 https://github.com/micro-ROS/micro_ros_msgs.git 2a5d7536e60d9722b261a03d3564c0aa9d25da7d
-https://github.com/micro-ROS/micro_ros_utilities f52b2d70472651d5bdc8feb161475aee91bb6c28
+https://github.com/micro-ROS/micro_ros_utilities 5f1cead35a1c4940db60e04e8a73c057ea2449b8
 https://github.com/micro-ROS/rcl 98575f8bebad2720373fedacd4172802bd8dddce
 https://github.com/micro-ROS/rcutils 6505fcc215423cb7b7ef45fdc6e4ad1aca72fe50
-https://github.com/micro-ROS/rmw-microxrcedds.git 439073381b54a2fcaeeeea64c740a7f6077a8513
+https://github.com/micro-ROS/rmw-microxrcedds.git bc4eb312ac4601a4137c35f4a56b9b83b4b18339
 https://github.com/micro-ROS/rosidl_dynamic_typesupport.git f94715226667a8b39368e3c4828d5684c8dd8d6d
 https://github.com/micro-ROS/rosidl_typesupport.git db8394c664e78382647ce6210f2941bb4eb65804
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git c2776855f591388cf8900e3b8df15f9dfd95305b
@@ -23,7 +23,7 @@ https://github.com/ros2/libyaml_vendor.git 0c814892fe8c31aeb20688a8b43906aeefda0
 https://github.com/ros2/rcl.git 5b41c481936f3e07e6c6792acdff45e8655a7dfa
 https://github.com/ros2/rcl_interfaces.git 6d28b16a6f74485af03a2c4f043dd568e576c25e
 https://github.com/ros2/rcl_logging.git 2bc49ab7ff557a45d4fa152e2f400e9ad2bb6a68
-https://github.com/ros2/rclc 2648503e3fdcf1308bd1d3748e1f4792285cd1b1
+https://github.com/ros2/rclc f6d86b47e7475c998f3158735ef2871d46e6ea90
 https://github.com/ros2/rcpputils.git 39b20134e571ba74baa7c77750eab586da90b7a5
 https://github.com/ros2/rmw.git 17e3a94e447cd043dc20aec7dd620b5eb26241c6
 https://github.com/ros2/rmw_implementation.git 124a45b2c65df5e69017dec230740c23d937787e
