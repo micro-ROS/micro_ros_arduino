@@ -50,15 +50,29 @@ typedef enum
   LET
 } rclc_executor_semantics_t;
 
+typedef enum
+{
+  NONE,
+  SINGLE_THREADED,
+  MULTI_THREADED,
+  NON_POSIX,
+} rclc_executor_type_t;
+
 /// Type definition for trigger function. With the parameters:
 /// - array of executor_handles
 /// - size of array
 /// - application specific struct used in the trigger function
 typedef bool (* rclc_executor_trigger_t)(rclc_executor_handle_t *, unsigned int, void *);
 
+/// function pointer specification
+typedef struct rclc_executor_t_s rclc_executor_t;
+typedef rcl_ret_t (* rclc_executor_func_t)(rclc_executor_t *);
+
 /// Container for RCLC-Executor
-typedef struct
+struct rclc_executor_t_s
 {
+  /// Type of Executor
+  rclc_executor_type_t type;
   /// Context (to get information if ROS is up-and-running)
   rcl_context_t * context;
   /// Container for dynamic array for DDS-handles
@@ -83,7 +97,9 @@ typedef struct
   void * trigger_object;
   /// data communication semantics
   rclc_executor_semantics_t data_comm_semantics;
-} rclc_executor_t;
+  /// pointer to custom executor data structure
+  void * custom;
+};
 
 /**
  *  Return a rclc_executor_t struct with pointer members initialized to `NULL`
