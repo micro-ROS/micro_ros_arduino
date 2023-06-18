@@ -24,27 +24,27 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
 
 Supported boards are:
 
-| Board                                                                               | Min version | State      | Details                                                                                             | .meta file               |
-| ----------------------------------------------------------------------------------- | ----------- | ---------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                 | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon.meta`            |
-| [Arduino Nano RP2040 Connect](https://docs.arduino.cc/hardware/nano-rp2040-connect) | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon_verylowmem.meta` |
-| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/)            | v1.4.16     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide) | `colcon.meta`            |
-| [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon.meta`            |
-| [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon.meta`            |
-| [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)                          | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon_lowmem.meta`     |
-| [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon_lowmem.meta`     |
-| [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon_lowmem.meta`     |
-| [ESP32 Dev Module](https://docs.espressif.com/projects/arduino-esp32/en/latest/boards/ESP32-DevKitC-1.html) | v1.8.5  | Supported  | [Arduino core for the ESP32 (v2.0.2)](https://github.com/espressif/arduino-esp32/releases/tag/2.0.2) | `colcon.meta`   |
+| Board                                                                                                       | Min version | State      | Details                                                                                              | .meta file               |
+| ----------------------------------------------------------------------------------------------------------- | ----------- | ---------- | ---------------------------------------------------------------------------------------------------- | ------------------------ |
+| [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                                         | v1.8.5      | Supported  | Official Arduino support                                                                             | `colcon.meta`            |
+| [Arduino Nano RP2040 Connect](https://docs.arduino.cc/hardware/nano-rp2040-connect)                         | v1.8.5      | Supported  | Official Arduino support                                                                             | `colcon_verylowmem.meta` |
+| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/)                                    | v1.4.16     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide)  | `colcon.meta`            |
+| [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                                                      | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon.meta`            |
+| [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                                                      | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon.meta`            |
+| [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)                                                  | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon_lowmem.meta`     |
+| [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                                                      | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon_lowmem.meta`     |
+| [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)                                                      | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon_lowmem.meta`     |
+| [ESP32 Dev Module](https://docs.espressif.com/projects/arduino-esp32/en/latest/boards/ESP32-DevKitC-1.html) | v1.8.5      | Supported  | [Arduino core for the ESP32 (v2.0.2)](https://github.com/espressif/arduino-esp32/releases/tag/2.0.2) | `colcon.meta`            |
 
 Community contributed boards are:
 
-| Board                                                                                    | Min version | Contributor                                    | Details | .meta file               |
-| ---------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------- | ------- | ------------------------ |
-| [Arduino Due](https://store.arduino.cc/arduino-due)                                      | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
-| [Arduino Zero](https://store.arduino.cc/arduino-zero)                                    | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
-| [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/)                          | -           | [@amfern](https://github.com/amfern)           |         | `colcon.meta`            |
-| [STM32-E407](https://www.olimex.com/Products/ARM/ST/STM32-E407/resources/STM32-E407.pdf) | -           | [@dominikn](https://github.com/dominikn)       |         | `colcon.meta`            |
-| [Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/) | -           | [@maehara-keisuke](https://github.com/maehara-keisuke)       |         | `colcon.meta`            |
+| Board                                                                                    | Min version | Contributor                                            | Details | .meta file               |
+| ---------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------ | ------- | ------------------------ |
+| [Arduino Due](https://store.arduino.cc/arduino-due)                                      | -           | [@lukicdarkoo](https://github.com/lukicdarkoo)         |         | `colcon_verylowmem.meta` |
+| [Arduino Zero](https://store.arduino.cc/arduino-zero)                                    | -           | [@lukicdarkoo](https://github.com/lukicdarkoo)         |         | `colcon_verylowmem.meta` |
+| [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/)                          | -           | [@amfern](https://github.com/amfern)                   |         | `colcon.meta`            |
+| [STM32-E407](https://www.olimex.com/Products/ARM/ST/STM32-E407/resources/STM32-E407.pdf) | -           | [@dominikn](https://github.com/dominikn)               |         | `colcon.meta`            |
+| [Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)               | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) |         | `colcon.meta`            |
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 
