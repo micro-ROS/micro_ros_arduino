@@ -54,6 +54,7 @@ jobs:
             arduino-cli lib install WiFiNINA
             arduino-cli lib install "STM32duino X-NUCLEO-IKS01A3"
             arduino-cli lib install "Seeed Arduino rpcWiFi" # Dependent libraries(e.g. "Seeed Arduino rpcUnified") will be installed together. See https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#needed-libraries-for-wi-fi for more details.
+            arduino-cli lib install WiFiEspAT
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
@@ -81,3 +82,21 @@ jobs:
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            # BUILDING micro-ros_publisher-wifi for WiFi non-native board with ESP-AT(expected to succeed)
+            arduino-cli compile --build-property "build.extra_flags=-DUSE_WIFI_ESP_AT -DESP_AT_SERIAL_PORT=Serial1 -DESP_AT_BAUDRATE=115200 -DESP_AT_RESET_PIN=-1" --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            # BUILDING micro-ros_publisher-wifi for WiFi native board with ESP-AT(expected to fail)
+            return_code=0
+            arduino-cli compile --build-property "build.extra_flags=-DUSE_WIFI_ESP_AT -DESP_AT_SERIAL_PORT=Serial1 -DESP_AT_BAUDRATE=115200 -DESP_AT_RESET_PIN=-1" --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v || return_code=$?
+            if [ $return_code -eq 0 ]
+            then
+            echo Build succeeded as not expected!
+            exit 1
+            fi
+            # BUILDING micro-ros_publisher-wifi for WiFi non-native board without definition "USE_WIFI_ESP_AT'"(expected to fail)
+            return_code=0
+            arduino-cli compile --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v || return_code=$?
+            if [ $return_code -eq 0 ]
+            then
+            echo Build succeeded as not expected!
+            exit 1
+            fi
