@@ -48,6 +48,23 @@ Community contributed boards are:
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 
+### Community confirmed External WiFi module
+
+At present, few boards have native WiFi interface and can use WiFi UDP Transport.
+
+Meanwhile, many WiFi non-native boards have secondary UART channel(in most cases, assigned as `Serial1`). 
+And we may use WiFi UDP Transport by connecting ESP-AT External WiFi module to this channel.
+
+See [ESP-AT Resources](https://www.espressif.com/en/products/sdks/esp-at/overview) for more details about ESP-AT External WiFi module. And try `examples/micro-ros_publisher_wifi`
+
+Community confirmed combinations of board and ESP-AT module are:
+
+| Board                                                                            | Board Definition                                                             | ESP-AT Module                                                                                                      | ESP-AT Firmware version                                                                       | Note                                                                                                                                                 | Confirmed By                                           |
+| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/) | [Arduino Mbed OS RP2040 Boards](https://github.com/arduino/ArduinoCore-mbed) | [ESP32C3-WROOM-02](https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf) | [v2.4.2.0](https://dl.espressif.com/esp-at/firmwares/esp32c3/ESP32-C3-MINI-1-AT-V2.4.2.0.zip) |                                                                                                                                                      | [@maehara-keisuke](https://github.com/maehara-keisuke) |
+| [Seeed Studio XIAO SAMD21](https://wiki.seeedstudio.com/Seeeduino-XIAO/)         | [Seeed SAMD Boards](https://github.com/Seeed-Studio/ArduinoCore-samd)        | [ESP32C3-WROOM-02](https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf) | [v2.4.2.0](https://dl.espressif.com/esp-at/firmwares/esp32c3/ESP32-C3-MINI-1-AT-V2.4.2.0.zip) |                                                                                                                                                      | [@maehara-keisuke](https://github.com/maehara-keisuke) |
+| [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)            | [Arduino Mbed OS RP2040 Boards](https://github.com/arduino/ArduinoCore-mbed) | [ESP32C3-WROOM-02](https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf) | [v2.4.2.0](https://dl.espressif.com/esp-at/firmwares/esp32c3/ESP32-C3-MINI-1-AT-V2.4.2.0.zip) | Follow chip pinout to determine right pin function. Silk printing on board is for [other framework](https://github.com/earlephilhower/arduino-pico). | [@maehara-keisuke](https://github.com/maehara-keisuke) |
+
 ## How to use the precompiled library
 
 ### Arduino IDE
