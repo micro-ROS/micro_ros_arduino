@@ -80,7 +80,7 @@ docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras micr
 Optionally a specific single target can be built using the `-p <LIBRARY_TARGET>` argument like this:
 
 ```bash
-docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:galactic -p <LIBRARY_TARGET>
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:iron -p <LIBRARY_TARGET>
 ```
 
 Available targets `LIBRARY_TARGETS` are available on the [top of the extras/library_generation/library_generation.sh file](https://github.com/micro-ROS/micro_ros_arduino/blob/iron/extras/library_generation/library_generation.sh#L13-L24)
