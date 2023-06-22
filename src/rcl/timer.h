@@ -31,6 +31,7 @@ extern "C"
 #include "rcl/macros.h"
 #include "rcl/time.h"
 #include "rcl/types.h"
+#include "rcutils/logging_macros.h"
 #include "rmw/rmw.h"
 
 typedef struct rcl_timer_impl_s rcl_timer_impl_t;
@@ -125,8 +126,8 @@ rcl_get_zero_initialized_timer(void);
  * // ... error handling
  *
  * rcl_timer_t timer = rcl_get_zero_initialized_timer();
- * ret = rcl_timer_init(
- *   &timer, &clock, context, RCL_MS_TO_NS(100), my_timer_callback, allocator);
+ * ret = rcl_timer_init2(
+ *   &timer, &clock, context, RCL_MS_TO_NS(100), my_timer_callback, allocator, true);
  * // ... error handling, use the timer with a wait set, or poll it manually, then cleanup
  * ret = rcl_timer_fini(&timer);
  * // ... error handling
@@ -151,6 +152,7 @@ rcl_get_zero_initialized_timer(void);
  * \param[in] period the duration between calls to the callback in nanoseconds
  * \param[in] callback the user defined function to be called every period
  * \param[in] allocator the allocator to use for allocations
+ * \param[in] autostart the state of the timer at initialization
  * \return #RCL_RET_OK if the timer was initialized successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
  * \return #RCL_RET_ALREADY_INIT if the timer was already initialized, or
@@ -159,6 +161,22 @@ rcl_get_zero_initialized_timer(void);
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
+rcl_ret_t
+rcl_timer_init2(
+  rcl_timer_t * timer,
+  rcl_clock_t * clock,
+  rcl_context_t * context,
+  int64_t period,
+  const rcl_timer_callback_t callback,
+  rcl_allocator_t allocator,
+  bool autostart);
+
+/**
+ * \deprecated `rcl_timer_init` implementation was removed.
+ *   Refer to `rcl_timer_init2`.
+ */
+RCL_PUBLIC
+RCUTILS_DEPRECATED_WITH_MSG("Call rcl_timer_init2 instead")
 rcl_ret_t
 rcl_timer_init(
   rcl_timer_t * timer,
