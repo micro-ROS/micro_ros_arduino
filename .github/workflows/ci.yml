@@ -82,19 +82,11 @@ jobs:
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            # BUILDING micro-ros_publisher-wifi for WiFi non-native board with ESP-AT(expected to succeed)
-            arduino-cli compile --build-property "build.extra_flags=-DUSE_WIFI_ESP_AT -DESP_AT_SERIAL_PORT=Serial1 -DESP_AT_BAUDRATE=115200 -DESP_AT_RESET_PIN=-1" --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            # BUILDING micro-ros_publisher-wifi for WiFi native board with ESP-AT(expected to fail)
+            # Build micro-ros_publisher-wifi_at for WiFi non-native board with ESP-AT
+            arduino-cli compile --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v
+            # Build micro-ros_publisher-wifi_at for WiFi native board with ESP-AT to check whether #error macro works or not
             return_code=0
-            arduino-cli compile --build-property "build.extra_flags=-DUSE_WIFI_ESP_AT -DESP_AT_SERIAL_PORT=Serial1 -DESP_AT_BAUDRATE=115200 -DESP_AT_RESET_PIN=-1" --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v || return_code=$?
-            if [ $return_code -eq 0 ]
-            then
-            echo Build succeeded as not expected!
-            exit 1
-            fi
-            # BUILDING micro-ros_publisher-wifi for WiFi non-native board without definition "USE_WIFI_ESP_AT'"(expected to fail)
-            return_code=0
-            arduino-cli compile --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v || return_code=$?
+            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v || return_code=$?
             if [ $return_code -eq 0 ]
             then
             echo Build succeeded as not expected!
