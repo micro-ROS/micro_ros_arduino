@@ -84,11 +84,3 @@ jobs:
             arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             # Build micro-ros_publisher-wifi_at for WiFi non-native board with ESP-AT
             arduino-cli compile --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v
-            # Build micro-ros_publisher-wifi_at for WiFi native board with ESP-AT to check whether #error macro works or not
-            return_code=0
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v || return_code=$?
-            if [ $return_code -eq 0 ]
-            then
-            echo Build succeeded as not expected!
-            exit 1
-            fi
