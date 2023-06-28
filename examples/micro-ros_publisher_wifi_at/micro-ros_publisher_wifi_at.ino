@@ -1,4 +1,17 @@
+// To use "ESP-AT External WiFi module"(hereinafter called "ESP-AT") with your board, install "WiFiEspAT" from Library Manager.
+// See https://www.espressif.com/en/products/sdks/esp-at/overview for more details about ESP-AT.
+
+#define BOARD_WITH_ESP_AT
+// Configurations about communication between Host MCU and ESP-AT.
+// In most cases, you would burn ESP-AT firmware v2 or later. And you should uncomment "#define WIFIESPAT1" in EspAtDrvTypes.h
+// See https://github.com/JAndrassy/WiFiEspAT/tree/7f398e14f331fc845c4af671f1946fe3f29a744f#getting-started for more details.
+#define ESP_AT_SERIAL_PORT Serial1 // Serial port object to ESP-AT
+#define ESP_AT_BAUDRATE 115200 // Baudrate setting in ESP-AT firmware(default is 115200)
+#define ESP_AT_RESET_PIN -1 // GPIO_PIN connected to ESP-AT's reset pin(-1 means not to use hardware reset)
+
 #include <micro_ros_arduino.h>
+
+#include <wifi_transport.cpp>
 
 #include <stdio.h>
 #include <rcl/rcl.h>
@@ -8,8 +21,12 @@
 
 #include <std_msgs/msg/int32.h>
 
-#if !defined(ESP32) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_NANO_RP2040_CONNECT) && !defined(ARDUINO_WIO_TERMINAL)
-#error This example is only available for Arduino Portenta, Arduino Nano RP2040 Connect, ESP32 Dev module and Wio Terminal
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL)
+#define BOARD_HAS_NATIVE_WIFI
+#endif
+
+#if defined(BOARD_HAS_NATIVE_WIFI)
+#error This example is not available for boards that have native WiFi.
 #endif
 
 rcl_publisher_t publisher;
