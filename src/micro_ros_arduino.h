@@ -95,7 +95,7 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 
 #endif
 
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL) || defined(BOARD_WITH_ESP_AT)
 
 #if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7)
 #include <WiFi.h>
@@ -106,6 +106,8 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 #elif defined(ARDUINO_WIO_TERMINAL)
 #include <rpcWiFi.h>
 #include <WiFiUdp.h>
+#elif defined(BOARD_WITH_ESP_AT)
+#include <WiFiEspAT.h>
 #endif
 
 extern "C" bool arduino_wifi_transport_open(struct uxrCustomTransport * transport);
@@ -120,6 +122,15 @@ struct micro_ros_agent_locator {
 #endif
 
 static inline void set_microros_wifi_transports(char * ssid, char * pass, char * agent_ip, uint agent_port){
+
+	#if defined(BOARD_WITH_ESP_AT)
+	ESP_AT_SERIAL_PORT.begin(ESP_AT_BAUDRATE);
+	while (!ESP_AT_SERIAL_PORT) {
+	}
+	WiFi.init(ESP_AT_SERIAL_PORT, ESP_AT_RESET_PIN);
+	while (WiFi.status() == WL_NO_MODULE) {
+	}
+	#endif
 
 	WiFi.begin(ssid, pass);
 
