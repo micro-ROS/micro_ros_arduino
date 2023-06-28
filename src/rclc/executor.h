@@ -40,22 +40,33 @@ extern "C"
     processed in a user-defined order.
 */
 
-/* defines the semantics of data communication
-   RCLCPP_EXECUTOR - same semantics as in the rclcpp Executor ROS2(Eloquent)
-   LET             - logical execution time
+/** Defines the semantics when data is taken from DDS
+ *  SEMANTICS_RCLCPP_EXECUTOR        - same semantics as in rclcpp Executor. Data of a subscription
+ *                                     is taken from DDS just before the corresponding callback
+ *                                     is called by the Executor.
+ *  SEMANTICS_LOGICAL_EXECUTION_TIME - logical execution time semantics. At one sampling point t
+ *                                     new data of all ready subscriptions are taken from DDS.
+ *                                     During (sequential) processing of these callbacks the
+ *                                     data is used as per sampling point t. If new data arrived
+ *                                     between the sampling point t and the time point at which
+ *                                     the callback is called, it would not be considered in this
+ *                                     `rclc_executor_spin_some` iteration.
 */
 typedef enum
 {
-  RCLCPP_EXECUTOR,
-  LET
+  RCLC_SEMANTICS_RCLCPP_EXECUTOR,
+  RCLC_SEMANTICS_LOGICAL_EXECUTION_TIME
 } rclc_executor_semantics_t;
 
+/**
+ * Different types of Executors.
+*/
 typedef enum
 {
-  NONE,
-  SINGLE_THREADED,
-  MULTI_THREADED,
-  NON_POSIX,
+  RCLC_EXECUTOR_NOT_INITIALIZED,
+  RCLC_EXECUTOR_SINGLE_THREADED,
+  RCLC_EXECUTOR_MULTI_THREADED,
+  RCLC_EXECUTOR_NON_POSIX,
 } rclc_executor_type_t;
 
 /// Type definition for trigger function. With the parameters:
