@@ -10,7 +10,7 @@ https://github.com/eProsima/Micro-XRCE-DDS-Client.git cf9069c497fa96af58052dbdcb
 https://github.com/micro-ROS/micro_ros_msgs.git 2a5d7536e60d9722b261a03d3564c0aa9d25da7d
 https://github.com/micro-ROS/micro_ros_utilities 5f1cead35a1c4940db60e04e8a73c057ea2449b8
 https://github.com/micro-ROS/rcl 98575f8bebad2720373fedacd4172802bd8dddce
-https://github.com/micro-ROS/rcutils 6505fcc215423cb7b7ef45fdc6e4ad1aca72fe50
+https://github.com/micro-ROS/rcutils 7983ac2ca59002dd713dd207c609d27d399dfaee
 https://github.com/micro-ROS/rmw-microxrcedds.git bc4eb312ac4601a4137c35f4a56b9b83b4b18339
 https://github.com/micro-ROS/rosidl_dynamic_typesupport.git f94715226667a8b39368e3c4828d5684c8dd8d6d
 https://github.com/micro-ROS/rosidl_typesupport.git 82bfacb38aae26cda159592aca5c43e4f4c291ea
