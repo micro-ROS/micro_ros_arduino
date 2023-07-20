@@ -35,9 +35,12 @@ extern "C"
 #include "rcl/types.h"
 #include "rcl/visibility_control.h"
 
+#include "type_description_interfaces/srv/get_type_description.h"
+
 extern const char * const RCL_DISABLE_LOANED_MESSAGES_ENV_VAR;
 
 typedef struct rcl_node_impl_s rcl_node_impl_t;
+typedef struct rcl_service_s rcl_service_t;
 
 /// Structure which encapsulates a ROS Node.
 typedef struct rcl_node_s
@@ -550,6 +553,115 @@ rcl_node_resolve_name(
 RCL_PUBLIC
 rcl_ret_t
 rcl_get_disable_loaned_message(bool * disable_loaned_message);
+
+/// Initialize the node's ~/get_type_description service.
+/**
+ * This function initializes the node's ~/get_type_description service
+ * which can be used to retrieve information about types used by the node's
+ * publishers, subscribers, services or actions.
+ *
+ * Note that this will not register any callback for the service, client-level code
+ * must register rcl_node_type_description_service_handle_request or a custom callback
+ * to handle incoming requests, via that client's executor/waitset capabilities.
+ *
+ * This will initialize the node's type cache, if it has not been initialized already.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] node handle to the node for which to initialize the service
+ * \return #RCL_RET_OK if the service was successfully initialized, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_ALREADY_INIT if the service is already initialized, or
+ * \return #RCL_RET_BAD_ALLOC if memory allocation for the service failed, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t rcl_node_type_description_service_init(rcl_node_t * node);
+
+/// Finalizes the node's ~/get_type_description service.
+/**
+ * This function finalizes the node's private ~/get_type_description service.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] node the handle to the node whose type cache should be initialized
+ * \return #RCL_RET_OK if service was deinitialized successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_SERVICE_INVALID if the service is invalid, or
+ * \return #RCL_RET_NODE_INVALID if the node is invalid, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t rcl_node_type_description_service_fini(rcl_node_t * node);
+
+
+/// Returns a pointer to the node's ~/get_type_description service.
+/**
+ * On success, sets service_out to the initialized service.
+ * rcl_node_type_description_service_init must be called before this.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] node the handle to the node
+ * \param[out] service_out Handle to pointer that will be set
+ * \return #RCL_RET_OK if valid service was returned successfully, or
+ * \return #RCL_RET_NODE_INVALID if node is invalid, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_NOT_INIT if the service hasn't yet been initialized, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t rcl_node_get_type_description_service(
+  const rcl_node_t * node,
+  rcl_service_t ** service_out);
+
+
+/// Process a single pending request to the GetTypeDescription service.
+/**
+ * This function may be called to handle incoming requests by any client starting the service.
+ * It is not intended to be called directly by users.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] node the handle to the node
+ * \param[in] request_header ID of the incoming request
+ * \param[in] request Request that came in to the service
+ * \param[out] response Allocated, uninitialized response to the request
+ * \return void
+ */
+RCL_PUBLIC
+void rcl_node_type_description_service_handle_request(
+  rcl_node_t * node,
+  const rmw_request_id_t * request_header,
+  const type_description_interfaces__srv__GetTypeDescription_Request * request,
+  type_description_interfaces__srv__GetTypeDescription_Response * response);
 
 #ifdef __cplusplus
 }
