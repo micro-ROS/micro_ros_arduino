@@ -20,14 +20,14 @@ https://github.com/ros2/ament_cmake_ros.git 15f835d0e31354c4ac958a32b5f1caa42465
 https://github.com/ros2/common_interfaces.git 366eea24ffce6c87f8860cbcd27f4863f46ad822
 https://github.com/ros2/example_interfaces.git 108037a8216a6c39be5ecc9f7c18e79a95445805
 https://github.com/ros2/libyaml_vendor.git 4dbe69b952379b39062b9c98898cf1a1cdee9a56
-https://github.com/ros2/rcl.git 23c34403c80ed23e03f0738950b0e7c1aac7fcb8
+https://github.com/ros2/rcl.git 960bb4ad353a43abfde5ecb831bd87823454bfc0
 https://github.com/ros2/rcl_interfaces.git f03ee90089b96e9d6aa699019f43f17e1b0ac291
 https://github.com/ros2/rcl_logging.git e9f237d29cfa9651eb96273e7e1fefb978faa1dc
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
 https://github.com/ros2/rcpputils.git 47ad866332d307a9f6a9fe46391efcd1c9a2de54
 https://github.com/ros2/rmw.git 83445be486deae8c78d275e092eafb4bf380bd49
 https://github.com/ros2/rmw_implementation.git 29640b9f2b480a3e6c13126203714d4bb6d5e7d2
-https://github.com/ros2/ros2_tracing.git 0d9883c183244d4ac8f35e0e759b0642f5f91014
+https://github.com/ros2/ros2_tracing.git 25ffc22aac57dbb564da7d764bb88c2e73aa0c70
 https://github.com/ros2/rosidl.git c72b4545894ca99b58b73c5b8f3e232541353862
 https://github.com/ros2/rosidl_core.git 84fa73d3974fe31fbe397e41e4449a31c2fb6ce4
 https://github.com/ros2/rosidl_dds.git 16a3503d7694917f0c968e3918351e8d2f7fdb38
