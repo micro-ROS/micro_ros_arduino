@@ -6,13 +6,12 @@ https://github.com/ament/ament_package.git cf415e74bb8faff896bb6915ee3d120cc7b60
 https://github.com/ament/googletest.git 1c2fdcd80b08fcfe6b70fa2a369ae6bab9d5f78e
 https://github.com/ament/uncrustify_vendor.git 94ed3f68d1d2e44e04398c4538509f5e78114dae
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
-https://github.com/eProsima/Micro-XRCE-DDS-Client.git cf9069c497fa96af58052dbdcb17566719ba934c
+https://github.com/eProsima/Micro-XRCE-DDS-Client.git b8dbfaa775d0d842edfa9a0eb2ebc8ebdb1a0c14
 https://github.com/micro-ROS/micro_ros_msgs.git 2a5d7536e60d9722b261a03d3564c0aa9d25da7d
 https://github.com/micro-ROS/micro_ros_utilities 5f1cead35a1c4940db60e04e8a73c057ea2449b8
 https://github.com/micro-ROS/rcl bfec3097e8f61fbe2bdf0055ac4c2ec4c1ded00d
 https://github.com/micro-ROS/rcutils 96c778bf548a4e957787d17a778c0c9df9b045ac
 https://github.com/micro-ROS/rmw-microxrcedds.git bc4eb312ac4601a4137c35f4a56b9b83b4b18339
-https://github.com/micro-ROS/rosidl_dynamic_typesupport.git f94715226667a8b39368e3c4828d5684c8dd8d6d
 https://github.com/micro-ROS/rosidl_typesupport.git 82bfacb38aae26cda159592aca5c43e4f4c291ea
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git c2776855f591388cf8900e3b8df15f9dfd95305b
 https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e87386cf60
@@ -32,6 +31,7 @@ https://github.com/ros2/rosidl.git 995917e9ce14d17821c04bf28d5a092111537842
 https://github.com/ros2/rosidl_core.git 83df4c6574f90a8479d0b0211a463a7806ad6179
 https://github.com/ros2/rosidl_dds.git f074b295c316e9bbb9845344cc6ab882339e9305
 https://github.com/ros2/rosidl_defaults.git 34a204f3ce0528c6ec3bb89d33404422eb879995
+https://github.com/ros2/rosidl_dynamic_typesupport 3c2ea1a0b8957aaea5cebf5805f6091412cd513f
 https://github.com/ros2/test_interface_files.git 3abbbf68d939cac86e53992b68ee93f9a37fff41
 https://github.com/ros2/unique_identifier_msgs.git 1ced881f07e5d5744d01867b1caedbc13c856195
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
