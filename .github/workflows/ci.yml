@@ -40,11 +40,11 @@ jobs:
             arduino-cli core install arduino:sam -v
             arduino-cli core install arduino:mbed -v
             arduino-cli core install esp32:esp32 -v
-            arduino-cli core install teensy:avr -v
+            arduino-cli core install teensy:avr@1.58.0 -v
             arduino-cli core install Seeeduino:samd -v
             #
             # PATCHING TEENSY AND SAM
-            cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/hardware/avr/*/platform.txt
+            cat checkout/extras/patching_boards/platform_teensy.txt > /github/home/.arduino15/packages/teensy/hardware/avr/1.58.0/platform.txt
             # remove when https://github.com/arduino/ArduinoCore-sam/pull/115 merged
             cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /github/home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
             #
