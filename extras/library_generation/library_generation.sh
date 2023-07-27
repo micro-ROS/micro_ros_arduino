@@ -117,7 +117,7 @@ fi
 if [[ " ${PLATFORMS[@]} " =~ " teensy32 " ]]; then
     rm -rf firmware/build
 
-    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    export TOOLCHAIN_PREFIX=/uros_ws/teensy-compile/tools/arm/bin/arm-none-eabi-
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy32_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
@@ -131,7 +131,7 @@ fi
 if [[ " ${PLATFORMS[@]} " =~ " teensy35 " ]]; then
     rm -rf firmware/build
 
-    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    export TOOLCHAIN_PREFIX=/uros_ws/teensy-compile/tools/arm/bin/arm-none-eabi-
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy35_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
 
     find firmware/build/include/ -name "*.c"  -delete
@@ -150,7 +150,7 @@ if [[ " ${PLATFORMS[@]} " =~ " teensy36 " ]]; then
     if [[ " ${PLATFORMS[@]} " =~ " teensy35 " ]]; then
         ln /project/src/mk64fx512/fpv4-sp-d16-hard/libmicroros.a /project/src/mk66fx1m0/fpv4-sp-d16-hard/libmicroros.a
     else
-        export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+        export TOOLCHAIN_PREFIX=/uros_ws/teensy-compile/tools/arm/bin/arm-none-eabi-
         ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy35_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
 
         find firmware/build/include/ -name "*.c"  -delete
@@ -164,7 +164,7 @@ fi
 if [[ " ${PLATFORMS[@]} " =~ " teensy4 " ]]; then
     rm -rf firmware/build
 
-    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-
+    export TOOLCHAIN_PREFIX=/uros_ws/teensy-compile/tools/arm/bin/arm-none-eabi-
     ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/teensy4_toolchain.cmake /project/extras/library_generation/colcon.meta
 
     find firmware/build/include/ -name "*.c"  -delete
@@ -237,8 +237,8 @@ popd > /dev/null
 
 apt -y install rsync
 for var in ${INCLUDE_ROS2_PACKAGES}; do
-    rsync -r /project/src/${var}/${var}/* /project/src/${var}/
-    rm -rf /project/src/${var}/${var}/
+    rsync -r /project/src/${var}/${var}/* /project/src/${var}/ > /dev/null 2>&1
+    rm -rf /project/src/${var}/${var}/ > /dev/null 2>&1
 done
 
 ######## Generate extra files ########
