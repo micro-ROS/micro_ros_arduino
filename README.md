@@ -24,19 +24,6 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
 
 Supported boards are:
 
-<<<<<<< HEAD
-| Board                                                                               | Min version | State      | Details                                                                                             | .meta file               |
-| ----------------------------------------------------------------------------------- | ----------- | ---------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                 | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon.meta`            |
-| [Arduino Nano RP2040 Connect](https://docs.arduino.cc/hardware/nano-rp2040-connect) | v1.8.5      | Supported  | Official Arduino support                                                                            | `colcon_verylowmem.meta` |
-| [OpenCR](https://emanual.robotis.com/docs/en/parts/controller/opencr10/)            | v1.4.16     | Supported  | [Based on custom board](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide) | `colcon.meta`            |
-| [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon.meta`            |
-| [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon.meta`            |
-| [Teensy 3.2/3.1](https://www.pjrc.com/store/teensy32.html)                          | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon_lowmem.meta`     |
-| [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                              | v1.8.5      | Not tested | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon_lowmem.meta`     |
-| [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)                              | v1.8.5      | Supported  | [Based on Teensyduino](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                                | `colcon_lowmem.meta`     |
-| [ESP32 Dev Module](https://docs.espressif.com/projects/arduino-esp32/en/latest/boards/ESP32-DevKitC-1.html) | v1.8.5  | Supported  | [Arduino core for the ESP32 (v2.0.2)](https://github.com/espressif/arduino-esp32/releases/tag/2.0.2) | `colcon.meta`   |
-=======
 | Board                                                                                                       | Min version | State      | Details                                                                                              | .meta file               |
 | ----------------------------------------------------------------------------------------------------------- | ----------- | ---------- | ---------------------------------------------------------------------------------------------------- | ------------------------ |
 | [Arduino Portenta H7 M7 Core](https://store.arduino.cc/portenta-h7)                                         | v1.8.5      | Supported  | Official Arduino support                                                                             | `colcon.meta`            |
@@ -48,7 +35,6 @@ Supported boards are:
 | [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                                                      | v1.8.5      | Not tested | [Based on Teensyduino (1.58.x)](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon_lowmem.meta`     |
 | [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)                                                      | v1.8.5      | Supported  | [Based on Teensyduino (1.58.x)](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/)                       | `colcon_lowmem.meta`     |
 | [ESP32 Dev Module](https://docs.espressif.com/projects/arduino-esp32/en/latest/boards/ESP32-DevKitC-1.html) | v1.8.5      | Supported  | [Arduino core for the ESP32 (v2.0.2)](https://github.com/espressif/arduino-esp32/releases/tag/2.0.2) | `colcon.meta`            |
->>>>>>> 69ca6d8 (Fix teensy patch and compiler (#1482))
 
 Community contributed boards are:
 
