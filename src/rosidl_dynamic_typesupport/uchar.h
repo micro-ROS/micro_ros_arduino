@@ -22,12 +22,25 @@ extern "C" {
 #if defined(__cplusplus) && __cplusplus >= 201103L
 // Nothing to do here, C++11 and beyond have char16_t as a keyword:
 // https://en.cppreference.com/w/cpp/keyword/char16_t
-#elif defined(__has_include) && __has_include(<uchar.h>)
+#else
+// According to https://gcc.gnu.org/onlinedocs/cpp/_005f_005fhas_005finclude.html,
+// short-circuit style use of __has_include is not supported, so split the conditional
+#  if defined(__has_include)
+#    if __has_include(<uchar.h>)
 // If the compiler has __has_include, and uchar.h exists, include that as it will have char16_t
 // as a typedef.
-#  include <uchar.h>
-#else
+#      include <uchar.h>
+#    else
 // Otherwise assume that char16_t isn't defined anywhere, and define it ourselves as uint_least16_t.
+#      define __ROSIDL_DYNAMIC_TYPESUPPORT__UCHAR_H__NEEDS_CHAR16_T_DECL
+#    endif
+#  else
+#    define __ROSIDL_DYNAMIC_TYPESUPPORT__UCHAR_H__NEEDS_CHAR16_T_DECL
+#  endif
+#endif
+
+#if defined(__ROSIDL_DYNAMIC_TYPESUPPORT__UCHAR_H__NEEDS_CHAR16_T_DECL)
+#  undef __ROSIDL_DYNAMIC_TYPESUPPORT__UCHAR_H__NEEDS_CHAR16_T_DECL
 #  include <stdint.h>
 typedef uint_least16_t char16_t;
 #endif
