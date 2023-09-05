@@ -324,6 +324,7 @@ rcl_take_request(
  * \return #RCL_RET_OK if the response was sent successfully, or
  * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
  * \return #RCL_RET_SERVICE_INVALID if the service is invalid, or
+ * \return #RCL_RET_TIMEOUT if a response reader is not ready yet, or
  * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
