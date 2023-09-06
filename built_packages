@@ -7,7 +7,7 @@ https://github.com/ament/googletest.git ad343ef3c63b949cef97b0294d5ff352c499881b
 https://github.com/ament/uncrustify_vendor.git 37d7088131449989663c4258ff8b88b886fb83d8
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git b8dbfaa775d0d842edfa9a0eb2ebc8ebdb1a0c14
-https://github.com/micro-ROS/micro_ros_msgs.git 6169930ea21b4deb9b400ac479475d1efb3853a8
+https://github.com/micro-ROS/micro_ros_msgs.git 02dd8456ede8ae75ba4c706231e1ff9e55758221
 https://github.com/micro-ROS/micro_ros_utilities 726d95d22c8688d1b71bb41e873e2ee134996706
 https://github.com/micro-ROS/rcl ca836603e11c18bdf262b27a50935c3764948177
 https://github.com/micro-ROS/rcutils 552cb11bdbebf1c1b4249611828a815eca024628
@@ -20,7 +20,7 @@ https://github.com/ros2/common_interfaces.git 366eea24ffce6c87f8860cbcd27f4863f4
 https://github.com/ros2/example_interfaces.git 4d7d086e4791e1839fecb9c50a1291d4056b916f
 https://github.com/ros2/libyaml_vendor.git 4dbe69b952379b39062b9c98898cf1a1cdee9a56
 https://github.com/ros2/rcl.git 41b83c8ebfe8344a80c0093083b7abdfded79337
-https://github.com/ros2/rcl_interfaces.git f03ee90089b96e9d6aa699019f43f17e1b0ac291
+https://github.com/ros2/rcl_interfaces.git 17066cdb342f426eec1fd97187225c4f1bf87101
 https://github.com/ros2/rcl_logging.git 6d776cdc72ce872000ef6301a70a6fd403966b18
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
 https://github.com/ros2/rcpputils.git 47ad866332d307a9f6a9fe46391efcd1c9a2de54
