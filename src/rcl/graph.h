@@ -498,7 +498,8 @@ rcl_get_node_names_with_enclaves(
  *
  * The `topic_name` parameter must not be `NULL`, and must not be an empty string.
  * It should also follow the topic name rules.
- * \todo TODO(wjwwood): link to the topic name rules.
+ *
+ * See: https://design.ros2.org/articles/topic_and_service_names.html
  *
  * The `count` parameter must point to a valid bool.
  * The `count` parameter is the output for this function and will be set.
@@ -543,7 +544,8 @@ rcl_count_publishers(
  *
  * The `topic_name` parameter must not be `NULL`, and must not be an empty string.
  * It should also follow the topic name rules.
- * \todo TODO(wjwwood): link to the topic name rules.
+ *
+ * See: https://design.ros2.org/articles/topic_and_service_names.html
  *
  * The `count` parameter must point to a valid bool.
  * The `count` parameter is the output for this function and will be set.
