@@ -21,6 +21,8 @@
 #include <limits>
 #include <memory>
 #include <vector>
+#include <utility>
+#include <string>
 
 #include "test_msgs/msg/arrays.hpp"
 #include "test_msgs/msg/basic_types.hpp"
@@ -35,6 +37,26 @@
 #include "test_msgs/msg/strings.hpp"
 #include "test_msgs/msg/unbounded_sequences.hpp"
 #include "test_msgs/msg/w_strings.hpp"
+
+static inline std::string
+from_u8string(const std::string & s)
+{
+  return s;
+}
+
+static inline std::string
+from_u8string(std::string && s)
+{
+  return std::move(s);
+}
+
+#if defined(__cpp_lib_char8_t)
+static inline std::string
+from_u8string(const std::u8string & s)
+{
+  return std::string(s.begin(), s.end());
+}
+#endif
 
 static inline std::vector<test_msgs::msg::Empty::SharedPtr>
 get_messages_empty()
@@ -160,8 +182,8 @@ get_messages_strings()
   }
   {
     auto msg = std::make_shared<test_msgs::msg::Strings>();
-    msg->string_value = u8"Hell\u00F6 W\u00F6rld!";  // using umlaut
-    msg->bounded_string_value = u8"Hell\u00F6 W\u00F6rld!";  // using umlaut
+    msg->string_value = from_u8string(u8"Hell\u00F6 W\u00F6rld!");  // using umlaut
+    msg->bounded_string_value = from_u8string(u8"Hell\u00F6 W\u00F6rld!");  // using umlaut
     messages.push_back(msg);
   }
   {
