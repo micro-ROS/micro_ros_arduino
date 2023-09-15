@@ -31,7 +31,7 @@ https://github.com/ros2/rosidl.git 995917e9ce14d17821c04bf28d5a092111537842
 https://github.com/ros2/rosidl_core.git 83df4c6574f90a8479d0b0211a463a7806ad6179
 https://github.com/ros2/rosidl_dds.git f074b295c316e9bbb9845344cc6ab882339e9305
 https://github.com/ros2/rosidl_defaults.git 34a204f3ce0528c6ec3bb89d33404422eb879995
-https://github.com/ros2/rosidl_dynamic_typesupport 9e9264c5718489dea75337657473a183ed5ec19c
+https://github.com/ros2/rosidl_dynamic_typesupport 58e39fdc961273abf4587ac89b632063e9b55ca5
 https://github.com/ros2/test_interface_files.git 3abbbf68d939cac86e53992b68ee93f9a37fff41
 https://github.com/ros2/unique_identifier_msgs.git 1ced881f07e5d5744d01867b1caedbc13c856195
 https://github.com/yaml/libyaml.git 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
