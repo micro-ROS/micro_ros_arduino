@@ -1,7 +1,7 @@
 
 https://github.com/ament/ament_cmake.git c5eb2cdc08cf318ad5e8fb14611106cea7ec4c1f
 https://github.com/ament/ament_index.git 076cef041834ae7a8c515ffb86f97b51e3aaff61
-https://github.com/ament/ament_lint.git 243cf69b8806f16bdd9953948a26efa2ea2ddefa
+https://github.com/ament/ament_lint.git 299159e5df073a4694ba793bac2542c97cdf6a8e
 https://github.com/ament/ament_package.git 4e575b1b08659249ceb0a838b9a251f8b1477b04
 https://github.com/ament/googletest.git ad343ef3c63b949cef97b0294d5ff352c499881b
 https://github.com/ament/uncrustify_vendor.git 37d7088131449989663c4258ff8b88b886fb83d8
@@ -9,7 +9,7 @@ https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git b8dbfaa775d0d842edfa9a0eb2ebc8ebdb1a0c14
 https://github.com/micro-ROS/micro_ros_msgs.git 02dd8456ede8ae75ba4c706231e1ff9e55758221
 https://github.com/micro-ROS/micro_ros_utilities 726d95d22c8688d1b71bb41e873e2ee134996706
-https://github.com/micro-ROS/rcl 75135a65bbd8bf8ac5b8ca3d88d833565e9d02fb
+https://github.com/micro-ROS/rcl 3789f958315c286f4fdec180e8dfb01a76043117
 https://github.com/micro-ROS/rcutils ce0e472072e48d689a1561a571778c630e7f6163
 https://github.com/micro-ROS/rmw-microxrcedds.git 6833232797d1034860125e949f34067a850eeb43
 https://github.com/micro-ROS/rosidl_typesupport.git 9e3abf7effcbee61fe9b57712220e22e093b22b5
@@ -19,7 +19,7 @@ https://github.com/ros2/ament_cmake_ros.git 15f835d0e31354c4ac958a32b5f1caa42465
 https://github.com/ros2/common_interfaces.git 366eea24ffce6c87f8860cbcd27f4863f46ad822
 https://github.com/ros2/example_interfaces.git 4d7d086e4791e1839fecb9c50a1291d4056b916f
 https://github.com/ros2/libyaml_vendor.git 4dbe69b952379b39062b9c98898cf1a1cdee9a56
-https://github.com/ros2/rcl.git 1260197bb53353ce91a129a47ba0271eea2033a2
+https://github.com/ros2/rcl.git 9a05fa65926673b2986175ff055215861e29bf5b
 https://github.com/ros2/rcl_interfaces.git 7f4d0d6b0509452b0d76af6122cdf5251919ecc9
 https://github.com/ros2/rcl_logging.git 014239dd80ab3de2a847af80f23d24da6438ecb7
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
