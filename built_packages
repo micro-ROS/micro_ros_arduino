@@ -9,7 +9,7 @@ https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git b8dbfaa775d0d842edfa9a0eb2ebc8ebdb1a0c14
 https://github.com/micro-ROS/micro_ros_msgs.git 02dd8456ede8ae75ba4c706231e1ff9e55758221
 https://github.com/micro-ROS/micro_ros_utilities 4757528454cb0386ec0a18fcbd7ce3627fcca60d
-https://github.com/micro-ROS/rcl ec1e32101f295d0fc73a05acaecb584321a34715
+https://github.com/micro-ROS/rcl 19c6eb461c33b155e1bda1e01b5f6704fd3a16a5
 https://github.com/micro-ROS/rcutils 6d5476a89727fab17a9b94ba77264a6251024a25
 https://github.com/micro-ROS/rmw-microxrcedds.git 6833232797d1034860125e949f34067a850eeb43
 https://github.com/micro-ROS/rosidl_typesupport.git 9e3abf7effcbee61fe9b57712220e22e093b22b5
@@ -18,12 +18,12 @@ https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e8738
 https://github.com/ros2/ament_cmake_ros.git 15f835d0e31354c4ac958a32b5f1caa4246596a5
 https://github.com/ros2/common_interfaces.git 366eea24ffce6c87f8860cbcd27f4863f46ad822
 https://github.com/ros2/example_interfaces.git 4d7d086e4791e1839fecb9c50a1291d4056b916f
-https://github.com/ros2/libyaml_vendor.git 6a42ed69fc771190a7d6806f8230ff91ffc9b7d6
-https://github.com/ros2/rcl.git 8f7f4f0804a34ee9d9ecd2d7e75a57ce2b7ced5d
+https://github.com/ros2/libyaml_vendor.git ddabd1951ae619fd42db14ec09d5cb595f644985
+https://github.com/ros2/rcl.git e37d7f8532c287df0fd8d3727677f5dde20dd5f3
 https://github.com/ros2/rcl_interfaces.git fbd32f8b8ef90fb9cefdc90d8d2f5b992fd843bb
 https://github.com/ros2/rcl_logging.git 014239dd80ab3de2a847af80f23d24da6438ecb7
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
-https://github.com/ros2/rcpputils.git 9115db1b094418910900859448b237eb0ac713b0
+https://github.com/ros2/rcpputils.git 1905c950b5ff9557212b302ac1b7f484ec144e41
 https://github.com/ros2/rmw.git 83445be486deae8c78d275e092eafb4bf380bd49
 https://github.com/ros2/rmw_implementation.git 03cd08a826da474aeb490e116e1c6bba90756b40
 https://github.com/ros2/ros2_tracing.git 0041e07e034538f7fa99cdcbe7c2d2c83dc1d272
