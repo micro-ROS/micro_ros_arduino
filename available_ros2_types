@@ -135,6 +135,7 @@ rcl_interfaces/SetParameters.srv
 rcl_interfaces/SetParametersAtomically.srv
 rcl_interfaces/SetParametersResult.msg
 rosgraph_msgs/Clock.msg
+rosidl_generator_tests/SmallConstant.msg
 sensor_msgs/BatteryState.msg
 sensor_msgs/CameraInfo.msg
 sensor_msgs/ChannelFloat32.msg
