@@ -51,6 +51,8 @@ typedef rmw_ret_t rcl_ret_t;
 #define RCL_RET_UNKNOWN_SUBSTITUTION 105
 /// rcl_shutdown() already called return code.
 #define RCL_RET_ALREADY_SHUTDOWN 106
+/// Resource not found
+#define RCL_RET_NOT_FOUND 107
 
 // rcl node specific ret codes in 2XX
 /// Invalid rcl_node_t given return code.
