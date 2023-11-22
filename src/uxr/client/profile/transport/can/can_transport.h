@@ -29,11 +29,12 @@ extern "C"
 #include <uxr/client/visibility.h>
 #include <uxr/client/transport.h>
 
-#define UXR_CONFIG_CAN_TRANSPORT_MTU 63
+/* For CAN-FD, MTU is fixed value */
+#define UXR_CAN_TRANSPORT_MTU 63
 
 typedef struct uxrCANTransport
 {
-    uint8_t buffer[UXR_CONFIG_CAN_TRANSPORT_MTU];
+    uint8_t buffer[UXR_CAN_TRANSPORT_MTU];
     uxrCommunication comm;
     struct uxrCANPlatform platform;
 } uxrCANTransport;
