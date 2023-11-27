@@ -578,7 +578,7 @@ typedef struct RMW_PUBLIC_TYPE rmw_qos_profile_s
   enum rmw_qos_durability_policy_e durability;
   /// The period at which messages are expected to be sent/received
   /**
-    * RMW_DURATION_UNSPEFICIED will use the RMW implementation's default value,
+    * RMW_DURATION_UNSPECIFIED will use the RMW implementation's default value,
     *   which may or may not be infinite.
     * RMW_DURATION_INFINITE explicitly states that messages never miss a deadline expectation.
     */
