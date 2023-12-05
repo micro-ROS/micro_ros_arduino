@@ -26,7 +26,7 @@ https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
 https://github.com/ros2/rcpputils.git c7df82729b49a09b113b51ccf00aa0e5795ea267
 https://github.com/ros2/rmw.git 4de9cafdc0213c6c8141cab2cb2169899a7fdd26
 https://github.com/ros2/rmw_implementation.git 1654fa511bfd09d94a3719779ad6695677619616
-https://github.com/ros2/ros2_tracing.git 2081c064efdbfc04f94654b9ca261d93fe2b0423
+https://github.com/ros2/ros2_tracing.git 408c54bf8cecf59369e72887b17f028f10a40b06
 https://github.com/ros2/rosidl.git 5d8191e07627a8c394e42690d6a090d2f63c016a
 https://github.com/ros2/rosidl_core.git 84fa73d3974fe31fbe397e41e4449a31c2fb6ce4
 https://github.com/ros2/rosidl_dds.git 16a3503d7694917f0c968e3918351e8d2f7fdb38
