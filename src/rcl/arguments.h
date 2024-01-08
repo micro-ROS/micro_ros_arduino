@@ -72,6 +72,9 @@ typedef struct rcl_arguments_s
 /// The ROS flag that precedes the ROS logging level to set.
 #define RCL_LOG_LEVEL_FLAG "--log-level"
 
+/// The ROS log file name prefix to configure external logging.
+#define RCL_EXTERNAL_LOG_FILE_NAME_PREFIX "--log-file-name"
+
 /// The ROS flag that precedes the name of a configuration file to configure logging.
 #define RCL_EXTERNAL_LOG_CONFIG_FLAG "--log-config-file"
 
