@@ -77,6 +77,8 @@ geometry_msgs/Point.msg
 geometry_msgs/Point32.msg
 geometry_msgs/PointStamped.msg
 geometry_msgs/Polygon.msg
+geometry_msgs/PolygonInstance.msg
+geometry_msgs/PolygonInstanceStamped.msg
 geometry_msgs/PolygonStamped.msg
 geometry_msgs/Pose.msg
 geometry_msgs/Pose2D.msg
