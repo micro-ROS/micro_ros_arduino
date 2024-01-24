@@ -274,7 +274,9 @@ _DECLARE_TRACEPOINT(
  */
 _DECLARE_TRACEPOINT(
   rmw_publish,
-  const void * message)
+  const void * publisher_handle,
+  const void * message,
+  int64_t timestamp)
 
 /// `rmw_subscription_init`
 /**
