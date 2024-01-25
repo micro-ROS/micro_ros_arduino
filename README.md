@@ -17,7 +17,7 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
     - [Patch Teensyduino](#patch-teensyduino)
     - [Patch SAM](#patch-sam)
   - [Custom Messages in MicroROS](#custom-messages-in-microros)
-  - [Increase the number of Publishers and Subscribers Limit](#increase-the number-of-publishers-and-subscribers-limit)  
+  - [Increase the number of Publishers and Subscribers Limit](#increase-the-number-of-publishers-and-subscribers-limit)  
   - [Purpose of the Project](#purpose-of-the-project)
   - [License](#license)
   - [Known Issues/Limitations](#known-issueslimitations)
