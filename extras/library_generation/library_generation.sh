@@ -10,17 +10,17 @@ while getopts "p:" o; do
 done
 
 if [ $OPTIND -eq 1 ]; then
-    PLATFORMS+=("opencr1")
+    # PLATFORMS+=("opencr1")
     PLATFORMS+=("teensy4")
-    PLATFORMS+=("teensy32")
-    PLATFORMS+=("teensy35")
-    PLATFORMS+=("teensy36")
-    PLATFORMS+=("cortex_m0")
-    PLATFORMS+=("cortex_m3")
-    PLATFORMS+=("cortex_m4")
+    # PLATFORMS+=("teensy32")
+    # PLATFORMS+=("teensy35")
+    # PLATFORMS+=("teensy36")
+    # PLATFORMS+=("cortex_m0")
+    # PLATFORMS+=("cortex_m3")
+    # PLATFORMS+=("cortex_m4")
     # PLATFORMS+=("portenta-m4")
-    PLATFORMS+=("portenta-m7")
-    PLATFORMS+=("kakutef7-m7")
+    # PLATFORMS+=("portenta-m7")
+    # PLATFORMS+=("kakutef7-m7")
     PLATFORMS+=("esp32")
 fi
 

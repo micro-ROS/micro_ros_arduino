@@ -2,4 +2,8 @@ repositories:
   control_msgs:
     type: git
     url: https://github.com/ros-controls/control_msgs
-    version: galactic-devel
+    version: humble
+  akros2_msgs:
+    type: git
+    url: https://github.com/adityakamath/akros2_msgs
+    version: master

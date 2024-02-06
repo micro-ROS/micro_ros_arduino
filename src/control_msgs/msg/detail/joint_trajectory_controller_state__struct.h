@@ -21,21 +21,55 @@ extern "C"
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 // Member 'joint_names'
+// Member 'multi_dof_joint_names'
 #include "rosidl_runtime_c/string.h"
+// Member 'reference'
+// Member 'feedback'
+// Member 'error'
+// Member 'output'
 // Member 'desired'
 // Member 'actual'
-// Member 'error'
 #include "trajectory_msgs/msg/detail/joint_trajectory_point__struct.h"
+// Member 'multi_dof_reference'
+// Member 'multi_dof_feedback'
+// Member 'multi_dof_error'
+// Member 'multi_dof_output'
+// Member 'multi_dof_desired'
+// Member 'multi_dof_actual'
+#include "trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__struct.h"
 
 /// Struct defined in msg/JointTrajectoryControllerState in the package control_msgs.
+/**
+  * This message presents current controller state of JTC
+ */
 typedef struct control_msgs__msg__JointTrajectoryControllerState
 {
+  /// Header timestamp should be update time of controller state
   std_msgs__msg__Header header;
   rosidl_runtime_c__String__Sequence joint_names;
+  /// The set point, that is, desired state.
+  trajectory_msgs__msg__JointTrajectoryPoint reference;
+  /// Current value of the process (ie: latest sensor measurement on the controlled value).
+  trajectory_msgs__msg__JointTrajectoryPoint feedback;
+  /// The error of the controlled value, essentially reference - feedback (for a regular PID implementation).
+  trajectory_msgs__msg__JointTrajectoryPoint error;
+  /// Current output of the controller.
+  trajectory_msgs__msg__JointTrajectoryPoint output;
+  /// -- deprecated --
   trajectory_msgs__msg__JointTrajectoryPoint desired;
   trajectory_msgs__msg__JointTrajectoryPoint actual;
-  /// Redundant, but useful
-  trajectory_msgs__msg__JointTrajectoryPoint error;
+  rosidl_runtime_c__String__Sequence multi_dof_joint_names;
+  /// The set point, that is, desired state.
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_reference;
+  /// Current value of the process (ie: latest sensor measurement on the controlled value).
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_feedback;
+  /// The error of the controlled value, essentially reference - feedback (for a regular PID implementation).
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_error;
+  /// Current output of the controller.
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_output;
+  /// -- deprecated --
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_desired;
+  trajectory_msgs__msg__MultiDOFJointTrajectoryPoint multi_dof_actual;
 } control_msgs__msg__JointTrajectoryControllerState;
 
 // Struct for a sequence of control_msgs__msg__JointTrajectoryControllerState.

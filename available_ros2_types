@@ -5,11 +5,13 @@ action_msgs/GoalStatusArray.msg
 actionlib_msgs/GoalID.msg
 actionlib_msgs/GoalStatus.msg
 actionlib_msgs/GoalStatusArray.msg
+akros2_msgs/Mode.msg
 builtin_interfaces/Duration.msg
 builtin_interfaces/Time.msg
 composition_interfaces/ListNodes.srv
 composition_interfaces/LoadNode.srv
 composition_interfaces/UnloadNode.srv
+control_msgs/AdmittanceControllerState.msg
 control_msgs/DynamicJointState.msg
 control_msgs/FollowJointTrajectory.action
 control_msgs/GripperCommand.action
@@ -21,11 +23,13 @@ control_msgs/JointJog.msg
 control_msgs/JointTolerance.msg
 control_msgs/JointTrajectory.action
 control_msgs/JointTrajectoryControllerState.msg
+control_msgs/MecanumDriveControllerState.msg
 control_msgs/PidState.msg
 control_msgs/PointHead.action
 control_msgs/QueryCalibrationState.srv
 control_msgs/QueryTrajectoryState.srv
 control_msgs/SingleJointPosition.action
+control_msgs/SteeringControllerStatus.msg
 data/Test.action
 data/Test.msg
 data/Test.srv
