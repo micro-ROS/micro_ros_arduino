@@ -1,7 +1,7 @@
 
-https://github.com/ament/ament_cmake.git a6a7e0c775545e6f13d767b6012b72ec358248c6
+https://github.com/ament/ament_cmake.git 7fdd2d124a7a0e9744d982838f025ccecd685180
 https://github.com/ament/ament_index.git 076cef041834ae7a8c515ffb86f97b51e3aaff61
-https://github.com/ament/ament_lint.git 903c28344c5fbe787c5882d4ba255bf220277cd9
+https://github.com/ament/ament_lint.git ccf6cdd76dce6d777c5bcfe861673c74f08df624
 https://github.com/ament/ament_package.git 35b15ae4d8c5e1dbb6ab622ff95d046aa3ca1b28
 https://github.com/ament/googletest.git ad343ef3c63b949cef97b0294d5ff352c499881b
 https://github.com/ament/uncrustify_vendor.git 37d7088131449989663c4258ff8b88b886fb83d8
@@ -23,13 +23,13 @@ https://github.com/ros2/rcl.git 92c16fca2e3023f0c6792d4404328b01dd5fbd64
 https://github.com/ros2/rcl_interfaces.git fbd32f8b8ef90fb9cefdc90d8d2f5b992fd843bb
 https://github.com/ros2/rcl_logging.git 658972a26248e2cfc5c0db4d3e6ab341d6cbc6b6
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
-https://github.com/ros2/rcpputils.git 2a5bfd57bc16f69016ee4df1f6a517cde53e7a13
+https://github.com/ros2/rcpputils.git 5205833101937a296d8e7cb5bdcac732d5df7933
 https://github.com/ros2/rmw.git 9b3d9d0e3021b7a6e75d8886e3e061a53c36c789
 https://github.com/ros2/rmw_implementation.git 2e9a28abac1259092d042a67bb4cb128d231102a
-https://github.com/ros2/ros2_tracing.git 2e2bcb5fb93f5661e4036a77fb303ef1a822293f
-https://github.com/ros2/rosidl.git 9f3c1821686639fa589e48a27145656a91494342
+https://github.com/ros2/ros2_tracing.git dadd0e9a1a9f4b8e224a0dbfd78b7f96e48bc6af
+https://github.com/ros2/rosidl.git 6f6910a764316f67f64a820a45ceccee15e10022
 https://github.com/ros2/rosidl_core.git 84fa73d3974fe31fbe397e41e4449a31c2fb6ce4
-https://github.com/ros2/rosidl_dds.git a92a303dd918d8ee366ccf62f4563a307257e9cf
+https://github.com/ros2/rosidl_dds.git 8d6fdb365792c81861cf1d49da2d265e91dca86d
 https://github.com/ros2/rosidl_defaults.git 65d0e79a6f477e22b7213590bc8d2465e16cedbf
 https://github.com/ros2/rosidl_dynamic_typesupport.git cb8c54d12c678daa70410bb0626ed8626f561e45
 https://github.com/ros2/test_interface_files.git c5941d36e977b75c8949c9d30883248246a84693
