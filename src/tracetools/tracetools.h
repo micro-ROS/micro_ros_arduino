@@ -270,11 +270,13 @@ _DECLARE_TRACEPOINT(
  * Message publication.
  * Notes the pointer to the message being published at the `rmw` level.
  *
+ * \param[in] rmw_publisher_handle pointer to the publisher's `rmw_publisher_t` handle
  * \param[in] message pointer to the message being published
+ * \param[in] timestamp the source timestamp of the message
  */
 _DECLARE_TRACEPOINT(
   rmw_publish,
-  const void * publisher_handle,
+  const void * rmw_publisher_handle,
   const void * message,
   int64_t timestamp)
 
