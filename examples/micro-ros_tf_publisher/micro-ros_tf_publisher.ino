@@ -24,29 +24,37 @@ rcl_node_t node;
 
 #define LED_PIN 13
 
-#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
-#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
+#define RCCHECK(fn) \
+  { \
+    rcl_ret_t temp_rc = fn; \
+    if ((temp_rc != RCL_RET_OK)) { error_loop(); } \
+  }
+#define RCSOFTCHECK(fn) \
+  { \
+    rcl_ret_t temp_rc = fn; \
+    if ((temp_rc != RCL_RET_OK)) {} \
+  }
 
-extern "C" int clock_gettime(clockid_t unused, struct timespec *tp);
-cIMU    IMU;
+extern "C" int clock_gettime(clockid_t unused, struct timespec* tp);
+cIMU IMU;
 
 const void euler_to_quat(float x, float y, float z, double* q) {
-    float c1 = cos((y*3.14/180.0)/2);
-    float c2 = cos((z*3.14/180.0)/2);
-    float c3 = cos((x*3.14/180.0)/2);
+  float c1 = cos((y * 3.14 / 180.0) / 2);
+  float c2 = cos((z * 3.14 / 180.0) / 2);
+  float c3 = cos((x * 3.14 / 180.0) / 2);
 
-    float s1 = sin((y*3.14/180.0)/2);
-    float s2 = sin((z*3.14/180.0)/2);
-    float s3 = sin((x*3.14/180.0)/2);
+  float s1 = sin((y * 3.14 / 180.0) / 2);
+  float s2 = sin((z * 3.14 / 180.0) / 2);
+  float s3 = sin((x * 3.14 / 180.0) / 2);
 
-    q[0] = c1 * c2 * c3 - s1 * s2 * s3;
-    q[1] = s1 * s2 * c3 + c1 * c2 * s3;
-    q[2] = s1 * c2 * c3 + c1 * s2 * s3;
-    q[3] = c1 * s2 * c3 - s1 * c2 * s3;
+  q[0] = c1 * c2 * c3 - s1 * s2 * s3;
+  q[1] = s1 * s2 * c3 + c1 * c2 * s3;
+  q[2] = s1 * c2 * c3 + c1 * s2 * s3;
+  q[3] = c1 * s2 * c3 - s1 * c2 * s3;
 }
 
-void error_loop(){
-  while(1){
+void error_loop() {
+  while (1) {
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
     delay(100);
   }
@@ -55,11 +63,11 @@ void error_loop(){
 void setup() {
   set_microros_transports();
 
+  //can pass optional Hz value for reading - defaults to 200 low values delay the initialisation routine
   IMU.begin();
 
   IMU.SEN.acc_cali_start();
-  while( IMU.SEN.acc_cali_get_done() == false )
-  {
+  while (IMU.SEN.acc_cali_get_done() == false) {
     IMU.update();
   }
 
@@ -84,12 +92,10 @@ void setup() {
     "/tf"));
 
 
-  if(!micro_ros_utilities_create_message_memory(
-      ROSIDL_GET_MSG_TYPE_SUPPORT(tf2_msgs, msg, TFMessage),
-      &tf_message,
-      (micro_ros_utilities_memory_conf_t) {})
-    )
-  {
+  if (!micro_ros_utilities_create_message_memory(
+        ROSIDL_GET_MSG_TYPE_SUPPORT(tf2_msgs, msg, TFMessage),
+        &tf_message,
+        (micro_ros_utilities_memory_conf_t){})) {
     error_loop();
   }
 
@@ -104,19 +110,21 @@ void setup() {
 
 void loop() {
 
-  struct timespec tv = {0};
+  struct timespec tv = { 0 };
   clock_gettime(0, &tv);
+  
+  //only send message if imu has changed
+  if (IMU.update() > 0) {
+    double q[4];
+    euler_to_quat(IMU.rpy[0], IMU.rpy[1], IMU.rpy[2], q);
 
-  IMU.update();
-  double q[4];
-  euler_to_quat(IMU.rpy[0], IMU.rpy[1], IMU.rpy[2], q);
+    tf_message.transforms.data[0].transform.rotation.x = (double)q[1];
+    tf_message.transforms.data[0].transform.rotation.y = (double)q[2];
+    tf_message.transforms.data[0].transform.rotation.z = (double)q[3];
+    tf_message.transforms.data[0].transform.rotation.w = (double)q[0];
+    tf_message.transforms.data[0].header.stamp.nanosec = tv.tv_nsec;
+    tf_message.transforms.data[0].header.stamp.sec = tv.tv_sec;
 
-  tf_message.transforms.data[0].transform.rotation.x = (double) q[1];
-	tf_message.transforms.data[0].transform.rotation.y = (double) q[2];
-	tf_message.transforms.data[0].transform.rotation.z = (double) q[3];
-	tf_message.transforms.data[0].transform.rotation.w = (double) q[0];
-  tf_message.transforms.data[0].header.stamp.nanosec = tv.tv_nsec;
-	tf_message.transforms.data[0].header.stamp.sec = tv.tv_sec;
-
-  RCSOFTCHECK(rcl_publish(&publisher, &tf_message, NULL));
+    RCSOFTCHECK(rcl_publish(&publisher, &tf_message, NULL));
+  }
 }
