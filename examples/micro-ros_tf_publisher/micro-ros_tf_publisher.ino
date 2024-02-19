@@ -99,13 +99,13 @@ void setup() {
     error_loop();
   }
 
-  tf_message.transforms.size = 2;
+  tf_message.transforms.size = 1;
 
   tf_message.transforms.data[0].header.frame_id =
     micro_ros_string_utilities_set(tf_message.transforms.data[0].header.frame_id, "/panda_link0");
 
-  tf_message.transforms.data[1].header.frame_id =
-    micro_ros_string_utilities_set(tf_message.transforms.data[1].header.frame_id, "/inertial_unit");
+  tf_message.transforms.data[0].child_frame_id =
+    micro_ros_string_utilities_set(tf_message.transforms.data[0].child_frame_id, "/inertial_unit");
 }
 
 void loop() {
@@ -117,6 +117,10 @@ void loop() {
   if (IMU.update() > 0) {
     double q[4];
     euler_to_quat(IMU.rpy[0], IMU.rpy[1], IMU.rpy[2], q);
+
+    tf_message.transforms.data[0].transform.translation.x = (double)0;
+    tf_message.transforms.data[0].transform.translation.y = (double)0;
+    tf_message.transforms.data[0].transform.translation.z = (double)1;
 
     tf_message.transforms.data[0].transform.rotation.x = (double)q[1];
     tf_message.transforms.data[0].transform.rotation.y = (double)q[2];
