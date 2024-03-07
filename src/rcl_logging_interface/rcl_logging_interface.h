@@ -69,7 +69,7 @@ rcl_logging_external_initialize(
 RCL_LOGGING_INTERFACE_PUBLIC
 RCUTILS_WARN_UNUSED
 rcl_logging_ret_t
-rcl_logging_external_shutdown();
+rcl_logging_external_shutdown(void);
 
 /// Log a message.
 /**
