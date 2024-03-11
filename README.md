@@ -16,6 +16,8 @@ As the build process for ROS 2 and micro-ROS is based on custom meta-build syste
   - [Patch Arduino board for support precompiled libraries](#patch-arduino-board-for-support-precompiled-libraries)
     - [Patch Teensyduino](#patch-teensyduino)
     - [Patch SAM](#patch-sam)
+  - [Custom Messages in MicroROS](#custom-messages-in-microros)
+  - [Increase the number of Publishers and Subscribers Limit](#increase-the-number-of-publishers-and-subscribers-limit)  
   - [Purpose of the Project](#purpose-of-the-project)
   - [License](#license)
   - [Known Issues/Limitations](#known-issueslimitations)
@@ -117,6 +119,123 @@ cd $ARDUINO_PATH/hardware/sam/1.6.12/
 curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/iron/extras/patching_boards/platform_arduinocore_sam.txt > platform.txt
 ```
 
+## Custom Messages in MicroROS
+
+You can find detailed information on creating custom messages in MicroROS [here](https://docs.vulcanexus.org/en/latest/rst/tutorials/micro/custom_types/custom_types.html)
+
+This is a stepwise procedure to make changes in the arduino library:
+### 1. Make `library_generation.sh` Executable
+
+```bash
+cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron/extras/library_generation
+chmod +x library_generation.sh
+```
+
+### 2. Pull Docker Image for Library Building
+
+```bash
+cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
+docker pull microros/micro_ros_static_library_builder:iron
+```
+
+### 3. Access Extra Packages Directory
+
+```bash
+cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-ironextras/library_generation/extra_packages/
+```
+
+### 4. Create a New Package for Custom Interface
+
+```bash
+ros2 pkg create --build-type ament_cmake my_custom_message
+cd my_custom_message
+mkdir msg
+touch msg/MyCustomMessage.msg
+```
+
+### 5. Update `CMakeLists.txt` for Message Generation
+
+Open `CMakeLists.txt` in the newly created package and add the following lines just before `ament_package()`:
+
+```cmake
+find_package(rosidl_default_generators REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/MyCustomMessage.msg"
+)
+```
+
+### 6. Define Custom Message Content
+
+> [!NOTE]
+> Edit `msg/MyCustomMessage.msg` with the desired message content. Ensure the message type name does not contain uppercase letters.
+
+
+### 7. Update `package.xml`
+
+Add the following lines to `package.xml`:
+
+```xml
+<build_depend>rosidl_default_generators</build_depend>
+<exec_depend>rosidl_default_runtime</exec_depend>
+<member_of_group>rosidl_interface_packages</member_of_group>
+```
+
+### 8. Rebuild Libraries
+
+```bash
+cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:iron -p esp32
+```
+
+## Increase the number of Publishers and Subscribers Limit
+ 
+You can find detailed information on creating custom messages in MicroROS [here](https://docs.vulcanexus.org/en/latest/rst/tutorials/micro/memory_management/memory_management.html#middleware-memory)
+
+This is a stepwise procedure to make changes in the arduino library:
+
+### 1. Adjust Parameters in `colcon.meta`
+
+Open `~/Arduino/libraries/micro_ros_arduino-2.0.5-iron/extras/library_generation/colcon.meta` and locate the section:
+
+```json
+"rmw_microxrcedds": {
+    "cmake-args": [
+        "-DRMW_UXRCE_MAX_NODES=1",
+        "-DRMW_UXRCE_MAX_PUBLISHERS=5",
+        "-DRMW_UXRCE_MAX_SUBSCRIPTIONS=5",
+        "-DRMW_UXRCE_MAX_SERVICES=1",
+        "-DRMW_UXRCE_MAX_CLIENTS=1",
+        "-DRMW_UXRCE_MAX_HISTORY=4",
+        "-DRMW_UXRCE_TRANSPORT=custom"
+    ]
+}
+```
+
+Modify the parameters as needed.
+
+### 2. Rebuild Libraries
+
+```bash
+cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
+docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras microros/micro_ros_static_library_builder:iron -p esp32
+```
+
+### Supported Boards and Corresponding Meta Files
+
+| Board                               | .meta file            |
+| ----------------------------------- | --------------------- |
+| Arduino Portenta H7 M7 Core          | `colcon.meta`         |
+| Arduino Nano RP2040 Connect          | `colcon_verylowmem.meta` |
+| OpenCR                              | `colcon.meta`         |
+| Teensy 4.0                          | `colcon.meta`         |
+| Teensy 4.1                          | `colcon.meta`         |
+| Teensy 3.2/3.1                      | `colcon_lowmem.meta`   |
+| Teensy 3.5                          | `colcon_lowmem.meta`   |
+| Teensy 3.6                          | `colcon_lowmem.meta`   |
+| ESP32 Dev Module                    | `colcon.meta`         |
+
+
 ## Purpose of the Project
 
 This software is not ready for production use. It has neither been developed nor
@@ -139,3 +258,4 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 - micro-ROS transports should be refactored in order to provide a pluggable mechanisms. Only USB serial transports are provided.
 - Teensyduino support files have to be patched in order to use precompiled libraries.
 - To solve Python errors on ESP32 compilation: `apt install python-is-python3 && pip3 install pyserial`
+
