@@ -121,34 +121,30 @@ curl https://raw.githubusercontent.com/micro-ROS/micro_ros_arduino/iron/extras/p
 
 ## Custom Messages in MicroROS
 
-### Make `library_generation.sh` Executable
+You can find detailed information on creating custom messages in MicroROS [here](https://docs.vulcanexus.org/en/latest/rst/tutorials/micro/custom_types/custom_types.html)
+
+This is a stepwise procedure to make changes in the arduino library:
+### 1. Make `library_generation.sh` Executable
 
 ```bash
 cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron/extras/library_generation
 chmod +x library_generation.sh
 ```
 
-### Pull Docker Image for Library Building
+### 2. Pull Docker Image for Library Building
 
 ```bash
 cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
 docker pull microros/micro_ros_static_library_builder:iron
 ```
 
-
-### Navigate to MicroROS Arduino Directory
-
-```bash
-cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
-```
-
-### 2.2 Access Extra Packages Directory
+### 3. Access Extra Packages Directory
 
 ```bash
-cd extras/library_generation/extra_packages/
+cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-ironextras/library_generation/extra_packages/
 ```
 
-### Create a New Package for Custom Interface
+### 4. Create a New Package for Custom Interface
 
 ```bash
 ros2 pkg create --build-type ament_cmake my_custom_message
@@ -157,7 +153,7 @@ mkdir msg
 touch msg/MyCustomMessage.msg
 ```
 
-### Update CMakeLists.txt for Message Generation
+### 5. Update `CMakeLists.txt` for Message Generation
 
 Open `CMakeLists.txt` in the newly created package and add the following lines just before `ament_package()`:
 
@@ -169,11 +165,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 )
 ```
 
-### Define Custom Message Content
+### 6. Define Custom Message Content
 
-Edit `msg/MyCustomMessage.msg` with the desired message content. Ensure the message type name does not contain uppercase letters.
+> [!NOTE]
+> Edit `msg/MyCustomMessage.msg` with the desired message content. Ensure the message type name does not contain uppercase letters.
 
-### Update `package.xml`
+
+### 7. Update `package.xml`
 
 Add the following lines to `package.xml`:
 
@@ -183,7 +181,7 @@ Add the following lines to `package.xml`:
 <member_of_group>rosidl_interface_packages</member_of_group>
 ```
 
-### Rebuild Libraries
+### 8. Rebuild Libraries
 
 ```bash
 cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
@@ -191,8 +189,12 @@ docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=extras micr
 ```
 
 ## Increase the number of Publishers and Subscribers Limit
+ 
+You can find detailed information on creating custom messages in MicroROS [here](https://docs.vulcanexus.org/en/latest/rst/tutorials/micro/memory_management/memory_management.html#middleware-memory)
 
-### Adjust Parameters in `colcon.meta`
+This is a stepwise procedure to make changes in the arduino library:
+
+### 1. Adjust Parameters in `colcon.meta`
 
 Open `~/Arduino/libraries/micro_ros_arduino-2.0.5-iron/extras/library_generation/colcon.meta` and locate the section:
 
@@ -212,7 +214,7 @@ Open `~/Arduino/libraries/micro_ros_arduino-2.0.5-iron/extras/library_generation
 
 Modify the parameters as needed.
 
-### Rebuild Libraries
+### 2. Rebuild Libraries
 
 ```bash
 cd ~/Arduino/libraries/micro_ros_arduino-2.0.5-iron
