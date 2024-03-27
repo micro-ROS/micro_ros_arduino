@@ -95,9 +95,9 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 
 #endif
 
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL) || defined(BOARD_WITH_ESP_AT)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_GIGA) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL) || defined(BOARD_WITH_ESP_AT)
 
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_GIGA)
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #elif defined(ARDUINO_NANO_RP2040_CONNECT)
