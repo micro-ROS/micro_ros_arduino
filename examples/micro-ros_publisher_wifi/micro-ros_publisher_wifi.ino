@@ -18,8 +18,8 @@ rclc_support_t support;
 rcl_allocator_t allocator;
 rcl_node_t node;
 
-#ifdef ARDUINO_GIGA
-  #define LED_PIN LEDR
+#if defined(LED_BUILTIN)
+  #define LED_PIN LED_BUILTIN
 #else
   #define LED_PIN 13
 #endif
