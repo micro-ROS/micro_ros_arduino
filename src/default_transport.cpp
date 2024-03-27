@@ -4,7 +4,7 @@ extern "C"
 {
   #include <stdio.h>
   #include <stdbool.h>
-  #include <sys/time.h>
+  #include <time.h>
 
   int clock_gettime(clockid_t unused, struct timespec *tp) __attribute__ ((weak));
   bool arduino_transport_open(struct uxrCustomTransport * transport) __attribute__ ((weak));

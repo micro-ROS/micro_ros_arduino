@@ -8,8 +8,8 @@
 
 #include <std_msgs/msg/int32.h>
 
-#if !defined(ESP32) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_NANO_RP2040_CONNECT) && !defined(ARDUINO_WIO_TERMINAL)
-#error This example is only available for Arduino Portenta, Arduino Nano RP2040 Connect, ESP32 Dev module and Wio Terminal
+#if !defined(ESP32) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_GIGA) && !defined(ARDUINO_NANO_RP2040_CONNECT) && !defined(ARDUINO_WIO_TERMINAL) && !defined(ARDUINO_UNOR4_WIFI)
+#error This example is only available for Arduino Portenta, Arduino Giga R1, Arduino Nano RP2040 Connect, ESP32 Dev module, Wio Terminal and Arduino Uno R4 WiFi
 #endif
 
 rcl_publisher_t publisher;
@@ -18,7 +18,11 @@ rclc_support_t support;
 rcl_allocator_t allocator;
 rcl_node_t node;
 
-#define LED_PIN 13
+#if defined(LED_BUILTIN)
+  #define LED_PIN LED_BUILTIN
+#else
+  #define LED_PIN 13
+#endif
 
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
 #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
