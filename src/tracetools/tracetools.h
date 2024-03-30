@@ -44,6 +44,7 @@
  */
 #  define _GET_MACRO(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10, NAME, ...) NAME
 
+// *INDENT-OFF*
 #  define _TRACEPOINT_NOARGS(event_name) \
   (ros_trace_ ## event_name)()
 #  define _TRACEPOINT_ARGS(event_name, ...) \
@@ -152,6 +153,7 @@ _DEPRECATED_MACRO_FUNCTION_DEFINITION(DO_TRACEPOINT)
 #define DO_TRACEPOINT(...) \
   _deprecated_macro_DO_TRACEPOINT(); \
   TRACETOOLS_DO_TRACEPOINT(__VA_ARGS__)
+// *INDENT-ON*
 
 #ifdef __cplusplus
 extern "C"
