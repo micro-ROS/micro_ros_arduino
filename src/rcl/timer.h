@@ -51,6 +51,13 @@ typedef struct rcl_timer_on_reset_callback_data_s
   size_t reset_counter;
 } rcl_timer_on_reset_callback_data_t;
 
+/// Structure which encapsulates timer information when called.
+typedef struct rcl_timer_call_info_s
+{
+  rcl_time_point_value_t expected_call_time;
+  rcl_time_point_value_t actual_call_time;
+} rcl_timer_call_info_t;
+
 /// User callback signature for timers.
 /**
  * The first argument the callback gets is a pointer to the timer.
@@ -260,6 +267,34 @@ RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
 rcl_timer_call(rcl_timer_t * timer);
+
+/// Same as rcl_timer_call() except that it also retrieves the actual and expected call time.
+/**
+ * Same as rcl_timer_call() except that it also retrieves the actual and expected call time.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes [1]
+ * Uses Atomics       | Yes
+ * Lock-Free          | Yes [2]
+ * <i>[1] user callback might not be thread-safe</i>
+ *
+ * <i>[2] if `atomic_is_lock_free()` returns true for `atomic_int_least64_t`</i>
+ *
+ * \param[inout] timer the handle to the timer to call
+ * \param[out] call_info the struct in which the actual and expected call times are stored
+ * \return #RCL_RET_OK if the timer was called successfully, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_TIMER_INVALID if the timer->impl is invalid, or
+ * \return #RCL_RET_TIMER_CANCELED if the timer has been canceled, or
+ * \return #RCL_RET_ERROR an unspecified error occur.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_timer_call_with_info(rcl_timer_t * timer, rcl_timer_call_info_t * call_info);
 
 /// Retrieve the clock of the timer.
 /**
