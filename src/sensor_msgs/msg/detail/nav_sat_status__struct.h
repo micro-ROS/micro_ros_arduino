@@ -19,6 +19,15 @@ extern "C"
 
 // Constants defined in the message
 
+/// Constant 'STATUS_UNKNOWN'.
+/**
+  * status is not yet set
+ */
+enum
+{
+  sensor_msgs__msg__NavSatStatus__STATUS_UNKNOWN = -2
+};
+
 /// Constant 'STATUS_NO_FIX'.
 /**
   * unable to fix position
@@ -55,11 +64,18 @@ enum
   sensor_msgs__msg__NavSatStatus__STATUS_GBAS_FIX = 2
 };
 
-/// Constant 'SERVICE_GPS'.
+/// Constant 'SERVICE_UNKNOWN'.
 /**
   * Bits defining which Global Navigation Satellite System signals were
   * used by the receiver.
+  * Remember service is a bitfield, so checking (service & SERVICE_UNKNOWN) will not work. Use == instead.
  */
+enum
+{
+  sensor_msgs__msg__NavSatStatus__SERVICE_UNKNOWN = 0
+};
+
+/// Constant 'SERVICE_GPS'.
 enum
 {
   sensor_msgs__msg__NavSatStatus__SERVICE_GPS = 1
@@ -96,6 +112,7 @@ enum
  */
 typedef struct sensor_msgs__msg__NavSatStatus
 {
+  /// STATUS_UNKNOWN
   int8_t status;
   uint16_t service;
 } sensor_msgs__msg__NavSatStatus;
