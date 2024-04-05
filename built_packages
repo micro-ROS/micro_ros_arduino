@@ -4,7 +4,7 @@ https://github.com/ament/ament_index.git c4d5ac604be6a6afaa67eec97d7e6b54698cd2a
 https://github.com/ament/ament_lint.git 1f7e2b44b17bd35702143f70c4c098721912f2ee
 https://github.com/ament/ament_package.git 35b15ae4d8c5e1dbb6ab622ff95d046aa3ca1b28
 https://github.com/ament/googletest.git 449327bfc17e58db5ce53955b8e250427909a1c8
-https://github.com/ament/uncrustify_vendor.git 37d7088131449989663c4258ff8b88b886fb83d8
+https://github.com/ament/uncrustify_vendor.git 17470d5e9df757d9c51b507669bd200646ae4d27
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 83f129a80770a09aac9e823896ecbf6a0eddf0fc
 https://github.com/micro-ROS/micro_ros_msgs.git cefbf4883654083d195671971d3bf9a290e7917c
@@ -26,11 +26,12 @@ https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
 https://github.com/ros2/rcpputils.git bc0e3cfb4168fbc286034f0ee8d27319ffd1e945
 https://github.com/ros2/rmw.git 9b3d9d0e3021b7a6e75d8886e3e061a53c36c789
 https://github.com/ros2/rmw_implementation.git 85e6ce483f6e174c54c08cce90784962c8dc6bee
-https://github.com/ros2/ros2_tracing.git 513bd86d1f57b03645b54ff4531f280433e7ce1a
-https://github.com/ros2/rosidl.git 6fe623463e11501243e000f81fa7c4e63092a5e9
+https://github.com/ros2/ros2_tracing.git e4f1e7fc9156066b4436e633f37dfe140f3ad777
+https://github.com/ros2/rosidl.git 4088280921a62f097aa4812f1cf1afa161f4aeda
 https://github.com/ros2/rosidl_core.git 84fa73d3974fe31fbe397e41e4449a31c2fb6ce4
 https://github.com/ros2/rosidl_dds.git 8d6fdb365792c81861cf1d49da2d265e91dca86d
 https://github.com/ros2/rosidl_defaults.git 65d0e79a6f477e22b7213590bc8d2465e16cedbf
 https://github.com/ros2/rosidl_dynamic_typesupport.git cb8c54d12c678daa70410bb0626ed8626f561e45
 https://github.com/ros2/test_interface_files.git c5941d36e977b75c8949c9d30883248246a84693
 https://github.com/ros2/unique_identifier_msgs.git ced22ce6e0d197357b27157f35107f5b7173b272
+https://github.com/uncrustify/uncrustify.git b8c95286f70ef8e0e83bd055a3a7aabb614a0781
