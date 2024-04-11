@@ -91,6 +91,12 @@ enum
   visualization_msgs__msg__Marker__TRIANGLE_LIST = 11l
 };
 
+/// Constant 'ARROW_STRIP'.
+enum
+{
+  visualization_msgs__msg__Marker__ARROW_STRIP = 12l
+};
+
 /// Constant 'ADD'.
 enum
 {
@@ -177,7 +183,7 @@ typedef struct visualization_msgs__msg__Marker
   builtin_interfaces__msg__Duration lifetime;
   /// If this marker should be frame-locked, i.e. retransformed into its frame every timestep.
   bool frame_locked;
-  /// Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)
+  /// Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, ARROW_STRIP, etc.)
   geometry_msgs__msg__Point__Sequence points;
   /// Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)
   /// The number of colors provided must either be 0 or equal to the number of points provided.
