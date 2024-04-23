@@ -24,6 +24,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// This is to avoid compilation warnings in C++ with '-Wold-style-cast'.
+#ifdef __cplusplus
+  #define RCUTILS_CAST_DURATION(x) (static_cast < rcutils_duration_value_t > (x))
+#else
+  #define RCUTILS_CAST_DURATION(x) ((rcutils_duration_value_t)x)
+#endif
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -174,7 +181,7 @@ typedef bool (* RclLogFilter)();
  * A macro initializing and checking the `throttle` condition.
  */
 #define RCUTILS_LOG_CONDITION_THROTTLE_BEFORE(get_time_point_value, duration) { \
-    static rcutils_duration_value_t __rcutils_logging_duration = RCUTILS_MS_TO_NS((rcutils_duration_value_t)duration); \
+    static rcutils_duration_value_t __rcutils_logging_duration = RCUTILS_MS_TO_NS(RCUTILS_CAST_DURATION(duration)); \
     static rcutils_time_point_value_t __rcutils_logging_last_logged = 0; \
     rcutils_time_point_value_t __rcutils_logging_now = 0; \
     bool __rcutils_logging_condition = true; \
