@@ -62,7 +62,7 @@ nav_msgs__msg__OccupancyGrid__fini(nav_msgs__msg__OccupancyGrid * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__msg__OccupancyGrid *
-nav_msgs__msg__OccupancyGrid__create();
+nav_msgs__msg__OccupancyGrid__create(void);
 
 /// Destroy msg/OccupancyGrid message.
 /**

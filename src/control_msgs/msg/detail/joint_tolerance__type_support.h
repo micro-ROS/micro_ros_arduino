@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   control_msgs,
   msg,
   JointTolerance
-)();
+)(void);
 
 #ifdef __cplusplus
 }

@@ -62,7 +62,7 @@ actionlib_msgs__msg__GoalStatusArray__fini(actionlib_msgs__msg__GoalStatusArray 
  */
 ROSIDL_GENERATOR_C_PUBLIC_actionlib_msgs
 actionlib_msgs__msg__GoalStatusArray *
-actionlib_msgs__msg__GoalStatusArray__create();
+actionlib_msgs__msg__GoalStatusArray__create(void);
 
 /// Destroy msg/GoalStatusArray message.
 /**

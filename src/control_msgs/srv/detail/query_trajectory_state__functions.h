@@ -86,7 +86,7 @@ control_msgs__srv__QueryTrajectoryState_Request__fini(control_msgs__srv__QueryTr
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__srv__QueryTrajectoryState_Request *
-control_msgs__srv__QueryTrajectoryState_Request__create();
+control_msgs__srv__QueryTrajectoryState_Request__create(void);
 
 /// Destroy srv/QueryTrajectoryState message.
 /**
@@ -262,7 +262,7 @@ control_msgs__srv__QueryTrajectoryState_Response__fini(control_msgs__srv__QueryT
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__srv__QueryTrajectoryState_Response *
-control_msgs__srv__QueryTrajectoryState_Response__create();
+control_msgs__srv__QueryTrajectoryState_Response__create(void);
 
 /// Destroy srv/QueryTrajectoryState message.
 /**
@@ -438,7 +438,7 @@ control_msgs__srv__QueryTrajectoryState_Event__fini(control_msgs__srv__QueryTraj
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__srv__QueryTrajectoryState_Event *
-control_msgs__srv__QueryTrajectoryState_Event__create();
+control_msgs__srv__QueryTrajectoryState_Event__create(void);
 
 /// Destroy srv/QueryTrajectoryState message.
 /**

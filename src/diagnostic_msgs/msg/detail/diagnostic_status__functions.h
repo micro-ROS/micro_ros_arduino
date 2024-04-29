@@ -62,7 +62,7 @@ diagnostic_msgs__msg__DiagnosticStatus__fini(diagnostic_msgs__msg__DiagnosticSta
  */
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 diagnostic_msgs__msg__DiagnosticStatus *
-diagnostic_msgs__msg__DiagnosticStatus__create();
+diagnostic_msgs__msg__DiagnosticStatus__create(void);
 
 /// Destroy msg/DiagnosticStatus message.
 /**

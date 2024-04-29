@@ -62,7 +62,7 @@ std_msgs__msg__Int8__fini(std_msgs__msg__Int8 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Int8 *
-std_msgs__msg__Int8__create();
+std_msgs__msg__Int8__create(void);
 
 /// Destroy msg/Int8 message.
 /**

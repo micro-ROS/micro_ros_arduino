@@ -86,7 +86,7 @@ lifecycle_msgs__srv__GetAvailableTransitions_Request__fini(lifecycle_msgs__srv__
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__srv__GetAvailableTransitions_Request *
-lifecycle_msgs__srv__GetAvailableTransitions_Request__create();
+lifecycle_msgs__srv__GetAvailableTransitions_Request__create(void);
 
 /// Destroy srv/GetAvailableTransitions message.
 /**
@@ -262,7 +262,7 @@ lifecycle_msgs__srv__GetAvailableTransitions_Response__fini(lifecycle_msgs__srv_
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__srv__GetAvailableTransitions_Response *
-lifecycle_msgs__srv__GetAvailableTransitions_Response__create();
+lifecycle_msgs__srv__GetAvailableTransitions_Response__create(void);
 
 /// Destroy srv/GetAvailableTransitions message.
 /**
@@ -438,7 +438,7 @@ lifecycle_msgs__srv__GetAvailableTransitions_Event__fini(lifecycle_msgs__srv__Ge
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__srv__GetAvailableTransitions_Event *
-lifecycle_msgs__srv__GetAvailableTransitions_Event__create();
+lifecycle_msgs__srv__GetAvailableTransitions_Event__create(void);
 
 /// Destroy srv/GetAvailableTransitions message.
 /**

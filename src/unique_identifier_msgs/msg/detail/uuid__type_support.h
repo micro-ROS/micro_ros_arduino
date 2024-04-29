@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   unique_identifier_msgs,
   msg,
   UUID
-)();
+)(void);
 
 #ifdef __cplusplus
 }

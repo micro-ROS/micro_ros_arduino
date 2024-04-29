@@ -62,7 +62,7 @@ test_msgs__msg__BoundedPlainSequences__fini(test_msgs__msg__BoundedPlainSequence
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__BoundedPlainSequences *
-test_msgs__msg__BoundedPlainSequences__create();
+test_msgs__msg__BoundedPlainSequences__create(void);
 
 /// Destroy msg/BoundedPlainSequences message.
 /**

@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   micro_ros_msgs,
   msg,
   Graph
-)();
+)(void);
 
 #ifdef __cplusplus
 }

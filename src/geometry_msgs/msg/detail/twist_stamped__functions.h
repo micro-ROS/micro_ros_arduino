@@ -62,7 +62,7 @@ geometry_msgs__msg__TwistStamped__fini(geometry_msgs__msg__TwistStamped * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__TwistStamped *
-geometry_msgs__msg__TwistStamped__create();
+geometry_msgs__msg__TwistStamped__create(void);
 
 /// Destroy msg/TwistStamped message.
 /**

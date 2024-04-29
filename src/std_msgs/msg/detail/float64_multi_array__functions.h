@@ -62,7 +62,7 @@ std_msgs__msg__Float64MultiArray__fini(std_msgs__msg__Float64MultiArray * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Float64MultiArray *
-std_msgs__msg__Float64MultiArray__create();
+std_msgs__msg__Float64MultiArray__create(void);
 
 /// Destroy msg/Float64MultiArray message.
 /**

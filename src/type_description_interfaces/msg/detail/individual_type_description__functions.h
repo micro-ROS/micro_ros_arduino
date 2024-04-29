@@ -62,7 +62,7 @@ type_description_interfaces__msg__IndividualTypeDescription__fini(type_descripti
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__msg__IndividualTypeDescription *
-type_description_interfaces__msg__IndividualTypeDescription__create();
+type_description_interfaces__msg__IndividualTypeDescription__create(void);
 
 /// Destroy msg/IndividualTypeDescription message.
 /**

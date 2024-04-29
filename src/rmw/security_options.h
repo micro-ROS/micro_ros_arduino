@@ -42,12 +42,12 @@ typedef struct RMW_PUBLIC_TYPE rmw_security_options_s
 /// Get zero initialized security options.
 RMW_PUBLIC
 rmw_security_options_t
-rmw_get_zero_initialized_security_options();
+rmw_get_zero_initialized_security_options(void);
 
 /// Get default initialized security options.
 RMW_PUBLIC
 rmw_security_options_t
-rmw_get_default_security_options();
+rmw_get_default_security_options(void);
 
 /// Copy the given security options.
 /**

@@ -62,7 +62,7 @@ example_interfaces__msg__Char__fini(example_interfaces__msg__Char * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Char *
-example_interfaces__msg__Char__create();
+example_interfaces__msg__Char__create(void);
 
 /// Destroy msg/Char message.
 /**

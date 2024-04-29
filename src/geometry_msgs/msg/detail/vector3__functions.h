@@ -62,7 +62,7 @@ geometry_msgs__msg__Vector3__fini(geometry_msgs__msg__Vector3 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Vector3 *
-geometry_msgs__msg__Vector3__create();
+geometry_msgs__msg__Vector3__create(void);
 
 /// Destroy msg/Vector3 message.
 /**

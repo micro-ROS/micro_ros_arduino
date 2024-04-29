@@ -69,7 +69,7 @@ typedef struct rcl_log_levels_s
 RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_log_levels_t
-rcl_get_zero_initialized_log_levels();
+rcl_get_zero_initialized_log_levels(void);
 
 /// Initialize a log levels structure.
 /**

@@ -86,7 +86,7 @@ control_msgs__action__FollowJointTrajectory_Goal__fini(control_msgs__action__Fol
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_Goal *
-control_msgs__action__FollowJointTrajectory_Goal__create();
+control_msgs__action__FollowJointTrajectory_Goal__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -262,7 +262,7 @@ control_msgs__action__FollowJointTrajectory_Result__fini(control_msgs__action__F
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_Result *
-control_msgs__action__FollowJointTrajectory_Result__create();
+control_msgs__action__FollowJointTrajectory_Result__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -438,7 +438,7 @@ control_msgs__action__FollowJointTrajectory_Feedback__fini(control_msgs__action_
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_Feedback *
-control_msgs__action__FollowJointTrajectory_Feedback__create();
+control_msgs__action__FollowJointTrajectory_Feedback__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -638,7 +638,7 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Request__fini(control_msgs_
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_SendGoal_Request *
-control_msgs__action__FollowJointTrajectory_SendGoal_Request__create();
+control_msgs__action__FollowJointTrajectory_SendGoal_Request__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -814,7 +814,7 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Response__fini(control_msgs
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_SendGoal_Response *
-control_msgs__action__FollowJointTrajectory_SendGoal_Response__create();
+control_msgs__action__FollowJointTrajectory_SendGoal_Response__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -990,7 +990,7 @@ control_msgs__action__FollowJointTrajectory_SendGoal_Event__fini(control_msgs__a
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_SendGoal_Event *
-control_msgs__action__FollowJointTrajectory_SendGoal_Event__create();
+control_msgs__action__FollowJointTrajectory_SendGoal_Event__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -1190,7 +1190,7 @@ control_msgs__action__FollowJointTrajectory_GetResult_Request__fini(control_msgs
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_GetResult_Request *
-control_msgs__action__FollowJointTrajectory_GetResult_Request__create();
+control_msgs__action__FollowJointTrajectory_GetResult_Request__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -1366,7 +1366,7 @@ control_msgs__action__FollowJointTrajectory_GetResult_Response__fini(control_msg
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_GetResult_Response *
-control_msgs__action__FollowJointTrajectory_GetResult_Response__create();
+control_msgs__action__FollowJointTrajectory_GetResult_Response__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -1542,7 +1542,7 @@ control_msgs__action__FollowJointTrajectory_GetResult_Event__fini(control_msgs__
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_GetResult_Event *
-control_msgs__action__FollowJointTrajectory_GetResult_Event__create();
+control_msgs__action__FollowJointTrajectory_GetResult_Event__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**
@@ -1718,7 +1718,7 @@ control_msgs__action__FollowJointTrajectory_FeedbackMessage__fini(control_msgs__
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__FollowJointTrajectory_FeedbackMessage *
-control_msgs__action__FollowJointTrajectory_FeedbackMessage__create();
+control_msgs__action__FollowJointTrajectory_FeedbackMessage__create(void);
 
 /// Destroy action/FollowJointTrajectory message.
 /**

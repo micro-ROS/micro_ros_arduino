@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   type_description_interfaces,
   msg,
   TypeDescription
-)();
+)(void);
 
 #ifdef __cplusplus
 }

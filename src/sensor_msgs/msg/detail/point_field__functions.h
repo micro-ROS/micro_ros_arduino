@@ -62,7 +62,7 @@ sensor_msgs__msg__PointField__fini(sensor_msgs__msg__PointField * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__PointField *
-sensor_msgs__msg__PointField__create();
+sensor_msgs__msg__PointField__create(void);
 
 /// Destroy msg/PointField message.
 /**

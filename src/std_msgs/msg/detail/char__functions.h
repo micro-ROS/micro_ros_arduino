@@ -62,7 +62,7 @@ std_msgs__msg__Char__fini(std_msgs__msg__Char * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Char *
-std_msgs__msg__Char__create();
+std_msgs__msg__Char__create(void);
 
 /// Destroy msg/Char message.
 /**

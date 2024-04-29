@@ -62,7 +62,7 @@ sensor_msgs__msg__CameraInfo__fini(sensor_msgs__msg__CameraInfo * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__CameraInfo *
-sensor_msgs__msg__CameraInfo__create();
+sensor_msgs__msg__CameraInfo__create(void);
 
 /// Destroy msg/CameraInfo message.
 /**

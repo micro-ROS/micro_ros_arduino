@@ -62,7 +62,7 @@ geometry_msgs__msg__Pose2D__fini(geometry_msgs__msg__Pose2D * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Pose2D *
-geometry_msgs__msg__Pose2D__create();
+geometry_msgs__msg__Pose2D__create(void);
 
 /// Destroy msg/Pose2D message.
 /**

@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   trajectory_msgs,
   msg,
   MultiDOFJointTrajectoryPoint
-)();
+)(void);
 
 #ifdef __cplusplus
 }

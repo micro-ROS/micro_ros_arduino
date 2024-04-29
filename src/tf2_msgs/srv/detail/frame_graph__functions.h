@@ -86,7 +86,7 @@ tf2_msgs__srv__FrameGraph_Request__fini(tf2_msgs__srv__FrameGraph_Request * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 tf2_msgs__srv__FrameGraph_Request *
-tf2_msgs__srv__FrameGraph_Request__create();
+tf2_msgs__srv__FrameGraph_Request__create(void);
 
 /// Destroy srv/FrameGraph message.
 /**
@@ -262,7 +262,7 @@ tf2_msgs__srv__FrameGraph_Response__fini(tf2_msgs__srv__FrameGraph_Response * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 tf2_msgs__srv__FrameGraph_Response *
-tf2_msgs__srv__FrameGraph_Response__create();
+tf2_msgs__srv__FrameGraph_Response__create(void);
 
 /// Destroy srv/FrameGraph message.
 /**
@@ -438,7 +438,7 @@ tf2_msgs__srv__FrameGraph_Event__fini(tf2_msgs__srv__FrameGraph_Event * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 tf2_msgs__srv__FrameGraph_Event *
-tf2_msgs__srv__FrameGraph_Event__create();
+tf2_msgs__srv__FrameGraph_Event__create(void);
 
 /// Destroy srv/FrameGraph message.
 /**

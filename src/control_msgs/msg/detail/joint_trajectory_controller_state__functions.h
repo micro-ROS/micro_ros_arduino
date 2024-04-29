@@ -62,7 +62,7 @@ control_msgs__msg__JointTrajectoryControllerState__fini(control_msgs__msg__Joint
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__JointTrajectoryControllerState *
-control_msgs__msg__JointTrajectoryControllerState__create();
+control_msgs__msg__JointTrajectoryControllerState__create(void);
 
 /// Destroy msg/JointTrajectoryControllerState message.
 /**

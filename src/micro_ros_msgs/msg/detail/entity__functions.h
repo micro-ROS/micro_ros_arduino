@@ -62,7 +62,7 @@ micro_ros_msgs__msg__Entity__fini(micro_ros_msgs__msg__Entity * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 micro_ros_msgs__msg__Entity *
-micro_ros_msgs__msg__Entity__create();
+micro_ros_msgs__msg__Entity__create(void);
 
 /// Destroy msg/Entity message.
 /**

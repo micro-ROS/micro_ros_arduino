@@ -62,7 +62,7 @@ rcl_interfaces__msg__Parameter__fini(rcl_interfaces__msg__Parameter * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__msg__Parameter *
-rcl_interfaces__msg__Parameter__create();
+rcl_interfaces__msg__Parameter__create(void);
 
 /// Destroy msg/Parameter message.
 /**

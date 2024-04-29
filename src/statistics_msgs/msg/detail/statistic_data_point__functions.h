@@ -62,7 +62,7 @@ statistics_msgs__msg__StatisticDataPoint__fini(statistics_msgs__msg__StatisticDa
  */
 ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
 statistics_msgs__msg__StatisticDataPoint *
-statistics_msgs__msg__StatisticDataPoint__create();
+statistics_msgs__msg__StatisticDataPoint__create(void);
 
 /// Destroy msg/StatisticDataPoint message.
 /**

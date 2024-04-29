@@ -62,7 +62,7 @@ sensor_msgs__msg__Illuminance__fini(sensor_msgs__msg__Illuminance * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__Illuminance *
-sensor_msgs__msg__Illuminance__create();
+sensor_msgs__msg__Illuminance__create(void);
 
 /// Destroy msg/Illuminance message.
 /**

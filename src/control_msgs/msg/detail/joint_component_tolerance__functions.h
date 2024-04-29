@@ -62,7 +62,7 @@ control_msgs__msg__JointComponentTolerance__fini(control_msgs__msg__JointCompone
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__JointComponentTolerance *
-control_msgs__msg__JointComponentTolerance__create();
+control_msgs__msg__JointComponentTolerance__create(void);
 
 /// Destroy msg/JointComponentTolerance message.
 /**

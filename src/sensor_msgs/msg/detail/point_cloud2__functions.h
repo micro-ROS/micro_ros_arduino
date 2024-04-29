@@ -62,7 +62,7 @@ sensor_msgs__msg__PointCloud2__fini(sensor_msgs__msg__PointCloud2 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__PointCloud2 *
-sensor_msgs__msg__PointCloud2__create();
+sensor_msgs__msg__PointCloud2__create(void);
 
 /// Destroy msg/PointCloud2 message.
 /**

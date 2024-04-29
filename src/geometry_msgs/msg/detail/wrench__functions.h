@@ -62,7 +62,7 @@ geometry_msgs__msg__Wrench__fini(geometry_msgs__msg__Wrench * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Wrench *
-geometry_msgs__msg__Wrench__create();
+geometry_msgs__msg__Wrench__create(void);
 
 /// Destroy msg/Wrench message.
 /**

@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   geometry_msgs,
   msg,
   Polygon
-)();
+)(void);
 
 #ifdef __cplusplus
 }

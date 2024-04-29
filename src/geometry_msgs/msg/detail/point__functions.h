@@ -62,7 +62,7 @@ geometry_msgs__msg__Point__fini(geometry_msgs__msg__Point * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Point *
-geometry_msgs__msg__Point__create();
+geometry_msgs__msg__Point__create(void);
 
 /// Destroy msg/Point message.
 /**

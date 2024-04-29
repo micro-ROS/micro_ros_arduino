@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   std_msgs,
   msg,
   Bool
-)();
+)(void);
 
 #ifdef __cplusplus
 }

@@ -62,7 +62,7 @@ action_msgs__msg__GoalStatus__fini(action_msgs__msg__GoalStatus * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_action_msgs
 action_msgs__msg__GoalStatus *
-action_msgs__msg__GoalStatus__create();
+action_msgs__msg__GoalStatus__create(void);
 
 /// Destroy msg/GoalStatus message.
 /**

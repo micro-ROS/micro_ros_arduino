@@ -62,7 +62,7 @@ geometry_msgs__msg__TwistWithCovarianceStamped__fini(geometry_msgs__msg__TwistWi
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__TwistWithCovarianceStamped *
-geometry_msgs__msg__TwistWithCovarianceStamped__create();
+geometry_msgs__msg__TwistWithCovarianceStamped__create(void);
 
 /// Destroy msg/TwistWithCovarianceStamped message.
 /**

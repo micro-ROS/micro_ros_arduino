@@ -86,7 +86,7 @@ sensor_msgs__srv__SetCameraInfo_Request__fini(sensor_msgs__srv__SetCameraInfo_Re
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__srv__SetCameraInfo_Request *
-sensor_msgs__srv__SetCameraInfo_Request__create();
+sensor_msgs__srv__SetCameraInfo_Request__create(void);
 
 /// Destroy srv/SetCameraInfo message.
 /**
@@ -262,7 +262,7 @@ sensor_msgs__srv__SetCameraInfo_Response__fini(sensor_msgs__srv__SetCameraInfo_R
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__srv__SetCameraInfo_Response *
-sensor_msgs__srv__SetCameraInfo_Response__create();
+sensor_msgs__srv__SetCameraInfo_Response__create(void);
 
 /// Destroy srv/SetCameraInfo message.
 /**
@@ -438,7 +438,7 @@ sensor_msgs__srv__SetCameraInfo_Event__fini(sensor_msgs__srv__SetCameraInfo_Even
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__srv__SetCameraInfo_Event *
-sensor_msgs__srv__SetCameraInfo_Event__create();
+sensor_msgs__srv__SetCameraInfo_Event__create(void);
 
 /// Destroy srv/SetCameraInfo message.
 /**

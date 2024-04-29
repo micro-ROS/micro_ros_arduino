@@ -89,7 +89,7 @@ const rosidl_message_type_support_t * get_message_typesupport_handle_function(
   const rosidl_message_type_support_t * handle, const char * identifier);
 
 /// Get the message type support given a provided action and package.
-/*
+/**
  * \param PkgName Name of the package that contains the message
  * \param MsgSubfolder name of the subfolder (for example: msg)
  * \param MsgName message name

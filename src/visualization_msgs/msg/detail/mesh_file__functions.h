@@ -62,7 +62,7 @@ visualization_msgs__msg__MeshFile__fini(visualization_msgs__msg__MeshFile * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__msg__MeshFile *
-visualization_msgs__msg__MeshFile__create();
+visualization_msgs__msg__MeshFile__create(void);
 
 /// Destroy msg/MeshFile message.
 /**

@@ -62,7 +62,7 @@ shape_msgs__msg__MeshTriangle__fini(shape_msgs__msg__MeshTriangle * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 shape_msgs__msg__MeshTriangle *
-shape_msgs__msg__MeshTriangle__create();
+shape_msgs__msg__MeshTriangle__create(void);
 
 /// Destroy msg/MeshTriangle message.
 /**

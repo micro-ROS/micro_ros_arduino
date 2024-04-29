@@ -62,7 +62,7 @@ geometry_msgs__msg__QuaternionStamped__fini(geometry_msgs__msg__QuaternionStampe
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__QuaternionStamped *
-geometry_msgs__msg__QuaternionStamped__create();
+geometry_msgs__msg__QuaternionStamped__create(void);
 
 /// Destroy msg/QuaternionStamped message.
 /**

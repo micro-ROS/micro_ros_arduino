@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   example_interfaces,
   msg,
   UInt32MultiArray
-)();
+)(void);
 
 #ifdef __cplusplus
 }

@@ -62,7 +62,7 @@ example_interfaces__msg__Int8MultiArray__fini(example_interfaces__msg__Int8Multi
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Int8MultiArray *
-example_interfaces__msg__Int8MultiArray__create();
+example_interfaces__msg__Int8MultiArray__create(void);
 
 /// Destroy msg/Int8MultiArray message.
 /**

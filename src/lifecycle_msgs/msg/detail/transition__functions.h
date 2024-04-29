@@ -62,7 +62,7 @@ lifecycle_msgs__msg__Transition__fini(lifecycle_msgs__msg__Transition * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__msg__Transition *
-lifecycle_msgs__msg__Transition__create();
+lifecycle_msgs__msg__Transition__create(void);
 
 /// Destroy msg/Transition message.
 /**

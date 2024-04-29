@@ -86,7 +86,7 @@ example_interfaces__srv__SetBool_Request__fini(example_interfaces__srv__SetBool_
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__srv__SetBool_Request *
-example_interfaces__srv__SetBool_Request__create();
+example_interfaces__srv__SetBool_Request__create(void);
 
 /// Destroy srv/SetBool message.
 /**
@@ -262,7 +262,7 @@ example_interfaces__srv__SetBool_Response__fini(example_interfaces__srv__SetBool
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__srv__SetBool_Response *
-example_interfaces__srv__SetBool_Response__create();
+example_interfaces__srv__SetBool_Response__create(void);
 
 /// Destroy srv/SetBool message.
 /**
@@ -438,7 +438,7 @@ example_interfaces__srv__SetBool_Event__fini(example_interfaces__srv__SetBool_Ev
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__srv__SetBool_Event *
-example_interfaces__srv__SetBool_Event__create();
+example_interfaces__srv__SetBool_Event__create(void);
 
 /// Destroy srv/SetBool message.
 /**

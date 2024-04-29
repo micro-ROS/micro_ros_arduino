@@ -62,7 +62,7 @@ visualization_msgs__msg__Marker__fini(visualization_msgs__msg__Marker * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__msg__Marker *
-visualization_msgs__msg__Marker__create();
+visualization_msgs__msg__Marker__create(void);
 
 /// Destroy msg/Marker message.
 /**

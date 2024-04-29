@@ -62,7 +62,7 @@ geometry_msgs__msg__AccelWithCovariance__fini(geometry_msgs__msg__AccelWithCovar
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__AccelWithCovariance *
-geometry_msgs__msg__AccelWithCovariance__create();
+geometry_msgs__msg__AccelWithCovariance__create(void);
 
 /// Destroy msg/AccelWithCovariance message.
 /**

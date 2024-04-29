@@ -62,7 +62,7 @@ example_interfaces__msg__Float32MultiArray__fini(example_interfaces__msg__Float3
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Float32MultiArray *
-example_interfaces__msg__Float32MultiArray__create();
+example_interfaces__msg__Float32MultiArray__create(void);
 
 /// Destroy msg/Float32MultiArray message.
 /**

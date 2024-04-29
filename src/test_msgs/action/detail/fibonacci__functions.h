@@ -86,7 +86,7 @@ test_msgs__action__Fibonacci_Goal__fini(test_msgs__action__Fibonacci_Goal * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_Goal *
-test_msgs__action__Fibonacci_Goal__create();
+test_msgs__action__Fibonacci_Goal__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -262,7 +262,7 @@ test_msgs__action__Fibonacci_Result__fini(test_msgs__action__Fibonacci_Result * 
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_Result *
-test_msgs__action__Fibonacci_Result__create();
+test_msgs__action__Fibonacci_Result__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -438,7 +438,7 @@ test_msgs__action__Fibonacci_Feedback__fini(test_msgs__action__Fibonacci_Feedbac
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_Feedback *
-test_msgs__action__Fibonacci_Feedback__create();
+test_msgs__action__Fibonacci_Feedback__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -638,7 +638,7 @@ test_msgs__action__Fibonacci_SendGoal_Request__fini(test_msgs__action__Fibonacci
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_SendGoal_Request *
-test_msgs__action__Fibonacci_SendGoal_Request__create();
+test_msgs__action__Fibonacci_SendGoal_Request__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -814,7 +814,7 @@ test_msgs__action__Fibonacci_SendGoal_Response__fini(test_msgs__action__Fibonacc
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_SendGoal_Response *
-test_msgs__action__Fibonacci_SendGoal_Response__create();
+test_msgs__action__Fibonacci_SendGoal_Response__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -990,7 +990,7 @@ test_msgs__action__Fibonacci_SendGoal_Event__fini(test_msgs__action__Fibonacci_S
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_SendGoal_Event *
-test_msgs__action__Fibonacci_SendGoal_Event__create();
+test_msgs__action__Fibonacci_SendGoal_Event__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -1190,7 +1190,7 @@ test_msgs__action__Fibonacci_GetResult_Request__fini(test_msgs__action__Fibonacc
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_GetResult_Request *
-test_msgs__action__Fibonacci_GetResult_Request__create();
+test_msgs__action__Fibonacci_GetResult_Request__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -1366,7 +1366,7 @@ test_msgs__action__Fibonacci_GetResult_Response__fini(test_msgs__action__Fibonac
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_GetResult_Response *
-test_msgs__action__Fibonacci_GetResult_Response__create();
+test_msgs__action__Fibonacci_GetResult_Response__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -1542,7 +1542,7 @@ test_msgs__action__Fibonacci_GetResult_Event__fini(test_msgs__action__Fibonacci_
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_GetResult_Event *
-test_msgs__action__Fibonacci_GetResult_Event__create();
+test_msgs__action__Fibonacci_GetResult_Event__create(void);
 
 /// Destroy action/Fibonacci message.
 /**
@@ -1718,7 +1718,7 @@ test_msgs__action__Fibonacci_FeedbackMessage__fini(test_msgs__action__Fibonacci_
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__action__Fibonacci_FeedbackMessage *
-test_msgs__action__Fibonacci_FeedbackMessage__create();
+test_msgs__action__Fibonacci_FeedbackMessage__create(void);
 
 /// Destroy action/Fibonacci message.
 /**

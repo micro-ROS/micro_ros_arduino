@@ -62,7 +62,7 @@ service_msgs__msg__ServiceEventInfo__fini(service_msgs__msg__ServiceEventInfo * 
  */
 ROSIDL_GENERATOR_C_PUBLIC_service_msgs
 service_msgs__msg__ServiceEventInfo *
-service_msgs__msg__ServiceEventInfo__create();
+service_msgs__msg__ServiceEventInfo__create(void);
 
 /// Destroy msg/ServiceEventInfo message.
 /**

@@ -62,7 +62,7 @@ rcl_interfaces__msg__ListParametersResult__fini(rcl_interfaces__msg__ListParamet
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__msg__ListParametersResult *
-rcl_interfaces__msg__ListParametersResult__create();
+rcl_interfaces__msg__ListParametersResult__create(void);
 
 /// Destroy msg/ListParametersResult message.
 /**

@@ -62,7 +62,7 @@ std_msgs__msg__Float32__fini(std_msgs__msg__Float32 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Float32 *
-std_msgs__msg__Float32__create();
+std_msgs__msg__Float32__create(void);
 
 /// Destroy msg/Float32 message.
 /**

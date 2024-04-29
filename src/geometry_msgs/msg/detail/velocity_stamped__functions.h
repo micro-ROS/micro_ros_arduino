@@ -62,7 +62,7 @@ geometry_msgs__msg__VelocityStamped__fini(geometry_msgs__msg__VelocityStamped * 
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__VelocityStamped *
-geometry_msgs__msg__VelocityStamped__create();
+geometry_msgs__msg__VelocityStamped__create(void);
 
 /// Destroy msg/VelocityStamped message.
 /**

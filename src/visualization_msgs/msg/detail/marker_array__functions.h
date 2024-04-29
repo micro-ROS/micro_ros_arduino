@@ -62,7 +62,7 @@ visualization_msgs__msg__MarkerArray__fini(visualization_msgs__msg__MarkerArray 
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__msg__MarkerArray *
-visualization_msgs__msg__MarkerArray__create();
+visualization_msgs__msg__MarkerArray__create(void);
 
 /// Destroy msg/MarkerArray message.
 /**

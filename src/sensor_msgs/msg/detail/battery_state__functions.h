@@ -62,7 +62,7 @@ sensor_msgs__msg__BatteryState__fini(sensor_msgs__msg__BatteryState * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__BatteryState *
-sensor_msgs__msg__BatteryState__create();
+sensor_msgs__msg__BatteryState__create(void);
 
 /// Destroy msg/BatteryState message.
 /**

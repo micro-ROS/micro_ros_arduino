@@ -62,7 +62,7 @@ std_msgs__msg__Int16__fini(std_msgs__msg__Int16 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Int16 *
-std_msgs__msg__Int16__create();
+std_msgs__msg__Int16__create(void);
 
 /// Destroy msg/Int16 message.
 /**

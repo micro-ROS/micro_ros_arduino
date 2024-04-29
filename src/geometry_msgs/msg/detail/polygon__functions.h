@@ -62,7 +62,7 @@ geometry_msgs__msg__Polygon__fini(geometry_msgs__msg__Polygon * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Polygon *
-geometry_msgs__msg__Polygon__create();
+geometry_msgs__msg__Polygon__create(void);
 
 /// Destroy msg/Polygon message.
 /**

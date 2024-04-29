@@ -62,7 +62,7 @@ type_description_interfaces__msg__KeyValue__fini(type_description_interfaces__ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__msg__KeyValue *
-type_description_interfaces__msg__KeyValue__create();
+type_description_interfaces__msg__KeyValue__create(void);
 
 /// Destroy msg/KeyValue message.
 /**

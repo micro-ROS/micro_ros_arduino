@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   shape_msgs,
   msg,
   Plane
-)();
+)(void);
 
 #ifdef __cplusplus
 }

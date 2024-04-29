@@ -62,7 +62,7 @@ std_msgs__msg__MultiArrayDimension__fini(std_msgs__msg__MultiArrayDimension * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__MultiArrayDimension *
-std_msgs__msg__MultiArrayDimension__create();
+std_msgs__msg__MultiArrayDimension__create(void);
 
 /// Destroy msg/MultiArrayDimension message.
 /**

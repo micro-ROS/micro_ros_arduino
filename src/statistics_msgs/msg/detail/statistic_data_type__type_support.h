@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   statistics_msgs,
   msg,
   StatisticDataType
-)();
+)(void);
 
 #ifdef __cplusplus
 }

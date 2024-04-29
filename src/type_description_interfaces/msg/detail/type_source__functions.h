@@ -62,7 +62,7 @@ type_description_interfaces__msg__TypeSource__fini(type_description_interfaces__
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__msg__TypeSource *
-type_description_interfaces__msg__TypeSource__create();
+type_description_interfaces__msg__TypeSource__create(void);
 
 /// Destroy msg/TypeSource message.
 /**

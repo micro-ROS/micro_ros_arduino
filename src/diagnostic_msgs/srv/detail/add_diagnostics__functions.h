@@ -86,7 +86,7 @@ diagnostic_msgs__srv__AddDiagnostics_Request__fini(diagnostic_msgs__srv__AddDiag
  */
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 diagnostic_msgs__srv__AddDiagnostics_Request *
-diagnostic_msgs__srv__AddDiagnostics_Request__create();
+diagnostic_msgs__srv__AddDiagnostics_Request__create(void);
 
 /// Destroy srv/AddDiagnostics message.
 /**
@@ -262,7 +262,7 @@ diagnostic_msgs__srv__AddDiagnostics_Response__fini(diagnostic_msgs__srv__AddDia
  */
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 diagnostic_msgs__srv__AddDiagnostics_Response *
-diagnostic_msgs__srv__AddDiagnostics_Response__create();
+diagnostic_msgs__srv__AddDiagnostics_Response__create(void);
 
 /// Destroy srv/AddDiagnostics message.
 /**
@@ -438,7 +438,7 @@ diagnostic_msgs__srv__AddDiagnostics_Event__fini(diagnostic_msgs__srv__AddDiagno
  */
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 diagnostic_msgs__srv__AddDiagnostics_Event *
-diagnostic_msgs__srv__AddDiagnostics_Event__create();
+diagnostic_msgs__srv__AddDiagnostics_Event__create(void);
 
 /// Destroy srv/AddDiagnostics message.
 /**

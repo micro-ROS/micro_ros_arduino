@@ -62,7 +62,7 @@ example_interfaces__msg__Bool__fini(example_interfaces__msg__Bool * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Bool *
-example_interfaces__msg__Bool__create();
+example_interfaces__msg__Bool__create(void);
 
 /// Destroy msg/Bool message.
 /**

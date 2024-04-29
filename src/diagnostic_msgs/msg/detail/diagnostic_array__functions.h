@@ -62,7 +62,7 @@ diagnostic_msgs__msg__DiagnosticArray__fini(diagnostic_msgs__msg__DiagnosticArra
  */
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 diagnostic_msgs__msg__DiagnosticArray *
-diagnostic_msgs__msg__DiagnosticArray__create();
+diagnostic_msgs__msg__DiagnosticArray__create(void);
 
 /// Destroy msg/DiagnosticArray message.
 /**

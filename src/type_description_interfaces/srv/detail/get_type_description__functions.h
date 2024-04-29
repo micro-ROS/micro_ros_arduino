@@ -86,7 +86,7 @@ type_description_interfaces__srv__GetTypeDescription_Request__fini(type_descript
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__srv__GetTypeDescription_Request *
-type_description_interfaces__srv__GetTypeDescription_Request__create();
+type_description_interfaces__srv__GetTypeDescription_Request__create(void);
 
 /// Destroy srv/GetTypeDescription message.
 /**
@@ -262,7 +262,7 @@ type_description_interfaces__srv__GetTypeDescription_Response__fini(type_descrip
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__srv__GetTypeDescription_Response *
-type_description_interfaces__srv__GetTypeDescription_Response__create();
+type_description_interfaces__srv__GetTypeDescription_Response__create(void);
 
 /// Destroy srv/GetTypeDescription message.
 /**
@@ -438,7 +438,7 @@ type_description_interfaces__srv__GetTypeDescription_Event__fini(type_descriptio
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__srv__GetTypeDescription_Event *
-type_description_interfaces__srv__GetTypeDescription_Event__create();
+type_description_interfaces__srv__GetTypeDescription_Event__create(void);
 
 /// Destroy srv/GetTypeDescription message.
 /**

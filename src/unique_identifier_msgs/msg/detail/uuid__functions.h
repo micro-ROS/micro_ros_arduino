@@ -62,7 +62,7 @@ unique_identifier_msgs__msg__UUID__fini(unique_identifier_msgs__msg__UUID * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_unique_identifier_msgs
 unique_identifier_msgs__msg__UUID *
-unique_identifier_msgs__msg__UUID__create();
+unique_identifier_msgs__msg__UUID__create(void);
 
 /// Destroy msg/UUID message.
 /**

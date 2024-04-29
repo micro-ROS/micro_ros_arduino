@@ -62,7 +62,7 @@ example_interfaces__msg__Byte__fini(example_interfaces__msg__Byte * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Byte *
-example_interfaces__msg__Byte__create();
+example_interfaces__msg__Byte__create(void);
 
 /// Destroy msg/Byte message.
 /**

@@ -35,7 +35,7 @@ extern "C"
 RCL_LIFECYCLE_PUBLIC
 RCL_WARN_UNUSED
 rcl_lifecycle_transition_map_t
-rcl_lifecycle_get_zero_initialized_transition_map();
+rcl_lifecycle_get_zero_initialized_transition_map(void);
 
 /// Check if a transition map is active using a rcl_lifecycle_state_machine_t.
 /*

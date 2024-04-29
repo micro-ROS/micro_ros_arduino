@@ -62,7 +62,7 @@ sensor_msgs__msg__Temperature__fini(sensor_msgs__msg__Temperature * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__Temperature *
-sensor_msgs__msg__Temperature__create();
+sensor_msgs__msg__Temperature__create(void);
 
 /// Destroy msg/Temperature message.
 /**

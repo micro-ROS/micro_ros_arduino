@@ -62,7 +62,7 @@ test_msgs__msg__Empty__fini(test_msgs__msg__Empty * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__Empty *
-test_msgs__msg__Empty__create();
+test_msgs__msg__Empty__create(void);
 
 /// Destroy msg/Empty message.
 /**

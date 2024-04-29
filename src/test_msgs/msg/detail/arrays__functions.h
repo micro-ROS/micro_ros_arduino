@@ -62,7 +62,7 @@ test_msgs__msg__Arrays__fini(test_msgs__msg__Arrays * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__Arrays *
-test_msgs__msg__Arrays__create();
+test_msgs__msg__Arrays__create(void);
 
 /// Destroy msg/Arrays message.
 /**

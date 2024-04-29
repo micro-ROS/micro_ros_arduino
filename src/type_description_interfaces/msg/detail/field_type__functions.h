@@ -62,7 +62,7 @@ type_description_interfaces__msg__FieldType__fini(type_description_interfaces__m
  */
 ROSIDL_GENERATOR_C_PUBLIC_type_description_interfaces
 type_description_interfaces__msg__FieldType *
-type_description_interfaces__msg__FieldType__create();
+type_description_interfaces__msg__FieldType__create(void);
 
 /// Destroy msg/FieldType message.
 /**

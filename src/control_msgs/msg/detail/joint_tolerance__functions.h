@@ -62,7 +62,7 @@ control_msgs__msg__JointTolerance__fini(control_msgs__msg__JointTolerance * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__JointTolerance *
-control_msgs__msg__JointTolerance__create();
+control_msgs__msg__JointTolerance__create(void);
 
 /// Destroy msg/JointTolerance message.
 /**

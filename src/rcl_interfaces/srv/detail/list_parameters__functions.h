@@ -86,7 +86,7 @@ rcl_interfaces__srv__ListParameters_Request__fini(rcl_interfaces__srv__ListParam
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__srv__ListParameters_Request *
-rcl_interfaces__srv__ListParameters_Request__create();
+rcl_interfaces__srv__ListParameters_Request__create(void);
 
 /// Destroy srv/ListParameters message.
 /**
@@ -262,7 +262,7 @@ rcl_interfaces__srv__ListParameters_Response__fini(rcl_interfaces__srv__ListPara
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__srv__ListParameters_Response *
-rcl_interfaces__srv__ListParameters_Response__create();
+rcl_interfaces__srv__ListParameters_Response__create(void);
 
 /// Destroy srv/ListParameters message.
 /**
@@ -438,7 +438,7 @@ rcl_interfaces__srv__ListParameters_Event__fini(rcl_interfaces__srv__ListParamet
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__srv__ListParameters_Event *
-rcl_interfaces__srv__ListParameters_Event__create();
+rcl_interfaces__srv__ListParameters_Event__create(void);
 
 /// Destroy srv/ListParameters message.
 /**

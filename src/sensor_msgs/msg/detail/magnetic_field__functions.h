@@ -62,7 +62,7 @@ sensor_msgs__msg__MagneticField__fini(sensor_msgs__msg__MagneticField * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__MagneticField *
-sensor_msgs__msg__MagneticField__create();
+sensor_msgs__msg__MagneticField__create(void);
 
 /// Destroy msg/MagneticField message.
 /**

@@ -86,7 +86,7 @@ control_msgs__action__PointHead_Goal__fini(control_msgs__action__PointHead_Goal 
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_Goal *
-control_msgs__action__PointHead_Goal__create();
+control_msgs__action__PointHead_Goal__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -262,7 +262,7 @@ control_msgs__action__PointHead_Result__fini(control_msgs__action__PointHead_Res
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_Result *
-control_msgs__action__PointHead_Result__create();
+control_msgs__action__PointHead_Result__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -438,7 +438,7 @@ control_msgs__action__PointHead_Feedback__fini(control_msgs__action__PointHead_F
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_Feedback *
-control_msgs__action__PointHead_Feedback__create();
+control_msgs__action__PointHead_Feedback__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -638,7 +638,7 @@ control_msgs__action__PointHead_SendGoal_Request__fini(control_msgs__action__Poi
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_SendGoal_Request *
-control_msgs__action__PointHead_SendGoal_Request__create();
+control_msgs__action__PointHead_SendGoal_Request__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -814,7 +814,7 @@ control_msgs__action__PointHead_SendGoal_Response__fini(control_msgs__action__Po
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_SendGoal_Response *
-control_msgs__action__PointHead_SendGoal_Response__create();
+control_msgs__action__PointHead_SendGoal_Response__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -990,7 +990,7 @@ control_msgs__action__PointHead_SendGoal_Event__fini(control_msgs__action__Point
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_SendGoal_Event *
-control_msgs__action__PointHead_SendGoal_Event__create();
+control_msgs__action__PointHead_SendGoal_Event__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -1190,7 +1190,7 @@ control_msgs__action__PointHead_GetResult_Request__fini(control_msgs__action__Po
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_GetResult_Request *
-control_msgs__action__PointHead_GetResult_Request__create();
+control_msgs__action__PointHead_GetResult_Request__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -1366,7 +1366,7 @@ control_msgs__action__PointHead_GetResult_Response__fini(control_msgs__action__P
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_GetResult_Response *
-control_msgs__action__PointHead_GetResult_Response__create();
+control_msgs__action__PointHead_GetResult_Response__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -1542,7 +1542,7 @@ control_msgs__action__PointHead_GetResult_Event__fini(control_msgs__action__Poin
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_GetResult_Event *
-control_msgs__action__PointHead_GetResult_Event__create();
+control_msgs__action__PointHead_GetResult_Event__create(void);
 
 /// Destroy action/PointHead message.
 /**
@@ -1718,7 +1718,7 @@ control_msgs__action__PointHead_FeedbackMessage__fini(control_msgs__action__Poin
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__PointHead_FeedbackMessage *
-control_msgs__action__PointHead_FeedbackMessage__create();
+control_msgs__action__PointHead_FeedbackMessage__create(void);
 
 /// Destroy action/PointHead message.
 /**

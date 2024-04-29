@@ -62,7 +62,7 @@ test_msgs__msg__Strings__fini(test_msgs__msg__Strings * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__Strings *
-test_msgs__msg__Strings__create();
+test_msgs__msg__Strings__create(void);
 
 /// Destroy msg/Strings message.
 /**

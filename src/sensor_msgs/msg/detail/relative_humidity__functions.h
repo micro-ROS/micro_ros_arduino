@@ -62,7 +62,7 @@ sensor_msgs__msg__RelativeHumidity__fini(sensor_msgs__msg__RelativeHumidity * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__RelativeHumidity *
-sensor_msgs__msg__RelativeHumidity__create();
+sensor_msgs__msg__RelativeHumidity__create(void);
 
 /// Destroy msg/RelativeHumidity message.
 /**

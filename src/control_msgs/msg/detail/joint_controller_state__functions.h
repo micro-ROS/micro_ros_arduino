@@ -62,7 +62,7 @@ control_msgs__msg__JointControllerState__fini(control_msgs__msg__JointController
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__JointControllerState *
-control_msgs__msg__JointControllerState__create();
+control_msgs__msg__JointControllerState__create(void);
 
 /// Destroy msg/JointControllerState message.
 /**

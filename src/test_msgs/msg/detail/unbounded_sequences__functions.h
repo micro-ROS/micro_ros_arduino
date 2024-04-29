@@ -62,7 +62,7 @@ test_msgs__msg__UnboundedSequences__fini(test_msgs__msg__UnboundedSequences * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__UnboundedSequences *
-test_msgs__msg__UnboundedSequences__create();
+test_msgs__msg__UnboundedSequences__create(void);
 
 /// Destroy msg/UnboundedSequences message.
 /**

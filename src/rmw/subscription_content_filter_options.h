@@ -49,7 +49,7 @@ typedef struct RMW_PUBLIC_TYPE rmw_subscription_content_filter_options_s
 /// Get zero initialized content filter options.
 RMW_PUBLIC
 rmw_subscription_content_filter_options_t
-rmw_get_zero_initialized_content_filter_options();
+rmw_get_zero_initialized_content_filter_options(void);
 
 
 /// Initialize the given content filter options.

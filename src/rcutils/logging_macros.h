@@ -138,7 +138,7 @@ extern "C"
 /**
  * \return true to log the message, false to ignore the message
  */
-typedef bool (* RclLogFilter)();
+typedef bool (* RclLogFilter)(void);
 /**
  * \def RCUTILS_LOG_CONDITION_FUNCTION_BEFORE
  * A macro checking the `function` condition.

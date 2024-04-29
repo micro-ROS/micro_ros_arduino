@@ -62,7 +62,7 @@ geometry_msgs__msg__AccelStamped__fini(geometry_msgs__msg__AccelStamped * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__AccelStamped *
-geometry_msgs__msg__AccelStamped__create();
+geometry_msgs__msg__AccelStamped__create(void);
 
 /// Destroy msg/AccelStamped message.
 /**

@@ -86,7 +86,7 @@ std_srvs__srv__SetBool_Request__fini(std_srvs__srv__SetBool_Request * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_srvs
 std_srvs__srv__SetBool_Request *
-std_srvs__srv__SetBool_Request__create();
+std_srvs__srv__SetBool_Request__create(void);
 
 /// Destroy srv/SetBool message.
 /**
@@ -262,7 +262,7 @@ std_srvs__srv__SetBool_Response__fini(std_srvs__srv__SetBool_Response * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_srvs
 std_srvs__srv__SetBool_Response *
-std_srvs__srv__SetBool_Response__create();
+std_srvs__srv__SetBool_Response__create(void);
 
 /// Destroy srv/SetBool message.
 /**
@@ -438,7 +438,7 @@ std_srvs__srv__SetBool_Event__fini(std_srvs__srv__SetBool_Event * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_srvs
 std_srvs__srv__SetBool_Event *
-std_srvs__srv__SetBool_Event__create();
+std_srvs__srv__SetBool_Event__create(void);
 
 /// Destroy srv/SetBool message.
 /**

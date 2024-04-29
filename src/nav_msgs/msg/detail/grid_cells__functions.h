@@ -62,7 +62,7 @@ nav_msgs__msg__GridCells__fini(nav_msgs__msg__GridCells * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__msg__GridCells *
-nav_msgs__msg__GridCells__create();
+nav_msgs__msg__GridCells__create(void);
 
 /// Destroy msg/GridCells message.
 /**

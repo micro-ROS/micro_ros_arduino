@@ -62,7 +62,7 @@ std_msgs__msg__UInt64MultiArray__fini(std_msgs__msg__UInt64MultiArray * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__UInt64MultiArray *
-std_msgs__msg__UInt64MultiArray__create();
+std_msgs__msg__UInt64MultiArray__create(void);
 
 /// Destroy msg/UInt64MultiArray message.
 /**

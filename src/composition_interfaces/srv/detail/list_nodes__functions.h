@@ -86,7 +86,7 @@ composition_interfaces__srv__ListNodes_Request__fini(composition_interfaces__srv
  */
 ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
 composition_interfaces__srv__ListNodes_Request *
-composition_interfaces__srv__ListNodes_Request__create();
+composition_interfaces__srv__ListNodes_Request__create(void);
 
 /// Destroy srv/ListNodes message.
 /**
@@ -262,7 +262,7 @@ composition_interfaces__srv__ListNodes_Response__fini(composition_interfaces__sr
  */
 ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
 composition_interfaces__srv__ListNodes_Response *
-composition_interfaces__srv__ListNodes_Response__create();
+composition_interfaces__srv__ListNodes_Response__create(void);
 
 /// Destroy srv/ListNodes message.
 /**
@@ -438,7 +438,7 @@ composition_interfaces__srv__ListNodes_Event__fini(composition_interfaces__srv__
  */
 ROSIDL_GENERATOR_C_PUBLIC_composition_interfaces
 composition_interfaces__srv__ListNodes_Event *
-composition_interfaces__srv__ListNodes_Event__create();
+composition_interfaces__srv__ListNodes_Event__create(void);
 
 /// Destroy srv/ListNodes message.
 /**

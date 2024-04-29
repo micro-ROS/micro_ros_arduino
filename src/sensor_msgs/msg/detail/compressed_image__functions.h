@@ -62,7 +62,7 @@ sensor_msgs__msg__CompressedImage__fini(sensor_msgs__msg__CompressedImage * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__CompressedImage *
-sensor_msgs__msg__CompressedImage__create();
+sensor_msgs__msg__CompressedImage__create(void);
 
 /// Destroy msg/CompressedImage message.
 /**

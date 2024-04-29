@@ -62,7 +62,7 @@ test_msgs__msg__WStrings__fini(test_msgs__msg__WStrings * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__WStrings *
-test_msgs__msg__WStrings__create();
+test_msgs__msg__WStrings__create(void);
 
 /// Destroy msg/WStrings message.
 /**

@@ -62,7 +62,7 @@ example_interfaces__msg__Int16MultiArray__fini(example_interfaces__msg__Int16Mul
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Int16MultiArray *
-example_interfaces__msg__Int16MultiArray__create();
+example_interfaces__msg__Int16MultiArray__create(void);
 
 /// Destroy msg/Int16MultiArray message.
 /**

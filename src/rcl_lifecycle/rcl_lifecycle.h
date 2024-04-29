@@ -53,7 +53,7 @@ extern "C"
  */
 RCL_LIFECYCLE_PUBLIC
 rcl_lifecycle_state_t
-rcl_lifecycle_get_zero_initialized_state();
+rcl_lifecycle_get_zero_initialized_state(void);
 
 /// Initialize a rcl_lifecycle_state_init.
 /**
@@ -123,7 +123,7 @@ rcl_lifecycle_state_fini(
  */
 RCL_LIFECYCLE_PUBLIC
 rcl_lifecycle_transition_t
-rcl_lifecycle_get_zero_initialized_transition();
+rcl_lifecycle_get_zero_initialized_transition(void);
 
 /// Initialize a transition from a start state to the goal state.
 /**
@@ -197,7 +197,7 @@ rcl_lifecycle_transition_fini(
 /// Return a default initialized state machine options struct.
 RCL_LIFECYCLE_PUBLIC
 rcl_lifecycle_state_machine_options_t
-rcl_lifecycle_get_default_state_machine_options();
+rcl_lifecycle_get_default_state_machine_options(void);
 
 /// Return a rcl_lifecycle_state_machine_t struct with members set to `NULL` or 0.
 /**
@@ -206,7 +206,7 @@ rcl_lifecycle_get_default_state_machine_options();
  */
 RCL_LIFECYCLE_PUBLIC
 rcl_lifecycle_state_machine_t
-rcl_lifecycle_get_zero_initialized_state_machine();
+rcl_lifecycle_get_zero_initialized_state_machine(void);
 
 /// Initialize state machine
 /**

@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   builtin_interfaces,
   msg,
   Duration
-)();
+)(void);
 
 #ifdef __cplusplus
 }

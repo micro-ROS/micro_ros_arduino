@@ -62,7 +62,7 @@ geometry_msgs__msg__Transform__fini(geometry_msgs__msg__Transform * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Transform *
-geometry_msgs__msg__Transform__create();
+geometry_msgs__msg__Transform__create(void);
 
 /// Destroy msg/Transform message.
 /**

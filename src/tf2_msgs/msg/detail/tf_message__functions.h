@@ -62,7 +62,7 @@ tf2_msgs__msg__TFMessage__fini(tf2_msgs__msg__TFMessage * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 tf2_msgs__msg__TFMessage *
-tf2_msgs__msg__TFMessage__create();
+tf2_msgs__msg__TFMessage__create(void);
 
 /// Destroy msg/TFMessage message.
 /**

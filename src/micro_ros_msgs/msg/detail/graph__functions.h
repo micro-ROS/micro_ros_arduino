@@ -62,7 +62,7 @@ micro_ros_msgs__msg__Graph__fini(micro_ros_msgs__msg__Graph * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 micro_ros_msgs__msg__Graph *
-micro_ros_msgs__msg__Graph__create();
+micro_ros_msgs__msg__Graph__create(void);
 
 /// Destroy msg/Graph message.
 /**

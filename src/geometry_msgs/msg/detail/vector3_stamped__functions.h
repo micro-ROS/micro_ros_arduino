@@ -62,7 +62,7 @@ geometry_msgs__msg__Vector3Stamped__fini(geometry_msgs__msg__Vector3Stamped * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Vector3Stamped *
-geometry_msgs__msg__Vector3Stamped__create();
+geometry_msgs__msg__Vector3Stamped__create(void);
 
 /// Destroy msg/Vector3Stamped message.
 /**

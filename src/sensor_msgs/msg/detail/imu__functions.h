@@ -62,7 +62,7 @@ sensor_msgs__msg__Imu__fini(sensor_msgs__msg__Imu * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__Imu *
-sensor_msgs__msg__Imu__create();
+sensor_msgs__msg__Imu__create(void);
 
 /// Destroy msg/Imu message.
 /**

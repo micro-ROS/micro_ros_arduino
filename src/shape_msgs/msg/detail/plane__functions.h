@@ -62,7 +62,7 @@ shape_msgs__msg__Plane__fini(shape_msgs__msg__Plane * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 shape_msgs__msg__Plane *
-shape_msgs__msg__Plane__create();
+shape_msgs__msg__Plane__create(void);
 
 /// Destroy msg/Plane message.
 /**

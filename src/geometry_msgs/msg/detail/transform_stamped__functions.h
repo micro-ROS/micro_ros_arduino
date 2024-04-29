@@ -62,7 +62,7 @@ geometry_msgs__msg__TransformStamped__fini(geometry_msgs__msg__TransformStamped 
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__TransformStamped *
-geometry_msgs__msg__TransformStamped__create();
+geometry_msgs__msg__TransformStamped__create(void);
 
 /// Destroy msg/TransformStamped message.
 /**

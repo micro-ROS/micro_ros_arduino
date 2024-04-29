@@ -86,7 +86,7 @@ nav_msgs__srv__LoadMap_Request__fini(nav_msgs__srv__LoadMap_Request * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__srv__LoadMap_Request *
-nav_msgs__srv__LoadMap_Request__create();
+nav_msgs__srv__LoadMap_Request__create(void);
 
 /// Destroy srv/LoadMap message.
 /**
@@ -262,7 +262,7 @@ nav_msgs__srv__LoadMap_Response__fini(nav_msgs__srv__LoadMap_Response * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__srv__LoadMap_Response *
-nav_msgs__srv__LoadMap_Response__create();
+nav_msgs__srv__LoadMap_Response__create(void);
 
 /// Destroy srv/LoadMap message.
 /**
@@ -438,7 +438,7 @@ nav_msgs__srv__LoadMap_Event__fini(nav_msgs__srv__LoadMap_Event * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__srv__LoadMap_Event *
-nav_msgs__srv__LoadMap_Event__create();
+nav_msgs__srv__LoadMap_Event__create(void);
 
 /// Destroy srv/LoadMap message.
 /**

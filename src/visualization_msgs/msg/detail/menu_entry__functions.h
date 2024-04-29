@@ -62,7 +62,7 @@ visualization_msgs__msg__MenuEntry__fini(visualization_msgs__msg__MenuEntry * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__msg__MenuEntry *
-visualization_msgs__msg__MenuEntry__create();
+visualization_msgs__msg__MenuEntry__create(void);
 
 /// Destroy msg/MenuEntry message.
 /**

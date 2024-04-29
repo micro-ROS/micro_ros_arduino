@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   rosgraph_msgs,
   msg,
   Clock
-)();
+)(void);
 
 #ifdef __cplusplus
 }

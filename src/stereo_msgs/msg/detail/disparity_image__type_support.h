@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   stereo_msgs,
   msg,
   DisparityImage
-)();
+)(void);
 
 #ifdef __cplusplus
 }

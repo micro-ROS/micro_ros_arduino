@@ -62,7 +62,7 @@ control_msgs__msg__GripperCommand__fini(control_msgs__msg__GripperCommand * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__GripperCommand *
-control_msgs__msg__GripperCommand__create();
+control_msgs__msg__GripperCommand__create(void);
 
 /// Destroy msg/GripperCommand message.
 /**

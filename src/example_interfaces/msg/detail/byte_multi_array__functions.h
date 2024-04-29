@@ -62,7 +62,7 @@ example_interfaces__msg__ByteMultiArray__fini(example_interfaces__msg__ByteMulti
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__ByteMultiArray *
-example_interfaces__msg__ByteMultiArray__create();
+example_interfaces__msg__ByteMultiArray__create(void);
 
 /// Destroy msg/ByteMultiArray message.
 /**

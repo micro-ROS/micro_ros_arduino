@@ -62,7 +62,7 @@ test_msgs__msg__BasicTypes__fini(test_msgs__msg__BasicTypes * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__BasicTypes *
-test_msgs__msg__BasicTypes__create();
+test_msgs__msg__BasicTypes__create(void);
 
 /// Destroy msg/BasicTypes message.
 /**

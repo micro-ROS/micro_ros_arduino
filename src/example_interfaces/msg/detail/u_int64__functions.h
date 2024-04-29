@@ -62,7 +62,7 @@ example_interfaces__msg__UInt64__fini(example_interfaces__msg__UInt64 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__UInt64 *
-example_interfaces__msg__UInt64__create();
+example_interfaces__msg__UInt64__create(void);
 
 /// Destroy msg/UInt64 message.
 /**

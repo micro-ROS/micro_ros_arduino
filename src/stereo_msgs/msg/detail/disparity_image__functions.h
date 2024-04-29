@@ -62,7 +62,7 @@ stereo_msgs__msg__DisparityImage__fini(stereo_msgs__msg__DisparityImage * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_stereo_msgs
 stereo_msgs__msg__DisparityImage *
-stereo_msgs__msg__DisparityImage__create();
+stereo_msgs__msg__DisparityImage__create(void);
 
 /// Destroy msg/DisparityImage message.
 /**

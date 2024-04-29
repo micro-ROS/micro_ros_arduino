@@ -62,7 +62,7 @@ sensor_msgs__msg__FluidPressure__fini(sensor_msgs__msg__FluidPressure * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__FluidPressure *
-sensor_msgs__msg__FluidPressure__create();
+sensor_msgs__msg__FluidPressure__create(void);
 
 /// Destroy msg/FluidPressure message.
 /**

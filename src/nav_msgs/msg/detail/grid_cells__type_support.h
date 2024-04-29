@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   nav_msgs,
   msg,
   GridCells
-)();
+)(void);
 
 #ifdef __cplusplus
 }

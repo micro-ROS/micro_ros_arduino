@@ -62,7 +62,7 @@ sensor_msgs__msg__JointState__fini(sensor_msgs__msg__JointState * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__JointState *
-sensor_msgs__msg__JointState__create();
+sensor_msgs__msg__JointState__create(void);
 
 /// Destroy msg/JointState message.
 /**

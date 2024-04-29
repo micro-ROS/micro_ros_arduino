@@ -62,7 +62,7 @@ nav_msgs__msg__Odometry__fini(nav_msgs__msg__Odometry * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__msg__Odometry *
-nav_msgs__msg__Odometry__create();
+nav_msgs__msg__Odometry__create(void);
 
 /// Destroy msg/Odometry message.
 /**

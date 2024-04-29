@@ -62,7 +62,7 @@ example_interfaces__msg__MultiArrayLayout__fini(example_interfaces__msg__MultiAr
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__MultiArrayLayout *
-example_interfaces__msg__MultiArrayLayout__create();
+example_interfaces__msg__MultiArrayLayout__create(void);
 
 /// Destroy msg/MultiArrayLayout message.
 /**

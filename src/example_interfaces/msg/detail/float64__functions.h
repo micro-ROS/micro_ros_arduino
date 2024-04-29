@@ -62,7 +62,7 @@ example_interfaces__msg__Float64__fini(example_interfaces__msg__Float64 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Float64 *
-example_interfaces__msg__Float64__create();
+example_interfaces__msg__Float64__create(void);
 
 /// Destroy msg/Float64 message.
 /**

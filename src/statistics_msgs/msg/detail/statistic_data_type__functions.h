@@ -62,7 +62,7 @@ statistics_msgs__msg__StatisticDataType__fini(statistics_msgs__msg__StatisticDat
  */
 ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
 statistics_msgs__msg__StatisticDataType *
-statistics_msgs__msg__StatisticDataType__create();
+statistics_msgs__msg__StatisticDataType__create(void);
 
 /// Destroy msg/StatisticDataType message.
 /**

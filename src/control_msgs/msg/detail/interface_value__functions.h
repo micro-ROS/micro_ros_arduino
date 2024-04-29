@@ -62,7 +62,7 @@ control_msgs__msg__InterfaceValue__fini(control_msgs__msg__InterfaceValue * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__InterfaceValue *
-control_msgs__msg__InterfaceValue__create();
+control_msgs__msg__InterfaceValue__create(void);
 
 /// Destroy msg/InterfaceValue message.
 /**

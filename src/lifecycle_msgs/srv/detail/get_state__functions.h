@@ -86,7 +86,7 @@ lifecycle_msgs__srv__GetState_Request__fini(lifecycle_msgs__srv__GetState_Reques
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__srv__GetState_Request *
-lifecycle_msgs__srv__GetState_Request__create();
+lifecycle_msgs__srv__GetState_Request__create(void);
 
 /// Destroy srv/GetState message.
 /**
@@ -262,7 +262,7 @@ lifecycle_msgs__srv__GetState_Response__fini(lifecycle_msgs__srv__GetState_Respo
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__srv__GetState_Response *
-lifecycle_msgs__srv__GetState_Response__create();
+lifecycle_msgs__srv__GetState_Response__create(void);
 
 /// Destroy srv/GetState message.
 /**
@@ -438,7 +438,7 @@ lifecycle_msgs__srv__GetState_Event__fini(lifecycle_msgs__srv__GetState_Event * 
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__srv__GetState_Event *
-lifecycle_msgs__srv__GetState_Event__create();
+lifecycle_msgs__srv__GetState_Event__create(void);
 
 /// Destroy srv/GetState message.
 /**

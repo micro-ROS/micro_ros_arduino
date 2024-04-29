@@ -62,7 +62,7 @@ std_msgs__msg__UInt16__fini(std_msgs__msg__UInt16 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__UInt16 *
-std_msgs__msg__UInt16__create();
+std_msgs__msg__UInt16__create(void);
 
 /// Destroy msg/UInt16 message.
 /**

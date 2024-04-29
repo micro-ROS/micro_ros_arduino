@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   actionlib_msgs,
   msg,
   GoalStatus
-)();
+)(void);
 
 #ifdef __cplusplus
 }

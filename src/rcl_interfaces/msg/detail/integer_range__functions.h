@@ -62,7 +62,7 @@ rcl_interfaces__msg__IntegerRange__fini(rcl_interfaces__msg__IntegerRange * msg)
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__msg__IntegerRange *
-rcl_interfaces__msg__IntegerRange__create();
+rcl_interfaces__msg__IntegerRange__create(void);
 
 /// Destroy msg/IntegerRange message.
 /**

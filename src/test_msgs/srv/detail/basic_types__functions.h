@@ -86,7 +86,7 @@ test_msgs__srv__BasicTypes_Request__fini(test_msgs__srv__BasicTypes_Request * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__srv__BasicTypes_Request *
-test_msgs__srv__BasicTypes_Request__create();
+test_msgs__srv__BasicTypes_Request__create(void);
 
 /// Destroy srv/BasicTypes message.
 /**
@@ -262,7 +262,7 @@ test_msgs__srv__BasicTypes_Response__fini(test_msgs__srv__BasicTypes_Response * 
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__srv__BasicTypes_Response *
-test_msgs__srv__BasicTypes_Response__create();
+test_msgs__srv__BasicTypes_Response__create(void);
 
 /// Destroy srv/BasicTypes message.
 /**
@@ -438,7 +438,7 @@ test_msgs__srv__BasicTypes_Event__fini(test_msgs__srv__BasicTypes_Event * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__srv__BasicTypes_Event *
-test_msgs__srv__BasicTypes_Event__create();
+test_msgs__srv__BasicTypes_Event__create(void);
 
 /// Destroy srv/BasicTypes message.
 /**

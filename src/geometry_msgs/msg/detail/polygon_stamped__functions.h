@@ -62,7 +62,7 @@ geometry_msgs__msg__PolygonStamped__fini(geometry_msgs__msg__PolygonStamped * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__PolygonStamped *
-geometry_msgs__msg__PolygonStamped__create();
+geometry_msgs__msg__PolygonStamped__create(void);
 
 /// Destroy msg/PolygonStamped message.
 /**

@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   service_msgs,
   msg,
   ServiceEventInfo
-)();
+)(void);
 
 #ifdef __cplusplus
 }

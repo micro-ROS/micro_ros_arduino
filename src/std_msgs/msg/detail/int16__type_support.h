@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   std_msgs,
   msg,
   Int16
-)();
+)(void);
 
 #ifdef __cplusplus
 }

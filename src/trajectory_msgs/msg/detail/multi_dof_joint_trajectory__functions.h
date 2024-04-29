@@ -62,7 +62,7 @@ trajectory_msgs__msg__MultiDOFJointTrajectory__fini(trajectory_msgs__msg__MultiD
  */
 ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 trajectory_msgs__msg__MultiDOFJointTrajectory *
-trajectory_msgs__msg__MultiDOFJointTrajectory__create();
+trajectory_msgs__msg__MultiDOFJointTrajectory__create(void);
 
 /// Destroy msg/MultiDOFJointTrajectory message.
 /**

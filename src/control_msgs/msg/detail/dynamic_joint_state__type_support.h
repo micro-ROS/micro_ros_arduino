@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   control_msgs,
   msg,
   DynamicJointState
-)();
+)(void);
 
 #ifdef __cplusplus
 }

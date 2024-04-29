@@ -62,7 +62,7 @@ shape_msgs__msg__SolidPrimitive__fini(shape_msgs__msg__SolidPrimitive * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_shape_msgs
 shape_msgs__msg__SolidPrimitive *
-shape_msgs__msg__SolidPrimitive__create();
+shape_msgs__msg__SolidPrimitive__create(void);
 
 /// Destroy msg/SolidPrimitive message.
 /**

@@ -62,7 +62,7 @@ std_msgs__msg__Empty__fini(std_msgs__msg__Empty * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Empty *
-std_msgs__msg__Empty__create();
+std_msgs__msg__Empty__create(void);
 
 /// Destroy msg/Empty message.
 /**

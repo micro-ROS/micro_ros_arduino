@@ -62,7 +62,7 @@ example_interfaces__msg__Int16__fini(example_interfaces__msg__Int16 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Int16 *
-example_interfaces__msg__Int16__create();
+example_interfaces__msg__Int16__create(void);
 
 /// Destroy msg/Int16 message.
 /**

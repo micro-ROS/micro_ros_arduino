@@ -62,7 +62,7 @@ micro_ros_msgs__msg__Node__fini(micro_ros_msgs__msg__Node * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_micro_ros_msgs
 micro_ros_msgs__msg__Node *
-micro_ros_msgs__msg__Node__create();
+micro_ros_msgs__msg__Node__create(void);
 
 /// Destroy msg/Node message.
 /**

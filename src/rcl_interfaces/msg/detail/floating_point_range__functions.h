@@ -62,7 +62,7 @@ rcl_interfaces__msg__FloatingPointRange__fini(rcl_interfaces__msg__FloatingPoint
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__msg__FloatingPointRange *
-rcl_interfaces__msg__FloatingPointRange__create();
+rcl_interfaces__msg__FloatingPointRange__create(void);
 
 /// Destroy msg/FloatingPointRange message.
 /**

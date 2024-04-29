@@ -62,7 +62,7 @@ sensor_msgs__msg__NavSatFix__fini(sensor_msgs__msg__NavSatFix * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__NavSatFix *
-sensor_msgs__msg__NavSatFix__create();
+sensor_msgs__msg__NavSatFix__create(void);
 
 /// Destroy msg/NavSatFix message.
 /**

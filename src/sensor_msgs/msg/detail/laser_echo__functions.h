@@ -62,7 +62,7 @@ sensor_msgs__msg__LaserEcho__fini(sensor_msgs__msg__LaserEcho * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__LaserEcho *
-sensor_msgs__msg__LaserEcho__create();
+sensor_msgs__msg__LaserEcho__create(void);
 
 /// Destroy msg/LaserEcho message.
 /**

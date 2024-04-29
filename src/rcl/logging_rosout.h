@@ -91,7 +91,7 @@ rcl_logging_rosout_init(
 RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
-rcl_logging_rosout_fini();
+rcl_logging_rosout_fini(void);
 
 /// Creates a rosout publisher for a node and registers it to be used by the logging system
 /**

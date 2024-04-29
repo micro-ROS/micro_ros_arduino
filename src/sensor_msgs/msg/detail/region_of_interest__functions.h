@@ -62,7 +62,7 @@ sensor_msgs__msg__RegionOfInterest__fini(sensor_msgs__msg__RegionOfInterest * ms
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__RegionOfInterest *
-sensor_msgs__msg__RegionOfInterest__create();
+sensor_msgs__msg__RegionOfInterest__create(void);
 
 /// Destroy msg/RegionOfInterest message.
 /**

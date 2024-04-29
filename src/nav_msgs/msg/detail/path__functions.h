@@ -62,7 +62,7 @@ nav_msgs__msg__Path__fini(nav_msgs__msg__Path * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__msg__Path *
-nav_msgs__msg__Path__create();
+nav_msgs__msg__Path__create(void);
 
 /// Destroy msg/Path message.
 /**

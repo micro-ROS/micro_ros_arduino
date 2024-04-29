@@ -62,7 +62,7 @@ test_msgs__msg__MultiNested__fini(test_msgs__msg__MultiNested * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__MultiNested *
-test_msgs__msg__MultiNested__create();
+test_msgs__msg__MultiNested__create(void);
 
 /// Destroy msg/MultiNested message.
 /**

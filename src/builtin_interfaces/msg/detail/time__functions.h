@@ -62,7 +62,7 @@ builtin_interfaces__msg__Time__fini(builtin_interfaces__msg__Time * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_builtin_interfaces
 builtin_interfaces__msg__Time *
-builtin_interfaces__msg__Time__create();
+builtin_interfaces__msg__Time__create(void);
 
 /// Destroy msg/Time message.
 /**

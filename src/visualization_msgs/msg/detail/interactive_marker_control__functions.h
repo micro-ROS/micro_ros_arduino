@@ -62,7 +62,7 @@ visualization_msgs__msg__InteractiveMarkerControl__fini(visualization_msgs__msg_
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__msg__InteractiveMarkerControl *
-visualization_msgs__msg__InteractiveMarkerControl__create();
+visualization_msgs__msg__InteractiveMarkerControl__create(void);
 
 /// Destroy msg/InteractiveMarkerControl message.
 /**

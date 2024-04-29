@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   lifecycle_msgs,
   msg,
   State
-)();
+)(void);
 
 #ifdef __cplusplus
 }

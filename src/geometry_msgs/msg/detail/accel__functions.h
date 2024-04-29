@@ -62,7 +62,7 @@ geometry_msgs__msg__Accel__fini(geometry_msgs__msg__Accel * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__Accel *
-geometry_msgs__msg__Accel__create();
+geometry_msgs__msg__Accel__create(void);
 
 /// Destroy msg/Accel message.
 /**

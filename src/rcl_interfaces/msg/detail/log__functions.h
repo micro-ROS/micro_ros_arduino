@@ -62,7 +62,7 @@ rcl_interfaces__msg__Log__fini(rcl_interfaces__msg__Log * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__msg__Log *
-rcl_interfaces__msg__Log__create();
+rcl_interfaces__msg__Log__create(void);
 
 /// Destroy msg/Log message.
 /**

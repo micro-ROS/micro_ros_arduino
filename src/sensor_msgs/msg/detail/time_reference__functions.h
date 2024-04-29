@@ -62,7 +62,7 @@ sensor_msgs__msg__TimeReference__fini(sensor_msgs__msg__TimeReference * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__TimeReference *
-sensor_msgs__msg__TimeReference__create();
+sensor_msgs__msg__TimeReference__create(void);
 
 /// Destroy msg/TimeReference message.
 /**

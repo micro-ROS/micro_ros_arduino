@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   tf2_msgs,
   msg,
   TF2Error
-)();
+)(void);
 
 #ifdef __cplusplus
 }

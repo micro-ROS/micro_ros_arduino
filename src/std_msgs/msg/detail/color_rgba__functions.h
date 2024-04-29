@@ -62,7 +62,7 @@ std_msgs__msg__ColorRGBA__fini(std_msgs__msg__ColorRGBA * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__ColorRGBA *
-std_msgs__msg__ColorRGBA__create();
+std_msgs__msg__ColorRGBA__create(void);
 
 /// Destroy msg/ColorRGBA message.
 /**

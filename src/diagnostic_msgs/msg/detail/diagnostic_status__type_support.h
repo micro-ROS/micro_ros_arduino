@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   diagnostic_msgs,
   msg,
   DiagnosticStatus
-)();
+)(void);
 
 #ifdef __cplusplus
 }

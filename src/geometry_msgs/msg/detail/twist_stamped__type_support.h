@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   geometry_msgs,
   msg,
   TwistStamped
-)();
+)(void);
 
 #ifdef __cplusplus
 }

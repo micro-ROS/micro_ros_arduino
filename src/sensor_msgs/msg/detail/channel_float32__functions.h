@@ -62,7 +62,7 @@ sensor_msgs__msg__ChannelFloat32__fini(sensor_msgs__msg__ChannelFloat32 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__ChannelFloat32 *
-sensor_msgs__msg__ChannelFloat32__create();
+sensor_msgs__msg__ChannelFloat32__create(void);
 
 /// Destroy msg/ChannelFloat32 message.
 /**

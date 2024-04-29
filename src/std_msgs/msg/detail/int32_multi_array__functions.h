@@ -62,7 +62,7 @@ std_msgs__msg__Int32MultiArray__fini(std_msgs__msg__Int32MultiArray * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Int32MultiArray *
-std_msgs__msg__Int32MultiArray__create();
+std_msgs__msg__Int32MultiArray__create(void);
 
 /// Destroy msg/Int32MultiArray message.
 /**

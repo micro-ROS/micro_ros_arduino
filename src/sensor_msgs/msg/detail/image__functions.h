@@ -62,7 +62,7 @@ sensor_msgs__msg__Image__fini(sensor_msgs__msg__Image * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__Image *
-sensor_msgs__msg__Image__create();
+sensor_msgs__msg__Image__create(void);
 
 /// Destroy msg/Image message.
 /**

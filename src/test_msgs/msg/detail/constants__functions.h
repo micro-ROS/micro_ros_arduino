@@ -62,7 +62,7 @@ test_msgs__msg__Constants__fini(test_msgs__msg__Constants * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__Constants *
-test_msgs__msg__Constants__create();
+test_msgs__msg__Constants__create(void);
 
 /// Destroy msg/Constants message.
 /**

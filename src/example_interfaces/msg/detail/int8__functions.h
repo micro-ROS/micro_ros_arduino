@@ -62,7 +62,7 @@ example_interfaces__msg__Int8__fini(example_interfaces__msg__Int8 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Int8 *
-example_interfaces__msg__Int8__create();
+example_interfaces__msg__Int8__create(void);
 
 /// Destroy msg/Int8 message.
 /**

@@ -62,7 +62,7 @@ diagnostic_msgs__msg__KeyValue__fini(diagnostic_msgs__msg__KeyValue * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_diagnostic_msgs
 diagnostic_msgs__msg__KeyValue *
-diagnostic_msgs__msg__KeyValue__create();
+diagnostic_msgs__msg__KeyValue__create(void);
 
 /// Destroy msg/KeyValue message.
 /**

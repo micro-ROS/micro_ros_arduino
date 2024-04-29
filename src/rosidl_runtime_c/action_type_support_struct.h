@@ -38,7 +38,7 @@ typedef const rosidl_runtime_c__type_description__TypeSource__Sequence *
 (* rosidl_action_get_type_description_sources_function)(const rosidl_action_type_support_t *);
 
 /// Contains rosidl action type support data.
-/*
+/**
  * Actions are built based on services(goal, result and cancel) and message (feedback and status).
  */
 struct rosidl_action_type_support_t
@@ -57,7 +57,7 @@ struct rosidl_action_type_support_t
 };
 
 /// Get the action type support given a provided action and package.
-/*
+/**
  * \param PkgName name of the package that contains the action
  * \param Name action name
  * \return a rosidl_action_type_support_t struct if found, otherwise NULL.

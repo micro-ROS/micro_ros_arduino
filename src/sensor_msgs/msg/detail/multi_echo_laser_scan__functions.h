@@ -62,7 +62,7 @@ sensor_msgs__msg__MultiEchoLaserScan__fini(sensor_msgs__msg__MultiEchoLaserScan 
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__MultiEchoLaserScan *
-sensor_msgs__msg__MultiEchoLaserScan__create();
+sensor_msgs__msg__MultiEchoLaserScan__create(void);
 
 /// Destroy msg/MultiEchoLaserScan message.
 /**

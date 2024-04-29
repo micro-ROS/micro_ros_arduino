@@ -86,7 +86,7 @@ control_msgs__action__SingleJointPosition_Goal__fini(control_msgs__action__Singl
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_Goal *
-control_msgs__action__SingleJointPosition_Goal__create();
+control_msgs__action__SingleJointPosition_Goal__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -262,7 +262,7 @@ control_msgs__action__SingleJointPosition_Result__fini(control_msgs__action__Sin
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_Result *
-control_msgs__action__SingleJointPosition_Result__create();
+control_msgs__action__SingleJointPosition_Result__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -438,7 +438,7 @@ control_msgs__action__SingleJointPosition_Feedback__fini(control_msgs__action__S
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_Feedback *
-control_msgs__action__SingleJointPosition_Feedback__create();
+control_msgs__action__SingleJointPosition_Feedback__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -638,7 +638,7 @@ control_msgs__action__SingleJointPosition_SendGoal_Request__fini(control_msgs__a
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_SendGoal_Request *
-control_msgs__action__SingleJointPosition_SendGoal_Request__create();
+control_msgs__action__SingleJointPosition_SendGoal_Request__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -814,7 +814,7 @@ control_msgs__action__SingleJointPosition_SendGoal_Response__fini(control_msgs__
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_SendGoal_Response *
-control_msgs__action__SingleJointPosition_SendGoal_Response__create();
+control_msgs__action__SingleJointPosition_SendGoal_Response__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -990,7 +990,7 @@ control_msgs__action__SingleJointPosition_SendGoal_Event__fini(control_msgs__act
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_SendGoal_Event *
-control_msgs__action__SingleJointPosition_SendGoal_Event__create();
+control_msgs__action__SingleJointPosition_SendGoal_Event__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -1190,7 +1190,7 @@ control_msgs__action__SingleJointPosition_GetResult_Request__fini(control_msgs__
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_GetResult_Request *
-control_msgs__action__SingleJointPosition_GetResult_Request__create();
+control_msgs__action__SingleJointPosition_GetResult_Request__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -1366,7 +1366,7 @@ control_msgs__action__SingleJointPosition_GetResult_Response__fini(control_msgs_
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_GetResult_Response *
-control_msgs__action__SingleJointPosition_GetResult_Response__create();
+control_msgs__action__SingleJointPosition_GetResult_Response__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -1542,7 +1542,7 @@ control_msgs__action__SingleJointPosition_GetResult_Event__fini(control_msgs__ac
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_GetResult_Event *
-control_msgs__action__SingleJointPosition_GetResult_Event__create();
+control_msgs__action__SingleJointPosition_GetResult_Event__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**
@@ -1718,7 +1718,7 @@ control_msgs__action__SingleJointPosition_FeedbackMessage__fini(control_msgs__ac
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__action__SingleJointPosition_FeedbackMessage *
-control_msgs__action__SingleJointPosition_FeedbackMessage__create();
+control_msgs__action__SingleJointPosition_FeedbackMessage__create(void);
 
 /// Destroy action/SingleJointPosition message.
 /**

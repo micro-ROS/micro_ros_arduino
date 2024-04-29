@@ -86,7 +86,7 @@ visualization_msgs__srv__GetInteractiveMarkers_Request__fini(visualization_msgs_
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__srv__GetInteractiveMarkers_Request *
-visualization_msgs__srv__GetInteractiveMarkers_Request__create();
+visualization_msgs__srv__GetInteractiveMarkers_Request__create(void);
 
 /// Destroy srv/GetInteractiveMarkers message.
 /**
@@ -262,7 +262,7 @@ visualization_msgs__srv__GetInteractiveMarkers_Response__fini(visualization_msgs
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__srv__GetInteractiveMarkers_Response *
-visualization_msgs__srv__GetInteractiveMarkers_Response__create();
+visualization_msgs__srv__GetInteractiveMarkers_Response__create(void);
 
 /// Destroy srv/GetInteractiveMarkers message.
 /**
@@ -438,7 +438,7 @@ visualization_msgs__srv__GetInteractiveMarkers_Event__fini(visualization_msgs__s
  */
 ROSIDL_GENERATOR_C_PUBLIC_visualization_msgs
 visualization_msgs__srv__GetInteractiveMarkers_Event *
-visualization_msgs__srv__GetInteractiveMarkers_Event__create();
+visualization_msgs__srv__GetInteractiveMarkers_Event__create(void);
 
 /// Destroy srv/GetInteractiveMarkers message.
 /**

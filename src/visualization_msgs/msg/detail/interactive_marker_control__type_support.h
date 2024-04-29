@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   visualization_msgs,
   msg,
   InteractiveMarkerControl
-)();
+)(void);
 
 #ifdef __cplusplus
 }

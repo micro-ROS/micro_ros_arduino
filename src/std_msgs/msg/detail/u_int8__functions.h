@@ -62,7 +62,7 @@ std_msgs__msg__UInt8__fini(std_msgs__msg__UInt8 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__UInt8 *
-std_msgs__msg__UInt8__create();
+std_msgs__msg__UInt8__create(void);
 
 /// Destroy msg/UInt8 message.
 /**

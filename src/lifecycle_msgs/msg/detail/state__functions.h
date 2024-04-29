@@ -62,7 +62,7 @@ lifecycle_msgs__msg__State__fini(lifecycle_msgs__msg__State * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_lifecycle_msgs
 lifecycle_msgs__msg__State *
-lifecycle_msgs__msg__State__create();
+lifecycle_msgs__msg__State__create(void);
 
 /// Destroy msg/State message.
 /**

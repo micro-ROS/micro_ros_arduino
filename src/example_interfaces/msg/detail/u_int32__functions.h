@@ -62,7 +62,7 @@ example_interfaces__msg__UInt32__fini(example_interfaces__msg__UInt32 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__UInt32 *
-example_interfaces__msg__UInt32__create();
+example_interfaces__msg__UInt32__create(void);
 
 /// Destroy msg/UInt32 message.
 /**

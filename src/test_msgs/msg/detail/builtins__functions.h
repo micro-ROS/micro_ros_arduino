@@ -62,7 +62,7 @@ test_msgs__msg__Builtins__fini(test_msgs__msg__Builtins * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_test_msgs
 test_msgs__msg__Builtins *
-test_msgs__msg__Builtins__create();
+test_msgs__msg__Builtins__create(void);
 
 /// Destroy msg/Builtins message.
 /**

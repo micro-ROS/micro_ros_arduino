@@ -62,7 +62,7 @@ geometry_msgs__msg__PointStamped__fini(geometry_msgs__msg__PointStamped * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__PointStamped *
-geometry_msgs__msg__PointStamped__create();
+geometry_msgs__msg__PointStamped__create(void);
 
 /// Destroy msg/PointStamped message.
 /**

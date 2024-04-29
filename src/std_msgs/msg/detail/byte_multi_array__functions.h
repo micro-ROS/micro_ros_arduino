@@ -62,7 +62,7 @@ std_msgs__msg__ByteMultiArray__fini(std_msgs__msg__ByteMultiArray * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__ByteMultiArray *
-std_msgs__msg__ByteMultiArray__create();
+std_msgs__msg__ByteMultiArray__create(void);
 
 /// Destroy msg/ByteMultiArray message.
 /**

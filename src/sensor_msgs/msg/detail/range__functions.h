@@ -62,7 +62,7 @@ sensor_msgs__msg__Range__fini(sensor_msgs__msg__Range * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__Range *
-sensor_msgs__msg__Range__create();
+sensor_msgs__msg__Range__create(void);
 
 /// Destroy msg/Range message.
 /**

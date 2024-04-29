@@ -62,7 +62,7 @@ std_msgs__msg__Int64__fini(std_msgs__msg__Int64 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Int64 *
-std_msgs__msg__Int64__create();
+std_msgs__msg__Int64__create(void);
 
 /// Destroy msg/Int64 message.
 /**

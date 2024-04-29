@@ -86,7 +86,7 @@ std_srvs__srv__Empty_Request__fini(std_srvs__srv__Empty_Request * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_srvs
 std_srvs__srv__Empty_Request *
-std_srvs__srv__Empty_Request__create();
+std_srvs__srv__Empty_Request__create(void);
 
 /// Destroy srv/Empty message.
 /**
@@ -262,7 +262,7 @@ std_srvs__srv__Empty_Response__fini(std_srvs__srv__Empty_Response * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_srvs
 std_srvs__srv__Empty_Response *
-std_srvs__srv__Empty_Response__create();
+std_srvs__srv__Empty_Response__create(void);
 
 /// Destroy srv/Empty message.
 /**
@@ -438,7 +438,7 @@ std_srvs__srv__Empty_Event__fini(std_srvs__srv__Empty_Event * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_srvs
 std_srvs__srv__Empty_Event *
-std_srvs__srv__Empty_Event__create();
+std_srvs__srv__Empty_Event__create(void);
 
 /// Destroy srv/Empty message.
 /**

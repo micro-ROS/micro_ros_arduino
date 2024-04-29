@@ -62,7 +62,7 @@ sensor_msgs__msg__LaserScan__fini(sensor_msgs__msg__LaserScan * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__LaserScan *
-sensor_msgs__msg__LaserScan__create();
+sensor_msgs__msg__LaserScan__create(void);
 
 /// Destroy msg/LaserScan message.
 /**

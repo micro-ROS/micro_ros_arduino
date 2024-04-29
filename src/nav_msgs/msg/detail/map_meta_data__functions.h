@@ -62,7 +62,7 @@ nav_msgs__msg__MapMetaData__fini(nav_msgs__msg__MapMetaData * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_nav_msgs
 nav_msgs__msg__MapMetaData *
-nav_msgs__msg__MapMetaData__create();
+nav_msgs__msg__MapMetaData__create(void);
 
 /// Destroy msg/MapMetaData message.
 /**

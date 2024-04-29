@@ -62,7 +62,7 @@ tf2_msgs__msg__TF2Error__fini(tf2_msgs__msg__TF2Error * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_tf2_msgs
 tf2_msgs__msg__TF2Error *
-tf2_msgs__msg__TF2Error__create();
+tf2_msgs__msg__TF2Error__create(void);
 
 /// Destroy msg/TF2Error message.
 /**

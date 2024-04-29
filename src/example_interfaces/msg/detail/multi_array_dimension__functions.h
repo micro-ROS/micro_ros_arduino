@@ -62,7 +62,7 @@ example_interfaces__msg__MultiArrayDimension__fini(example_interfaces__msg__Mult
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__MultiArrayDimension *
-example_interfaces__msg__MultiArrayDimension__create();
+example_interfaces__msg__MultiArrayDimension__create(void);
 
 /// Destroy msg/MultiArrayDimension message.
 /**

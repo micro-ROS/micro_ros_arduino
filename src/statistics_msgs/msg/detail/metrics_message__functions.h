@@ -62,7 +62,7 @@ statistics_msgs__msg__MetricsMessage__fini(statistics_msgs__msg__MetricsMessage 
  */
 ROSIDL_GENERATOR_C_PUBLIC_statistics_msgs
 statistics_msgs__msg__MetricsMessage *
-statistics_msgs__msg__MetricsMessage__create();
+statistics_msgs__msg__MetricsMessage__create(void);
 
 /// Destroy msg/MetricsMessage message.
 /**

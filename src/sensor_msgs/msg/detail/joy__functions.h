@@ -62,7 +62,7 @@ sensor_msgs__msg__Joy__fini(sensor_msgs__msg__Joy * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__Joy *
-sensor_msgs__msg__Joy__create();
+sensor_msgs__msg__Joy__create(void);
 
 /// Destroy msg/Joy message.
 /**

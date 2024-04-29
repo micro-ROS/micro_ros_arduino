@@ -62,7 +62,7 @@ std_msgs__msg__Header__fini(std_msgs__msg__Header * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Header *
-std_msgs__msg__Header__create();
+std_msgs__msg__Header__create(void);
 
 /// Destroy msg/Header message.
 /**

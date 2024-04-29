@@ -62,7 +62,7 @@ example_interfaces__msg__WString__fini(example_interfaces__msg__WString * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__WString *
-example_interfaces__msg__WString__create();
+example_interfaces__msg__WString__create(void);
 
 /// Destroy msg/WString message.
 /**

@@ -62,7 +62,7 @@ rcl_interfaces__msg__SetLoggerLevelsResult__fini(rcl_interfaces__msg__SetLoggerL
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__msg__SetLoggerLevelsResult *
-rcl_interfaces__msg__SetLoggerLevelsResult__create();
+rcl_interfaces__msg__SetLoggerLevelsResult__create(void);
 
 /// Destroy msg/SetLoggerLevelsResult message.
 /**

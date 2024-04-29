@@ -62,7 +62,7 @@ trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__fini(trajectory_msgs__msg__M
  */
 ROSIDL_GENERATOR_C_PUBLIC_trajectory_msgs
 trajectory_msgs__msg__MultiDOFJointTrajectoryPoint *
-trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__create();
+trajectory_msgs__msg__MultiDOFJointTrajectoryPoint__create(void);
 
 /// Destroy msg/MultiDOFJointTrajectoryPoint message.
 /**

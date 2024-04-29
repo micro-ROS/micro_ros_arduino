@@ -62,7 +62,7 @@ sensor_msgs__msg__MultiDOFJointState__fini(sensor_msgs__msg__MultiDOFJointState 
  */
 ROSIDL_GENERATOR_C_PUBLIC_sensor_msgs
 sensor_msgs__msg__MultiDOFJointState *
-sensor_msgs__msg__MultiDOFJointState__create();
+sensor_msgs__msg__MultiDOFJointState__create(void);
 
 /// Destroy msg/MultiDOFJointState message.
 /**

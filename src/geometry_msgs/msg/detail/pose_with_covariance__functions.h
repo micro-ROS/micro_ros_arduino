@@ -62,7 +62,7 @@ geometry_msgs__msg__PoseWithCovariance__fini(geometry_msgs__msg__PoseWithCovaria
  */
 ROSIDL_GENERATOR_C_PUBLIC_geometry_msgs
 geometry_msgs__msg__PoseWithCovariance *
-geometry_msgs__msg__PoseWithCovariance__create();
+geometry_msgs__msg__PoseWithCovariance__create(void);
 
 /// Destroy msg/PoseWithCovariance message.
 /**

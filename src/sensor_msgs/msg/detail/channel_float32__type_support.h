@@ -27,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   sensor_msgs,
   msg,
   ChannelFloat32
-)();
+)(void);
 
 #ifdef __cplusplus
 }

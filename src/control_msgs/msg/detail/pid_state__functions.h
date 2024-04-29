@@ -62,7 +62,7 @@ control_msgs__msg__PidState__fini(control_msgs__msg__PidState * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__PidState *
-control_msgs__msg__PidState__create();
+control_msgs__msg__PidState__create(void);
 
 /// Destroy msg/PidState message.
 /**

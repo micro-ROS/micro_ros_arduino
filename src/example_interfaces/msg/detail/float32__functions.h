@@ -62,7 +62,7 @@ example_interfaces__msg__Float32__fini(example_interfaces__msg__Float32 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_example_interfaces
 example_interfaces__msg__Float32 *
-example_interfaces__msg__Float32__create();
+example_interfaces__msg__Float32__create(void);
 
 /// Destroy msg/Float32 message.
 /**

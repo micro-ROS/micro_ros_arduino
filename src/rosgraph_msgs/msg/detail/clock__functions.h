@@ -62,7 +62,7 @@ rosgraph_msgs__msg__Clock__fini(rosgraph_msgs__msg__Clock * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_rosgraph_msgs
 rosgraph_msgs__msg__Clock *
-rosgraph_msgs__msg__Clock__create();
+rosgraph_msgs__msg__Clock__create(void);
 
 /// Destroy msg/Clock message.
 /**

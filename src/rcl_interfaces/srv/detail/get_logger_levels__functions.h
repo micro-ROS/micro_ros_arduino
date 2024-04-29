@@ -86,7 +86,7 @@ rcl_interfaces__srv__GetLoggerLevels_Request__fini(rcl_interfaces__srv__GetLogge
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__srv__GetLoggerLevels_Request *
-rcl_interfaces__srv__GetLoggerLevels_Request__create();
+rcl_interfaces__srv__GetLoggerLevels_Request__create(void);
 
 /// Destroy srv/GetLoggerLevels message.
 /**
@@ -262,7 +262,7 @@ rcl_interfaces__srv__GetLoggerLevels_Response__fini(rcl_interfaces__srv__GetLogg
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__srv__GetLoggerLevels_Response *
-rcl_interfaces__srv__GetLoggerLevels_Response__create();
+rcl_interfaces__srv__GetLoggerLevels_Response__create(void);
 
 /// Destroy srv/GetLoggerLevels message.
 /**
@@ -438,7 +438,7 @@ rcl_interfaces__srv__GetLoggerLevels_Event__fini(rcl_interfaces__srv__GetLoggerL
  */
 ROSIDL_GENERATOR_C_PUBLIC_rcl_interfaces
 rcl_interfaces__srv__GetLoggerLevels_Event *
-rcl_interfaces__srv__GetLoggerLevels_Event__create();
+rcl_interfaces__srv__GetLoggerLevels_Event__create(void);
 
 /// Destroy srv/GetLoggerLevels message.
 /**

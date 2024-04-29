@@ -62,7 +62,7 @@ std_msgs__msg__Int32__fini(std_msgs__msg__Int32 * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_std_msgs
 std_msgs__msg__Int32 *
-std_msgs__msg__Int32__create();
+std_msgs__msg__Int32__create(void);
 
 /// Destroy msg/Int32 message.
 /**
