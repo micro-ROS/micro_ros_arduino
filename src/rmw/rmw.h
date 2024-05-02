@@ -2425,6 +2425,7 @@ rmw_take_request(
  * \return `RMW_RET_INVALID_ARGUMENT` if `ros_response` is NULL, or
  * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `service`
  *   implementation identifier does not match this implementation, or
+ * \return `RMW_RET_TIMEOUT` if a response reader is not ready yet, or
  * \return `RMW_RET_ERROR` if an unexpected error occurs.
  */
 RMW_PUBLIC
