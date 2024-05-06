@@ -320,6 +320,7 @@ rcl_action_take_goal_request(
  * \return `RCL_RET_OK` if the response was sent successfully, or
  * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
  * \return `RCL_RET_ACTION_SERVER_INVALID` if the action server is invalid, or
+ * \return `RCL_RET_TIMEOUT` if a goal response reader is not ready yet, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_ACTION_PUBLIC
@@ -564,6 +565,7 @@ rcl_action_take_result_request(
  * \return `RCL_RET_OK` if the response was sent successfully, or
  * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
  * \return `RCL_RET_ACTION_SERVER_INVALID` if the action server is invalid, or
+ * \return `RCL_RET_TIMEOUT` if a result response reader is not ready yet, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_ACTION_PUBLIC
@@ -753,6 +755,7 @@ rcl_action_process_cancel_request(
  * \return `RCL_RET_OK` if the request was taken, or
  * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
  * \return `RCL_RET_ACTION_SERVER_INVALID` if the action server is invalid, or
+ * \return `RCL_RET_TIMEOUT` if a cancel response reader is not ready yet, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
 RCL_ACTION_PUBLIC
