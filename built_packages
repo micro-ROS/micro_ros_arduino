@@ -16,7 +16,7 @@ https://github.com/micro-ROS/rosidl_typesupport.git 82bfacb38aae26cda159592aca5c
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git c2776855f591388cf8900e3b8df15f9dfd95305b
 https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e87386cf60
 https://github.com/ros2/ament_cmake_ros.git ede6248e1f36aaef85eb4eac23c782a134ef2bff
-https://github.com/ros2/common_interfaces.git 86801a504b97f25a3b6e1c36e42a445500c98f79
+https://github.com/ros2/common_interfaces.git dc6a22f88519982ead887de0f711aeae37456f78
 https://github.com/ros2/example_interfaces.git 58899de0f85388be333e32bcb78c551a6877db4d
 https://github.com/ros2/libyaml_vendor.git 0c814892fe8c31aeb20688a8b43906aeefda015e
 https://github.com/ros2/rcl.git f01409f31b81bf7b73cf0929b84010e07abd7719
