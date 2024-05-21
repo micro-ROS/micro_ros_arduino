@@ -94,6 +94,7 @@ geometry_msgs/TwistWithCovariance.msg
 geometry_msgs/TwistWithCovarianceStamped.msg
 geometry_msgs/Vector3.msg
 geometry_msgs/Vector3Stamped.msg
+geometry_msgs/VelocityStamped.msg
 geometry_msgs/Wrench.msg
 geometry_msgs/WrenchStamped.msg
 lifecycle_msgs/ChangeState.srv
