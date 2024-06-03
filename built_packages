@@ -8,7 +8,7 @@ https://github.com/ament/uncrustify_vendor.git 10ae38627f40c87583088fb5d0ec3551c
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 83f129a80770a09aac9e823896ecbf6a0eddf0fc
 https://github.com/micro-ROS/micro_ros_msgs.git 4f1dbf42db9e35b22525e3d408730a450eeb4eea
-https://github.com/micro-ROS/micro_ros_utilities 55dab3a8503b6ed57ba5db283d6479d5458c0bb2
+https://github.com/micro-ROS/micro_ros_utilities a593e18e745c7fc01499e07b9cf3fb9af1ab459f
 https://github.com/micro-ROS/rcl d0f8838f6f0261714b767795df7c1dbcf3eb61e5
 https://github.com/micro-ROS/rcutils b408a061eeee6ff660bdd7e04ecfd0e424e813a1
 https://github.com/micro-ROS/rmw-microxrcedds.git eca20d44b161ed3bae15d5e82d5098e93300cad5
@@ -34,4 +34,3 @@ https://github.com/ros2/rosidl_defaults.git 7f6d49928a53f5a854b04aa6daec4d5bc970
 https://github.com/ros2/rosidl_dynamic_typesupport.git 96d1cb662b1b69409d80383ed20a41cc92267aa1
 https://github.com/ros2/test_interface_files.git 295542e2b2106d8e1274adb5b0c9f9e7d1571be6
 https://github.com/ros2/unique_identifier_msgs.git a609a6409a018bf8a87686c846ece09221044af2
-https://github.com/uncrustify/uncrustify.git b8c95286f70ef8e0e83bd055a3a7aabb614a0781
