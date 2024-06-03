@@ -26,7 +26,7 @@ extern "C"
 #endif
 
 /// Initialize a rosidl_runtime_c__String structure.
-/**
+/*
  * The contents of rosidl_runtime_c__String are initialized to a single null character ('\0').
  * The string initially has size 0 and capacity 1.
  * Size represents the size of the contents of the string, while capacity represents the overall
@@ -46,7 +46,7 @@ bool
 rosidl_runtime_c__String__init(rosidl_runtime_c__String * str);
 
 /// Deallocate the memory of the rosidl_runtime_c__String structure.
-/**
+/*
 * Calling the function with an already deallocated sequence is a no-op.
 *
 * \param[inout] str a pointer to a rosidl_runtime_c__String structure to be finalized
@@ -86,7 +86,7 @@ rosidl_runtime_c__String__are_equal(
   const rosidl_runtime_c__String * lhs, const rosidl_runtime_c__String * rhs);
 
 /// Assign the c string pointer of n characters to the rosidl_runtime_c__String structure.
-/**
+/*
  * \param[inout] str a pointer to a string structure
  * \param[in] value c string pointer to be assigned
  * \param[in] n size of the value string
@@ -100,7 +100,8 @@ rosidl_runtime_c__String__assignn(
   rosidl_runtime_c__String * str, const char * value, size_t n);
 
 /// Assign the c string pointer to the rosidl_runtime_c__String structure.
-/**
+/*
+ *
  * This function is identical to rosidl_runtime_c__String__assignn() except the length of the
  * c string does not have to be given and therefore the c string must be null terminated.
  *
@@ -117,22 +118,8 @@ bool
 rosidl_runtime_c__String__assign(
   rosidl_runtime_c__String * str, const char * value);
 
-/// Resize the char pointer.
-/**
- * This function resize the input value pointer.
- *
- * \param[inout] str a pointer to a rosidl_runtime_c__String structure
- * \param[in] n the new size of the internal buffer
- * \return true if successful, false if the passed string pointer is null
- *   or if the size is higher than SIZE_MAX or if the memory reallocation failed.
- */
-ROSIDL_GENERATOR_C_PUBLIC
-bool
-rosidl_runtime_c__String__resize(
-  rosidl_runtime_c__String * str, size_t n);
-
 /// Initialize a rosidl_runtime_c__String__Sequence__init structure.
-/**
+/*
  * The rosidl_runtime_c__String__Sequence is initialized with the size passed to the function.
  * The rosidl_runtime_c__String__Sequence structure should be deallocated using the given function
  * rosidl_runtime_c__String__Sequence__fini() when it is no longer needed.
@@ -150,7 +137,7 @@ rosidl_runtime_c__String__Sequence__init(
   rosidl_runtime_c__String__Sequence * sequence, size_t size);
 
 /// Deallocate the memory of the string sequence structure.
-/**
+/*
  * Calling the function with an already deallocated sequence is a no-op.
  *
  * \param[inout] sequence a pointer to a string sequence to be finalized
@@ -192,7 +179,7 @@ rosidl_runtime_c__String__Sequence__copy(
   rosidl_runtime_c__String__Sequence * output);
 
 /// Create a rosidl_runtime_c__String__Sequence structure with a specific size.
-/**
+/*
  * The string sequence initially has size and capacity equal to the size argument passed to the
  * function.
  * The rosidl_runtime_c__String__Sequence structure should be deallocated using the given function
@@ -206,7 +193,7 @@ rosidl_runtime_c__String__Sequence *
 rosidl_runtime_c__String__Sequence__create(size_t size);
 
 /// Destroy a rosidl_runtime_c__String__Sequence structure.
-/**
+/*
  * Calling the function with an already deallocated sequence is a no-op.
  *
  * \param[inout] sequence a pointer to a string sequence to be finalized

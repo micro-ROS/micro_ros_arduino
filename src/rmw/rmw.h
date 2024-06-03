@@ -14,7 +14,7 @@
 
 /** \mainpage rmw: ROS Middleware Abstraction Interface
  *
- * `rmw` defines an interface of middleware primitives that are used by the higher level ROS APIs.
+ * `rmw` defines an interface of middleware primitives that are used by the higher level ROS API's.
  * It consists of these main components:
  *
  * - Initialization and Shutdown:

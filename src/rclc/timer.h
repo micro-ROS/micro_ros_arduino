@@ -40,10 +40,25 @@ extern "C"
  * \param[in] support the rclc_support_t object
  * \param[in] timeout_ns the time out in nanoseconds of the timer
  * \param[in] callback the callback of the timer
+ * \param[in] autostart the state of the timer at initialization
  * \return `RCL_RET_OK` if successful
  * \return `RCL_ERROR` (or other error code) if an error occurred
  */
 RCLC_PUBLIC
+rcl_ret_t
+rclc_timer_init_default2(
+  rcl_timer_t * timer,
+  rclc_support_t * support,
+  const uint64_t timeout_ns,
+  const rcl_timer_callback_t callback,
+  bool autostart);
+
+/**
+ * \deprecated `rclc_timer_init_default` implementation was removed.
+ *   Refer to `rclc_timer_init_default2`.
+ */
+RCL_PUBLIC
+RCUTILS_DEPRECATED_WITH_MSG("Call rclc_timer_init_default2 instead")
 rcl_ret_t
 rclc_timer_init_default(
   rcl_timer_t * timer,
