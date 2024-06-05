@@ -10,7 +10,7 @@ https://github.com/eProsima/Micro-XRCE-DDS-Client.git 83f129a80770a09aac9e823896
 https://github.com/micro-ROS/micro_ros_msgs.git 4f1dbf42db9e35b22525e3d408730a450eeb4eea
 https://github.com/micro-ROS/micro_ros_utilities a593e18e745c7fc01499e07b9cf3fb9af1ab459f
 https://github.com/micro-ROS/rcl d0f8838f6f0261714b767795df7c1dbcf3eb61e5
-https://github.com/micro-ROS/rcutils b408a061eeee6ff660bdd7e04ecfd0e424e813a1
+https://github.com/micro-ROS/rcutils dc7b8bbd9ddc537b83e68ef362f4891c34349cd6
 https://github.com/micro-ROS/rmw-microxrcedds.git eca20d44b161ed3bae15d5e82d5098e93300cad5
 https://github.com/micro-ROS/rosidl_typesupport.git 096a43939bea288918d5b82fb8e4427769f1e7b5
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git cbd7719e07d5ca94077784accf95eac9ad535b56
@@ -25,12 +25,12 @@ https://github.com/ros2/rcl_logging.git ecb3ab62168e873ef78201c8fda65b622b9f2707
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
 https://github.com/ros2/rcpputils.git 162d345c2856b4644a31fbbaacfee9f3f5684f98
 https://github.com/ros2/rmw.git 22f59f8931944999864ef3b0d7aa75ab7258f028
-https://github.com/ros2/rmw_implementation.git 6f8bc6bca69d948e8d7c31dabd5416b3e20d4090
+https://github.com/ros2/rmw_implementation.git 16e14d15e210672fbfe0beb1f57effbd8d1233b0
 https://github.com/ros2/ros2_tracing.git 7e8d42e3816dc9f7dc268109a2bb9cc66cc4d4ee
 https://github.com/ros2/rosidl.git 4ba0effa201030ae8f45597b29d4ca685b2d50a1
 https://github.com/ros2/rosidl_core.git 2c26ead5c1cc0b6f5f363367ab9873d559ff4a2a
 https://github.com/ros2/rosidl_dds.git 395a946f1cde1999ddb78cb31717d0991421a317
-https://github.com/ros2/rosidl_defaults.git 7f6d49928a53f5a854b04aa6daec4d5bc970d0fc
+https://github.com/ros2/rosidl_defaults.git bb2541ec5b2835ddfaaadccfc0b9544c0590cccb
 https://github.com/ros2/rosidl_dynamic_typesupport.git 96d1cb662b1b69409d80383ed20a41cc92267aa1
 https://github.com/ros2/test_interface_files.git 295542e2b2106d8e1274adb5b0c9f9e7d1571be6
 https://github.com/ros2/unique_identifier_msgs.git a609a6409a018bf8a87686c846ece09221044af2

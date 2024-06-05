@@ -245,6 +245,8 @@ RCUTILS_PUBLIC
 size_t
 rcutils_get_file_size(const char * file_path);
 
+struct rcutils_dir_iter_state_s;
+
 /// An iterator used for enumerating directory contents
 typedef struct rcutils_dir_iter_s
 {
@@ -253,7 +255,7 @@ typedef struct rcutils_dir_iter_s
   /// The allocator used internally by iteration functions
   rcutils_allocator_t allocator;
   /// The platform-specific iteration state
-  void * state;
+  struct rcutils_dir_iter_state_s * state;
 } rcutils_dir_iter_t;
 
 /// Begin iterating over the contents of the specified directory.
