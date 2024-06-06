@@ -459,7 +459,7 @@ typedef enum RMW_PUBLIC_TYPE rmw_qos_durability_policy_e
   "RMW_QOS_POLICY_LIVELINESS_MANUAL_BY_NODE is deprecated. " \
   "Use RMW_QOS_POLICY_LIVELINESS_MANUAL_BY_TOPIC if manually asserted liveliness is needed."
 
-#ifndef _WIN32
+#ifndef _MSC_VER
 # define RMW_DECLARE_DEPRECATED(name, msg) name __attribute__((deprecated(msg)))
 #else
 # define RMW_DECLARE_DEPRECATED(name, msg) name __pragma(deprecated(name))
