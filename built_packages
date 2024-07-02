@@ -1,7 +1,7 @@
 
-https://github.com/ament/ament_cmake.git ad972e113c9c561bf32280b3baefe484ef684589
+https://github.com/ament/ament_cmake.git 3569d3cc491194f73b41ddeb5c943a40b8269571
 https://github.com/ament/ament_index.git 0ed743ad9e3b583d975ffcde0b57de8a0b1204ae
-https://github.com/ament/ament_lint.git 1dc1dd14af5edf52bb9c18e5453eff4d2ddc0ad6
+https://github.com/ament/ament_lint.git 205f993a31b5d122381a5a7979148a74ab2bd51a
 https://github.com/ament/ament_package.git 35b15ae4d8c5e1dbb6ab622ff95d046aa3ca1b28
 https://github.com/ament/googletest.git 449327bfc17e58db5ce53955b8e250427909a1c8
 https://github.com/ament/uncrustify_vendor.git 84edaca76d32c3ed20ce7097ed91784029530306
@@ -25,9 +25,9 @@ https://github.com/ros2/rcl_logging.git 128d88e6e4ad6df97405564afbdffa2ebc167814
 https://github.com/ros2/rclc 995cda8c68456c7477ed103d9419a161fd068960
 https://github.com/ros2/rcpputils.git 747b92f911cc3b338b6a73ad880e95c6be17075d
 https://github.com/ros2/rmw.git c90c29700291eb975688326a31f8915803cf277d
-https://github.com/ros2/rmw_implementation.git 1dee258b57112326fd0e1f9a36f12731e0aaa25f
-https://github.com/ros2/ros2_tracing.git d7ce54b35c4442a5ddaf7e45ca3c1caee0d9e8f2
-https://github.com/ros2/rosidl.git 15785db2423a4dd665ae8eb208e001368e2952c9
+https://github.com/ros2/rmw_implementation.git 52071b90930238d6f797a34e43a3a5bb97c2d88c
+https://github.com/ros2/ros2_tracing.git 94e99987ead0f30040db14e0bc8d67601968cd1b
+https://github.com/ros2/rosidl.git 14cc860aabe869078cb721bb160be188bf6327cd
 https://github.com/ros2/rosidl_core.git 84fa73d3974fe31fbe397e41e4449a31c2fb6ce4
 https://github.com/ros2/rosidl_dds.git 8d6fdb365792c81861cf1d49da2d265e91dca86d
 https://github.com/ros2/rosidl_defaults.git 65d0e79a6f477e22b7213590bc8d2465e16cedbf
