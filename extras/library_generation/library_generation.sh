@@ -230,6 +230,20 @@ if [[ " ${PLATFORMS[@]} " =~ " esp32 " ]]; then
     cp -R firmware/build/libmicroros.a /project/src/esp32/libmicroros.a
 fi
 
+######## Build for ESP32S3  ######
+if [[ " ${PLATFORMS[@]} " =~ " esp32s3 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/xtensa-esp32-elf/bin/xtensa-esp32-elf-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/esp32_toolchain.cmake /project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/esp32s3
+    cp -R firmware/build/libmicroros.a /project/src/esp32s3/libmicroros.a
+fi
+
 ######## Fix include paths  ########
 pushd firmware/mcu_ws > /dev/null
     INCLUDE_ROS2_PACKAGES=$(colcon list | awk '{print $1}' | awk -v d=" " '{s=(NR==1?s:s d)$0}END{print s}')
