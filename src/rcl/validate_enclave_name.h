@@ -80,7 +80,7 @@ rcl_validate_enclave_name(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given enclave name is valid.
+/// Determine if a given enclave name is valid.
 /**
  * This is an overload of rcl_validate_enclave_name() with an extra parameter
  * for the length of enclave.

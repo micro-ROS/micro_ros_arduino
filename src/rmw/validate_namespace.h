@@ -97,7 +97,7 @@ rmw_validate_namespace(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given namespace is valid.
+/// Determine if a given namespace is valid.
 /**
  * This is an overload with an extra parameter for the length of namespace_.
  * If a non RMW_RET_OK return value is returned, the RMW error message will be set.

@@ -178,21 +178,6 @@ rcl_timer_init2(
   rcl_allocator_t allocator,
   bool autostart);
 
-/**
- * \deprecated `rcl_timer_init` implementation was removed.
- *   Refer to `rcl_timer_init2`.
- */
-RCL_PUBLIC
-RCUTILS_DEPRECATED_WITH_MSG("Call rcl_timer_init2 instead")
-rcl_ret_t
-rcl_timer_init(
-  rcl_timer_t * timer,
-  rcl_clock_t * clock,
-  rcl_context_t * context,
-  int64_t period,
-  const rcl_timer_callback_t callback,
-  rcl_allocator_t allocator);
-
 /// Finalize a timer.
 /**
  * This function will deallocate any memory and make the timer invalid.

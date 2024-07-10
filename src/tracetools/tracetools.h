@@ -123,36 +123,6 @@
 #  define TRACETOOLS_DO_TRACEPOINT(...) ((void) (0))
 #  define _DECLARE_TRACEPOINT(...)
 #endif  // TRACETOOLS_DISABLED
-
-// TODO(christophebedard) remove in Rolling after J-turtle release
-#ifndef DOXYGEN_ONLY
-#  ifndef _WIN32
-#   define _DEPRECATED_WITH_MSG(msg) __attribute__((deprecated(msg)))
-#  else
-#   define _DEPRECATED_WITH_MSG(msg) __declspec(deprecated(msg))
-#  endif
-#else
-#  define _DEPRECATED_WITH_MSG(msg)
-#endif
-#define _DEPRECATED_MACRO_FUNCTION_DEFINITION(macro_name) \
-  static inline void \
-  _DEPRECATED_WITH_MSG("use TRACETOOLS_" #macro_name "() instead") \
-  _deprecated_macro_ ## macro_name(void) \
-  { \
-  }
-
-_DEPRECATED_MACRO_FUNCTION_DEFINITION(TRACEPOINT)
-#define TRACEPOINT(...) \
-  _deprecated_macro_TRACEPOINT(); \
-  TRACETOOLS_TRACEPOINT(__VA_ARGS__)
-_DEPRECATED_MACRO_FUNCTION_DEFINITION(TRACEPOINT_ENABLED)
-#define TRACEPOINT_ENABLED(...) \
-  _deprecated_macro_TRACEPOINT_ENABLED(); \
-  TRACETOOLS_TRACEPOINT_ENABLED(__VA_ARGS__)
-_DEPRECATED_MACRO_FUNCTION_DEFINITION(DO_TRACEPOINT)
-#define DO_TRACEPOINT(...) \
-  _deprecated_macro_DO_TRACEPOINT(); \
-  TRACETOOLS_DO_TRACEPOINT(__VA_ARGS__)
 // *INDENT-ON*
 
 #ifdef __cplusplus

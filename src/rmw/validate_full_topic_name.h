@@ -89,7 +89,7 @@ rmw_validate_full_topic_name(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given topic name is valid.
+/// Determine if a given topic name is valid.
 /**
  * This is an overload with an extra parameter for the length of topic_name.
  *
