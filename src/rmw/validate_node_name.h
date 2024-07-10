@@ -83,7 +83,7 @@ rmw_validate_node_name(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given node name is valid.
+/// Determine if a given node name is valid.
 /**
  * This is an overload with an extra parameter for the length of node_name.
  *
