@@ -25,11 +25,11 @@
 
 /// \def RCL_VERSION_PATCH
 /// Defines RCL version patch number
-#define RCL_VERSION_PATCH (8)
+#define RCL_VERSION_PATCH (9)
 
 /// \def RCL_VERSION_STR
 /// Defines RCL version string
-#define RCL_VERSION_STR "5.3.8"
+#define RCL_VERSION_STR "5.3.9"
 
 /// \def RCL_VERSION_GTE
 /// Defines a macro to check whether the version of RCL is greater than or equal to
