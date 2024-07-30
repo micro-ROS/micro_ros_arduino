@@ -126,6 +126,10 @@ typedef rmw_ret_t rcl_ret_t;
 /// rcl_lifecycle state not registered
 #define RCL_RET_LIFECYCLE_STATE_NOT_REGISTERED 3001
 
+// rcl action specific ret codes in 40XX
+/// No terminal timestamp for the goal as it has not reached a terminal state.
+#define RCL_ACTION_RET_NOT_TERMINATED_YET 4001
+
 /// typedef for rmw_serialized_message_t;
 typedef rmw_serialized_message_t rcl_serialized_message_t;
 
