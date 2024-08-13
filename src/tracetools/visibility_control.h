@@ -19,8 +19,8 @@
  * library cannot have, but the consuming code must have inorder to link.
  */
 
-#ifndef TRACETOOLS__VISIBILITY_CONTROL_HPP_
-#define TRACETOOLS__VISIBILITY_CONTROL_HPP_
+#ifndef TRACETOOLS__VISIBILITY_CONTROL_H_
+#define TRACETOOLS__VISIBILITY_CONTROL_H_
 
 // This logic was borrowed (then namespaced) from the examples on the gcc wiki:
 //     https://gcc.gnu.org/wiki/Visibility
@@ -53,4 +53,4 @@
   #define TRACETOOLS_PUBLIC_TYPE
 #endif
 
-#endif  // TRACETOOLS__VISIBILITY_CONTROL_HPP_
+#endif  // TRACETOOLS__VISIBILITY_CONTROL_H_

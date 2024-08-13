@@ -32,7 +32,7 @@
 #include <stdbool.h>
 
 #include "tracetools/config.h"
-#include "tracetools/visibility_control.hpp"
+#include "tracetools/visibility_control.h"
 
 #ifndef TRACETOOLS_DISABLED
 /**
@@ -134,7 +134,7 @@ extern "C"
 /**
  * \return `true` if tracing is enabled, `false` otherwise
  */
-TRACETOOLS_PUBLIC bool ros_trace_compile_status();
+TRACETOOLS_PUBLIC bool ros_trace_compile_status(void);
 
 /// `rcl_init`
 /**
