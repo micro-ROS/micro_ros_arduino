@@ -394,13 +394,14 @@ rcl_wait_set_add_event(
  * ```c
  * #include <rcl/rcl.h>
  *
+ * rcl_context_t context; // ... initialize the context with rcl_init()
  * // rcl_init() called successfully before here...
  * rcl_node_t node;  // initialize this, see rcl_node_init()
  * rcl_subscription_t sub1;  // initialize this, see rcl_subscription_init()
  * rcl_subscription_t sub2;  // initialize this, see rcl_subscription_init()
  * rcl_guard_condition_t gc1;  // initialize this, see rcl_guard_condition_init()
  * rcl_wait_set_t wait_set = rcl_get_zero_initialized_wait_set();
- * rcl_ret_t ret = rcl_wait_set_init(&wait_set, 2, 1, 0, 0, 0, rcl_get_default_allocator());
+ * rcl_ret_t ret = rcl_wait_set_init(&wait_set, 2, 1, 0, 0, 0, 0, &context, rcl_get_default_allocator());
  * // ... error handling
  * do {
  *   ret = rcl_wait_set_clear(&wait_set);
