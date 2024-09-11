@@ -19,7 +19,7 @@ https://github.com/ros2/ament_cmake_ros.git 2fc2c6baada47130ff3c2fbc5265a9ec782d
 https://github.com/ros2/common_interfaces.git d685509e9cb9f80bd320a347f2db954a73397ae7
 https://github.com/ros2/example_interfaces.git dec9e55175f95f0feecc46213df3a26c8543313f
 https://github.com/ros2/libyaml_vendor.git f4ccfc67e7ba2ec4e77170d105c1da0133fa3971
-https://github.com/ros2/rcl.git 61077aa1e78363dd4596ea49957e36cd05398b44
+https://github.com/ros2/rcl.git 8c4a704ade7bf0913095b12f760579c57dada6f7
 https://github.com/ros2/rcl_interfaces.git f6b3741d921ef5414125091b2ccc74b863be3c24
 https://github.com/ros2/rcl_logging.git 4d186fac565caa7dfb2e21b367bec8c074b62835
 https://github.com/ros2/rclc 995cda8c68456c7477ed103d9419a161fd068960
