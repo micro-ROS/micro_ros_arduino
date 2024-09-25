@@ -33,26 +33,6 @@ extern "C"
 
 #include "rosidl_runtime_c/action_type_support_struct.h"
 
-// rcl action specific ret codes in 2XXX
-/// Action name does not pass validation return code.
-#define RCL_RET_ACTION_NAME_INVALID 2000
-/// Action goal accepted return code.
-#define RCL_RET_ACTION_GOAL_ACCEPTED 2100
-/// Action goal rejected return code.
-#define RCL_RET_ACTION_GOAL_REJECTED 2101
-/// Action client is invalid return code.
-#define RCL_RET_ACTION_CLIENT_INVALID 2102
-/// Action client failed to take response return code.
-#define RCL_RET_ACTION_CLIENT_TAKE_FAILED 2103
-/// Action server is invalid return code.
-#define RCL_RET_ACTION_SERVER_INVALID 2200
-/// Action server failed to take request return code.
-#define RCL_RET_ACTION_SERVER_TAKE_FAILED 2201
-/// Action goal handle invalid return code.
-#define RCL_RET_ACTION_GOAL_HANDLE_INVALID 2300
-/// Action invalid event return code.
-#define RCL_RET_ACTION_GOAL_EVENT_INVALID 2301
-
 // TODO(jacobperron): Move these to a common place for UUIDs
 #define UUID_SIZE 16
 #define uuidcmp(uuid0, uuid1) (0 == memcmp(uuid0, uuid1, UUID_SIZE))

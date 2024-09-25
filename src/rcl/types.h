@@ -127,8 +127,26 @@ typedef rmw_ret_t rcl_ret_t;
 #define RCL_RET_LIFECYCLE_STATE_NOT_REGISTERED 3001
 
 // rcl action specific ret codes in 40XX
+/// Action name does not pass validation return code.
+#define RCL_RET_ACTION_NAME_INVALID 4000
 /// No terminal timestamp for the goal as it has not reached a terminal state.
-#define RCL_ACTION_RET_NOT_TERMINATED_YET 4001
+#define RCL_RET_ACTION_NOT_TERMINATED_YET 4001
+/// Action goal accepted return code.
+#define RCL_RET_ACTION_GOAL_ACCEPTED 4100
+/// Action goal rejected return code.
+#define RCL_RET_ACTION_GOAL_REJECTED 4101
+/// Action client is invalid return code.
+#define RCL_RET_ACTION_CLIENT_INVALID 4102
+/// Action client failed to take response return code.
+#define RCL_RET_ACTION_CLIENT_TAKE_FAILED 4103
+/// Action server is invalid return code.
+#define RCL_RET_ACTION_SERVER_INVALID 4200
+/// Action server failed to take request return code.
+#define RCL_RET_ACTION_SERVER_TAKE_FAILED 4201
+/// Action goal handle invalid return code.
+#define RCL_RET_ACTION_GOAL_HANDLE_INVALID 4300
+/// Action invalid event return code.
+#define RCL_RET_ACTION_GOAL_EVENT_INVALID 4301
 
 /// typedef for rmw_serialized_message_t;
 typedef rmw_serialized_message_t rcl_serialized_message_t;
