@@ -22,6 +22,11 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("portenta-m7")
     PLATFORMS+=("kakutef7-m7")
     PLATFORMS+=("esp32")
+    PLATFORMS+=("stm32-m7")
+    PLATFORMS+=("stm32-m33")
+    PLATFORMS+=("portenta-c33")
+
+
 fi
 
 shift $((OPTIND-1))
@@ -242,6 +247,50 @@ if [[ " ${PLATFORMS[@]} " =~ " esp32s3 " ]]; then
 
     mkdir -p /project/src/esp32s3
     cp -R firmware/build/libmicroros.a /project/src/esp32s3/libmicroros.a
+fi
+
+######## Build for STM32 Cortex M7 core (H723ZG) ########
+if [[ " ${PLATFORMS[@]} " =~ " stm32-m7 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/stm32-m7_toolchain.cmake /project/extras/library_generation/colcon.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/cortex-m7/fpv4-sp-d16-hard
+    cp -R firmware/build/libmicroros.a /project/src/cortex-m7/fpv4-sp-d16-hard/libmicroros.a
+fi
+
+######## Build for STM32 Cortex M33 core (H503RB) ########
+
+if [[ " ${PLATFORMS[@]} " =~ " stm32-m33 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/stm32-m33_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/cortex-m33/fpv4-sp-d16-hard
+    cp -R firmware/build/libmicroros.a /project/src/cortex-m33/fpv4-sp-d16-hard/libmicroros.a
+fi
+
+######## Build for Arduino Cortex M33 core (Portenta C33) ########
+
+if [[ " ${PLATFORMS[@]} " =~ " portenta-c33 " ]]; then
+    rm -rf firmware/build
+
+    export TOOLCHAIN_PREFIX=/uros_ws/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-
+    ros2 run micro_ros_setup build_firmware.sh /project/extras/library_generation/portenta-c33_toolchain.cmake /project/extras/library_generation/colcon_lowmem.meta
+
+    find firmware/build/include/ -name "*.c"  -delete
+    cp -R firmware/build/include/* /project/src/
+
+    mkdir -p /project/src/cortex-m33/fpv5-sp-d16-hard
+    cp -R firmware/build/libmicroros.a /project/src/cortex-m33/fpv5-sp-d16-hard/libmicroros.a
 fi
 
 ######## Fix include paths  ########
