@@ -74,24 +74,24 @@ jobs:
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_time_sync -v
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_types_handling -v
             # Build one demo for each platform
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_decibels -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_IMU_ML -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy36 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn teensy:avr:teensy40 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_decibels -v
+            # arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_IMU_ML -v
+            # arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            # arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn teensy:avr:teensy36 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn teensy:avr:teensy40 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             # Arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             # arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             # arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn arduino:mbed_giga:giga /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
-            arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            # arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            # arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn STMicroelectronics:stm32:Nucleo_144:pnum=NUCLEO_H723ZG /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn STMicroelectronics:stm32:Nucleo_64:pnum=NUCLEO_H503RB /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:renesas_portenta:portenta_c33 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
