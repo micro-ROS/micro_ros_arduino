@@ -1,6 +1,10 @@
 name: CI
 
 on:
+    workflow_dispatch:
+        inputs:
+          name:
+            description: "Manual trigger"
     pull_request:
       branches:
         - '**'
