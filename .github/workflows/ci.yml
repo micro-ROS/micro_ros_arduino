@@ -93,7 +93,3 @@ jobs:
             arduino-cli compile --fqbn STMicroelectronics:stm32:Nucleo_144:pnum=NUCLEO_H723ZG /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn STMicroelectronics:stm32:Nucleo_64:pnum=NUCLEO_H503RB /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:renesas_portenta:portenta_c33 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-
-
-
-            
