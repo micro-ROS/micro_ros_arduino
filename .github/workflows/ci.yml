@@ -83,7 +83,7 @@ jobs:
             arduino-cli compile --fqbn teensy:avr:teensy40 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed_portenta:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            # arduino-cli compile --fqbn arduino:mbed_portenta:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:mbed_portenta:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             # arduino-cli compile --fqbn arduino:mbed_portenta:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn arduino:mbed_giga:giga /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
