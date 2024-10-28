@@ -59,11 +59,11 @@ jobs:
             cat checkout/extras/patching_boards/platform_arduinocore_sam.txt > /github/home/.arduino15/packages/arduino/hardware/sam/1.6.12/platform.txt
             #
             # BUILDING EXAPLE FOR EACH PLATFORM
-            arduino-cli core update-index
-            arduino-cli lib update-index
-            arduino-cli lib install WiFiNINA
-            arduino-cli lib install "STM32duino X-NUCLEO-IKS01A3"
-            arduino-cli lib install "Seeed Arduino rpcWiFi" # Dependent libraries(e.g. "Seeed Arduino rpcUnified") will be installed together. See https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#needed-libraries-for-wi-fi for more details.
+            # arduino-cli core update-index
+            # arduino-cli lib update-index
+            # arduino-cli lib install WiFiNINA
+            # arduino-cli lib install "STM32duino X-NUCLEO-IKS01A3"
+            # arduino-cli lib install "Seeed Arduino rpcWiFi" # Dependent libraries(e.g. "Seeed Arduino rpcUnified") will be installed together. See https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/#needed-libraries-for-wi-fi for more details.
             # Build all demos
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn OpenCR:OpenCR:OpenCR /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_addtwoints_service -v
