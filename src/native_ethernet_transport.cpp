@@ -16,7 +16,15 @@
 #include <micro_ros_arduino.h>
 #endif
 
-#if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41) || defined(TARGET_PORTENTA_H7_M7)
+#if defined(ARDUINO_ARCH_MBED_GIGA)
+#include <Arduino.h>
+#include <EthernetUdp.h>
+#include <Ethernet.h>
+#include <micro_ros_arduino.h>
+
+#endif
+
+#if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41) || defined(TARGET_PORTENTA_H7_M7)|| defined(ARDUINO_ARCH_MBED_GIGA) 
 extern "C" {
 
 #include <stdbool.h>
