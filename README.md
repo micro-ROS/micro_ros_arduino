@@ -48,6 +48,10 @@ Community contributed boards are:
 | [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/)         | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) | with [ESP-AT](https://www.espressif.com/en/products/sdks/esp-at/overview) | `colcon_verylowmem.meta` |
 | [Seeed Studio XIAO SAMD21](https://wiki.seeedstudio.com/Seeeduino-XIAO/)                 | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) | with [ESP-AT](https://www.espressif.com/en/products/sdks/esp-at/overview) | `colcon_verylowmem.meta` |
 | [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)                    | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) | with [ESP-AT](https://www.espressif.com/en/products/sdks/esp-at/overview) | `colcon_verylowmem.meta` |
+| [Arduino Giga R1](https://store.arduino.cc/products/giga-r1-wifi)                        | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+| [Arduino UNO R4 WiFi](https://store.arduino.cc/products/uno-r4-wifi)                     | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+| [Arduino UNO R4 Minima](https://store.arduino.cc/products/uno-r4-minima)                 | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 

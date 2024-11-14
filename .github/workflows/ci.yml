@@ -35,10 +35,15 @@ jobs:
             curl -fsSL https://www.pjrc.com/teensy/package_teensy_index.json -o /github/home/.arduino15/package_teensy_index.json
             curl -fsSL https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json -o /github/home/.arduino15/package_seeeduino_boards_index.json
             export PATH=$PATH:/github/workspace/bin:/__w/micro_ros_arduino/micro_ros_arduino/bin
+
             arduino-cli core install OpenCR:OpenCR -v
             arduino-cli core install arduino:samd -v
             arduino-cli core install arduino:sam -v
-            arduino-cli core install arduino:mbed -v
+            arduino-cli core install arduino:mbed_giga -v
+            arduino-cli core install arduino:mbed_rp2040 -v
+            arduino-cli core install arduino:mbed_portenta -v
+            arduino-cli core install arduino:renesas_uno -v
+            arduino-cli core install arduino:mbed_nano -v
             arduino-cli core install esp32:esp32 -v
             arduino-cli core install teensy:avr@1.59.0 -v
             arduino-cli core install Seeeduino:samd -v
@@ -65,10 +70,10 @@ jobs:
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_time_sync -v
             arduino-cli compile --fqbn teensy:avr:teensy41 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_types_handling -v
             # Build one demo for each platform
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_decibels -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_IMU_ML -v
-            arduino-cli compile --fqbn arduino:mbed:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:mbed_nano:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed_nano:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_decibels -v
+            arduino-cli compile --fqbn arduino:mbed_nano:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_IMU_ML -v
+            arduino-cli compile --fqbn arduino:mbed_nano:nanorp2040connect /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn teensy:avr:teensy31 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy35 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn teensy:avr:teensy36 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
@@ -77,10 +82,16 @@ jobs:
             arduino-cli compile --fqbn arduino:samd:arduino_zero_native /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:sam:arduino_due_x /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             # arduino-cli compile --fqbn arduino:mbed:envie_m4 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
-            arduino-cli compile --fqbn arduino:mbed:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:mbed_portenta:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed_portenta:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:mbed_giga:giga /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed_giga:giga /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:renesas_uno:minima /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             # Build micro-ros_publisher-wifi_at for WiFi non-native board with ESP-AT
-            arduino-cli compile --fqbn arduino:mbed:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v
+            arduino-cli compile --fqbn arduino:mbed_rp2040:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v
+
