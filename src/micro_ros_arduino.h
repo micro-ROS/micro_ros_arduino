@@ -95,9 +95,13 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 
 #endif
 
+<<<<<<< HEAD
 #if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL)
+=======
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_GIGA) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL) || defined(BOARD_WITH_ESP_AT) || defined(ARDUINO_UNOR4_WIFI)
+>>>>>>> e347a4a (fixed time.h import, added Arduino UNO R4 minima (USB), Arduino UNO R4 WiFi (USB and WiFi), Arduino Giga R1 (USB and WiFi) (#1712))
 
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_GIGA)
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #elif defined(ARDUINO_NANO_RP2040_CONNECT)
@@ -106,6 +110,13 @@ static inline void set_microros_native_ethernet_udp_transports(byte mac[], IPAdd
 #elif defined(ARDUINO_WIO_TERMINAL)
 #include <rpcWiFi.h>
 #include <WiFiUdp.h>
+<<<<<<< HEAD
+=======
+#elif defined(BOARD_WITH_ESP_AT)
+#include <WiFiEspAT.h>
+#elif defined(ARDUINO_UNOR4_WIFI)
+#include <WiFiS3.h>
+>>>>>>> e347a4a (fixed time.h import, added Arduino UNO R4 minima (USB), Arduino UNO R4 WiFi (USB and WiFi), Arduino Giga R1 (USB and WiFi) (#1712))
 #endif
 
 extern "C" bool arduino_wifi_transport_open(struct uxrCustomTransport * transport);
@@ -119,7 +130,7 @@ struct micro_ros_agent_locator {
 };
 #endif
 
-static inline void set_microros_wifi_transports(char * ssid, char * pass, char * agent_ip, uint agent_port){
+static inline void set_microros_wifi_transports(char * ssid, char * pass, char * agent_ip, uint32_t agent_port){
 
 	WiFi.begin(ssid, pass);
 
