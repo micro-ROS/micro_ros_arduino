@@ -8,13 +8,8 @@
 
 #include <std_msgs/msg/int32.h>
 
-<<<<<<< HEAD
-#if !defined(ESP32) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_NANO_RP2040_CONNECT) && !defined(ARDUINO_WIO_TERMINAL)
-#error This example is only avaible for Arduino Portenta, Arduino Nano RP2040 Connect, ESP32 Dev module and Wio Terminal
-=======
 #if !defined(ESP32) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_GIGA) && !defined(ARDUINO_NANO_RP2040_CONNECT) && !defined(ARDUINO_WIO_TERMINAL) && !defined(ARDUINO_UNOR4_WIFI)
 #error This example is only available for Arduino Portenta, Arduino Giga R1, Arduino Nano RP2040 Connect, ESP32 Dev module, Wio Terminal and Arduino Uno R4 WiFi
->>>>>>> e347a4a (fixed time.h import, added Arduino UNO R4 minima (USB), Arduino UNO R4 WiFi (USB and WiFi), Arduino Giga R1 (USB and WiFi) (#1712))
 #endif
 
 rcl_publisher_t publisher;
