@@ -226,12 +226,6 @@ rosidl_dynamic_typesupport_dynamic_data_get_float64_value(
 
 ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC
 rcutils_ret_t
-rosidl_dynamic_typesupport_dynamic_data_get_float128_value(
-  const rosidl_dynamic_typesupport_dynamic_data_t * dynamic_data,
-  rosidl_dynamic_typesupport_member_id_t id, long double * value);
-
-ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC
-rcutils_ret_t
 rosidl_dynamic_typesupport_dynamic_data_get_int8_value(
   const rosidl_dynamic_typesupport_dynamic_data_t * dynamic_data,
   rosidl_dynamic_typesupport_member_id_t id, int8_t * value);
@@ -355,12 +349,6 @@ rcutils_ret_t
 rosidl_dynamic_typesupport_dynamic_data_set_float64_value(
   rosidl_dynamic_typesupport_dynamic_data_t * dynamic_data,
   rosidl_dynamic_typesupport_member_id_t id, double value);
-
-ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC
-rcutils_ret_t
-rosidl_dynamic_typesupport_dynamic_data_set_float128_value(
-  rosidl_dynamic_typesupport_dynamic_data_t * dynamic_data,
-  rosidl_dynamic_typesupport_member_id_t id, long double value);
 
 ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC
 rcutils_ret_t
@@ -503,12 +491,6 @@ ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC
 rcutils_ret_t
 rosidl_dynamic_typesupport_dynamic_data_insert_float64_value(
   rosidl_dynamic_typesupport_dynamic_data_t * dynamic_data, double value,
-  rosidl_dynamic_typesupport_member_id_t * out_id);
-
-ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC
-rcutils_ret_t
-rosidl_dynamic_typesupport_dynamic_data_insert_float128_value(
-  rosidl_dynamic_typesupport_dynamic_data_t * dynamic_data, long double value,
   rosidl_dynamic_typesupport_member_id_t * out_id);
 
 ROSIDL_DYNAMIC_TYPESUPPORT_PUBLIC

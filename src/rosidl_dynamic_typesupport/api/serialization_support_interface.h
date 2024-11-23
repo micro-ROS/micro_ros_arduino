@@ -178,13 +178,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     const char * name, size_t name_length,
     const char * default_value, size_t default_value_length);
 
-  rcutils_ret_t (* dynamic_type_builder_add_float128_member)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
-    rosidl_dynamic_typesupport_member_id_t id,
-    const char * name, size_t name_length,
-    const char * default_value, size_t default_value_length);
-
   rcutils_ret_t (* dynamic_type_builder_add_int8_member)(
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
@@ -330,14 +323,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     size_t array_length);
 
   rcutils_ret_t (* dynamic_type_builder_add_float64_array_member)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
-    rosidl_dynamic_typesupport_member_id_t id,
-    const char * name, size_t name_length,
-    const char * default_value, size_t default_value_length,
-    size_t array_length);
-
-  rcutils_ret_t (* dynamic_type_builder_add_float128_array_member)(
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
     rosidl_dynamic_typesupport_member_id_t id,
@@ -501,13 +486,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     const char * name, size_t name_length,
     const char * default_value, size_t default_value_length);
 
-  rcutils_ret_t (* dynamic_type_builder_add_float128_unbounded_sequence_member)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
-    rosidl_dynamic_typesupport_member_id_t id,
-    const char * name, size_t name_length,
-    const char * default_value, size_t default_value_length);
-
   rcutils_ret_t (* dynamic_type_builder_add_int8_unbounded_sequence_member)(
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
@@ -653,14 +631,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     size_t sequence_bound);
 
   rcutils_ret_t (* dynamic_type_builder_add_float64_bounded_sequence_member)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
-    rosidl_dynamic_typesupport_member_id_t id,
-    const char * name, size_t name_length,
-    const char * default_value, size_t default_value_length,
-    size_t sequence_bound);
-
-  rcutils_ret_t (* dynamic_type_builder_add_float128_bounded_sequence_member)(
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     rosidl_dynamic_typesupport_dynamic_type_builder_impl_t * dynamic_type_builder,
     rosidl_dynamic_typesupport_member_id_t id,
@@ -1003,12 +973,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     rosidl_dynamic_typesupport_member_id_t id,
     double * value);  // OUT
 
-  rcutils_ret_t (* dynamic_data_get_float128_value)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    const rosidl_dynamic_typesupport_dynamic_data_impl_t * dynamic_data,
-    rosidl_dynamic_typesupport_member_id_t id,
-    long double * value);  // OUT
-
   rcutils_ret_t (* dynamic_data_get_int8_value)(
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     const rosidl_dynamic_typesupport_dynamic_data_impl_t * dynamic_data,
@@ -1134,11 +1098,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     rosidl_dynamic_typesupport_dynamic_data_impl_t * dynamic_data,
     rosidl_dynamic_typesupport_member_id_t id, double value);
-
-  rcutils_ret_t (* dynamic_data_set_float128_value)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    rosidl_dynamic_typesupport_dynamic_data_impl_t * dynamic_data,
-    rosidl_dynamic_typesupport_member_id_t id, long double value);
 
   rcutils_ret_t (* dynamic_data_set_int8_value)(
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
@@ -1271,12 +1230,6 @@ struct rosidl_dynamic_typesupport_serialization_support_interface_s
     rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
     rosidl_dynamic_typesupport_dynamic_data_impl_t * dynamic_data,
     double value,
-    rosidl_dynamic_typesupport_member_id_t * out_id);  // OUT
-
-  rcutils_ret_t (* dynamic_data_insert_float128_value)(
-    rosidl_dynamic_typesupport_serialization_support_impl_t * serialization_support,
-    rosidl_dynamic_typesupport_dynamic_data_impl_t * dynamic_data,
-    long double value,
     rosidl_dynamic_typesupport_member_id_t * out_id);  // OUT
 
   rcutils_ret_t (* dynamic_data_insert_int8_value)(

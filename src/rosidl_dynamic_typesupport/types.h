@@ -121,10 +121,6 @@ typedef struct \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE  // 11
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT64 \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE  // 11
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_LONG_DOUBLE \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE  // 12
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT128 \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE  // 12
 
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_CHAR \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_CHAR  // 13
@@ -180,10 +176,6 @@ typedef struct \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_ARRAY  // 59
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT64_ARRAY \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_ARRAY  // 59
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_LONG_DOUBLE_ARRAY \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE_ARRAY  // 60
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT128_ARRAY \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE_ARRAY  // 60
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_CHAR_ARRAY \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_CHAR_ARRAY  // 61
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_WCHAR_ARRAY \
@@ -231,10 +223,6 @@ typedef struct \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_BOUNDED_SEQUENCE  // 107
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT64_BOUNDED_SEQUENCE \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_BOUNDED_SEQUENCE  // 107
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_LONG_DOUBLE_BOUNDED_SEQUENCE \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE_BOUNDED_SEQUENCE  // 108
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT128_BOUNDED_SEQUENCE \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE_BOUNDED_SEQUENCE  // 108
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_CHAR_BOUNDED_SEQUENCE \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_CHAR_BOUNDED_SEQUENCE  // 109
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_WCHAR_BOUNDED_SEQUENCE \
@@ -282,10 +270,6 @@ typedef struct \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_UNBOUNDED_SEQUENCE  // 155
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT64_UNBOUNDED_SEQUENCE \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_UNBOUNDED_SEQUENCE  // 155
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_LONG_DOUBLE_UNBOUNDED_SEQUENCE \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE_UNBOUNDED_SEQUENCE  // 156
-#define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_FLOAT128_UNBOUNDED_SEQUENCE \
-  rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_LONG_DOUBLE_UNBOUNDED_SEQUENCE  // 156
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_CHAR_UNBOUNDED_SEQUENCE \
   rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_CHAR_UNBOUNDED_SEQUENCE  // 157
 #define ROSIDL_DYNAMIC_TYPESUPPORT_FIELD_TYPE_WCHAR_UNBOUNDED_SEQUENCE \
