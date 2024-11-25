@@ -51,6 +51,7 @@ Community contributed boards are:
 | [Arduino Giga R1](https://store.arduino.cc/products/giga-r1-wifi)                        | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
 | [Arduino UNO R4 WiFi](https://store.arduino.cc/products/uno-r4-wifi)                     | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
 | [Arduino UNO R4 Minima](https://store.arduino.cc/products/uno-r4-minima)                 | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+| [Arduino Opta](https://store.arduino.cc/products/opta-wifi)                 | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
 
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).

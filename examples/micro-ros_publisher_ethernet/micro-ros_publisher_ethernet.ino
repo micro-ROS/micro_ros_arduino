@@ -7,8 +7,8 @@
 #include <rclc/executor.h>
 #include <std_msgs/msg/int32.h>
 
-#if !defined(TARGET_STM32F4) && !defined(ARDUINO_TEENSY41) && !defined(TARGET_PORTENTA_H7_M7)
-#error This example is only available for Arduino Portenta, Arduino Teensy41 and STM32F4
+#if !defined(TARGET_STM32F4) && !defined(ARDUINO_TEENSY41) && !defined(TARGET_PORTENTA_H7_M7) && !defined(ARDUINO_OPTA)
+#error This example is only available for Arduino Portenta, Arduino Teensy41, STM32F4 and Arduino OPTA
 #endif
 
 #if defined(ARDUINO_TEENSY41)
