@@ -10,13 +10,13 @@
 #include <NativeEthernet.h>
 #include <micro_ros_arduino.h>
 #endif
-#ifdef TARGET_PORTENTA_H7_M7
+#if defined(TARGET_PORTENTA_H7_M7 ) || defined(ARDUINO_OPTA)
 #include <Arduino.h>
 #include <EthernetUdp.h>
 #include <micro_ros_arduino.h>
 #endif
 
-#if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41) || defined(TARGET_PORTENTA_H7_M7)
+#if defined(TARGET_STM32F4) || defined(ARDUINO_TEENSY41) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_OPTA)
 extern "C" {
 
 #include <stdbool.h>

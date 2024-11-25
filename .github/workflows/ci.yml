@@ -42,6 +42,7 @@ jobs:
             arduino-cli core install arduino:mbed_giga -v
             arduino-cli core install arduino:mbed_rp2040 -v
             arduino-cli core install arduino:mbed_portenta -v
+            arduino-cli core install arduino:mbed_opta -v
             arduino-cli core install arduino:renesas_uno -v
             arduino-cli core install arduino:mbed_nano -v
             arduino-cli core install esp32:esp32 -v
@@ -92,6 +93,10 @@ jobs:
             arduino-cli compile --fqbn arduino:renesas_uno:minima /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:mbed_opta:opta /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
+            arduino-cli compile --fqbn arduino:mbed_opta:opta /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn arduino:mbed_opta:opta /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_ethernet -v
+
             # Build micro-ros_publisher-wifi_at for WiFi non-native board with ESP-AT
             arduino-cli compile --fqbn arduino:mbed_rp2040:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v
 
