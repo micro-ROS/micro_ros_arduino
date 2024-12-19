@@ -2084,7 +2084,7 @@ rmw_send_request(
  *   - Access to the given ROS service response is not synchronized.
  *     It is not safe to read or write `ros_response` while rmw_take_request() uses it.
  *   - Access to the given ROS service response header is not synchronized.
- *     It is not safe to read or write `response_header` while rmw_take_response() uses it.
+ *     It is not safe to read or write `request_header` while rmw_take_response() uses it.
  *   - Access to given primitive data-type arguments is not synchronized.
  *     It is not safe to read or write `taken` while rmw_take_response() uses it.
  *
@@ -2103,7 +2103,7 @@ rmw_send_request(
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_BAD_ALLOC` if memory allocation fails, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `client` is NULL, or
- * \return `RMW_RET_INVALID_ARGUMENT` if `response_header` is NULL, or
+ * \return `RMW_RET_INVALID_ARGUMENT` if `request_header` is NULL, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `ros_response` is NULL, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `taken` is NULL, or
  * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if the `client`
