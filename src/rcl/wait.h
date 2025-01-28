@@ -97,7 +97,7 @@ rcl_get_zero_initialized_wait_set(void);
  *
  * rcl_wait_set_t wait_set = rcl_get_zero_initialized_wait_set();
  * rcl_ret_t ret =
- *   rcl_wait_set_init(&wait_set, 42, 42, 42, 42, 42, &context, rcl_get_default_allocator());
+ *   rcl_wait_set_init(&wait_set, 42, 42, 42, 42, 42, 42, &context, rcl_get_default_allocator());
  * // ... error handling, then use it, then call the matching fini:
  * ret = rcl_wait_set_fini(&wait_set);
  * // ... error handling
