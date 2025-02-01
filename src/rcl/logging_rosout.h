@@ -20,8 +20,11 @@
 #include "rcl/allocator.h"
 #include "rcl/error_handling.h"
 #include "rcl/node.h"
+#include "rcl/macros.h"
 #include "rcl/types.h"
 #include "rcl/visibility_control.h"
+
+#include "rmw/qos_profiles.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -34,6 +37,7 @@ extern "C"
  * - durability = RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL
  * - lifespan = {10, 0}
  */
+RCUTILS_DEPRECATED_WITH_MSG("use rmw_qos_profile_rosout_default instead")
 static const rmw_qos_profile_t rcl_qos_profile_rosout_default =
 {
   RMW_QOS_POLICY_HISTORY_KEEP_LAST,

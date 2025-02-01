@@ -27,6 +27,7 @@ extern "C"
 #include "rcl/macros.h"
 #include "rcl/node.h"
 #include "rcl/time.h"
+#include "rcl/timer.h"
 
 #include "rosidl_runtime_c/action_type_support_struct.h"
 
@@ -161,7 +162,8 @@ rcl_action_get_zero_initialized_server(void);
  * \param[out] action_server handle to a preallocated, zero-initialized action server structure
  *   to be initialized.
  * \param[in] node valid node handle
- * \param[in] clock valid clock handle
+ * \param[in] expire_timer An initialized and canceled timer. The caller must guarantee the lifetime of the
+ *                         timer until the action is finished.
  * \param[in] type_support type support object for the action's type
  * \param[in] action_name the name of the action
  * \param[in] options action_server options, including quality of service settings
@@ -172,6 +174,17 @@ rcl_action_get_zero_initialized_server(void);
  * \return `RCL_RET_ACTION_NAME_INVALID` if the given action name is invalid, or
  * \return `RCL_RET_ERROR` if an unspecified error occurs.
  */
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_server_init2(
+  rcl_action_server_t * action_server,
+  rcl_node_t * node,
+  const rcl_timer_t * expire_timer,
+  const rosidl_action_type_support_t * type_support,
+  const char * action_name,
+  const rcl_action_server_options_t * options);
+
 RCL_ACTION_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t
