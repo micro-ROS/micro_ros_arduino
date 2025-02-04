@@ -25,11 +25,11 @@
 
 /// \def RCL_LIFECYCLE_VERSION_PATCH
 /// Defines RCL_LIFECYCLE version patch number
-#define RCL_LIFECYCLE_VERSION_PATCH (1)
+#define RCL_LIFECYCLE_VERSION_PATCH (2)
 
 /// \def RCL_LIFECYCLE_VERSION_STR
 /// Defines RCL_LIFECYCLE version string
-#define RCL_LIFECYCLE_VERSION_STR "10.0.1"
+#define RCL_LIFECYCLE_VERSION_STR "10.0.2"
 
 /// \def RCL_LIFECYCLE_VERSION_GTE
 /// Defines a macro to check whether the version of RCL_LIFECYCLE is greater than or equal to
