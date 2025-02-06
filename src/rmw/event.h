@@ -32,6 +32,9 @@ extern "C"
 /// Define publisher/subscription events
 typedef enum rmw_event_type_e
 {
+  // must be zero or rmw_get_zero_initialized_event will break
+  RMW_EVENT_INVALID = 0,
+
   // subscription events
   RMW_EVENT_LIVELINESS_CHANGED,
   RMW_EVENT_REQUESTED_DEADLINE_MISSED,
@@ -48,7 +51,7 @@ typedef enum rmw_event_type_e
   RMW_EVENT_PUBLICATION_MATCHED,
 
   // sentinel value
-  RMW_EVENT_INVALID
+  RMW_EVENT_TYPE_MAX
 } rmw_event_type_t;
 
 /// Encapsulate the RMW event implementation, data, and type.

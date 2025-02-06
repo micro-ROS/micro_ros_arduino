@@ -24,13 +24,13 @@ https://github.com/ros2/rcl_interfaces.git e17f2ea368eeeec7211a050b02b208b9a2b8c
 https://github.com/ros2/rcl_logging.git 2d5deed307163d15f9ef2379ee2facd86a643969
 https://github.com/ros2/rclc 6f0a9edb3cf30df0368d3abbad2fa66149e5cc65
 https://github.com/ros2/rcpputils.git 4cdc274baa31a53b681ab2f177ef381983e8f86e
-https://github.com/ros2/rmw.git 2a9576893cb17a109cacd53cc29ea8f18b6f7635
+https://github.com/ros2/rmw.git f8b3563c6bfcf13e8ff7d7d76a32f94956cbafe0
 https://github.com/ros2/rmw_implementation.git b12c55d0b5e7d0cf1c51f41288e87b9dc1156539
 https://github.com/ros2/ros2_tracing.git 03ccd0bb4aa679181411d15d4cf0f34edf7968cf
 https://github.com/ros2/rosidl.git bf5682e4747843d1d5133b9a2b54ce6f12f166c7
 https://github.com/ros2/rosidl_core.git 39a301d7663986d8c819a3017350751cc576ffb0
 https://github.com/ros2/rosidl_dds.git 7ae0dda92a6dbf41d2c06abf26a5662e17c1dcbd
 https://github.com/ros2/rosidl_defaults.git 25d6e3bc29ffd4fb6fd04b120198fe4510e096a5
-https://github.com/ros2/rosidl_dynamic_typesupport.git 12c6d82bbf9599fc95e6bf0944981fee21a3175f
+https://github.com/ros2/rosidl_dynamic_typesupport.git 71d56c76dc44f651600119ac55c1ea8d00b5cd44
 https://github.com/ros2/test_interface_files.git 25d4b699e4bcd28ab4d900dd73540ea341b8c508
 https://github.com/ros2/unique_identifier_msgs.git 2640ac258049686f27bb3f1d43ce558e942ae8e8
