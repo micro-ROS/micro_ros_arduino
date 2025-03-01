@@ -146,7 +146,7 @@ rmw_discovery_options_equal(
  * \param[out] dst Destination options to use.
  * \return RMW_RET_OK if success.
  * \return RMW_RET_INVALID_ARGUMENT if either the src, allocator or dst is null, or
- * \return RMW_RET_INVALID_ARUGMENT if src and dst are the same object.
+ * \return RMW_RET_INVALID_ARGUMENT if src and dst are the same object.
  * \return RMW_RET_BAD_ALLOC if allocation fails.
  */
 RMW_PUBLIC
@@ -160,7 +160,6 @@ rmw_discovery_options_copy(
 /// Destructor for rmw_discovery_options_t
 /**
  * \param[in] discovery_options to destroy
- * \param[in] allocator to be used for destruction.
  * \return RMW_RET_OK if success.
  * \return RMW_RET_INVALID_ARGUMENT if allocator is invalid
  * or discovery_options is null.

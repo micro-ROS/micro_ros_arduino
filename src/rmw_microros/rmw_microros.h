@@ -49,7 +49,7 @@ extern "C"
 #elif defined(RMW_UXRCE_TRANSPORT_IPV6)
   #define MAX_IP_LEN         39
 #endif  // ifdef RMW_UXRCE_TRANSPORT_IPV4
-#define MAX_PORT_LEN         5
+#define MAX_PORT_LEN         6  // uint16_t max size + NULL-end string
 #define MAX_SERIAL_DEVICE    50
 
 typedef struct rmw_uxrce_transport_params_t
