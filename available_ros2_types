@@ -110,6 +110,7 @@ lifecycle_msgs/TransitionDescription.msg
 lifecycle_msgs/TransitionEvent.msg
 nav_msgs/GetMap.srv
 nav_msgs/GetPlan.srv
+nav_msgs/Goals.msg
 nav_msgs/GridCells.msg
 nav_msgs/LoadMap.srv
 nav_msgs/MapMetaData.msg
