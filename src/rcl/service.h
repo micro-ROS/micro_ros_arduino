@@ -533,6 +533,7 @@ rcl_service_set_on_new_request_callback(
 
 /// Configure service introspection features for the service.
 /**
+ * \anchor rcl_service_configure_service_introspection
  * Enables or disables service introspection features for this service.
  * If the introspection state is RCL_SERVICE_INTROSPECTION_OFF, then introspection will
  * be disabled.  If the state is RCL_SERVICE_INTROSPECTION_METADATA, the client metadata
