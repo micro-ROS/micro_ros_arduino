@@ -25,6 +25,8 @@ extern "C"
 #include "rcl/event_callback.h"
 #include "rcl/macros.h"
 #include "rcl/node.h"
+#include "rcl/publisher.h"
+#include "rcl/service_introspection.h"
 
 
 /// Internal action client implementation struct.
@@ -741,6 +743,43 @@ RCL_ACTION_PUBLIC
 bool
 rcl_action_client_is_valid(
   const rcl_action_client_t * action_client);
+
+/// Configures service introspection features for all internal service clients of the action client.
+/**
+ * For the internal goal, cancel, and result clients of the action client, call
+ * \ref rcl_client_configure_service_introspection separately for each.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | Yes
+ * Thread-Safe        | No
+ * Uses Atomics       | Maybe [1]
+ * Lock-Free          | Maybe [1]
+ * <i>[1] rmw implementation defined</i>
+ *
+ * \param[in] action_client action client on which to configure internal service introspection
+ * \param[in] node valid rcl_node_t to use to create the introspection publisher
+ * \param[in] clock valid rcl_clock_t to use to generate the introspection timestamps
+ * \param[in] type_support type support library associated with this action client
+ * \param[in] publisher_options options to use when creating the introspection publisher
+ * \param[in] introspection_state rcl_service_introspection_state_t describing whether
+ *            introspection should be OFF, METADATA, or CONTENTS
+ * \return #RCL_RET_OK if the call was successful, or
+ * \return #RCL_RET_ERROR if calling rcl_client_configure_service_introspection for each internal
+ *         client doesn't return RCL_RET_OK, or
+ * \return #RCL_RET_INVALID_ARGUMENT if the given node or clock or type_support is invalid
+ */
+RCL_ACTION_PUBLIC
+RCL_WARN_UNUSED
+rcl_ret_t
+rcl_action_client_configure_action_introspection(
+  rcl_action_client_t * action_client,
+  rcl_node_t * node,
+  rcl_clock_t * clock,
+  const rosidl_action_type_support_t * type_support,
+  const rcl_publisher_options_t publisher_options,
+  rcl_service_introspection_state_t introspection_state);
 
 RCL_ACTION_PUBLIC
 RCL_WARN_UNUSED
