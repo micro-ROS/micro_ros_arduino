@@ -1,7 +1,7 @@
 
 https://github.com/ament/ament_cmake.git 6c41a42f5fc345e0cf292410e5b30ef6fd11bcc8
 https://github.com/ament/ament_index.git f019d6c40991799a13b18c9c3dcc583e3fde0381
-https://github.com/ament/ament_lint.git 04d6b927976b368e23ddd496f05c60d16da65b55
+https://github.com/ament/ament_lint.git 233b7a5438fb87bd03e5c432a70391a221fda3f6
 https://github.com/ament/ament_package.git f8ea958fd02cff6f4192425e28566369c92b5e34
 https://github.com/ament/googletest.git 083afd688a0d14239a831e1734e66a15664389c1
 https://github.com/ament/uncrustify_vendor.git ec8f8b4d03483671e8ea2b3039f1015f92b0ef89
@@ -23,7 +23,7 @@ https://github.com/ros2/rcl.git 6d52f2b54980140476222b420467e7fbd8575dd9
 https://github.com/ros2/rcl_interfaces.git 5e01a28f9866a564491480e12d8659a134678741
 https://github.com/ros2/rcl_logging.git 1b7a4e34884005f28eeb04065b5d94565c67b11d
 https://github.com/ros2/rclc 65d293dba0856fc0352ec74b046ec5e59a5332b8
-https://github.com/ros2/rcpputils.git 17cffb37758ef1c30f405c49eb8aeb272d3fbcc3
+https://github.com/ros2/rcpputils.git 66cad68a198a147d50780dbb56e9f9c0a4728555
 https://github.com/ros2/rmw.git e5901447f14762975c7a8ea658f0ac731f4fb1c2
 https://github.com/ros2/rmw_implementation.git 906f57ce6118a8b8e78046fcda9949a8604dc7f3
 https://github.com/ros2/rosidl.git 41be8d6ed987e589493ffaf24d5e2a74e2554a42
