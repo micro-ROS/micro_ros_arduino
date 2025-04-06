@@ -84,7 +84,6 @@ geometry_msgs/Pose.msg
 geometry_msgs/Pose2D.msg
 geometry_msgs/PoseArray.msg
 geometry_msgs/PoseStamped.msg
-geometry_msgs/PoseStampedArray.msg
 geometry_msgs/PoseWithCovariance.msg
 geometry_msgs/PoseWithCovarianceStamped.msg
 geometry_msgs/Quaternion.msg

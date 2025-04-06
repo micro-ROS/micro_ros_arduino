@@ -97,7 +97,7 @@ rcl_get_zero_initialized_subscription(void);
  *
  * ```cpp
  * #include <rosidl_typesupport_cpp/message_type_support.hpp>
- * #include <std_msgs/msgs/string.hpp>
+ * #include <std_msgs/msg/string.hpp>
  * using rosidl_typesupport_cpp::get_message_type_support_handle;
  * const rosidl_message_type_support_t * string_ts =
  *   get_message_type_support_handle<std_msgs::msg::String>();
