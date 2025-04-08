@@ -29,11 +29,15 @@
 #include "test_msgs/msg/bounded_plain_sequences.hpp"
 #include "test_msgs/msg/bounded_sequences.hpp"
 #include "test_msgs/msg/builtins.hpp"
+#include "test_msgs/msg/complex_nested_key.hpp"
 #include "test_msgs/msg/constants.hpp"
 #include "test_msgs/msg/defaults.hpp"
 #include "test_msgs/msg/empty.hpp"
+#include "test_msgs/msg/keyed_long.hpp"
+#include "test_msgs/msg/keyed_string.hpp"
 #include "test_msgs/msg/multi_nested.hpp"
 #include "test_msgs/msg/nested.hpp"
+#include "test_msgs/msg/non_keyed_with_nested_key.hpp"
 #include "test_msgs/msg/strings.hpp"
 #include "test_msgs/msg/unbounded_sequences.hpp"
 #include "test_msgs/msg/w_strings.hpp"
@@ -575,6 +579,73 @@ get_messages_wstrings()
   {
     auto msg = std::make_shared<test_msgs::msg::WStrings>();
     msg->wstring_value = u"ハローワールド";  // "Hello world" in Japanese
+    messages.push_back(msg);
+  }
+  return messages;
+}
+
+static inline std::vector<test_msgs::msg::KeyedLong::SharedPtr>
+get_messages_keyed_long()
+{
+  std::vector<test_msgs::msg::KeyedLong::SharedPtr> messages;
+  {
+    auto msg = std::make_shared<test_msgs::msg::KeyedLong>();
+    msg->key = 1;
+    msg->value = 1;
+    messages.push_back(msg);
+  }
+  {
+    auto msg = std::make_shared<test_msgs::msg::KeyedLong>();
+    msg->key = 2;
+    msg->value = 2;
+    messages.push_back(msg);
+  }
+  return messages;
+}
+
+static inline std::vector<test_msgs::msg::KeyedString::SharedPtr>
+get_messages_keyed_string()
+{
+  std::vector<test_msgs::msg::KeyedString::SharedPtr> messages;
+  {
+    auto msg = std::make_shared<test_msgs::msg::KeyedString>();
+    msg->key = "key_1";
+    msg->value = "value_1";
+    messages.push_back(msg);
+  }
+  {
+    auto msg = std::make_shared<test_msgs::msg::KeyedString>();
+    msg->key = "key_2";
+    msg->value = "value_2";
+    messages.push_back(msg);
+  }
+  return messages;
+}
+
+static inline std::vector<test_msgs::msg::NonKeyedWithNestedKey::SharedPtr>
+get_messages_non_keyed_with_nested_key()
+{
+  std::vector<test_msgs::msg::NonKeyedWithNestedKey::SharedPtr> messages;
+  auto keyed_string_msgs = get_messages_keyed_string();
+  for (auto keyed_string_msg : keyed_string_msgs) {
+    auto msg = std::make_shared<test_msgs::msg::NonKeyedWithNestedKey>();
+    msg->nested_data = *keyed_string_msg;
+    msg->some_int = -1;
+    messages.push_back(msg);
+  }
+  return messages;
+}
+
+static inline std::vector<test_msgs::msg::ComplexNestedKey::SharedPtr>
+get_messages_complex_nested_key()
+{
+  std::vector<test_msgs::msg::ComplexNestedKey::SharedPtr> messages;
+  auto non_keyed_with_nested_key_msgs = get_messages_non_keyed_with_nested_key();
+  for (auto nested_msg : non_keyed_with_nested_key_msgs) {
+    auto msg = std::make_shared<test_msgs::msg::ComplexNestedKey>();
+    msg->nested_keys = *nested_msg;
+    msg->uint32_key = 3u;
+    msg->float64_value = 1.125;
     messages.push_back(msg);
   }
   return messages;
