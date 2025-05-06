@@ -69,7 +69,7 @@ typedef struct rcl_node_options_s
  * - use_global_arguments = true
  * - enable_rosout = true
  * - arguments = rcl_get_zero_initialized_arguments()
- * - rosout_qos = rcl_qos_profile_rosout_default
+ * - rosout_qos = rmw_qos_profile_rosout_default
  *
  * \return A structure with the default node options.
  */

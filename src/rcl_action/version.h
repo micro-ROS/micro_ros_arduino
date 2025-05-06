@@ -21,7 +21,7 @@
 
 /// \def RCL_ACTION_VERSION_MINOR
 /// Defines RCL_ACTION minor version number
-#define RCL_ACTION_VERSION_MINOR (1)
+#define RCL_ACTION_VERSION_MINOR (2)
 
 /// \def RCL_ACTION_VERSION_PATCH
 /// Defines RCL_ACTION version patch number
@@ -29,7 +29,7 @@
 
 /// \def RCL_ACTION_VERSION_STR
 /// Defines RCL_ACTION version string
-#define RCL_ACTION_VERSION_STR "10.1.0"
+#define RCL_ACTION_VERSION_STR "10.2.0"
 
 /// \def RCL_ACTION_VERSION_GTE
 /// Defines a macro to check whether the version of RCL_ACTION is greater than or equal to

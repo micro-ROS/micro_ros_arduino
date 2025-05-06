@@ -351,6 +351,30 @@ rcl_lifecycle_get_transition_by_label(
   const rcl_lifecycle_state_t * state,
   const char * label);
 
+/// Get a label by id.
+/**
+ * A string label is returned based on the `id`.
+ * If the `id` is not set in the transition map then returns NULL.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | No
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[in] transition_map pointer to the transition map
+ * \param[in] transition_id id to be find in the transitions map
+ * \return a string pointer to the label exists in the transitino map or otherwise it return NULL
+ */
+RCL_LIFECYCLE_PUBLIC
+RCL_WARN_UNUSED
+const char *
+rcl_lifecycle_get_transition_label_by_id(
+  const rcl_lifecycle_transition_map_t * transition_map,
+  uint8_t transition_id);
+
 /// Trigger a state by id.
 /**
  * This function will trigger a transition based on the `id`. If the argument
