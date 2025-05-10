@@ -16,14 +16,14 @@ https://github.com/micro-ROS/rosidl_typesupport.git 16c7df67d3b5aa5615332ef702a5
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git cbd7719e07d5ca94077784accf95eac9ad535b56
 https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e87386cf60
 https://github.com/ros2/ament_cmake_ros.git 1fa14ddd69dc1eb4b164d4ed5622442dcc118059
-https://github.com/ros2/common_interfaces.git 3631ac99a5d52898f8ee9600fe517656ec8ce72f
+https://github.com/ros2/common_interfaces.git edb0a3a9ed3c8309aada12e9ced9a65e532cf1a1
 https://github.com/ros2/example_interfaces.git 7b6e46844f6a894433bb113dfffb953eee7f4cde
 https://github.com/ros2/libyaml_vendor.git c69b99721471d47f88042b44e510cfefafb385b9
 https://github.com/ros2/rcl.git d290ab955ceb57fae6c76f96bdb5b649a5e3f4bd
-https://github.com/ros2/rcl_interfaces.git 04780fc64a3616b45a21bc9d5880c7d0fff2b456
+https://github.com/ros2/rcl_interfaces.git 355006bb4f60f99defba0c6c010950ed45e4911c
 https://github.com/ros2/rcl_logging.git 2632df5bd77e2414169b5e2d61e6322cb363119b
 https://github.com/ros2/rclc 6f0a9edb3cf30df0368d3abbad2fa66149e5cc65
-https://github.com/ros2/rcpputils.git f5f89a1e85804cb1ca1d041b12cf2ae1fe0ba743
+https://github.com/ros2/rcpputils.git b86ba83e9be9b953f3861fb1fcb6e5e36e9e34f1
 https://github.com/ros2/rmw.git e6addf2411b8ee8a2ac43d691533b8c05ae8f1b6
 https://github.com/ros2/rmw_implementation.git dec342c43171bbfb10e1928b35d58433d2304d4d
 https://github.com/ros2/ros2_tracing.git c6c26ae191e577cd5545d0d04eb7bd2812b4ba43
