@@ -45,22 +45,28 @@
 #  define _GET_MACRO(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10, NAME, ...) NAME
 
 // *INDENT-OFF*
+#  define _FUNC_TRACEPOINT(event_name) \
+  (ros_trace_ ## event_name)
+#  define _FUNC_TRACEPOINT_ENABLED(event_name) \
+  (ros_trace_enabled_ ## event_name)
+#  define _FUNC_DO_TRACEPOINT(event_name) \
+  (ros_trace_do_ ## event_name)
 #  define _TRACEPOINT_NOARGS(event_name) \
-  (ros_trace_ ## event_name)()
+  _FUNC_TRACEPOINT(event_name)()
 #  define _TRACEPOINT_ARGS(event_name, ...) \
-  (ros_trace_ ## event_name)(__VA_ARGS__)
+  _FUNC_TRACEPOINT(event_name)(__VA_ARGS__)
 #  define _DO_TRACEPOINT_NOARGS(event_name) \
-  (ros_trace_do_ ## event_name)()
+  _FUNC_DO_TRACEPOINT(event_name)()
 #  define _DO_TRACEPOINT_ARGS(event_name, ...) \
-  (ros_trace_do_ ## event_name)(__VA_ARGS__)
+  _FUNC_DO_TRACEPOINT(event_name)(__VA_ARGS__)
 #  define _DECLARE_TRACEPOINT_NOARGS(event_name) \
-  TRACETOOLS_PUBLIC void ros_trace_ ## event_name(); \
-  TRACETOOLS_PUBLIC bool ros_trace_enabled_ ## event_name(); \
-  TRACETOOLS_PUBLIC void ros_trace_do_ ## event_name();
+  TRACETOOLS_PUBLIC void _FUNC_TRACEPOINT(event_name)(void); \
+  TRACETOOLS_PUBLIC bool _FUNC_TRACEPOINT_ENABLED(event_name)(void); \
+  TRACETOOLS_PUBLIC void _FUNC_DO_TRACEPOINT(event_name)(void);
 #  define _DECLARE_TRACEPOINT_ARGS(event_name, ...) \
-  TRACETOOLS_PUBLIC void ros_trace_ ## event_name(__VA_ARGS__); \
-  TRACETOOLS_PUBLIC bool ros_trace_enabled_ ## event_name(); \
-  TRACETOOLS_PUBLIC void ros_trace_do_ ## event_name(__VA_ARGS__);
+  TRACETOOLS_PUBLIC void _FUNC_TRACEPOINT(event_name)(__VA_ARGS__); \
+  TRACETOOLS_PUBLIC bool _FUNC_TRACEPOINT_ENABLED(event_name)(void); \
+  TRACETOOLS_PUBLIC void _FUNC_DO_TRACEPOINT(event_name)(__VA_ARGS__);
 
 #  define _GET_MACRO_TRACEPOINT(...) \
   _GET_MACRO( \
@@ -103,7 +109,7 @@
  * This is the preferred method over calling the underlying function directly.
  */
 #  define TRACETOOLS_TRACEPOINT_ENABLED(event_name) \
-  ros_trace_enabled_ ## event_name()
+  _FUNC_TRACEPOINT_ENABLED(event_name)()
 /// Call a tracepoint, without checking if it is enabled.
 /**
  * Combine this with `TRACEPOINT_ENABLED()` to check if a tracepoint is enabled before triggering
