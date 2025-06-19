@@ -78,7 +78,6 @@ geometry_msgs/PolygonInstance.msg
 geometry_msgs/PolygonInstanceStamped.msg
 geometry_msgs/PolygonStamped.msg
 geometry_msgs/Pose.msg
-geometry_msgs/Pose2D.msg
 geometry_msgs/PoseArray.msg
 geometry_msgs/PoseStamped.msg
 geometry_msgs/PoseWithCovariance.msg
