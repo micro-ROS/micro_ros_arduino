@@ -1,7 +1,7 @@
 
-https://github.com/ament/ament_cmake.git 2338decc4f6edf043c953d3773d42cc9ff10974b
+https://github.com/ament/ament_cmake.git 7f8f485aedd76548f6d4280f26289528fed7ef92
 https://github.com/ament/ament_index.git f3b6ddc6698cff22b8724136188df5d9912ced78
-https://github.com/ament/ament_lint.git f5db52813c07263db99a044fa7f7b2bcc2c628ec
+https://github.com/ament/ament_lint.git 1e737ea8d94a5207eaaecdfe640c4805750a350a
 https://github.com/ament/ament_package.git 797ecde6090689ebe0d84b6620f7bf4c972a8232
 https://github.com/ament/googletest.git bee0ad5f9bc5796fe1cb34484cb0adc13ec7c032
 https://github.com/ament/uncrustify_vendor.git a2a8e43c8bdd70f1005443f89f2e2c531cb493ab
@@ -17,17 +17,17 @@ https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git dd85753ac26ba13
 https://github.com/ros-controls/control_msgs 1416954c31432c192ff95a06559847e87386cf60
 https://github.com/ros2/ament_cmake_ros.git 1fa14ddd69dc1eb4b164d4ed5622442dcc118059
 https://github.com/ros2/common_interfaces.git da15991891be0d3387fe52cbdedcde5edcb1527e
-https://github.com/ros2/example_interfaces.git 7b6e46844f6a894433bb113dfffb953eee7f4cde
+https://github.com/ros2/example_interfaces.git 9f6bbe801a2f4a5e634414b9e56f0e2471eca465
 https://github.com/ros2/libyaml_vendor.git c69b99721471d47f88042b44e510cfefafb385b9
 https://github.com/ros2/rcl.git b4f0c4c28eea38b59fc1cfe6520e8e63589f0783
 https://github.com/ros2/rcl_interfaces.git 355006bb4f60f99defba0c6c010950ed45e4911c
 https://github.com/ros2/rcl_logging.git 2632df5bd77e2414169b5e2d61e6322cb363119b
 https://github.com/ros2/rclc 74acd42f850d8b2ebc647ae1c326d871fdddf1b3
-https://github.com/ros2/rcpputils.git 8e29c4c16857656244e7fd9d5450569d0208a0ab
+https://github.com/ros2/rcpputils.git 688ebf9cb7532bfa04c72fddd2f81871a559e508
 https://github.com/ros2/rmw.git e6addf2411b8ee8a2ac43d691533b8c05ae8f1b6
 https://github.com/ros2/rmw_implementation.git 8c006087e3af66a79f61dbe0ff45e7a1ef31a686
 https://github.com/ros2/ros2_tracing.git 70d3f70992c57f1a17e7efd009ae1bafd83a0245
-https://github.com/ros2/rosidl.git 95fa106fce55eb62a8e4954b5f5f4004af125315
+https://github.com/ros2/rosidl.git 5bcd74f334189973437cfedc541b0e9167d62f46
 https://github.com/ros2/rosidl_core.git c3fd5020611374d6ab2f7e9a540ecf86f3c1615e
 https://github.com/ros2/rosidl_dds.git 772632eb729ab48f368a0862659224be80caf56b
 https://github.com/ros2/rosidl_defaults.git b2053ea2082bba468e6fcb6cd1bec0bd02e8940a
