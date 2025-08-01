@@ -142,6 +142,12 @@ extern "C"
  */
 TRACETOOLS_PUBLIC bool ros_trace_compile_status(void);
 
+/// Get tracing runtime status.
+/**
+ * \return `true` if tracing is enabled, `false` otherwise
+ */
+TRACETOOLS_PUBLIC bool ros_trace_runtime_status(void);
+
 /// `rcl_init`
 /**
  * Initialisation for the whole process.
