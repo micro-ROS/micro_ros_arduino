@@ -3223,7 +3223,7 @@ rmw_set_log_severity(rmw_log_severity_t severity);
  * \param[in] user_data Given to the callback when called later, may be NULL
  * \return `RMW_RET_OK` if successful, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `subscription` is NULL, or
- * \return `RMW_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ * \return `RMW_RET_UNSUPPORTED` if the API is not supported by the middleware
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
@@ -3258,7 +3258,7 @@ rmw_subscription_set_on_new_message_callback(
  * \param[in] user_data Given to the callback when called later, may be NULL
  * \return `RMW_RET_OK` if callback was set to the listener, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `service` is NULL, or
- * \return `RMW_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ * \return `RMW_RET_UNSUPPORTED` if the API is not supported by the middleware
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
@@ -3293,7 +3293,7 @@ rmw_service_set_on_new_request_callback(
  * \param[in] user_data Given to the callback when called later, may be NULL
  * \return `RMW_RET_OK` if callback was set to the listener, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `client` is NULL, or
- * \return `RMW_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ * \return `RMW_RET_UNSUPPORTED` if the API is not supported by the middleware
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
@@ -3332,7 +3332,7 @@ rmw_client_set_on_new_response_callback(
  * \param[in] user_data Given to the callback when called later, may be NULL
  * \return `RMW_RET_OK` if callback was set to the listener, or
  * \return `RMW_RET_INVALID_ARGUMENT` if `event` is NULL, or
- * \return `RMW_RET_UNSUPPORTED` if the API is not implemented in the dds implementation
+ * \return `RMW_RET_UNSUPPORTED` if the API is not supported by the middleware
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
