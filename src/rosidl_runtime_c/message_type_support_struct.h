@@ -88,7 +88,7 @@ ROSIDL_GENERATOR_C_PUBLIC
 const rosidl_message_type_support_t * get_message_typesupport_handle_function(
   const rosidl_message_type_support_t * handle, const char * identifier);
 
-/// Get the message type support given a provided action and package.
+/// Get the message type support given a provided message and package.
 /**
  * \param PkgName Name of the package that contains the message
  * \param MsgSubfolder name of the subfolder (for example: msg)

@@ -64,7 +64,7 @@ ROSIDL_GENERATOR_C_PUBLIC
 const rosidl_runtime_c__Sequence__bound * get_sequence_bound_handle_function(
   const rosidl_runtime_c__Sequence__bound * handle, const char * identifier);
 
-/// Get the sequence bounds given a provided action and package.
+/// Get the sequence bounds given a provided message and package.
 /**
  * \param PkgName Name of the package that contains the message
  * \param MsgSubfolder name of the subfolder (foe example: msg)
