@@ -104,6 +104,33 @@ RCUTILS_WARN_UNUSED
 rcutils_ret_t
 rcutils_steady_time_now(rcutils_time_point_value_t * now);
 
+/// Retrieve the current time as a rcutils_time_point_value_t object.
+/**
+ * This function returns the time from a monotonically increasing slew-free clock.
+ *
+ * The resolution (e.g. nanoseconds vs microseconds) is not guaranteed.
+ *
+ * The now argument must point to an allocated rcutils_time_point_value_t object,
+ * as the result is copied into this variable.
+ *
+ * <hr>
+ * Attribute          | Adherence
+ * ------------------ | -------------
+ * Allocates Memory   | No
+ * Thread-Safe        | Yes
+ * Uses Atomics       | No
+ * Lock-Free          | Yes
+ *
+ * \param[out] now a struct in which the current time is stored
+ * \return #RCUTILS_RET_OK if the current time was successfully obtained, or
+ * \return #RCUTILS_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCUTILS_RET_ERROR if an unspecified error occur.
+ */
+RCUTILS_PUBLIC
+RCUTILS_WARN_UNUSED
+rcutils_ret_t
+rcutils_raw_steady_time_now(rcutils_time_point_value_t * now);
+
 /// Return a time point as nanoseconds in a string.
 /**
  * The number is always fixed width, with left padding zeros up to the maximum
