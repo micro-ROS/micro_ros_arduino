@@ -113,6 +113,8 @@ nav_msgs/OccupancyGrid.msg
 nav_msgs/Odometry.msg
 nav_msgs/Path.msg
 nav_msgs/SetMap.srv
+nav_msgs/Trajectory.msg
+nav_msgs/TrajectoryPoint.msg
 rcl_interfaces/DescribeParameters.srv
 rcl_interfaces/FloatingPointRange.msg
 rcl_interfaces/GetLoggerLevels.srv
