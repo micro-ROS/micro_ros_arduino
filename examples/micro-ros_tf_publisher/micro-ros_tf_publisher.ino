@@ -18,7 +18,7 @@
 #include <micro_ros_utilities/string_utilities.h>
 
 rcl_publisher_t publisher;
-tf2_msgs__msg__TFMessage * tf_message;
+tf2_msgs__msg__TFMessage tf_message;
 rclc_executor_t executor;
 rclc_support_t support;
 rcl_allocator_t allocator;
@@ -113,13 +113,13 @@ void setup() {
     error_loop();
   }
 
-  tf_message->transforms.size = 2;
+  tf_message.transforms.size = 2;
 
-  tf_message->transforms.data[0].header.frame_id =
-    micro_ros_string_utilities_set(tf_message->transforms.data[0].header.frame_id, "/panda_link0");
+  tf_message.transforms.data[0].header.frame_id =
+    micro_ros_string_utilities_set(tf_message.transforms.data[0].header.frame_id, "/panda_link0");
 
-  tf_message->transforms.data[1].header.frame_id =
-    micro_ros_string_utilities_set(tf_message->transforms.data[1].header.frame_id, "/inertial_unit");
+  tf_message.transforms.data[1].header.frame_id =
+    micro_ros_string_utilities_set(tf_message.transforms.data[1].header.frame_id, "/inertial_unit");
 }
 
 void loop() {
@@ -131,14 +131,14 @@ void loop() {
   double q[4];
   euler_to_quat(IMU.rpy[0], IMU.rpy[1], IMU.rpy[2], q);
 
-  tf_message->transforms.data[0].transform.rotation.x = (double) q[1];
-	tf_message->transforms.data[0].transform.rotation.y = (double) q[2];
-	tf_message->transforms.data[0].transform.rotation.z = (double) q[3];
-	tf_message->transforms.data[0].transform.rotation.w = (double) q[0];
-  tf_message->transforms.data[0].header.stamp.nanosec = tv.tv_nsec;
-	tf_message->transforms.data[0].header.stamp.sec = tv.tv_sec;
+  tf_message.transforms.data[0].transform.rotation.x = (double) q[1];
+	tf_message.transforms.data[0].transform.rotation.y = (double) q[2];
+	tf_message.transforms.data[0].transform.rotation.z = (double) q[3];
+	tf_message.transforms.data[0].transform.rotation.w = (double) q[0];
+  tf_message.transforms.data[0].header.stamp.nanosec = tv.tv_nsec;
+	tf_message.transforms.data[0].header.stamp.sec = tv.tv_sec;
 
-  RCSOFTCHECK(rcl_publish(&publisher, tf_message, NULL));
+  RCSOFTCHECK(rcl_publish(&publisher, &tf_message, NULL));
 
   //RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 }
