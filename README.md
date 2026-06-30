@@ -52,7 +52,7 @@ Community contributed boards are:
 | [Arduino UNO R4 WiFi](https://store.arduino.cc/products/uno-r4-wifi)                     | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
 | [Arduino UNO R4 Minima](https://store.arduino.cc/products/uno-r4-minima)                 | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
 | [Arduino Opta](https://store.arduino.cc/products/opta-wifi)                 | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
-| [LEGO Mindstorms EV3](https://www.lego.com/en-us/themes/mindstorms/ev3)     | -           | [@racarla96](https://github.com/racarla96)             | Debian Buster (ev3dev), [micro-ROS for LEGO EV3](https://github.com/racarla96/micro-ROS-for-LEGO-EV3) | `colcon.meta`            |
+| [LEGO Mindstorms EV3](https://www.lego.com/en-us/themes/mindstorms/ev3)     | -           | [@racarla96](https://github.com/racarla96)             | Debian Buster (ev3dev), [micro_ros_ev3]([https://github.com/racarla96/micro-ROS-for-LEGO-EV3](https://github.com/racarla96/micro_ros_ev3)) | `colcon.meta`            |
 
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
