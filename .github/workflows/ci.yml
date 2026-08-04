@@ -87,6 +87,7 @@ jobs:
             arduino-cli compile --fqbn arduino:mbed_portenta:envie_m7 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
+            arduino-cli compile --fqbn esp32:esp32:esp32 /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_bluetooth -v
             arduino-cli compile --fqbn Seeeduino:samd:seeed_wio_terminal /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
             arduino-cli compile --fqbn arduino:mbed_giga:giga /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher -v
             arduino-cli compile --fqbn arduino:mbed_giga:giga /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi -v
@@ -99,4 +100,3 @@ jobs:
 
             # Build micro-ros_publisher-wifi_at for WiFi non-native board with ESP-AT
             arduino-cli compile --fqbn arduino:mbed_rp2040:pico /github/home/Arduino/libraries/micro_ros_arduino/examples/micro-ros_publisher_wifi_at -v
-

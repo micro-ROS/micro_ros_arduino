@@ -147,4 +147,36 @@ static inline void set_microros_wifi_transports(char * ssid, char * pass, char *
 
 #endif
 
+#if defined(ESP32)
+#include <sdkconfig.h>
+#endif
+
+#if defined(CONFIG_IDF_TARGET_ESP32)
+
+extern "C" bool arduino_bluetooth_transport_open(struct uxrCustomTransport * transport);
+extern "C" bool arduino_bluetooth_transport_close(struct uxrCustomTransport * transport);
+extern "C" size_t arduino_bluetooth_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
+extern "C" size_t arduino_bluetooth_transport_read(struct uxrCustomTransport* transport, uint8_t* buf, size_t len, int timeout, uint8_t* err);
+
+struct micro_ros_bluetooth_params {
+	const char * device_name;
+};
+
+static inline void set_microros_bluetooth_transports(const char * device_name){
+
+	static struct micro_ros_bluetooth_params params;
+	params.device_name = device_name;
+
+	rmw_uros_set_custom_transport(
+		true,
+		(void *) &params,
+		arduino_bluetooth_transport_open,
+		arduino_bluetooth_transport_close,
+		arduino_bluetooth_transport_write,
+		arduino_bluetooth_transport_read
+	);
+}
+
+#endif
+
 #endif  // MICRO_ROS_ARDUINO

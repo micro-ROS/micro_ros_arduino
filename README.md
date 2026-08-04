@@ -72,6 +72,12 @@ Remember that is possible to use a micro-ROS Agent just with this docker command
 # Serial micro-ROS Agent
 docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:kilted serial --dev [YOUR BOARD PORT] -v6
 ```
+
+For ESP32 Bluetooth Classic SPP transport, pair the board with the host and expose it as a serial port, for example `/dev/rfcomm0`, then run the Agent with the serial transport:
+
+```
+docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:kilted serial --dev /dev/rfcomm0 -v6
+```
 ### PlatformIO
 
 PlatformIO support for this repository has been deprecated in favor of its own build system: [micro_ros_platformio](https://github.com/micro-ROS/micro_ros_platformio)
@@ -141,6 +147,6 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 ## Known Issues/Limitations
 
 - When using provided precompiled libraries, users should take into account the already configured static memory pools in middleware layers. [More info here](https://micro.ros.org/docs/tutorials/advanced/microxrcedds_rmw_configuration/).
-- micro-ROS transports should be refactored in order to provide a pluggable mechanisms. Only USB serial transports are provided.
+- micro-ROS transports should be refactored in order to provide a pluggable mechanisms.
 - Teensyduino support files have to be patched in order to use precompiled libraries.
 - To solve Python errors on ESP32 compilation: `apt install python-is-python3 && pip3 install pyserial`
