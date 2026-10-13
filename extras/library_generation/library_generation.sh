@@ -22,6 +22,7 @@ if [ $OPTIND -eq 1 ]; then
     PLATFORMS+=("portenta-m7")
     PLATFORMS+=("kakutef7-m7")
     PLATFORMS+=("esp32")
+    PLATFORMS+=("esp32s3")
 fi
 
 shift $((OPTIND-1))
